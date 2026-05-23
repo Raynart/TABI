@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TABI — Discover Japan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:       #111111;
+      --ink-soft:  #2c2c2c;
+      --paper:     #f7f4ef;
+      --paper-dark:#ede9e2;
+      --accent:    #b5271f;
+      --accent-light: #d4443b;
+      --indigo:    #2c3e6b;
+      --gold:      #c9a84c;
+      --zen:       #3d6b4a;
+      --mist:      #888;
+      --border:    #ddd9d0;
+      --white:     #ffffff;
+      --serif:     'Noto Serif', 'Noto Serif JP', Georgia, serif;
+      --sans:      'Noto Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== TOP BAR ===== */
+    .top-bar {
+      background: var(--ink);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 8px 0;
+      text-align: center;
+    }
+    .top-bar span { color: var(--gold); margin: 0 6px; }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(247, 244, 239, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 68px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .header-nav-left {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .header-nav-left a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mist);
+      transition: color 0.2s;
+      position: relative;
+    }
+    .header-nav-left a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+    .header-nav-left a:hover { color: var(--ink); }
+    .header-nav-left a:hover::after { width: 100%; }
+    .header-nav-left a.active { color: var(--ink); }
+    .header-nav-left a.active::after { width: 100%; }
+
+    .site-logo {
+      text-align: center;
+    }
+    .logo-en {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--ink);
+      display: block;
+      line-height: 1;
+    }
+    .logo-en .dot { color: var(--accent); }
+    .logo-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.5em;
+      color: var(--mist);
+      display: block;
+      margin-top: 3px;
+    }
+
+    .header-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+    .header-search {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--mist);
+      transition: color 0.2s;
+      font-size: 1.1rem;
+    }
+    .header-search:hover { color: var(--ink); }
+    .header-cta {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 9px 22px;
+      background: var(--accent);
+      color: var(--white);
+      transition: background 0.2s;
+    }
+    .header-cta:hover { background: var(--accent-light); }
+
+    /* ===== TICKER ===== */
+    .ticker {
+      background: var(--ink-soft);
+      overflow: hidden;
+      height: 36px;
+      display: flex;
+      align-items: center;
+    }
+    .ticker-label {
+      flex-shrink: 0;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+    .ticker-track {
+      display: flex;
+      gap: 0;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-item {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.65);
+      padding: 0 32px;
+      letter-spacing: 0.04em;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .ticker-item strong { color: var(--gold); font-weight: 500; }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      min-height: 600px;
+      max-height: 820px;
+      overflow: hidden;
+      background: var(--ink);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(160deg, #0a0a1a 0%, #1a0808 40%, #2d1010 70%, #1a1a1a 100%);
+    }
+    /* 鳥居シルエット装飾 */
+    .hero-deco {
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 320px;
+      height: 480px;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    /* 和柄パターン */
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 1px, transparent 0);
+      background-size: 32px 32px;
+    }
+    /* 漢字装飾 */
+    .hero-kanji {
+      position: absolute;
+      right: 6%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18rem;
+      font-weight: 300;
+      color: var(--white);
+      opacity: 0.04;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      pointer-events: none;
+      user-select: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 80px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 80px;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--accent);
+      padding: 5px 14px;
+    }
+    .hero-num {
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.1em;
+    }
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      max-width: 760px;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: rgba(255,255,255,0.7);
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      background: var(--white);
+      color: var(--ink);
+      transition: all 0.25s;
+    }
+    .hero-btn:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .hero-btn-ghost {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .hero-btn-ghost:hover {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.6);
+    }
+    /* Hero thumbnail dots */
+    .hero-dots {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+    .hero-dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 50%;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .hero-dot.active {
+      background: var(--white);
+      width: 24px;
+      border-radius: 3px;
+    }
+    /* Red vertical line accent */
+    .hero-line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--accent) 0%, transparent 100%);
+      z-index: 10;
+    }
+
+    /* ===== SCROLL INDICATOR ===== */
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      z-index: 10;
+      animation: float 2.5s ease-in-out infinite;
+    }
+    .scroll-hint-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ===== SECTION LABEL ===== */
+    .section-label {
+      max-width: 1280px;
+      margin: 64px auto 0;
+      padding: 0 32px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-label-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.75rem;
+      color: var(--accent);
+      writing-mode: horizontal-tb;
+      letter-spacing: 0.2em;
+    }
+    .section-label-en {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .section-label-line {
+      flex: 1;
+    }
+    .section-label-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mist);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .section-label-link:hover { color: var(--accent); }
+    .arrow { display: inline-block; transition: transform 0.2s; }
+    .section-label-link:hover .arrow { transform: translateX(4px); }
+
+    /* ===== EDITORIAL GRID ===== */
+    .editorial-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 32px 32px 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 2px;
+    }
+    .ed-main {
+      grid-row: 1 / 3;
+    }
+    .ed-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--ink-soft);
+      cursor: pointer;
+    }
+    .ed-main { aspect-ratio: 3/4; }
+    .ed-sub  { aspect-ratio: 4/3; }
+
+    .ed-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease, opacity 0.4s;
+      opacity: 0.82;
+    }
+    .ed-card:hover .ed-img {
+      transform: scale(1.04);
+      opacity: 0.95;
+    }
+    /* placeholder gradient images */
+    .grad-1 { background: linear-gradient(160deg, #0f0810 0%, #2e1030 40%, #6b2d5a 80%, #8b3070 100%); }
+    .grad-2 { background: linear-gradient(160deg, #080f10 0%, #10302e 40%, #1a5a50 80%, #207060 100%); }
+    .grad-3 { background: linear-gradient(160deg, #10080a 0%, #301015 40%, #6b1a28 80%, #8b2035 100%); }
+    .grad-4 { background: linear-gradient(160deg, #0a0f08 0%, #1a3010 40%, #3a601a 80%, #4a7820 100%); }
+    .grad-5 { background: linear-gradient(160deg, #0a080f 0%, #1a1030 40%, #3a206b 80%, #4a2888 100%); }
+    .grad-6 { background: linear-gradient(160deg, #0f0a08 0%, #302010 40%, #6b401a 80%, #8b5520 100%); }
+    .grad-torii { background: linear-gradient(160deg, #100808 0%, #2e1010 30%, #5a1a1a 60%, #7a2020 90%); }
+    .grad-fuji  { background: linear-gradient(180deg, #080a10 0%, #101830 30%, #202848 55%, #c0ccd8 75%, #d8e0e8 85%, #e8ede0 100%); }
+    .grad-forest{ background: linear-gradient(160deg, #080f08 0%, #101e10 40%, #1a381a 70%, #207820 100%); }
+    .grad-food  { background: linear-gradient(135deg, #100a04 0%, #301808 40%, #603010 70%, #8b4818 100%); }
+    .grad-city  { background: linear-gradient(160deg, #080808 0%, #181818 40%, #282828 70%, #383838 100%); }
+
+    .ed-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.2) 50%, transparent 80%);
+    }
+    .ed-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 28px 24px;
+      color: var(--white);
+    }
+    .ed-main .ed-content { padding: 36px 32px; }
+    .ed-cat {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 8px;
+    }
+    .ed-title {
+      font-family: var(--serif);
+      line-height: 1.3;
+      color: var(--white);
+    }
+    .ed-main .ed-title { font-size: 1.7rem; }
+    .ed-sub  .ed-title { font-size: 1rem; }
+    .ed-meta {
+      margin-top: 10px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ed-meta-dot { width: 3px; height: 3px; background: currentColor; border-radius: 50%; }
+    /* Japanese label strip on main card */
+    .ed-main-strip {
+      position: absolute;
+      top: 24px;
+      right: 0;
+      background: var(--accent);
+      color: var(--white);
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      padding: 6px 12px 6px 16px;
+      z-index: 2;
+    }
+
+    /* ===== CULTURE STRIP ===== */
+    .culture-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 32px 32px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .culture-card {
+      border-top: 2px solid var(--border);
+      padding-top: 20px;
+      transition: border-color 0.2s;
+      cursor: pointer;
+    }
+    .culture-card:hover { border-color: var(--accent); }
+    .culture-num {
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .culture-card-img {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .culture-card-img .img-block {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+    .culture-card:hover .culture-card-img .img-block {
+      transform: scale(1.05);
+    }
+    .culture-card-cat {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .culture-card-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+    .culture-card:hover .culture-card-title { color: var(--accent); }
+    .culture-card-desc {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: var(--mist);
+      line-height: 1.65;
+    }
+
+    /* ===== INTERLUDE BANNER ===== */
+    .interlude {
+      background: var(--ink);
+      margin: 64px 0;
+      padding: 64px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .interlude-kanji {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28rem;
+      font-weight: 300;
+      color: var(--white);
+      opacity: 0.025;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .interlude-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .interlude-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .interlude-quote {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      margin-bottom: 16px;
+    }
+    .interlude-quote strong {
+      font-weight: 700;
+      font-style: italic;
+    }
+    .interlude-sub {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.06em;
+    }
+    /* 横線装飾 */
+    .interlude-lines {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .iline { width: 48px; height: 1px; background: rgba(255,255,255,0.15); }
+    .isymbol {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.2rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    /* ===== THINGS TO BUY ===== */
+    .buy-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 32px 32px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+    .buy-card {
+      background: var(--paper);
+      padding: 28px 24px 32px;
+      transition: background 0.25s;
+      cursor: pointer;
+      position: relative;
+    }
+    .buy-card:hover { background: var(--white); }
+    .buy-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+      line-height: 1;
+    }
+    .buy-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-bottom: 8px;
+    }
+    .buy-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      line-height: 1.45;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .buy-card:hover .buy-title { color: var(--accent); }
+    .buy-price {
+      font-size: 0.8rem;
+      color: var(--zen);
+      font-weight: 600;
+    }
+    .buy-arrow {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      font-size: 1rem;
+      color: var(--border);
+      transition: color 0.2s, transform 0.2s;
+    }
+    .buy-card:hover .buy-arrow {
+      color: var(--accent);
+      transform: translate(2px, -2px);
+    }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter-wrap {
+      max-width: 1280px;
+      margin: 64px auto;
+      padding: 0 32px;
+    }
+    .newsletter {
+      background: var(--ink);
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+    .nl-visual {
+      position: relative;
+      background: linear-gradient(135deg, #100810 0%, #20102e 50%, #3a1a50 100%);
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .nl-visual-kanji {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 12rem;
+      font-weight: 300;
+      color: var(--white);
+      opacity: 0.08;
+      line-height: 1;
+      user-select: none;
+    }
+    .nl-visual-badge {
+      position: absolute;
+      text-align: center;
+    }
+    .nl-badge-en {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--white);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .nl-badge-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      display: block;
+    }
+    .nl-badge-accent {
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+      margin: 12px auto 0;
+    }
+
+    .nl-content {
+      padding: 56px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .nl-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .nl-title {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .nl-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .nl-form {
+      display: flex;
+      gap: 0;
+    }
+    .nl-input {
+      flex: 1;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-right: none;
+      color: var(--white);
+      padding: 14px 20px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .nl-input::placeholder { color: rgba(255,255,255,0.3); }
+    .nl-input:focus {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.35);
+    }
+    .nl-btn {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 14px 28px;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .nl-btn:hover { background: var(--accent-light); }
+    .nl-note {
+      margin-top: 12px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      border-top: 1px solid var(--border);
+    }
+    .footer-top {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 56px 32px 40px;
+      display: grid;
+      grid-template-columns: 260px 1fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-brand-logo {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      margin-bottom: 4px;
+    }
+    .footer-brand-logo .dot { color: var(--accent); }
+    .footer-brand-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.35em;
+      color: var(--mist);
+      margin-bottom: 20px;
+    }
+    .footer-tagline {
+      font-size: 0.82rem;
+      color: var(--mist);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social a {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--mist);
+      transition: all 0.2s;
+    }
+    .footer-social a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .footer-col-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--mist);
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-links a::before {
+      content: '';
+      width: 12px;
+      height: 1px;
+      background: var(--border);
+      flex-shrink: 0;
+      transition: background 0.2s, width 0.2s;
+    }
+    .footer-links a:hover { color: var(--ink); }
+    .footer-links a:hover::before {
+      background: var(--accent);
+      width: 18px;
+    }
+    .footer-bottom {
+      background: var(--ink);
+      padding: 18px 32px;
+      max-width: 100%;
+    }
+    .footer-bottom-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-jp-strip {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.12);
+      letter-spacing: 0.4em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .editorial-grid { grid-template-columns: 1fr 1fr; }
+      .ed-main { grid-row: auto; aspect-ratio: 16/10; }
+      .buy-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .header-inner { grid-template-columns: auto 1fr auto; }
+      .header-nav-left { display: none; }
+      .hero { height: 85vh; }
+      .hero-content { padding: 0 24px 48px; }
+      .hero-kanji { display: none; }
+      .editorial-grid { grid-template-columns: 1fr; }
+      .culture-grid { grid-template-columns: 1fr; }
+      .newsletter { grid-template-columns: 1fr; }
+      .nl-visual { display: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .ticker-track { animation-duration: 18s; }
+    }
+    @media (max-width: 480px) {
+      .buy-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-title { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  Japan Travel &amp; Culture Guide &nbsp;<span>·</span>&nbsp; Updated weekly &nbsp;<span>·</span>&nbsp; Free newsletter every Friday
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <ul class="header-nav-left">
+      <li><a href="#" class="active">Travel</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Food</a></li>
+      <li><a href="#">Hidden Gems</a></li>
+    </ul>
+    <div class="site-logo">
+      <span class="logo-en">TABI<span class="dot">.</span></span>
+      <span class="logo-jp">旅 — Discover Japan</span>
+    </div>
+    <div class="header-right">
+      <button class="header-search">&#9906;</button>
+      <a href="#newsletter" class="header-cta">Free Newsletter</a>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-label">Latest</div>
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item"><strong>Travel Guide</strong> — The best ryokan in Kyoto under ¥20,000</span>
+    <span class="ticker-item"><strong>Culture</strong> — What wabi-sabi really means and why the world needs it</span>
+    <span class="ticker-item"><strong>Food</strong> — Tokyo's hidden izakayas locals actually go to</span>
+    <span class="ticker-item"><strong>Things to Buy</strong> — Best Japanese kitchen knives for every budget</span>
+    <span class="ticker-item"><strong>Hidden Gems</strong> — Yakushima island: Japan's ancient forest</span>
+    <span class="ticker-item"><strong>Travel Guide</strong> — The best ryokan in Kyoto under ¥20,000</span>
+    <span class="ticker-item"><strong>Culture</strong> — What wabi-sabi really means and why the world needs it</span>
+    <span class="ticker-item"><strong>Food</strong> — Tokyo's hidden izakayas locals actually go to</span>
+    <span class="ticker-item"><strong>Things to Buy</strong> — Best Japanese kitchen knives for every budget</span>
+    <span class="ticker-item"><strong>Hidden Gems</strong> — Yakushima island: Japan's ancient forest</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-kanji">旅</div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-tag">Travel Guide</span>
+      <span class="hero-num">01 / 05</span>
+    </div>
+    <h1 class="hero-title">
+      The Hidden Shrines of Kyoto<br>
+      <em>Locals Still Keep Secret</em>
+    </h1>
+    <p class="hero-desc">
+      Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto — quiet, moss-covered, and entirely yours. We asked local monks where they actually go.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="hero-btn">Read the Guide &nbsp;→</a>
+      <a href="#" class="hero-btn-ghost">Browse all guides</a>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <div class="hero-dot active"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-hint-line"></div>
+  </div>
+</section>
+
+<!-- TRAVEL SECTION -->
+<div class="section-label">
+  <span class="section-label-jp">旅</span>
+  <h2 class="section-label-en">Travel Guide</h2>
+  <div class="section-label-line"></div>
+  <a href="#" class="section-label-link">All articles <span class="arrow">→</span></a>
+</div>
+<div class="editorial-grid">
+  <a href="#" class="ed-card ed-main">
+    <div class="img-block grad-torii" style="width:100%;height:100%;"></div>
+    <div class="ed-overlay"></div>
+    <div class="ed-main-strip">特集</div>
+    <div class="ed-content">
+      <p class="ed-cat">Travel Guide</p>
+      <h3 class="ed-title">How to Spend 10 Days in Japan Without a Single Tourist Trap</h3>
+      <div class="ed-meta">
+        <span>May 18, 2026</span>
+        <span class="ed-meta-dot"></span>
+        <span>12 min read</span>
+      </div>
+    </div>
+  </a>
+  <a href="#" class="ed-card ed-sub">
+    <div class="img-block grad-fuji" style="width:100%;height:100%;"></div>
+    <div class="ed-overlay"></div>
+    <div class="ed-content">
+      <p class="ed-cat">Hidden Gems</p>
+      <h3 class="ed-title">The Perfect Route up Mt. Fuji: What Nobody Tells You</h3>
+      <div class="ed-meta"><span>May 15, 2026</span><span class="ed-meta-dot"></span><span>8 min</span></div>
+    </div>
+  </a>
+  <a href="#" class="ed-card ed-sub">
+    <div class="img-block grad-city" style="width:100%;height:100%;"></div>
+    <div class="ed-overlay"></div>
+    <div class="ed-content">
+      <p class="ed-cat">Travel Guide</p>
+      <h3 class="ed-title">Osaka in 3 Days: The Eating and Wandering Itinerary</h3>
+      <div class="ed-meta"><span>May 12, 2026</span><span class="ed-meta-dot"></span><span>6 min</span></div>
+    </div>
+  </a>
+  <a href="#" class="ed-card ed-sub">
+    <div class="img-block grad-forest" style="width:100%;height:100%;"></div>
+    <div class="ed-overlay"></div>
+    <div class="ed-content">
+      <p class="ed-cat">Hidden Gems</p>
+      <h3 class="ed-title">Yakushima: Japan's Ancient Forest That Few Tourists Find</h3>
+      <div class="ed-meta"><span>May 10, 2026</span><span class="ed-meta-dot"></span><span>9 min</span></div>
+    </div>
+  </a>
+  <a href="#" class="ed-card ed-sub">
+    <div class="img-block grad-food" style="width:100%;height:100%;"></div>
+    <div class="ed-overlay"></div>
+    <div class="ed-content">
+      <p class="ed-cat">Food &amp; Drink</p>
+      <h3 class="ed-title">How to Read a Japanese Menu (Without Speaking Japanese)</h3>
+      <div class="ed-meta"><span>May 8, 2026</span><span class="ed-meta-dot"></span><span>5 min</span></div>
+    </div>
+  </a>
+</div>
+
+<!-- CULTURE SECTION -->
+<div class="section-label">
+  <span class="section-label-jp">文化</span>
+  <h2 class="section-label-en">Culture &amp; Tradition</h2>
+  <div class="section-label-line"></div>
+  <a href="#" class="section-label-link">All articles <span class="arrow">→</span></a>
+</div>
+<div class="culture-grid">
+  <div class="culture-card">
+    <p class="culture-num">01</p>
+    <div class="culture-card-img">
+      <div class="img-block grad-1" style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;">🎎</div>
+    </div>
+    <p class="culture-card-cat">Philosophy</p>
+    <h3 class="culture-card-title">What Wabi-Sabi Really Means — And Why the World Needs It Now</h3>
+    <p class="culture-card-desc">The Japanese aesthetic of imperfection and transience offers something Western design philosophy rarely does: permission to be incomplete.</p>
+  </div>
+  <div class="culture-card">
+    <p class="culture-num">02</p>
+    <div class="culture-card-img">
+      <div class="img-block grad-2" style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;">🏺</div>
+    </div>
+    <p class="culture-card-cat">Craft</p>
+    <h3 class="culture-card-title">Kintsugi: The Art of Repairing Broken Things with Gold</h3>
+    <p class="culture-card-desc">A 500-year-old technique for mending ceramics has become a global metaphor for resilience. We visited a master craftsman in Kyoto.</p>
+  </div>
+  <div class="culture-card">
+    <p class="culture-num">03</p>
+    <div class="culture-card-img">
+      <div class="img-block grad-3" style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;">🌸</div>
+    </div>
+    <p class="culture-card-cat">Seasonal</p>
+    <h3 class="culture-card-title">Hanami 2026: Where to See Cherry Blossoms Like a Local</h3>
+    <p class="culture-card-desc">Skip the tourist crowds. These lesser-known spots offer the full hanami experience without the elbows.</p>
+  </div>
+</div>
+
+<!-- INTERLUDE BANNER -->
+<div class="interlude">
+  <div class="interlude-kanji">旅文化</div>
+  <div class="interlude-inner">
+    <div class="interlude-lines">
+      <div class="iline"></div>
+      <span class="isymbol">⛩</span>
+      <div class="iline"></div>
+    </div>
+    <p class="interlude-label">The TABI Philosophy</p>
+    <p class="interlude-quote">
+      Japan is not a destination.<br>
+      <strong>It is a way of seeing.</strong>
+    </p>
+    <p class="interlude-sub">From ancient forest temples to 4am ramen counters — we find the Japan worth knowing.</p>
+  </div>
+</div>
+
+<!-- THINGS TO BUY -->
+<div class="section-label">
+  <span class="section-label-jp">買物</span>
+  <h2 class="section-label-en">Things to Buy</h2>
+  <div class="section-label-line"></div>
+  <a href="#" class="section-label-link">All guides <span class="arrow">→</span></a>
+</div>
+<div class="buy-grid">
+  <a href="#" class="buy-card">
+    <span class="buy-icon">🔪</span>
+    <p class="buy-tag">Kitchen</p>
+    <h3 class="buy-title">The Best Japanese Kitchen Knives to Bring Home</h3>
+    <p class="buy-price">From ¥4,000</p>
+    <span class="buy-arrow">↗</span>
+  </a>
+  <a href="#" class="buy-card">
+    <span class="buy-icon">🍵</span>
+    <p class="buy-tag">Tea &amp; Ceramics</p>
+    <h3 class="buy-title">Buying Matcha: Ceremonial vs. Culinary Grade Explained</h3>
+    <p class="buy-price">From ¥800</p>
+    <span class="buy-arrow">↗</span>
+  </a>
+  <a href="#" class="buy-card">
+    <span class="buy-icon">🧴</span>
+    <p class="buy-tag">Skincare</p>
+    <h3 class="buy-title">10 Japanese Drugstore Products Worth Every Yen</h3>
+    <p class="buy-price">From ¥300</p>
+    <span class="buy-arrow">↗</span>
+  </a>
+  <a href="#" class="buy-card">
+    <span class="buy-icon">👘</span>
+    <p class="buy-tag">Fashion</p>
+    <h3 class="buy-title">Where to Buy Authentic Yukata in Tokyo Without the Markup</h3>
+    <p class="buy-price">From ¥3,500</p>
+    <span class="buy-arrow">↗</span>
+  </a>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-wrap" id="newsletter">
+  <div class="newsletter">
+    <div class="nl-visual">
+      <div class="nl-visual-kanji">旅</div>
+      <div class="nl-visual-badge">
+        <span class="nl-badge-en">Weekly</span>
+        <span class="nl-badge-main">TABI</span>
+        <div class="nl-badge-accent"></div>
+      </div>
+    </div>
+    <div class="nl-content">
+      <p class="nl-label">Free Newsletter</p>
+      <h2 class="nl-title">Japan, delivered<br>to your inbox.</h2>
+      <p class="nl-desc">Every Friday: one destination, one cultural insight, one thing worth buying. No noise. No spam. Just the Japan worth knowing.</p>
+      <form class="nl-form">
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-btn" type="submit">Subscribe</button>
+      </form>
+      <p class="nl-note">Join 12,000+ Japan lovers. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-logo">TABI<span class="dot">.</span></div>
+      <div class="footer-brand-jp">旅 — たび — Journey</div>
+      <p class="footer-tagline">Your guide to the real Japan — travel, culture, and the things worth bringing home.</p>
+      <div class="footer-social">
+        <a href="#" title="Instagram">&#9670;</a>
+        <a href="#" title="X">&#9632;</a>
+        <a href="#" title="Pinterest">&#9675;</a>
+        <a href="#" title="YouTube">&#9654;</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Explore</p>
+      <ul class="footer-links">
+        <li><a href="#">Travel Guide</a></li>
+        <li><a href="#">Culture &amp; Tradition</a></li>
+        <li><a href="#">Food &amp; Drink</a></li>
+        <li><a href="#">Hidden Gems</a></li>
+        <li><a href="#">Things to Buy</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">About</p>
+      <ul class="footer-links">
+        <li><a href="#">About TABI</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Advertise</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Legal</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Affiliate Disclosure</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="footer-copy">&copy; 2026 TABI. All rights reserved. Affiliate links may earn us a commission.</p>
+      <p class="footer-jp-strip">旅 &nbsp;·&nbsp; たび &nbsp;·&nbsp; 文化 &nbsp;·&nbsp; 買物</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

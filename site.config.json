@@ -1,0 +1,24 @@
+{
+  "siteName": "TABI",
+  "tagline": "Discover Japan",
+  "description": "Your guide to the real Japan — travel, culture, and the things worth bringing home.",
+  "siteUrl": "https://tabi.guide",
+  "language": "en",
+  "locale": "en_US",
+  "contactEmail": "hello@tabi.guide",
+  "googleAnalyticsId": "",
+  "categories": [
+    { "slug": "travel-guide",  "label": "Travel Guide" },
+    { "slug": "culture",       "label": "Culture & Tradition" },
+    { "slug": "food",          "label": "Food & Drink" },
+    { "slug": "things-to-buy", "label": "Things to Buy" },
+    { "slug": "hidden-gems",   "label": "Hidden Gems" }
+  ],
+  "nav": [
+    { "label": "Travel",        "slug": "travel-guide" },
+    { "label": "Culture",       "slug": "culture" },
+    { "label": "Food",          "slug": "food" },
+    { "label": "Things to Buy", "slug": "things-to-buy" },
+    { "label": "Hidden Gems",   "slug": "hidden-gems" }
+  ]
+}
