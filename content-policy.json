@@ -1,0 +1,27 @@
+{
+  "defaultArticleMeta": {
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
+  },
+  "allowedSourceTypes": [
+    "Official destination, transport, venue, government, and tourism organization pages when their terms allow ordinary reference.",
+    "Primary sources published by the place, organization, maker, or operator being discussed.",
+    "Openly licensed or public-domain material when attribution and reuse conditions can be followed.",
+    "TABI-owned editorial notes, original analysis, and locally maintained structured data."
+  ],
+  "disallowedSourceTypes": [
+    "Pages or media that prohibit AI scraping, automated collection, quotation, republication, or reuse.",
+    "Paywalled, member-only, private, leaked, or access-restricted material.",
+    "Unauthorized reposts, scraped mirrors, plagiarism sites, low-quality affiliate farms, and content with unclear rights.",
+    "Private social posts, personal testimony, or community posts unless explicit permission and context are available.",
+    "Sources that create ethical risk through harassment, privacy invasion, discrimination, sensationalism, or exploitation."
+  ],
+  "reuseRules": [
+    "Do not copy protected wording, route text, rankings, tables, or unique editorial framing from third-party media.",
+    "Use official and primary sources for factual confirmation where possible, then write original TABI summaries.",
+    "When a source's terms are unclear, exclude it rather than relying on it.",
+    "Mark volatile facts as requiring confirmation instead of presenting them as current."
+  ]
+}

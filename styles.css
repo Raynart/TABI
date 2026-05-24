@@ -159,6 +159,30 @@ input {
   gap: 14px;
 }
 
+.language-switch {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+.language-switch a {
+  min-width: 34px;
+  padding: 7px 8px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.language-switch a + a {
+  border-left: 1px solid var(--border);
+}
+
+.language-switch a[aria-current="true"] {
+  color: var(--white);
+  background: var(--ink);
+}
+
 .icon-button,
 .header-search {
   width: 40px;
@@ -1167,6 +1191,44 @@ input {
   margin-top: 4px;
   font-family: var(--serif);
   font-size: 1.15rem;
+}
+
+.source-panel {
+  margin-top: 28px;
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+}
+
+.source-panel dl {
+  display: grid;
+  gap: 1px;
+  margin: 0 0 14px;
+  background: var(--border);
+}
+
+.source-panel dl div {
+  background: var(--paper);
+  padding: 12px;
+}
+
+.source-panel dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.source-panel dd {
+  margin: 3px 0 0;
+  font-family: var(--serif);
+  font-size: 0.98rem;
+}
+
+.source-panel p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
 }
 
 .tag-list {
