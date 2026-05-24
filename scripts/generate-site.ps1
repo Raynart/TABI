@@ -5,6 +5,44 @@ $Config = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "site.config.json") |
 $Articles = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "articles.json") | ConvertFrom-Json
 $EnglishCulture = [System.Globalization.CultureInfo]::GetCultureInfo("en-US")
 $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+$Today = Get-Date
+$TopicClusters = @(
+  [pscustomobject]@{
+    slug = "kyoto-travel"
+    title = "Kyoto Travel"
+    description = "Quiet shrines, ryokan, craft, and routes for seeing Kyoto with more care."
+    tags = @("kyoto", "shrines", "ryokan", "craft", "wabi-sabi", "kintsugi")
+    categories = @("travel-guide", "culture")
+  },
+  [pscustomobject]@{
+    slug = "first-time-japan"
+    title = "First-Time Japan"
+    description = "Practical routes, food confidence, and gentle planning for a first trip to Japan."
+    tags = @("first-time", "itinerary", "tokyo", "kyoto", "osaka", "language", "travel-tips")
+    categories = @("travel-guide", "food")
+  },
+  [pscustomobject]@{
+    slug = "japanese-food"
+    title = "Japanese Food"
+    description = "Menus, alleys, counters, convenience-store saves, and the meals that shape a trip."
+    tags = @("food", "osaka", "tokyo", "izakaya", "menus", "konbini", "street-food")
+    categories = @("food")
+  },
+  [pscustomobject]@{
+    slug = "shopping-in-japan"
+    title = "Shopping in Japan"
+    description = "Useful, packable, and culturally thoughtful things worth bringing home."
+    tags = @("shopping", "souvenirs", "kitchen-knives", "matcha", "drugstore", "yukata", "skincare")
+    categories = @("things-to-buy")
+  },
+  [pscustomobject]@{
+    slug = "slow-travel"
+    title = "Slow Travel"
+    description = "Forests, islands, walking routes, and quieter places where Japan has room to breathe."
+    tags = @("slow-travel", "hidden-gems", "yakushima", "setouchi", "walking", "forest", "islands")
+    categories = @("hidden-gems")
+  }
+)
 
 function Html([object]$Value) {
   if ($null -eq $Value) { return "" }
@@ -49,6 +87,167 @@ function Get-BuyIcon($Article) {
   return "&#10022;"
 }
 
+function Get-ArticleTags($Article) {
+  return @($Article.tags)
+}
+
+function Get-DaysOld($Article) {
+  $Published = [datetime]::ParseExact($Article.publishedAt, "yyyy-MM-dd", $EnglishCulture)
+  return [Math]::Max(0, [int]($Today.Date - $Published.Date).TotalDays)
+}
+
+function Get-FreshnessScore($Article) {
+  $DaysOld = Get-DaysOld $Article
+  $VolatileCategories = @("travel-guide", "things-to-buy")
+  $Base = if ($DaysOld -le 14) { 25 } elseif ($DaysOld -le 45) { 21 } elseif ($DaysOld -le 90) { 16 } elseif ($DaysOld -le 180) { 10 } else { 5 }
+  if ($VolatileCategories -contains $Article.category -and $DaysOld -gt 90) { $Base -= 4 }
+  return [Math]::Max(0, $Base)
+}
+
+function Get-FreshnessLabel($Article) {
+  $DaysOld = Get-DaysOld $Article
+  if ($DaysOld -le 30) { return "Fresh" }
+  if ($DaysOld -le 120) { return "Review soon" }
+  return "Needs update"
+}
+
+function Get-SeasonalityScore($Article) {
+  $Month = [int]$Today.Month
+  $Tags = Get-ArticleTags $Article
+  $Score = 0
+
+  if (($Tags -contains "hanami" -or $Tags -contains "cherry-blossoms" -or $Tags -contains "spring") -and ($Month -in @(2, 3, 4))) { $Score += 16 }
+  if (($Tags -contains "mount-fuji" -or $Tags -contains "hiking" -or $Tags -contains "summer") -and ($Month -in @(5, 6, 7, 8))) { $Score += 16 }
+  if (($Tags -contains "yakushima" -or $Tags -contains "forest" -or $Tags -contains "islands") -and ($Month -in @(4, 5, 6, 9, 10))) { $Score += 10 }
+  if (($Tags -contains "shopping" -or $Tags -contains "souvenirs" -or $Article.category -eq "things-to-buy") -and ($Month -in @(11, 12, 1))) { $Score += 8 }
+  if ($Article.category -eq "food") { $Score += 4 }
+  if ($Article.category -eq "hidden-gems") { $Score += 3 }
+
+  return [Math]::Min(18, $Score)
+}
+
+function Get-QualityScore($Article) {
+  $Score = 0
+  $SectionCount = @($Article.sections).Count
+  $TagCount = @(Get-ArticleTags $Article).Count
+  $SummaryLength = ([string]$Article.summary).Length
+
+  if ($SummaryLength -ge 120 -and $SummaryLength -le 340) { $Score += 18 } elseif ($SummaryLength -gt 0) { $Score += 10 }
+  if ($SectionCount -ge 3) { $Score += 22 } elseif ($SectionCount -gt 0) { $Score += 12 }
+  if ($TagCount -ge 3 -and $TagCount -le 5) { $Score += 18 } elseif ($TagCount -gt 0) { $Score += 10 }
+  if (-not [string]::IsNullOrWhiteSpace($Article.image)) { $Score += 14 }
+  if (-not [string]::IsNullOrWhiteSpace($Article.imageAlt)) { $Score += 10 }
+  if ($Article.readingTime -ge 5) { $Score += 10 } elseif ($Article.readingTime -gt 0) { $Score += 5 }
+  if ($Article.affiliate -eq $true -and $Article.category -eq "things-to-buy") { $Score += 8 }
+
+  return [Math]::Min(100, $Score)
+}
+
+function Get-CategoryPriority([string]$Category, [string]$ContextCategory) {
+  if ($Category -eq $ContextCategory) { return 16 }
+  switch ($Category) {
+    "travel-guide" { return 10 }
+    "hidden-gems" { return 9 }
+    "food" { return 8 }
+    "culture" { return 7 }
+    "things-to-buy" { return 6 }
+    default { return 5 }
+  }
+}
+
+function Get-ArticleScore($Article, [string]$ContextCategory) {
+  $Score = 0
+  $Score += Get-FreshnessScore $Article
+  $Score += Get-SeasonalityScore $Article
+  $Score += [Math]::Round((Get-QualityScore $Article) / 4)
+  $Score += Get-CategoryPriority $Article.category $ContextCategory
+  if ($Article.featured -eq $true) { $Score += 12 }
+  if ($ContextCategory -eq "things-to-buy" -and $Article.affiliate -eq $true) { $Score += 8 }
+  return [int]$Score
+}
+
+function Select-ScoredArticles([object[]]$Candidates, [int]$Limit, [string]$ContextCategory) {
+  return @($Candidates |
+    Sort-Object @{ Expression = { Get-ArticleScore $_ $ContextCategory }; Descending = $true }, @{ Expression = { $_.publishedAt }; Descending = $true } |
+    Select-Object -First $Limit)
+}
+
+function Select-DiverseArticles([object[]]$Candidates, [int]$Limit, [string]$ContextCategory) {
+  $Selected = @()
+  $SeenCategories = @{}
+  $Sorted = Select-ScoredArticles $Candidates ($Candidates.Count) $ContextCategory
+
+  foreach ($Candidate in $Sorted) {
+    if ($Selected.Count -ge $Limit) { break }
+    if (-not $SeenCategories.ContainsKey($Candidate.category) -or $SeenCategories[$Candidate.category] -lt 2) {
+      $Selected += $Candidate
+      if (-not $SeenCategories.ContainsKey($Candidate.category)) { $SeenCategories[$Candidate.category] = 0 }
+      $SeenCategories[$Candidate.category] += 1
+    }
+  }
+
+  foreach ($Candidate in $Sorted) {
+    if ($Selected.Count -ge $Limit) { break }
+    if (@($Selected | Where-Object { $_.id -eq $Candidate.id }).Count -eq 0) {
+      $Selected += $Candidate
+    }
+  }
+
+  return @($Selected)
+}
+
+function Get-RelatedScore($BaseArticle, $Candidate) {
+  $BaseTags = Get-ArticleTags $BaseArticle
+  $CandidateTags = Get-ArticleTags $Candidate
+  $SharedTags = @($CandidateTags | Where-Object { $BaseTags -contains $_ }).Count
+  $Score = 0
+  $Score += $SharedTags * 18
+  if ($Candidate.category -eq $BaseArticle.category) { $Score += 16 }
+  if ($Candidate.affiliate -eq $true -and $BaseArticle.category -eq "things-to-buy") { $Score += 8 }
+  $Score += Get-SeasonalityScore $Candidate
+  $Score += [Math]::Round((Get-QualityScore $Candidate) / 10)
+  $Score += [Math]::Round((Get-FreshnessScore $Candidate) / 2)
+  return [int]$Score
+}
+
+function Select-RelatedArticles($BaseArticle, [int]$Limit) {
+  return @($Articles |
+    Where-Object { $_.id -ne $BaseArticle.id } |
+    Sort-Object @{ Expression = { Get-RelatedScore $BaseArticle $_ }; Descending = $true }, @{ Expression = { $_.publishedAt }; Descending = $true } |
+    Select-Object -First $Limit)
+}
+
+function Get-TopicUrl([string]$Slug) {
+  return "/topics/$Slug.html"
+}
+
+function Get-ArticleTopic($Article) {
+  $BestTopic = $null
+  $BestScore = -1
+  $Tags = Get-ArticleTags $Article
+  foreach ($Topic in $TopicClusters) {
+    $Score = 0
+    foreach ($Tag in $Tags) {
+      if (@($Topic.tags) -contains $Tag) { $Score += 3 }
+    }
+    if (@($Topic.categories) -contains $Article.category) { $Score += 2 }
+    if ($Score -gt $BestScore) {
+      $BestScore = $Score
+      $BestTopic = $Topic
+    }
+  }
+  return $BestTopic
+}
+
+function Select-TopicArticles($Topic, [int]$Limit) {
+  $Items = @($Articles | Where-Object {
+    $Article = $_
+    $Tags = Get-ArticleTags $Article
+    (@($Topic.categories) -contains $Article.category) -or (@($Tags | Where-Object { @($Topic.tags) -contains $_ }).Count -gt 0)
+  })
+  return Select-ScoredArticles $Items $Limit ""
+}
+
 function Write-Page([string]$RelativePath, [string]$Html) {
   $Target = Join-Path $Root $RelativePath
   $Directory = Split-Path $Target -Parent
@@ -69,6 +268,7 @@ function New-Nav([string]$CurrentCategory) {
 
 function New-SearchJson {
   $Payload = foreach ($Article in $Articles) {
+    $Topic = Get-ArticleTopic $Article
     [pscustomobject]@{
       title = $Article.title
       summary = $Article.summary
@@ -76,6 +276,10 @@ function New-SearchJson {
       categoryLabel = Get-CategoryLabel $Article.category
       tags = @($Article.tags)
       url = Get-ArticleUrl $Article
+      score = Get-ArticleScore $Article ""
+      qualityScore = Get-QualityScore $Article
+      freshness = Get-FreshnessLabel $Article
+      topic = if ($null -ne $Topic) { $Topic.title } else { "" }
     }
   }
   return ($Payload | ConvertTo-Json -Depth 6 -Compress)
@@ -192,7 +396,8 @@ $Main
       <ul class="footer-links">
         <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/articles/hidden-shrines-kyoto-locals-keep-secret.html">Start Here</a></li>
-        <li><a href="/categories/hidden-gems.html">Hidden Gems</a></li>
+        <li><a href="/topics/first-time-japan.html">First-Time Japan</a></li>
+        <li><a href="/topics/slow-travel.html">Slow Travel</a></li>
       </ul>
     </div>
     <div>
@@ -258,12 +463,15 @@ function New-BuyCard($Article) {
 }
 
 function New-ListingCard($Article) {
+  $Score = Get-ArticleScore $Article $Article.category
+  $Freshness = Get-FreshnessLabel $Article
   return @"
 <a class="listing-card" href="$(Get-ArticleUrl $Article)" data-search-card>
   <img src="$(Html $Article.image)" alt="$(Html $Article.imageAlt)" loading="lazy">
   <p class="card-cat">$(Html (Get-CategoryLabel $Article.category))</p>
   <h2>$(Html $Article.title)</h2>
   <p>$(Html $Article.summary)</p>
+  <p class="listing-meta">Score $Score / $(Html $Freshness)</p>
   <div class="tag-list">
     $(New-TagList $Article.tags)
   </div>
@@ -276,6 +484,59 @@ function New-TagList($Tags) {
     '<span class="tag-pill">#{0}</span>' -f (Html $Tag)
   }
   return ($Items -join "`n")
+}
+
+function New-LinkedTagList($Tags) {
+  $Items = foreach ($Tag in $Tags) {
+    '<a class="tag-pill" href="{0}">#{1}</a>' -f (Get-TagUrl $Tag), (Html $Tag)
+  }
+  return ($Items -join "`n")
+}
+
+function New-Breadcrumbs($Items) {
+  $Parts = foreach ($Item in $Items) {
+    if ([string]::IsNullOrWhiteSpace($Item.url)) {
+      '<span aria-current="page">{0}</span>' -f (Html $Item.label)
+    } else {
+      '<a href="{0}">{1}</a>' -f $Item.url, (Html $Item.label)
+    }
+  }
+  return @"
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  $($Parts -join '<span aria-hidden="true">/</span>')
+</nav>
+"@
+}
+
+function New-ArticleSignals($Article) {
+  $Quality = Get-QualityScore $Article
+  $Freshness = Get-FreshnessLabel $Article
+  $Score = Get-ArticleScore $Article ""
+  $Seasonality = Get-SeasonalityScore $Article
+  return @"
+<div class="signal-grid" aria-label="Editorial signals">
+  <div><span>Article score</span><strong>$Score</strong></div>
+  <div><span>Quality</span><strong>$Quality</strong></div>
+  <div><span>Freshness</span><strong>$(Html $Freshness)</strong></div>
+  <div><span>Seasonal fit</span><strong>$Seasonality</strong></div>
+</div>
+"@
+}
+
+function New-CompactArticleCard($Article) {
+  return @"
+<a class="compact-card" href="$(Get-ArticleUrl $Article)">
+  <img src="$(Html $Article.image)" alt="$(Html $Article.imageAlt)" loading="lazy">
+  <span>$(Html (Get-CategoryLabel $Article.category))</span>
+  <strong>$(Html $Article.title)</strong>
+</a>
+"@
+}
+
+function New-AlgorithmNote([string]$Text) {
+  return @"
+<p class="algorithm-note">$(Html $Text)</p>
+"@
 }
 
 function New-Newsletter {
@@ -302,21 +563,21 @@ function New-Newsletter {
 
 function New-HomePage {
   $Sorted = @($Articles | Sort-Object publishedAt -Descending)
-  $Hero = $Sorted | Where-Object { $_.id -eq "hidden-shrines-kyoto-locals-keep-secret" } | Select-Object -First 1
-  if ($null -eq $Hero) { $Hero = $Sorted[0] }
-  $EditorialIds = @(
-    "hidden-shrines-kyoto-locals-keep-secret",
-    "perfect-route-up-mount-fuji",
-    "osaka-three-day-eating-itinerary",
-    "yakushima-ancient-forest-few-tourists-find",
-    "kintsugi-art-of-repairing-broken-things"
-  )
-  $Editorial = foreach ($Id in $EditorialIds) {
-    $Sorted | Where-Object { $_.id -eq $Id } | Select-Object -First 1
+  $Hero = (Select-ScoredArticles $Sorted 1 "")[0]
+  $Editorial = Select-DiverseArticles $Sorted 5 ""
+  $Culture = Select-ScoredArticles @($Sorted | Where-Object { $_.category -eq "culture" }) 3 "culture"
+  $Buy = Select-ScoredArticles @($Sorted | Where-Object { $_.category -eq "things-to-buy" }) 4 "things-to-buy"
+  $TopicCards = foreach ($Topic in $TopicClusters) {
+    $Count = @(Select-TopicArticles $Topic 50).Count
+    @"
+<a class="topic-card" href="$(Get-TopicUrl $Topic.slug)">
+  <span>Topic Cluster</span>
+  <strong>$(Html $Topic.title)</strong>
+  <p>$(Html $Topic.description)</p>
+  <small>$Count guides</small>
+</a>
+"@
   }
-  $Editorial = @($Editorial | Where-Object { $null -ne $_ })
-  $Culture = @($Sorted | Where-Object { $_.category -eq "culture" } | Select-Object -First 3)
-  $Buy = @($Sorted | Where-Object { $_.category -eq "things-to-buy" } | Select-Object -First 4)
   $HeroRead = if ($Hero.readingTime -eq 1) { "1 min read" } else { "$($Hero.readingTime) min read" }
 
   $EditorialCards = for ($i = 0; $i -lt $Editorial.Count; $i++) {
@@ -349,8 +610,19 @@ function New-HomePage {
     <div class="section-label-line"></div>
     <a class="section-label-link" href="/categories/travel-guide.html">All articles</a>
   </div>
+  $(New-AlgorithmNote "Ranked by TABI's local article score: freshness, seasonality, quality, editorial weight, and category diversity.")
   <div class="editorial-grid">
     $($EditorialCards -join "`n")
+  </div>
+</section>
+<section aria-labelledby="topics-heading">
+  <div class="section-label">
+    <span class="section-label-jp">&#36947;</span>
+    <h2 class="section-label-en" id="topics-heading">Topic Paths</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="topic-grid">
+    $($TopicCards -join "`n")
   </div>
 </section>
 <section aria-labelledby="culture-heading">
@@ -408,13 +680,27 @@ function New-ArticlePage($Article) {
 </section>
 "@
   }
-  $Related = @($Articles | Where-Object { $_.category -eq $Article.category -and $_.id -ne $Article.id } | Sort-Object publishedAt -Descending | Select-Object -First 3)
+  $Topic = Get-ArticleTopic $Article
+  $TopicHtml = ""
+  if ($null -ne $Topic) {
+    $TopicHtml = '<a class="tag-pill topic-pill" href="{0}">{1}</a>' -f (Get-TopicUrl $Topic.slug), (Html $Topic.title)
+  }
+  $Related = Select-RelatedArticles $Article 4
   $RelatedHtml = foreach ($Item in $Related) {
     '<li><a href="{0}">{1}</a></li>' -f (Get-ArticleUrl $Item), (Html $Item.title)
   }
+  $RelatedCards = foreach ($Item in ($Related | Select-Object -First 3)) {
+    New-CompactArticleCard $Item
+  }
+  $Breadcrumbs = New-Breadcrumbs @(
+    [pscustomobject]@{ label = "Home"; url = "/" },
+    [pscustomobject]@{ label = Get-CategoryLabel $Article.category; url = Get-CategoryUrl $Article.category },
+    [pscustomobject]@{ label = $Article.title; url = "" }
+  )
 
   $Main = @"
 <section class="page-hero">
+  $Breadcrumbs
   <p class="page-kicker">$(Html (Get-CategoryLabel $Article.category))</p>
   <h1 class="page-title">$(Html $Article.title)</h1>
   <p class="page-desc">$(Html $Article.summary)</p>
@@ -428,17 +714,30 @@ function New-ArticlePage($Article) {
     $($SectionHtml -join "`n")
   </div>
   <aside class="article-sidebar" aria-label="Article details">
+    $(New-ArticleSignals $Article)
     <p class="footer-col-title">Filed Under</p>
     <a class="tag-pill" href="$(Get-CategoryUrl $Article.category)">$(Html (Get-CategoryLabel $Article.category))</a>
+    $TopicHtml
     <div class="tag-list">
-      $(foreach ($Tag in $Article.tags) { '<a class="tag-pill" href="{0}">#{1}</a>' -f (Get-TagUrl $Tag), (Html $Tag) })
+      $(New-LinkedTagList $Article.tags)
     </div>
     <p class="footer-col-title sidebar-section-title">Related</p>
+    <p class="sidebar-note">Chosen by shared tags, category fit, freshness, seasonality, and quality score.</p>
     <ul class="footer-links">
       $($RelatedHtml -join "`n")
     </ul>
   </aside>
 </article>
+<section aria-labelledby="next-heading" class="next-read">
+  <div class="section-label">
+    <span class="section-label-jp">&#27425;</span>
+    <h2 class="section-label-en" id="next-heading">Read Next</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="compact-grid">
+    $($RelatedCards -join "`n")
+  </div>
+</section>
 $(New-Newsletter)
 "@
 
@@ -461,14 +760,20 @@ $(New-Newsletter)
 }
 
 function New-CategoryPage($Category) {
-  $Items = @($Articles | Where-Object { $_.category -eq $Category.slug } | Sort-Object publishedAt -Descending)
+  $Items = Select-ScoredArticles @($Articles | Where-Object { $_.category -eq $Category.slug }) 100 $Category.slug
   $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $Breadcrumbs = New-Breadcrumbs @(
+    [pscustomobject]@{ label = "Home"; url = "/" },
+    [pscustomobject]@{ label = $Category.label; url = "" }
+  )
   $Main = @"
 <section class="page-hero">
+  $Breadcrumbs
   <p class="page-kicker">Category</p>
   <h1 class="page-title">$(Html $Category.label)</h1>
   <p class="page-desc">Curated TABI guides for $(Html $Category.label.ToLowerInvariant()) in Japan.</p>
 </section>
+$(New-AlgorithmNote "Sorted by category relevance, freshness, seasonality, editorial weight, and article quality.")
 <section class="listing-grid" aria-label="$(Html $Category.label) articles">
   $($Cards -join "`n")
 </section>
@@ -485,15 +790,21 @@ $(New-Newsletter)
 }
 
 function New-TagPage([string]$Tag) {
-  $Items = @($Articles | Where-Object { @($_.tags) -contains $Tag } | Sort-Object publishedAt -Descending)
+  $Items = Select-ScoredArticles @($Articles | Where-Object { @($_.tags) -contains $Tag }) 100 ""
   $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
   $Title = "#$Tag"
+  $Breadcrumbs = New-Breadcrumbs @(
+    [pscustomobject]@{ label = "Home"; url = "/" },
+    [pscustomobject]@{ label = $Title; url = "" }
+  )
   $Main = @"
 <section class="page-hero">
+  $Breadcrumbs
   <p class="page-kicker">Tag</p>
   <h1 class="page-title">$(Html $Title)</h1>
   <p class="page-desc">Articles connected to $(Html $Tag), gathered from across TABI.</p>
 </section>
+$(New-AlgorithmNote "Sorted by article score so stronger, fresher, and more seasonally useful guides appear first.")
 <section class="listing-grid" aria-label="$(Html $Tag) articles">
   $($Cards -join "`n")
 </section>
@@ -509,9 +820,75 @@ $(New-Newsletter)
   return New-Layout "$Title - TABI" "Articles connected to $Tag, gathered from across TABI." (Get-TagUrl $Tag) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
+function New-TopicPage($Topic) {
+  $Items = Select-TopicArticles $Topic 100
+  $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $Breadcrumbs = New-Breadcrumbs @(
+    [pscustomobject]@{ label = "Home"; url = "/" },
+    [pscustomobject]@{ label = "Topics"; url = "" },
+    [pscustomobject]@{ label = $Topic.title; url = "" }
+  )
+  $Main = @"
+<section class="page-hero">
+  $Breadcrumbs
+  <p class="page-kicker">Topic Path</p>
+  <h1 class="page-title">$(Html $Topic.title)</h1>
+  <p class="page-desc">$(Html $Topic.description)</p>
+</section>
+$(New-AlgorithmNote "This topic path is generated from tag overlap, category fit, and article score. It acts as a static internal-link hub.")
+<section class="listing-grid" aria-label="$(Html $Topic.title) articles">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "CollectionPage"
+    name = $Topic.title
+    description = $Topic.description
+    url = SiteUrl (Get-TopicUrl $Topic.slug)
+  } | ConvertTo-Json -Depth 5 -Compress
+  return New-Layout "$($Topic.title) - TABI" $Topic.description (Get-TopicUrl $Topic.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
+function New-NotFoundPage {
+  $Picks = Select-DiverseArticles $Articles 6 ""
+  $PickCards = foreach ($Article in $Picks) { New-CompactArticleCard $Article }
+  $TopicCards = foreach ($Topic in $TopicClusters) {
+    '<a class="tag-pill topic-pill" href="{0}">{1}</a>' -f (Get-TopicUrl $Topic.slug), (Html $Topic.title)
+  }
+  $Main = @"
+<section class="page-hero not-found-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = "404"; url = "" }))
+  <p class="page-kicker">404</p>
+  <h1 class="page-title">This path has wandered off the map.</h1>
+  <p class="page-desc">Try a topic path, search TABI, or start with one of the strongest guides selected by the local article score.</p>
+  <div class="hero-actions light-actions">
+    <a class="button" href="/">Back to Home</a>
+    <button class="button secondary" type="button" data-search-toggle>Search TABI</button>
+  </div>
+  <div class="tag-list">
+    $($TopicCards -join "`n")
+  </div>
+</section>
+<section class="next-read" aria-labelledby="not-found-picks">
+  <div class="section-label">
+    <span class="section-label-jp">&#22320;</span>
+    <h2 class="section-label-en" id="not-found-picks">Recommended Guides</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="compact-grid">
+    $($PickCards -join "`n")
+  </div>
+</section>
+"@
+  return New-Layout "Page Not Found - TABI" "Find your way back into TABI with recommended Japan travel, culture, food, and shopping guides." "/404.html" $Main "" "/assets/images/kyoto-shrine-hero.png" ""
+}
+
 function New-Sitemap {
   $Urls = @("/")
   $Urls += foreach ($Category in $Config.categories) { Get-CategoryUrl $Category.slug }
+  $Urls += foreach ($Topic in $TopicClusters) { Get-TopicUrl $Topic.slug }
   $Tags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
   $Urls += foreach ($Tag in $Tags) { Get-TagUrl $Tag }
   $Urls += foreach ($Article in $Articles) { Get-ArticleUrl $Article }
@@ -536,12 +913,17 @@ foreach ($Category in $Config.categories) {
   Write-Page "categories/$($Category.slug).html" (New-CategoryPage $Category)
 }
 
+foreach ($Topic in $TopicClusters) {
+  Write-Page "topics/$($Topic.slug).html" (New-TopicPage $Topic)
+}
+
 $AllTags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
 foreach ($Tag in $AllTags) {
   Write-Page "tags/$Tag.html" (New-TagPage $Tag)
 }
 
+Write-Page "404.html" (New-NotFoundPage)
 Write-Page "sitemap.xml" (New-Sitemap)
 Write-Page "robots.txt" "User-agent: *`nAllow: /`nSitemap: $(SiteUrl '/sitemap.xml')`n"
 
-Write-Host "Generated $($Articles.Count) articles, $($Config.categories.Count) categories, and $($AllTags.Count) tag pages."
+Write-Host "Generated $($Articles.Count) articles, $($Config.categories.Count) categories, $($TopicClusters.Count) topics, and $($AllTags.Count) tag pages."

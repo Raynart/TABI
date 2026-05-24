@@ -20,6 +20,7 @@ TABI is an English-language static curation site for international visitors and 
 ├── categories/        Generated category pages
 ├── scripts/           PowerShell generation scripts
 ├── tags/              Generated tag pages
+├── topics/            Generated topic cluster pages
 ├── articles.json      Source article data
 ├── index.html         Generated top page
 ├── script.js          Frontend interactions
@@ -34,7 +35,19 @@ TABI is an English-language static curation site for international visitors and 
 powershell -ExecutionPolicy Bypass -File ".\scripts\generate-site.ps1"
 ```
 
-The generator reads `articles.json` and `site.config.json`, then writes the top page, article pages, category pages, tag pages, `sitemap.xml`, and `robots.txt`.
+The generator reads `articles.json` and `site.config.json`, then writes the top page, article pages, category pages, topic pages, tag pages, `404.html`, `sitemap.xml`, and `robots.txt`.
+
+## Local Editorial Algorithms
+
+The site generator includes local, static algorithms that do not require external services:
+
+- Article scoring from freshness, seasonality, content quality, category priority, and editorial weight
+- Related-article selection from shared tags, category fit, freshness, seasonality, and quality
+- Topic cluster pages for internal-link hubs
+- Category and tag sorting by article score
+- Search metadata for weighted client-side search
+- Editorial signals on article pages
+- A helpful generated `404.html`
 
 ## Content Model
 

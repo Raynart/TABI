@@ -1,5 +1,5 @@
 (function () {
-  const searchToggle = document.querySelector("[data-search-toggle]");
+  const searchToggles = document.querySelectorAll("[data-search-toggle]");
   const searchPanel = document.querySelector("[data-search-panel]");
   const searchClose = document.querySelector("[data-search-close]");
   const searchInput = document.querySelector("[data-search-input]");
@@ -25,16 +25,14 @@
   function renderSearch(query) {
     if (!searchResults) return;
     const normalized = query.trim().toLowerCase();
+    const tokens = normalized.split(/\s+/).filter(Boolean);
     const matches = articles
-      .filter((article) => {
-        const haystack = [
-          article.title,
-          article.summary,
-          article.category,
-          (article.tags || []).join(" ")
-        ].join(" ").toLowerCase();
-        return !normalized || haystack.includes(normalized);
+      .map((article) => {
+        const rank = scoreArticle(article, tokens);
+        return { article, rank };
       })
+      .filter((item) => !tokens.length || item.rank > 0)
+      .sort((a, b) => b.rank - a.rank || (b.article.score || 0) - (a.article.score || 0))
       .slice(0, 8);
 
     if (!matches.length) {
@@ -43,16 +41,40 @@
     }
 
     searchResults.innerHTML = matches
-      .map((article) => {
+      .map((item) => {
+        const article = item.article;
         const tags = (article.tags || []).slice(0, 3).map((tag) => "#" + tag).join(" ");
         return [
           '<a class="search-result" href="' + article.url + '">',
           "<strong>" + escapeHtml(article.title) + "</strong>",
-          "<span>" + escapeHtml(article.categoryLabel) + " / " + escapeHtml(tags) + "</span>",
+          "<span>" + escapeHtml(article.categoryLabel) + " / " + escapeHtml(article.topic || "TABI") + " / " + escapeHtml(tags) + "</span>",
           "</a>"
         ].join("");
       })
       .join("");
+  }
+
+  function scoreArticle(article, tokens) {
+    if (!tokens.length) return article.score || 0;
+
+    const fields = {
+      title: String(article.title || "").toLowerCase(),
+      summary: String(article.summary || "").toLowerCase(),
+      category: String(article.categoryLabel || article.category || "").toLowerCase(),
+      topic: String(article.topic || "").toLowerCase(),
+      tags: (article.tags || []).join(" ").toLowerCase()
+    };
+
+    return tokens.reduce((total, token) => {
+      let score = 0;
+      if (fields.title.includes(token)) score += 18;
+      if (fields.tags.includes(token)) score += 12;
+      if (fields.topic.includes(token)) score += 9;
+      if (fields.category.includes(token)) score += 7;
+      if (fields.summary.includes(token)) score += 4;
+      if (fields.title.startsWith(token)) score += 8;
+      return total + score;
+    }, Math.round((article.score || 0) / 10));
   }
 
   function escapeHtml(value) {
@@ -64,9 +86,9 @@
       .replace(/'/g, "&#039;");
   }
 
-  if (searchToggle) {
+  searchToggles.forEach((searchToggle) => {
     searchToggle.addEventListener("click", openSearch);
-  }
+  });
 
   if (searchClose) {
     searchClose.addEventListener("click", closeSearch);
