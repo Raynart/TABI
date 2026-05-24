@@ -12,211 +12,39 @@ $JapaneseCulture = [System.Globalization.CultureInfo]::GetCultureInfo("ja-JP")
 $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $Today = Get-Date
 $Script:CurrentLang = "en"
-$TopicClusters = @(
-  [pscustomobject]@{
-    slug = "kyoto-travel"
-    title = "Kyoto Travel"
-    description = "Quiet shrines, ryokan, craft, and routes for seeing Kyoto with more care."
-    tags = @("kyoto", "shrines", "ryokan", "craft", "wabi-sabi", "kintsugi")
-    categories = @("travel-guide", "culture")
-  },
-  [pscustomobject]@{
-    slug = "first-time-japan"
-    title = "First-Time Japan"
-    description = "Practical routes, food confidence, and gentle planning for a first trip to Japan."
-    tags = @("first-time", "itinerary", "tokyo", "kyoto", "osaka", "language", "travel-tips")
-    categories = @("travel-guide", "food")
-  },
-  [pscustomobject]@{
-    slug = "japanese-food"
-    title = "Japanese Food"
-    description = "Menus, alleys, counters, convenience-store saves, and the meals that shape a trip."
-    tags = @("food", "osaka", "tokyo", "izakaya", "menus", "konbini", "street-food")
-    categories = @("food")
-  },
-  [pscustomobject]@{
-    slug = "shopping-in-japan"
-    title = "Shopping in Japan"
-    description = "Useful, packable, and culturally thoughtful things worth bringing home."
-    tags = @("shopping", "souvenirs", "kitchen-knives", "matcha", "drugstore", "yukata", "skincare")
-    categories = @("things-to-buy")
-  },
-  [pscustomobject]@{
-    slug = "slow-travel"
-    title = "Slow Travel"
-    description = "Forests, islands, walking routes, and quieter places where Japan has room to breathe."
-    tags = @("slow-travel", "hidden-gems", "yakushima", "setouchi", "walking", "forest", "islands")
-    categories = @("hidden-gems")
+$UiLabels = @{
+  en = @{
+    skip = "Skip to content"; topBar = "Japan Travel & Culture Guide"; topExtra = " / Updated weekly / Free newsletter every Friday"
+    latest = "Latest"; search = "Search TABI"; closeSearch = "Close search"; searchPlaceholder = "Search Kyoto, food, craft, hidden gems..."
+    newsletter = "Free Newsletter"; explore = "Explore"; disclosure = "Disclosure"; contact = "Contact"; sitemap = "Sitemap"
+    sourcePolicy = "Source Policy"; sourcePolicyShort = "Source Policy"; language = "Language"; readNext = "Read Next"
+    filedUnder = "Filed Under"; related = "Related"; inThisGuide = "In This Guide"; sourceInfo = "Source & Verification"
+    articleScore = "Article score"; quality = "Quality"; freshness = "Freshness"; seasonalFit = "Seasonal fit"
+    affiliate = "Affiliate links may earn us a commission."; copyright = "All rights reserved."; home = "Home"
   }
-)
-
-$AreaClusters = @(
-  [pscustomobject]@{
-    slug = "tokyo"
-    title = "Tokyo"
-    description = "Neighborhood food, shopping, nightlife, and low-friction first-trip decisions."
-    image = "/assets/images/osaka-food-alley.png"
-    tags = @("tokyo", "izakaya", "nightlife", "yukata", "shopping")
-    categories = @("food", "things-to-buy", "travel-guide")
-    neighborhoods = @(
-      [pscustomobject]@{ name = "Yanaka"; note = "Slow streets, small shops, and first-day wandering." },
-      [pscustomobject]@{ name = "Shibuya"; note = "Big-city energy that works best when paired with a quieter pocket." },
-      [pscustomobject]@{ name = "Asakusa"; note = "Useful for craft, tradition, and easy transit links." }
-    )
-  },
-  [pscustomobject]@{
-    slug = "kyoto"
-    title = "Kyoto"
-    description = "Shrines, ryokan, craft, tea, and routes that reward early starts."
-    image = "/assets/images/kyoto-shrine-hero.png"
-    tags = @("kyoto", "shrines", "ryokan", "craft", "matcha", "kintsugi", "wabi-sabi")
-    categories = @("travel-guide", "culture", "things-to-buy")
-    neighborhoods = @(
-      [pscustomobject]@{ name = "Northern Kyoto"; note = "Quieter temples, hills, and slower transit days." },
-      [pscustomobject]@{ name = "Demachiyanagi"; note = "A good edge for cafes, riverside time, and local rhythm." },
-      [pscustomobject]@{ name = "Higashiyama"; note = "Best early or late, with careful pacing." }
-    )
-  },
-  [pscustomobject]@{
-    slug = "osaka"
-    title = "Osaka"
-    description = "Food-first planning, markets, alleys, and neighborhoods beyond the obvious photo stop."
-    image = "/assets/images/osaka-food-alley.png"
-    tags = @("osaka", "street-food", "nightlife", "food", "itinerary")
-    categories = @("food", "travel-guide")
-    neighborhoods = @(
-      [pscustomobject]@{ name = "Namba"; note = "A practical base for first nights and late food." },
-      [pscustomobject]@{ name = "Nakazakicho"; note = "Cafes, small shops, and a slower counterpoint to Dotonbori." },
-      [pscustomobject]@{ name = "Tenma"; note = "Compact food energy that rewards small rounds." }
-    )
-  },
-  [pscustomobject]@{
-    slug = "yakushima"
-    title = "Yakushima"
-    description = "Ancient forest, rain, coastal villages, and slower island planning."
-    image = "/assets/images/yakushima-forest.png"
-    tags = @("yakushima", "forest", "hiking", "islands", "slow-travel")
-    categories = @("hidden-gems")
-    neighborhoods = @(
-      [pscustomobject]@{ name = "Forest trails"; note = "Choose one major route and leave room for weather." },
-      [pscustomobject]@{ name = "Coastal villages"; note = "Useful for scale, meals, and recovery time." },
-      [pscustomobject]@{ name = "Short walks"; note = "Good backup plans when rain changes the day." }
-    )
-  },
-  [pscustomobject]@{
-    slug = "setouchi"
-    title = "Setouchi"
-    description = "Island art, ferries, sea air, and slow travel between small ports."
-    image = "/assets/images/yakushima-forest.png"
-    tags = @("setouchi", "islands", "art", "slow-travel")
-    categories = @("hidden-gems", "culture")
-    neighborhoods = @(
-      [pscustomobject]@{ name = "Museum islands"; note = "Plan around ferry rhythm, not a crowded checklist." },
-      [pscustomobject]@{ name = "Harbor towns"; note = "Good for ordinary time between art stops." },
-      [pscustomobject]@{ name = "Sunset routes"; note = "Worth protecting when the timetable allows." }
-    )
+  ja = @{
+    skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
+    latest = "新着"; search = "TABIを検索"; closeSearch = "検索を閉じる"; searchPlaceholder = "京都、食、工芸、穴場を検索..."
+    newsletter = "無料ニュースレター"; explore = "探す"; disclosure = "開示"; contact = "お問い合わせ"; sitemap = "サイトマップ"
+    sourcePolicy = "情報出所ポリシー"; sourcePolicyShort = "出所ポリシー"; language = "言語"; readNext = "次に読む"
+    filedUnder = "分類"; related = "関連記事"; inThisGuide = "このガイドの内容"; sourceInfo = "出所と検証"
+    articleScore = "記事スコア"; quality = "品質"; freshness = "鮮度"; seasonalFit = "季節適合"
+    affiliate = "一部リンクから収益を得る場合があります。"; copyright = "All rights reserved."; home = "ホーム"
   }
-)
-
-$ItineraryPlans = @(
-  [pscustomobject]@{
-    slug = "three-days"
-    title = "3 Days in Japan"
-    duration = "3 days"
-    pace = "Focused"
-    description = "A tight route for travelers adding Japan to a larger trip or using Tokyo as a short gateway."
-    tags = @("tokyo", "food", "first-time", "shopping")
-    categories = @("travel-guide", "food", "things-to-buy")
-    steps = @(
-      [pscustomobject]@{ label = "Day 1"; title = "Arrive gently"; body = "Stay in one Tokyo neighborhood, solve cash, transit, and first meal decisions, then stop early." },
-      [pscustomobject]@{ label = "Day 2"; title = "Food and texture"; body = "Pair a market or old street with one planned dinner and a low-pressure shopping stop." },
-      [pscustomobject]@{ label = "Day 3"; title = "One final loop"; body = "Use the last morning for a compact route near your departure station or airport line." }
-    )
-  },
-  [pscustomobject]@{
-    slug = "seven-days"
-    title = "7 Days in Japan"
-    duration = "7 days"
-    pace = "Balanced"
-    description = "A first-timer plan that keeps Tokyo and Kyoto readable without turning every day into transit."
-    tags = @("tokyo", "kyoto", "first-time", "itinerary", "shrines", "food")
-    categories = @("travel-guide", "culture", "food")
-    steps = @(
-      [pscustomobject]@{ label = "Days 1-3"; title = "Tokyo base"; body = "Use Tokyo for food confidence, practical setup, and one quiet neighborhood day." },
-      [pscustomobject]@{ label = "Days 4-6"; title = "Kyoto slower"; body = "Move early, build around shrines and craft, and avoid overloading temple days." },
-      [pscustomobject]@{ label = "Day 7"; title = "Return cleanly"; body = "Keep the final day close to your departure route and finish shopping before luggage becomes a problem." }
-    )
-  },
-  [pscustomobject]@{
-    slug = "ten-days"
-    title = "10 Days in Japan"
-    duration = "10 days"
-    pace = "Classic"
-    description = "The classic Tokyo, Kyoto, and Osaka route with more space for neighborhoods and food."
-    tags = @("itinerary", "tokyo", "kyoto", "osaka", "food", "shopping")
-    categories = @("travel-guide", "food", "things-to-buy")
-    steps = @(
-      [pscustomobject]@{ label = "Days 1-3"; title = "Tokyo"; body = "Start with food, transit confidence, and one older neighborhood before the trip speeds up." },
-      [pscustomobject]@{ label = "Days 4-6"; title = "Kyoto"; body = "Anchor mornings with quiet places and afternoons with craft, tea, or riverside time." },
-      [pscustomobject]@{ label = "Days 7-9"; title = "Osaka"; body = "Make food the structure and let neighborhoods fill the gaps." },
-      [pscustomobject]@{ label = "Day 10"; title = "Departure buffer"; body = "Protect time for packing, gifts, and one simple final meal." }
-    )
-  },
-  [pscustomobject]@{
-    slug = "fourteen-days"
-    title = "14 Days in Japan"
-    duration = "14 days"
-    pace = "Slow extension"
-    description = "A longer plan that adds forest, islands, or walking routes after the classic first-trip core."
-    tags = @("slow-travel", "yakushima", "setouchi", "walking", "islands", "kyoto")
-    categories = @("hidden-gems", "travel-guide", "culture")
-    steps = @(
-      [pscustomobject]@{ label = "Days 1-6"; title = "First-trip core"; body = "Use Tokyo and Kyoto for orientation, food, shrines, and practical shopping." },
-      [pscustomobject]@{ label = "Days 7-10"; title = "Choose one extension"; body = "Pick Yakushima, Setouchi, Fuji, or Kiso Valley instead of collecting all of them." },
-      [pscustomobject]@{ label = "Days 11-13"; title = "Recover the rhythm"; body = "Return through Osaka or Tokyo with space for laundry, food, and lower-pressure wandering." },
-      [pscustomobject]@{ label = "Day 14"; title = "Leave deliberately"; body = "Use the final day for calm logistics rather than a new major sight." }
-    )
-  }
-)
-
-$PlanningGuides = @(
-  [pscustomobject]@{
-    slug = "japan-travel-checklist"
-    title = "Japan Travel Checklist"
-    description = "A practical pre-trip checklist for first-time Japan travelers, designed to avoid last-minute friction."
-    kicker = "Before You Fly"
-    blocks = @(
-      [pscustomobject]@{ heading = "Two weeks before"; items = @("Confirm passport validity and entry requirements from official sources.", "Reserve any must-have stays or restaurants.", "Choose a communication plan and save offline maps.") },
-      [pscustomobject]@{ heading = "One week before"; items = @("Add transit cards, key addresses, and hotel names to your phone.", "Check luggage forwarding needs and pack a small day bag.", "Prepare written allergy or medication notes if relevant.") },
-      [pscustomobject]@{ heading = "First day in Japan"; items = @("Withdraw or prepare cash for small shops.", "Confirm the airport-to-hotel route before leaving arrivals.", "Eat simply and sleep early enough to protect the next day.") }
-    )
-  },
-  [pscustomobject]@{
-    slug = "budget-transport-connectivity"
-    title = "Budget, Transport, and Connectivity"
-    description = "A local-first planning page for money, trains, luggage, and phone access without relying on live external feeds."
-    kicker = "Trip Basics"
-    blocks = @(
-      [pscustomobject]@{ heading = "Money"; items = @("Carry a mix of cards and cash because small restaurants and rural stops can still be cash-friendly.", "Use price ranges as planning cues, then confirm current fares and fees before travel.", "Keep tax-free shopping sealed only when it fits your actual travel plan.") },
-      [pscustomobject]@{ heading = "Transport"; items = @("Build days around one or two anchors instead of maximum transfers.", "Use station-area stays when the route has several city changes.", "Treat luggage forwarding as a comfort tool on multi-city routes.") },
-      [pscustomobject]@{ heading = "Connectivity"; items = @("Choose eSIM, SIM, or pocket Wi-Fi based on device compatibility and group size.", "Save hotel addresses, train routes, and emergency notes offline.", "Keep a battery plan for long food, shrine, and walking days.") }
-    )
-  }
-)
-
-$GlossaryTerms = @(
-  [pscustomobject]@{ term = "Otoshi"; category = "Food"; definition = "A small starter served at many izakaya as part of a seating charge." },
-  [pscustomobject]@{ term = "Shotengai"; category = "City"; definition = "A local shopping arcade or street, often useful for everyday food and small shops." },
-  [pscustomobject]@{ term = "Ryokan"; category = "Stay"; definition = "A Japanese-style inn, usually shaped by tatami rooms, baths, meal timing, and house rules." },
-  [pscustomobject]@{ term = "Onsen"; category = "Stay"; definition = "A hot spring bath with etiquette around washing, towels, tattoos, and quiet behavior." },
-  [pscustomobject]@{ term = "Tax-free"; category = "Shopping"; definition = "A visitor shopping process that may require sealed bags and passport handling." },
-  [pscustomobject]@{ term = "Konbini"; category = "Food"; definition = "A convenience store, useful for breakfasts, tickets, ATMs, and small travel fixes." },
-  [pscustomobject]@{ term = "IC card"; category = "Transport"; definition = "A stored-value transit card or mobile wallet setup used for many trains, buses, and small purchases." },
-  [pscustomobject]@{ term = "Takkyubin"; category = "Logistics"; definition = "Luggage delivery service that can make multi-city routes easier." },
-  [pscustomobject]@{ term = "Kaiseki"; category = "Food"; definition = "A seasonal multi-course meal often associated with ryokan and refined restaurants." },
-  [pscustomobject]@{ term = "Shukubo"; category = "Stay"; definition = "Temple lodging, usually simple and rule-driven, with a focus on quiet and routine." }
-)
-
+}
+$CategoryLabelsJa = @{
+  "travel-guide" = "旅行ガイド"
+  "culture" = "文化と伝統"
+  "food" = "食"
+  "things-to-buy" = "買うべきもの"
+  "hidden-gems" = "知られざる場所"
+}
+$SiteData = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "site-data.json") | ConvertFrom-Json
+$TopicClusters = @($SiteData.topics)
+$AreaClusters = @($SiteData.areas)
+$ItineraryPlans = @($SiteData.itineraries)
+$PlanningGuides = @($SiteData.planning)
+$GlossaryTerms = @($SiteData.glossary)
 function Html([object]$Value) {
   if ($null -eq $Value) { return "" }
   return [System.Net.WebUtility]::HtmlEncode([string]$Value)
@@ -226,29 +54,15 @@ function Is-Japanese {
   return $Script:CurrentLang -eq "ja"
 }
 
+function Lang-Code {
+  if (Is-Japanese) { return "ja" }
+  return "en"
+}
+
 function T([string]$Key) {
-  if (-not (Is-Japanese)) {
-    $English = @{
-      skip = "Skip to content"; topBar = "Japan Travel & Culture Guide"; topExtra = " / Updated weekly / Free newsletter every Friday"
-      latest = "Latest"; search = "Search TABI"; closeSearch = "Close search"; searchPlaceholder = "Search Kyoto, food, craft, hidden gems..."
-      newsletter = "Free Newsletter"; explore = "Explore"; disclosure = "Disclosure"; contact = "Contact"; sitemap = "Sitemap"
-      sourcePolicy = "Source Policy"; sourcePolicyShort = "Source Policy"; language = "Language"; readNext = "Read Next"
-      filedUnder = "Filed Under"; related = "Related"; inThisGuide = "In This Guide"; sourceInfo = "Source & Verification"
-      articleScore = "Article score"; quality = "Quality"; freshness = "Freshness"; seasonalFit = "Seasonal fit"
-      affiliate = "Affiliate links may earn us a commission."; copyright = "All rights reserved."; home = "Home"
-    }
-    return $English[$Key]
-  }
-  $Japanese = @{
-    skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
-    latest = "新着"; search = "TABIを検索"; closeSearch = "検索を閉じる"; searchPlaceholder = "京都、食、工芸、穴場を検索..."
-    newsletter = "無料ニュースレター"; explore = "探す"; disclosure = "開示"; contact = "お問い合わせ"; sitemap = "サイトマップ"
-    sourcePolicy = "情報出所ポリシー"; sourcePolicyShort = "出所ポリシー"; language = "言語"; readNext = "次に読む"
-    filedUnder = "分類"; related = "関連記事"; inThisGuide = "このガイドの内容"; sourceInfo = "出所と検証"
-    articleScore = "記事スコア"; quality = "品質"; freshness = "鮮度"; seasonalFit = "季節適合"
-    affiliate = "一部リンクから収益を得る場合があります。"; copyright = "All rights reserved."; home = "ホーム"
-  }
-  return $Japanese[$Key]
+  $Labels = $UiLabels[(Lang-Code)]
+  if ($Labels.ContainsKey($Key)) { return $Labels[$Key] }
+  return $Key
 }
 
 function Get-LangPrefix([string]$Lang) {
@@ -300,14 +114,8 @@ function Format-ReadingTime([int]$Minutes) {
 }
 
 function Get-CategoryLabel([string]$Slug) {
-  if (Is-Japanese) {
-    switch ($Slug) {
-      "travel-guide" { return "旅行ガイド" }
-      "culture" { return "文化と伝統" }
-      "food" { return "食" }
-      "things-to-buy" { return "買うべきもの" }
-      "hidden-gems" { return "知られざる場所" }
-    }
+  if ((Is-Japanese) -and $CategoryLabelsJa.ContainsKey($Slug)) {
+    return $CategoryLabelsJa[$Slug]
   }
   foreach ($Category in $Config.categories) {
     if ($Category.slug -eq $Slug) { return $Category.label }
@@ -1804,25 +1612,9 @@ function New-SourcePolicyPage {
   $DisallowedItems = @($ContentPolicy.disallowedSourceTypes)
   $RuleItems = @($ContentPolicy.reuseRules)
   if (Is-Japanese) {
-    $AllowedItems = @(
-      "通常の参照が許される公式観光、交通、施設、行政、観光組織のページ。",
-      "紹介対象である場所、組織、作り手、運営者が公開する一次情報。",
-      "条件を守れるオープンライセンスまたはパブリックドメインの資料。",
-      "TABI自身の編集メモ、独自分析、ローカルに管理する構造化データ。"
-    )
-    $DisallowedItems = @(
-      "AIスクレイピング、 automated collection、引用、転載、再利用を禁止しているページや媒体。",
-      "有料、会員限定、非公開、流出、アクセス制限のある資料。",
-      "無断転載、スクレイピングミラー、盗用サイト、低品質アフィリエイト量産サイト、権利不明のコンテンツ。",
-      "明示的な許可や文脈がない個人SNS、個人証言、コミュニティ投稿。",
-      "嫌がらせ、プライバシー侵害、差別、扇情、搾取など倫理的なリスクがある情報源。"
-    )
-    $RuleItems = @(
-      "第三者媒体の表現、ランキング、表、独自の編集構成をコピーしない。",
-      "事実確認が必要な場合は公式情報と一次情報を優先し、TABI独自の文章で要約する。",
-      "利用条件が曖昧な情報源は使わない。",
-      "営業時間、価格、閉店、交通ルールなど変わりやすい情報は、現在情報として断定しない。"
-    )
+    $AllowedItems = @($ContentPolicy.allowedSourceTypesJa)
+    $DisallowedItems = @($ContentPolicy.disallowedSourceTypesJa)
+    $RuleItems = @($ContentPolicy.reuseRulesJa)
   }
   $Allowed = foreach ($Item in $AllowedItems) {
     '<li>{0}</li>' -f (Html $Item)
@@ -1882,15 +1674,21 @@ function ConvertTo-Rfc3339([string]$DateValue) {
   return $Date.ToString("yyyy-MM-ddT00:00:00+09:00", $EnglishCulture)
 }
 
+function ConvertTo-RssDate([string]$DateValue) {
+  $Date = [datetime]::ParseExact($DateValue, "yyyy-MM-dd", $EnglishCulture)
+  return $Date.ToUniversalTime().ToString("r", $EnglishCulture)
+}
+
 function New-RssFeed {
   $Latest = @($Articles | Sort-Object publishedAt -Descending | Select-Object -First 20)
+  $LatestPublishedAt = ($Latest | Select-Object -First 1).publishedAt
   $Items = foreach ($Article in $Latest) {
     @"
   <item>
     <title>$(Html $Article.title)</title>
     <link>$(Html (SiteUrl (Get-ArticleUrl $Article)))</link>
     <guid>$(Html (SiteUrl (Get-ArticleUrl $Article)))</guid>
-    <pubDate>$([datetime]::ParseExact($Article.publishedAt, "yyyy-MM-dd", $EnglishCulture).ToUniversalTime().ToString("r", $EnglishCulture))</pubDate>
+    <pubDate>$(ConvertTo-RssDate $Article.publishedAt)</pubDate>
     <description>$(Html $Article.summary)</description>
     <category>$(Html (Get-CategoryLabel $Article.category))</category>
   </item>
@@ -1904,7 +1702,7 @@ function New-RssFeed {
   <link>$(Html $Config.siteUrl)</link>
   <description>$(Html $Config.description)</description>
   <language>$Script:CurrentLang</language>
-  <lastBuildDate>$((Get-Date).ToUniversalTime().ToString("r", $EnglishCulture))</lastBuildDate>
+  <lastBuildDate>$(ConvertTo-RssDate $LatestPublishedAt)</lastBuildDate>
 $($Items -join "`n")
 </channel>
 </rss>

@@ -11,6 +11,12 @@
     "Openly licensed or public-domain material when attribution and reuse conditions can be followed.",
     "TABI-owned editorial notes, original analysis, and locally maintained structured data."
   ],
+  "allowedSourceTypesJa": [
+    "通常の参照が許される公式観光、交通、施設、行政、観光組織のページ。",
+    "紹介対象である場所、組織、作り手、運営者が公開する一次情報。",
+    "条件を守れるオープンライセンスまたはパブリックドメインの資料。",
+    "TABI自身の編集メモ、独自分析、ローカルに管理する構造化データ。"
+  ],
   "disallowedSourceTypes": [
     "Pages or media that prohibit AI scraping, automated collection, quotation, republication, or reuse.",
     "Paywalled, member-only, private, leaked, or access-restricted material.",
@@ -18,10 +24,23 @@
     "Private social posts, personal testimony, or community posts unless explicit permission and context are available.",
     "Sources that create ethical risk through harassment, privacy invasion, discrimination, sensationalism, or exploitation."
   ],
+  "disallowedSourceTypesJa": [
+    "AIスクレイピング、automated collection、引用、転載、再利用を禁止しているページや媒体。",
+    "有料、会員限定、非公開、流出、アクセス制限のある資料。",
+    "無断転載、スクレイピングミラー、盗用サイト、低品質アフィリエイト量産サイト、権利不明のコンテンツ。",
+    "明示的な許可や文脈がない個人SNS、個人証言、コミュニティ投稿。",
+    "嫌がらせ、プライバシー侵害、差別、扇情、搾取など倫理的なリスクがある情報源。"
+  ],
   "reuseRules": [
     "Do not copy protected wording, route text, rankings, tables, or unique editorial framing from third-party media.",
     "Use official and primary sources for factual confirmation where possible, then write original TABI summaries.",
     "When a source's terms are unclear, exclude it rather than relying on it.",
     "Mark volatile facts as requiring confirmation instead of presenting them as current."
+  ],
+  "reuseRulesJa": [
+    "第三者媒体の表現、ランキング、表、独自の編集構成をコピーしない。",
+    "事実確認が必要な場合は公式情報と一次情報を優先し、TABI独自の文章で要約する。",
+    "利用条件が曖昧な情報源は使わない。",
+    "営業時間、価格、閉店、交通ルールなど変わりやすい情報は、現在情報として断定しない。"
   ]
 }
