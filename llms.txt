@@ -10,6 +10,21 @@ TABI is an English-language curation site introducing Japan through travel, cult
 - [Shopping in Japan](https://tabi.guide/topics/shopping-in-japan.html): Useful, packable, and culturally thoughtful things worth bringing home.
 - [Slow Travel](https://tabi.guide/topics/slow-travel.html): Forests, islands, walking routes, and quieter places where Japan has room to breathe.
 
+## Area Guides
+
+- [Tokyo](https://tabi.guide/areas/tokyo.html): Neighborhood food, shopping, nightlife, and low-friction first-trip decisions.
+- [Kyoto](https://tabi.guide/areas/kyoto.html): Shrines, ryokan, craft, tea, and routes that reward early starts.
+- [Osaka](https://tabi.guide/areas/osaka.html): Food-first planning, markets, alleys, and neighborhoods beyond the obvious photo stop.
+- [Yakushima](https://tabi.guide/areas/yakushima.html): Ancient forest, rain, coastal villages, and slower island planning.
+- [Setouchi](https://tabi.guide/areas/setouchi.html): Island art, ferries, sea air, and slow travel between small ports.
+
+## Itineraries
+
+- [3 Days in Japan](https://tabi.guide/itineraries/three-days.html): A tight route for travelers adding Japan to a larger trip or using Tokyo as a short gateway.
+- [7 Days in Japan](https://tabi.guide/itineraries/seven-days.html): A first-timer plan that keeps Tokyo and Kyoto readable without turning every day into transit.
+- [10 Days in Japan](https://tabi.guide/itineraries/ten-days.html): The classic Tokyo, Kyoto, and Osaka route with more space for neighborhoods and food.
+- [14 Days in Japan](https://tabi.guide/itineraries/fourteen-days.html): A longer plan that adds forest, islands, or walking routes after the classic first-trip core.
+
 ## Recommended Guides
 
 - [Yakushima: Japan's Ancient Forest That Few Tourists Find](https://tabi.guide/articles/yakushima-ancient-forest-few-tourists-find.html): Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.

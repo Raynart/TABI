@@ -434,6 +434,23 @@
         "value": "Keep the knife boxed, wrapped, and packed in checked luggage with the receipt accessible."
       }
     ],
+    "comparison": [
+      {
+        "option": "Santoku",
+        "bestFor": "Most home cooking",
+        "watchFor": "Choose a handle that feels steady, not only a blade that looks dramatic."
+      },
+      {
+        "option": "Gyuto",
+        "bestFor": "Cooks who already use a chef's knife",
+        "watchFor": "Longer blades need more luggage space and better edge protection."
+      },
+      {
+        "option": "Nakiri",
+        "bestFor": "Vegetable-heavy cooking",
+        "watchFor": "Useful but less universal as a first Japanese knife."
+      }
+    ],
     "image": "/assets/images/japanese-goods.png",
     "imageAlt": "Japanese kitchen knives and craft goods arranged on dark washi paper",
     "sections": [
@@ -474,6 +491,23 @@
       {
         "label": "Carry-home note",
         "value": "Choose sealed tins, protect them from heat, and open them only when you are ready to use them."
+      }
+    ],
+    "comparison": [
+      {
+        "option": "Ceremonial",
+        "bestFor": "Whisking with water",
+        "watchFor": "Freshness and balance matter more than a fancy English label."
+      },
+      {
+        "option": "Culinary",
+        "bestFor": "Baking, lattes, and desserts",
+        "watchFor": "A strong color helps, but avoid oversized bags unless you use matcha often."
+      },
+      {
+        "option": "Single-origin tins",
+        "bestFor": "Tea drinkers comparing flavor",
+        "watchFor": "Buy small quantities and note the opening date."
       }
     ],
     "image": "/assets/images/japanese-goods.png",
@@ -518,6 +552,23 @@
         "value": "Check liquids and aerosols before packing, especially if the item will travel in carry-on luggage."
       }
     ],
+    "comparison": [
+      {
+        "option": "Sunscreen",
+        "bestFor": "Daily city travel",
+        "watchFor": "Check texture and size before buying multiples."
+      },
+      {
+        "option": "Patches and balms",
+        "bestFor": "Blisters, dry lips, and small travel discomforts",
+        "watchFor": "Keep medicinal labels readable for airport and home use."
+      },
+      {
+        "option": "Skincare minis",
+        "bestFor": "Trying formulas without suitcase regret",
+        "watchFor": "Avoid active ingredients you have never tested before a long flight."
+      }
+    ],
     "image": "/assets/images/japanese-goods.png",
     "imageAlt": "Japanese travel goods and small products arranged for a shopping guide",
     "sections": [
@@ -558,6 +609,23 @@
       {
         "label": "Carry-home note",
         "value": "Fold it flat, keep accessories together, and ask the shop to show the basic wearing order before you leave."
+      }
+    ],
+    "comparison": [
+      {
+        "option": "New yukata set",
+        "bestFor": "Simple sizing and complete accessories",
+        "watchFor": "Fabric quality varies widely in souvenir-heavy shops."
+      },
+      {
+        "option": "Vintage yukata",
+        "bestFor": "Better value and more character",
+        "watchFor": "Check length, stains, and whether an obi is included."
+      },
+      {
+        "option": "Festival-weight cotton",
+        "bestFor": "Actually wearing it in summer",
+        "watchFor": "Ask how to fold and store it after travel."
       }
     ],
     "image": "/assets/images/japanese-goods.png",

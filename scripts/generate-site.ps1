@@ -44,6 +44,173 @@ $TopicClusters = @(
   }
 )
 
+$AreaClusters = @(
+  [pscustomobject]@{
+    slug = "tokyo"
+    title = "Tokyo"
+    description = "Neighborhood food, shopping, nightlife, and low-friction first-trip decisions."
+    image = "/assets/images/osaka-food-alley.png"
+    tags = @("tokyo", "izakaya", "nightlife", "yukata", "shopping")
+    categories = @("food", "things-to-buy", "travel-guide")
+    neighborhoods = @(
+      [pscustomobject]@{ name = "Yanaka"; note = "Slow streets, small shops, and first-day wandering." },
+      [pscustomobject]@{ name = "Shibuya"; note = "Big-city energy that works best when paired with a quieter pocket." },
+      [pscustomobject]@{ name = "Asakusa"; note = "Useful for craft, tradition, and easy transit links." }
+    )
+  },
+  [pscustomobject]@{
+    slug = "kyoto"
+    title = "Kyoto"
+    description = "Shrines, ryokan, craft, tea, and routes that reward early starts."
+    image = "/assets/images/kyoto-shrine-hero.png"
+    tags = @("kyoto", "shrines", "ryokan", "craft", "matcha", "kintsugi", "wabi-sabi")
+    categories = @("travel-guide", "culture", "things-to-buy")
+    neighborhoods = @(
+      [pscustomobject]@{ name = "Northern Kyoto"; note = "Quieter temples, hills, and slower transit days." },
+      [pscustomobject]@{ name = "Demachiyanagi"; note = "A good edge for cafes, riverside time, and local rhythm." },
+      [pscustomobject]@{ name = "Higashiyama"; note = "Best early or late, with careful pacing." }
+    )
+  },
+  [pscustomobject]@{
+    slug = "osaka"
+    title = "Osaka"
+    description = "Food-first planning, markets, alleys, and neighborhoods beyond the obvious photo stop."
+    image = "/assets/images/osaka-food-alley.png"
+    tags = @("osaka", "street-food", "nightlife", "food", "itinerary")
+    categories = @("food", "travel-guide")
+    neighborhoods = @(
+      [pscustomobject]@{ name = "Namba"; note = "A practical base for first nights and late food." },
+      [pscustomobject]@{ name = "Nakazakicho"; note = "Cafes, small shops, and a slower counterpoint to Dotonbori." },
+      [pscustomobject]@{ name = "Tenma"; note = "Compact food energy that rewards small rounds." }
+    )
+  },
+  [pscustomobject]@{
+    slug = "yakushima"
+    title = "Yakushima"
+    description = "Ancient forest, rain, coastal villages, and slower island planning."
+    image = "/assets/images/yakushima-forest.png"
+    tags = @("yakushima", "forest", "hiking", "islands", "slow-travel")
+    categories = @("hidden-gems")
+    neighborhoods = @(
+      [pscustomobject]@{ name = "Forest trails"; note = "Choose one major route and leave room for weather." },
+      [pscustomobject]@{ name = "Coastal villages"; note = "Useful for scale, meals, and recovery time." },
+      [pscustomobject]@{ name = "Short walks"; note = "Good backup plans when rain changes the day." }
+    )
+  },
+  [pscustomobject]@{
+    slug = "setouchi"
+    title = "Setouchi"
+    description = "Island art, ferries, sea air, and slow travel between small ports."
+    image = "/assets/images/yakushima-forest.png"
+    tags = @("setouchi", "islands", "art", "slow-travel")
+    categories = @("hidden-gems", "culture")
+    neighborhoods = @(
+      [pscustomobject]@{ name = "Museum islands"; note = "Plan around ferry rhythm, not a crowded checklist." },
+      [pscustomobject]@{ name = "Harbor towns"; note = "Good for ordinary time between art stops." },
+      [pscustomobject]@{ name = "Sunset routes"; note = "Worth protecting when the timetable allows." }
+    )
+  }
+)
+
+$ItineraryPlans = @(
+  [pscustomobject]@{
+    slug = "three-days"
+    title = "3 Days in Japan"
+    duration = "3 days"
+    pace = "Focused"
+    description = "A tight route for travelers adding Japan to a larger trip or using Tokyo as a short gateway."
+    tags = @("tokyo", "food", "first-time", "shopping")
+    categories = @("travel-guide", "food", "things-to-buy")
+    steps = @(
+      [pscustomobject]@{ label = "Day 1"; title = "Arrive gently"; body = "Stay in one Tokyo neighborhood, solve cash, transit, and first meal decisions, then stop early." },
+      [pscustomobject]@{ label = "Day 2"; title = "Food and texture"; body = "Pair a market or old street with one planned dinner and a low-pressure shopping stop." },
+      [pscustomobject]@{ label = "Day 3"; title = "One final loop"; body = "Use the last morning for a compact route near your departure station or airport line." }
+    )
+  },
+  [pscustomobject]@{
+    slug = "seven-days"
+    title = "7 Days in Japan"
+    duration = "7 days"
+    pace = "Balanced"
+    description = "A first-timer plan that keeps Tokyo and Kyoto readable without turning every day into transit."
+    tags = @("tokyo", "kyoto", "first-time", "itinerary", "shrines", "food")
+    categories = @("travel-guide", "culture", "food")
+    steps = @(
+      [pscustomobject]@{ label = "Days 1-3"; title = "Tokyo base"; body = "Use Tokyo for food confidence, practical setup, and one quiet neighborhood day." },
+      [pscustomobject]@{ label = "Days 4-6"; title = "Kyoto slower"; body = "Move early, build around shrines and craft, and avoid overloading temple days." },
+      [pscustomobject]@{ label = "Day 7"; title = "Return cleanly"; body = "Keep the final day close to your departure route and finish shopping before luggage becomes a problem." }
+    )
+  },
+  [pscustomobject]@{
+    slug = "ten-days"
+    title = "10 Days in Japan"
+    duration = "10 days"
+    pace = "Classic"
+    description = "The classic Tokyo, Kyoto, and Osaka route with more space for neighborhoods and food."
+    tags = @("itinerary", "tokyo", "kyoto", "osaka", "food", "shopping")
+    categories = @("travel-guide", "food", "things-to-buy")
+    steps = @(
+      [pscustomobject]@{ label = "Days 1-3"; title = "Tokyo"; body = "Start with food, transit confidence, and one older neighborhood before the trip speeds up." },
+      [pscustomobject]@{ label = "Days 4-6"; title = "Kyoto"; body = "Anchor mornings with quiet places and afternoons with craft, tea, or riverside time." },
+      [pscustomobject]@{ label = "Days 7-9"; title = "Osaka"; body = "Make food the structure and let neighborhoods fill the gaps." },
+      [pscustomobject]@{ label = "Day 10"; title = "Departure buffer"; body = "Protect time for packing, gifts, and one simple final meal." }
+    )
+  },
+  [pscustomobject]@{
+    slug = "fourteen-days"
+    title = "14 Days in Japan"
+    duration = "14 days"
+    pace = "Slow extension"
+    description = "A longer plan that adds forest, islands, or walking routes after the classic first-trip core."
+    tags = @("slow-travel", "yakushima", "setouchi", "walking", "islands", "kyoto")
+    categories = @("hidden-gems", "travel-guide", "culture")
+    steps = @(
+      [pscustomobject]@{ label = "Days 1-6"; title = "First-trip core"; body = "Use Tokyo and Kyoto for orientation, food, shrines, and practical shopping." },
+      [pscustomobject]@{ label = "Days 7-10"; title = "Choose one extension"; body = "Pick Yakushima, Setouchi, Fuji, or Kiso Valley instead of collecting all of them." },
+      [pscustomobject]@{ label = "Days 11-13"; title = "Recover the rhythm"; body = "Return through Osaka or Tokyo with space for laundry, food, and lower-pressure wandering." },
+      [pscustomobject]@{ label = "Day 14"; title = "Leave deliberately"; body = "Use the final day for calm logistics rather than a new major sight." }
+    )
+  }
+)
+
+$PlanningGuides = @(
+  [pscustomobject]@{
+    slug = "japan-travel-checklist"
+    title = "Japan Travel Checklist"
+    description = "A practical pre-trip checklist for first-time Japan travelers, designed to avoid last-minute friction."
+    kicker = "Before You Fly"
+    blocks = @(
+      [pscustomobject]@{ heading = "Two weeks before"; items = @("Confirm passport validity and entry requirements from official sources.", "Reserve any must-have stays or restaurants.", "Choose a communication plan and save offline maps.") },
+      [pscustomobject]@{ heading = "One week before"; items = @("Add transit cards, key addresses, and hotel names to your phone.", "Check luggage forwarding needs and pack a small day bag.", "Prepare written allergy or medication notes if relevant.") },
+      [pscustomobject]@{ heading = "First day in Japan"; items = @("Withdraw or prepare cash for small shops.", "Confirm the airport-to-hotel route before leaving arrivals.", "Eat simply and sleep early enough to protect the next day.") }
+    )
+  },
+  [pscustomobject]@{
+    slug = "budget-transport-connectivity"
+    title = "Budget, Transport, and Connectivity"
+    description = "A local-first planning page for money, trains, luggage, and phone access without relying on live external feeds."
+    kicker = "Trip Basics"
+    blocks = @(
+      [pscustomobject]@{ heading = "Money"; items = @("Carry a mix of cards and cash because small restaurants and rural stops can still be cash-friendly.", "Use price ranges as planning cues, then confirm current fares and fees before travel.", "Keep tax-free shopping sealed only when it fits your actual travel plan.") },
+      [pscustomobject]@{ heading = "Transport"; items = @("Build days around one or two anchors instead of maximum transfers.", "Use station-area stays when the route has several city changes.", "Treat luggage forwarding as a comfort tool on multi-city routes.") },
+      [pscustomobject]@{ heading = "Connectivity"; items = @("Choose eSIM, SIM, or pocket Wi-Fi based on device compatibility and group size.", "Save hotel addresses, train routes, and emergency notes offline.", "Keep a battery plan for long food, shrine, and walking days.") }
+    )
+  }
+)
+
+$GlossaryTerms = @(
+  [pscustomobject]@{ term = "Otoshi"; category = "Food"; definition = "A small starter served at many izakaya as part of a seating charge." },
+  [pscustomobject]@{ term = "Shotengai"; category = "City"; definition = "A local shopping arcade or street, often useful for everyday food and small shops." },
+  [pscustomobject]@{ term = "Ryokan"; category = "Stay"; definition = "A Japanese-style inn, usually shaped by tatami rooms, baths, meal timing, and house rules." },
+  [pscustomobject]@{ term = "Onsen"; category = "Stay"; definition = "A hot spring bath with etiquette around washing, towels, tattoos, and quiet behavior." },
+  [pscustomobject]@{ term = "Tax-free"; category = "Shopping"; definition = "A visitor shopping process that may require sealed bags and passport handling." },
+  [pscustomobject]@{ term = "Konbini"; category = "Food"; definition = "A convenience store, useful for breakfasts, tickets, ATMs, and small travel fixes." },
+  [pscustomobject]@{ term = "IC card"; category = "Transport"; definition = "A stored-value transit card or mobile wallet setup used for many trains, buses, and small purchases." },
+  [pscustomobject]@{ term = "Takkyubin"; category = "Logistics"; definition = "Luggage delivery service that can make multi-city routes easier." },
+  [pscustomobject]@{ term = "Kaiseki"; category = "Food"; definition = "A seasonal multi-course meal often associated with ryokan and refined restaurants." },
+  [pscustomobject]@{ term = "Shukubo"; category = "Stay"; definition = "Temple lodging, usually simple and rule-driven, with a focus on quiet and routine." }
+)
+
 function Html([object]$Value) {
   if ($null -eq $Value) { return "" }
   return [System.Net.WebUtility]::HtmlEncode([string]$Value)
@@ -77,6 +244,18 @@ function Get-CategoryUrl([string]$Slug) {
 
 function Get-TagUrl([string]$Tag) {
   return "/tags/$Tag.html"
+}
+
+function Get-AreaUrl([string]$Slug) {
+  return "/areas/$Slug.html"
+}
+
+function Get-ItineraryUrl([string]$Slug) {
+  return "/itineraries/$Slug.html"
+}
+
+function Get-PlanningUrl([string]$Slug) {
+  return "/planning/$Slug.html"
 }
 
 function Get-SectionId([string]$Heading, [int]$Index) {
@@ -278,6 +457,26 @@ function Select-TopicArticles($Topic, [int]$Limit) {
   return Select-ScoredArticles $Items $Limit ""
 }
 
+function Get-ClusterScore($Article, $Cluster) {
+  $Tags = Get-ArticleTags $Article
+  $SharedTags = @($Tags | Where-Object { @($Cluster.tags) -contains $_ }).Count
+  $Score = $SharedTags * 18
+  if (@($Cluster.categories) -contains $Article.category) { $Score += 12 }
+  $Score += [Math]::Round((Get-ArticleScore $Article "") / 4)
+  return [int]$Score
+}
+
+function Select-ClusterArticles($Cluster, [int]$Limit) {
+  return @($Articles |
+    Where-Object {
+      $Article = $_
+      $Tags = Get-ArticleTags $Article
+      (@($Cluster.categories) -contains $Article.category) -or (@($Tags | Where-Object { @($Cluster.tags) -contains $_ }).Count -gt 0)
+    } |
+    Sort-Object @{ Expression = { Get-ClusterScore $_ $Cluster }; Descending = $true }, @{ Expression = { $_.publishedAt }; Descending = $true } |
+    Select-Object -First $Limit)
+}
+
 function Write-Page([string]$RelativePath, [string]$Html) {
   $Target = Join-Path $Root $RelativePath
   $Directory = Split-Path $Target -Parent
@@ -373,6 +572,9 @@ function New-MobileNav([string]$CurrentCategory) {
     if ($NavItem.slug -eq $CurrentCategory) { $Current = ' aria-current="page"' }
     '<a href="{0}"{1}>{2}</a>' -f (Get-CategoryUrl $NavItem.slug), $Current, (Html $NavItem.label)
   }
+  $Items += '<a href="/itineraries/index.html">Itineraries</a>'
+  $Items += '<a href="/areas/index.html">Areas</a>'
+  $Items += '<a href="/planning/index.html">Planning</a>'
   return @"
 <nav class="mobile-nav" aria-label="Primary mobile navigation">
   $($Items -join "`n")
@@ -441,12 +643,16 @@ $Main
         <li><a href="/categories/food.html">Food &amp; Drink</a></li>
         <li><a href="/categories/hidden-gems.html">Hidden Gems</a></li>
         <li><a href="/categories/things-to-buy.html">Things to Buy</a></li>
+        <li><a href="/areas/index.html">Area Guides</a></li>
       </ul>
     </div>
     <div>
       <p class="footer-col-title">TABI</p>
       <ul class="footer-links">
         <li><a href="/#newsletter">Newsletter</a></li>
+        <li><a href="/itineraries/index.html">Itineraries</a></li>
+        <li><a href="/planning/index.html">Planning Tools</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
         <li><a href="/articles/hidden-shrines-kyoto-locals-keep-secret.html">Start Here</a></li>
         <li><a href="/topics/first-time-japan.html">First-Time Japan</a></li>
         <li><a href="/topics/slow-travel.html">Slow Travel</a></li>
@@ -609,6 +815,36 @@ function New-ShoppingGuidePanel($Article) {
 </div>
 "@
   }
+  $ComparisonHtml = ""
+  if ($Article.PSObject.Properties.Name -contains "comparison") {
+    $CompareRows = foreach ($Option in @($Article.comparison)) {
+      @"
+<tr>
+  <th scope="row">$(Html $Option.option)</th>
+  <td>$(Html $Option.bestFor)</td>
+  <td>$(Html $Option.watchFor)</td>
+</tr>
+"@
+    }
+    if (@($CompareRows).Count -gt 0) {
+      $ComparisonHtml = @"
+<div class="comparison-wrap">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th scope="col">Option</th>
+        <th scope="col">Best for</th>
+        <th scope="col">Watch for</th>
+      </tr>
+    </thead>
+    <tbody>
+      $($CompareRows -join "`n")
+    </tbody>
+  </table>
+</div>
+"@
+    }
+  }
   $Disclosure = ""
   if ($Article.affiliate -eq $true) {
     $Disclosure = '<p class="shopping-disclosure">Affiliate disclosure: TABI may earn a commission from qualifying purchases, but the buying notes above are written as editorial guidance first.</p>'
@@ -621,7 +857,22 @@ function New-ShoppingGuidePanel($Article) {
   <div class="shopping-grid">
     $($Rows -join "`n")
   </div>
+  $ComparisonHtml
   $Disclosure
+</section>
+"@
+}
+
+function New-FeedbackBlock($Article) {
+  $Subject = [uri]::EscapeDataString("TABI feedback: $($Article.title)")
+  return @"
+<section class="feedback-block" aria-labelledby="feedback-title">
+  <div>
+    <p class="page-kicker">Keep This Guide Useful</p>
+    <h2 id="feedback-title">Was this guide helpful?</h2>
+    <p>Tell us what felt unclear, missing, or worth updating. This is a simple editorial inbox link, not a tracking widget.</p>
+  </div>
+  <a class="button secondary" href="mailto:$($Config.contactEmail)?subject=$Subject">Send Feedback</a>
 </section>
 "@
 }
@@ -640,6 +891,16 @@ function New-CompactArticleCard($Article) {
 function New-AlgorithmNote([string]$Text) {
   return @"
 <p class="algorithm-note">$(Html $Text)</p>
+"@
+}
+
+function New-UtilityCard([string]$Label, [string]$Title, [string]$Description, [string]$Url) {
+  return @"
+<a class="utility-card" href="$Url">
+  <span>$(Html $Label)</span>
+  <strong>$(Html $Title)</strong>
+  <p>$(Html $Description)</p>
+</a>
 "@
 }
 
@@ -672,6 +933,12 @@ function New-HomePage {
   $Editorial = Select-DiverseArticles $Sorted 5 ""
   $Culture = Select-ScoredArticles @($Sorted | Where-Object { $_.category -eq "culture" }) 3 "culture"
   $Buy = Select-ScoredArticles @($Sorted | Where-Object { $_.category -eq "things-to-buy" }) 4 "things-to-buy"
+  $PlanningCards = @(
+    New-UtilityCard "Itineraries" "Choose a Trip Length" "Static 3, 7, 10, and 14 day routes assembled from TABI's local article graph." "/itineraries/index.html"
+    New-UtilityCard "Areas" "Browse by Place" "Tokyo, Kyoto, Osaka, Yakushima, and Setouchi hubs built from tags and category fit." "/areas/index.html"
+    New-UtilityCard "Checklist" "Before You Fly" "A practical pre-trip checklist for money, transit, connectivity, luggage, and first-day friction." "/planning/japan-travel-checklist.html"
+    New-UtilityCard "Glossary" "Decode Japan Travel Terms" "Plain-English explanations for terms that appear across food, stays, shopping, and transport." "/glossary.html"
+  )
   $TopicCards = foreach ($Topic in $TopicClusters) {
     $Count = @(Select-TopicArticles $Topic 50).Count
     @"
@@ -728,6 +995,16 @@ function New-HomePage {
   </div>
   <div class="topic-grid">
     $($TopicCards -join "`n")
+  </div>
+</section>
+<section aria-labelledby="planning-heading">
+  <div class="section-label">
+    <span class="section-label-jp">&#35336;</span>
+    <h2 class="section-label-en" id="planning-heading">Plan Your Trip</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="utility-grid">
+    $($PlanningCards -join "`n")
   </div>
 </section>
 <section aria-labelledby="culture-heading">
@@ -850,6 +1127,7 @@ $ShoppingGuide
     $($RelatedCards -join "`n")
   </div>
 </section>
+$(New-FeedbackBlock $Article)
 $(New-Newsletter)
 "@
 
@@ -974,6 +1252,272 @@ $(New-Newsletter)
   return New-Layout "$($Topic.title) - TABI" $Topic.description (Get-TopicUrl $Topic.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
+function New-AreaIndexPage {
+  $Cards = foreach ($Area in $AreaClusters) {
+    New-UtilityCard "Area Guide" $Area.title $Area.description (Get-AreaUrl $Area.slug)
+  }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = "Areas"; url = "" }))
+  <p class="page-kicker">Area Guides</p>
+  <h1 class="page-title">Plan by place, not only by category.</h1>
+  <p class="page-desc">Static regional hubs generated from TABI tags, categories, and article scores. No map integration required.</p>
+</section>
+$(New-AlgorithmNote "Area pages are assembled from local tag overlap, category fit, and article score.")
+<section class="utility-grid" aria-label="Area guide links">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "CollectionPage"
+    name = "TABI Area Guides"
+    description = "Regional planning hubs for Japan travel."
+    url = SiteUrl "/areas/index.html"
+  } | ConvertTo-Json -Depth 5 -Compress
+  return New-Layout "Area Guides - TABI" "Regional planning hubs for Japan travel." "/areas/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
+function New-AreaPage($Area) {
+  $Items = Select-ClusterArticles $Area 100
+  $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $NeighborhoodCards = foreach ($Place in $Area.neighborhoods) {
+    @"
+<div class="detail-card">
+  <span>Place Cue</span>
+  <strong>$(Html $Place.name)</strong>
+  <p>$(Html $Place.note)</p>
+</div>
+"@
+  }
+  $Breadcrumbs = New-Breadcrumbs @(
+    [pscustomobject]@{ label = "Home"; url = "/" },
+    [pscustomobject]@{ label = "Areas"; url = "/areas/index.html" },
+    [pscustomobject]@{ label = $Area.title; url = "" }
+  )
+  $Main = @"
+<section class="page-hero">
+  $Breadcrumbs
+  <p class="page-kicker">Area Guide</p>
+  <h1 class="page-title">$(Html $Area.title)</h1>
+  <p class="page-desc">$(Html $Area.description)</p>
+</section>
+<section class="split-feature" aria-labelledby="area-cues">
+  <div>
+    <p class="page-kicker">Local Planning Cues</p>
+    <h2 id="area-cues">Where this area starts to make sense</h2>
+    <p>These are editorial planning cues, not live listings. Use them to choose the shape of a day before confirming current details.</p>
+  </div>
+  <div class="detail-grid">
+    $($NeighborhoodCards -join "`n")
+  </div>
+</section>
+$(New-AlgorithmNote "Guides below are ranked by overlap with this area's tags, matching categories, freshness, seasonality, and quality score.")
+<section class="listing-grid" aria-label="$(Html $Area.title) guides">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "CollectionPage"
+    name = "$($Area.title) Travel Guide"
+    description = $Area.description
+    url = SiteUrl (Get-AreaUrl $Area.slug)
+  } | ConvertTo-Json -Depth 5 -Compress
+  return New-Layout "$($Area.title) - TABI" $Area.description (Get-AreaUrl $Area.slug) $Main "" $Area.image $JsonLd
+}
+
+function New-ItineraryHubPage {
+  $Cards = foreach ($Plan in $ItineraryPlans) {
+    New-UtilityCard $Plan.duration $Plan.title $Plan.description (Get-ItineraryUrl $Plan.slug)
+  }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = "Itineraries"; url = "" }))
+  <p class="page-kicker">Static Itineraries</p>
+  <h1 class="page-title">Choose a Japan route by trip length.</h1>
+  <p class="page-desc">These routes are generated from TABI's local article graph, using duration, pace, interests, and article quality rather than live booking data.</p>
+</section>
+$(New-AlgorithmNote "Each itinerary page pulls supporting guides by tag and category overlap, then sorts by local article score.")
+<section class="utility-grid" aria-label="Itinerary links">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "CollectionPage"
+    name = "Japan Itineraries"
+    description = "Static Japan trip routes by duration and travel style."
+    url = SiteUrl "/itineraries/index.html"
+  } | ConvertTo-Json -Depth 5 -Compress
+  return New-Layout "Japan Itineraries - TABI" "Static Japan trip routes by duration and travel style." "/itineraries/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
+function New-ItineraryPage($Plan) {
+  $Items = Select-ClusterArticles $Plan 8
+  $Cards = foreach ($Article in $Items) { New-CompactArticleCard $Article }
+  $StepCards = foreach ($Step in $Plan.steps) {
+    @"
+<div class="route-step">
+  <span>$(Html $Step.label)</span>
+  <strong>$(Html $Step.title)</strong>
+  <p>$(Html $Step.body)</p>
+</div>
+"@
+  }
+  $Breadcrumbs = New-Breadcrumbs @(
+    [pscustomobject]@{ label = "Home"; url = "/" },
+    [pscustomobject]@{ label = "Itineraries"; url = "/itineraries/index.html" },
+    [pscustomobject]@{ label = $Plan.title; url = "" }
+  )
+  $Main = @"
+<section class="page-hero">
+  $Breadcrumbs
+  <p class="page-kicker">$(Html $Plan.duration) / $(Html $Plan.pace)</p>
+  <h1 class="page-title">$(Html $Plan.title)</h1>
+  <p class="page-desc">$(Html $Plan.description)</p>
+</section>
+<section class="route-panel" aria-labelledby="route-heading">
+  <div class="section-label compact-label">
+    <span class="section-label-jp">&#36947;</span>
+    <h2 class="section-label-en" id="route-heading">Route Shape</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="route-grid">
+    $($StepCards -join "`n")
+  </div>
+</section>
+<section aria-labelledby="supporting-guides" class="next-read">
+  <div class="section-label">
+    <span class="section-label-jp">&#26412;</span>
+    <h2 class="section-label-en" id="supporting-guides">Supporting Guides</h2>
+    <div class="section-label-line"></div>
+  </div>
+  $(New-AlgorithmNote "Selected by this itinerary's interests, categories, and TABI article score.")
+  <div class="compact-grid">
+    $($Cards -join "`n")
+  </div>
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "TouristTrip"
+    name = $Plan.title
+    description = $Plan.description
+    url = SiteUrl (Get-ItineraryUrl $Plan.slug)
+  } | ConvertTo-Json -Depth 6 -Compress
+  return New-Layout "$($Plan.title) - TABI" $Plan.description (Get-ItineraryUrl $Plan.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
+function New-PlanningIndexPage {
+  $Cards = foreach ($Guide in $PlanningGuides) {
+    New-UtilityCard $Guide.kicker $Guide.title $Guide.description (Get-PlanningUrl $Guide.slug)
+  }
+  $Cards += New-UtilityCard "Glossary" "Japan Travel Terms" "Plain-English explanations for recurring food, stay, shopping, and transport terms." "/glossary.html"
+  $Cards += New-UtilityCard "Itineraries" "Trip Length Routes" "Use static route pages to choose the shape of a Japan trip before booking details." "/itineraries/index.html"
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = "Planning"; url = "" }))
+  <p class="page-kicker">Planning Tools</p>
+  <h1 class="page-title">Practical Japan planning without live integrations.</h1>
+  <p class="page-desc">Evergreen checklists, trip basics, terminology, and route pages that can be maintained locally in the TABI codebase.</p>
+</section>
+<section class="utility-grid" aria-label="Planning tools">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "CollectionPage"
+    name = "TABI Planning Tools"
+    description = "Evergreen Japan planning tools maintained locally."
+    url = SiteUrl "/planning/index.html"
+  } | ConvertTo-Json -Depth 5 -Compress
+  return New-Layout "Planning Tools - TABI" "Evergreen Japan planning tools maintained locally." "/planning/index.html" $Main "" "/assets/images/japanese-goods.png" $JsonLd
+}
+
+function New-PlanningGuidePage($Guide) {
+  $Blocks = foreach ($Block in $Guide.blocks) {
+    $Items = foreach ($Item in $Block.items) {
+      '<li>{0}</li>' -f (Html $Item)
+    }
+    @"
+<section class="checklist-block">
+  <h2>$(Html $Block.heading)</h2>
+  <ul>
+    $($Items -join "`n")
+  </ul>
+</section>
+"@
+  }
+  $SiblingCards = foreach ($Item in $PlanningGuides) {
+    if ($Item.slug -ne $Guide.slug) {
+      New-UtilityCard $Item.kicker $Item.title $Item.description (Get-PlanningUrl $Item.slug)
+    }
+  }
+  $SiblingCards += New-UtilityCard "Glossary" "Travel Terms" "Quick explanations for common Japan travel words." "/glossary.html"
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = "Planning"; url = "/planning/index.html" }, [pscustomobject]@{ label = $Guide.title; url = "" }))
+  <p class="page-kicker">$(Html $Guide.kicker)</p>
+  <h1 class="page-title">$(Html $Guide.title)</h1>
+  <p class="page-desc">$(Html $Guide.description)</p>
+</section>
+<article class="guide-body">
+  $($Blocks -join "`n")
+</article>
+<section class="utility-grid" aria-label="More planning tools">
+  $($SiblingCards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "HowTo"
+    name = $Guide.title
+    description = $Guide.description
+    url = SiteUrl (Get-PlanningUrl $Guide.slug)
+  } | ConvertTo-Json -Depth 6 -Compress
+  return New-Layout "$($Guide.title) - TABI" $Guide.description (Get-PlanningUrl $Guide.slug) $Main "" "/assets/images/japanese-goods.png" $JsonLd
+}
+
+function New-GlossaryPage {
+  $Terms = foreach ($Term in ($GlossaryTerms | Sort-Object term)) {
+    @"
+<article class="glossary-card" id="$(Get-SectionId $Term.term 1)">
+  <span>$(Html $Term.category)</span>
+  <h2>$(Html $Term.term)</h2>
+  <p>$(Html $Term.definition)</p>
+</article>
+"@
+  }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = "Glossary"; url = "" }))
+  <p class="page-kicker">Glossary</p>
+  <h1 class="page-title">Japan travel terms, decoded.</h1>
+  <p class="page-desc">A static reference for recurring words across TABI's food, stay, shopping, and transport guides.</p>
+</section>
+<section class="glossary-grid" aria-label="Japan travel glossary">
+  $($Terms -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "DefinedTermSet"
+    name = "TABI Japan Travel Glossary"
+    description = "Plain-English definitions for recurring Japan travel terms."
+    url = SiteUrl "/glossary.html"
+  } | ConvertTo-Json -Depth 6 -Compress
+  return New-Layout "Japan Travel Glossary - TABI" "Plain-English definitions for recurring Japan travel terms." "/glossary.html" $Main "" "/assets/images/japanese-goods.png" $JsonLd
+}
+
 function ConvertTo-Rfc3339([string]$DateValue) {
   $Date = [datetime]::ParseExact($DateValue, "yyyy-MM-dd", $EnglishCulture)
   return $Date.ToString("yyyy-MM-ddT00:00:00+09:00", $EnglishCulture)
@@ -1056,6 +1600,12 @@ function New-LlmsText {
   $TopicLines = foreach ($Topic in $TopicClusters) {
     "- [$($Topic.title)]($(SiteUrl (Get-TopicUrl $Topic.slug))): $($Topic.description)"
   }
+  $AreaLines = foreach ($Area in $AreaClusters) {
+    "- [$($Area.title)]($(SiteUrl (Get-AreaUrl $Area.slug))): $($Area.description)"
+  }
+  $ItineraryLines = foreach ($Plan in $ItineraryPlans) {
+    "- [$($Plan.title)]($(SiteUrl (Get-ItineraryUrl $Plan.slug))): $($Plan.description)"
+  }
   return @"
 # TABI
 
@@ -1064,6 +1614,14 @@ TABI is an English-language curation site introducing Japan through travel, cult
 ## Core Topics
 
 $($TopicLines -join "`n")
+
+## Area Guides
+
+$($AreaLines -join "`n")
+
+## Itineraries
+
+$($ItineraryLines -join "`n")
 
 ## Recommended Guides
 
@@ -1115,6 +1673,13 @@ function New-Sitemap {
   $Urls = @([pscustomobject]@{ loc = "/"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) })
   $Urls += foreach ($Category in $Config.categories) { [pscustomobject]@{ loc = Get-CategoryUrl $Category.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
   $Urls += foreach ($Topic in $TopicClusters) { [pscustomobject]@{ loc = Get-TopicUrl $Topic.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+  $Urls += [pscustomobject]@{ loc = "/areas/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+  $Urls += foreach ($Area in $AreaClusters) { [pscustomobject]@{ loc = Get-AreaUrl $Area.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+  $Urls += [pscustomobject]@{ loc = "/itineraries/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+  $Urls += foreach ($Plan in $ItineraryPlans) { [pscustomobject]@{ loc = Get-ItineraryUrl $Plan.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+  $Urls += [pscustomobject]@{ loc = "/planning/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+  $Urls += foreach ($Guide in $PlanningGuides) { [pscustomobject]@{ loc = Get-PlanningUrl $Guide.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+  $Urls += [pscustomobject]@{ loc = "/glossary.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
   $Tags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
   $Urls += foreach ($Tag in $Tags) { [pscustomobject]@{ loc = Get-TagUrl $Tag; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
   $Urls += foreach ($Article in $Articles) { [pscustomobject]@{ loc = Get-ArticleUrl $Article; lastmod = $Article.publishedAt } }
@@ -1143,6 +1708,23 @@ foreach ($Topic in $TopicClusters) {
   Write-Page "topics/$($Topic.slug).html" (New-TopicPage $Topic)
 }
 
+Write-Page "areas/index.html" (New-AreaIndexPage)
+foreach ($Area in $AreaClusters) {
+  Write-Page "areas/$($Area.slug).html" (New-AreaPage $Area)
+}
+
+Write-Page "itineraries/index.html" (New-ItineraryHubPage)
+foreach ($Plan in $ItineraryPlans) {
+  Write-Page "itineraries/$($Plan.slug).html" (New-ItineraryPage $Plan)
+}
+
+Write-Page "planning/index.html" (New-PlanningIndexPage)
+foreach ($Guide in $PlanningGuides) {
+  Write-Page "planning/$($Guide.slug).html" (New-PlanningGuidePage $Guide)
+}
+
+Write-Page "glossary.html" (New-GlossaryPage)
+
 $AllTags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
 foreach ($Tag in $AllTags) {
   Write-Page "tags/$Tag.html" (New-TagPage $Tag)
@@ -1156,4 +1738,4 @@ Write-Page "feed.json" (New-JsonFeed)
 Write-Page "site.webmanifest" (New-WebManifest)
 Write-Page "llms.txt" (New-LlmsText)
 
-Write-Host "Generated $($Articles.Count) articles, $($Config.categories.Count) categories, $($TopicClusters.Count) topics, and $($AllTags.Count) tag pages."
+Write-Host "Generated $($Articles.Count) articles, $($Config.categories.Count) categories, $($TopicClusters.Count) topics, $($AreaClusters.Count) areas, $($ItineraryPlans.Count) itineraries, and $($AllTags.Count) tag pages."

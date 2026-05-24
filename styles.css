@@ -739,6 +739,141 @@ input {
   font-weight: 800;
 }
 
+.utility-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 32px 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.utility-card,
+.detail-card,
+.route-step,
+.glossary-card {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--ink);
+  background: var(--white);
+  padding: 22px;
+}
+
+.utility-card span,
+.detail-card span,
+.route-step span,
+.glossary-card span {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.utility-card strong,
+.detail-card strong,
+.route-step strong {
+  margin-top: 12px;
+  font-family: var(--serif);
+  font-size: 1.24rem;
+  line-height: 1.25;
+}
+
+.utility-card p,
+.detail-card p,
+.route-step p,
+.glossary-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.split-feature,
+.route-panel,
+.guide-body,
+.glossary-grid {
+  max-width: 1180px;
+  margin: 46px auto 0;
+  padding: 0 32px;
+}
+
+.split-feature {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.split-feature h2 {
+  margin: 6px 0 12px;
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.split-feature p {
+  color: var(--muted);
+}
+
+.detail-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.route-step {
+  min-height: 190px;
+  border-top-color: var(--accent);
+}
+
+.compact-label {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.guide-body {
+  display: grid;
+  gap: 18px;
+}
+
+.checklist-block {
+  border-top: 2px solid var(--accent);
+  background: var(--white);
+  padding: 26px;
+}
+
+.checklist-block h2,
+.glossary-card h2 {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+}
+
+.checklist-block ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.checklist-block li + li {
+  margin-top: 8px;
+}
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.glossary-card {
+  min-height: 190px;
+}
+
 .interlude {
   position: relative;
   overflow: hidden;
@@ -1101,11 +1236,71 @@ input {
   line-height: 1.55;
 }
 
+.comparison-wrap {
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 22px;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: 0.88rem;
+  table-layout: fixed;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.comparison-table thead th {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.comparison-table tbody th {
+  font-family: var(--serif);
+}
+
 .shopping-disclosure {
   margin: 16px 0 0;
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.6;
+}
+
+.feedback-block {
+  max-width: 1180px;
+  margin: 0 auto 64px;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--border);
+}
+
+.feedback-block h2 {
+  margin: 4px 0 8px;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+}
+
+.feedback-block p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
 }
 
 .next-read {
@@ -1263,6 +1458,16 @@ input {
     grid-template-columns: 1fr 1fr;
   }
 
+  .utility-grid,
+  .route-grid,
+  .glossary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .split-feature {
+    grid-template-columns: 1fr;
+  }
+
   .compact-grid {
     grid-template-columns: 1fr;
   }
@@ -1362,6 +1567,9 @@ input {
   .buy-grid,
   .listing-grid,
   .topic-grid,
+  .utility-grid,
+  .route-grid,
+  .glossary-grid,
   .compact-grid,
   .algorithm-note {
     grid-template-columns: 1fr;
@@ -1393,9 +1601,18 @@ input {
 
   .newsletter-wrap,
   .page-hero,
-  .article-layout {
+  .article-layout,
+  .split-feature,
+  .route-panel,
+  .guide-body,
+  .glossary-grid,
+  .feedback-block {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .feedback-block {
+    display: grid;
   }
 
   .newsletter {
