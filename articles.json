@@ -1,1 +1,492 @@
-[]
+[
+  {
+    "id": "hidden-shrines-kyoto-locals-keep-secret",
+    "title": "The Hidden Shrines of Kyoto Locals Still Keep Secret",
+    "summary": "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.",
+    "category": "travel-guide",
+    "tags": ["kyoto", "shrines", "quiet-travel", "first-time"],
+    "publishedAt": "2026-05-22",
+    "readingTime": 8,
+    "affiliate": false,
+    "featured": true,
+    "image": "/assets/images/kyoto-shrine-hero.png",
+    "imageAlt": "A quiet moss-covered Kyoto shrine path at blue hour with lanterns and a vermilion torii gate",
+    "sections": [
+      {
+        "heading": "Start Before the City Wakes",
+        "body": "Kyoto rewards travelers who move early and lightly. Begin with a neighborhood shrine before the tour buses arrive, then walk slowly enough to notice stone markers, water basins, and the small offerings that reveal how local the place still is."
+      },
+      {
+        "heading": "Look for Everyday Sacred Places",
+        "body": "The best shrine visits are not always the ones with the biggest gates. Small hillside sanctuaries, guardian fox statues, and mossy stairways often carry a quieter kind of memory than the famous photo stops."
+      },
+      {
+        "heading": "Leave Room for Silence",
+        "body": "Keep voices low, avoid blocking paths, and treat photography as secondary. A good Kyoto shrine route should feel less like a checklist and more like a short conversation with the city."
+      }
+    ]
+  },
+  {
+    "id": "ten-days-japan-without-tourist-traps",
+    "title": "How to Spend 10 Days in Japan Without a Single Tourist Trap",
+    "summary": "A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.",
+    "category": "travel-guide",
+    "tags": ["itinerary", "tokyo", "kyoto", "osaka"],
+    "publishedAt": "2026-05-20",
+    "readingTime": 12,
+    "affiliate": false,
+    "featured": true,
+    "image": "/assets/images/kyoto-shrine-hero.png",
+    "imageAlt": "A quiet forest shrine path in Japan with lanterns and moss",
+    "sections": [
+      {
+        "heading": "Keep the Golden Route, Change the Rhythm",
+        "body": "Tokyo, Kyoto, and Osaka are popular for good reasons. The trick is not to skip them, but to build each day around one anchor experience and leave the rest open for wandering."
+      },
+      {
+        "heading": "Choose Neighborhoods Over Checklists",
+        "body": "A morning in Yanaka, an afternoon around Demachiyanagi, or a night in Nakazakicho often says more than another famous queue. The best memories tend to happen between major sights."
+      },
+      {
+        "heading": "Use Transit as Texture",
+        "body": "Regional trains, small stations, and late-night walks back from dinner make the trip feel connected. Plan transfers carefully, then let the spaces between destinations do some of the work."
+      }
+    ]
+  },
+  {
+    "id": "kyoto-ryokan-under-20000-yen",
+    "title": "The Best Ryokan in Kyoto Under ¥20,000",
+    "summary": "Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.",
+    "category": "travel-guide",
+    "tags": ["kyoto", "ryokan", "budget", "where-to-stay"],
+    "publishedAt": "2026-05-18",
+    "readingTime": 7,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/kyoto-shrine-hero.png",
+    "imageAlt": "A calm Kyoto shrine path with traditional lanterns and moss",
+    "sections": [
+      {
+        "heading": "Understand What You Are Paying For",
+        "body": "A modest ryokan may not include elaborate kaiseki, but it can still offer tatami rooms, local hospitality, and a sense of place that large hotels often miss."
+      },
+      {
+        "heading": "Check Location Carefully",
+        "body": "Staying slightly outside the busiest districts can lower the price without making the trip inconvenient. Look for easy bus or subway access rather than a postcard address."
+      },
+      {
+        "heading": "Read the Fine Print",
+        "body": "Shared baths, curfews, futon setup, and meal timing vary by property. These details shape the stay more than star ratings do."
+      }
+    ]
+  },
+  {
+    "id": "osaka-three-day-eating-itinerary",
+    "title": "Osaka in 3 Days: The Eating and Wandering Itinerary",
+    "summary": "A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.",
+    "category": "food",
+    "tags": ["osaka", "street-food", "itinerary", "nightlife"],
+    "publishedAt": "2026-05-16",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": true,
+    "image": "/assets/images/osaka-food-alley.png",
+    "imageAlt": "A warm Osaka food alley with izakaya lanterns and small counters at night",
+    "sections": [
+      {
+        "heading": "Day One: Eat the Classics Well",
+        "body": "Takoyaki and okonomiyaki are easy to find, but the best versions are rarely the loudest stalls. Pick places with steady local turnover and enough patience to cook properly."
+      },
+      {
+        "heading": "Day Two: Follow the Neighborhoods",
+        "body": "Move from markets to shotengai arcades, then end the day around a small counter where the menu changes with the cook's mood."
+      },
+      {
+        "heading": "Day Three: Slow Down",
+        "body": "Osaka is generous when you stop trying to conquer it. Leave one afternoon open for coffee, secondhand shops, and an extra meal you did not plan."
+      }
+    ]
+  },
+  {
+    "id": "perfect-route-up-mount-fuji",
+    "title": "The Perfect Route up Mt. Fuji: What Nobody Tells You",
+    "summary": "Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.",
+    "category": "travel-guide",
+    "tags": ["mount-fuji", "hiking", "summer", "planning"],
+    "publishedAt": "2026-05-14",
+    "readingTime": 8,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/fuji-trail.png",
+    "imageAlt": "Mount Fuji at dawn from a quiet trail approach with layered clouds",
+    "sections": [
+      {
+        "heading": "Pick the Route for Your Pace",
+        "body": "The Yoshida Trail is convenient, but convenience brings crowds. Subashiri, Gotemba, and Fujinomiya each change the rhythm of the climb, especially for travelers who prefer space over shortcuts."
+      },
+      {
+        "heading": "Respect Sleep and Weather",
+        "body": "Many poor Fuji experiences begin with rushed schedules. Build in time to acclimate, book mountain huts carefully, and treat sudden weather changes as part of the plan."
+      },
+      {
+        "heading": "The Descent Matters",
+        "body": "The way down is where tired legs and loose volcanic gravel test people. Save energy, carry layers, and do not let the sunrise be the end of your attention."
+      }
+    ]
+  },
+  {
+    "id": "yakushima-ancient-forest-few-tourists-find",
+    "title": "Yakushima: Japan's Ancient Forest That Few Tourists Find",
+    "summary": "Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.",
+    "category": "hidden-gems",
+    "tags": ["yakushima", "islands", "forest", "hiking"],
+    "publishedAt": "2026-05-12",
+    "readingTime": 9,
+    "affiliate": false,
+    "featured": true,
+    "image": "/assets/images/yakushima-forest.png",
+    "imageAlt": "A misty ancient cedar forest path on Yakushima island after rain",
+    "sections": [
+      {
+        "heading": "Let the Weather Lead",
+        "body": "Rain is not a failed Yakushima day. It is part of the island's atmosphere, turning bark, stone, and moss into the reason you came."
+      },
+      {
+        "heading": "Choose One Major Trail",
+        "body": "Trying to do every famous hike compresses the island into logistics. Pick one demanding trail, then use the remaining time for shorter walks, beaches, and local meals."
+      },
+      {
+        "heading": "Stay Longer Than You Think",
+        "body": "Two nights is possible, but three or four changes the trip. Ferries, buses, weather, and fatigue all become easier when the schedule has room to breathe."
+      }
+    ]
+  },
+  {
+    "id": "setouchi-islands-art-sea-slow-travel",
+    "title": "The Setouchi Islands for Art, Sea Air, and Slow Travel",
+    "summary": "Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.",
+    "category": "hidden-gems",
+    "tags": ["setouchi", "islands", "art", "slow-travel"],
+    "publishedAt": "2026-05-10",
+    "readingTime": 7,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/yakushima-forest.png",
+    "imageAlt": "A quiet green travel landscape in Japan after rain",
+    "sections": [
+      {
+        "heading": "Do Not Overload the Ferry Map",
+        "body": "The islands look close together until timetables shape the day. Build around one or two island moves rather than trying to collect every museum."
+      },
+      {
+        "heading": "Pair Art with Ordinary Time",
+        "body": "The strongest Setouchi days mix galleries with harbor walks, small cafes, and sea views from ordinary roads."
+      },
+      {
+        "heading": "Stay for Sunset",
+        "body": "Late afternoon changes the water and quiets the day-trippers. If the budget allows, one overnight stay is worth more than another rushed transfer."
+      }
+    ]
+  },
+  {
+    "id": "kiso-valley-walk-between-post-towns",
+    "title": "Walking the Kiso Valley Between Old Post Towns",
+    "summary": "The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.",
+    "category": "hidden-gems",
+    "tags": ["kiso-valley", "nakasendo", "walking", "heritage"],
+    "publishedAt": "2026-05-08",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/kyoto-shrine-hero.png",
+    "imageAlt": "A quiet historic path in Japan surrounded by trees",
+    "sections": [
+      {
+        "heading": "Walk Light",
+        "body": "Forwarding luggage makes the route far more enjoyable. Carry water, layers, and enough curiosity for small signs and roadside details."
+      },
+      {
+        "heading": "Respect the Towns as Homes",
+        "body": "Magome and Tsumago are beautiful, but they are not stage sets. Move gently, avoid photographing into private spaces, and support local shops when you can."
+      },
+      {
+        "heading": "Stay Overnight Nearby",
+        "body": "A day trip is possible, but the valley is best at the edges of the day when tour groups have left and the wooden streets settle into themselves."
+      }
+    ]
+  },
+  {
+    "id": "what-wabi-sabi-really-means",
+    "title": "What Wabi-Sabi Really Means and Why the World Needs It Now",
+    "summary": "Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.",
+    "category": "culture",
+    "tags": ["wabi-sabi", "philosophy", "aesthetics", "design"],
+    "publishedAt": "2026-05-06",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": true,
+    "image": "/assets/images/kintsugi-studio.png",
+    "imageAlt": "A quiet Kyoto craft studio table with a ceramic bowl and warm side light",
+    "sections": [
+      {
+        "heading": "More Than Imperfection",
+        "body": "Wabi-sabi includes imperfection, but it is also about age, restraint, weathering, and the acceptance that beauty changes as things pass through time."
+      },
+      {
+        "heading": "Why It Travels So Easily",
+        "body": "The idea resonates because it gives permission to value repair, patina, and incompleteness. In a world optimized for polish, that permission feels rare."
+      },
+      {
+        "heading": "How to Notice It in Japan",
+        "body": "Look for patched surfaces, quiet gardens, old tea rooms, and objects that ask you to slow down rather than admire them loudly."
+      }
+    ]
+  },
+  {
+    "id": "kintsugi-art-of-repairing-broken-things",
+    "title": "Kintsugi: The Art of Repairing Broken Things with Gold",
+    "summary": "Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.",
+    "category": "culture",
+    "tags": ["kintsugi", "craft", "kyoto", "ceramics"],
+    "publishedAt": "2026-05-04",
+    "readingTime": 7,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/kintsugi-studio.png",
+    "imageAlt": "A repaired kintsugi ceramic bowl on a Kyoto craft studio table",
+    "sections": [
+      {
+        "heading": "Repair as Continuation",
+        "body": "Traditional kintsugi is not a quick decorative trick. It is slow repair work that lets the break remain visible while making the object whole enough to continue."
+      },
+      {
+        "heading": "The Meaning Changed as It Traveled",
+        "body": "Outside Japan, kintsugi often becomes a resilience metaphor. That can be powerful, but the craft deserves to be understood as labor as well as symbolism."
+      },
+      {
+        "heading": "Buying with Care",
+        "body": "If you buy kintsugi-inspired ceramics, ask about materials and process. Real lacquer work and gold powder differ from decorative gold paint in both cost and meaning."
+      }
+    ]
+  },
+  {
+    "id": "hanami-where-to-see-cherry-blossoms-like-local",
+    "title": "Hanami: Where to See Cherry Blossoms Like a Local",
+    "summary": "Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.",
+    "category": "culture",
+    "tags": ["hanami", "cherry-blossoms", "spring", "local-customs"],
+    "publishedAt": "2026-05-02",
+    "readingTime": 5,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/kyoto-shrine-hero.png",
+    "imageAlt": "A quiet seasonal path in Japan with soft evening light",
+    "sections": [
+      {
+        "heading": "Think Picnic, Not Performance",
+        "body": "Hanami is less about chasing perfect petals and more about spending time under trees with friends, food, and a little seasonal luck."
+      },
+      {
+        "heading": "Find Neighborhood Spots",
+        "body": "Small parks and canal paths often feel warmer than famous viewing areas. They also make it easier to understand hanami as part of daily life."
+      },
+      {
+        "heading": "Clean Up Completely",
+        "body": "Bring a bag for trash, keep noise reasonable, and leave the place as if someone else will enjoy it ten minutes later."
+      }
+    ]
+  },
+  {
+    "id": "how-to-read-japanese-menu-without-speaking-japanese",
+    "title": "How to Read a Japanese Menu Without Speaking Japanese",
+    "summary": "A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.",
+    "category": "food",
+    "tags": ["menus", "food", "language", "first-time"],
+    "publishedAt": "2026-04-30",
+    "readingTime": 5,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-food-alley.png",
+    "imageAlt": "A warm Japanese food alley with lanterns and small counters",
+    "sections": [
+      {
+        "heading": "Learn the Menu Shape",
+        "body": "Many menus group dishes by rice, noodles, grilled items, fried items, drinks, and set meals. Recognizing the structure helps even when individual words are unfamiliar."
+      },
+      {
+        "heading": "Use Photos Carefully",
+        "body": "Photos help, but they do not always show portion size or ingredients clearly. If allergies matter, carry a written note in Japanese and confirm before ordering."
+      },
+      {
+        "heading": "Ticket Machines Are Your Friend",
+        "body": "At ramen shops and casual restaurants, buy the ticket first, hand it to staff, then wait. If there is a line, watch the person ahead of you and follow the rhythm."
+      }
+    ]
+  },
+  {
+    "id": "tokyo-hidden-izakayas-locals-go",
+    "title": "Tokyo's Hidden Izakayas Locals Actually Go To",
+    "summary": "The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.",
+    "category": "food",
+    "tags": ["tokyo", "izakaya", "nightlife", "local-food"],
+    "publishedAt": "2026-04-28",
+    "readingTime": 7,
+    "affiliate": false,
+    "featured": true,
+    "image": "/assets/images/osaka-food-alley.png",
+    "imageAlt": "A narrow Japanese alley with warm izakaya lanterns at night",
+    "sections": [
+      {
+        "heading": "Look for Confidence, Not Hype",
+        "body": "A good izakaya often has a short menu, steady regulars, and staff who are busy but not chaotic. Long social media lines are rarely the point."
+      },
+      {
+        "heading": "Order in Small Rounds",
+        "body": "Start with a drink and two or three dishes, then continue. Izakaya dining is flexible, and ordering gradually keeps the meal relaxed."
+      },
+      {
+        "heading": "Mind the Table Charge",
+        "body": "Many places serve otoshi, a small starter that comes with a seating charge. It is normal, not a scam, and should be treated as part of the experience."
+      }
+    ]
+  },
+  {
+    "id": "japanese-convenience-store-breakfasts-worth-trying",
+    "title": "Japanese Convenience Store Breakfasts Worth Trying",
+    "summary": "Japan's convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.",
+    "category": "food",
+    "tags": ["konbini", "breakfast", "budget", "travel-tips"],
+    "publishedAt": "2026-04-26",
+    "readingTime": 4,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/japanese-goods.png",
+    "imageAlt": "A refined Japanese still life with ceramics and travel goods",
+    "sections": [
+      {
+        "heading": "Balance Warm and Fresh",
+        "body": "Pair onigiri or a hot steamed bun with yogurt, fruit, or bottled tea. Convenience store breakfasts work best when you avoid building the whole meal from snacks."
+      },
+      {
+        "heading": "Use the Microwave Counter",
+        "body": "Staff can usually heat bentos and some breads. If you are unsure, hold the item and ask with a simple gesture."
+      },
+      {
+        "heading": "Buy for the Train Thoughtfully",
+        "body": "Choose foods that are quiet, tidy, and not heavily scented. Your future seat neighbor will appreciate it."
+      }
+    ]
+  },
+  {
+    "id": "best-japanese-kitchen-knives-to-bring-home",
+    "title": "The Best Japanese Kitchen Knives to Bring Home",
+    "summary": "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
+    "category": "things-to-buy",
+    "tags": ["kitchen-knives", "shopping", "craft", "souvenirs"],
+    "publishedAt": "2026-04-24",
+    "readingTime": 8,
+    "affiliate": true,
+    "featured": true,
+    "price": "From ¥4,000",
+    "image": "/assets/images/japanese-goods.png",
+    "imageAlt": "Japanese kitchen knives and craft goods arranged on dark washi paper",
+    "sections": [
+      {
+        "heading": "Start with How You Cook",
+        "body": "A santoku or gyuto suits most home kitchens better than a specialty blade. Let your habits choose the knife before steel terminology takes over."
+      },
+      {
+        "heading": "Ask About Care",
+        "body": "Carbon steel can be wonderful, but it asks for drying, oiling, and patience. Stainless options are often better gifts and easier travel companions."
+      },
+      {
+        "heading": "Pack It Properly",
+        "body": "Knives must go in checked luggage, ideally boxed and wrapped securely. Keep receipts and avoid carrying blades through airport security."
+      }
+    ]
+  },
+  {
+    "id": "buying-matcha-ceremonial-vs-culinary-grade",
+    "title": "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
+    "summary": "Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.",
+    "category": "things-to-buy",
+    "tags": ["matcha", "tea", "shopping", "kyoto"],
+    "publishedAt": "2026-04-22",
+    "readingTime": 6,
+    "affiliate": true,
+    "featured": false,
+    "price": "From ¥800",
+    "image": "/assets/images/japanese-goods.png",
+    "imageAlt": "A matcha bowl and Japanese craft goods on a refined tabletop",
+    "sections": [
+      {
+        "heading": "Buy for Use, Not Status",
+        "body": "If you plan to whisk and drink matcha plain, spend more on freshness and balance. If you plan to bake, a good culinary grade is more sensible."
+      },
+      {
+        "heading": "Check Freshness",
+        "body": "Bright color, sealed tins, and clear origin information matter. Once opened, matcha fades quickly, so avoid buying far more than you will use."
+      },
+      {
+        "heading": "Taste Before You Commit",
+        "body": "Shops that serve small cups can teach you more than labels. Bitterness, aroma, and texture vary widely."
+      }
+    ]
+  },
+  {
+    "id": "japanese-drugstore-products-worth-every-yen",
+    "title": "10 Japanese Drugstore Products Worth Every Yen",
+    "summary": "Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.",
+    "category": "things-to-buy",
+    "tags": ["drugstore", "skincare", "shopping", "budget"],
+    "publishedAt": "2026-04-20",
+    "readingTime": 7,
+    "affiliate": true,
+    "featured": false,
+    "price": "From ¥300",
+    "image": "/assets/images/japanese-goods.png",
+    "imageAlt": "Japanese travel goods and small products arranged for a shopping guide",
+    "sections": [
+      {
+        "heading": "Do Not Buy by Shelf Noise",
+        "body": "Bright packaging and rankings can be useful, but they can also turn shopping into panic. Start with categories: sunscreen, lip care, patches, and simple moisturizers."
+      },
+      {
+        "heading": "Watch Sizes and Rules",
+        "body": "Liquids and aerosols need practical packing. Buy travel-friendly quantities unless you are checking luggage."
+      },
+      {
+        "heading": "Use Tax-Free Carefully",
+        "body": "Tax-free bags may be sealed for departure. Make sure you do not need the item immediately before choosing that option."
+      }
+    ]
+  },
+  {
+    "id": "where-to-buy-authentic-yukata-in-tokyo",
+    "title": "Where to Buy Authentic Yukata in Tokyo Without the Markup",
+    "summary": "Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.",
+    "category": "things-to-buy",
+    "tags": ["yukata", "tokyo", "shopping", "fashion"],
+    "publishedAt": "2026-04-18",
+    "readingTime": 6,
+    "affiliate": true,
+    "featured": false,
+    "price": "From ¥3,500",
+    "image": "/assets/images/japanese-goods.png",
+    "imageAlt": "Refined Japanese craft and travel items arranged on dark paper and wood",
+    "sections": [
+      {
+        "heading": "Know the Difference",
+        "body": "A cheap souvenir yukata may be fine for a photo, but fabric, stitching, and obi quality change how it feels and lasts."
+      },
+      {
+        "heading": "Try Vintage Shops",
+        "body": "Secondhand kimono shops often carry yukata and accessories at fair prices. Check stains, length, and whether the fabric feels comfortable against the skin."
+      },
+      {
+        "heading": "Ask How to Wear It",
+        "body": "A beautiful yukata is easier to enjoy when you understand the basics of tying, folding, and seasonal appropriateness."
+      }
+    ]
+  }
+]
