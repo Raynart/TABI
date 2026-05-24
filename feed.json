@@ -1,0 +1,280 @@
+{
+    "version":  "https://jsonfeed.org/version/1.1",
+    "title":  "TABI - Discover Japan",
+    "home_page_url":  "https://tabi.guide",
+    "feed_url":  "https://tabi.guide/feed.json",
+    "description":  "Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.",
+    "language":  "en",
+    "items":  [
+                  {
+                      "id":  "https://tabi.guide/articles/hidden-shrines-kyoto-locals-keep-secret.html",
+                      "url":  "https://tabi.guide/articles/hidden-shrines-kyoto-locals-keep-secret.html",
+                      "title":  "The Hidden Shrines of Kyoto Locals Still Keep Secret",
+                      "summary":  "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.",
+                      "content_text":  "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.",
+                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
+                      "date_published":  "2026-05-22T00:00:00+09:00",
+                      "tags":  [
+                                   "kyoto",
+                                   "shrines",
+                                   "quiet-travel",
+                                   "first-time"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/ten-days-japan-without-tourist-traps.html",
+                      "url":  "https://tabi.guide/articles/ten-days-japan-without-tourist-traps.html",
+                      "title":  "How to Spend 10 Days in Japan Without a Single Tourist Trap",
+                      "summary":  "A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.",
+                      "content_text":  "A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.",
+                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
+                      "date_published":  "2026-05-20T00:00:00+09:00",
+                      "tags":  [
+                                   "itinerary",
+                                   "tokyo",
+                                   "kyoto",
+                                   "osaka"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/kyoto-ryokan-under-20000-yen.html",
+                      "url":  "https://tabi.guide/articles/kyoto-ryokan-under-20000-yen.html",
+                      "title":  "The Best Ryokan in Kyoto Under ¥20,000",
+                      "summary":  "Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.",
+                      "content_text":  "Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.",
+                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
+                      "date_published":  "2026-05-18T00:00:00+09:00",
+                      "tags":  [
+                                   "kyoto",
+                                   "ryokan",
+                                   "budget",
+                                   "where-to-stay"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/osaka-three-day-eating-itinerary.html",
+                      "url":  "https://tabi.guide/articles/osaka-three-day-eating-itinerary.html",
+                      "title":  "Osaka in 3 Days: The Eating and Wandering Itinerary",
+                      "summary":  "A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.",
+                      "content_text":  "A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.",
+                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
+                      "date_published":  "2026-05-16T00:00:00+09:00",
+                      "tags":  [
+                                   "osaka",
+                                   "street-food",
+                                   "itinerary",
+                                   "nightlife"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/perfect-route-up-mount-fuji.html",
+                      "url":  "https://tabi.guide/articles/perfect-route-up-mount-fuji.html",
+                      "title":  "The Perfect Route up Mt. Fuji: What Nobody Tells You",
+                      "summary":  "Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.",
+                      "content_text":  "Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.",
+                      "image":  "https://tabi.guide/assets/images/fuji-trail.png",
+                      "date_published":  "2026-05-14T00:00:00+09:00",
+                      "tags":  [
+                                   "mount-fuji",
+                                   "hiking",
+                                   "summer",
+                                   "planning"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/yakushima-ancient-forest-few-tourists-find.html",
+                      "url":  "https://tabi.guide/articles/yakushima-ancient-forest-few-tourists-find.html",
+                      "title":  "Yakushima: Japan\u0027s Ancient Forest That Few Tourists Find",
+                      "summary":  "Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.",
+                      "content_text":  "Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.",
+                      "image":  "https://tabi.guide/assets/images/yakushima-forest.png",
+                      "date_published":  "2026-05-12T00:00:00+09:00",
+                      "tags":  [
+                                   "yakushima",
+                                   "islands",
+                                   "forest",
+                                   "hiking"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/setouchi-islands-art-sea-slow-travel.html",
+                      "url":  "https://tabi.guide/articles/setouchi-islands-art-sea-slow-travel.html",
+                      "title":  "The Setouchi Islands for Art, Sea Air, and Slow Travel",
+                      "summary":  "Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.",
+                      "content_text":  "Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.",
+                      "image":  "https://tabi.guide/assets/images/yakushima-forest.png",
+                      "date_published":  "2026-05-10T00:00:00+09:00",
+                      "tags":  [
+                                   "setouchi",
+                                   "islands",
+                                   "art",
+                                   "slow-travel"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/kiso-valley-walk-between-post-towns.html",
+                      "url":  "https://tabi.guide/articles/kiso-valley-walk-between-post-towns.html",
+                      "title":  "Walking the Kiso Valley Between Old Post Towns",
+                      "summary":  "The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.",
+                      "content_text":  "The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.",
+                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
+                      "date_published":  "2026-05-08T00:00:00+09:00",
+                      "tags":  [
+                                   "kiso-valley",
+                                   "nakasendo",
+                                   "walking",
+                                   "heritage"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/what-wabi-sabi-really-means.html",
+                      "url":  "https://tabi.guide/articles/what-wabi-sabi-really-means.html",
+                      "title":  "What Wabi-Sabi Really Means and Why the World Needs It Now",
+                      "summary":  "Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.",
+                      "content_text":  "Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.",
+                      "image":  "https://tabi.guide/assets/images/kintsugi-studio.png",
+                      "date_published":  "2026-05-06T00:00:00+09:00",
+                      "tags":  [
+                                   "wabi-sabi",
+                                   "philosophy",
+                                   "aesthetics",
+                                   "design"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/kintsugi-art-of-repairing-broken-things.html",
+                      "url":  "https://tabi.guide/articles/kintsugi-art-of-repairing-broken-things.html",
+                      "title":  "Kintsugi: The Art of Repairing Broken Things with Gold",
+                      "summary":  "Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.",
+                      "content_text":  "Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.",
+                      "image":  "https://tabi.guide/assets/images/kintsugi-studio.png",
+                      "date_published":  "2026-05-04T00:00:00+09:00",
+                      "tags":  [
+                                   "kintsugi",
+                                   "craft",
+                                   "kyoto",
+                                   "ceramics"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/hanami-where-to-see-cherry-blossoms-like-local.html",
+                      "url":  "https://tabi.guide/articles/hanami-where-to-see-cherry-blossoms-like-local.html",
+                      "title":  "Hanami: Where to See Cherry Blossoms Like a Local",
+                      "summary":  "Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.",
+                      "content_text":  "Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.",
+                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
+                      "date_published":  "2026-05-02T00:00:00+09:00",
+                      "tags":  [
+                                   "hanami",
+                                   "cherry-blossoms",
+                                   "spring",
+                                   "local-customs"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/how-to-read-japanese-menu-without-speaking-japanese.html",
+                      "url":  "https://tabi.guide/articles/how-to-read-japanese-menu-without-speaking-japanese.html",
+                      "title":  "How to Read a Japanese Menu Without Speaking Japanese",
+                      "summary":  "A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.",
+                      "content_text":  "A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.",
+                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
+                      "date_published":  "2026-04-30T00:00:00+09:00",
+                      "tags":  [
+                                   "menus",
+                                   "food",
+                                   "language",
+                                   "first-time"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/tokyo-hidden-izakayas-locals-go.html",
+                      "url":  "https://tabi.guide/articles/tokyo-hidden-izakayas-locals-go.html",
+                      "title":  "Tokyo\u0027s Hidden Izakayas Locals Actually Go To",
+                      "summary":  "The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.",
+                      "content_text":  "The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.",
+                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
+                      "date_published":  "2026-04-28T00:00:00+09:00",
+                      "tags":  [
+                                   "tokyo",
+                                   "izakaya",
+                                   "nightlife",
+                                   "local-food"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/japanese-convenience-store-breakfasts-worth-trying.html",
+                      "url":  "https://tabi.guide/articles/japanese-convenience-store-breakfasts-worth-trying.html",
+                      "title":  "Japanese Convenience Store Breakfasts Worth Trying",
+                      "summary":  "Japan\u0027s convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.",
+                      "content_text":  "Japan\u0027s convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.",
+                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
+                      "date_published":  "2026-04-26T00:00:00+09:00",
+                      "tags":  [
+                                   "konbini",
+                                   "breakfast",
+                                   "budget",
+                                   "travel-tips"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/best-japanese-kitchen-knives-to-bring-home.html",
+                      "url":  "https://tabi.guide/articles/best-japanese-kitchen-knives-to-bring-home.html",
+                      "title":  "The Best Japanese Kitchen Knives to Bring Home",
+                      "summary":  "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
+                      "content_text":  "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
+                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
+                      "date_published":  "2026-04-24T00:00:00+09:00",
+                      "tags":  [
+                                   "kitchen-knives",
+                                   "shopping",
+                                   "craft",
+                                   "souvenirs"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/buying-matcha-ceremonial-vs-culinary-grade.html",
+                      "url":  "https://tabi.guide/articles/buying-matcha-ceremonial-vs-culinary-grade.html",
+                      "title":  "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
+                      "summary":  "Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.",
+                      "content_text":  "Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.",
+                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
+                      "date_published":  "2026-04-22T00:00:00+09:00",
+                      "tags":  [
+                                   "matcha",
+                                   "tea",
+                                   "shopping",
+                                   "kyoto"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/japanese-drugstore-products-worth-every-yen.html",
+                      "url":  "https://tabi.guide/articles/japanese-drugstore-products-worth-every-yen.html",
+                      "title":  "10 Japanese Drugstore Products Worth Every Yen",
+                      "summary":  "Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.",
+                      "content_text":  "Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.",
+                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
+                      "date_published":  "2026-04-20T00:00:00+09:00",
+                      "tags":  [
+                                   "drugstore",
+                                   "skincare",
+                                   "shopping",
+                                   "budget"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/where-to-buy-authentic-yukata-in-tokyo.html",
+                      "url":  "https://tabi.guide/articles/where-to-buy-authentic-yukata-in-tokyo.html",
+                      "title":  "Where to Buy Authentic Yukata in Tokyo Without the Markup",
+                      "summary":  "Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.",
+                      "content_text":  "Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.",
+                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
+                      "date_published":  "2026-04-18T00:00:00+09:00",
+                      "tags":  [
+                                   "yukata",
+                                   "tokyo",
+                                   "shopping",
+                                   "fashion"
+                               ]
+                  }
+              ]
+}

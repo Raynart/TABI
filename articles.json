@@ -23,6 +23,14 @@
       {
         "heading": "Leave Room for Silence",
         "body": "Keep voices low, avoid blocking paths, and treat photography as secondary. A good Kyoto shrine route should feel less like a checklist and more like a short conversation with the city."
+      },
+      {
+        "heading": "Build a Route Around Transit Edges",
+        "body": "The easiest hidden-shrine days begin near a train or bus stop and end in a neighborhood with food nearby. Pair one hillside sanctuary with a small shopping street or tea stop so the route feels natural instead of remote for its own sake."
+      },
+      {
+        "heading": "Know When Not to Share a Place",
+        "body": "Some small shrines are not built for sudden attention. If a place feels residential, fragile, or actively used by worshippers, describe it gently, avoid geotagging exact corners, and let the experience stay quiet."
       }
     ]
   },
@@ -50,6 +58,14 @@
       {
         "heading": "Use Transit as Texture",
         "body": "Regional trains, small stations, and late-night walks back from dinner make the trip feel connected. Plan transfers carefully, then let the spaces between destinations do some of the work."
+      },
+      {
+        "heading": "Anchor Each City With One Real Meal",
+        "body": "A trip becomes easier to remember when every city has one meal that feels specific: a counter sushi lunch in Tokyo, a tofu set in Kyoto, or a late okonomiyaki dinner in Osaka. Book only the meals that truly need booking, then leave space for instinct."
+      },
+      {
+        "heading": "Protect the Final Day",
+        "body": "Do not spend the last day chasing everything you missed. Keep it near your departure city, buy gifts early, and leave enough time for one final neighborhood walk without luggage dragging the mood down."
       }
     ]
   },
@@ -104,6 +120,14 @@
       {
         "heading": "Day Three: Slow Down",
         "body": "Osaka is generous when you stop trying to conquer it. Leave one afternoon open for coffee, secondhand shops, and an extra meal you did not plan."
+      },
+      {
+        "heading": "Use Namba as a Base, Not a Whole Trip",
+        "body": "Namba and Dotonbori are useful, especially on a first night, but Osaka opens up when you move outward. Try one day that starts near a market, one that follows an arcade, and one that ends around a station where commuters are actually eating."
+      },
+      {
+        "heading": "Order Small and Keep Moving",
+        "body": "The best Osaka food day is rarely one giant meal. Split takoyaki, share kushikatsu, save room for a late bowl of ramen, and let the city reward you in small rounds."
       }
     ]
   },
@@ -158,6 +182,14 @@
       {
         "heading": "Stay Longer Than You Think",
         "body": "Two nights is possible, but three or four changes the trip. Ferries, buses, weather, and fatigue all become easier when the schedule has room to breathe."
+      },
+      {
+        "heading": "Balance Forest and Coast",
+        "body": "Yakushima is not only cedar trails. Coastal drives, tide pools, small settlements, and simple fish meals give the island scale after the forest has done its work."
+      },
+      {
+        "heading": "Pack for Wet Details",
+        "body": "Good rain gear matters more than extra outfits. Bring dry bags, socks that can recover overnight, and enough cash for rural buses, small shops, and weather-shaped changes."
       }
     ]
   },
@@ -387,7 +419,21 @@
     "readingTime": 8,
     "affiliate": true,
     "featured": true,
-    "price": "From ¥4,000",
+    "price": "From JPY 4,000",
+    "shoppingGuide": [
+      {
+        "label": "Best for",
+        "value": "Home cooks who want one dependable santoku or gyuto rather than a display-case specialty blade."
+      },
+      {
+        "label": "Budget cue",
+        "value": "Spend more on a balanced handle, clean grind, and aftercare advice before chasing rare steel names."
+      },
+      {
+        "label": "Carry-home note",
+        "value": "Keep the knife boxed, wrapped, and packed in checked luggage with the receipt accessible."
+      }
+    ],
     "image": "/assets/images/japanese-goods.png",
     "imageAlt": "Japanese kitchen knives and craft goods arranged on dark washi paper",
     "sections": [
@@ -415,7 +461,21 @@
     "readingTime": 6,
     "affiliate": true,
     "featured": false,
-    "price": "From ¥800",
+    "price": "From JPY 800",
+    "shoppingGuide": [
+      {
+        "label": "Best for",
+        "value": "Drinkers who will finish a small tin quickly and bakers who need a practical culinary-grade powder."
+      },
+      {
+        "label": "Budget cue",
+        "value": "A fresh, sealed mid-priced tin usually beats a large bargain bag that will fade before you use it."
+      },
+      {
+        "label": "Carry-home note",
+        "value": "Choose sealed tins, protect them from heat, and open them only when you are ready to use them."
+      }
+    ],
     "image": "/assets/images/japanese-goods.png",
     "imageAlt": "A matcha bowl and Japanese craft goods on a refined tabletop",
     "sections": [
@@ -443,7 +503,21 @@
     "readingTime": 7,
     "affiliate": true,
     "featured": false,
-    "price": "From ¥300",
+    "price": "From JPY 300",
+    "shoppingGuide": [
+      {
+        "label": "Best for",
+        "value": "Travelers who want compact sunscreen, lip care, blister patches, and simple daily-use fixes."
+      },
+      {
+        "label": "Budget cue",
+        "value": "Start with one category you already use at home instead of buying every ranked shelf item."
+      },
+      {
+        "label": "Carry-home note",
+        "value": "Check liquids and aerosols before packing, especially if the item will travel in carry-on luggage."
+      }
+    ],
     "image": "/assets/images/japanese-goods.png",
     "imageAlt": "Japanese travel goods and small products arranged for a shopping guide",
     "sections": [
@@ -471,7 +545,21 @@
     "readingTime": 6,
     "affiliate": true,
     "featured": false,
-    "price": "From ¥3,500",
+    "price": "From JPY 3,500",
+    "shoppingGuide": [
+      {
+        "label": "Best for",
+        "value": "Travelers who want a wearable summer piece, not only a photo prop or souvenir-room robe."
+      },
+      {
+        "label": "Budget cue",
+        "value": "Vintage shops can be excellent value if the fabric is clean, the length works, and the obi is included."
+      },
+      {
+        "label": "Carry-home note",
+        "value": "Fold it flat, keep accessories together, and ask the shop to show the basic wearing order before you leave."
+      }
+    ],
     "image": "/assets/images/japanese-goods.png",
     "imageAlt": "Refined Japanese craft and travel items arranged on dark paper and wood",
     "sections": [

@@ -79,12 +79,41 @@ function Get-TagUrl([string]$Tag) {
   return "/tags/$Tag.html"
 }
 
+function Get-SectionId([string]$Heading, [int]$Index) {
+  $Slug = ([string]$Heading).ToLowerInvariant() -replace "[^a-z0-9]+", "-"
+  $Slug = $Slug.Trim("-")
+  if ([string]::IsNullOrWhiteSpace($Slug)) { $Slug = "section-$Index" }
+  return $Slug
+}
+
 function Get-BuyIcon($Article) {
   if ($Article.id -like "*knife*") { return "&#128298;" }
   if ($Article.id -like "*matcha*") { return "&#127861;" }
   if ($Article.id -like "*drugstore*") { return "&#129524;" }
   if ($Article.id -like "*yukata*") { return "&#128088;" }
   return "&#10022;"
+}
+
+function Get-ImageBase([string]$ImagePath) {
+  if ([string]::IsNullOrWhiteSpace($ImagePath)) { return "" }
+  $DotIndex = $ImagePath.LastIndexOf(".")
+  if ($DotIndex -lt 0) { return $ImagePath }
+  return $ImagePath.Substring(0, $DotIndex)
+}
+
+function New-ResponsiveImage([string]$ImagePath, [string]$Alt, [string]$Loading, [string]$Sizes, [string]$Priority) {
+  $Base = Get-ImageBase $ImagePath
+  $LoadingAttr = if ([string]::IsNullOrWhiteSpace($Loading)) { "lazy" } else { $Loading }
+  $PriorityAttr = ""
+  if (-not [string]::IsNullOrWhiteSpace($Priority)) {
+    $PriorityAttr = " fetchpriority=""$Priority"""
+  }
+  return @"
+<picture>
+  <source type="image/webp" srcset="$(Html "$Base-640.webp") 640w, $(Html "$Base-1024.webp") 1024w, $(Html "$Base-1536.webp") 1536w" sizes="$(Html $Sizes)">
+  <img src="$(Html $ImagePath)" alt="$(Html $Alt)" width="1536" height="1024" loading="$LoadingAttr" decoding="async"$PriorityAttr>
+</picture>
+"@
 }
 
 function Get-ArticleTags($Article) {
@@ -139,6 +168,7 @@ function Get-QualityScore($Article) {
   if (-not [string]::IsNullOrWhiteSpace($Article.imageAlt)) { $Score += 10 }
   if ($Article.readingTime -ge 5) { $Score += 10 } elseif ($Article.readingTime -gt 0) { $Score += 5 }
   if ($Article.affiliate -eq $true -and $Article.category -eq "things-to-buy") { $Score += 8 }
+  if (($Article.PSObject.Properties.Name -contains "shoppingGuide") -and @($Article.shoppingGuide).Count -ge 3) { $Score += 8 }
 
   return [Math]::Min(100, $Score)
 }
@@ -291,6 +321,7 @@ function New-Head([string]$Title, [string]$Description, [string]$Path, [string]$
   $Canonical = SiteUrl $Path
   $ImageUrl = if ([string]::IsNullOrWhiteSpace($Image)) { SiteUrl "/assets/images/kyoto-shrine-hero.png" } else { SiteUrl $Image }
   $OgType = if ($Path -like "/articles/*") { "article" } else { "website" }
+  $PreloadImage = if ([string]::IsNullOrWhiteSpace($Image)) { "/assets/images/kyoto-shrine-hero-1536.webp" } else { "$(Get-ImageBase $Image)-1536.webp" }
   return @"
 <head>
   <meta charset="UTF-8">
@@ -304,12 +335,17 @@ function New-Head([string]$Title, [string]$Description, [string]$Path, [string]$
   <meta property="og:description" content="$(Html $Description)">
   <meta property="og:url" content="$(Html $Canonical)">
   <meta property="og:image" content="$(Html $ImageUrl)">
+  <meta name="theme-color" content="#111111">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="$(Html $Title)">
   <meta name="twitter:description" content="$(Html $Description)">
   <meta name="twitter:image" content="$(Html $ImageUrl)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="$(Html $PreloadImage)" type="image/webp">
+  <link rel="alternate" type="application/rss+xml" title="TABI RSS" href="/feed.xml">
+  <link rel="alternate" type="application/feed+json" title="TABI JSON Feed" href="/feed.json">
+  <link rel="manifest" href="/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -331,10 +367,25 @@ function New-Ticker {
 "@
 }
 
+function New-MobileNav([string]$CurrentCategory) {
+  $Items = foreach ($NavItem in $Config.nav) {
+    $Current = ""
+    if ($NavItem.slug -eq $CurrentCategory) { $Current = ' aria-current="page"' }
+    '<a href="{0}"{1}>{2}</a>' -f (Get-CategoryUrl $NavItem.slug), $Current, (Html $NavItem.label)
+  }
+  return @"
+<nav class="mobile-nav" aria-label="Primary mobile navigation">
+  $($Items -join "`n")
+</nav>
+"@
+}
+
 function New-Layout([string]$Title, [string]$Description, [string]$Path, [string]$Main, [string]$CurrentCategory, [string]$Image, [string]$JsonLd) {
   $Head = New-Head $Title $Description $Path $Image
   $Nav = New-Nav $CurrentCategory
   $Ticker = New-Ticker
+  $MobileNav = New-MobileNav $CurrentCategory
+  $NewsletterHref = if ($Path -eq "/404.html") { "/#newsletter" } else { "#newsletter" }
   $StructuredData = ""
   if (-not [string]::IsNullOrWhiteSpace($JsonLd)) {
     $StructuredData = "<script type=""application/ld+json"">$JsonLd</script>"
@@ -357,11 +408,12 @@ $Head
     </a>
     <div class="header-actions">
       <button class="header-search" type="button" aria-label="Search articles" title="Search articles" data-search-toggle>&#8981;</button>
-      <a class="header-cta" href="#newsletter">Free Newsletter</a>
+      <a class="header-cta" href="$NewsletterHref">Free Newsletter</a>
     </div>
   </div>
 </header>
 $Ticker
+$MobileNav
 <div class="search-panel" data-search-panel hidden>
   <div class="search-panel-inner" role="dialog" aria-modal="true" aria-label="Search articles">
     <div class="search-panel-head">
@@ -427,9 +479,10 @@ $StructuredData
 function New-ArticleCard($Article, [bool]$Featured) {
   $Class = if ($Featured) { "article-card featured" } else { "article-card" }
   $Read = if ($Article.readingTime -eq 1) { "1 min read" } else { "$($Article.readingTime) min read" }
+  $Image = New-ResponsiveImage $Article.image $Article.imageAlt "lazy" "(max-width: 720px) 100vw, 33vw" ""
   return @"
 <a class="$Class" href="$(Get-ArticleUrl $Article)" data-search-card>
-  <img src="$(Html $Article.image)" alt="$(Html $Article.imageAlt)" loading="lazy">
+  $Image
   <div class="card-content">
     <p class="card-cat">$(Html (Get-CategoryLabel $Article.category))</p>
     <h3 class="card-title">$(Html $Article.title)</h3>
@@ -440,9 +493,10 @@ function New-ArticleCard($Article, [bool]$Featured) {
 }
 
 function New-CultureCard($Article) {
+  $Image = New-ResponsiveImage $Article.image $Article.imageAlt "lazy" "(max-width: 720px) 100vw, 33vw" ""
   return @"
 <a class="culture-card" href="$(Get-ArticleUrl $Article)" data-search-card>
-  <img src="$(Html $Article.image)" alt="$(Html $Article.imageAlt)" loading="lazy">
+  $Image
   <p class="card-cat">$(Html (Get-CategoryLabel $Article.category))</p>
   <h3>$(Html $Article.title)</h3>
   <p>$(Html $Article.summary)</p>
@@ -465,9 +519,10 @@ function New-BuyCard($Article) {
 function New-ListingCard($Article) {
   $Score = Get-ArticleScore $Article $Article.category
   $Freshness = Get-FreshnessLabel $Article
+  $Image = New-ResponsiveImage $Article.image $Article.imageAlt "lazy" "(max-width: 720px) 100vw, 33vw" ""
   return @"
 <a class="listing-card" href="$(Get-ArticleUrl $Article)" data-search-card>
-  <img src="$(Html $Article.image)" alt="$(Html $Article.imageAlt)" loading="lazy">
+  $Image
   <p class="card-cat">$(Html (Get-CategoryLabel $Article.category))</p>
   <h2>$(Html $Article.title)</h2>
   <p>$(Html $Article.summary)</p>
@@ -523,10 +578,59 @@ function New-ArticleSignals($Article) {
 "@
 }
 
+function New-ArticleToc($Article) {
+  $Sections = @($Article.sections)
+  if ($Sections.Count -lt 2) { return "" }
+  $Links = for ($i = 0; $i -lt $Sections.Count; $i++) {
+    $Section = $Sections[$i]
+    '<li><a href="#{0}">{1}</a></li>' -f (Get-SectionId $Section.heading ($i + 1)), (Html $Section.heading)
+  }
+  return @"
+<div class="article-toc" aria-label="Article sections">
+  <p class="footer-col-title">In This Guide</p>
+  <ol>
+    $($Links -join "`n")
+  </ol>
+</div>
+"@
+}
+
+function New-ShoppingGuidePanel($Article) {
+  if ($Article.category -ne "things-to-buy") { return "" }
+  if (-not ($Article.PSObject.Properties.Name -contains "shoppingGuide")) { return "" }
+  $Items = @($Article.shoppingGuide)
+  if ($Items.Count -eq 0) { return "" }
+
+  $Rows = foreach ($Item in $Items) {
+    @"
+<div>
+  <span>$(Html $Item.label)</span>
+  <strong>$(Html $Item.value)</strong>
+</div>
+"@
+  }
+  $Disclosure = ""
+  if ($Article.affiliate -eq $true) {
+    $Disclosure = '<p class="shopping-disclosure">Affiliate disclosure: TABI may earn a commission from qualifying purchases, but the buying notes above are written as editorial guidance first.</p>'
+  }
+
+  return @"
+<section class="shopping-guide" aria-labelledby="shopping-guide-title">
+  <p class="page-kicker">Buyer's Notes</p>
+  <h2 id="shopping-guide-title">What to check before you buy</h2>
+  <div class="shopping-grid">
+    $($Rows -join "`n")
+  </div>
+  $Disclosure
+</section>
+"@
+}
+
 function New-CompactArticleCard($Article) {
+  $Image = New-ResponsiveImage $Article.image $Article.imageAlt "lazy" "120px" ""
   return @"
 <a class="compact-card" href="$(Get-ArticleUrl $Article)">
-  <img src="$(Html $Article.image)" alt="$(Html $Article.imageAlt)" loading="lazy">
+  $Image
   <span>$(Html (Get-CategoryLabel $Article.category))</span>
   <strong>$(Html $Article.title)</strong>
 </a>
@@ -540,11 +644,12 @@ function New-AlgorithmNote([string]$Text) {
 }
 
 function New-Newsletter {
+  $Image = New-ResponsiveImage "/assets/images/kyoto-shrine-hero.png" "A quiet Kyoto shrine path with lanterns at blue hour" "lazy" "(max-width: 720px) 100vw, 40vw" ""
   return @"
 <section class="newsletter-wrap" id="newsletter" aria-labelledby="newsletter-title">
   <div class="newsletter">
     <div class="newsletter-visual">
-      <img src="/assets/images/kyoto-shrine-hero.png" alt="A quiet Kyoto shrine path with lanterns at blue hour" loading="lazy">
+      $Image
     </div>
     <div class="newsletter-content">
       <p class="page-kicker">Free Newsletter</p>
@@ -590,7 +695,7 @@ function New-HomePage {
   $Main = @"
 <section class="hero">
   <div class="hero-media">
-    <img src="$(Html $Hero.image)" alt="$(Html $Hero.imageAlt)">
+    $(New-ResponsiveImage $Hero.image $Hero.imageAlt "eager" "100vw" "high")
   </div>
   <div class="hero-kanji">&#26053;</div>
   <div class="hero-content">
@@ -672,14 +777,19 @@ $Newsletter
 
 function New-ArticlePage($Article) {
   $Read = if ($Article.readingTime -eq 1) { "1 min read" } else { "$($Article.readingTime) min read" }
-  $SectionHtml = foreach ($Section in $Article.sections) {
+  $Sections = @($Article.sections)
+  $SectionHtml = for ($i = 0; $i -lt $Sections.Count; $i++) {
+    $Section = $Sections[$i]
+    $SectionId = Get-SectionId $Section.heading ($i + 1)
     @"
-<section>
+<section id="$SectionId">
   <h2>$(Html $Section.heading)</h2>
   <p>$(Html $Section.body)</p>
 </section>
 "@
   }
+  $ShoppingGuide = New-ShoppingGuidePanel $Article
+  $ArticleToc = New-ArticleToc $Article
   $Topic = Get-ArticleTopic $Article
   $TopicHtml = ""
   if ($null -ne $Topic) {
@@ -708,12 +818,14 @@ function New-ArticlePage($Article) {
 </section>
 <article class="article-layout">
   <div class="article-cover">
-    <img src="$(Html $Article.image)" alt="$(Html $Article.imageAlt)">
+    $(New-ResponsiveImage $Article.image $Article.imageAlt "eager" "(max-width: 900px) 100vw, 1180px" "high")
   </div>
   <div class="article-body">
-    $($SectionHtml -join "`n")
+$($SectionHtml -join "`n")
+$ShoppingGuide
   </div>
   <aside class="article-sidebar" aria-label="Article details">
+    $ArticleToc
     $(New-ArticleSignals $Article)
     <p class="footer-col-title">Filed Under</p>
     <a class="tag-pill" href="$(Get-CategoryUrl $Article.category)">$(Html (Get-CategoryLabel $Article.category))</a>
@@ -742,8 +854,7 @@ $(New-Newsletter)
 "@
 
   $ImageUrl = SiteUrl $Article.image
-  $JsonLd = @{
-    "@context" = "https://schema.org"
+  $ArticleJsonLd = @{
     "@type" = "Article"
     headline = $Article.title
     description = $Article.summary
@@ -754,7 +865,19 @@ $(New-Newsletter)
     author = @{ "@type" = "Organization"; name = $Config.siteName }
     publisher = @{ "@type" = "Organization"; name = $Config.siteName }
     mainEntityOfPage = SiteUrl (Get-ArticleUrl $Article)
-  } | ConvertTo-Json -Depth 8 -Compress
+  }
+  $BreadcrumbJsonLd = @{
+    "@type" = "BreadcrumbList"
+    itemListElement = @(
+      @{ "@type" = "ListItem"; position = 1; name = "Home"; item = SiteUrl "/" },
+      @{ "@type" = "ListItem"; position = 2; name = Get-CategoryLabel $Article.category; item = SiteUrl (Get-CategoryUrl $Article.category) },
+      @{ "@type" = "ListItem"; position = 3; name = $Article.title; item = SiteUrl (Get-ArticleUrl $Article) }
+    )
+  }
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@graph" = @($ArticleJsonLd, $BreadcrumbJsonLd)
+  } | ConvertTo-Json -Depth 10 -Compress
 
   return New-Layout "$($Article.title) - TABI" $Article.summary (Get-ArticleUrl $Article) $Main $Article.category $Article.image $JsonLd
 }
@@ -851,6 +974,109 @@ $(New-Newsletter)
   return New-Layout "$($Topic.title) - TABI" $Topic.description (Get-TopicUrl $Topic.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
+function ConvertTo-Rfc3339([string]$DateValue) {
+  $Date = [datetime]::ParseExact($DateValue, "yyyy-MM-dd", $EnglishCulture)
+  return $Date.ToString("yyyy-MM-ddT00:00:00+09:00", $EnglishCulture)
+}
+
+function New-RssFeed {
+  $Latest = @($Articles | Sort-Object publishedAt -Descending | Select-Object -First 20)
+  $Items = foreach ($Article in $Latest) {
+    @"
+  <item>
+    <title>$(Html $Article.title)</title>
+    <link>$(Html (SiteUrl (Get-ArticleUrl $Article)))</link>
+    <guid>$(Html (SiteUrl (Get-ArticleUrl $Article)))</guid>
+    <pubDate>$([datetime]::ParseExact($Article.publishedAt, "yyyy-MM-dd", $EnglishCulture).ToUniversalTime().ToString("r", $EnglishCulture))</pubDate>
+    <description>$(Html $Article.summary)</description>
+    <category>$(Html (Get-CategoryLabel $Article.category))</category>
+  </item>
+"@
+  }
+  return @"
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>$(Html $Config.siteName) - $(Html $Config.tagline)</title>
+  <link>$(Html $Config.siteUrl)</link>
+  <description>$(Html $Config.description)</description>
+  <language>en</language>
+  <lastBuildDate>$((Get-Date).ToUniversalTime().ToString("r", $EnglishCulture))</lastBuildDate>
+$($Items -join "`n")
+</channel>
+</rss>
+"@
+}
+
+function New-JsonFeed {
+  $Latest = @($Articles | Sort-Object publishedAt -Descending | Select-Object -First 20)
+  $Items = foreach ($Article in $Latest) {
+    [pscustomobject]@{
+      id = SiteUrl (Get-ArticleUrl $Article)
+      url = SiteUrl (Get-ArticleUrl $Article)
+      title = $Article.title
+      summary = $Article.summary
+      content_text = $Article.summary
+      image = SiteUrl $Article.image
+      date_published = ConvertTo-Rfc3339 $Article.publishedAt
+      tags = @($Article.tags)
+    }
+  }
+  $Feed = [pscustomobject]@{
+    version = "https://jsonfeed.org/version/1.1"
+    title = "$($Config.siteName) - $($Config.tagline)"
+    home_page_url = $Config.siteUrl
+    feed_url = SiteUrl "/feed.json"
+    description = $Config.description
+    language = "en"
+    items = $Items
+  }
+  return ($Feed | ConvertTo-Json -Depth 8)
+}
+
+function New-WebManifest {
+  $Manifest = [pscustomobject]@{
+    name = "$($Config.siteName) - $($Config.tagline)"
+    short_name = $Config.siteName
+    description = $Config.description
+    start_url = "/"
+    display = "standalone"
+    background_color = "#f7f4ef"
+    theme_color = "#111111"
+    lang = "en"
+  }
+  return ($Manifest | ConvertTo-Json -Depth 5)
+}
+
+function New-LlmsText {
+  $TopArticles = Select-DiverseArticles $Articles 8 ""
+  $ArticleLines = foreach ($Article in $TopArticles) {
+    "- [$($Article.title)]($(SiteUrl (Get-ArticleUrl $Article))): $($Article.summary)"
+  }
+  $TopicLines = foreach ($Topic in $TopicClusters) {
+    "- [$($Topic.title)]($(SiteUrl (Get-TopicUrl $Topic.slug))): $($Topic.description)"
+  }
+  return @"
+# TABI
+
+TABI is an English-language curation site introducing Japan through travel, culture, food, hidden places, and practical things worth bringing home.
+
+## Core Topics
+
+$($TopicLines -join "`n")
+
+## Recommended Guides
+
+$($ArticleLines -join "`n")
+
+## Site Data
+
+- Sitemap: $(SiteUrl "/sitemap.xml")
+- RSS: $(SiteUrl "/feed.xml")
+- JSON Feed: $(SiteUrl "/feed.json")
+"@
+}
+
 function New-NotFoundPage {
   $Picks = Select-DiverseArticles $Articles 6 ""
   $PickCards = foreach ($Article in $Picks) { New-CompactArticleCard $Article }
@@ -886,14 +1112,14 @@ function New-NotFoundPage {
 }
 
 function New-Sitemap {
-  $Urls = @("/")
-  $Urls += foreach ($Category in $Config.categories) { Get-CategoryUrl $Category.slug }
-  $Urls += foreach ($Topic in $TopicClusters) { Get-TopicUrl $Topic.slug }
+  $Urls = @([pscustomobject]@{ loc = "/"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) })
+  $Urls += foreach ($Category in $Config.categories) { [pscustomobject]@{ loc = Get-CategoryUrl $Category.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+  $Urls += foreach ($Topic in $TopicClusters) { [pscustomobject]@{ loc = Get-TopicUrl $Topic.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
   $Tags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
-  $Urls += foreach ($Tag in $Tags) { Get-TagUrl $Tag }
-  $Urls += foreach ($Article in $Articles) { Get-ArticleUrl $Article }
+  $Urls += foreach ($Tag in $Tags) { [pscustomobject]@{ loc = Get-TagUrl $Tag; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+  $Urls += foreach ($Article in $Articles) { [pscustomobject]@{ loc = Get-ArticleUrl $Article; lastmod = $Article.publishedAt } }
   $Items = foreach ($Url in $Urls) {
-    "  <url><loc>$(Html (SiteUrl $Url))</loc></url>"
+    "  <url><loc>$(Html (SiteUrl $Url.loc))</loc><lastmod>$($Url.lastmod)</lastmod></url>"
   }
   return @"
 <?xml version="1.0" encoding="UTF-8"?>
@@ -925,5 +1151,9 @@ foreach ($Tag in $AllTags) {
 Write-Page "404.html" (New-NotFoundPage)
 Write-Page "sitemap.xml" (New-Sitemap)
 Write-Page "robots.txt" "User-agent: *`nAllow: /`nSitemap: $(SiteUrl '/sitemap.xml')`n"
+Write-Page "feed.xml" (New-RssFeed)
+Write-Page "feed.json" (New-JsonFeed)
+Write-Page "site.webmanifest" (New-WebManifest)
+Write-Page "llms.txt" (New-LlmsText)
 
 Write-Host "Generated $($Articles.Count) articles, $($Config.categories.Count) categories, $($TopicClusters.Count) topics, and $($AllTags.Count) tag pages."
