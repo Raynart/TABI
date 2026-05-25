@@ -59,6 +59,14 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-site.ps1
 
 Run the generator after editing any JSON content file or generation template. Generated HTML, feeds, sitemap, `robots.txt`, and `llms.txt` should be committed.
 
+## Validate Site
+
+```powershell
+node ".\scripts\validate-site.mjs"
+```
+
+The validation script checks generated HTML links, anchors, assets, `hreflang`, JSON-LD, feeds, sitemap alternates, and frontend JavaScript syntax.
+
 ## Editorial Algorithms
 
 The generator includes local, static algorithms that do not require external services:
@@ -69,6 +77,7 @@ The generator includes local, static algorithms that do not require external ser
 - Area, itinerary, planning, category, and tag pages generated from local data
 - Weighted client-side search metadata
 - Editorial signal panels on article pages
+- Article pathway blocks for related topic, area, itinerary, and glossary links
 - Bilingual RSS, JSON feed, sitemap, and `hreflang`
 
 ## Source Policy
@@ -82,6 +91,13 @@ The source rules live in `content-policy.json` and render to:
 - Article source panels
 
 Volatile details such as hours, prices, closures, and transport rules should be confirmed with official sources before travel.
+
+Each article also carries explicit source metadata fields:
+
+- `sourcePolicy`
+- `verificationLevel`
+- `lastChecked`
+- `sourceNote`
 
 ## Frontend Behavior
 

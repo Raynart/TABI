@@ -4,7 +4,12 @@
     "title": "The Hidden Shrines of Kyoto Locals Still Keep Secret",
     "summary": "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.",
     "category": "travel-guide",
-    "tags": ["kyoto", "shrines", "quiet-travel", "first-time"],
+    "tags": [
+      "kyoto",
+      "shrines",
+      "quiet-travel",
+      "first-time"
+    ],
     "publishedAt": "2026-05-22",
     "readingTime": 8,
     "affiliate": false,
@@ -32,14 +37,23 @@
         "heading": "Know When Not to Share a Place",
         "body": "Some small shrines are not built for sudden attention. If a place feels residential, fragile, or actively used by worshippers, describe it gently, avoid geotagging exact corners, and let the experience stay quiet."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "ten-days-japan-without-tourist-traps",
     "title": "How to Spend 10 Days in Japan Without a Single Tourist Trap",
     "summary": "A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.",
     "category": "travel-guide",
-    "tags": ["itinerary", "tokyo", "kyoto", "osaka"],
+    "tags": [
+      "itinerary",
+      "tokyo",
+      "kyoto",
+      "osaka"
+    ],
     "publishedAt": "2026-05-20",
     "readingTime": 12,
     "affiliate": false,
@@ -67,14 +81,23 @@
         "heading": "Protect the Final Day",
         "body": "Do not spend the last day chasing everything you missed. Keep it near your departure city, buy gifts early, and leave enough time for one final neighborhood walk without luggage dragging the mood down."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "kyoto-ryokan-under-20000-yen",
     "title": "The Best Ryokan in Kyoto Under ¥20,000",
     "summary": "Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.",
     "category": "travel-guide",
-    "tags": ["kyoto", "ryokan", "budget", "where-to-stay"],
+    "tags": [
+      "kyoto",
+      "ryokan",
+      "budget",
+      "where-to-stay"
+    ],
     "publishedAt": "2026-05-18",
     "readingTime": 7,
     "affiliate": false,
@@ -94,14 +117,23 @@
         "heading": "Read the Fine Print",
         "body": "Shared baths, curfews, futon setup, and meal timing vary by property. These details shape the stay more than star ratings do."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "osaka-three-day-eating-itinerary",
     "title": "Osaka in 3 Days: The Eating and Wandering Itinerary",
     "summary": "A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.",
     "category": "food",
-    "tags": ["osaka", "street-food", "itinerary", "nightlife"],
+    "tags": [
+      "osaka",
+      "street-food",
+      "itinerary",
+      "nightlife"
+    ],
     "publishedAt": "2026-05-16",
     "readingTime": 6,
     "affiliate": false,
@@ -129,14 +161,23 @@
         "heading": "Order Small and Keep Moving",
         "body": "The best Osaka food day is rarely one giant meal. Split takoyaki, share kushikatsu, save room for a late bowl of ramen, and let the city reward you in small rounds."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "perfect-route-up-mount-fuji",
     "title": "The Perfect Route up Mt. Fuji: What Nobody Tells You",
     "summary": "Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.",
     "category": "travel-guide",
-    "tags": ["mount-fuji", "hiking", "summer", "planning"],
+    "tags": [
+      "mount-fuji",
+      "hiking",
+      "summer",
+      "planning"
+    ],
     "publishedAt": "2026-05-14",
     "readingTime": 8,
     "affiliate": false,
@@ -156,14 +197,23 @@
         "heading": "The Descent Matters",
         "body": "The way down is where tired legs and loose volcanic gravel test people. Save energy, carry layers, and do not let the sunrise be the end of your attention."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "yakushima-ancient-forest-few-tourists-find",
     "title": "Yakushima: Japan's Ancient Forest That Few Tourists Find",
     "summary": "Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.",
     "category": "hidden-gems",
-    "tags": ["yakushima", "islands", "forest", "hiking"],
+    "tags": [
+      "yakushima",
+      "islands",
+      "forest",
+      "hiking"
+    ],
     "publishedAt": "2026-05-12",
     "readingTime": 9,
     "affiliate": false,
@@ -191,14 +241,23 @@
         "heading": "Pack for Wet Details",
         "body": "Good rain gear matters more than extra outfits. Bring dry bags, socks that can recover overnight, and enough cash for rural buses, small shops, and weather-shaped changes."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "setouchi-islands-art-sea-slow-travel",
     "title": "The Setouchi Islands for Art, Sea Air, and Slow Travel",
     "summary": "Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.",
     "category": "hidden-gems",
-    "tags": ["setouchi", "islands", "art", "slow-travel"],
+    "tags": [
+      "setouchi",
+      "islands",
+      "art",
+      "slow-travel"
+    ],
     "publishedAt": "2026-05-10",
     "readingTime": 7,
     "affiliate": false,
@@ -218,14 +277,23 @@
         "heading": "Stay for Sunset",
         "body": "Late afternoon changes the water and quiets the day-trippers. If the budget allows, one overnight stay is worth more than another rushed transfer."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "kiso-valley-walk-between-post-towns",
     "title": "Walking the Kiso Valley Between Old Post Towns",
     "summary": "The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.",
     "category": "hidden-gems",
-    "tags": ["kiso-valley", "nakasendo", "walking", "heritage"],
+    "tags": [
+      "kiso-valley",
+      "nakasendo",
+      "walking",
+      "heritage"
+    ],
     "publishedAt": "2026-05-08",
     "readingTime": 6,
     "affiliate": false,
@@ -245,14 +313,23 @@
         "heading": "Stay Overnight Nearby",
         "body": "A day trip is possible, but the valley is best at the edges of the day when tour groups have left and the wooden streets settle into themselves."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "what-wabi-sabi-really-means",
     "title": "What Wabi-Sabi Really Means and Why the World Needs It Now",
     "summary": "Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.",
     "category": "culture",
-    "tags": ["wabi-sabi", "philosophy", "aesthetics", "design"],
+    "tags": [
+      "wabi-sabi",
+      "philosophy",
+      "aesthetics",
+      "design"
+    ],
     "publishedAt": "2026-05-06",
     "readingTime": 6,
     "affiliate": false,
@@ -272,14 +349,23 @@
         "heading": "How to Notice It in Japan",
         "body": "Look for patched surfaces, quiet gardens, old tea rooms, and objects that ask you to slow down rather than admire them loudly."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "kintsugi-art-of-repairing-broken-things",
     "title": "Kintsugi: The Art of Repairing Broken Things with Gold",
     "summary": "Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.",
     "category": "culture",
-    "tags": ["kintsugi", "craft", "kyoto", "ceramics"],
+    "tags": [
+      "kintsugi",
+      "craft",
+      "kyoto",
+      "ceramics"
+    ],
     "publishedAt": "2026-05-04",
     "readingTime": 7,
     "affiliate": false,
@@ -299,14 +385,23 @@
         "heading": "Buying with Care",
         "body": "If you buy kintsugi-inspired ceramics, ask about materials and process. Real lacquer work and gold powder differ from decorative gold paint in both cost and meaning."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "hanami-where-to-see-cherry-blossoms-like-local",
     "title": "Hanami: Where to See Cherry Blossoms Like a Local",
     "summary": "Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.",
     "category": "culture",
-    "tags": ["hanami", "cherry-blossoms", "spring", "local-customs"],
+    "tags": [
+      "hanami",
+      "cherry-blossoms",
+      "spring",
+      "local-customs"
+    ],
     "publishedAt": "2026-05-02",
     "readingTime": 5,
     "affiliate": false,
@@ -326,14 +421,23 @@
         "heading": "Clean Up Completely",
         "body": "Bring a bag for trash, keep noise reasonable, and leave the place as if someone else will enjoy it ten minutes later."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "how-to-read-japanese-menu-without-speaking-japanese",
     "title": "How to Read a Japanese Menu Without Speaking Japanese",
     "summary": "A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.",
     "category": "food",
-    "tags": ["menus", "food", "language", "first-time"],
+    "tags": [
+      "menus",
+      "food",
+      "language",
+      "first-time"
+    ],
     "publishedAt": "2026-04-30",
     "readingTime": 5,
     "affiliate": false,
@@ -353,14 +457,23 @@
         "heading": "Ticket Machines Are Your Friend",
         "body": "At ramen shops and casual restaurants, buy the ticket first, hand it to staff, then wait. If there is a line, watch the person ahead of you and follow the rhythm."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "tokyo-hidden-izakayas-locals-go",
     "title": "Tokyo's Hidden Izakayas Locals Actually Go To",
     "summary": "The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.",
     "category": "food",
-    "tags": ["tokyo", "izakaya", "nightlife", "local-food"],
+    "tags": [
+      "tokyo",
+      "izakaya",
+      "nightlife",
+      "local-food"
+    ],
     "publishedAt": "2026-04-28",
     "readingTime": 7,
     "affiliate": false,
@@ -380,14 +493,23 @@
         "heading": "Mind the Table Charge",
         "body": "Many places serve otoshi, a small starter that comes with a seating charge. It is normal, not a scam, and should be treated as part of the experience."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "japanese-convenience-store-breakfasts-worth-trying",
     "title": "Japanese Convenience Store Breakfasts Worth Trying",
     "summary": "Japan's convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.",
     "category": "food",
-    "tags": ["konbini", "breakfast", "budget", "travel-tips"],
+    "tags": [
+      "konbini",
+      "breakfast",
+      "budget",
+      "travel-tips"
+    ],
     "publishedAt": "2026-04-26",
     "readingTime": 4,
     "affiliate": false,
@@ -407,14 +529,23 @@
         "heading": "Buy for the Train Thoughtfully",
         "body": "Choose foods that are quiet, tidy, and not heavily scented. Your future seat neighbor will appreciate it."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "best-japanese-kitchen-knives-to-bring-home",
     "title": "The Best Japanese Kitchen Knives to Bring Home",
     "summary": "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
     "category": "things-to-buy",
-    "tags": ["kitchen-knives", "shopping", "craft", "souvenirs"],
+    "tags": [
+      "kitchen-knives",
+      "shopping",
+      "craft",
+      "souvenirs"
+    ],
     "publishedAt": "2026-04-24",
     "readingTime": 8,
     "affiliate": true,
@@ -466,14 +597,23 @@
         "heading": "Pack It Properly",
         "body": "Knives must go in checked luggage, ideally boxed and wrapped securely. Keep receipts and avoid carrying blades through airport security."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "buying-matcha-ceremonial-vs-culinary-grade",
     "title": "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
     "summary": "Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.",
     "category": "things-to-buy",
-    "tags": ["matcha", "tea", "shopping", "kyoto"],
+    "tags": [
+      "matcha",
+      "tea",
+      "shopping",
+      "kyoto"
+    ],
     "publishedAt": "2026-04-22",
     "readingTime": 6,
     "affiliate": true,
@@ -525,14 +665,23 @@
         "heading": "Taste Before You Commit",
         "body": "Shops that serve small cups can teach you more than labels. Bitterness, aroma, and texture vary widely."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "japanese-drugstore-products-worth-every-yen",
     "title": "10 Japanese Drugstore Products Worth Every Yen",
     "summary": "Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.",
     "category": "things-to-buy",
-    "tags": ["drugstore", "skincare", "shopping", "budget"],
+    "tags": [
+      "drugstore",
+      "skincare",
+      "shopping",
+      "budget"
+    ],
     "publishedAt": "2026-04-20",
     "readingTime": 7,
     "affiliate": true,
@@ -584,14 +733,23 @@
         "heading": "Use Tax-Free Carefully",
         "body": "Tax-free bags may be sealed for departure. Make sure you do not need the item immediately before choosing that option."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
   {
     "id": "where-to-buy-authentic-yukata-in-tokyo",
     "title": "Where to Buy Authentic Yukata in Tokyo Without the Markup",
     "summary": "Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.",
     "category": "things-to-buy",
-    "tags": ["yukata", "tokyo", "shopping", "fashion"],
+    "tags": [
+      "yukata",
+      "tokyo",
+      "shopping",
+      "fashion"
+    ],
     "publishedAt": "2026-04-18",
     "readingTime": 6,
     "affiliate": true,
@@ -643,6 +801,10 @@
         "heading": "Ask How to Wear It",
         "body": "A beautiful yukata is easier to enjoy when you understand the basics of tying, folding, and seasonal appropriateness."
       }
-    ]
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   }
 ]

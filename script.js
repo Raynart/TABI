@@ -6,6 +6,7 @@
   const searchResults = document.querySelector("[data-search-results]");
   const newsletterForms = document.querySelectorAll("[data-newsletter-form]");
   const articles = Array.isArray(window.TABI_ARTICLES) ? window.TABI_ARTICLES : [];
+  let lastFocusedElement = null;
   const lang = document.documentElement.lang === "ja" ? "ja" : "en";
   const messages = {
     en: {
@@ -28,8 +29,10 @@
 
   function openSearch() {
     if (!searchPanel) return;
+    lastFocusedElement = document.activeElement;
     searchPanel.hidden = false;
     document.body.style.overflow = "hidden";
+    searchToggles.forEach((searchToggle) => searchToggle.setAttribute("aria-expanded", "true"));
     renderSearch("");
     window.setTimeout(() => searchInput && searchInput.focus(), 0);
   }
@@ -38,7 +41,11 @@
     if (!searchPanel) return;
     searchPanel.hidden = true;
     document.body.style.overflow = "";
+    searchToggles.forEach((searchToggle) => searchToggle.setAttribute("aria-expanded", "false"));
     if (searchInput) searchInput.value = "";
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
+    }
   }
 
   function renderSearch(query) {
@@ -62,7 +69,8 @@
     searchResults.innerHTML = matches
       .map((item) => {
         const article = item.article;
-        const tags = (article.tags || []).slice(0, 3).map((tag) => "#" + tag).join(" ");
+        const labels = Array.isArray(article.tagLabels) && article.tagLabels.length ? article.tagLabels : article.tags || [];
+        const tags = labels.slice(0, 3).map((tag) => "#" + tag).join(" ");
         return [
           '<a class="search-result" href="' + article.url + '">',
           "<strong>" + escapeHtml(article.title) + "</strong>",
@@ -81,7 +89,7 @@
       summary: String(article.summary || "").toLowerCase(),
       category: String(article.categoryLabel || article.category || "").toLowerCase(),
       topic: String(article.topic || "").toLowerCase(),
-      tags: (article.tags || []).join(" ").toLowerCase()
+      tags: (article.tags || []).concat(article.tagLabels || []).join(" ").toLowerCase()
     };
 
     return tokens.reduce((total, token) => {
@@ -126,6 +134,19 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && searchPanel && !searchPanel.hidden) {
       closeSearch();
+    }
+    if (event.key === "Tab" && searchPanel && !searchPanel.hidden) {
+      const focusable = searchPanel.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
 

@@ -21,6 +21,7 @@ $UiLabels = @{
     filedUnder = "Filed Under"; related = "Related"; inThisGuide = "In This Guide"; sourceInfo = "Source & Verification"
     articleScore = "Article score"; quality = "Quality"; freshness = "Freshness"; seasonalFit = "Seasonal fit"
     affiliate = "Affiliate links may earn us a commission."; copyright = "All rights reserved."; home = "Home"
+    linkPath = "Continue Your Route"; whyRelated = "Why these links"; topicPath = "Topic path"; areaPath = "Area guide"; itineraryPath = "Itinerary"; glossaryPath = "Glossary"
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -30,6 +31,7 @@ $UiLabels = @{
     filedUnder = "分類"; related = "関連記事"; inThisGuide = "このガイドの内容"; sourceInfo = "出所と検証"
     articleScore = "記事スコア"; quality = "品質"; freshness = "鮮度"; seasonalFit = "季節適合"
     affiliate = "一部リンクから収益を得る場合があります。"; copyright = "All rights reserved."; home = "ホーム"
+    linkPath = "次に進む"; whyRelated = "表示理由"; topicPath = "テーマ"; areaPath = "地域ガイド"; itineraryPath = "旅程"; glossaryPath = "用語集"
   }
 }
 $CategoryLabelsJa = @{
@@ -136,6 +138,17 @@ function Get-CategoryLabel([string]$Slug) {
     if ($Category.slug -eq $Slug) { return $Category.label }
   }
   return $Slug
+}
+
+function Get-TagLabel([string]$Tag) {
+  if (Is-Japanese) {
+    $Tags = $JapaneseStatic.PSObject.Properties["tags"]
+    if ($null -ne $Tags) {
+      $Label = $Tags.Value.PSObject.Properties[$Tag]
+      if ($null -ne $Label) { return $Label.Value }
+    }
+  }
+  return $Tag
 }
 
 function Get-ArticleUrl($Article) {
@@ -480,6 +493,7 @@ function New-SearchJson {
       category = $Article.category
       categoryLabel = Get-CategoryLabel $Article.category
       tags = @($Article.tags)
+      tagLabels = @($Article.tags | ForEach-Object { Get-TagLabel $_ })
       url = Get-ArticleUrl $Article
       score = Get-ArticleScore $Article ""
       qualityScore = Get-QualityScore $Article
@@ -609,14 +623,14 @@ $Head
         <a href="$EnglishHref"$(if (-not (Is-Japanese)) { ' aria-current="true"' } else { '' })>EN</a>
         <a href="$JapaneseHref"$(if (Is-Japanese) { ' aria-current="true"' } else { '' })>JP</a>
       </nav>
-      <button class="header-search" type="button" aria-label="$(Html (T "search"))" title="$(Html (T "search"))" data-search-toggle>&#8981;</button>
+      <button class="header-search" type="button" aria-label="$(Html (T "search"))" title="$(Html (T "search"))" aria-expanded="false" aria-controls="site-search-panel" data-search-toggle>&#8981;</button>
       <a class="header-cta" href="$NewsletterHref">$(Html (T "newsletter"))</a>
     </div>
   </div>
 </header>
 $Ticker
 $MobileNav
-<div class="search-panel" data-search-panel hidden>
+<div class="search-panel" id="site-search-panel" data-search-panel hidden>
   <div class="search-panel-inner" role="dialog" aria-modal="true" aria-label="$(Html (T "search"))">
     <div class="search-panel-head">
       <p class="search-panel-title">$(Html (T "search"))</p>
@@ -744,14 +758,14 @@ function New-ListingCard($Article) {
 
 function New-TagList($Tags) {
   $Items = foreach ($Tag in $Tags) {
-    '<span class="tag-pill">#{0}</span>' -f (Html $Tag)
+    '<span class="tag-pill" data-tag="{0}">#{1}</span>' -f (Html $Tag), (Html (Get-TagLabel $Tag))
   }
   return ($Items -join "`n")
 }
 
 function New-LinkedTagList($Tags) {
   $Items = foreach ($Tag in $Tags) {
-    '<a class="tag-pill" href="{0}">#{1}</a>' -f (Get-TagUrl $Tag), (Html $Tag)
+    '<a class="tag-pill" href="{0}" data-tag="{1}">#{2}</a>' -f (Get-TagUrl $Tag), (Html $Tag), (Html (Get-TagLabel $Tag))
   }
   return ($Items -join "`n")
 }
@@ -816,6 +830,89 @@ function New-ArticleSourcePanel($Article) {
   <p>$(Html $PanelText)</p>
   <a class="tag-pill topic-pill" href="$(Href "/source-policy.html")">$(Html (T "sourcePolicy"))</a>
 </div>
+"@
+}
+
+function Get-ArticleArea($Article) {
+  $Tags = Get-ArticleTags $Article
+  $BestArea = $null
+  $BestScore = 0
+  foreach ($Area in $AreaClusters) {
+    $Shared = @($Tags | Where-Object { @($Area.tags) -contains $_ }).Count
+    if (@($Area.categories) -contains $Article.category) { $Shared += 1 }
+    if ($Shared -gt $BestScore) {
+      $BestScore = $Shared
+      $BestArea = $Area
+    }
+  }
+  return $BestArea
+}
+
+function Get-ArticleItinerary($Article) {
+  $Tags = Get-ArticleTags $Article
+  $BestPlan = $null
+  $BestScore = 0
+  foreach ($Plan in $ItineraryPlans) {
+    $Shared = @($Tags | Where-Object { @($Plan.tags) -contains $_ }).Count
+    if (@($Plan.categories) -contains $Article.category) { $Shared += 1 }
+    if ($Shared -gt $BestScore) {
+      $BestScore = $Shared
+      $BestPlan = $Plan
+    }
+  }
+  return $BestPlan
+}
+
+function Get-ArticleGlossaryTerm($Article) {
+  $Tags = Get-ArticleTags $Article
+  $Mapping = @{
+    ryokan = "Ryokan"; onsen = "Onsen"; konbini = "Konbini"; izakaya = "Otoshi"; food = "Otoshi"; shopping = "Tax-free"
+    matcha = "Kaiseki"; "kiso-valley" = "Shukubo"; "where-to-stay" = "Ryokan"; "travel-tips" = "IC card"; planning = "IC card"
+  }
+  foreach ($Tag in $Tags) {
+    if ($Mapping.ContainsKey($Tag)) {
+      $Term = $GlossaryTerms | Where-Object { $_.term -eq $Mapping[$Tag] } | Select-Object -First 1
+      if ($null -ne $Term) { return Get-GlossaryDisplay $Term }
+    }
+  }
+  return Get-GlossaryDisplay ($GlossaryTerms | Select-Object -First 1)
+}
+
+function New-ArticlePathways($Article) {
+  $Topic = Get-ArticleTopic $Article
+  $Area = Get-ArticleArea $Article
+  $Plan = Get-ArticleItinerary $Article
+  $Term = Get-ArticleGlossaryTerm $Article
+  $Cards = @()
+  if ($null -ne $Topic) {
+    $Display = Get-TopicDisplay $Topic
+    $Cards += New-UtilityCard (T "topicPath") $Display.title $Display.description (Get-TopicUrl $Topic.slug)
+  }
+  if ($null -ne $Area) {
+    $Display = Get-AreaDisplay $Area
+    $Cards += New-UtilityCard (T "areaPath") $Display.title $Display.description (Get-AreaUrl $Area.slug)
+  }
+  if ($null -ne $Plan) {
+    $Display = Get-ItineraryDisplay $Plan
+    $Cards += New-UtilityCard (T "itineraryPath") $Display.title $Display.description (Get-ItineraryUrl $Plan.slug)
+  }
+  if ($null -ne $Term) {
+    $Description = if (Is-Japanese) { "$($Term.term)など、旅で出てくる言葉を確認できます。" } else { "Decode terms like $($Term.term) that appear across TABI guides." }
+    $Cards += New-UtilityCard (T "glossaryPath") $Term.term $Description "/glossary.html"
+  }
+  if ($Cards.Count -eq 0) { return "" }
+  return @"
+<section class="pathway-section" aria-labelledby="pathway-heading">
+  <div class="section-label compact-label">
+    <span class="section-label-jp">&#36947;</span>
+    <h2 class="section-label-en" id="pathway-heading">$(Html (T "linkPath"))</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <p class="algorithm-note">$(if (Is-Japanese) { "この記事のタグ、カテゴリ、地域性から次に読む導線を自動で選んでいます。" } else { "Selected from this article's tags, category, area fit, and itinerary fit." })</p>
+  <div class="utility-grid">
+    $($Cards -join "`n")
+  </div>
+</section>
 "@
 }
 
@@ -1010,6 +1107,25 @@ function New-HomePage {
   }
   $CultureCards = foreach ($Article in $Culture) { New-CultureCard $Article }
   $BuyCards = foreach ($Article in $Buy) { New-BuyCard $Article }
+  $LocalDiscoverySection = ""
+  if (Is-Japanese) {
+    $Discovery = Select-DiverseArticles @($Sorted | Where-Object { $_.category -in @("hidden-gems", "culture", "travel-guide") }) 4 ""
+    $DiscoveryCards = foreach ($Article in $Discovery) { New-CompactArticleCard $Article }
+    $LocalDiscoverySection = @"
+<section aria-labelledby="local-discovery-heading" class="next-read">
+  <div class="section-label">
+    <span class="section-label-jp">&#26085;</span>
+    <h2 class="section-label-en" id="local-discovery-heading">日本人も知らない日本</h2>
+    <div class="section-label-line"></div>
+    <a class="section-label-link" href="$(Get-CategoryUrl "hidden-gems")">知られざる場所</a>
+  </div>
+  <p class="algorithm-note">有名さよりも、静けさ、文化的な文脈、旅の余白を残せるかを重視して選んでいます。</p>
+  <div class="compact-grid">
+    $($DiscoveryCards -join "`n")
+  </div>
+</section>
+"@
+  }
   $Newsletter = New-Newsletter
   $SiteTitle = if (Is-Japanese) { "$($Config.siteName) - 日本を深く見る" } else { "$($Config.siteName) - $($Config.tagline)" }
   $SiteDescription = Get-SiteDescription
@@ -1062,6 +1178,7 @@ function New-HomePage {
     $($PlanningCards -join "`n")
   </div>
 </section>
+$LocalDiscoverySection
 <section aria-labelledby="culture-heading">
   <div class="section-label">
     <span class="section-label-jp">&#25991;&#21270;</span>
@@ -1142,6 +1259,7 @@ function New-ArticlePage($Article) {
   $RelatedCards = foreach ($Item in ($Related | Select-Object -First 3)) {
     New-CompactArticleCard $Item
   }
+  $Pathways = New-ArticlePathways $Article
   $Breadcrumbs = New-Breadcrumbs @(
     [pscustomobject]@{ label = "Home"; url = "/" },
     [pscustomobject]@{ label = Get-CategoryLabel $Article.category; url = Get-CategoryUrl $Article.category },
@@ -1174,13 +1292,14 @@ $ShoppingGuide
       $(New-LinkedTagList $Article.tags)
     </div>
     <p class="footer-col-title sidebar-section-title">$(Html (T "related"))</p>
-    <p class="sidebar-note">$(if (Is-Japanese) { "共有タグ、カテゴリ適合、鮮度、季節性、品質スコアから選んでいます。" } else { "Chosen by shared tags, category fit, freshness, seasonality, and quality score." })</p>
+    <p class="sidebar-note"><strong>$(Html (T "whyRelated")):</strong> $(if (Is-Japanese) { "共有タグ、カテゴリ適合、鮮度、季節性、品質スコアから選んでいます。" } else { "Chosen by shared tags, category fit, freshness, seasonality, and quality score." })</p>
     <ul class="footer-links">
       $($RelatedHtml -join "`n")
     </ul>
     $(New-ArticleSourcePanel $Article)
   </aside>
 </article>
+$Pathways
 <section aria-labelledby="next-heading" class="next-read">
   <div class="section-label">
     <span class="section-label-jp">&#27425;</span>
@@ -1265,11 +1384,12 @@ $(New-Newsletter)
 
 function New-TagPage([string]$Tag) {
   $Kicker = if (Is-Japanese) { "タグ" } else { "Tag" }
-  $Description = if (Is-Japanese) { "#$Tag に関連するTABI内の記事をまとめています。" } else { "Articles connected to $Tag, gathered from across TABI." }
+  $TagLabel = Get-TagLabel $Tag
+  $Title = "#$TagLabel"
+  $Description = if (Is-Japanese) { "#$TagLabel に関連するTABI内の記事をまとめています。" } else { "Articles connected to $Tag, gathered from across TABI." }
   $Algorithm = if (Is-Japanese) { "記事スコアが高く、鮮度と季節性のあるガイドから表示しています。" } else { "Sorted by article score so stronger, fresher, and more seasonally useful guides appear first." }
   $Items = Select-ScoredArticles @($Articles | Where-Object { @($_.tags) -contains $Tag }) 100 ""
   $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
-  $Title = "#$Tag"
   $Breadcrumbs = New-Breadcrumbs @(
     [pscustomobject]@{ label = "Home"; url = "/" },
     [pscustomobject]@{ label = $Title; url = "" }
@@ -1859,7 +1979,7 @@ function New-NotFoundPage {
   <p class="page-desc">$(Html $Description)</p>
   <div class="hero-actions light-actions">
     <a class="button" href="$(Href "/")">$(if (Is-Japanese) { "ホームへ戻る" } else { "Back to Home" })</a>
-    <button class="button secondary" type="button" data-search-toggle>$(Html $SearchLabel)</button>
+    <button class="button secondary" type="button" aria-expanded="false" aria-controls="site-search-panel" data-search-toggle>$(Html $SearchLabel)</button>
   </div>
   <div class="tag-list">
     $($TopicCards -join "`n")
