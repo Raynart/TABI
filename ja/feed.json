@@ -1,9 +1,9 @@
 {
     "version":  "https://jsonfeed.org/version/1.1",
-    "title":  "TABI - Discover Japan",
-    "home_page_url":  "https://tabi.guide",
+    "title":  "TABI - 日本を深く見る旅ガイド",
+    "home_page_url":  "https://tabi.guide/ja/",
     "feed_url":  "https://tabi.guide/ja/feed.json",
-    "description":  "Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.",
+    "description":  "日本人にも訪日旅行者にも向けて、旅、文化、食、知られざる場所、持ち帰る価値のあるものを静かに案内するTABIの日本語版です。",
     "language":  "ja",
     "items":  [
                   {

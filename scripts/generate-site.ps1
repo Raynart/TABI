@@ -22,6 +22,11 @@ $UiLabels = @{
     articleScore = "Article score"; quality = "Quality"; freshness = "Freshness"; seasonalFit = "Seasonal fit"
     affiliate = "Affiliate links may earn us a commission."; copyright = "All rights reserved."; home = "Home"
     linkPath = "Continue Your Route"; whyRelated = "Why these links"; topicPath = "Topic path"; areaPath = "Area guide"; itineraryPath = "Itinerary"; glossaryPath = "Glossary"
+    latestAria = "Latest articles"; mobileNavAria = "Primary mobile navigation"; siteLogoAria = "TABI home"
+    articleSectionsAria = "Article sections"; articleDetailsAria = "Article details"; emailAria = "Email address"; newsletterLink = "Newsletter"
+    buyerNotes = "Buyer's Notes"; buyCheckTitle = "What to check before you buy"; option = "Option"; bestFor = "Best for"; watchFor = "Watch for"
+    affiliateDisclosure = "Affiliate disclosure: TABI may earn a commission from qualifying purchases, but the buying notes above are written as editorial guidance first."
+    feedbackKicker = "Keep This Guide Useful"; feedbackTitle = "Was this guide helpful?"; feedbackBody = "Tell us what felt unclear, missing, or worth updating. This is a simple editorial inbox link, not a tracking widget."; feedbackButton = "Send Feedback"
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -32,6 +37,11 @@ $UiLabels = @{
     articleScore = "記事スコア"; quality = "品質"; freshness = "鮮度"; seasonalFit = "季節適合"
     affiliate = "一部リンクから収益を得る場合があります。"; copyright = "All rights reserved."; home = "ホーム"
     linkPath = "次に進む"; whyRelated = "表示理由"; topicPath = "テーマ"; areaPath = "地域ガイド"; itineraryPath = "旅程"; glossaryPath = "用語集"
+    latestAria = "新着記事"; mobileNavAria = "主要ナビゲーション"; siteLogoAria = "TABIホーム"
+    articleSectionsAria = "記事の目次"; articleDetailsAria = "記事の詳細"; emailAria = "メールアドレス"; newsletterLink = "ニュースレター"
+    buyerNotes = "買う前のメモ"; buyCheckTitle = "購入前に見るポイント"; option = "選択肢"; bestFor = "向いている人"; watchFor = "確認したい点"
+    affiliateDisclosure = "開示: 一部の商品リンクから収益を得る場合がありますが、上記の購入メモは編集上の判断を優先して作成しています。"
+    feedbackKicker = "このガイドを育てる"; feedbackTitle = "このガイドは役に立ちましたか"; feedbackBody = "分かりにくかった点、足りない情報、更新したほうがよい箇所があればお知らせください。トラッキング用の仕組みではなく、編集用のメール窓口です。"; feedbackButton = "フィードバックを送る"
   }
 }
 $CategoryLabelsJa = @{
@@ -65,6 +75,15 @@ function T([string]$Key) {
   $Labels = $UiLabels[(Lang-Code)]
   if ($Labels.ContainsKey($Key)) { return $Labels[$Key] }
   return $Key
+}
+
+function Get-LocalizedScalar([string]$Group, [string]$Key, [string]$Default) {
+  if (-not (Is-Japanese)) { return $Default }
+  $GroupProperty = $JapaneseStatic.PSObject.Properties[$Group]
+  if ($null -eq $GroupProperty) { return $Default }
+  $KeyProperty = $GroupProperty.Value.PSObject.Properties[$Key]
+  if ($null -eq $KeyProperty) { return $Default }
+  return [string]$KeyProperty.Value
 }
 
 function Get-LangPrefix([string]$Lang) {
@@ -102,10 +121,20 @@ function SiteUrl([string]$Path) {
 }
 
 function Get-SiteDescription {
-  if (Is-Japanese) {
-    return "日本の旅、文化、食、知られざる場所、持ち帰る価値のあるものを静かに案内するTABIの日本語版です。"
-  }
-  return $Config.description
+  return Get-LocalizedScalar "site" "description" $Config.description
+}
+
+function Get-SiteTitle {
+  $Default = "$($Config.siteName) - $($Config.tagline)"
+  return Get-LocalizedScalar "site" "title" $Default
+}
+
+function Get-LogoSubtitle {
+  return Get-LocalizedScalar "site" "logoSubtitle" "Discover Japan"
+}
+
+function Get-FooterTagline {
+  return Get-LocalizedScalar "site" "footerTagline" $Config.description
 }
 
 function New-LanguageAlternates([string]$Path) {
@@ -234,6 +263,13 @@ function Copy-ArticleForLanguage($Article, [string]$Lang) {
   $Copy["sections"] = @($Override[0].sections)
   if ($Override[0].PSObject.Properties.Name -contains "imageAlt") {
     $Copy["imageAlt"] = $Override[0].imageAlt
+  } else {
+    $Copy["imageAlt"] = "$($Override[0].title)をイメージしたTABIのメインビジュアル"
+  }
+  foreach ($PropertyName in @("shoppingGuide", "comparison")) {
+    if ($Override[0].PSObject.Properties.Name -contains $PropertyName) {
+      $Copy[$PropertyName] = @($Override[0].$PropertyName)
+    }
   }
   return [pscustomobject]$Copy
 }
@@ -556,7 +592,7 @@ function New-Ticker {
     '<span class="ticker-item"><strong>{0}</strong> - {1}</span>' -f (Html (Get-CategoryLabel $Article.category)), (Html $Article.title)
   }
   return @"
-<div class="ticker" aria-label="Latest articles">
+<div class="ticker" aria-label="$(Html (T "latestAria"))">
   <div class="ticker-label">$(Html (T "latest"))</div>
   <div class="ticker-track">
     $($Items -join "`n")
@@ -578,7 +614,7 @@ function New-MobileNav([string]$CurrentCategory) {
   $Items += '<a href="{0}">{1}</a>' -f (Href "/areas/index.html"), $AreaLabel
   $Items += '<a href="{0}">{1}</a>' -f (Href "/planning/index.html"), $PlanningLabel
   return @"
-<nav class="mobile-nav" aria-label="Primary mobile navigation">
+<nav class="mobile-nav" aria-label="$(Html (T "mobileNavAria"))">
   $($Items -join "`n")
 </nav>
 "@
@@ -614,9 +650,9 @@ $Head
     <ul class="header-nav">
       $Nav
     </ul>
-    <a class="site-logo" href="$HomeHref" aria-label="TABI home">
+    <a class="site-logo" href="$HomeHref" aria-label="$(Html (T "siteLogoAria"))">
       <span class="logo-en">TABI<span class="dot">.</span></span>
-      <span class="logo-jp">&#26053; - $(if (Is-Japanese) { "日本を深く見る" } else { "Discover Japan" })</span>
+      <span class="logo-jp">&#26053; - $(Html (Get-LogoSubtitle))</span>
     </a>
     <div class="header-actions">
       <nav class="language-switch" aria-label="$(Html (T "language"))">
@@ -647,7 +683,7 @@ $Main
   <div class="footer-top">
     <div>
       <div class="footer-logo">TABI<span class="dot">.</span></div>
-      <p class="footer-tagline">$(if (Is-Japanese) { "日本の旅、文化、食、知られざる場所、持ち帰る価値のあるものを静かに案内します。" } else { "Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home." })</p>
+      <p class="footer-tagline">$(Html (Get-FooterTagline))</p>
     </div>
     <div>
       <p class="footer-col-title">$(Html (T "explore"))</p>
@@ -663,7 +699,7 @@ $Main
     <div>
       <p class="footer-col-title">TABI</p>
       <ul class="footer-links">
-        <li><a href="$(Href "/")#newsletter">Newsletter</a></li>
+        <li><a href="$(Href "/")#newsletter">$(Html (T "newsletterLink"))</a></li>
         <li><a href="$(Href "/itineraries/index.html")">$(if (Is-Japanese) { "旅程" } else { "Itineraries" })</a></li>
         <li><a href="$(Href "/planning/index.html")">$(if (Is-Japanese) { "旅の準備" } else { "Planning Tools" })</a></li>
         <li><a href="$(Href "/glossary.html")">$(if (Is-Japanese) { "用語集" } else { "Glossary" })</a></li>
@@ -924,7 +960,7 @@ function New-ArticleToc($Article) {
     '<li><a href="#{0}">{1}</a></li>' -f (Get-SectionId $Section.heading ($i + 1)), (Html $Section.heading)
   }
   return @"
-<div class="article-toc" aria-label="Article sections">
+<div class="article-toc" aria-label="$(Html (T "articleSectionsAria"))">
   <p class="footer-col-title">$(Html (T "inThisGuide"))</p>
   <ol>
     $($Links -join "`n")
@@ -964,9 +1000,9 @@ function New-ShoppingGuidePanel($Article) {
   <table class="comparison-table">
     <thead>
       <tr>
-        <th scope="col">Option</th>
-        <th scope="col">Best for</th>
-        <th scope="col">Watch for</th>
+        <th scope="col">$(Html (T "option"))</th>
+        <th scope="col">$(Html (T "bestFor"))</th>
+        <th scope="col">$(Html (T "watchFor"))</th>
       </tr>
     </thead>
     <tbody>
@@ -979,13 +1015,13 @@ function New-ShoppingGuidePanel($Article) {
   }
   $Disclosure = ""
   if ($Article.affiliate -eq $true) {
-    $Disclosure = '<p class="shopping-disclosure">Affiliate disclosure: TABI may earn a commission from qualifying purchases, but the buying notes above are written as editorial guidance first.</p>'
+    $Disclosure = '<p class="shopping-disclosure">{0}</p>' -f (Html (T "affiliateDisclosure"))
   }
 
   return @"
 <section class="shopping-guide" aria-labelledby="shopping-guide-title">
-  <p class="page-kicker">Buyer's Notes</p>
-  <h2 id="shopping-guide-title">What to check before you buy</h2>
+  <p class="page-kicker">$(Html (T "buyerNotes"))</p>
+  <h2 id="shopping-guide-title">$(Html (T "buyCheckTitle"))</h2>
   <div class="shopping-grid">
     $($Rows -join "`n")
   </div>
@@ -1000,11 +1036,11 @@ function New-FeedbackBlock($Article) {
   return @"
 <section class="feedback-block" aria-labelledby="feedback-title">
   <div>
-    <p class="page-kicker">Keep This Guide Useful</p>
-    <h2 id="feedback-title">Was this guide helpful?</h2>
-    <p>Tell us what felt unclear, missing, or worth updating. This is a simple editorial inbox link, not a tracking widget.</p>
+    <p class="page-kicker">$(Html (T "feedbackKicker"))</p>
+    <h2 id="feedback-title">$(Html (T "feedbackTitle"))</h2>
+    <p>$(Html (T "feedbackBody"))</p>
   </div>
-  <a class="button secondary" href="mailto:$($Config.contactEmail)?subject=$Subject">Send Feedback</a>
+  <a class="button secondary" href="mailto:$($Config.contactEmail)?subject=$Subject">$(Html (T "feedbackButton"))</a>
 </section>
 "@
 }
@@ -1055,7 +1091,7 @@ function New-Newsletter {
       <h2 id="newsletter-title">$(Html $Title)</h2>
       <p>$(Html $Description)</p>
       <form class="nl-form" data-newsletter-form>
-        <input class="nl-input" type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
+        <input class="nl-input" type="email" name="email" placeholder="your@email.com" aria-label="$(Html (T "emailAria"))" required>
         <button class="nl-btn" type="submit">$(Html $Button)</button>
       </form>
       <p class="nl-status" data-newsletter-status></p>
@@ -1127,7 +1163,7 @@ function New-HomePage {
 "@
   }
   $Newsletter = New-Newsletter
-  $SiteTitle = if (Is-Japanese) { "$($Config.siteName) - 日本を深く見る" } else { "$($Config.siteName) - $($Config.tagline)" }
+  $SiteTitle = Get-SiteTitle
   $SiteDescription = Get-SiteDescription
 
   $Main = @"
@@ -1282,7 +1318,7 @@ function New-ArticlePage($Article) {
 $($SectionHtml -join "`n")
 $ShoppingGuide
   </div>
-  <aside class="article-sidebar" aria-label="Article details">
+  <aside class="article-sidebar" aria-label="$(Html (T "articleDetailsAria"))">
     $ArticleToc
     $(New-ArticleSignals $Article)
     <p class="footer-col-title">$(Html (T "filedUnder"))</p>
@@ -1865,9 +1901,9 @@ function New-RssFeed {
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>$(Html $Config.siteName) - $(Html $Config.tagline)</title>
-  <link>$(Html $Config.siteUrl)</link>
-  <description>$(Html $Config.description)</description>
+  <title>$(Html (Get-SiteTitle))</title>
+  <link>$(Html (SiteUrl (Href "/")))</link>
+  <description>$(Html (Get-SiteDescription))</description>
   <language>$Script:CurrentLang</language>
   <lastBuildDate>$(ConvertTo-RssDate $LatestPublishedAt)</lastBuildDate>
 $($Items -join "`n")
@@ -1892,10 +1928,10 @@ function New-JsonFeed {
   }
   $Feed = [pscustomobject]@{
     version = "https://jsonfeed.org/version/1.1"
-    title = "$($Config.siteName) - $($Config.tagline)"
-    home_page_url = $Config.siteUrl
+    title = Get-SiteTitle
+    home_page_url = SiteUrl (Href "/")
     feed_url = SiteUrl (Href "/feed.json")
-    description = $Config.description
+    description = Get-SiteDescription
     language = $Script:CurrentLang
     items = $Items
   }
