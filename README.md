@@ -1,64 +1,97 @@
 # TABI - Discover Japan
 
-> Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.
+TABI is a bilingual static editorial site for Japan travel, culture, food, hidden places, and thoughtful things to bring home.
 
-TABI is an English-language static curation site for international visitors and Japan enthusiasts.
+The site is generated locally and committed as static HTML. It does not require a CMS, database, external search service, booking integration, or live data feed.
 
 ## Stack
 
 - Static HTML
 - PowerShell site generation
 - Vanilla CSS and JavaScript
+- JSON content files
 - Netlify hosting
 
-## Structure
+## Content Files
 
 ```text
-.
-├── articles/          Generated article pages
-├── assets/images/     Site image assets
-├── categories/        Generated category pages
-├── scripts/           PowerShell generation scripts
-├── tags/              Generated tag pages
-├── topics/            Generated topic cluster pages
-├── articles.json      Source article data
-├── index.html         Generated top page
-├── script.js          Frontend interactions
-├── site.config.json   Site-wide config
-├── styles.css         Design system
-└── tabi-mockup.html   Original visual mockup reference
+articles.json          English article source data
+articles.ja.json       Japanese article translations
+site-data.json         Topics, areas, itineraries, planning guides, glossary terms
+static.ja.json         Japanese translations for static site-data content
+content-policy.json    Source policy, reuse rules, and article source metadata defaults
+site.config.json       Site name, URL, navigation, and category config
+```
+
+## Generated Output
+
+```text
+index.html             English home page
+ja/index.html          Japanese home page
+articles/              English article pages
+ja/articles/           Japanese article pages
+categories/            English category pages
+ja/categories/         Japanese category pages
+topics/                English topic hubs
+ja/topics/             Japanese topic hubs
+areas/                 English area guides
+ja/areas/              Japanese area guides
+itineraries/           English itinerary pages
+ja/itineraries/        Japanese itinerary pages
+planning/              English planning tools
+ja/planning/           Japanese planning tools
+tags/                  English tag pages
+ja/tags/               Japanese tag pages
+feed.xml               English RSS feed
+ja/feed.xml            Japanese RSS feed
+feed.json              English JSON feed
+ja/feed.json           Japanese JSON feed
+sitemap.xml            Bilingual sitemap with hreflang alternates
+robots.txt             Search crawler rules
+llms.txt               LLM-readable site summary
 ```
 
 ## Generate Site
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File ".\scripts\generate-site.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-site.ps1"
 ```
 
-The generator reads `articles.json` and `site.config.json`, then writes the top page, article pages, category pages, topic pages, tag pages, `404.html`, `sitemap.xml`, and `robots.txt`.
+Run the generator after editing any JSON content file or generation template. Generated HTML, feeds, sitemap, `robots.txt`, and `llms.txt` should be committed.
 
-## Local Editorial Algorithms
+## Editorial Algorithms
 
-The site generator includes local, static algorithms that do not require external services:
+The generator includes local, static algorithms that do not require external services:
 
 - Article scoring from freshness, seasonality, content quality, category priority, and editorial weight
 - Related-article selection from shared tags, category fit, freshness, seasonality, and quality
 - Topic cluster pages for internal-link hubs
-- Category and tag sorting by article score
-- Search metadata for weighted client-side search
-- Editorial signals on article pages
-- A helpful generated `404.html`
+- Area, itinerary, planning, category, and tag pages generated from local data
+- Weighted client-side search metadata
+- Editorial signal panels on article pages
+- Bilingual RSS, JSON feed, sitemap, and `hreflang`
 
-## Content Model
+## Source Policy
 
-Each article includes a slug, title, summary, category, tags, publication date, reading time, affiliate flag, image metadata, and short editorial sections. The supported category slugs are:
+TABI avoids sources that prohibit AI scraping, automated collection, quotation, republication, or reuse. It also excludes paywalled, private, leaked, scraped, rights-unclear, or ethically risky material.
 
-- `travel-guide`
-- `culture`
-- `food`
-- `things-to-buy`
-- `hidden-gems`
+The source rules live in `content-policy.json` and render to:
+
+- `source-policy.html`
+- `ja/source-policy.html`
+- Article source panels
+
+Volatile details such as hours, prices, closures, and transport rules should be confirmed with official sources before travel.
+
+## Frontend Behavior
+
+`script.js` powers:
+
+- Search modal
+- Weighted local search results
+- Newsletter form validation and status messages
+- English/Japanese UI messages based on the page language
 
 ## Deployment
 
-Netlify publishes the repository root. Generated HTML files should be committed after running the generator.
+Netlify publishes the repository root. The site is fully static, so deployment only needs the generated files committed to the repository.

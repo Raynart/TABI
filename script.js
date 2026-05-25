@@ -6,6 +6,25 @@
   const searchResults = document.querySelector("[data-search-results]");
   const newsletterForms = document.querySelectorAll("[data-newsletter-form]");
   const articles = Array.isArray(window.TABI_ARTICLES) ? window.TABI_ARTICLES : [];
+  const lang = document.documentElement.lang === "ja" ? "ja" : "en";
+  const messages = {
+    en: {
+      noMatches: "No matching guides yet.",
+      fallbackTopic: "TABI",
+      invalidEmail: "Please enter a valid email address.",
+      newsletterThanks: "Thank you. The next TABI letter will find you soon."
+    },
+    ja: {
+      noMatches: "一致するガイドはまだありません。",
+      fallbackTopic: "TABI",
+      invalidEmail: "有効なメールアドレスを入力してください。",
+      newsletterThanks: "ありがとうございます。次のTABIレターをお届けします。"
+    }
+  };
+
+  function t(key) {
+    return messages[lang][key] || messages.en[key] || key;
+  }
 
   function openSearch() {
     if (!searchPanel) return;
@@ -36,7 +55,7 @@
       .slice(0, 8);
 
     if (!matches.length) {
-      searchResults.innerHTML = '<div class="search-result"><span>No matching guides yet.</span></div>';
+      searchResults.innerHTML = '<div class="search-result"><span>' + escapeHtml(t("noMatches")) + '</span></div>';
       return;
     }
 
@@ -47,7 +66,7 @@
         return [
           '<a class="search-result" href="' + article.url + '">',
           "<strong>" + escapeHtml(article.title) + "</strong>",
-          "<span>" + escapeHtml(article.categoryLabel) + " / " + escapeHtml(article.topic || "TABI") + " / " + escapeHtml(tags) + "</span>",
+          "<span>" + escapeHtml(article.categoryLabel) + " / " + escapeHtml(article.topic || t("fallbackTopic")) + " / " + escapeHtml(tags) + "</span>",
           "</a>"
         ].join("");
       })
@@ -74,7 +93,7 @@
       if (fields.summary.includes(token)) score += 4;
       if (fields.title.startsWith(token)) score += 8;
       return total + score;
-    }, Math.round((article.score || 0) / 10));
+    }, 0);
   }
 
   function escapeHtml(value) {
@@ -118,12 +137,19 @@
       const value = input ? input.value.trim() : "";
 
       if (!value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        if (status) status.textContent = "Please enter a valid email address.";
+        if (status) status.textContent = t("invalidEmail");
         return;
       }
 
-      if (status) status.textContent = "Thank you. The next TABI letter will find you soon.";
+      if (status) status.textContent = t("newsletterThanks");
       form.reset();
     });
   });
+
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (initialQuery && searchInput) {
+    openSearch();
+    searchInput.value = initialQuery;
+    renderSearch(initialQuery);
+  }
 })();

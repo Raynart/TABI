@@ -99,6 +99,21 @@ function SiteUrl([string]$Path) {
   return "$($Config.siteUrl.TrimEnd('/'))$Path"
 }
 
+function Get-SiteDescription {
+  if (Is-Japanese) {
+    return "日本の旅、文化、食、知られざる場所、持ち帰る価値のあるものを静かに案内するTABIの日本語版です。"
+  }
+  return $Config.description
+}
+
+function New-LanguageAlternates([string]$Path) {
+  $BasePath = Get-BasePath $Path
+  return @(
+    [pscustomobject]@{ "@type" = "WebPage"; inLanguage = "en"; url = SiteUrl (LocalizePath $BasePath "en") },
+    [pscustomobject]@{ "@type" = "WebPage"; inLanguage = "ja"; url = SiteUrl (LocalizePath $BasePath "ja") }
+  )
+}
+
 function Format-Date([string]$DateValue) {
   $Date = [datetime]::ParseExact($DateValue, "yyyy-MM-dd", $EnglishCulture)
   if (Is-Japanese) {
@@ -997,7 +1012,7 @@ function New-HomePage {
   $BuyCards = foreach ($Article in $Buy) { New-BuyCard $Article }
   $Newsletter = New-Newsletter
   $SiteTitle = if (Is-Japanese) { "$($Config.siteName) - 日本を深く見る" } else { "$($Config.siteName) - $($Config.tagline)" }
-  $SiteDescription = if (Is-Japanese) { "日本の旅、文化、食、知られざる場所、持ち帰る価値のあるものを静かに案内するTABIの日本語版です。" } else { $Config.description }
+  $SiteDescription = Get-SiteDescription
 
   $Main = @"
 <section class="hero">
@@ -1084,9 +1099,16 @@ $Newsletter
     "@context" = "https://schema.org"
     "@type" = "WebSite"
     name = $Config.siteName
+    alternateName = @("TABI Japan", "TABI 日本")
     url = $Config.siteUrl
     description = $SiteDescription
     inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates "/"
+    potentialAction = @{
+      "@type" = "SearchAction"
+      target = "$(SiteUrl (Href "/"))?q={search_term_string}"
+      "query-input" = "required name=search_term_string"
+    }
   } | ConvertTo-Json -Depth 5 -Compress
 
   return New-Layout $SiteTitle $SiteDescription "/" $Main "" $Hero.image $JsonLd
@@ -1182,6 +1204,9 @@ $(New-Newsletter)
     datePublished = $Article.publishedAt
     dateModified = $Article.publishedAt
     inLanguage = $Script:CurrentLang
+    isPartOf = @{ "@type" = "WebSite"; name = $Config.siteName; url = $Config.siteUrl }
+    about = @((Get-CategoryLabel $Article.category), @($Article.tags)) | ForEach-Object { $_ }
+    workTranslation = New-LanguageAlternates (Get-ArticleUrl $Article)
     author = @{ "@type" = "Organization"; name = $Config.siteName }
     publisher = @{ "@type" = "Organization"; name = $Config.siteName }
     mainEntityOfPage = SiteUrl (Get-ArticleUrl $Article)
@@ -1231,6 +1256,8 @@ $(New-Newsletter)
     "@type" = "CollectionPage"
     name = $CategoryLabel
     description = $Description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Get-CategoryUrl $Category.slug)
     url = SiteUrl (Get-CategoryUrl $Category.slug)
   } | ConvertTo-Json -Depth 5 -Compress
   return New-Layout "$CategoryLabel - TABI" $Description (Get-CategoryUrl $Category.slug) $Main $Category.slug "/assets/images/kyoto-shrine-hero.png" $JsonLd
@@ -1265,6 +1292,8 @@ $(New-Newsletter)
     "@type" = "CollectionPage"
     name = $Title
     description = $Description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Get-TagUrl $Tag)
     url = SiteUrl (Get-TagUrl $Tag)
   } | ConvertTo-Json -Depth 5 -Compress
   return New-Layout "$Title - TABI" $Description (Get-TagUrl $Tag) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
@@ -1300,6 +1329,8 @@ $(New-Newsletter)
     "@type" = "CollectionPage"
     name = $TopicDisplay.title
     description = $TopicDisplay.description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Get-TopicUrl $Topic.slug)
     url = SiteUrl (Get-TopicUrl $Topic.slug)
   } | ConvertTo-Json -Depth 5 -Compress
   return New-Layout "$($TopicDisplay.title) - TABI" $TopicDisplay.description (Get-TopicUrl $Topic.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
@@ -1332,6 +1363,8 @@ $(New-Newsletter)
     "@type" = "CollectionPage"
     name = "TABI $PageName"
     description = $Description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates "/areas/index.html"
     url = SiteUrl "/areas/index.html"
   } | ConvertTo-Json -Depth 5 -Compress
   return New-Layout "$PageName - TABI" $Description "/areas/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
@@ -1390,6 +1423,8 @@ $(New-Newsletter)
     "@type" = "CollectionPage"
     name = "$($AreaDisplay.title) Travel Guide"
     description = $AreaDisplay.description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Get-AreaUrl $Area.slug)
     url = SiteUrl (Get-AreaUrl $Area.slug)
   } | ConvertTo-Json -Depth 5 -Compress
   return New-Layout "$($AreaDisplay.title) - TABI" $AreaDisplay.description (Get-AreaUrl $Area.slug) $Main "" $Area.image $JsonLd
@@ -1423,6 +1458,8 @@ $(New-Newsletter)
     "@type" = "CollectionPage"
     name = "Japan $PageName"
     description = $Description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates "/itineraries/index.html"
     url = SiteUrl "/itineraries/index.html"
   } | ConvertTo-Json -Depth 5 -Compress
   return New-Layout "$PageName - TABI" $Description "/itineraries/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
@@ -1485,6 +1522,8 @@ $(New-Newsletter)
     "@type" = "TouristTrip"
     name = $PlanDisplay.title
     description = $PlanDisplay.description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Get-ItineraryUrl $Plan.slug)
     url = SiteUrl (Get-ItineraryUrl $Plan.slug)
   } | ConvertTo-Json -Depth 6 -Compress
   return New-Layout "$($PlanDisplay.title) - TABI" $PlanDisplay.description (Get-ItineraryUrl $Plan.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
@@ -1517,6 +1556,8 @@ $(New-Newsletter)
     "@type" = "CollectionPage"
     name = "TABI $PageName"
     description = $Description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates "/planning/index.html"
     url = SiteUrl "/planning/index.html"
   } | ConvertTo-Json -Depth 5 -Compress
   return New-Layout "$PageName - TABI" $Description "/planning/index.html" $Main "" "/assets/images/japanese-goods.png" $JsonLd
@@ -1565,6 +1606,8 @@ $(New-Newsletter)
     "@type" = "HowTo"
     name = $GuideDisplay.title
     description = $GuideDisplay.description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Get-PlanningUrl $Guide.slug)
     url = SiteUrl (Get-PlanningUrl $Guide.slug)
   } | ConvertTo-Json -Depth 6 -Compress
   return New-Layout "$($GuideDisplay.title) - TABI" $GuideDisplay.description (Get-PlanningUrl $Guide.slug) $Main "" "/assets/images/japanese-goods.png" $JsonLd
@@ -1602,6 +1645,8 @@ $(New-Newsletter)
     "@type" = "DefinedTermSet"
     name = "TABI $PageName"
     description = $Description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates "/glossary.html"
     url = SiteUrl "/glossary.html"
   } | ConvertTo-Json -Depth 6 -Compress
   return New-Layout "$PageName - TABI" $Description "/glossary.html" $Main "" "/assets/images/japanese-goods.png" $JsonLd
@@ -1664,6 +1709,8 @@ $(New-Newsletter)
     "@type" = "WebPage"
     name = $Title
     description = $Desc
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Href "/source-policy.html")
     url = SiteUrl (Href "/source-policy.html")
   } | ConvertTo-Json -Depth 6 -Compress
   return New-Layout "$Title - TABI" $Desc (Href "/source-policy.html") $Main "" "/assets/images/japanese-goods.png" $JsonLd
@@ -1796,17 +1843,23 @@ function New-NotFoundPage {
   $Picks = Select-DiverseArticles $Articles 6 ""
   $PickCards = foreach ($Article in $Picks) { New-CompactArticleCard $Article }
   $TopicCards = foreach ($Topic in $TopicClusters) {
-    '<a class="tag-pill topic-pill" href="{0}">{1}</a>' -f (Get-TopicUrl $Topic.slug), (Html $Topic.title)
+    $TopicDisplay = Get-TopicDisplay $Topic
+    '<a class="tag-pill topic-pill" href="{0}">{1}</a>' -f (Get-TopicUrl $Topic.slug), (Html $TopicDisplay.title)
   }
+  $Title = if (Is-Japanese) { "この道は地図から外れてしまいました。" } else { "This path has wandered off the map." }
+  $Description = if (Is-Japanese) { "テーマ、検索、またはTABIの記事スコアで選ばれたおすすめガイドから戻れます。" } else { "Try a topic path, search TABI, or start with one of the strongest guides selected by the local article score." }
+  $SearchLabel = if (Is-Japanese) { "TABIを検索" } else { "Search TABI" }
+  $PicksLabel = if (Is-Japanese) { "おすすめガイド" } else { "Recommended Guides" }
+  $PageTitle = if (Is-Japanese) { "ページが見つかりません - TABI" } else { "Page Not Found - TABI" }
   $Main = @"
 <section class="page-hero not-found-hero">
   $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = "404"; url = "" }))
   <p class="page-kicker">404</p>
-  <h1 class="page-title">This path has wandered off the map.</h1>
-  <p class="page-desc">Try a topic path, search TABI, or start with one of the strongest guides selected by the local article score.</p>
+  <h1 class="page-title">$(Html $Title)</h1>
+  <p class="page-desc">$(Html $Description)</p>
   <div class="hero-actions light-actions">
     <a class="button" href="$(Href "/")">$(if (Is-Japanese) { "ホームへ戻る" } else { "Back to Home" })</a>
-    <button class="button secondary" type="button" data-search-toggle>Search TABI</button>
+    <button class="button secondary" type="button" data-search-toggle>$(Html $SearchLabel)</button>
   </div>
   <div class="tag-list">
     $($TopicCards -join "`n")
@@ -1815,7 +1868,7 @@ function New-NotFoundPage {
 <section class="next-read" aria-labelledby="not-found-picks">
   <div class="section-label">
     <span class="section-label-jp">&#22320;</span>
-    <h2 class="section-label-en" id="not-found-picks">Recommended Guides</h2>
+    <h2 class="section-label-en" id="not-found-picks">$(Html $PicksLabel)</h2>
     <div class="section-label-line"></div>
   </div>
   <div class="compact-grid">
@@ -1823,7 +1876,17 @@ function New-NotFoundPage {
   </div>
 </section>
 "@
-  return New-Layout "Page Not Found - TABI" "Find your way back into TABI with recommended Japan travel, culture, food, and shopping guides." "/404.html" $Main "" "/assets/images/kyoto-shrine-hero.png" ""
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "WebPage"
+    name = $PageTitle
+    description = $Description
+    inLanguage = $Script:CurrentLang
+    isPartOf = @{ "@type" = "WebSite"; name = $Config.siteName; url = $Config.siteUrl }
+    workTranslation = New-LanguageAlternates "/404.html"
+    url = SiteUrl (Href "/404.html")
+  } | ConvertTo-Json -Depth 6 -Compress
+  return New-Layout $PageTitle $Description "/404.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
 function New-Sitemap {
@@ -1831,28 +1894,36 @@ function New-Sitemap {
   $Urls = @()
   foreach ($Lang in @("en", "ja")) {
     Set-RenderLanguage $Lang
-    $Urls += [pscustomobject]@{ loc = Href "/"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
-    $Urls += foreach ($Category in $Config.categories) { [pscustomobject]@{ loc = Get-CategoryUrl $Category.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
-    $Urls += foreach ($Topic in $TopicClusters) { [pscustomobject]@{ loc = Get-TopicUrl $Topic.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
-    $Urls += [pscustomobject]@{ loc = Href "/areas/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
-    $Urls += foreach ($Area in $AreaClusters) { [pscustomobject]@{ loc = Get-AreaUrl $Area.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
-    $Urls += [pscustomobject]@{ loc = Href "/itineraries/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
-    $Urls += foreach ($Plan in $ItineraryPlans) { [pscustomobject]@{ loc = Get-ItineraryUrl $Plan.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
-    $Urls += [pscustomobject]@{ loc = Href "/planning/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
-    $Urls += foreach ($Guide in $PlanningGuides) { [pscustomobject]@{ loc = Get-PlanningUrl $Guide.slug; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
-    $Urls += [pscustomobject]@{ loc = Href "/glossary.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
-    $Urls += [pscustomobject]@{ loc = Href "/source-policy.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += [pscustomobject]@{ loc = Href "/"; basePath = "/"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += foreach ($Category in $Config.categories) { [pscustomobject]@{ loc = Get-CategoryUrl $Category.slug; basePath = "/categories/$($Category.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += foreach ($Topic in $TopicClusters) { [pscustomobject]@{ loc = Get-TopicUrl $Topic.slug; basePath = "/topics/$($Topic.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += [pscustomobject]@{ loc = Href "/areas/index.html"; basePath = "/areas/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += foreach ($Area in $AreaClusters) { [pscustomobject]@{ loc = Get-AreaUrl $Area.slug; basePath = "/areas/$($Area.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += [pscustomobject]@{ loc = Href "/itineraries/index.html"; basePath = "/itineraries/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += foreach ($Plan in $ItineraryPlans) { [pscustomobject]@{ loc = Get-ItineraryUrl $Plan.slug; basePath = "/itineraries/$($Plan.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += [pscustomobject]@{ loc = Href "/planning/index.html"; basePath = "/planning/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += foreach ($Guide in $PlanningGuides) { [pscustomobject]@{ loc = Get-PlanningUrl $Guide.slug; basePath = "/planning/$($Guide.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += [pscustomobject]@{ loc = Href "/glossary.html"; basePath = "/glossary.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += [pscustomobject]@{ loc = Href "/source-policy.html"; basePath = "/source-policy.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Tags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
-    $Urls += foreach ($Tag in $Tags) { [pscustomobject]@{ loc = Get-TagUrl $Tag; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
-    $Urls += foreach ($Article in $Articles) { [pscustomobject]@{ loc = Get-ArticleUrl $Article; lastmod = $Article.publishedAt } }
+    $Urls += foreach ($Tag in $Tags) { [pscustomobject]@{ loc = Get-TagUrl $Tag; basePath = "/tags/$Tag.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += foreach ($Article in $Articles) { [pscustomobject]@{ loc = Get-ArticleUrl $Article; basePath = "/articles/$($Article.id).html"; lastmod = $Article.publishedAt } }
   }
   Set-RenderLanguage $OriginalLang
   $Items = foreach ($Url in $Urls) {
-    "  <url><loc>$(Html (SiteUrl $Url.loc))</loc><lastmod>$($Url.lastmod)</lastmod></url>"
+    @"
+  <url>
+    <loc>$(Html (SiteUrl $Url.loc))</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="$(Html (SiteUrl (LocalizePath $Url.basePath "en")))" />
+    <xhtml:link rel="alternate" hreflang="ja" href="$(Html (SiteUrl (LocalizePath $Url.basePath "ja")))" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="$(Html (SiteUrl (LocalizePath $Url.basePath "en")))" />
+    <lastmod>$($Url.lastmod)</lastmod>
+  </url>
+"@
   }
   return @"
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 $($Items -join "`n")
 </urlset>
 "@
