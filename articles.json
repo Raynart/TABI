@@ -50,7 +50,27 @@
       "hidden shrines",
       "Kyoto local walk",
       "sacred etiquette"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Build the day around one clear anchor.",
+        "Leave enough space for transit, meals, and recovery.",
+        "Use the route as a way to understand the place, not only cover it."
+      ],
+      "beforeYouGo": [
+        "Confirm current transport, entry, and opening details from official sources.",
+        "Keep the day lighter than it looks on a map.",
+        "Save key addresses and fallback routes offline."
+      ],
+      "avoid": [
+        "Do not stack too many famous stops into one day.",
+        "Avoid last-minute cross-city moves with heavy luggage.",
+        "Do not ignore fatigue, weather, or meal timing."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually works better than squeezing it between major stops."
+    }
   },
   {
     "id": "ten-days-japan-without-tourist-traps",
@@ -102,7 +122,27 @@
       "10 days Japan itinerary",
       "Japan without tourist traps",
       "Tokyo Kyoto Osaka route"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Build the day around one clear anchor.",
+        "Leave enough space for transit, meals, and recovery.",
+        "Use the route as a way to understand the place, not only cover it."
+      ],
+      "beforeYouGo": [
+        "Confirm current transport, entry, and opening details from official sources.",
+        "Keep the day lighter than it looks on a map.",
+        "Save key addresses and fallback routes offline."
+      ],
+      "avoid": [
+        "Do not stack too many famous stops into one day.",
+        "Avoid last-minute cross-city moves with heavy luggage.",
+        "Do not ignore fatigue, weather, or meal timing."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually works better than squeezing it between major stops."
+    }
   },
   {
     "id": "kyoto-ryokan-under-20000-yen",
@@ -146,7 +186,27 @@
       "Kyoto ryokan budget",
       "ryokan under 20000 yen",
       "where to stay Kyoto"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Build the day around one clear anchor.",
+        "Leave enough space for transit, meals, and recovery.",
+        "Use the route as a way to understand the place, not only cover it."
+      ],
+      "beforeYouGo": [
+        "Confirm current transport, entry, and opening details from official sources.",
+        "Keep the day lighter than it looks on a map.",
+        "Save key addresses and fallback routes offline."
+      ],
+      "avoid": [
+        "Do not stack too many famous stops into one day.",
+        "Avoid last-minute cross-city moves with heavy luggage.",
+        "Do not ignore fatigue, weather, or meal timing."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Value comes from conditions, location, and expectations rather than the lowest listing price.",
+      "timeNeeded": "A half day to one full day usually works better than squeezing it between major stops."
+    }
   },
   {
     "id": "osaka-three-day-eating-itinerary",
@@ -198,7 +258,27 @@
       "Osaka food itinerary",
       "3 days Osaka",
       "Osaka street food"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use food as a way to read neighborhoods, not only as a checklist.",
+        "A little ordering confidence changes the whole day.",
+        "The best meals often come from pacing, timing, and context."
+      ],
+      "beforeYouGo": [
+        "Save a few useful food words and allergy notes offline.",
+        "Check whether the place uses ticket machines, counters, or table ordering.",
+        "Keep cash available for smaller shops and older neighborhoods."
+      ],
+      "avoid": [
+        "Do not turn every meal into a queue.",
+        "Avoid ordering everything at once in small counter places.",
+        "Do not assume photos explain ingredients or allergens."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Budget for several smaller meals or stops instead of one oversized splurge.",
+      "timeNeeded": "Plan a half day or evening so meals can shape the walk instead of interrupting it."
+    }
   },
   {
     "id": "perfect-route-up-mount-fuji",
@@ -242,7 +322,27 @@
       "Mount Fuji route",
       "Fuji climb preparation",
       "Yoshida Subashiri Gotemba Fujinomiya"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Build the day around one clear anchor.",
+        "Leave enough space for transit, meals, and recovery.",
+        "Use the route as a way to understand the place, not only cover it."
+      ],
+      "beforeYouGo": [
+        "Confirm current transport, entry, and opening details from official sources.",
+        "Keep the day lighter than it looks on a map.",
+        "Save key addresses and fallback routes offline."
+      ],
+      "avoid": [
+        "Do not stack too many famous stops into one day.",
+        "Avoid last-minute cross-city moves with heavy luggage.",
+        "Do not ignore fatigue, weather, or meal timing."
+      ],
+      "season": "Summer works best with heat, rain, and mountain or festival timing in mind.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually works better than squeezing it between major stops."
+    }
   },
   {
     "id": "yakushima-ancient-forest-few-tourists-find",
@@ -294,7 +394,27 @@
       "Yakushima forest",
       "Yakushima itinerary",
       "slow travel Japan island"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Protect the quiet that makes the place worth visiting.",
+        "Leave room for weather, transit, and ordinary local time.",
+        "Choose one strong experience instead of collecting every stop."
+      ],
+      "beforeYouGo": [
+        "Check official transport and weather before leaving.",
+        "Carry enough cash, water, and flexibility for slower places.",
+        "Avoid sharing fragile locations too precisely when they feel residential or sacred."
+      ],
+      "avoid": [
+        "Do not treat quiet places as secret trophies.",
+        "Avoid tight schedules in places shaped by weather or local transit.",
+        "Do not block paths, homes, or working spaces for photos."
+      ],
+      "season": "Shoulder seasons are often easier, with weather flexibility built in.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "Give the place at least a half day, and longer when weather or ferries are involved."
+    }
   },
   {
     "id": "setouchi-islands-art-sea-slow-travel",
@@ -338,7 +458,27 @@
       "Setouchi islands",
       "Naoshima slow travel",
       "Japan art islands"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Protect the quiet that makes the place worth visiting.",
+        "Leave room for weather, transit, and ordinary local time.",
+        "Choose one strong experience instead of collecting every stop."
+      ],
+      "beforeYouGo": [
+        "Check official transport and weather before leaving.",
+        "Carry enough cash, water, and flexibility for slower places.",
+        "Avoid sharing fragile locations too precisely when they feel residential or sacred."
+      ],
+      "avoid": [
+        "Do not treat quiet places as secret trophies.",
+        "Avoid tight schedules in places shaped by weather or local transit.",
+        "Do not block paths, homes, or working spaces for photos."
+      ],
+      "season": "Shoulder seasons are often easier, with weather flexibility built in.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "Give the place at least a half day, and longer when weather or ferries are involved."
+    }
   },
   {
     "id": "kiso-valley-walk-between-post-towns",
@@ -382,7 +522,27 @@
       "Kiso Valley walk",
       "Nakasendo trail",
       "Magome Tsumago"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Protect the quiet that makes the place worth visiting.",
+        "Leave room for weather, transit, and ordinary local time.",
+        "Choose one strong experience instead of collecting every stop."
+      ],
+      "beforeYouGo": [
+        "Check official transport and weather before leaving.",
+        "Carry enough cash, water, and flexibility for slower places.",
+        "Avoid sharing fragile locations too precisely when they feel residential or sacred."
+      ],
+      "avoid": [
+        "Do not treat quiet places as secret trophies.",
+        "Avoid tight schedules in places shaped by weather or local transit.",
+        "Do not block paths, homes, or working spaces for photos."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "Give the place at least a half day, and longer when weather or ferries are involved."
+    }
   },
   {
     "id": "what-wabi-sabi-really-means",
@@ -426,7 +586,27 @@
       "wabi-sabi meaning",
       "Japanese aesthetics",
       "wabi sabi design"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Treat the idea as lived culture, not a decorative label.",
+        "Slow observation usually teaches more than quick explanation.",
+        "Craft, season, repair, and restraint are recurring clues."
+      ],
+      "beforeYouGo": [
+        "Learn the basic etiquette before entering sacred or craft spaces.",
+        "Avoid relying on a single simplified definition.",
+        "Give yourself time to notice materials, age, repair, and seasonal cues."
+      ],
+      "avoid": [
+        "Do not flatten the culture into a single quote or trend word.",
+        "Avoid touching, filming, or entering where the setting asks for restraint.",
+        "Do not confuse imitation decoration with craft process."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "Allow one slow visit or reading session instead of trying to master the idea quickly."
+    }
   },
   {
     "id": "kintsugi-art-of-repairing-broken-things",
@@ -470,7 +650,27 @@
       "kintsugi meaning",
       "Japanese repair art",
       "kintsugi ceramics"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Treat the idea as lived culture, not a decorative label.",
+        "Slow observation usually teaches more than quick explanation.",
+        "Craft, season, repair, and restraint are recurring clues."
+      ],
+      "beforeYouGo": [
+        "Learn the basic etiquette before entering sacred or craft spaces.",
+        "Avoid relying on a single simplified definition.",
+        "Give yourself time to notice materials, age, repair, and seasonal cues."
+      ],
+      "avoid": [
+        "Do not flatten the culture into a single quote or trend word.",
+        "Avoid touching, filming, or entering where the setting asks for restraint.",
+        "Do not confuse imitation decoration with craft process."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "Allow one slow visit or reading session instead of trying to master the idea quickly."
+    }
   },
   {
     "id": "hanami-where-to-see-cherry-blossoms-like-local",
@@ -514,7 +714,27 @@
       "hanami local",
       "cherry blossoms Japan",
       "where to see sakura"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Treat the idea as lived culture, not a decorative label.",
+        "Slow observation usually teaches more than quick explanation.",
+        "Craft, season, repair, and restraint are recurring clues."
+      ],
+      "beforeYouGo": [
+        "Learn the basic etiquette before entering sacred or craft spaces.",
+        "Avoid relying on a single simplified definition.",
+        "Give yourself time to notice materials, age, repair, and seasonal cues."
+      ],
+      "avoid": [
+        "Do not flatten the culture into a single quote or trend word.",
+        "Avoid touching, filming, or entering where the setting asks for restraint.",
+        "Do not confuse imitation decoration with craft process."
+      ],
+      "season": "Spring is the main draw, but neighborhood timing matters more than peak predictions.",
+      "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
+      "timeNeeded": "Allow one slow visit or reading session instead of trying to master the idea quickly."
+    }
   },
   {
     "id": "how-to-read-japanese-menu-without-speaking-japanese",
@@ -558,7 +778,27 @@
       "Japanese menu",
       "ordering food in Japan",
       "ticket machine restaurant"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use food as a way to read neighborhoods, not only as a checklist.",
+        "A little ordering confidence changes the whole day.",
+        "The best meals often come from pacing, timing, and context."
+      ],
+      "beforeYouGo": [
+        "Save a few useful food words and allergy notes offline.",
+        "Check whether the place uses ticket machines, counters, or table ordering.",
+        "Keep cash available for smaller shops and older neighborhoods."
+      ],
+      "avoid": [
+        "Do not turn every meal into a queue.",
+        "Avoid ordering everything at once in small counter places.",
+        "Do not assume photos explain ingredients or allergens."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Budget for several smaller meals or stops instead of one oversized splurge.",
+      "timeNeeded": "Plan a half day or evening so meals can shape the walk instead of interrupting it."
+    }
   },
   {
     "id": "tokyo-hidden-izakayas-locals-go",
@@ -602,7 +842,27 @@
       "Tokyo izakaya",
       "hidden izakaya Tokyo",
       "local nightlife Japan"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use food as a way to read neighborhoods, not only as a checklist.",
+        "A little ordering confidence changes the whole day.",
+        "The best meals often come from pacing, timing, and context."
+      ],
+      "beforeYouGo": [
+        "Save a few useful food words and allergy notes offline.",
+        "Check whether the place uses ticket machines, counters, or table ordering.",
+        "Keep cash available for smaller shops and older neighborhoods."
+      ],
+      "avoid": [
+        "Do not turn every meal into a queue.",
+        "Avoid ordering everything at once in small counter places.",
+        "Do not assume photos explain ingredients or allergens."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Budget for several smaller meals or stops instead of one oversized splurge.",
+      "timeNeeded": "Plan a half day or evening so meals can shape the walk instead of interrupting it."
+    }
   },
   {
     "id": "japanese-convenience-store-breakfasts-worth-trying",
@@ -646,7 +906,27 @@
       "Japanese convenience store breakfast",
       "konbini food",
       "onigiri breakfast"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use food as a way to read neighborhoods, not only as a checklist.",
+        "A little ordering confidence changes the whole day.",
+        "The best meals often come from pacing, timing, and context."
+      ],
+      "beforeYouGo": [
+        "Save a few useful food words and allergy notes offline.",
+        "Check whether the place uses ticket machines, counters, or table ordering.",
+        "Keep cash available for smaller shops and older neighborhoods."
+      ],
+      "avoid": [
+        "Do not turn every meal into a queue.",
+        "Avoid ordering everything at once in small counter places.",
+        "Do not assume photos explain ingredients or allergens."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Budget for several smaller meals or stops instead of one oversized splurge.",
+      "timeNeeded": "Plan a half day or evening so meals can shape the walk instead of interrupting it."
+    }
   },
   {
     "id": "best-japanese-kitchen-knives-to-bring-home",
@@ -722,7 +1002,27 @@
       "Japanese kitchen knives",
       "santoku gyuto nakiri",
       "Japan knife souvenir"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Start from how you will actually use it after the trip.",
+        "Small, well-chosen purchases usually beat large souvenir hauls.",
+        "Packing rules, care, and storage matter as much as the shop itself."
+      ],
+      "beforeYouGo": [
+        "Check luggage, liquid, blade, or tax-free rules before buying.",
+        "Decide whether the item is for daily use, gifting, or display.",
+        "Ask about care, storage, and whether the shop can pack it safely."
+      ],
+      "avoid": [
+        "Do not buy only because a shelf label says popular.",
+        "Avoid items you cannot legally or safely carry home.",
+        "Do not ignore care instructions if the item is delicate."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
+      "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
+    }
   },
   {
     "id": "buying-matcha-ceremonial-vs-culinary-grade",
@@ -798,7 +1098,27 @@
       "buying matcha Japan",
       "ceremonial matcha",
       "culinary matcha"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Start from how you will actually use it after the trip.",
+        "Small, well-chosen purchases usually beat large souvenir hauls.",
+        "Packing rules, care, and storage matter as much as the shop itself."
+      ],
+      "beforeYouGo": [
+        "Check luggage, liquid, blade, or tax-free rules before buying.",
+        "Decide whether the item is for daily use, gifting, or display.",
+        "Ask about care, storage, and whether the shop can pack it safely."
+      ],
+      "avoid": [
+        "Do not buy only because a shelf label says popular.",
+        "Avoid items you cannot legally or safely carry home.",
+        "Do not ignore care instructions if the item is delicate."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
+      "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
+    }
   },
   {
     "id": "japanese-drugstore-products-worth-every-yen",
@@ -874,7 +1194,27 @@
       "Japanese drugstore products",
       "Japan skincare sunscreen",
       "drugstore shopping Japan"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Start from how you will actually use it after the trip.",
+        "Small, well-chosen purchases usually beat large souvenir hauls.",
+        "Packing rules, care, and storage matter as much as the shop itself."
+      ],
+      "beforeYouGo": [
+        "Check luggage, liquid, blade, or tax-free rules before buying.",
+        "Decide whether the item is for daily use, gifting, or display.",
+        "Ask about care, storage, and whether the shop can pack it safely."
+      ],
+      "avoid": [
+        "Do not buy only because a shelf label says popular.",
+        "Avoid items you cannot legally or safely carry home.",
+        "Do not ignore care instructions if the item is delicate."
+      ],
+      "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
+      "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
+      "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
+    }
   },
   {
     "id": "where-to-buy-authentic-yukata-in-tokyo",
@@ -950,6 +1290,26 @@
       "buy yukata Tokyo",
       "authentic yukata",
       "vintage kimono shop Tokyo"
-    ]
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Start from how you will actually use it after the trip.",
+        "Small, well-chosen purchases usually beat large souvenir hauls.",
+        "Packing rules, care, and storage matter as much as the shop itself."
+      ],
+      "beforeYouGo": [
+        "Check luggage, liquid, blade, or tax-free rules before buying.",
+        "Decide whether the item is for daily use, gifting, or display.",
+        "Ask about care, storage, and whether the shop can pack it safely."
+      ],
+      "avoid": [
+        "Do not buy only because a shelf label says popular.",
+        "Avoid items you cannot legally or safely carry home.",
+        "Do not ignore care instructions if the item is delicate."
+      ],
+      "season": "Summer works best with heat, rain, and mountain or festival timing in mind.",
+      "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
+      "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
+    }
   }
 ]

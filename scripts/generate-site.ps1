@@ -30,6 +30,7 @@ $UiLabels = @{
     homeKicker = "Japan Travel Intelligence"; homeTitle = "Find the Japan worth slowing down for."; homeDescription = "TABI is a bilingual editorial guide to Japanese travel, food, culture, craft, hidden places, and things worth bringing home."; featuredGuide = "Featured Guide"
     readInOtherLanguage = "Read in Japanese"; audience = "Best for"; searchPopular = "Popular searches"; searchLanguage = "Language"; noMatchesHelp = "Try Kyoto, food, itinerary, matcha, ryokan, or quiet travel."
     categoryHub = "Guide hub"; tagHub = "Tag hub"; hubIntro = "Start with the strongest guides, then move by topic, place, or related tags."
+    collections = "Collections"; quickRead = "Quick Read"; keyTakeaways = "3 takeaways"; beforeYouGo = "Before you go"; avoid = "Avoid"; season = "Season"; budget = "Budget"; timeNeeded = "Time needed"
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -48,6 +49,7 @@ $UiLabels = @{
     homeKicker = "日本を深く見る旅ガイド"; homeTitle = "知らなかった日本に、静かに出会う。"; homeDescription = "TABIは、有名な観光地だけでは見えにくい日本の旅、文化、食、工芸、地域の文脈を日英で案内する編集ガイドです。"; featuredGuide = "注目ガイド"
     readInOtherLanguage = "英語で読む"; audience = "向いている人"; searchPopular = "よく探されるテーマ"; searchLanguage = "言語"; noMatchesHelp = "京都、食、旅程、抹茶、旅館、静かな旅などで探してみてください。"
     categoryHub = "カテゴリハブ"; tagHub = "タグハブ"; hubIntro = "まず強いガイドを読み、テーマ、地域、関連タグへ進めるよう整理しています。"
+    collections = "目的別ガイド"; quickRead = "早わかり"; keyTakeaways = "3行まとめ"; beforeYouGo = "読む前に知ること"; avoid = "避けたい失敗"; season = "季節"; budget = "予算"; timeNeeded = "所要時間"
   }
 }
 $CategoryLabelsJa = @{
@@ -63,6 +65,38 @@ $AreaClusters = @($SiteData.areas)
 $ItineraryPlans = @($SiteData.itineraries)
 $PlanningGuides = @($SiteData.planning)
 $GlossaryTerms = @($SiteData.glossary)
+$CollectionDefinitions = @(
+  [pscustomobject]@{
+    slug = "unknown-japan"; tags = @("hidden-gems", "quiet-travel", "slow-travel", "yakushima", "setouchi", "kiso-valley"); categories = @("hidden-gems", "culture")
+    en = [pscustomobject]@{ title = "Unknown Japan"; description = "Quieter places, slower routes, and cultural context for travelers who want Japan beyond the obvious."; kicker = "Editorial Collection" }
+    ja = [pscustomobject]@{ title = "日本人も知らない日本"; description = "有名さではなく、静けさ、地域の文脈、歩いた後に残る感覚から日本を探すためのガイドです。"; kicker = "目的別ガイド" }
+  }
+  [pscustomobject]@{
+    slug = "rainy-day-japan"; tags = @("forest", "craft", "tea", "kintsugi", "wabi-sabi", "konbini", "ryokan"); categories = @("culture", "food", "things-to-buy")
+    en = [pscustomobject]@{ title = "Rainy Day Japan"; description = "Guides that still work when weather changes the plan: craft, food, forests, tea, and slower indoor decisions."; kicker = "Weather-Smart Travel" }
+    ja = [pscustomobject]@{ title = "雨の日の日本旅行"; description = "雨で予定が変わる日にも楽しみやすい、工芸、食、森、茶、宿、買い物のガイドです。"; kicker = "天気に強い旅" }
+  }
+  [pscustomobject]@{
+    slug = "solo-slow-travel"; tags = @("slow-travel", "walking", "quiet-travel", "menus", "konbini", "tokyo", "kyoto"); categories = @("travel-guide", "food", "hidden-gems")
+    en = [pscustomobject]@{ title = "Solo and Slow Travel"; description = "Food confidence, quiet routes, smaller days, and places that suit travelers moving at their own pace."; kicker = "Travel Style" }
+    ja = [pscustomobject]@{ title = "ひとりでゆっくり旅する"; description = "食事、街歩き、静かな場所、予定を詰めすぎない日を、自分の速度で組み立てるためのガイドです。"; kicker = "旅のスタイル" }
+  }
+  [pscustomobject]@{
+    slug = "food-led-japan"; tags = @("food", "local-food", "izakaya", "menus", "konbini", "osaka", "street-food"); categories = @("food", "travel-guide")
+    en = [pscustomobject]@{ title = "Food-Led Japan"; description = "Plan days around counters, markets, convenience-store saves, ordering confidence, and the neighborhoods food reveals."; kicker = "Food Route" }
+    ja = [pscustomobject]@{ title = "食から選ぶ日本"; description = "居酒屋、メニュー、コンビニ朝食、大阪の食べ歩きなど、食を軸に旅を組み立てるガイドです。"; kicker = "食の旅" }
+  }
+  [pscustomobject]@{
+    slug = "bring-home-japan"; tags = @("shopping", "souvenirs", "kitchen-knives", "matcha", "drugstore", "yukata", "skincare"); categories = @("things-to-buy")
+    en = [pscustomobject]@{ title = "Bring-Home Japan"; description = "Useful, packable, culturally grounded things to buy in Japan, with care, luggage, and tax-free context."; kicker = "Shopping Collection" }
+    ja = [pscustomobject]@{ title = "持ち帰りたい日本"; description = "包丁、抹茶、浴衣、ドラッグストア商品など、帰国後も使いやすい買い物を選ぶためのガイドです。"; kicker = "買い物ガイド" }
+  }
+  [pscustomobject]@{
+    slug = "first-trip-with-breathing-room"; tags = @("first-time", "itinerary", "tokyo", "kyoto", "osaka", "travel-tips", "language"); categories = @("travel-guide", "food")
+    en = [pscustomobject]@{ title = "First Trip, With Breathing Room"; description = "A calmer first Japan path through routes, meals, language confidence, and days that do not collapse under logistics."; kicker = "First-Time Japan" }
+    ja = [pscustomobject]@{ title = "余白のある、はじめての日本"; description = "東京、京都、大阪、食事、言葉、移動を、詰め込みすぎず組み立てるための初回向けガイドです。"; kicker = "はじめての日本" }
+  }
+)
 function Html([object]$Value) {
   if ($null -eq $Value) { return "" }
   return [System.Net.WebUtility]::HtmlEncode([string]$Value)
@@ -167,6 +201,11 @@ function Get-ArticleAudience($Article) {
   return "Readers who want more context before planning."
 }
 
+function Get-CollectionDisplay($Collection) {
+  if (Is-Japanese) { return $Collection.ja }
+  return $Collection.en
+}
+
 function New-LanguageAlternates([string]$Path) {
   $BasePath = Get-BasePath $Path
   return @(
@@ -232,6 +271,10 @@ function Get-ItineraryUrl([string]$Slug) {
 
 function Get-PlanningUrl([string]$Slug) {
   return Href "/planning/$Slug.html"
+}
+
+function Get-CollectionUrl([string]$Slug) {
+  return Href "/collections/$Slug.html"
 }
 
 function Get-TopicUrl([string]$Slug) {
@@ -305,6 +348,9 @@ function Copy-ArticleForLanguage($Article, [string]$Lang) {
     if ($Override[0].PSObject.Properties.Name -contains $PropertyName) {
       $Copy[$PropertyName] = $Override[0].$PropertyName
     }
+  }
+  if ($Override[0].PSObject.Properties.Name -contains "tripBrief") {
+    $Copy["tripBrief"] = $Override[0].tripBrief
   }
   return [pscustomobject]$Copy
 }
@@ -536,6 +582,17 @@ function Select-ClusterArticles($Cluster, [int]$Limit) {
     Select-Object -First $Limit)
 }
 
+function Select-CollectionArticles($Collection, [int]$Limit) {
+  return @($Articles |
+    Where-Object {
+      $Article = $_
+      $Tags = Get-ArticleTags $Article
+      (@($Collection.categories) -contains $Article.category) -or (@($Tags | Where-Object { @($Collection.tags) -contains $_ }).Count -gt 0)
+    } |
+    Sort-Object @{ Expression = { Get-ClusterScore $_ $Collection }; Descending = $true }, @{ Expression = { $_.publishedAt }; Descending = $true } |
+    Select-Object -First $Limit)
+}
+
 function Write-Page([string]$RelativePath, [string]$Html) {
   $Target = Join-Path $Root $RelativePath
   $Directory = Split-Path $Target -Parent
@@ -742,6 +799,7 @@ $Main
       <ul class="footer-links">
         <li><a href="$(Href "/")#newsletter">$(Html (T "newsletterLink"))</a></li>
         <li><a href="$(Href "/itineraries/index.html")">$(if (Is-Japanese) { "旅程" } else { "Itineraries" })</a></li>
+        <li><a href="$(Href "/collections/index.html")">$(Html (T "collections"))</a></li>
         <li><a href="$(Href "/planning/index.html")">$(if (Is-Japanese) { "旅の準備" } else { "Planning Tools" })</a></li>
         <li><a href="$(Href "/glossary.html")">$(if (Is-Japanese) { "用語集" } else { "Glossary" })</a></li>
         <li><a href="$(Href "/articles/hidden-shrines-kyoto-locals-keep-secret.html")">$(if (Is-Japanese) { "ここから読む" } else { "Start Here" })</a></li>
@@ -1010,6 +1068,39 @@ function New-ArticleToc($Article) {
 "@
 }
 
+function New-ArticleTripBrief($Article) {
+  if (-not ($Article.PSObject.Properties.Name -contains "tripBrief")) { return "" }
+  $Brief = $Article.tripBrief
+  $Takeaways = foreach ($Item in @($Brief.takeaways)) { "<li>$(Html $Item)</li>" }
+  $Before = foreach ($Item in @($Brief.beforeYouGo)) { "<li>$(Html $Item)</li>" }
+  $Avoid = foreach ($Item in @($Brief.avoid)) { "<li>$(Html $Item)</li>" }
+  return @"
+<section class="trip-brief" aria-labelledby="trip-brief-title">
+  <p class="page-kicker">$(Html (T "quickRead"))</p>
+  <h2 id="trip-brief-title">$(Html (T "keyTakeaways"))</h2>
+  <div class="brief-grid">
+    <div class="brief-card">
+      <span>$(Html (T "keyTakeaways"))</span>
+      <ul>$($Takeaways -join "`n")</ul>
+    </div>
+    <div class="brief-card">
+      <span>$(Html (T "beforeYouGo"))</span>
+      <ul>$($Before -join "`n")</ul>
+    </div>
+    <div class="brief-card">
+      <span>$(Html (T "avoid"))</span>
+      <ul>$($Avoid -join "`n")</ul>
+    </div>
+  </div>
+  <dl class="brief-facts">
+    <div><dt>$(Html (T "season"))</dt><dd>$(Html $Brief.season)</dd></div>
+    <div><dt>$(Html (T "budget"))</dt><dd>$(Html $Brief.budget)</dd></div>
+    <div><dt>$(Html (T "timeNeeded"))</dt><dd>$(Html $Brief.timeNeeded)</dd></div>
+  </dl>
+</section>
+"@
+}
+
 function New-ShoppingGuidePanel($Article) {
   if ($Article.category -ne "things-to-buy") { return "" }
   if (-not ($Article.PSObject.Properties.Name -contains "shoppingGuide")) { return "" }
@@ -1179,17 +1270,17 @@ function New-HomePage {
   $Buy = Select-ScoredArticles @($Sorted | Where-Object { $_.category -eq "things-to-buy" }) 4 "things-to-buy"
   $PlanningCards = if (Is-Japanese) {
     @(
+      New-UtilityCard "目的別" "目的別ガイド" "雨の日、ひとり旅、食の旅、持ち帰りたいものなど、旅の意図から探せます。" "/collections/index.html"
       New-UtilityCard "旅程" "日数から旅を選ぶ" "3日、7日、10日、14日の静的ルートをTABI内の記事グラフから組み立てます。" "/itineraries/index.html"
       New-UtilityCard "地域" "場所から探す" "東京、京都、大阪、屋久島、瀬戸内をタグとカテゴリの適合度から整理します。" "/areas/index.html"
       New-UtilityCard "チェックリスト" "出発前に整える" "お金、移動、通信、荷物、初日のつまずきを減らす実用チェックリストです。" "/planning/japan-travel-checklist.html"
-      New-UtilityCard "用語集" "旅の言葉を知る" "食、宿、買い物、交通に出てくる言葉を短く説明します。" "/glossary.html"
     )
   } else {
     @(
+      New-UtilityCard "Collections" "Browse by Intent" "Rainy days, solo travel, food-led routes, and things worth bringing home." "/collections/index.html"
       New-UtilityCard "Itineraries" "Choose a Trip Length" "Static 3, 7, 10, and 14 day routes assembled from TABI's local article graph." "/itineraries/index.html"
       New-UtilityCard "Areas" "Browse by Place" "Tokyo, Kyoto, Osaka, Yakushima, and Setouchi hubs built from tags and category fit." "/areas/index.html"
       New-UtilityCard "Checklist" "Before You Fly" "A practical pre-trip checklist for money, transit, connectivity, luggage, and first-day friction." "/planning/japan-travel-checklist.html"
-      New-UtilityCard "Glossary" "Decode Japan Travel Terms" "Plain-English explanations for terms that appear across food, stays, shopping, and transport." "/glossary.html"
     )
   }
   $TopicCards = foreach ($Topic in $TopicClusters) {
@@ -1377,6 +1468,7 @@ function New-ArticlePage($Article) {
     New-CompactArticleCard $Item
   }
   $Pathways = New-ArticlePathways $Article
+  $TripBrief = New-ArticleTripBrief $Article
   $Breadcrumbs = New-Breadcrumbs @(
     [pscustomobject]@{ label = "Home"; url = "/" },
     [pscustomobject]@{ label = Get-CategoryLabel $Article.category; url = Get-CategoryUrl $Article.category },
@@ -1401,6 +1493,7 @@ function New-ArticlePage($Article) {
     $(New-ResponsiveImage $Article.image $Article.imageAlt "eager" "(max-width: 900px) 100vw, 1180px" "high")
   </div>
   <div class="article-body">
+$TripBrief
 $($SectionHtml -join "`n")
 $ShoppingGuide
   </div>
@@ -1789,6 +1882,82 @@ $(New-Newsletter)
   return New-Layout "$($PlanDisplay.title) - TABI" $PlanDisplay.description (Get-ItineraryUrl $Plan.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
+function New-CollectionIndexPage {
+  $Cards = foreach ($Collection in $CollectionDefinitions) {
+    $Display = Get-CollectionDisplay $Collection
+    $Count = @(Select-CollectionArticles $Collection 20).Count
+    $CountLabel = if (Is-Japanese) { "$Count 本のガイド" } else { "$Count guides" }
+    New-UtilityCard $Display.kicker $Display.title "$($Display.description) $CountLabel." (Get-CollectionUrl $Collection.slug)
+  }
+  $PageName = T "collections"
+  $Title = if (Is-Japanese) { "目的から日本の旅を探す。" } else { "Browse Japan by intent." }
+  $Description = if (Is-Japanese) { "雨の日、ひとり旅、食の旅、買い物、はじめての日本など、旅の意図からTABI内のガイドを組み替えた編集ハブです。" } else { "Editorial collections that reorganize TABI guides around intent: rainy days, solo travel, food, shopping, first trips, and quieter Japan." }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = $PageName; url = "" }))
+  <p class="page-kicker">$(Html $PageName)</p>
+  <h1 class="page-title">$(Html $Title)</h1>
+  <p class="page-desc">$(Html $Description)</p>
+</section>
+<section class="utility-grid" aria-label="$(Html $PageName)">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "CollectionPage"
+    name = "TABI $PageName"
+    description = $Description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates "/collections/index.html"
+    url = SiteUrl (Href "/collections/index.html")
+  } | ConvertTo-Json -Depth 5 -Compress
+  return New-Layout "$PageName - TABI" $Description "/collections/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
+function New-CollectionPage($Collection) {
+  $Display = Get-CollectionDisplay $Collection
+  $Items = Select-CollectionArticles $Collection 100
+  $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $Featured = @($Items | Select-Object -First 3)
+  $FeaturedCards = foreach ($Article in $Featured) { New-CompactArticleCard $Article }
+  $Algorithm = if (Is-Japanese) { "この目的別ガイドは、タグ、カテゴリ、記事スコア、鮮度、季節性から静的に組み立てています。" } else { "This collection is assembled from tags, categories, article score, freshness, and seasonal fit." }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = (T "collections"); url = "/collections/index.html" }, [pscustomobject]@{ label = $Display.title; url = "" }))
+  <p class="page-kicker">$(Html $Display.kicker)</p>
+  <h1 class="page-title">$(Html $Display.title)</h1>
+  <p class="page-desc">$(Html $Display.description)</p>
+</section>
+<section class="next-read" aria-labelledby="collection-start">
+  <div class="section-label">
+    <span class="section-label-jp">&#36984;</span>
+    <h2 class="section-label-en" id="collection-start">$(if (Is-Japanese) { "まず読む3本" } else { "Start With These" })</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="compact-grid">
+    $($FeaturedCards -join "`n")
+  </div>
+</section>
+$(New-AlgorithmNote $Algorithm)
+<section class="listing-grid" aria-label="$(Html $Display.title) articles">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "CollectionPage"
+    name = $Display.title
+    description = $Display.description
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Get-CollectionUrl $Collection.slug)
+    url = SiteUrl (Get-CollectionUrl $Collection.slug)
+  } | ConvertTo-Json -Depth 5 -Compress
+  return New-Layout "$($Display.title) - TABI" $Display.description (Get-CollectionUrl $Collection.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
 function New-PlanningIndexPage {
   $Cards = foreach ($Guide in $PlanningGuides) {
     $GuideDisplay = Get-PlanningDisplay $Guide
@@ -2161,6 +2330,8 @@ function New-Sitemap {
     $Urls += foreach ($Area in $AreaClusters) { [pscustomobject]@{ loc = Get-AreaUrl $Area.slug; basePath = "/areas/$($Area.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
     $Urls += [pscustomobject]@{ loc = Href "/itineraries/index.html"; basePath = "/itineraries/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Urls += foreach ($Plan in $ItineraryPlans) { [pscustomobject]@{ loc = Get-ItineraryUrl $Plan.slug; basePath = "/itineraries/$($Plan.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += [pscustomobject]@{ loc = Href "/collections/index.html"; basePath = "/collections/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += foreach ($Collection in $CollectionDefinitions) { [pscustomobject]@{ loc = Get-CollectionUrl $Collection.slug; basePath = "/collections/$($Collection.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
     $Urls += [pscustomobject]@{ loc = Href "/planning/index.html"; basePath = "/planning/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Urls += foreach ($Guide in $PlanningGuides) { [pscustomobject]@{ loc = Get-PlanningUrl $Guide.slug; basePath = "/planning/$($Guide.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
     $Urls += [pscustomobject]@{ loc = Href "/glossary.html"; basePath = "/glossary.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
@@ -2213,6 +2384,10 @@ function Write-LanguagePages([string]$Lang) {
   Write-Page (Get-OutputPath "itineraries/index.html") (New-ItineraryHubPage)
   foreach ($Plan in $ItineraryPlans) {
     Write-Page (Get-OutputPath "itineraries/$($Plan.slug).html") (New-ItineraryPage $Plan)
+  }
+  Write-Page (Get-OutputPath "collections/index.html") (New-CollectionIndexPage)
+  foreach ($Collection in $CollectionDefinitions) {
+    Write-Page (Get-OutputPath "collections/$($Collection.slug).html") (New-CollectionPage $Collection)
   }
   Write-Page (Get-OutputPath "planning/index.html") (New-PlanningIndexPage)
   foreach ($Guide in $PlanningGuides) {

@@ -876,6 +876,7 @@ input {
 .utility-card,
 .detail-card,
 .route-step,
+.brief-card,
 .glossary-card {
   display: flex;
   flex-direction: column;
@@ -887,6 +888,7 @@ input {
 .utility-card span,
 .detail-card span,
 .route-step span,
+.brief-card span,
 .glossary-card span {
   color: var(--accent);
   font-size: 0.72rem;
@@ -910,6 +912,65 @@ input {
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.trip-brief {
+  margin: 0 0 34px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.trip-brief h2 {
+  margin: 8px 0 18px;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+}
+
+.brief-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.brief-card {
+  min-height: 210px;
+  border-top-color: var(--accent);
+}
+
+.brief-card ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+}
+
+.brief-card li + li {
+  margin-top: 8px;
+}
+
+.brief-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 16px 0 0;
+  background: var(--border);
+}
+
+.brief-facts div {
+  background: var(--paper);
+  padding: 16px;
+}
+
+.brief-facts dt {
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.brief-facts dd {
+  margin: 0;
+  color: var(--ink-soft);
 }
 
 .split-feature,
@@ -1625,6 +1686,8 @@ input {
 
   .utility-grid,
   .route-grid,
+  .brief-grid,
+  .brief-facts,
   .glossary-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1734,6 +1797,8 @@ input {
   .topic-grid,
   .utility-grid,
   .route-grid,
+  .brief-grid,
+  .brief-facts,
   .glossary-grid,
   .compact-grid,
   .algorithm-note {
@@ -1769,6 +1834,7 @@ input {
   .article-layout,
   .split-feature,
   .route-panel,
+  .trip-brief,
   .guide-body,
   .glossary-grid,
   .feedback-block {
