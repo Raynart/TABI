@@ -82,12 +82,22 @@ for (const file of htmlFiles) {
     }
   }
 
+  const jsonLdNodes = [];
   for (const match of text.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try {
-      JSON.parse(match[1]);
+      const parsed = JSON.parse(match[1]);
+      if (Array.isArray(parsed["@graph"])) jsonLdNodes.push(...parsed["@graph"]);
+      else jsonLdNodes.push(parsed);
     } catch (error) {
       errors.push(`${relative}: invalid JSON-LD ${error.message}`);
     }
+  }
+  const jsonLdTypes = new Set(jsonLdNodes.flatMap((node) => Array.isArray(node["@type"]) ? node["@type"] : [node["@type"]]).filter(Boolean));
+  for (const type of ["Organization", "WebSite", "WebPage"]) {
+    if (!jsonLdTypes.has(type)) errors.push(`${relative}: missing JSON-LD ${type}`);
+  }
+  if (text.includes('class="listing-grid"') && !jsonLdTypes.has("ItemList")) {
+    errors.push(`${relative}: listing page missing JSON-LD ItemList`);
   }
 }
 

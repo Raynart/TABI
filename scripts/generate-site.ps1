@@ -679,6 +679,8 @@ function New-Head([string]$Title, [string]$Description, [string]$Path, [string]$
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$(Html $Title)</title>
   <meta name="description" content="$(Html $Description)">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="$(Html $Canonical)">
   <link rel="alternate" hreflang="en" href="$(Html (SiteUrl $EnglishPath))">
   <link rel="alternate" hreflang="ja" href="$(Html (SiteUrl $JapanesePath))">
@@ -691,6 +693,7 @@ function New-Head([string]$Title, [string]$Description, [string]$Path, [string]$
   <meta property="og:description" content="$(Html $Description)">
   <meta property="og:url" content="$(Html $Canonical)">
   <meta property="og:image" content="$(Html $ImageUrl)">
+  <meta property="og:image:alt" content="$(Html $Title)">
   <meta name="theme-color" content="#111111">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="$(Html $Title)">
@@ -742,6 +745,133 @@ function New-MobileNav([string]$CurrentCategory) {
 "@
 }
 
+function Get-JsonLdTypes($Node) {
+  $TypeProperty = $Node.PSObject.Properties["@type"]
+  if ($null -eq $TypeProperty) { return @() }
+  return @($TypeProperty.Value)
+}
+
+function Test-JsonLdHasType([object[]]$Nodes, [string]$TypeName) {
+  foreach ($Node in $Nodes) {
+    if ((Get-JsonLdTypes $Node) -contains $TypeName) { return $true }
+  }
+  return $false
+}
+
+function New-OrganizationJsonLd {
+  return [ordered]@{
+    "@type" = "Organization"
+    "@id" = "$(SiteUrl "/")#organization"
+    name = $Config.siteName
+    url = $Config.siteUrl
+    logo = SiteUrl "/assets/images/kyoto-shrine-hero.png"
+    contactPoint = @{
+      "@type" = "ContactPoint"
+      email = $Config.contactEmail
+      contactType = "editorial"
+      availableLanguage = @("English", "Japanese")
+    }
+  }
+}
+
+function New-WebSiteJsonLd {
+  return [ordered]@{
+    "@type" = "WebSite"
+    "@id" = "$(SiteUrl "/")#website"
+    name = $Config.siteName
+    alternateName = @("TABI Japan", "TABI 日本")
+    url = $Config.siteUrl
+    description = Get-SiteDescription
+    inLanguage = $Script:CurrentLang
+    publisher = @{ "@id" = "$(SiteUrl "/")#organization" }
+    potentialAction = @{
+      "@type" = "SearchAction"
+      target = "$(SiteUrl (Href "/"))?q={search_term_string}"
+      "query-input" = "required name=search_term_string"
+    }
+  }
+}
+
+function New-WebPageJsonLd([string]$Title, [string]$Description, [string]$Path, [string]$Image) {
+  $ImageUrl = if ([string]::IsNullOrWhiteSpace($Image)) { SiteUrl "/assets/images/kyoto-shrine-hero.png" } else { SiteUrl $Image }
+  return [ordered]@{
+    "@type" = "WebPage"
+    "@id" = "$(SiteUrl $Path)#webpage"
+    url = SiteUrl $Path
+    name = $Title
+    description = $Description
+    inLanguage = $Script:CurrentLang
+    isPartOf = @{ "@id" = "$(SiteUrl "/")#website" }
+    publisher = @{ "@id" = "$(SiteUrl "/")#organization" }
+    primaryImageOfPage = @{
+      "@type" = "ImageObject"
+      url = $ImageUrl
+    }
+    workTranslation = New-LanguageAlternates $Path
+  }
+}
+
+function New-ItemListJsonLd([object[]]$Items, [string]$Name) {
+  $Elements = for ($i = 0; $i -lt $Items.Count; $i++) {
+    $Item = $Items[$i]
+    $ItemName = if ($Item.PSObject.Properties.Name -contains "title") { $Item.title } elseif ($Item.PSObject.Properties.Name -contains "name") { $Item.name } else { "Item $($i + 1)" }
+    $ItemUrl = if ($Item.PSObject.Properties.Name -contains "url") { $Item.url } else { Get-ArticleUrl $Item }
+    [ordered]@{
+      "@type" = "ListItem"
+      position = $i + 1
+      name = $ItemName
+      url = SiteUrl $ItemUrl
+    }
+  }
+  return [ordered]@{
+    "@type" = "ItemList"
+    name = $Name
+    numberOfItems = $Items.Count
+    itemListElement = @($Elements)
+  }
+}
+
+function New-StructuredDataJson([string]$Title, [string]$Description, [string]$Path, [string]$Image, [string]$JsonLd) {
+  $Nodes = @()
+  if (-not [string]::IsNullOrWhiteSpace($JsonLd)) {
+    $Parsed = $JsonLd | ConvertFrom-Json
+    $GraphProperty = $Parsed.PSObject.Properties["@graph"]
+    if ($null -ne $GraphProperty) {
+      $Nodes += @($GraphProperty.Value)
+    } else {
+      $Nodes += $Parsed
+    }
+  }
+  if (-not (Test-JsonLdHasType $Nodes "Organization")) { $Nodes = @((New-OrganizationJsonLd)) + $Nodes }
+  if (-not (Test-JsonLdHasType $Nodes "WebSite")) { $Nodes = @((New-WebSiteJsonLd)) + $Nodes }
+  if (-not (Test-JsonLdHasType $Nodes "WebPage")) { $Nodes = @((New-WebPageJsonLd $Title $Description $Path $Image)) + $Nodes }
+  return ([ordered]@{
+    "@context" = "https://schema.org"
+    "@graph" = @($Nodes)
+  } | ConvertTo-Json -Depth 20 -Compress)
+}
+
+function New-CollectionStructuredData([string]$TypeName, [string]$Name, [string]$Description, [string]$Url, [object[]]$Items) {
+  $CollectionNode = [ordered]@{
+    "@type" = $TypeName
+    name = $Name
+    description = $Description
+    inLanguage = $Script:CurrentLang
+    isPartOf = @{ "@id" = "$(SiteUrl "/")#website" }
+    publisher = @{ "@id" = "$(SiteUrl "/")#organization" }
+    workTranslation = New-LanguageAlternates $Url
+    url = SiteUrl $Url
+  }
+  $Graph = @($CollectionNode)
+  if ($Items.Count -gt 0) {
+    $Graph += New-ItemListJsonLd $Items $Name
+  }
+  return ([ordered]@{
+    "@context" = "https://schema.org"
+    "@graph" = $Graph
+  } | ConvertTo-Json -Depth 12 -Compress)
+}
+
 function New-Layout([string]$Title, [string]$Description, [string]$Path, [string]$Main, [string]$CurrentCategory, [string]$Image, [string]$JsonLd) {
   $Head = New-Head $Title $Description $Path $Image
   $Nav = New-Nav $CurrentCategory
@@ -756,10 +886,8 @@ function New-Layout([string]$Title, [string]$Description, [string]$Path, [string
   $SearchJson = New-SearchJson
   $FirstTimeTopic = Get-TopicDisplay ($TopicClusters | Where-Object { $_.slug -eq "first-time-japan" } | Select-Object -First 1)
   $SlowTravelTopic = Get-TopicDisplay ($TopicClusters | Where-Object { $_.slug -eq "slow-travel" } | Select-Object -First 1)
-  $StructuredData = ""
-  if (-not [string]::IsNullOrWhiteSpace($JsonLd)) {
-    $StructuredData = "<script type=""application/ld+json"">$JsonLd</script>"
-  }
+  $StructuredJson = New-StructuredDataJson $Title $Description $Path $Image $JsonLd
+  $StructuredData = "<script type=""application/ld+json"">$StructuredJson</script>"
   return @"
 <!DOCTYPE html>
 <html lang="$Script:CurrentLang">
@@ -1460,21 +1588,9 @@ $LocalDiscoverySection
 $Newsletter
 "@
 
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "WebSite"
-    name = $Config.siteName
-    alternateName = @("TABI Japan", "TABI 日本")
-    url = $Config.siteUrl
-    description = $SiteDescription
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates "/"
-    potentialAction = @{
-      "@type" = "SearchAction"
-      target = "$(SiteUrl (Href "/"))?q={search_term_string}"
-      "query-input" = "required name=search_term_string"
-    }
-  } | ConvertTo-Json -Depth 5 -Compress
+  $HomeWebSiteJsonLd = New-WebSiteJsonLd
+  $HomeWebSiteJsonLd["workTranslation"] = New-LanguageAlternates "/"
+  $JsonLd = $HomeWebSiteJsonLd | ConvertTo-Json -Depth 7 -Compress
 
   return New-Layout $SiteTitle $SiteDescription "/" $Main "" $Hero.image $JsonLd
 }
@@ -1573,21 +1689,27 @@ $(New-Newsletter)
 "@
 
   $ImageUrl = SiteUrl $Article.image
+  $ArticleSourceMeta = Get-ArticleSourceMeta $Article
   $ArticleJsonLd = @{
     "@type" = "Article"
+    "@id" = "$(SiteUrl (Get-ArticleUrl $Article))#article"
     headline = $Article.title
     description = $SeoDescription
-    keywords = @($Article.tags) + $(if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() })
+    alternativeHeadline = Get-ArticleAudience $Article
+    articleSection = Get-CategoryLabel $Article.category
+    keywords = @($Article.tags | ForEach-Object { Get-TagLabel $_ }) + $(if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() })
     image = $ImageUrl
+    thumbnailUrl = $ImageUrl
     datePublished = $Article.publishedAt
-    dateModified = $Article.publishedAt
+    dateModified = $ArticleSourceMeta.lastChecked
     inLanguage = $Script:CurrentLang
-    isPartOf = @{ "@type" = "WebSite"; name = $Config.siteName; url = $Config.siteUrl }
-    about = @((Get-CategoryLabel $Article.category), @($Article.tags)) | ForEach-Object { $_ }
+    isPartOf = @{ "@id" = "$(SiteUrl "/")#website" }
+    about = @((Get-CategoryLabel $Article.category), @($Article.tags | ForEach-Object { Get-TagLabel $_ })) | ForEach-Object { $_ }
     workTranslation = New-LanguageAlternates (Get-ArticleUrl $Article)
-    author = @{ "@type" = "Organization"; name = $Config.siteName }
-    publisher = @{ "@type" = "Organization"; name = $Config.siteName }
+    author = @{ "@id" = "$(SiteUrl "/")#organization" }
+    publisher = @{ "@id" = "$(SiteUrl "/")#organization" }
     mainEntityOfPage = SiteUrl (Get-ArticleUrl $Article)
+    timeRequired = "PT$($Article.readingTime)M"
   }
   $BreadcrumbJsonLd = @{
     "@type" = "BreadcrumbList"
@@ -1631,15 +1753,7 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = $CategoryLabel
-    description = $Description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates (Get-CategoryUrl $Category.slug)
-    url = SiteUrl (Get-CategoryUrl $Category.slug)
-  } | ConvertTo-Json -Depth 5 -Compress
+  $JsonLd = New-CollectionStructuredData "CollectionPage" $CategoryLabel $Description (Get-CategoryUrl $Category.slug) $Items
   return New-Layout "$CategoryLabel - TABI" $Description (Get-CategoryUrl $Category.slug) $Main $Category.slug "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -1683,15 +1797,7 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = $Title
-    description = $Description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates (Get-TagUrl $Tag)
-    url = SiteUrl (Get-TagUrl $Tag)
-  } | ConvertTo-Json -Depth 5 -Compress
+  $JsonLd = New-CollectionStructuredData "CollectionPage" $Title $Description (Get-TagUrl $Tag) $Items
   return New-Layout "$Title - TABI" $Description (Get-TagUrl $Tag) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -1720,15 +1826,7 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = $TopicDisplay.title
-    description = $TopicDisplay.description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates (Get-TopicUrl $Topic.slug)
-    url = SiteUrl (Get-TopicUrl $Topic.slug)
-  } | ConvertTo-Json -Depth 5 -Compress
+  $JsonLd = New-CollectionStructuredData "CollectionPage" $TopicDisplay.title $TopicDisplay.description (Get-TopicUrl $Topic.slug) $Items
   return New-Layout "$($TopicDisplay.title) - TABI" $TopicDisplay.description (Get-TopicUrl $Topic.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -1754,15 +1852,11 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = "TABI $PageName"
-    description = $Description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates "/areas/index.html"
-    url = SiteUrl "/areas/index.html"
-  } | ConvertTo-Json -Depth 5 -Compress
+  $ListItems = @($AreaClusters | ForEach-Object {
+    $AreaDisplay = Get-AreaDisplay $_
+    [pscustomobject]@{ title = $AreaDisplay.title; url = Get-AreaUrl $_.slug }
+  })
+  $JsonLd = New-CollectionStructuredData "CollectionPage" "TABI $PageName" $Description "/areas/index.html" $ListItems
   return New-Layout "$PageName - TABI" $Description "/areas/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -1814,15 +1908,7 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = "$($AreaDisplay.title) Travel Guide"
-    description = $AreaDisplay.description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates (Get-AreaUrl $Area.slug)
-    url = SiteUrl (Get-AreaUrl $Area.slug)
-  } | ConvertTo-Json -Depth 5 -Compress
+  $JsonLd = New-CollectionStructuredData "CollectionPage" "$($AreaDisplay.title) Travel Guide" $AreaDisplay.description (Get-AreaUrl $Area.slug) $Items
   return New-Layout "$($AreaDisplay.title) - TABI" $AreaDisplay.description (Get-AreaUrl $Area.slug) $Main "" $Area.image $JsonLd
 }
 
@@ -1849,15 +1935,11 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = "Japan $PageName"
-    description = $Description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates "/itineraries/index.html"
-    url = SiteUrl "/itineraries/index.html"
-  } | ConvertTo-Json -Depth 5 -Compress
+  $ListItems = @($ItineraryPlans | ForEach-Object {
+    $PlanDisplay = Get-ItineraryDisplay $_
+    [pscustomobject]@{ title = $PlanDisplay.title; url = Get-ItineraryUrl $_.slug }
+  })
+  $JsonLd = New-CollectionStructuredData "CollectionPage" "Japan $PageName" $Description "/itineraries/index.html" $ListItems
   return New-Layout "$PageName - TABI" $Description "/itineraries/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -1913,15 +1995,21 @@ function New-ItineraryPage($Plan) {
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
+  $TripNode = [ordered]@{
     "@type" = "TouristTrip"
     name = $PlanDisplay.title
     description = $PlanDisplay.description
     inLanguage = $Script:CurrentLang
+    isPartOf = @{ "@id" = "$(SiteUrl "/")#website" }
+    provider = @{ "@id" = "$(SiteUrl "/")#organization" }
     workTranslation = New-LanguageAlternates (Get-ItineraryUrl $Plan.slug)
     url = SiteUrl (Get-ItineraryUrl $Plan.slug)
-  } | ConvertTo-Json -Depth 6 -Compress
+    itinerary = @($PlanDisplay.steps | ForEach-Object { @{ "@type" = "ListItem"; name = $_.title; description = $_.body } })
+  }
+  $JsonLd = ([ordered]@{
+    "@context" = "https://schema.org"
+    "@graph" = @($TripNode, (New-ItemListJsonLd $Items $SupportingHeading))
+  } | ConvertTo-Json -Depth 12 -Compress)
   return New-Layout "$($PlanDisplay.title) - TABI" $PlanDisplay.description (Get-ItineraryUrl $Plan.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -1947,15 +2035,11 @@ function New-CollectionIndexPage {
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = "TABI $PageName"
-    description = $Description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates "/collections/index.html"
-    url = SiteUrl (Href "/collections/index.html")
-  } | ConvertTo-Json -Depth 5 -Compress
+  $ListItems = @($CollectionDefinitions | ForEach-Object {
+    $Display = Get-CollectionDisplay $_
+    [pscustomobject]@{ title = $Display.title; url = Get-CollectionUrl $_.slug }
+  })
+  $JsonLd = New-CollectionStructuredData "CollectionPage" "TABI $PageName" $Description (Href "/collections/index.html") $ListItems
   return New-Layout "$PageName - TABI" $Description "/collections/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -1989,15 +2073,7 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = $Display.title
-    description = $Display.description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates (Get-CollectionUrl $Collection.slug)
-    url = SiteUrl (Get-CollectionUrl $Collection.slug)
-  } | ConvertTo-Json -Depth 5 -Compress
+  $JsonLd = New-CollectionStructuredData "CollectionPage" $Display.title $Display.description (Get-CollectionUrl $Collection.slug) $Items
   return New-Layout "$($Display.title) - TABI" $Display.description (Get-CollectionUrl $Collection.slug) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
@@ -2023,15 +2099,15 @@ function New-PlanningIndexPage {
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = @{
-    "@context" = "https://schema.org"
-    "@type" = "CollectionPage"
-    name = "TABI $PageName"
-    description = $Description
-    inLanguage = $Script:CurrentLang
-    workTranslation = New-LanguageAlternates "/planning/index.html"
-    url = SiteUrl "/planning/index.html"
-  } | ConvertTo-Json -Depth 5 -Compress
+  $ListItems = @($PlanningGuides | ForEach-Object {
+    $GuideDisplay = Get-PlanningDisplay $_
+    [pscustomobject]@{ title = $GuideDisplay.title; url = Get-PlanningUrl $_.slug }
+  })
+  $GlossaryTitle = if (Is-Japanese) { "日本旅行の用語" } else { "Japan Travel Terms" }
+  $ItineraryTitle = if (Is-Japanese) { "日数別ルート" } else { "Trip Length Routes" }
+  $ListItems += [pscustomobject]@{ title = $GlossaryTitle; url = Href "/glossary.html" }
+  $ListItems += [pscustomobject]@{ title = $ItineraryTitle; url = Href "/itineraries/index.html" }
+  $JsonLd = New-CollectionStructuredData "CollectionPage" "TABI $PageName" $Description "/planning/index.html" $ListItems
   return New-Layout "$PageName - TABI" $Description "/planning/index.html" $Main "" "/assets/images/japanese-goods.png" $JsonLd
 }
 
