@@ -31,6 +31,7 @@ $UiLabels = @{
     readInOtherLanguage = "Read in Japanese"; audience = "Best for"; searchPopular = "Popular searches"; searchLanguage = "Language"; noMatchesHelp = "Try Kyoto, food, itinerary, matcha, ryokan, or quiet travel."
     categoryHub = "Guide hub"; tagHub = "Tag hub"; hubIntro = "Start with the strongest guides, then move by topic, place, or related tags."
     collections = "Collections"; quickRead = "Quick Read"; keyTakeaways = "3 takeaways"; beforeYouGo = "Before you go"; avoid = "Avoid"; season = "Season"; budget = "Budget"; timeNeeded = "Time needed"
+    currentLanguage = "Current language"; alsoAvailable = "Also available"; languageNote = "This page has a Japanese edition with localized editorial wording."; languageSwitchAria = "Choose site language"; breadcrumbAria = "Breadcrumb"; english = "English"; japanese = "Japanese"
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -50,14 +51,18 @@ $UiLabels = @{
     readInOtherLanguage = "英語で読む"; audience = "向いている人"; searchPopular = "よく探されるテーマ"; searchLanguage = "言語"; noMatchesHelp = "京都、食、旅程、抹茶、旅館、静かな旅などで探してみてください。"
     categoryHub = "カテゴリハブ"; tagHub = "タグハブ"; hubIntro = "まず強いガイドを読み、テーマ、地域、関連タグへ進めるよう整理しています。"
     collections = "目的別ガイド"; quickRead = "早わかり"; keyTakeaways = "3行まとめ"; beforeYouGo = "読む前に知ること"; avoid = "避けたい失敗"; season = "季節"; budget = "予算"; timeNeeded = "所要時間"
+    currentLanguage = "現在の言語"; alsoAvailable = "対応版"; languageNote = "このページは英語でも読めます。英語版では訪日旅行者向けの文脈に合わせています。"; languageSwitchAria = "サイト言語を選ぶ"; breadcrumbAria = "パンくずリスト"; english = "English"; japanese = "日本語"
   }
 }
 $CategoryLabelsJa = @{
   "travel-guide" = "旅行ガイド"
   "culture" = "文化と伝統"
   "food" = "食"
-  "things-to-buy" = "買うべきもの"
+  "things-to-buy" = "買い物"
   "hidden-gems" = "知られざる場所"
+}
+$TagLabelsEn = @{
+  "aesthetics" = "Aesthetics"; "art" = "Art"; "breakfast" = "Breakfast"; "budget" = "Budget"; "ceramics" = "Ceramics"; "cherry-blossoms" = "Cherry Blossoms"; "craft" = "Craft"; "design" = "Design"; "drugstore" = "Drugstore"; "fashion" = "Fashion"; "first-time" = "First-Time Japan"; "food" = "Food"; "forest" = "Forest"; "hanami" = "Hanami"; "heritage" = "Heritage"; "hiking" = "Hiking"; "islands" = "Islands"; "itinerary" = "Itinerary"; "izakaya" = "Izakaya"; "kintsugi" = "Kintsugi"; "kiso-valley" = "Kiso Valley"; "kitchen-knives" = "Kitchen Knives"; "konbini" = "Konbini"; "kyoto" = "Kyoto"; "language" = "Language"; "local-customs" = "Local Customs"; "local-food" = "Local Food"; "matcha" = "Matcha"; "menus" = "Menus"; "mount-fuji" = "Mount Fuji"; "nakasendo" = "Nakasendo"; "nightlife" = "Nightlife"; "osaka" = "Osaka"; "philosophy" = "Philosophy"; "planning" = "Planning"; "quiet-travel" = "Quiet Travel"; "ryokan" = "Ryokan"; "setouchi" = "Setouchi"; "shopping" = "Shopping"; "shrines" = "Shrines"; "skincare" = "Skincare"; "slow-travel" = "Slow Travel"; "souvenirs" = "Souvenirs"; "spring" = "Spring"; "street-food" = "Street Food"; "summer" = "Summer"; "tea" = "Tea"; "tokyo" = "Tokyo"; "travel-tips" = "Travel Tips"; "wabi-sabi" = "Wabi-Sabi"; "walking" = "Walking"; "where-to-stay" = "Where to Stay"; "yakushima" = "Yakushima"; "yukata" = "Yukata"
 }
 $SiteData = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "site-data.json") | ConvertFrom-Json
 $TopicClusters = @($SiteData.topics)
@@ -245,8 +250,25 @@ function Get-TagLabel([string]$Tag) {
       $Label = $Tags.Value.PSObject.Properties[$Tag]
       if ($null -ne $Label) { return $Label.Value }
     }
+  } else {
+    if ($TagLabelsEn.ContainsKey($Tag)) { return $TagLabelsEn[$Tag] }
   }
   return $Tag
+}
+
+function Get-LanguageDisplayName([string]$Lang) {
+  if ($Lang -eq "ja") { return T "japanese" }
+  return T "english"
+}
+
+function Get-LanguageNativeName([string]$Lang) {
+  if ($Lang -eq "ja") { return "日本語" }
+  return "English"
+}
+
+function Get-OtherLanguageCode {
+  if (Is-Japanese) { return "en" }
+  return "ja"
 }
 
 function Get-ArticleUrl($Article) {
@@ -624,6 +646,8 @@ function New-SearchJson {
       tagLabels = @($Article.tags | ForEach-Object { Get-TagLabel $_ })
       aliases = if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() }
       audience = Get-ArticleAudience $Article
+      language = $Script:CurrentLang
+      languageLabel = Get-LanguageDisplayName $Script:CurrentLang
       url = Get-ArticleUrl $Article
       score = Get-ArticleScore $Article ""
       qualityScore = Get-QualityScore $Article
@@ -728,7 +752,7 @@ function New-Layout([string]$Title, [string]$Description, [string]$Path, [string
   $LangBase = Get-BasePath $Path
   $EnglishHref = LocalizePath $LangBase "en"
   $JapaneseHref = LocalizePath $LangBase "ja"
-  $CurrentLangLabel = if (Is-Japanese) { "日本語" } else { "English" }
+  $LanguageNotice = New-LanguageNotice $Path
   $SearchJson = New-SearchJson
   $FirstTimeTopic = Get-TopicDisplay ($TopicClusters | Where-Object { $_.slug -eq "first-time-japan" } | Select-Object -First 1)
   $SlowTravelTopic = Get-TopicDisplay ($TopicClusters | Where-Object { $_.slug -eq "slow-travel" } | Select-Object -First 1)
@@ -753,9 +777,9 @@ $Head
       <span class="logo-jp">&#26053; - $(Html (Get-LogoSubtitle))</span>
     </a>
     <div class="header-actions">
-      <nav class="language-switch" aria-label="$(Html (T "language"))">
-        <a href="$EnglishHref"$(if (-not (Is-Japanese)) { ' aria-current="true"' } else { '' })>EN</a>
-        <a href="$JapaneseHref"$(if (Is-Japanese) { ' aria-current="true"' } else { '' })>JP</a>
+      <nav class="language-switch" aria-label="$(Html (T "languageSwitchAria"))">
+        <a href="$EnglishHref" lang="en" hreflang="en"$(if (-not (Is-Japanese)) { ' aria-current="true"' } else { '' })><span>EN</span><small>English</small></a>
+        <a href="$JapaneseHref" lang="ja" hreflang="ja"$(if (Is-Japanese) { ' aria-current="true"' } else { '' })><span>JP</span><small>日本語</small></a>
       </nav>
       <button class="header-search" type="button" aria-label="$(Html (T "search"))" title="$(Html (T "search"))" aria-expanded="false" aria-controls="site-search-panel" data-search-toggle>&#8981;</button>
       <a class="header-cta" href="$NewsletterHref">$(Html (T "newsletter"))</a>
@@ -764,6 +788,7 @@ $Head
 </header>
 $Ticker
 $MobileNav
+$LanguageNotice
 <div class="search-panel" id="site-search-panel" data-search-panel hidden>
   <div class="search-panel-inner" role="dialog" aria-modal="true" aria-label="$(Html (T "search"))">
     <div class="search-panel-head">
@@ -915,9 +940,27 @@ function New-Breadcrumbs($Items) {
     }
   }
   return @"
-<nav class="breadcrumbs" aria-label="Breadcrumb">
+<nav class="breadcrumbs" aria-label="$(Html (T "breadcrumbAria"))">
   $($Parts -join '<span aria-hidden="true">/</span>')
 </nav>
+"@
+}
+
+function New-LanguageNotice([string]$Path) {
+  $BasePath = Get-BasePath $Path
+  $OtherLang = Get-OtherLanguageCode
+  $OtherHref = LocalizePath $BasePath $OtherLang
+  $CurrentLabel = Get-LanguageDisplayName $Script:CurrentLang
+  $OtherLabel = Get-LanguageNativeName $OtherLang
+  return @"
+<aside class="language-notice" aria-label="$(Html (T "language"))">
+  <div>
+    <span>$(Html (T "currentLanguage"))</span>
+    <strong>$(Html $CurrentLabel)</strong>
+  </div>
+  <p>$(Html (T "languageNote"))</p>
+  <a href="$OtherHref">$(Html (T "alsoAvailable")): $(Html $OtherLabel)</a>
+</aside>
 "@
 }
 

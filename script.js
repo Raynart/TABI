@@ -84,7 +84,7 @@
         return [
           '<a class="search-result" href="' + article.url + '">',
           "<strong>" + escapeHtml(article.title) + "</strong>",
-          "<span>" + escapeHtml(article.categoryLabel) + " / " + escapeHtml(article.topic || t("fallbackTopic")) + " / " + escapeHtml(article.audience || "") + " / " + escapeHtml(tags) + "</span>",
+          "<span>" + escapeHtml(article.languageLabel || "") + " / " + escapeHtml(article.categoryLabel) + " / " + escapeHtml(article.topic || t("fallbackTopic")) + " / " + escapeHtml(article.audience || "") + " / " + escapeHtml(tags) + "</span>",
           "</a>"
         ].join("");
       })

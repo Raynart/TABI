@@ -166,12 +166,24 @@ input {
 }
 
 .language-switch a {
-  min-width: 34px;
-  padding: 7px 8px;
+  min-width: 54px;
+  padding: 6px 9px;
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 800;
   text-align: center;
+}
+
+.language-switch span,
+.language-switch small {
+  display: block;
+  line-height: 1.15;
+}
+
+.language-switch small {
+  margin-top: 2px;
+  font-size: 0.62rem;
+  font-weight: 700;
 }
 
 .language-switch a + a {
@@ -181,6 +193,43 @@ input {
 .language-switch a[aria-current="true"] {
   color: var(--white);
   background: var(--ink);
+}
+
+.language-notice {
+  max-width: 1280px;
+  margin: 14px auto 0;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.language-notice div {
+  display: grid;
+  gap: 2px;
+}
+
+.language-notice span {
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.language-notice strong {
+  color: var(--ink);
+}
+
+.language-notice p {
+  margin: 0;
+}
+
+.language-notice a {
+  color: var(--accent);
+  font-weight: 800;
 }
 
 .icon-button,
@@ -1731,6 +1780,15 @@ input {
     gap: 12px;
   }
 
+  .language-switch a {
+    min-width: 38px;
+    padding: 7px 8px;
+  }
+
+  .language-switch small {
+    display: none;
+  }
+
   .logo-en {
     font-size: 1.55rem;
   }
@@ -1753,6 +1811,13 @@ input {
 
   .mobile-nav {
     display: flex;
+  }
+
+  .language-notice {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 8px;
   }
 
   .hero {
