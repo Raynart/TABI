@@ -67,6 +67,24 @@ node ".\scripts\validate-site.mjs"
 
 The validation script checks generated HTML links, anchors, assets, `hreflang`, JSON-LD, feeds, sitemap alternates, and frontend JavaScript syntax.
 
+## Maintenance Check
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check-site.ps1"
+```
+
+The maintenance check regenerates the site, runs validation, then runs `scripts/site-health.mjs`. The health check catches duplicate canonicals, missing generated files, sitemap count drift, stale article source dates, category mismatches, orphaned Japanese translations, and basic CSS/JS/HTML size budgets.
+
+Equivalent npm shortcuts are also available:
+
+```powershell
+npm run generate
+npm run validate
+npm run health
+npm run check
+npm run serve
+```
+
 ## Editorial Algorithms
 
 The generator includes local, static algorithms that do not require external services:
@@ -107,7 +125,10 @@ Each article also carries explicit source metadata fields:
 - Weighted local search results
 - Newsletter form validation and status messages
 - English/Japanese UI messages based on the page language
+- Recently viewed local navigation, stored only in the reader's browser
 
 ## Deployment
 
 Netlify publishes the repository root. The site is fully static, so deployment only needs the generated files committed to the repository.
+
+Netlify security and cache headers live in `netlify.toml`. HTML is revalidated on each request, long-lived image assets are immutable, and feed/sitemap files use short public cache windows.

@@ -665,8 +665,9 @@ function New-SearchJson {
 $Script:SearchJson = New-SearchJson
 
 function New-Head([string]$Title, [string]$Description, [string]$Path, [string]$Image) {
-  $Canonical = SiteUrl $Path
   $BasePath = Get-BasePath $Path
+  $CurrentPath = LocalizePath $BasePath $Script:CurrentLang
+  $Canonical = SiteUrl $CurrentPath
   $EnglishPath = LocalizePath $BasePath "en"
   $JapanesePath = LocalizePath $BasePath "ja"
   $ImageUrl = if ([string]::IsNullOrWhiteSpace($Image)) { SiteUrl "/assets/images/kyoto-shrine-hero.png" } else { SiteUrl $Image }

@@ -1,0 +1,14 @@
+$ErrorActionPreference = "Stop"
+
+$Root = Resolve-Path (Join-Path $PSScriptRoot "..")
+
+Write-Host "Generating TABI static site..."
+& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "generate-site.ps1")
+
+Write-Host "Validating links, feeds, hreflang, JSON-LD, and policy requirements..."
+& node (Join-Path $PSScriptRoot "validate-site.mjs")
+
+Write-Host "Running maintenance health checks..."
+& node (Join-Path $PSScriptRoot "site-health.mjs")
+
+Write-Host "TABI check complete."

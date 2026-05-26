@@ -1,0 +1,17 @@
+{
+  "name": "tabi-static-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local static site tooling for TABI.",
+  "type": "module",
+  "scripts": {
+    "generate": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/generate-site.ps1",
+    "validate": "node ./scripts/validate-site.mjs",
+    "health": "node ./scripts/site-health.mjs",
+    "check": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/check-site.ps1",
+    "serve": "python -m http.server 4200 --bind 127.0.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
