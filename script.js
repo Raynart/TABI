@@ -12,12 +12,16 @@
     en: {
       noMatches: "No matching guides yet.",
       fallbackTopic: "TABI",
+      popularSearches: ["Kyoto", "food", "itinerary", "matcha", "ryokan", "quiet travel"],
+      noMatchesHelp: "Try Kyoto, food, itinerary, matcha, ryokan, or quiet travel.",
       invalidEmail: "Please enter a valid email address.",
       newsletterThanks: "Thank you. The next TABI letter will find you soon."
     },
     ja: {
       noMatches: "一致するガイドはまだありません。",
       fallbackTopic: "TABI",
+      popularSearches: ["京都", "食", "旅程", "抹茶", "旅館", "静かな旅"],
+      noMatchesHelp: "京都、食、旅程、抹茶、旅館、静かな旅などで探してみてください。",
       invalidEmail: "有効なメールアドレスを入力してください。",
       newsletterThanks: "ありがとうございます。次のTABIレターをお届けします。"
     }
@@ -50,7 +54,7 @@
 
   function renderSearch(query) {
     if (!searchResults) return;
-    const normalized = query.trim().toLowerCase();
+    const normalized = normalizeSearchText(query);
     const tokens = normalized.split(/\s+/).filter(Boolean);
     const matches = articles
       .map((article) => {
@@ -62,7 +66,13 @@
       .slice(0, 8);
 
     if (!matches.length) {
-      searchResults.innerHTML = '<div class="search-result"><span>' + escapeHtml(t("noMatches")) + '</span></div>';
+      searchResults.innerHTML = [
+        '<div class="search-result search-empty">',
+        '<strong>' + escapeHtml(t("noMatches")) + '</strong>',
+        '<span>' + escapeHtml(messages[lang].noMatchesHelp || messages.en.noMatchesHelp || "") + '</span>',
+        renderPopularSearches(),
+        '</div>'
+      ].join("");
       return;
     }
 
@@ -74,7 +84,7 @@
         return [
           '<a class="search-result" href="' + article.url + '">',
           "<strong>" + escapeHtml(article.title) + "</strong>",
-          "<span>" + escapeHtml(article.categoryLabel) + " / " + escapeHtml(article.topic || t("fallbackTopic")) + " / " + escapeHtml(tags) + "</span>",
+          "<span>" + escapeHtml(article.categoryLabel) + " / " + escapeHtml(article.topic || t("fallbackTopic")) + " / " + escapeHtml(article.audience || "") + " / " + escapeHtml(tags) + "</span>",
           "</a>"
         ].join("");
       })
@@ -85,23 +95,43 @@
     if (!tokens.length) return article.score || 0;
 
     const fields = {
-      title: String(article.title || "").toLowerCase(),
-      summary: String(article.summary || "").toLowerCase(),
-      category: String(article.categoryLabel || article.category || "").toLowerCase(),
-      topic: String(article.topic || "").toLowerCase(),
-      tags: (article.tags || []).concat(article.tagLabels || []).join(" ").toLowerCase()
+      title: normalizeSearchText(article.title || ""),
+      summary: normalizeSearchText(article.summary || ""),
+      category: normalizeSearchText(article.categoryLabel || article.category || ""),
+      topic: normalizeSearchText(article.topic || ""),
+      audience: normalizeSearchText(article.audience || ""),
+      aliases: normalizeSearchText((article.aliases || []).join(" ")),
+      tags: normalizeSearchText((article.tags || []).concat(article.tagLabels || []).join(" "))
     };
 
     return tokens.reduce((total, token) => {
       let score = 0;
       if (fields.title.includes(token)) score += 18;
+      if (fields.aliases.includes(token)) score += 16;
       if (fields.tags.includes(token)) score += 12;
       if (fields.topic.includes(token)) score += 9;
       if (fields.category.includes(token)) score += 7;
+      if (fields.audience.includes(token)) score += 6;
       if (fields.summary.includes(token)) score += 4;
       if (fields.title.startsWith(token)) score += 8;
       return total + score;
     }, 0);
+  }
+
+  function normalizeSearchText(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFKC")
+      .replace(/[ぁ-ん]/g, (char) => String.fromCharCode(char.charCodeAt(0) + 0x60))
+      .replace(/[・、。／/|｜]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function renderPopularSearches() {
+    const searches = messages[lang].popularSearches || messages.en.popularSearches || [];
+    if (!searches.length) return "";
+    return '<div class="search-suggestions">' + searches.map((term) => '<button type="button" data-search-suggestion="' + escapeHtml(term) + '">' + escapeHtml(term) + '</button>').join("") + '</div>';
   }
 
   function escapeHtml(value) {
@@ -129,6 +159,16 @@
 
   if (searchInput) {
     searchInput.addEventListener("input", (event) => renderSearch(event.target.value));
+  }
+
+  if (searchResults && searchInput) {
+    searchResults.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-search-suggestion]");
+      if (!button) return;
+      searchInput.value = button.getAttribute("data-search-suggestion") || "";
+      renderSearch(searchInput.value);
+      searchInput.focus();
+    });
   }
 
   document.addEventListener("keydown", (event) => {

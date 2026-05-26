@@ -27,6 +27,9 @@ $UiLabels = @{
     buyerNotes = "Buyer's Notes"; buyCheckTitle = "What to check before you buy"; option = "Option"; bestFor = "Best for"; watchFor = "Watch for"
     affiliateDisclosure = "Affiliate disclosure: TABI may earn a commission from qualifying purchases, but the buying notes above are written as editorial guidance first."
     feedbackKicker = "Keep This Guide Useful"; feedbackTitle = "Was this guide helpful?"; feedbackBody = "Tell us what felt unclear, missing, or worth updating. This is a simple editorial inbox link, not a tracking widget."; feedbackButton = "Send Feedback"
+    homeKicker = "Japan Travel Intelligence"; homeTitle = "Find the Japan worth slowing down for."; homeDescription = "TABI is a bilingual editorial guide to Japanese travel, food, culture, craft, hidden places, and things worth bringing home."; featuredGuide = "Featured Guide"
+    readInOtherLanguage = "Read in Japanese"; audience = "Best for"; searchPopular = "Popular searches"; searchLanguage = "Language"; noMatchesHelp = "Try Kyoto, food, itinerary, matcha, ryokan, or quiet travel."
+    categoryHub = "Guide hub"; tagHub = "Tag hub"; hubIntro = "Start with the strongest guides, then move by topic, place, or related tags."
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -42,6 +45,9 @@ $UiLabels = @{
     buyerNotes = "買う前のメモ"; buyCheckTitle = "購入前に見るポイント"; option = "選択肢"; bestFor = "向いている人"; watchFor = "確認したい点"
     affiliateDisclosure = "開示: 一部の商品リンクから収益を得る場合がありますが、上記の購入メモは編集上の判断を優先して作成しています。"
     feedbackKicker = "このガイドを育てる"; feedbackTitle = "このガイドは役に立ちましたか"; feedbackBody = "分かりにくかった点、足りない情報、更新したほうがよい箇所があればお知らせください。トラッキング用の仕組みではなく、編集用のメール窓口です。"; feedbackButton = "フィードバックを送る"
+    homeKicker = "日本を深く見る旅ガイド"; homeTitle = "知らなかった日本に、静かに出会う。"; homeDescription = "TABIは、有名な観光地だけでは見えにくい日本の旅、文化、食、工芸、地域の文脈を日英で案内する編集ガイドです。"; featuredGuide = "注目ガイド"
+    readInOtherLanguage = "英語で読む"; audience = "向いている人"; searchPopular = "よく探されるテーマ"; searchLanguage = "言語"; noMatchesHelp = "京都、食、旅程、抹茶、旅館、静かな旅などで探してみてください。"
+    categoryHub = "カテゴリハブ"; tagHub = "タグハブ"; hubIntro = "まず強いガイドを読み、テーマ、地域、関連タグへ進めるよう整理しています。"
   }
 }
 $CategoryLabelsJa = @{
@@ -135,6 +141,30 @@ function Get-LogoSubtitle {
 
 function Get-FooterTagline {
   return Get-LocalizedScalar "site" "footerTagline" $Config.description
+}
+
+function Get-HomeTitle {
+  return Get-LocalizedScalar "site" "homeTitle" (T "homeTitle")
+}
+
+function Get-HomeDescription {
+  return Get-LocalizedScalar "site" "homeDescription" (T "homeDescription")
+}
+
+function Get-ArticleSeoTitle($Article) {
+  if ($Article.PSObject.Properties.Name -contains "seoTitle") { return $Article.seoTitle }
+  return "$($Article.title) - TABI"
+}
+
+function Get-ArticleSeoDescription($Article) {
+  if ($Article.PSObject.Properties.Name -contains "seoDescription") { return $Article.seoDescription }
+  return $Article.summary
+}
+
+function Get-ArticleAudience($Article) {
+  if ($Article.PSObject.Properties.Name -contains "audience") { return $Article.audience }
+  if (Is-Japanese) { return "このテーマを深く知りたい人。" }
+  return "Readers who want more context before planning."
 }
 
 function New-LanguageAlternates([string]$Path) {
@@ -269,6 +299,11 @@ function Copy-ArticleForLanguage($Article, [string]$Lang) {
   foreach ($PropertyName in @("shoppingGuide", "comparison")) {
     if ($Override[0].PSObject.Properties.Name -contains $PropertyName) {
       $Copy[$PropertyName] = @($Override[0].$PropertyName)
+    }
+  }
+  foreach ($PropertyName in @("seoTitle", "seoDescription", "audience", "searchAliases")) {
+    if ($Override[0].PSObject.Properties.Name -contains $PropertyName) {
+      $Copy[$PropertyName] = $Override[0].$PropertyName
     }
   }
   return [pscustomobject]$Copy
@@ -530,6 +565,8 @@ function New-SearchJson {
       categoryLabel = Get-CategoryLabel $Article.category
       tags = @($Article.tags)
       tagLabels = @($Article.tags | ForEach-Object { Get-TagLabel $_ })
+      aliases = if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() }
+      audience = Get-ArticleAudience $Article
       url = Get-ArticleUrl $Article
       score = Get-ArticleScore $Article ""
       qualityScore = Get-QualityScore $Article
@@ -552,6 +589,8 @@ function New-Head([string]$Title, [string]$Description, [string]$Path, [string]$
   $PreloadImage = if ([string]::IsNullOrWhiteSpace($Image)) { "/assets/images/kyoto-shrine-hero-1536.webp" } else { "$(Get-ImageBase $Image)-1536.webp" }
   $FeedXml = Href "/feed.xml"
   $FeedJson = Href "/feed.json"
+  $OgLocale = if (Is-Japanese) { "ja_JP" } else { "en_US" }
+  $OgAlternate = if (Is-Japanese) { "en_US" } else { "ja_JP" }
   return @"
 <head>
   <meta charset="UTF-8">
@@ -565,6 +604,8 @@ function New-Head([string]$Title, [string]$Description, [string]$Path, [string]$
   <link rel="alternate" hreflang="x-default" href="$(Html (SiteUrl $EnglishPath))">
   <meta property="og:type" content="$OgType">
   <meta property="og:site_name" content="$(Html $Config.siteName)">
+  <meta property="og:locale" content="$OgLocale">
+  <meta property="og:locale:alternate" content="$OgAlternate">
   <meta property="og:title" content="$(Html $Title)">
   <meta property="og:description" content="$(Html $Description)">
   <meta property="og:url" content="$(Html $Canonical)">
@@ -1062,6 +1103,35 @@ function New-AlgorithmNote([string]$Text) {
 "@
 }
 
+function New-HubIntro([string]$Label, [string]$Text) {
+  return @"
+<section class="hub-intro" aria-label="$(Html $Label)">
+  <span>$(Html $Label)</span>
+  <p>$(Html $Text)</p>
+</section>
+"@
+}
+
+function Get-CategoryDescription([string]$Slug, [string]$Label) {
+  if (Is-Japanese) {
+    switch ($Slug) {
+      "travel-guide" { return "日本旅行のルート、宿、移動、街歩きを、予定表ではなく旅の質から考えるガイドです。" }
+      "culture" { return "わびさび、金継ぎ、花見、神社の作法など、日本文化を旅の中で誤解なく見るための読み物です。" }
+      "food" { return "居酒屋、メニュー、コンビニ朝食、大阪の食べ歩きまで、旅の記憶を作る食の入口です。" }
+      "things-to-buy" { return "包丁、抹茶、浴衣、ドラッグストア商品など、持ち帰ってからも使える買い物を選びます。" }
+      "hidden-gems" { return "有名さよりも、静けさ、地域の文脈、歩いた後に残る感覚を重視した場所のガイドです。" }
+    }
+  }
+  switch ($Slug) {
+    "travel-guide" { return "Japan travel guides for routes, stays, transport, and slower decisions that improve the shape of a trip." }
+    "culture" { return "Cultural guides that explain aesthetics, craft, seasonal customs, and etiquette without flattening them into slogans." }
+    "food" { return "Food guides for counters, menus, convenience-store mornings, Osaka eating days, and the habits that make meals easier." }
+    "things-to-buy" { return "Shopping guides for practical, culturally grounded things worth bringing home from Japan." }
+    "hidden-gems" { return "Quieter Japan guides selected for context, restraint, and places that do not need to become crowded checklists." }
+  }
+  return if (Is-Japanese) { "日本の$Labelに関するTABIのガイドをまとめています。" } else { "Curated TABI guides for $($Label.ToLowerInvariant()) in Japan." }
+}
+
 function New-UtilityCard([string]$Label, [string]$Title, [string]$Description, [string]$Url) {
   $Href = Href $Url
   return @"
@@ -1136,13 +1206,20 @@ function New-HomePage {
 </a>
 "@
   }
-  $HeroRead = Format-ReadingTime $Hero.readingTime
-
   $EditorialCards = for ($i = 0; $i -lt $Editorial.Count; $i++) {
     New-ArticleCard $Editorial[$i] ($i -eq 0)
   }
   $CultureCards = foreach ($Article in $Culture) { New-CultureCard $Article }
   $BuyCards = foreach ($Article in $Buy) { New-BuyCard $Article }
+  $HomeTitle = Get-HomeTitle
+  $HomeDescription = Get-HomeDescription
+  $HeroRead = Format-ReadingTime $Hero.readingTime
+  $HeroFeature = @"
+<a class="hero-feature" href="$(Get-ArticleUrl $Hero)">
+  <span>$(Html (T "featuredGuide")) / $(Html (Get-CategoryLabel $Hero.category)) / $HeroRead</span>
+  <strong>$(Html $Hero.title)</strong>
+</a>
+"@
   $LocalDiscoverySection = ""
   if (Is-Japanese) {
     $Discovery = Select-DiverseArticles @($Sorted | Where-Object { $_.category -in @("hidden-gems", "culture", "travel-guide") }) 4 ""
@@ -1173,9 +1250,10 @@ function New-HomePage {
   </div>
   <div class="hero-kanji">&#26053;</div>
   <div class="hero-content">
-    <div class="eyebrow"><span class="eyebrow-mark">$(Html (Get-CategoryLabel $Hero.category))</span><span>$(Format-Date $Hero.publishedAt) / $HeroRead</span></div>
-    <h1 class="hero-title">$(Html $Hero.title)</h1>
-    <p class="hero-desc">$(Html $Hero.summary)</p>
+    <div class="eyebrow"><span class="eyebrow-mark">$(Html (T "homeKicker"))</span><span>EN / JP</span></div>
+    <h1 class="hero-title">$(Html $HomeTitle)</h1>
+    <p class="hero-desc">$(Html $HomeDescription)</p>
+    $HeroFeature
     <div class="hero-actions">
       <a class="hero-btn" href="$(Get-ArticleUrl $Hero)">$(if (Is-Japanese) { "ガイドを読む" } else { "Read the Guide" })</a>
       <a class="hero-link" href="$(Get-CategoryUrl "travel-guide")">$(if (Is-Japanese) { "すべてのガイドを見る" } else { "Browse all guides" })</a>
@@ -1269,6 +1347,9 @@ $Newsletter
 
 function New-ArticlePage($Article) {
   $Read = Format-ReadingTime $Article.readingTime
+  $SeoTitle = Get-ArticleSeoTitle $Article
+  $SeoDescription = Get-ArticleSeoDescription $Article
+  $OtherLangHref = if (Is-Japanese) { LocalizePath (Get-ArticleUrl $Article) "en" } else { LocalizePath (Get-ArticleUrl $Article) "ja" }
   $Sections = @($Article.sections)
   $SectionHtml = for ($i = 0; $i -lt $Sections.Count; $i++) {
     $Section = $Sections[$i]
@@ -1309,6 +1390,11 @@ function New-ArticlePage($Article) {
   <h1 class="page-title">$(Html $Article.title)</h1>
   <p class="page-desc">$(Html $Article.summary)</p>
   <p class="article-meta">$(Format-Date $Article.publishedAt) / $Read</p>
+  <div class="article-audience">
+    <span>$(Html (T "audience"))</span>
+    <strong>$(Html (Get-ArticleAudience $Article))</strong>
+    <a href="$OtherLangHref">$(Html (T "readInOtherLanguage"))</a>
+  </div>
 </section>
 <article class="article-layout">
   <div class="article-cover">
@@ -1354,7 +1440,8 @@ $(New-Newsletter)
   $ArticleJsonLd = @{
     "@type" = "Article"
     headline = $Article.title
-    description = $Article.summary
+    description = $SeoDescription
+    keywords = @($Article.tags) + $(if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() })
     image = $ImageUrl
     datePublished = $Article.publishedAt
     dateModified = $Article.publishedAt
@@ -1379,16 +1466,17 @@ $(New-Newsletter)
     "@graph" = @($ArticleJsonLd, $BreadcrumbJsonLd)
   } | ConvertTo-Json -Depth 10 -Compress
 
-  return New-Layout "$($Article.title) - TABI" $Article.summary (Get-ArticleUrl $Article) $Main $Article.category $Article.image $JsonLd
+  return New-Layout $SeoTitle $SeoDescription (Get-ArticleUrl $Article) $Main $Article.category $Article.image $JsonLd
 }
 
 function New-CategoryPage($Category) {
   $CategoryLabel = Get-CategoryLabel $Category.slug
-  $Description = if (Is-Japanese) { "日本の$(Html $CategoryLabel)に関するTABIのガイドをまとめています。" } else { "Curated TABI guides for $($Category.label.ToLowerInvariant()) in Japan." }
+  $Description = Get-CategoryDescription $Category.slug $CategoryLabel
   $Kicker = if (Is-Japanese) { "カテゴリ" } else { "Category" }
   $Algorithm = if (Is-Japanese) { "カテゴリ適合、鮮度、季節性、編集上の重み、記事品質で並べています。" } else { "Sorted by category relevance, freshness, seasonality, editorial weight, and article quality." }
   $Items = Select-ScoredArticles @($Articles | Where-Object { $_.category -eq $Category.slug }) 100 $Category.slug
   $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $HubIntro = New-HubIntro (T "categoryHub") (T "hubIntro")
   $Breadcrumbs = New-Breadcrumbs @(
     [pscustomobject]@{ label = "Home"; url = "/" },
     [pscustomobject]@{ label = $CategoryLabel; url = "" }
@@ -1400,6 +1488,7 @@ function New-CategoryPage($Category) {
   <h1 class="page-title">$(Html $CategoryLabel)</h1>
   <p class="page-desc">$Description</p>
 </section>
+$HubIntro
 $(New-AlgorithmNote $Algorithm)
 <section class="listing-grid" aria-label="$(Html $CategoryLabel) articles">
   $($Cards -join "`n")
@@ -1426,6 +1515,19 @@ function New-TagPage([string]$Tag) {
   $Algorithm = if (Is-Japanese) { "記事スコアが高く、鮮度と季節性のあるガイドから表示しています。" } else { "Sorted by article score so stronger, fresher, and more seasonally useful guides appear first." }
   $Items = Select-ScoredArticles @($Articles | Where-Object { @($_.tags) -contains $Tag }) 100 ""
   $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $RelatedTags = @($Items | ForEach-Object { $_.tags } | Where-Object { $_ -ne $Tag } | Group-Object | Sort-Object Count -Descending | Select-Object -First 8)
+  $RelatedTagLinks = foreach ($Group in $RelatedTags) {
+    '<a class="tag-pill" href="{0}">#{1}</a>' -f (Get-TagUrl $Group.Name), (Html (Get-TagLabel $Group.Name))
+  }
+  $RelatedTagLabel = if (Is-Japanese) { "関連タグ" } else { "Related tags" }
+  $RelatedTagBlock = if (@($RelatedTagLinks).Count -gt 0) {
+    @"
+<section class="hub-intro" aria-label="Related tags">
+  <span>$(Html $RelatedTagLabel)</span>
+  <div class="tag-list">$($RelatedTagLinks -join "`n")</div>
+</section>
+"@
+  } else { "" }
   $Breadcrumbs = New-Breadcrumbs @(
     [pscustomobject]@{ label = "Home"; url = "/" },
     [pscustomobject]@{ label = $Title; url = "" }
@@ -1437,6 +1539,8 @@ function New-TagPage([string]$Tag) {
   <h1 class="page-title">$(Html $Title)</h1>
   <p class="page-desc">$(Html $Description)</p>
 </section>
+$(New-HubIntro (T "tagHub") (T "hubIntro"))
+$RelatedTagBlock
 $(New-AlgorithmNote $Algorithm)
 <section class="listing-grid" aria-label="$(Html $Tag) articles">
   $($Cards -join "`n")

@@ -397,6 +397,31 @@ input {
   font-size: 0.82rem;
 }
 
+.search-empty strong {
+  margin-bottom: 4px;
+}
+
+.search-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.search-suggestions button {
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.search-suggestions button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .hero {
   position: relative;
   min-height: 460px;
@@ -498,6 +523,31 @@ input {
   margin: 0 0 26px;
   color: rgba(255, 255, 255, 0.78);
   font-size: 1rem;
+}
+
+.hero-feature {
+  width: min(100%, 560px);
+  margin: 0 0 22px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent-soft);
+  background: rgba(17, 17, 17, 0.44);
+  color: var(--white);
+}
+
+.hero-feature span {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-feature strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .hero-actions {
@@ -624,6 +674,36 @@ input {
   text-transform: uppercase;
 }
 
+.article-audience {
+  width: min(100%, 780px);
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--white);
+  color: var(--ink);
+}
+
+.article-audience span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.article-audience strong {
+  display: block;
+  margin: 4px 0 8px;
+  font-family: var(--serif);
+  line-height: 1.45;
+}
+
+.article-audience a {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .card-title {
   margin: 8px 0 12px;
   font-family: var(--serif);
@@ -711,6 +791,27 @@ input {
   padding: 0 32px;
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.hub-intro {
+  max-width: 1280px;
+  margin: 18px auto 0;
+  padding: 18px 32px 0;
+}
+
+.hub-intro span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hub-intro p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--ink-soft);
 }
 
 .topic-grid,
