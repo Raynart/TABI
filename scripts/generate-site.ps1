@@ -32,6 +32,7 @@ $UiLabels = @{
     categoryHub = "Guide hub"; tagHub = "Tag hub"; hubIntro = "Start with the strongest guides, then move by topic, place, or related tags."
     collections = "Collections"; quickRead = "Quick Read"; keyTakeaways = "3 takeaways"; beforeYouGo = "Before you go"; avoid = "Avoid"; season = "Season"; budget = "Budget"; timeNeeded = "Time needed"
     currentLanguage = "Current language"; alsoAvailable = "Also available"; languageNote = "This page has a Japanese edition with localized editorial wording."; languageSwitchAria = "Choose site language"; breadcrumbAria = "Breadcrumb"; english = "English"; japanese = "Japanese"
+    quickRoutes = "Quick routes"; startHere = "Start here"; browseCollections = "Browse collections"; planTrip = "Plan a trip"; openSearch = "Open search"; recentTitle = "Recently viewed"; recentKicker = "Pick up where you left off"; previousGuide = "Previous guide"; nextGuide = "Next guide"; moreInCategory = "More in this category"
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -52,6 +53,7 @@ $UiLabels = @{
     categoryHub = "カテゴリハブ"; tagHub = "タグハブ"; hubIntro = "まず強いガイドを読み、テーマ、地域、関連タグへ進めるよう整理しています。"
     collections = "目的別ガイド"; quickRead = "早わかり"; keyTakeaways = "3行まとめ"; beforeYouGo = "読む前に知ること"; avoid = "避けたい失敗"; season = "季節"; budget = "予算"; timeNeeded = "所要時間"
     currentLanguage = "現在の言語"; alsoAvailable = "対応版"; languageNote = "このページは英語でも読めます。英語版では訪日旅行者向けの文脈に合わせています。"; languageSwitchAria = "サイト言語を選ぶ"; breadcrumbAria = "パンくずリスト"; english = "English"; japanese = "日本語"
+    quickRoutes = "すぐ行ける導線"; startHere = "ここから読む"; browseCollections = "目的別に探す"; planTrip = "旅を組み立てる"; openSearch = "検索を開く"; recentTitle = "最近見たページ"; recentKicker = "前回の続きから"; previousGuide = "前のガイド"; nextGuide = "次のガイド"; moreInCategory = "同じカテゴリを読む"
   }
 }
 $CategoryLabelsJa = @{
@@ -883,6 +885,8 @@ function New-Layout([string]$Title, [string]$Description, [string]$Path, [string
   $EnglishHref = LocalizePath $LangBase "en"
   $JapaneseHref = LocalizePath $LangBase "ja"
   $LanguageNotice = New-LanguageNotice $Path
+  $QuickRoutes = New-QuickRoutes
+  $RecentlyViewed = New-RecentlyViewedShell
   $SearchJson = New-SearchJson
   $FirstTimeTopic = Get-TopicDisplay ($TopicClusters | Where-Object { $_.slug -eq "first-time-japan" } | Select-Object -First 1)
   $SlowTravelTopic = Get-TopicDisplay ($TopicClusters | Where-Object { $_.slug -eq "slow-travel" } | Select-Object -First 1)
@@ -917,6 +921,7 @@ $Head
 $Ticker
 $MobileNav
 $LanguageNotice
+$QuickRoutes
 <div class="search-panel" id="site-search-panel" data-search-panel hidden>
   <div class="search-panel-inner" role="dialog" aria-modal="true" aria-label="$(Html (T "search"))">
     <div class="search-panel-head">
@@ -930,6 +935,7 @@ $LanguageNotice
 <main id="main">
 $Main
 </main>
+$RecentlyViewed
 <footer class="site-footer">
   <div class="footer-top">
     <div>
@@ -1089,6 +1095,55 @@ function New-LanguageNotice([string]$Path) {
   <p>$(Html (T "languageNote"))</p>
   <a href="$OtherHref">$(Html (T "alsoAvailable")): $(Html $OtherLabel)</a>
 </aside>
+"@
+}
+
+function New-QuickRoutes {
+  $StartArticle = Select-DiverseArticles $Articles 1 ""
+  $StartHref = if ($StartArticle.Count -gt 0) { Get-ArticleUrl $StartArticle[0] } else { Href "/" }
+  return @"
+<nav class="quick-routes" aria-label="$(Html (T "quickRoutes"))">
+  <span>$(Html (T "quickRoutes"))</span>
+  <a href="$StartHref">$(Html (T "startHere"))</a>
+  <a href="$(Href "/collections/index.html")">$(Html (T "browseCollections"))</a>
+  <a href="$(Href "/planning/index.html")">$(Html (T "planTrip"))</a>
+  <button type="button" data-search-toggle aria-expanded="false" aria-controls="site-search-panel">$(Html (T "openSearch"))</button>
+</nav>
+"@
+}
+
+function New-RecentlyViewedShell {
+  return @"
+<aside class="recently-viewed" data-recently-viewed hidden>
+  <div>
+    <span>$(Html (T "recentKicker"))</span>
+    <h2>$(Html (T "recentTitle"))</h2>
+  </div>
+  <div class="recently-viewed-list" data-recently-viewed-list></div>
+</aside>
+"@
+}
+
+function New-ArticlePager($Article) {
+  $CategoryItems = @(Select-ScoredArticles @($Articles | Where-Object { $_.category -eq $Article.category }) 100 $Article.category)
+  if ($CategoryItems.Count -lt 2) { return "" }
+  $Index = 0
+  for ($i = 0; $i -lt $CategoryItems.Count; $i++) {
+    if ($CategoryItems[$i].id -eq $Article.id) { $Index = $i; break }
+  }
+  $Previous = $CategoryItems[($Index - 1 + $CategoryItems.Count) % $CategoryItems.Count]
+  $Next = $CategoryItems[($Index + 1) % $CategoryItems.Count]
+  return @"
+<nav class="article-pager" aria-label="$(Html (T "moreInCategory"))">
+  <a href="$(Get-ArticleUrl $Previous)">
+    <span>$(Html (T "previousGuide"))</span>
+    <strong>$(Html $Previous.title)</strong>
+  </a>
+  <a href="$(Get-ArticleUrl $Next)">
+    <span>$(Html (T "nextGuide"))</span>
+    <strong>$(Html $Next.title)</strong>
+  </a>
+</nav>
 "@
 }
 
@@ -1626,6 +1681,7 @@ function New-ArticlePage($Article) {
   $RelatedCards = foreach ($Item in ($Related | Select-Object -First 3)) {
     New-CompactArticleCard $Item
   }
+  $ArticlePager = New-ArticlePager $Article
   $Pathways = New-ArticlePathways $Article
   $TripBrief = New-ArticleTripBrief $Article
   $Breadcrumbs = New-Breadcrumbs @(
@@ -1673,6 +1729,7 @@ $ShoppingGuide
     $(New-ArticleSourcePanel $Article)
   </aside>
 </article>
+$ArticlePager
 $Pathways
 <section aria-labelledby="next-heading" class="next-read">
   <div class="section-label">

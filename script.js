@@ -5,6 +5,8 @@
   const searchInput = document.querySelector("[data-search-input]");
   const searchResults = document.querySelector("[data-search-results]");
   const newsletterForms = document.querySelectorAll("[data-newsletter-form]");
+  const recentlyViewed = document.querySelector("[data-recently-viewed]");
+  const recentlyViewedList = document.querySelector("[data-recently-viewed-list]");
   const articles = Array.isArray(window.TABI_ARTICLES) ? window.TABI_ARTICLES : [];
   let lastFocusedElement = null;
   const lang = document.documentElement.lang === "ja" ? "ja" : "en";
@@ -15,7 +17,8 @@
       popularSearches: ["Kyoto", "food", "itinerary", "matcha", "ryokan", "quiet travel"],
       noMatchesHelp: "Try Kyoto, food, itinerary, matcha, ryokan, or quiet travel.",
       invalidEmail: "Please enter a valid email address.",
-      newsletterThanks: "Thank you. The next TABI letter will find you soon."
+      newsletterThanks: "Thank you. The next TABI letter will find you soon.",
+      viewed: "Viewed"
     },
     ja: {
       noMatches: "一致するガイドはまだありません。",
@@ -23,7 +26,8 @@
       popularSearches: ["京都", "食", "旅程", "抹茶", "旅館", "静かな旅"],
       noMatchesHelp: "京都、食、旅程、抹茶、旅館、静かな旅などで探してみてください。",
       invalidEmail: "有効なメールアドレスを入力してください。",
-      newsletterThanks: "ありがとうございます。次のTABIレターをお届けします。"
+      newsletterThanks: "ありがとうございます。次のTABIレターをお届けします。",
+      viewed: "閲覧"
     }
   };
 
@@ -207,10 +211,69 @@
     });
   });
 
+  function getRecentKey() {
+    return "tabi:recent:" + lang;
+  }
+
+  function readRecentPages() {
+    try {
+      return JSON.parse(window.localStorage.getItem(getRecentKey()) || "[]");
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function writeRecentPages(items) {
+    try {
+      window.localStorage.setItem(getRecentKey(), JSON.stringify(items.slice(0, 6)));
+    } catch (error) {
+      // Ignore storage errors so browsing still works in private or restricted contexts.
+    }
+  }
+
+  function getCurrentPage() {
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const kicker = document.querySelector(".page-kicker, .card-cat");
+    const title = document.title.replace(/\s[-|]\sTABI$/, "").trim();
+    return {
+      title,
+      url: canonical ? canonical.href : window.location.href,
+      label: kicker ? kicker.textContent.trim() : "TABI",
+      viewedAt: Date.now()
+    };
+  }
+
+  function renderRecentPages() {
+    if (!recentlyViewed || !recentlyViewedList) return;
+    const currentUrl = getCurrentPage().url;
+    const items = readRecentPages().filter((item) => item && item.url && item.url !== currentUrl).slice(0, 3);
+    if (!items.length) {
+      recentlyViewed.hidden = true;
+      return;
+    }
+    recentlyViewed.hidden = false;
+    recentlyViewedList.innerHTML = items.map((item) => [
+      '<a href="' + escapeHtml(item.url) + '">',
+      '<small>' + escapeHtml(item.label || t("viewed")) + '</small>',
+      '<strong>' + escapeHtml(item.title || "TABI") + '</strong>',
+      '</a>'
+    ].join("")).join("");
+  }
+
+  function rememberCurrentPage() {
+    const current = getCurrentPage();
+    if (!current.title || current.title === "TABI") return;
+    const items = readRecentPages().filter((item) => item && item.url !== current.url);
+    writeRecentPages([current].concat(items));
+  }
+
   const initialQuery = new URLSearchParams(window.location.search).get("q");
   if (initialQuery && searchInput) {
     openSearch();
     searchInput.value = initialQuery;
     renderSearch(initialQuery);
   }
+
+  renderRecentPages();
+  rememberCurrentPage();
 })();
