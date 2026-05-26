@@ -5,6 +5,42 @@
     "lastChecked": "2026-05-24",
     "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel."
   },
+  "defaultArticleMetaJa": {
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-24",
+    "sourceNote": "TABIが保有する編集原稿と一般的な旅行知識をもとに作成しています。営業時間、価格、休業、交通ルールなど変わりやすい情報は、旅行前に公式情報で確認してください。"
+  },
+  "trustSummary": {
+    "en": "TABI prioritizes original editorial writing, official or primary confirmation for volatile facts, and clear exclusion of sources that prohibit automated collection, quotation, republication, or reuse.",
+    "ja": "TABIは独自編集の文章を基本とし、変わりやすい事実は公式・一次情報で確認する方針です。AIスクレイピング、引用、転載、再利用を禁じる情報源や、倫理的に問題のある情報源は使用しません。"
+  },
+  "editorialPrinciples": [
+    "Write original TABI summaries instead of copying third-party wording, rankings, tables, route text, or unique editorial framing.",
+    "Prefer official, primary, openly licensed, public-domain, or TABI-owned material when factual confirmation is needed.",
+    "Treat prices, hours, closures, access rules, booking rules, tax-free rules, and transport details as volatile unless recently confirmed from an official source.",
+    "Separate evergreen cultural context from live operational facts so readers understand what may change.",
+    "Exclude sources with unclear rights, privacy risk, harassment, discrimination, sensationalism, exploitation, or other ethical concerns."
+  ],
+  "editorialPrinciplesJa": [
+    "第三者媒体の表現、ランキング、表、ルート文、独自の編集構成をコピーせず、TABI独自の要約として書きます。",
+    "事実確認が必要な場合は、公式情報、一次情報、オープンライセンス、パブリックドメイン、またはTABIが保有する編集資料を優先します。",
+    "価格、営業時間、閉店、利用ルール、予約ルール、免税ルール、交通情報は、公式情報で直近確認できない限り変わりやすい情報として扱います。",
+    "文化的背景のような長く使える情報と、現地で変わる運用情報を分け、読者が確認すべき範囲を理解できるようにします。",
+    "権利不明、プライバシー侵害、嫌がらせ、差別、過度な扇情性、搾取など倫理的懸念のある情報源は使いません。"
+  ],
+  "correctionPolicy": [
+    "Readers can send corrections or update requests to hello@tabi.guide.",
+    "Corrections are reviewed against official or primary sources where possible.",
+    "Material corrections should update the article's lastChecked value and source note.",
+    "If a claim cannot be verified responsibly, TABI should remove it or mark it as needing confirmation."
+  ],
+  "correctionPolicyJa": [
+    "読者からの訂正・更新依頼は hello@tabi.guide で受け付けます。",
+    "訂正内容は、可能な限り公式情報または一次情報に照らして確認します。",
+    "重要な訂正を行った場合は、記事の lastChecked と sourceNote を更新します。",
+    "責任を持って確認できない記述は削除するか、確認が必要な情報として扱います。"
+  ],
   "allowedSourceTypes": [
     "Official destination, transport, venue, government, and tourism organization pages when their terms allow ordinary reference.",
     "Primary sources published by the place, organization, maker, or operator being discussed.",
@@ -12,10 +48,10 @@
     "TABI-owned editorial notes, original analysis, and locally maintained structured data."
   ],
   "allowedSourceTypesJa": [
-    "通常の参照が許される公式観光、交通、施設、行政、観光組織のページ。",
-    "紹介対象である場所、組織、作り手、運営者が公開する一次情報。",
-    "条件を守れるオープンライセンスまたはパブリックドメインの資料。",
-    "TABI自身の編集メモ、独自分析、ローカルに管理する構造化データ。"
+    "通常の参照が利用条件上許される、公式の観光地、交通、施設、行政、観光組織のページ。",
+    "紹介対象である場所、組織、作り手、運営者が公開している一次情報。",
+    "表示・再利用条件を守れる、オープンライセンスまたはパブリックドメインの資料。",
+    "TABIが保有する編集メモ、独自分析、ローカルで管理している構造化データ。"
   ],
   "disallowedSourceTypes": [
     "Pages or media that prohibit AI scraping, automated collection, quotation, republication, or reuse.",
@@ -25,11 +61,11 @@
     "Sources that create ethical risk through harassment, privacy invasion, discrimination, sensationalism, or exploitation."
   ],
   "disallowedSourceTypesJa": [
-    "AIスクレイピング、automated collection、引用、転載、再利用を禁止しているページや媒体。",
-    "有料、会員限定、非公開、流出、アクセス制限のある資料。",
-    "無断転載、スクレイピングミラー、盗用サイト、低品質アフィリエイト量産サイト、権利不明のコンテンツ。",
-    "明示的な許可や文脈がない個人SNS、個人証言、コミュニティ投稿。",
-    "嫌がらせ、プライバシー侵害、差別、扇情、搾取など倫理的なリスクがある情報源。"
+    "AIスクレイピング、自動収集、引用、転載、再公開、再利用を禁止しているページや媒体。",
+    "有料、会員限定、非公開、流出資料、アクセス制限のある資料。",
+    "無断転載、スクレイピングミラー、盗用サイト、低品質なアフィリエイト量産サイト、権利が不明なコンテンツ。",
+    "明示的な許可と文脈がない個人SNS、個人証言、コミュニティ投稿。",
+    "嫌がらせ、プライバシー侵害、差別、扇情性、搾取など倫理的リスクを生む情報源。"
   ],
   "reuseRules": [
     "Do not copy protected wording, route text, rankings, tables, or unique editorial framing from third-party media.",
@@ -38,9 +74,9 @@
     "Mark volatile facts as requiring confirmation instead of presenting them as current."
   ],
   "reuseRulesJa": [
-    "第三者媒体の表現、ランキング、表、独自の編集構成をコピーしない。",
-    "事実確認が必要な場合は公式情報と一次情報を優先し、TABI独自の文章で要約する。",
-    "利用条件が曖昧な情報源は使わない。",
-    "営業時間、価格、閉店、交通ルールなど変わりやすい情報は、現在情報として断定しない。"
+    "第三者媒体の保護された表現、ルート文、ランキング、表、独自の編集構成をコピーしません。",
+    "事実確認が必要な場合は公式情報と一次情報を優先し、そのうえでTABI独自の文章にします。",
+    "利用条件が不明な情報源は、頼るのではなく除外します。",
+    "営業時間、価格、閉店、交通ルールなど変わりやすい情報は、現在情報として断定せず確認が必要であることを示します。"
   ]
 }

@@ -49,6 +49,39 @@ const files = await walk(root);
 const fileSet = new Set(files.map(rel));
 const htmlFiles = files.filter((file) => file.endsWith(".html") && !rel(file).endsWith("tabi-mockup.html"));
 const errors = [];
+const articles = JSON.parse(await readFile(path.join(root, "articles.json"), "utf8"));
+const policy = JSON.parse(await readFile(path.join(root, "content-policy.json"), "utf8"));
+
+for (const key of [
+  "allowedSourceTypes",
+  "allowedSourceTypesJa",
+  "disallowedSourceTypes",
+  "disallowedSourceTypesJa",
+  "reuseRules",
+  "reuseRulesJa",
+  "editorialPrinciples",
+  "editorialPrinciplesJa",
+  "correctionPolicy",
+  "correctionPolicyJa"
+]) {
+  if (!Array.isArray(policy[key]) || policy[key].length < 3) {
+    errors.push(`content-policy.json: ${key} must contain at least 3 items`);
+  }
+}
+if (!policy.trustSummary?.en || !policy.trustSummary?.ja) {
+  errors.push("content-policy.json: missing bilingual trustSummary");
+}
+if (!policy.defaultArticleMeta?.sourceNote || !policy.defaultArticleMetaJa?.sourceNote) {
+  errors.push("content-policy.json: missing bilingual default source notes");
+}
+for (const article of articles) {
+  for (const key of ["sourcePolicy", "verificationLevel", "lastChecked", "sourceNote"]) {
+    if (!article[key]) errors.push(`articles.json: ${article.id} missing ${key}`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(article.lastChecked || "")) {
+    errors.push(`articles.json: ${article.id} has invalid lastChecked`);
+  }
+}
 
 for (const file of htmlFiles) {
   const relative = rel(file);
@@ -98,6 +131,15 @@ for (const file of htmlFiles) {
   }
   if (text.includes('class="listing-grid"') && !jsonLdTypes.has("ItemList")) {
     errors.push(`${relative}: listing page missing JSON-LD ItemList`);
+  }
+  if (relative.includes("/articles/") || relative.startsWith("articles/")) {
+    for (const marker of ["Source &amp; Verification", "Source note", "Corrections", "出所と検証", "出所メモ", "訂正"]) {
+      const isJapanese = relative.startsWith("ja/");
+      const englishMarker = ["Source &amp; Verification", "Source note", "Corrections"].includes(marker);
+      if ((isJapanese && !englishMarker && !text.includes(marker)) || (!isJapanese && englishMarker && !text.includes(marker))) {
+        errors.push(`${relative}: missing trust marker ${marker}`);
+      }
+    }
   }
 }
 

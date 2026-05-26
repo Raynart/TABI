@@ -33,6 +33,7 @@ $UiLabels = @{
     collections = "Collections"; quickRead = "Quick Read"; keyTakeaways = "3 takeaways"; beforeYouGo = "Before you go"; avoid = "Avoid"; season = "Season"; budget = "Budget"; timeNeeded = "Time needed"
     currentLanguage = "Current language"; alsoAvailable = "Also available"; languageNote = "This page has a Japanese edition with localized editorial wording."; languageSwitchAria = "Choose site language"; breadcrumbAria = "Breadcrumb"; english = "English"; japanese = "Japanese"
     quickRoutes = "Quick routes"; startHere = "Start here"; browseCollections = "Browse collections"; planTrip = "Plan a trip"; openSearch = "Open search"; recentTitle = "Recently viewed"; recentKicker = "Pick up where you left off"; previousGuide = "Previous guide"; nextGuide = "Next guide"; moreInCategory = "More in this category"
+    trustKicker = "Trust & Updates"; sourceNote = "Source note"; corrections = "Corrections"; sendCorrection = "Send a correction"; trustSummary = "Trust summary"; editorialPrinciples = "Editorial principles"; correctionPolicy = "Correction policy"
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -54,6 +55,7 @@ $UiLabels = @{
     collections = "目的別ガイド"; quickRead = "早わかり"; keyTakeaways = "3行まとめ"; beforeYouGo = "読む前に知ること"; avoid = "避けたい失敗"; season = "季節"; budget = "予算"; timeNeeded = "所要時間"
     currentLanguage = "現在の言語"; alsoAvailable = "対応版"; languageNote = "このページは英語でも読めます。英語版では訪日旅行者向けの文脈に合わせています。"; languageSwitchAria = "サイト言語を選ぶ"; breadcrumbAria = "パンくずリスト"; english = "English"; japanese = "日本語"
     quickRoutes = "すぐ行ける導線"; startHere = "ここから読む"; browseCollections = "目的別に探す"; planTrip = "旅を組み立てる"; openSearch = "検索を開く"; recentTitle = "最近見たページ"; recentKicker = "前回の続きから"; previousGuide = "前のガイド"; nextGuide = "次のガイド"; moreInCategory = "同じカテゴリを読む"
+    trustKicker = "信頼性と更新"; sourceNote = "出所メモ"; corrections = "訂正"; sendCorrection = "訂正を送る"; trustSummary = "信頼性の要約"; editorialPrinciples = "編集原則"; correctionPolicy = "訂正方針"
   }
 }
 $CategoryLabelsJa = @{
@@ -1164,12 +1166,47 @@ function New-ArticleSignals($Article) {
 
 function Get-ArticleSourceMeta($Article) {
   $Default = $ContentPolicy.defaultArticleMeta
+  $DefaultJa = $ContentPolicy.defaultArticleMetaJa
+  $SourceNote = if ($Article.PSObject.Properties.Name -contains "sourceNote") { $Article.sourceNote } else { $Default.sourceNote }
+  if (Is-Japanese -and $SourceNote -eq $Default.sourceNote -and $null -ne $DefaultJa) {
+    $SourceNote = $DefaultJa.sourceNote
+  }
   return [pscustomobject]@{
     sourcePolicy = if ($Article.PSObject.Properties.Name -contains "sourcePolicy") { $Article.sourcePolicy } else { $Default.sourcePolicy }
     verificationLevel = if ($Article.PSObject.Properties.Name -contains "verificationLevel") { $Article.verificationLevel } else { $Default.verificationLevel }
     lastChecked = if ($Article.PSObject.Properties.Name -contains "lastChecked") { $Article.lastChecked } else { $Default.lastChecked }
-    sourceNote = if ($Article.PSObject.Properties.Name -contains "sourceNote") { $Article.sourceNote } else { $Default.sourceNote }
+    sourceNote = $SourceNote
   }
+}
+
+function Get-SourcePolicyDisplay([string]$Value) {
+  switch ($Value) {
+    "tabi-local-editorial" {
+      if (Is-Japanese) { return "TABI独自編集" }
+      return "TABI local editorial"
+    }
+    default { return $Value }
+  }
+}
+
+function Get-VerificationDisplay([string]$Value) {
+  switch ($Value) {
+    "static-editorial" {
+      if (Is-Japanese) { return "静的編集レビュー" }
+      return "Static editorial review"
+    }
+    default { return $Value }
+  }
+}
+
+function Get-PolicyItems([string]$EnglishKey, [string]$JapaneseKey) {
+  if (Is-Japanese) { return @($ContentPolicy.$JapaneseKey) }
+  return @($ContentPolicy.$EnglishKey)
+}
+
+function Get-TrustSummary {
+  if (Is-Japanese) { return $ContentPolicy.trustSummary.ja }
+  return $ContentPolicy.trustSummary.en
 }
 
 function New-ArticleSourcePanel($Article) {
@@ -1180,16 +1217,21 @@ function New-ArticleSourcePanel($Article) {
   $VerificationLabel = if (Is-Japanese) { "検証" } else { "Verification" }
   $CheckedLabel = if (Is-Japanese) { "最終確認" } else { "Last checked" }
   $PanelText = if (Is-Japanese) { "$PolicyText$ConfirmText" } else { "$PolicyText $ConfirmText" }
+  $CorrectionSubject = [uri]::EscapeDataString("TABI correction: $($Article.title)")
   return @"
 <div class="source-panel">
   <p class="footer-col-title">$(Html (T "sourceInfo"))</p>
+  <p class="source-trust-kicker">$(Html (T "trustKicker"))</p>
   <dl>
-    <div><dt>$(Html $PolicyLabel)</dt><dd>$(Html $Meta.sourcePolicy)</dd></div>
-    <div><dt>$(Html $VerificationLabel)</dt><dd>$(Html $Meta.verificationLevel)</dd></div>
+    <div><dt>$(Html $PolicyLabel)</dt><dd>$(Html (Get-SourcePolicyDisplay $Meta.sourcePolicy))</dd></div>
+    <div><dt>$(Html $VerificationLabel)</dt><dd>$(Html (Get-VerificationDisplay $Meta.verificationLevel))</dd></div>
     <div><dt>$(Html $CheckedLabel)</dt><dd>$(Html $Meta.lastChecked)</dd></div>
   </dl>
   <p>$(Html $PanelText)</p>
+  <p><strong>$(Html (T "sourceNote")):</strong> $(Html $Meta.sourceNote)</p>
+  <p><strong>$(Html (T "corrections")):</strong> $(if (Is-Japanese) { "誤りや更新点があれば編集窓口へ送れます。" } else { "Send errors or update requests to the editorial inbox." })</p>
   <a class="tag-pill topic-pill" href="$(Href "/source-policy.html")">$(Html (T "sourcePolicy"))</a>
+  <a class="tag-pill" href="mailto:$($Config.contactEmail)?subject=$CorrectionSubject">$(Html (T "sendCorrection"))</a>
 </div>
 "@
 }
@@ -2258,14 +2300,11 @@ $(New-Newsletter)
 }
 
 function New-SourcePolicyPage {
-  $AllowedItems = @($ContentPolicy.allowedSourceTypes)
-  $DisallowedItems = @($ContentPolicy.disallowedSourceTypes)
-  $RuleItems = @($ContentPolicy.reuseRules)
-  if (Is-Japanese) {
-    $AllowedItems = @($ContentPolicy.allowedSourceTypesJa)
-    $DisallowedItems = @($ContentPolicy.disallowedSourceTypesJa)
-    $RuleItems = @($ContentPolicy.reuseRulesJa)
-  }
+  $AllowedItems = Get-PolicyItems "allowedSourceTypes" "allowedSourceTypesJa"
+  $DisallowedItems = Get-PolicyItems "disallowedSourceTypes" "disallowedSourceTypesJa"
+  $RuleItems = Get-PolicyItems "reuseRules" "reuseRulesJa"
+  $PrincipleItems = Get-PolicyItems "editorialPrinciples" "editorialPrinciplesJa"
+  $CorrectionItems = Get-PolicyItems "correctionPolicy" "correctionPolicyJa"
   $Allowed = foreach ($Item in $AllowedItems) {
     '<li>{0}</li>' -f (Html $Item)
   }
@@ -2275,13 +2314,20 @@ function New-SourcePolicyPage {
   $Rules = foreach ($Item in $RuleItems) {
     '<li>{0}</li>' -f (Html $Item)
   }
+  $Principles = foreach ($Item in $PrincipleItems) {
+    '<li>{0}</li>' -f (Html $Item)
+  }
+  $Corrections = foreach ($Item in $CorrectionItems) {
+    '<li>{0}</li>' -f (Html $Item)
+  }
   $Title = if (Is-Japanese) { "TABIの情報出所ポリシー" } else { "TABI Source Policy" }
-  $Desc = if (Is-Japanese) { "TABIが使う情報源、使わない情報源、引用や再利用に関する編集ルールです。" } else { "How TABI chooses sources, avoids prohibited collection, and handles attribution, quotation, and volatile travel details." }
+  $Desc = if (Is-Japanese) { "TABIが使う情報源、使わない情報源、引用・再利用・訂正・更新に関する編集ルールです。" } else { "How TABI chooses sources, avoids prohibited collection, and handles attribution, quotation, corrections, and volatile travel details." }
   $Intro = if (Is-Japanese) {
     "TABIは、AIスクレイピング禁止、引用禁止、転載禁止、権利不明、倫理的に問題のある媒体から情報を収集しません。外部情報を使う場合も、公式情報や一次情報を優先し、本文はTABIの編集判断で書きます。"
   } else {
     "TABI does not collect from media that prohibit AI scraping, quotation, republication, or reuse, and does not rely on sources with unclear rights or ethical risk. When outside information is needed, official and primary sources are preferred and TABI writes original editorial summaries."
   }
+  $CorrectionSubject = [uri]::EscapeDataString("TABI correction or policy question")
   $Main = @"
 <section class="page-hero">
   $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = $Title; url = "" }))
@@ -2290,9 +2336,18 @@ function New-SourcePolicyPage {
   <p class="page-desc">$(Html $Desc)</p>
 </section>
 <article class="guide-body source-policy-body">
+  <section class="trust-summary-block">
+    <span>$(Html (T "trustSummary"))</span>
+    <p>$(Html (Get-TrustSummary))</p>
+    <a class="tag-pill topic-pill" href="mailto:$($Config.contactEmail)?subject=$CorrectionSubject">$(Html (T "sendCorrection"))</a>
+  </section>
   <section class="checklist-block">
     <h2>$(if (Is-Japanese) { "編集方針" } else { "Editorial stance" })</h2>
     <p>$(Html $Intro)</p>
+  </section>
+  <section class="checklist-block">
+    <h2>$(Html (T "editorialPrinciples"))</h2>
+    <ul>$($Principles -join "`n")</ul>
   </section>
   <section class="checklist-block">
     <h2>$(if (Is-Japanese) { "利用できる情報源" } else { "Allowed source types" })</h2>
@@ -2305,6 +2360,10 @@ function New-SourcePolicyPage {
   <section class="checklist-block">
     <h2>$(if (Is-Japanese) { "引用と再利用のルール" } else { "Reuse rules" })</h2>
     <ul>$($Rules -join "`n")</ul>
+  </section>
+  <section class="checklist-block">
+    <h2>$(Html (T "correctionPolicy"))</h2>
+    <ul>$($Corrections -join "`n")</ul>
   </section>
 </article>
 $(New-Newsletter)

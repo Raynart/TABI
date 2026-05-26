@@ -1137,6 +1137,34 @@ input {
   margin-top: 8px;
 }
 
+.trust-summary-block {
+  border-top: 2px solid var(--ink);
+  background: var(--ink);
+  color: var(--white);
+  padding: 28px;
+}
+
+.trust-summary-block span {
+  color: var(--gold);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.trust-summary-block p {
+  max-width: 860px;
+  margin: 10px 0 18px;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+
+.trust-summary-block .tag-pill {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
 .glossary-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1449,6 +1477,14 @@ input {
   margin-top: 28px;
   border-top: 1px solid var(--border);
   padding-top: 22px;
+}
+
+.source-trust-kicker {
+  margin: -4px 0 12px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .source-panel dl {
