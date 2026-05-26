@@ -8,7 +8,9 @@
     "generate": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/generate-site.ps1",
     "validate": "node ./scripts/validate-site.mjs",
     "health": "node ./scripts/site-health.mjs",
+    "report": "node ./scripts/health-report.mjs",
     "check": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/check-site.ps1",
+    "visual": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/visual-check.ps1",
     "serve": "python -m http.server 4200 --bind 127.0.0.1"
   },
   "engines": {

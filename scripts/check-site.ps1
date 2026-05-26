@@ -11,4 +11,7 @@ Write-Host "Validating links, feeds, hreflang, JSON-LD, and policy requirements.
 Write-Host "Running maintenance health checks..."
 & node (Join-Path $PSScriptRoot "site-health.mjs")
 
+Write-Host "Writing maintenance report..."
+& node (Join-Path $PSScriptRoot "health-report.mjs")
+
 Write-Host "TABI check complete."

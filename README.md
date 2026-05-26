@@ -81,9 +81,13 @@ Equivalent npm shortcuts are also available:
 npm run generate
 npm run validate
 npm run health
+npm run report
 npm run check
+npm run visual
 npm run serve
 ```
+
+`npm run report` prints a compact maintenance report for review. `npm run visual` captures desktop and mobile screenshots for representative English and Japanese pages into `screenshots/visual-check/`; run `npm run serve` first if a local server is not already running.
 
 ## Editorial Algorithms
 
