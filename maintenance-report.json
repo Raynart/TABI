@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-05-27T11:20:43.610Z",
+  "generatedAt": "2026-05-27T11:29:57.436Z",
   "implementedChecks": {
     "36": "content freshness calendar",
     "37": "content gap report",
@@ -66,15 +66,18 @@
     "97": "summary plain-text audit",
     "98": "section body depth audit",
     "99": "generated report completeness audit",
-    "100": "full local release gate"
+    "100": "full local release gate",
+    "101": "legal policy pages audit",
+    "102": "legal policy indexability audit"
   },
   "stats": {
-    "htmlFiles": 214,
+    "htmlFiles": 220,
     "articles": 18,
     "japaneseArticles": 18,
     "tags": 54,
     "externalLinks": 0,
-    "sitemapUrls": 212,
+    "legalPages": 6,
+    "sitemapUrls": 218,
     "imageSitemapImages": 36,
     "overdueReviews": 0,
     "dueSoonReviews": 0

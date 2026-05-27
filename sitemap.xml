@@ -298,6 +298,33 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://tabi.guide/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/legal.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/legal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tabi.guide/legal.html" />
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tabi.guide/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tabi.guide/privacy.html" />
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tabi.guide/disclaimer.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/disclaimer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/disclaimer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tabi.guide/disclaimer.html" />
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://tabi.guide/source-policy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/source-policy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/source-policy.html" />
@@ -1247,6 +1274,33 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/glossary.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/glossary.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tabi.guide/glossary.html" />
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/legal.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/legal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tabi.guide/legal.html" />
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tabi.guide/privacy.html" />
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/disclaimer.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tabi.guide/disclaimer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/disclaimer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tabi.guide/disclaimer.html" />
     <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

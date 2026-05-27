@@ -28,6 +28,12 @@ const requiredGeneratedFiles = [
   "feed.json",
   "ja/feed.json",
   "llms.txt",
+  "legal.html",
+  "ja/legal.html",
+  "privacy.html",
+  "ja/privacy.html",
+  "disclaimer.html",
+  "ja/disclaimer.html",
   "source-policy.html",
   "ja/source-policy.html"
 ];

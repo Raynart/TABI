@@ -335,6 +335,14 @@ const dashboard = await readFile(path.join(root, "editorial-dashboard.html"), "u
 if (!dashboard.includes('name="robots" content="noindex')) {
   errors.push("editorial-dashboard.html: missing noindex robots meta");
 }
+for (const legalPage of ["legal.html", "privacy.html", "disclaimer.html", "ja/legal.html", "ja/privacy.html", "ja/disclaimer.html"]) {
+  if (!fileSet.has(legalPage)) errors.push(`${legalPage}: legal policy page is missing`);
+  else {
+    const text = await readFile(path.join(root, legalPage), "utf8");
+    if (!text.includes('name="robots" content="index, follow, max-image-preview:large"')) errors.push(`${legalPage}: legal policy page must be indexable`);
+    if (!text.includes("TABI") || !text.includes("hello@tabi.guide")) warnings.push(`${legalPage}: legal policy page may be missing site identity or contact`);
+  }
+}
 const robots = await readFile(path.join(root, "robots.txt"), "utf8");
 if (!robots.includes("Sitemap: https://tabi.guide/sitemap.xml") || !robots.includes("image-sitemap.xml")) {
   errors.push("robots.txt: missing sitemap declarations");
@@ -433,7 +441,9 @@ const report = {
     "97": "summary plain-text audit",
     "98": "section body depth audit",
     "99": "generated report completeness audit",
-    "100": "full local release gate"
+    "100": "full local release gate",
+    "101": "legal policy pages audit",
+    "102": "legal policy indexability audit"
   },
   stats: {
     htmlFiles: publicHtmlFiles.length,
@@ -441,6 +451,7 @@ const report = {
     japaneseArticles: japaneseArticles.length,
     tags: tagCounts.size,
     externalLinks: externalLinks.size,
+    legalPages: 6,
     sitemapUrls: sitemapLocs.length,
     imageSitemapImages: imageLocs.length,
     overdueReviews: freshnessRows.filter((row) => row.status === "overdue").length,
@@ -456,8 +467,8 @@ const report = {
   errors
 };
 
-if (Object.keys(report.implementedChecks).length !== 65) {
-  errors.push("maintenance report: expected 65 implemented checks covering 36-100");
+if (Object.keys(report.implementedChecks).length !== 67) {
+  errors.push("maintenance report: expected 67 implemented checks covering 36-102");
   report.ok = false;
 }
 

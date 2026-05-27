@@ -45,6 +45,12 @@ planning/              English planning tools
 ja/planning/           Japanese planning tools
 tags/                  English tag pages
 ja/tags/               Japanese tag pages
+legal.html             English legal and policy center
+ja/legal.html          Japanese legal and policy center
+privacy.html           English privacy policy
+ja/privacy.html        Japanese privacy policy
+disclaimer.html        English disclaimer and disclosures
+ja/disclaimer.html     Japanese disclaimer and disclosures
 feed.xml               English RSS feed
 ja/feed.xml            Japanese RSS feed
 feed.json              English JSON feed
@@ -123,6 +129,8 @@ The source rules live in `content-policy.json` and render to:
 
 - `source-policy.html`
 - `ja/source-policy.html`
+- `legal.html`, `privacy.html`, `disclaimer.html`
+- `ja/legal.html`, `ja/privacy.html`, `ja/disclaimer.html`
 - Article source panels
 
 Volatile details such as hours, prices, closures, and transport rules should be confirmed with official sources before travel.

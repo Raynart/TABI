@@ -54,6 +54,7 @@ $UiLabels = @{
     currentLanguage = "Current language"; alsoAvailable = "Also available"; languageNote = "This page has a Japanese edition with localized editorial wording."; languageSwitchAria = "Choose site language"; breadcrumbAria = "Breadcrumb"; english = "English"; japanese = "Japanese"
     quickRoutes = "Quick routes"; startHere = "Start here"; browseCollections = "Browse collections"; planTrip = "Plan a trip"; openSearch = "Open search"; recentTitle = "Recently viewed"; recentKicker = "Pick up where you left off"; previousGuide = "Previous guide"; nextGuide = "Next guide"; moreInCategory = "More in this category"
     trustKicker = "Trust & Updates"; sourceNote = "Source note"; corrections = "Corrections"; sendCorrection = "Send a correction"; trustSummary = "Trust summary"; editorialPrinciples = "Editorial principles"; correctionPolicy = "Correction policy"
+    legal = "Legal"; privacy = "Privacy Policy"; disclaimer = "Disclaimer"; aiDisclosure = "AI Disclosure"; affiliateDisclosureShort = "Affiliate Disclosure"
   }
   ja = @{
     skip = "本文へ移動"; topBar = "日本の旅と文化のガイド"; topExtra = " / 毎週更新 / 金曜にニュースレター"
@@ -76,6 +77,7 @@ $UiLabels = @{
     currentLanguage = "現在の言語"; alsoAvailable = "対応版"; languageNote = "このページは英語でも読めます。英語版では訪日旅行者向けの文脈に合わせています。"; languageSwitchAria = "サイト言語を選ぶ"; breadcrumbAria = "パンくずリスト"; english = "English"; japanese = "日本語"
     quickRoutes = "すぐ行ける導線"; startHere = "ここから読む"; browseCollections = "目的別に探す"; planTrip = "旅を組み立てる"; openSearch = "検索を開く"; recentTitle = "最近見たページ"; recentKicker = "前回の続きから"; previousGuide = "前のガイド"; nextGuide = "次のガイド"; moreInCategory = "同じカテゴリを読む"
     trustKicker = "信頼性と更新"; sourceNote = "出所メモ"; corrections = "訂正"; sendCorrection = "訂正を送る"; trustSummary = "信頼性の要約"; editorialPrinciples = "編集原則"; correctionPolicy = "訂正方針"
+    legal = "法務・ポリシー"; privacy = "プライバシーポリシー"; disclaimer = "免責事項"; aiDisclosure = "AI利用開示"; affiliateDisclosureShort = "アフィリエイト開示"
   }
 }
 $CategoryLabelsJa = @{
@@ -993,6 +995,9 @@ $RecentlyViewed
       <p class="footer-col-title">$(Html (T "disclosure"))</p>
       <ul class="footer-links">
         <li><a href="$(Get-CategoryUrl "things-to-buy")">$(if (Is-Japanese) { "買い物ガイド" } else { "Shopping Guides" })</a></li>
+        <li><a href="$(Href "/legal.html")">$(Html (T "legal"))</a></li>
+        <li><a href="$(Href "/privacy.html")">$(Html (T "privacy"))</a></li>
+        <li><a href="$(Href "/disclaimer.html")">$(Html (T "disclaimer"))</a></li>
         <li><a href="$(Href "/source-policy.html")">$(Html (T "sourcePolicyShort"))</a></li>
         <li><a href="/sitemap.xml">$(Html (T "sitemap"))</a></li>
         <li><a href="mailto:$($Config.contactEmail)">$(Html (T "contact"))</a></li>
@@ -2441,6 +2446,177 @@ $(New-Newsletter)
   return New-Layout "$Title - TABI" $Desc (Href "/source-policy.html") $Main "" "/assets/images/japanese-goods.png" $JsonLd
 }
 
+function New-PolicySection([string]$Heading, [string[]]$Items) {
+  $List = foreach ($Item in $Items) {
+    '<li>{0}</li>' -f (Html $Item)
+  }
+  return @"
+  <section class="checklist-block">
+    <h2>$(Html $Heading)</h2>
+    <ul>$($List -join "`n")</ul>
+  </section>
+"@
+}
+
+function New-LegalPage {
+  $Title = if (Is-Japanese) { "TABIの法務・ポリシーセンター" } else { "TABI Legal and Policy Center" }
+  $Desc = if (Is-Japanese) { "免責事項、プライバシー、アフィリエイト、AI利用、情報出所、訂正窓口をまとめたTABIのポリシー入口です。" } else { "A single entry point for TABI's disclaimer, privacy, affiliate, AI, source, and corrections policies." }
+  $CoverageHeading = if (Is-Japanese) { "このページで確認できること" } else { "What this covers" }
+  $LastUpdatedLabel = if (Is-Japanese) { "最終更新" } else { "Last updated" }
+  $Cards = @(
+    [pscustomobject]@{ title = T "disclaimer"; kicker = if (Is-Japanese) { "旅行情報の限界" } else { "Travel information limits" }; body = if (Is-Japanese) { "価格、営業時間、交通、天候、安全、制度は変わるため、旅行前に公式情報で確認してください。" } else { "Prices, hours, transport, weather, safety rules, and regulations can change; confirm volatile details with official sources before travel." }; url = "/disclaimer.html" },
+    [pscustomobject]@{ title = T "privacy"; kicker = if (Is-Japanese) { "データの扱い" } else { "Data practices" }; body = if (Is-Japanese) { "問い合わせ、ニュースレター、端末内保存、アクセス解析の有無など、TABIが扱う情報を説明します。" } else { "Explains contact, newsletter, local device storage, analytics status, and how TABI handles information." }; url = "/privacy.html" },
+    [pscustomobject]@{ title = T "sourcePolicy"; kicker = if (Is-Japanese) { "情報出所" } else { "Sources and reuse" }; body = if (Is-Japanese) { "AIスクレイピング禁止、引用禁止、転載禁止、倫理的に問題のある情報源は使わない方針です。" } else { "TABI avoids prohibited AI scraping, quotation, republication, unclear-rights, and ethically risky sources." }; url = "/source-policy.html" }
+  )
+  $CardHtml = foreach ($Card in $Cards) {
+    @"
+<a class="utility-card" href="$(Href $Card.url)">
+  <span>$(Html $Card.kicker)</span>
+  <h2>$(Html $Card.title)</h2>
+  <p>$(Html $Card.body)</p>
+</a>
+"@
+  }
+  $Updated = $Today.ToString("yyyy-MM-dd", $EnglishCulture)
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = T "legal"; url = "" }))
+  <p class="page-kicker">$(Html (T "legal"))</p>
+  <h1 class="page-title">$(Html $Title)</h1>
+  <p class="page-desc">$(Html $Desc)</p>
+</section>
+<section class="utility-grid" aria-label="$(Html (T "legal"))">
+  $($CardHtml -join "`n")
+</section>
+<article class="guide-body source-policy-body">
+  $(New-PolicySection $CoverageHeading @(
+    $(if (Is-Japanese) { "TABIの記事は一般的な旅行・文化・買い物情報であり、法律、医療、金融、安全、登山、交通、査証、税務の専門助言ではありません。" } else { "TABI articles are general travel, culture, food, and shopping information, not legal, medical, financial, safety, mountaineering, transport, visa, or tax advice." }),
+    $(if (Is-Japanese) { "個人情報、端末内保存、問い合わせメール、将来のアクセス解析に関する考え方を説明します。" } else { "The privacy policy explains personal information, local device storage, contact emails, and any future analytics choices." }),
+    $(if (Is-Japanese) { "アフィリエイトや広告がある場合でも、編集判断を優先する方針を明記します。" } else { "Affiliate or advertising relationships, when present, are disclosed without changing TABI's editorial-first stance." })
+  ))
+  <section class="trust-summary-block">
+    <span>$(Html $LastUpdatedLabel)</span>
+    <p>$(Html $Updated)</p>
+    <a class="tag-pill topic-pill" href="mailto:$($Config.contactEmail)">$(Html (T "contact"))</a>
+  </section>
+</article>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "WebPage"
+    name = $Title
+    description = $Desc
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Href "/legal.html")
+    url = SiteUrl (Href "/legal.html")
+    dateModified = $Updated
+  } | ConvertTo-Json -Depth 6 -Compress
+  return New-Layout "$Title - TABI" $Desc (Href "/legal.html") $Main "" "/assets/images/japanese-goods.png" $JsonLd
+}
+
+function New-PrivacyPage {
+  $Title = if (Is-Japanese) { "TABI プライバシーポリシー" } else { "TABI Privacy Policy" }
+  $Desc = if (Is-Japanese) { "TABIが扱う情報、利用目的、端末内保存、第三者サービス、問い合わせ方法を説明します。" } else { "How TABI handles information, local device storage, third-party services, contact emails, and privacy requests." }
+  $Updated = $Today.ToString("yyyy-MM-dd", $EnglishCulture)
+  $InfoHeading = if (Is-Japanese) { "収集する可能性のある情報" } else { "Information TABI may handle" }
+  $UseHeading = if (Is-Japanese) { "利用目的" } else { "How information is used" }
+  $SharingHeading = if (Is-Japanese) { "共有・保存・問い合わせ" } else { "Sharing, retention, and requests" }
+  $LastUpdatedLabel = if (Is-Japanese) { "最終更新" } else { "Last updated" }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = T "legal"; url = "/legal.html" }, [pscustomobject]@{ label = T "privacy"; url = "" }))
+  <p class="page-kicker">$(Html (T "privacy"))</p>
+  <h1 class="page-title">$(Html $Title)</h1>
+  <p class="page-desc">$(Html $Desc)</p>
+</section>
+<article class="guide-body source-policy-body">
+  $(New-PolicySection $InfoHeading @(
+    $(if (Is-Japanese) { "お問い合わせや訂正依頼で送信された氏名、メールアドレス、本文。" } else { "Name, email address, and message content sent through correction or contact emails." }),
+    $(if (Is-Japanese) { "ニュースレターを導入した場合のメールアドレスと配信設定。現時点で外部配信サービスを使う場合は、そのサービス名を明記します。" } else { "Email address and subscription settings if a newsletter provider is enabled; TABI should name any provider before use." }),
+    $(if (Is-Japanese) { "最近見たページなど、ブラウザのlocalStorageに保存される端末内データ。" } else { "Device-local data stored in browser localStorage, such as recently viewed pages." })
+  ))
+  $(New-PolicySection $UseHeading @(
+    $(if (Is-Japanese) { "問い合わせへの返信、訂正対応、サイト改善、スパムや不正利用の防止。" } else { "Responding to messages, handling corrections, improving the site, and preventing spam or misuse." }),
+    $(if (Is-Japanese) { "localStorageの情報は端末内での表示改善に使い、TABIのサーバーへ送信する前提ではありません。" } else { "localStorage data is intended for on-device experience improvements and is not designed to be sent to TABI servers." }),
+    $(if (Is-Japanese) { "アクセス解析を導入する場合は、このページで目的、提供者、無効化方法を更新します。" } else { "If analytics are introduced, this page should be updated with the purpose, provider, and opt-out details." })
+  ))
+  $(New-PolicySection $SharingHeading @(
+    $(if (Is-Japanese) { "法令上必要な場合、または問い合わせ対応に必要なサービス提供者を除き、個人情報を販売しません。" } else { "TABI does not sell personal information and only shares it when legally required or needed to operate a requested service." }),
+    $(if (Is-Japanese) { "問い合わせメールは、対応に必要な期間保存し、その後整理します。" } else { "Contact emails are retained for as long as needed to respond and maintain editorial records, then reviewed for deletion." }),
+    $(if (Is-Japanese) { "確認、訂正、削除に関する相談は hello@tabi.guide へ送れます。" } else { "Privacy access, correction, or deletion questions can be sent to hello@tabi.guide." })
+  ))
+  <section class="trust-summary-block">
+    <span>$(Html $LastUpdatedLabel)</span>
+    <p>$(Html $Updated)</p>
+  </section>
+</article>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "PrivacyPolicy"
+    name = $Title
+    description = $Desc
+    inLanguage = $Script:CurrentLang
+    url = SiteUrl (Href "/privacy.html")
+    dateModified = $Updated
+  } | ConvertTo-Json -Depth 6 -Compress
+  return New-Layout "$Title - TABI" $Desc (Href "/privacy.html") $Main "" "/assets/images/japanese-goods.png" $JsonLd
+}
+
+function New-DisclaimerPage {
+  $Title = if (Is-Japanese) { "TABI 免責事項・開示" } else { "TABI Disclaimer and Disclosures" }
+  $Desc = if (Is-Japanese) { "旅行情報の変動、専門助言ではないこと、アフィリエイト、AI利用、外部リンクに関するTABIの開示です。" } else { "TABI's disclosure on changing travel details, non-professional advice, affiliate links, AI assistance, and external links." }
+  $Updated = $Today.ToString("yyyy-MM-dd", $EnglishCulture)
+  $TravelHeading = if (Is-Japanese) { "旅行情報について" } else { "Travel information" }
+  $AffiliateHeading = if (Is-Japanese) { "アフィリエイト・広告開示" } else { "Affiliate and advertising disclosure" }
+  $AiHeading = if (Is-Japanese) { "AI利用と外部リンク" } else { "AI assistance and external links" }
+  $LastUpdatedLabel = if (Is-Japanese) { "最終更新" } else { "Last updated" }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = T "legal"; url = "/legal.html" }, [pscustomobject]@{ label = T "disclaimer"; url = "" }))
+  <p class="page-kicker">$(Html (T "disclaimer"))</p>
+  <h1 class="page-title">$(Html $Title)</h1>
+  <p class="page-desc">$(Html $Desc)</p>
+</section>
+<article class="guide-body source-policy-body">
+  $(New-PolicySection $TravelHeading @(
+    $(if (Is-Japanese) { "価格、営業時間、営業日、交通、予約条件、免税、入場ルール、天候、安全情報は予告なく変わることがあります。" } else { "Prices, opening hours, schedules, transport, booking rules, tax-free rules, entry rules, weather, and safety information may change without notice." }),
+    $(if (Is-Japanese) { "TABIは一般的な編集ガイドであり、旅行前には公式サイト、事業者、自治体、交通機関など一次情報を確認してください。" } else { "TABI is a general editorial guide; confirm volatile details with official sites, operators, local authorities, or transport providers before travel." }),
+    $(if (Is-Japanese) { "登山、食品アレルギー、薬、法律、査証、税務、保険、安全判断は専門家や公式機関に確認してください。" } else { "For hiking, allergies, medicine, legal, visa, tax, insurance, and safety decisions, consult official bodies or qualified professionals." })
+  ))
+  $(New-PolicySection $AffiliateHeading @(
+    $(if (Is-Japanese) { "買い物関連ページでは、将来的にアフィリエイトリンクや広告リンクを含む場合があります。" } else { "Shopping-related pages may include affiliate or advertising links in the future." }),
+    $(if (Is-Japanese) { "収益が発生する場合でも、掲載判断、買い物メモ、注意点は編集上の有用性を優先します。" } else { "Even where revenue is possible, recommendations, buying notes, and cautions should remain editorial-first." }),
+    $(if (Is-Japanese) { "PR、提供、報酬関係がある場合は、記事内または近接箇所で分かるように表示します。" } else { "Sponsored, gifted, or compensated relationships should be disclosed in or near the relevant content." })
+  ))
+  $(New-PolicySection $AiHeading @(
+    $(if (Is-Japanese) { "TABIは下書き、整理、翻訳、校正、検証補助にAIを使う場合がありますが、公開前に編集確認を行う前提です。" } else { "TABI may use AI for drafting support, organization, translation, proofreading, and verification support, with editorial review before publication." }),
+    $(if (Is-Japanese) { "AIスクレイピング、引用、転載、再利用を禁じる情報源や、倫理的に問題のある情報源は利用しません。" } else { "TABI does not use sources that prohibit AI scraping, quotation, republication, or reuse, or sources with ethical concerns." }),
+    $(if (Is-Japanese) { "外部リンク先の内容、販売、価格、在庫、プライバシー対応についてTABIは管理していません。" } else { "TABI does not control external sites' content, sales terms, prices, stock, or privacy practices." })
+  ))
+  <section class="trust-summary-block">
+    <span>$(Html $LastUpdatedLabel)</span>
+    <p>$(Html $Updated)</p>
+    <a class="tag-pill topic-pill" href="$(Href "/source-policy.html")">$(Html (T "sourcePolicy"))</a>
+  </section>
+</article>
+$(New-Newsletter)
+"@
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@type" = "WebPage"
+    name = $Title
+    description = $Desc
+    inLanguage = $Script:CurrentLang
+    workTranslation = New-LanguageAlternates (Href "/disclaimer.html")
+    url = SiteUrl (Href "/disclaimer.html")
+    dateModified = $Updated
+  } | ConvertTo-Json -Depth 6 -Compress
+  return New-Layout "$Title - TABI" $Desc (Href "/disclaimer.html") $Main "" "/assets/images/japanese-goods.png" $JsonLd
+}
+
 function ConvertTo-Rfc3339([string]$DateValue) {
   $Date = [datetime]::ParseExact($DateValue, "yyyy-MM-dd", $EnglishCulture)
   return $Date.ToString("yyyy-MM-ddT00:00:00+09:00", $EnglishCulture)
@@ -2635,6 +2811,9 @@ function New-Sitemap {
     $Urls += [pscustomobject]@{ loc = Href "/planning/index.html"; basePath = "/planning/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Urls += foreach ($Guide in $PlanningGuides) { [pscustomobject]@{ loc = Get-PlanningUrl $Guide.slug; basePath = "/planning/$($Guide.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
     $Urls += [pscustomobject]@{ loc = Href "/glossary.html"; basePath = "/glossary.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += [pscustomobject]@{ loc = Href "/legal.html"; basePath = "/legal.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += [pscustomobject]@{ loc = Href "/privacy.html"; basePath = "/privacy.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += [pscustomobject]@{ loc = Href "/disclaimer.html"; basePath = "/disclaimer.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Urls += [pscustomobject]@{ loc = Href "/source-policy.html"; basePath = "/source-policy.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Tags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
     $Urls += foreach ($Tag in $Tags) { [pscustomobject]@{ loc = Get-TagUrl $Tag; basePath = "/tags/$Tag.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
@@ -2725,6 +2904,9 @@ function Write-LanguagePages([string]$Lang) {
     Write-Page (Get-OutputPath "planning/$($Guide.slug).html") (New-PlanningGuidePage $Guide)
   }
   Write-Page (Get-OutputPath "glossary.html") (New-GlossaryPage)
+  Write-Page (Get-OutputPath "legal.html") (New-LegalPage)
+  Write-Page (Get-OutputPath "privacy.html") (New-PrivacyPage)
+  Write-Page (Get-OutputPath "disclaimer.html") (New-DisclaimerPage)
   Write-Page (Get-OutputPath "source-policy.html") (New-SourcePolicyPage)
   $AllTags = @($Articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
   foreach ($Tag in $AllTags) {
