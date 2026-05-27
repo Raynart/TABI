@@ -2517,6 +2517,10 @@ function New-WebManifest {
     background_color = "#f7f4ef"
     theme_color = "#111111"
     lang = "en"
+    icons = @(
+      [pscustomobject]@{ src = "/assets/images/kyoto-shrine-hero-640.webp"; sizes = "640x640"; type = "image/webp"; purpose = "any" },
+      [pscustomobject]@{ src = "/assets/images/kyoto-shrine-hero-1024.webp"; sizes = "1024x1024"; type = "image/webp"; purpose = "any" }
+    )
   }
   return ($Manifest | ConvertTo-Json -Depth 5)
 }

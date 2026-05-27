@@ -17,6 +17,9 @@ Write-Host "Validating structured content data..."
 Write-Host "Running maintenance health checks..."
 & node (Join-Path $PSScriptRoot "site-health.mjs")
 
+Write-Host "Running operational audits..."
+& node (Join-Path $PSScriptRoot "audit-ops.mjs")
+
 Write-Host "Writing maintenance report..."
 & node (Join-Path $PSScriptRoot "health-report.mjs")
 

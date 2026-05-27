@@ -1,0 +1,188 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-27T11:12:22.967Z",
+  "implementedChecks": {
+    "36": "content freshness calendar",
+    "37": "content gap report",
+    "38": "i18n parity report",
+    "39": "media alt and dimension audit",
+    "40": "external link inventory",
+    "41": "external noopener audit",
+    "42": "social meta audit",
+    "43": "Open Graph image audit",
+    "44": "Article JSON-LD audit",
+    "45": "BreadcrumbList JSON-LD audit",
+    "46": "tag taxonomy audit",
+    "47": "duplicate content phrase audit",
+    "48": "reading time consistency audit",
+    "49": "source policy consistency audit",
+    "50": "source freshness severity report",
+    "51": "feed item URL parity audit",
+    "52": "manifest icon audit",
+    "53": "robots and dashboard noindex audit",
+    "54": "Netlify security header audit",
+    "55": "machine-readable maintenance report"
+  },
+  "stats": {
+    "htmlFiles": 214,
+    "articles": 18,
+    "japaneseArticles": 18,
+    "tags": 54,
+    "externalLinks": 0,
+    "overdueReviews": 0,
+    "dueSoonReviews": 0
+  },
+  "freshness": [
+    {
+      "id": "best-japanese-kitchen-knives-to-bring-home",
+      "category": "things-to-buy",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "buying-matcha-ceremonial-vs-culinary-grade",
+      "category": "things-to-buy",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "japanese-drugstore-products-worth-every-yen",
+      "category": "things-to-buy",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "where-to-buy-authentic-yukata-in-tokyo",
+      "category": "things-to-buy",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "hidden-shrines-kyoto-locals-keep-secret",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "ten-days-japan-without-tourist-traps",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "kyoto-ryokan-under-20000-yen",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "perfect-route-up-mount-fuji",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "what-wabi-sabi-really-means",
+      "category": "culture",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "kintsugi-art-of-repairing-broken-things",
+      "category": "culture",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "hanami-where-to-see-cherry-blossoms-like-local",
+      "category": "culture",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "osaka-three-day-eating-itinerary",
+      "category": "food",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-read-japanese-menu-without-speaking-japanese",
+      "category": "food",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "tokyo-hidden-izakayas-locals-go",
+      "category": "food",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "japanese-convenience-store-breakfasts-worth-trying",
+      "category": "food",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "yakushima-ancient-forest-few-tourists-find",
+      "category": "hidden-gems",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "setouchi-islands-art-sea-slow-travel",
+      "category": "hidden-gems",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    },
+    {
+      "id": "kiso-valley-walk-between-post-towns",
+      "category": "hidden-gems",
+      "lastChecked": "2026-05-24",
+      "nextReview": "2026-11-19",
+      "status": "ok"
+    }
+  ],
+  "contentGaps": [
+    {
+      "category": "travel-guide",
+      "articles": 4
+    },
+    {
+      "category": "culture",
+      "articles": 3
+    },
+    {
+      "category": "food",
+      "articles": 4
+    },
+    {
+      "category": "things-to-buy",
+      "articles": 4
+    },
+    {
+      "category": "hidden-gems",
+      "articles": 3
+    }
+  ],
+  "externalLinks": [],
+  "warnings": [],
+  "errors": []
+}

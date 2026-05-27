@@ -6,5 +6,19 @@
     "display":  "standalone",
     "background_color":  "#f7f4ef",
     "theme_color":  "#111111",
-    "lang":  "en"
+    "lang":  "en",
+    "icons":  [
+                  {
+                      "src":  "/assets/images/kyoto-shrine-hero-640.webp",
+                      "sizes":  "640x640",
+                      "type":  "image/webp",
+                      "purpose":  "any"
+                  },
+                  {
+                      "src":  "/assets/images/kyoto-shrine-hero-1024.webp",
+                      "sizes":  "1024x1024",
+                      "type":  "image/webp",
+                      "purpose":  "any"
+                  }
+              ]
 }

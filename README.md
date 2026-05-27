@@ -51,6 +51,7 @@ feed.json              English JSON feed
 ja/feed.json           Japanese JSON feed
 sitemap.xml            Bilingual sitemap with hreflang alternates
 image-sitemap.xml      Image sitemap for article hero images
+maintenance-report.json Machine-readable local audit report
 robots.txt             Search crawler rules
 llms.txt               LLM-readable site summary
 editorial-dashboard.html  Noindex static editorial maintenance dashboard
@@ -78,7 +79,7 @@ The validation script checks generated HTML links, anchors, assets, `hreflang`, 
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check-site.ps1"
 ```
 
-The maintenance check regenerates the site, runs validation, then runs `scripts/site-health.mjs`. The health check catches duplicate canonicals, missing generated files, sitemap count drift, stale article source dates, category mismatches, orphaned Japanese translations, and basic CSS/JS/HTML size budgets.
+The maintenance check regenerates the site, runs validation, then runs `scripts/site-health.mjs` and `scripts/audit-ops.mjs`. The health check catches duplicate canonicals, missing generated files, sitemap count drift, stale article source dates, category mismatches, orphaned Japanese translations, and basic CSS/JS/HTML size budgets. The operational audit adds freshness calendars, i18n parity, media, social metadata, JSON-LD, feed, robots, and deployment-header checks.
 
 Equivalent npm shortcuts are also available:
 
@@ -87,6 +88,7 @@ npm run generate
 npm run validate
 npm run validate:data
 npm run health
+npm run audit:ops
 npm run report
 npm run split:content
 npm run new:article -- article-slug travel-guide
