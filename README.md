@@ -79,7 +79,7 @@ The validation script checks generated HTML links, anchors, assets, `hreflang`, 
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check-site.ps1"
 ```
 
-The maintenance check regenerates the site, runs validation, then runs `scripts/site-health.mjs` and `scripts/audit-ops.mjs`. The health check catches duplicate canonicals, missing generated files, sitemap count drift, stale article source dates, category mismatches, orphaned Japanese translations, and basic CSS/JS/HTML size budgets. The operational audit adds freshness calendars, i18n parity, media, social metadata, JSON-LD, feed, robots, and deployment-header checks.
+The maintenance check regenerates the site, runs validation, then runs `scripts/site-health.mjs` and `scripts/audit-ops.mjs`. The health check catches duplicate canonicals, missing generated files, sitemap count drift, stale article source dates, category mismatches, orphaned Japanese translations, and basic CSS/JS/HTML size budgets. The operational audit adds numbered checks 36-100 across freshness calendars, i18n parity, media, social metadata, JSON-LD, feeds, robots, deployment headers, page fundamentals, accessibility landmarks, hreflang, sitemap targets, and article data chronology.
 
 Equivalent npm shortcuts are also available:
 

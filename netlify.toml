@@ -31,7 +31,22 @@
     Cache-Control = "public, max-age=900"
 
 [[headers]]
+  for = "/feed.json"
+  [headers.values]
+    Cache-Control = "public, max-age=900"
+
+[[headers]]
+  for = "/ja/feed.json"
+  [headers.values]
+    Cache-Control = "public, max-age=900"
+
+[[headers]]
   for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=900"
+
+[[headers]]
+  for = "/image-sitemap.xml"
   [headers.values]
     Cache-Control = "public, max-age=900"
 

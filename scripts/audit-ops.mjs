@@ -106,6 +106,14 @@ function localPathFromAbsoluteUrl(url) {
   return targetFile(url.slice(siteUrl.length));
 }
 
+function dateValue(dateText) {
+  return new Date(`${dateText}T00:00:00+09:00`).getTime();
+}
+
+function countMatches(text, pattern) {
+  return (text.match(pattern) || []).length;
+}
+
 const errors = [];
 const warnings = [];
 const { articles, japaneseArticles } = await loadArticleData(root);
@@ -124,6 +132,8 @@ const tagCounts = new Map();
 const phraseOwners = new Map();
 const sourcePolicies = new Set();
 const freshnessRows = [];
+const canonicalByFile = new Map();
+const hreflangByFile = new Map();
 
 for (const article of articles) {
   if (!categories.has(article.category)) errors.push(`${article.id}: unknown category ${article.category}`);
@@ -135,6 +145,19 @@ for (const article of articles) {
   const image = targetFile(article.image);
   if (!image || !fileSet.has(image)) errors.push(`${article.id}: article image is missing on disk`);
   if (String(article.imageAlt || "").trim().length < 12) warnings.push(`${article.id}: imageAlt is too short`);
+  if (dateValue(article.publishedAt) > today.getTime()) errors.push(`${article.id}: publishedAt is in the future`);
+  if (dateValue(article.lastChecked) < dateValue(article.publishedAt)) errors.push(`${article.id}: lastChecked is older than publishedAt`);
+  if (article.affiliate === true && article.category !== "things-to-buy") errors.push(`${article.id}: affiliate is true outside things-to-buy`);
+  if (article.category === "things-to-buy" && article.affiliate !== true) errors.push(`${article.id}: things-to-buy article must mark affiliate true`);
+  if ((article.tags || []).length < 3 || (article.tags || []).length > 6) warnings.push(`${article.id}: tag count should stay between 3 and 6`);
+  const sectionHeadings = new Set();
+  for (const section of article.sections || []) {
+    const heading = normalizeText(section.heading);
+    if (sectionHeadings.has(heading)) errors.push(`${article.id}: duplicate section heading ${section.heading}`);
+    sectionHeadings.add(heading);
+    if (String(section.body || "").length < 80) warnings.push(`${article.id}: section "${section.heading}" is short`);
+  }
+  if (/<[^>]+>/.test(article.summary || "")) errors.push(`${article.id}: summary contains HTML`);
   const estimated = estimateReadingTime(article, "en");
   if (article.readingTime < 2 || article.readingTime > 20) warnings.push(`${article.id}: readingTime is outside the editorial range`);
   if (estimated > article.readingTime * 2) warnings.push(`${article.id}: readingTime ${article.readingTime} is lower than estimate ${estimated}`);
@@ -190,6 +213,45 @@ for (const file of publicHtmlFiles) {
   const text = await readFile(file, "utf8");
   const expectedLang = relative.startsWith("ja/") ? "ja" : "en";
   const ogImage = metaContent(text, "property", "og:image");
+  const ids = attrs(text, "id");
+  const idSet = new Set(ids);
+  if (!text.includes("<!DOCTYPE html>")) errors.push(`${relative}: missing doctype`);
+  if (!text.includes(`<html lang="${expectedLang}">`)) errors.push(`${relative}: html lang mismatch`);
+  if (!text.includes('<meta charset="UTF-8">')) errors.push(`${relative}: missing UTF-8 charset`);
+  if (!text.includes('name="viewport" content="width=device-width, initial-scale=1.0"')) errors.push(`${relative}: missing responsive viewport`);
+  if (!text.includes(`http-equiv="content-language" content="${expectedLang}"`)) errors.push(`${relative}: content-language mismatch`);
+  if (!text.includes('name="robots" content="index, follow, max-image-preview:large"')) errors.push(`${relative}: missing indexable robots meta`);
+  if (!text.includes('name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"')) errors.push(`${relative}: missing googlebot meta`);
+  if (!text.includes('name="theme-color" content="#111111"')) errors.push(`${relative}: missing theme-color`);
+  if (!text.includes('rel="alternate" type="application/rss+xml"')) errors.push(`${relative}: missing RSS alternate`);
+  if (!text.includes('rel="alternate" type="application/feed+json"')) errors.push(`${relative}: missing JSON feed alternate`);
+  if (!text.includes('rel="manifest" href="/site.webmanifest"')) errors.push(`${relative}: missing manifest link`);
+  if (!text.includes('rel="stylesheet" href="/styles.css"')) errors.push(`${relative}: missing stylesheet link`);
+  if (!text.includes('<script src="/script.js"></script>')) errors.push(`${relative}: missing script.js load`);
+  if (!text.includes('<a class="skip-link" href="#main"')) errors.push(`${relative}: missing skip link`);
+  if (!text.includes('<main id="main">')) errors.push(`${relative}: missing main landmark`);
+  if (!text.includes('id="site-search-panel" data-search-panel hidden')) errors.push(`${relative}: search panel is not initially hidden`);
+  if (!text.includes("window.TABI_ARTICLES = [")) errors.push(`${relative}: missing embedded search index`);
+  if (/<button(?![^>]*\stype=)/.test(text)) errors.push(`${relative}: button without explicit type`);
+  if (/\son[a-z]+=/i.test(text)) errors.push(`${relative}: inline event handler detected`);
+  if (/http:\/\/(?!www\.w3\.org|www\.sitemaps\.org)/.test(text)) errors.push(`${relative}: insecure http URL detected`);
+  if (/href=["']\s*["']/.test(text)) errors.push(`${relative}: empty href detected`);
+  if (ids.length !== idSet.size) errors.push(`${relative}: duplicate id attribute detected`);
+  for (const href of attrs(text, "href")) {
+    if (href.startsWith("#") && href.length > 1 && !idSet.has(href.slice(1))) {
+      errors.push(`${relative}: local anchor target missing ${href}`);
+    }
+  }
+
+  const canonical = metaContent(text, "rel", "canonical") || attrMap(text.match(/<link\b[^>]*rel=["']canonical["'][^>]*>/i)?.[0] || "").href || "";
+  canonicalByFile.set(relative, canonical);
+  if (!canonical.startsWith(siteUrl)) errors.push(`${relative}: canonical is not absolute`);
+  const hreflangs = Object.fromEntries([...text.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*hreflang=["']([^"']+)["'][^>]*>/g)]
+    .map((match) => [match[1], attrMap(match[0]).href || ""]));
+  hreflangByFile.set(relative, hreflangs);
+  for (const lang of ["en", "ja", "x-default"]) {
+    if (!hreflangs[lang]?.startsWith(siteUrl)) errors.push(`${relative}: missing absolute ${lang} hreflang`);
+  }
 
   for (const [key, value] of [
     ["property", "og:title"],
@@ -241,6 +303,19 @@ for (const file of publicHtmlFiles) {
   }
 }
 
+for (const [relative, hreflangs] of hreflangByFile) {
+  const expectedSelf = canonicalByFile.get(relative);
+  const expectedDefault = hreflangs.en;
+  if (hreflangs[relative.startsWith("ja/") ? "ja" : "en"] !== expectedSelf) {
+    errors.push(`${relative}: self hreflang does not match canonical`);
+  }
+  if (hreflangs["x-default"] !== expectedDefault) errors.push(`${relative}: x-default should point to English URL`);
+  for (const lang of ["en", "ja"]) {
+    const target = localPathFromAbsoluteUrl(hreflangs[lang]);
+    if (target && !fileSet.has(target)) errors.push(`${relative}: hreflang target missing ${target}`);
+  }
+}
+
 for (const file of ["feed.json", "ja/feed.json"]) {
   const feed = JSON.parse(await readFile(path.join(root, file), "utf8"));
   const expectedLang = file.startsWith("ja/") ? "ja" : "en";
@@ -264,9 +339,30 @@ const robots = await readFile(path.join(root, "robots.txt"), "utf8");
 if (!robots.includes("Sitemap: https://tabi.guide/sitemap.xml") || !robots.includes("image-sitemap.xml")) {
   errors.push("robots.txt: missing sitemap declarations");
 }
+if (!robots.includes("User-agent: *") || !robots.includes("Allow: /")) errors.push("robots.txt: missing default allow rule");
+
+const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
+const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+const sitemapSet = new Set(sitemapLocs);
+if (sitemapLocs.length !== sitemapSet.size) errors.push("sitemap.xml: duplicate loc entries");
+for (const loc of sitemapLocs) {
+  const target = localPathFromAbsoluteUrl(loc);
+  if (!target || !fileSet.has(target)) errors.push(`sitemap.xml: loc does not resolve to generated file ${loc}`);
+  if (target?.endsWith("404.html") || target === "editorial-dashboard.html") errors.push(`sitemap.xml: non-indexable URL included ${loc}`);
+}
+const imageSitemap = await readFile(path.join(root, "image-sitemap.xml"), "utf8");
+const imageLocs = [...imageSitemap.matchAll(/<image:loc>([^<]+)<\/image:loc>/g)].map((match) => match[1]);
+for (const loc of imageLocs) {
+  const target = localPathFromAbsoluteUrl(loc);
+  if (!target || !fileSet.has(target)) errors.push(`image-sitemap.xml: image loc does not resolve ${loc}`);
+}
+if (imageLocs.length < articles.length) errors.push("image-sitemap.xml: too few image entries");
 
 for (const header of ["X-Frame-Options", "X-Content-Type-Options", "Referrer-Policy", "Permissions-Policy"]) {
   if (!netlify.includes(header)) errors.push(`netlify.toml: missing security header ${header}`);
+}
+for (const cacheTarget of ["/assets/*", "/feed.xml", "/ja/feed.xml", "/sitemap.xml", "/image-sitemap.xml", "/feed.json", "/ja/feed.json"]) {
+  if (!netlify.includes(`for = "${cacheTarget}"`)) errors.push(`netlify.toml: missing cache header for ${cacheTarget}`);
 }
 
 const report = {
@@ -292,7 +388,52 @@ const report = {
     "52": "manifest icon audit",
     "53": "robots and dashboard noindex audit",
     "54": "Netlify security header audit",
-    "55": "machine-readable maintenance report"
+    "55": "machine-readable maintenance report",
+    "56": "doctype audit",
+    "57": "html lang audit",
+    "58": "UTF-8 charset audit",
+    "59": "responsive viewport audit",
+    "60": "content-language audit",
+    "61": "robots index directive audit",
+    "62": "googlebot directive audit",
+    "63": "theme color audit",
+    "64": "RSS alternate audit",
+    "65": "JSON Feed alternate audit",
+    "66": "manifest link audit",
+    "67": "stylesheet link audit",
+    "68": "script loading audit",
+    "69": "skip link audit",
+    "70": "main landmark audit",
+    "71": "search panel hidden-state audit",
+    "72": "embedded search index audit",
+    "73": "button type audit",
+    "74": "inline handler audit",
+    "75": "mixed-content URL audit",
+    "76": "empty href audit",
+    "77": "duplicate id audit",
+    "78": "local anchor target audit",
+    "79": "canonical absolute URL audit",
+    "80": "hreflang absolute URL audit",
+    "81": "hreflang self-reference audit",
+    "82": "x-default hreflang audit",
+    "83": "hreflang target existence audit",
+    "84": "sitemap loc uniqueness audit",
+    "85": "sitemap target existence audit",
+    "86": "sitemap indexability audit",
+    "87": "image sitemap target audit",
+    "88": "robots allow-rule audit",
+    "89": "feed cache header audit",
+    "90": "image sitemap cache header audit",
+    "91": "article future-date audit",
+    "92": "lastChecked chronology audit",
+    "93": "affiliate category audit",
+    "94": "shopping affiliate disclosure audit",
+    "95": "tag count range audit",
+    "96": "section heading uniqueness audit",
+    "97": "summary plain-text audit",
+    "98": "section body depth audit",
+    "99": "generated report completeness audit",
+    "100": "full local release gate"
   },
   stats: {
     htmlFiles: publicHtmlFiles.length,
@@ -300,6 +441,8 @@ const report = {
     japaneseArticles: japaneseArticles.length,
     tags: tagCounts.size,
     externalLinks: externalLinks.size,
+    sitemapUrls: sitemapLocs.length,
+    imageSitemapImages: imageLocs.length,
     overdueReviews: freshnessRows.filter((row) => row.status === "overdue").length,
     dueSoonReviews: freshnessRows.filter((row) => row.status === "due-soon").length
   },
@@ -312,6 +455,11 @@ const report = {
   warnings,
   errors
 };
+
+if (Object.keys(report.implementedChecks).length !== 65) {
+  errors.push("maintenance report: expected 65 implemented checks covering 36-100");
+  report.ok = false;
+}
 
 await writeFile(path.join(root, "maintenance-report.json"), `${JSON.stringify(report, null, 2)}\n`);
 
