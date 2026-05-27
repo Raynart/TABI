@@ -17,10 +17,13 @@ The site is generated locally and committed as static HTML. It does not require 
 ```text
 articles.json          English article source data
 articles.ja.json       Japanese article translations
+content/articles/      English article source data split by category
+content/articles.ja/   Japanese article overrides split by category
 site-data.json         Topics, areas, itineraries, planning guides, glossary terms
 static.ja.json         Japanese translations for static site-data content
 content-policy.json    Source policy, reuse rules, and article source metadata defaults
 site.config.json       Site name, URL, navigation, and category config
+schemas/               JSON schema references for content files
 ```
 
 ## Generated Output
@@ -47,8 +50,10 @@ ja/feed.xml            Japanese RSS feed
 feed.json              English JSON feed
 ja/feed.json           Japanese JSON feed
 sitemap.xml            Bilingual sitemap with hreflang alternates
+image-sitemap.xml      Image sitemap for article hero images
 robots.txt             Search crawler rules
 llms.txt               LLM-readable site summary
+editorial-dashboard.html  Noindex static editorial maintenance dashboard
 ```
 
 ## Generate Site
@@ -80,14 +85,20 @@ Equivalent npm shortcuts are also available:
 ```powershell
 npm run generate
 npm run validate
+npm run validate:data
 npm run health
 npm run report
+npm run split:content
+npm run new:article -- article-slug travel-guide
+npm run audit:content
+npm run audit:i18n
 npm run check
 npm run visual
 npm run serve
 ```
 
 `npm run report` prints a compact maintenance report for review. `npm run visual` captures desktop and mobile screenshots for representative English and Japanese pages into `screenshots/visual-check/`; run `npm run serve` first if a local server is not already running.
+`npm run split:content` refreshes the category-split article files from the canonical JSON files. `npm run new:article` creates a local draft article template in `content/articles/`.
 
 ## Editorial Algorithms
 

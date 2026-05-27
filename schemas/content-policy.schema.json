@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TABI Content Policy",
+  "type": "object",
+  "required": ["defaultArticleMeta", "trustSummary", "editorialPrinciples", "correctionPolicy", "allowedSourceTypes", "disallowedSourceTypes", "reuseRules"],
+  "properties": {
+    "defaultArticleMeta": { "type": "object" },
+    "trustSummary": { "type": "object" },
+    "editorialPrinciples": { "type": "array", "minItems": 3 },
+    "correctionPolicy": { "type": "array", "minItems": 3 },
+    "allowedSourceTypes": { "type": "array", "minItems": 3 },
+    "disallowedSourceTypes": { "type": "array", "minItems": 3 },
+    "reuseRules": { "type": "array", "minItems": 3 }
+  }
+}

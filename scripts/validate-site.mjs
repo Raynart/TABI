@@ -47,7 +47,7 @@ function fail(errors) {
 
 const files = await walk(root);
 const fileSet = new Set(files.map(rel));
-const htmlFiles = files.filter((file) => file.endsWith(".html") && !rel(file).endsWith("tabi-mockup.html"));
+const htmlFiles = files.filter((file) => file.endsWith(".html") && !rel(file).endsWith("tabi-mockup.html") && !rel(file).endsWith("editorial-dashboard.html"));
 const errors = [];
 const articles = JSON.parse(await readFile(path.join(root, "articles.json"), "utf8"));
 const policy = JSON.parse(await readFile(path.join(root, "content-policy.json"), "utf8"));
@@ -147,8 +147,15 @@ const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
 if (!sitemap.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"')) {
   errors.push("sitemap.xml: missing xhtml namespace");
 }
+if (!sitemap.includes("<changefreq>") || !sitemap.includes("<priority>")) {
+  errors.push("sitemap.xml: missing changefreq or priority");
+}
 if ((sitemap.match(/xhtml:link/g) || []).length < htmlFiles.length) {
   errors.push("sitemap.xml: hreflang alternate count is unexpectedly low");
+}
+const imageSitemap = await readFile(path.join(root, "image-sitemap.xml"), "utf8");
+if (!imageSitemap.includes("xmlns:image") || !imageSitemap.includes("<image:image>")) {
+  errors.push("image-sitemap.xml: missing image sitemap entries");
 }
 
 for (const feed of ["feed.json", "ja/feed.json"]) {

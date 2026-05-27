@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TABI Site Data",
+  "type": "object",
+  "required": ["topics", "areas", "itineraries", "planning", "glossary"],
+  "properties": {
+    "topics": { "type": "array", "minItems": 1 },
+    "areas": { "type": "array", "minItems": 1 },
+    "itineraries": { "type": "array", "minItems": 1 },
+    "planning": { "type": "array", "minItems": 1 },
+    "glossary": { "type": "array", "minItems": 1 }
+  }
+}

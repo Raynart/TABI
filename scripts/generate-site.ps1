@@ -2,8 +2,28 @@
 
 $Root = Resolve-Path (Join-Path $PSScriptRoot "..")
 $Config = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "site.config.json") | ConvertFrom-Json
-$BaseArticles = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "articles.json") | ConvertFrom-Json
-$JapaneseArticleOverrides = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "articles.ja.json") | ConvertFrom-Json
+
+function Read-JsonArray([string]$FilePath) {
+  $Data = Get-Content -Raw -Encoding UTF8 $FilePath | ConvertFrom-Json
+  return @($Data)
+}
+
+function Read-SplitJsonArray([string]$FolderPath, [string]$FallbackFilePath) {
+  if (Test-Path $FolderPath) {
+    $Files = @(Get-ChildItem -Path $FolderPath -Filter "*.json" | Sort-Object Name)
+    if ($Files.Count -gt 0) {
+      $Items = @()
+      foreach ($File in $Files) {
+        $Items += Read-JsonArray $File.FullName
+      }
+      return @($Items)
+    }
+  }
+  return Read-JsonArray $FallbackFilePath
+}
+
+$BaseArticles = Read-SplitJsonArray (Join-Path $Root "content/articles") (Join-Path $Root "articles.json")
+$JapaneseArticleOverrides = Read-SplitJsonArray (Join-Path $Root "content/articles.ja") (Join-Path $Root "articles.ja.json")
 $JapaneseStatic = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "static.ja.json") | ConvertFrom-Json
 $ContentPolicy = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "content-policy.json") | ConvertFrom-Json
 $Articles = $BaseArticles
@@ -1819,9 +1839,22 @@ $(New-Newsletter)
       @{ "@type" = "ListItem"; position = 3; name = $Article.title; item = SiteUrl (Get-ArticleUrl $Article) }
     )
   }
+  $FaqJsonLd = @{
+    "@type" = "FAQPage"
+    mainEntity = @($Sections | Select-Object -First 3 | ForEach-Object {
+      @{
+        "@type" = "Question"
+        name = $_.heading
+        acceptedAnswer = @{
+          "@type" = "Answer"
+          text = $_.body
+        }
+      }
+    })
+  }
   $JsonLd = @{
     "@context" = "https://schema.org"
-    "@graph" = @($ArticleJsonLd, $BreadcrumbJsonLd)
+    "@graph" = @($ArticleJsonLd, $BreadcrumbJsonLd, $FaqJsonLd)
   } | ConvertTo-Json -Depth 10 -Compress
 
   return New-Layout $SeoTitle $SeoDescription (Get-ArticleUrl $Article) $Main $Article.category $Article.image $JsonLd
@@ -2008,7 +2041,20 @@ $(New-AlgorithmNote $Algorithm)
 </section>
 $(New-Newsletter)
 "@
-  $JsonLd = New-CollectionStructuredData "CollectionPage" "$($AreaDisplay.title) Travel Guide" $AreaDisplay.description (Get-AreaUrl $Area.slug) $Items
+  $AreaPageJsonLd = New-CollectionStructuredData "CollectionPage" "$($AreaDisplay.title) Travel Guide" $AreaDisplay.description (Get-AreaUrl $Area.slug) $Items
+  $AreaParsedJsonLd = $AreaPageJsonLd | ConvertFrom-Json
+  $DestinationJsonLd = @{
+    "@type" = "TouristDestination"
+    name = $AreaDisplay.title
+    description = $AreaDisplay.description
+    url = SiteUrl (Get-AreaUrl $Area.slug)
+    image = SiteUrl $Area.image
+    touristType = @("Cultural travelers", "Independent travelers")
+  }
+  $JsonLd = @{
+    "@context" = "https://schema.org"
+    "@graph" = @($AreaParsedJsonLd."@graph") + @($DestinationJsonLd)
+  } | ConvertTo-Json -Depth 12 -Compress
   return New-Layout "$($AreaDisplay.title) - TABI" $AreaDisplay.description (Get-AreaUrl $Area.slug) $Main "" $Area.image $JsonLd
 }
 
@@ -2234,6 +2280,19 @@ function New-PlanningGuidePage($Guide) {
   }
   $SiblingCards += New-UtilityCard $(if (Is-Japanese) { "用語集" } else { "Glossary" }) $(if (Is-Japanese) { "旅の言葉" } else { "Travel Terms" }) $(if (Is-Japanese) { "日本旅行でよく出てくる言葉を短く説明します。" } else { "Quick explanations for common Japan travel words." }) "/glossary.html"
   $PlanningLabel = if (Is-Japanese) { "旅の準備" } else { "Planning" }
+  $HowToSteps = @()
+  $StepPosition = 1
+  foreach ($Block in @($GuideDisplay.blocks)) {
+    foreach ($Item in @($Block.items)) {
+      $HowToSteps += @{
+        "@type" = "HowToStep"
+        position = $StepPosition
+        name = $Block.heading
+        text = $Item
+      }
+      $StepPosition += 1
+    }
+  }
   $Main = @"
 <section class="page-hero">
   $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = $PlanningLabel; url = "/planning/index.html" }, [pscustomobject]@{ label = $GuideDisplay.title; url = "" }))
@@ -2257,6 +2316,7 @@ $(New-Newsletter)
     inLanguage = $Script:CurrentLang
     workTranslation = New-LanguageAlternates (Get-PlanningUrl $Guide.slug)
     url = SiteUrl (Get-PlanningUrl $Guide.slug)
+    step = $HowToSteps
   } | ConvertTo-Json -Depth 6 -Compress
   return New-Layout "$($GuideDisplay.title) - TABI" $GuideDisplay.description (Get-PlanningUrl $Guide.slug) $Main "" "/assets/images/japanese-goods.png" $JsonLd
 }
@@ -2578,6 +2638,8 @@ function New-Sitemap {
   }
   Set-RenderLanguage $OriginalLang
   $Items = foreach ($Url in $Urls) {
+    $Priority = if ($Url.basePath -eq "/") { "1.0" } elseif ($Url.basePath -like "/articles/*") { "0.8" } else { "0.6" }
+    $ChangeFreq = if ($Url.basePath -like "/articles/*") { "monthly" } else { "weekly" }
     @"
   <url>
     <loc>$(Html (SiteUrl $Url.loc))</loc>
@@ -2585,12 +2647,41 @@ function New-Sitemap {
     <xhtml:link rel="alternate" hreflang="ja" href="$(Html (SiteUrl (LocalizePath $Url.basePath "ja")))" />
     <xhtml:link rel="alternate" hreflang="x-default" href="$(Html (SiteUrl (LocalizePath $Url.basePath "en")))" />
     <lastmod>$($Url.lastmod)</lastmod>
+    <changefreq>$ChangeFreq</changefreq>
+    <priority>$Priority</priority>
   </url>
 "@
   }
   return @"
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+$($Items -join "`n")
+</urlset>
+"@
+}
+
+function New-ImageSitemap {
+  $OriginalLang = $Script:CurrentLang
+  $Items = @()
+  foreach ($Lang in @("en", "ja")) {
+    Set-RenderLanguage $Lang
+    $Items += foreach ($Article in $Articles) {
+      @"
+  <url>
+    <loc>$(Html (SiteUrl (Get-ArticleUrl $Article)))</loc>
+    <image:image>
+      <image:loc>$(Html (SiteUrl $Article.image))</image:loc>
+      <image:title>$(Html $Article.title)</image:title>
+      <image:caption>$(Html $Article.imageAlt)</image:caption>
+    </image:image>
+  </url>
+"@
+    }
+  }
+  Set-RenderLanguage $OriginalLang
+  return @"
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 $($Items -join "`n")
 </urlset>
 "@
@@ -2644,7 +2735,8 @@ Write-LanguagePages "en"
 Write-LanguagePages "ja"
 Set-RenderLanguage "en"
 Write-Page "sitemap.xml" (New-Sitemap)
-Write-Page "robots.txt" "User-agent: *`nAllow: /`nSitemap: $(SiteUrl '/sitemap.xml')`n"
+Write-Page "image-sitemap.xml" (New-ImageSitemap)
+Write-Page "robots.txt" "User-agent: *`nAllow: /`nSitemap: $(SiteUrl '/sitemap.xml')`nSitemap: $(SiteUrl '/image-sitemap.xml')`n"
 Write-Page "site.webmanifest" (New-WebManifest)
 Write-Page "llms.txt" (New-LlmsText)
 

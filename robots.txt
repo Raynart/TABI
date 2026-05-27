@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://tabi.guide/sitemap.xml
+Sitemap: https://tabi.guide/image-sitemap.xml

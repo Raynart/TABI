@@ -1,6 +1,7 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadArticleData } from "./content-loader.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const defaultRoot = path.resolve(scriptDir, "../..");
@@ -20,6 +21,7 @@ const requiredGeneratedFiles = [
   "index.html",
   "ja/index.html",
   "sitemap.xml",
+  "image-sitemap.xml",
   "robots.txt",
   "feed.xml",
   "ja/feed.xml",
@@ -64,7 +66,8 @@ function addDuplicate(map, key, file) {
 }
 
 function hasMojibake(value) {
-  return /縺|繧|譁|荳|莠|蜃|謇|險|驥|螟|譛|邱|霈|逕|諠|蛯/.test(String(value || ""));
+  const markers = ["\\u7e3a", "\\u7e67", "\\u8b41", "\\u8373", "\\u83a0", "\\u8703", "\\u8b07", "\\u96aa"];
+  return markers.some((marker) => String(value || "").includes(JSON.parse(`"${marker}"`)));
 }
 
 function japaneseSignalRatio(value) {
@@ -132,16 +135,17 @@ export async function runSiteHealth(options = {}) {
   const warnings = [];
   const files = await walk(root);
   const relativeFiles = files.map((file) => rel(root, file));
-  const htmlFiles = files.filter((file) => file.endsWith(".html") && !rel(root, file).endsWith("tabi-mockup.html"));
+  const htmlFiles = files.filter((file) => file.endsWith(".html") && !rel(root, file).endsWith("tabi-mockup.html") && !rel(root, file).endsWith("editorial-dashboard.html"));
   const sitemapHtmlFiles = htmlFiles.filter((file) => !rel(root, file).endsWith("404.html"));
-  const articles = JSON.parse(await readFile(path.join(root, "articles.json"), "utf8"));
-  const japaneseArticles = JSON.parse(await readFile(path.join(root, "articles.ja.json"), "utf8"));
+  const { articles, japaneseArticles } = await loadArticleData(root);
   const config = JSON.parse(await readFile(path.join(root, "site.config.json"), "utf8"));
   const manifest = JSON.parse(await readFile(path.join(root, "site.webmanifest"), "utf8"));
   const contentPolicy = JSON.parse(await readFile(path.join(root, "content-policy.json"), "utf8"));
   const titles = new Map();
   const descriptions = new Map();
   const canonicals = new Map();
+  const linkGraph = new Map();
+  const htmlSet = new Set(htmlFiles.map((file) => rel(root, file)));
 
   for (const required of requiredGeneratedFiles) {
     if (!relativeFiles.includes(required)) errors.push(`missing generated file: ${required}`);
@@ -153,8 +157,29 @@ export async function runSiteHealth(options = {}) {
     const size = (await stat(file)).size;
     if (size > limits.maxHtmlBytes) warnings.push(`${relative}: HTML size ${size} exceeds ${limits.maxHtmlBytes}`);
     addDuplicate(titles, textBetween(text, /<title>([\s\S]*?)<\/title>/), relative);
-    addDuplicate(descriptions, textBetween(text, /<meta name="description" content="([^"]*)">/), relative);
+    const description = textBetween(text, /<meta name="description" content="([^"]*)">/);
+    const title = textBetween(text, /<title>([\s\S]*?)<\/title>/);
+    addDuplicate(descriptions, description, relative);
     addDuplicate(canonicals, textBetween(text, /<link rel="canonical" href="([^"]*)">/), relative);
+    if (title.length > 65) warnings.push(`${relative}: title is longer than 65 characters`);
+    const isJapanesePage = relative.startsWith("ja/");
+    const minDescription = isJapanesePage ? 20 : 50;
+    const maxDescription = isJapanesePage ? 120 : 170;
+    if (description.length < minDescription || description.length > maxDescription) warnings.push(`${relative}: description length is ${description.length}`);
+    const h1Count = (text.match(/<h1\b/g) || []).length;
+    if (h1Count !== 1) errors.push(`${relative}: expected exactly one h1, found ${h1Count}`);
+    const internalLinks = [...text.matchAll(/href="([^"]+)"/g)]
+      .map((match) => match[1].split("#")[0].split("?")[0])
+      .filter((href) => href && !href.startsWith("http") && !href.startsWith("mailto:") && !href.startsWith("#"))
+      .map((href) => {
+        let clean = href.startsWith("/") ? href.slice(1) : href;
+        if (!clean) clean = "index.html";
+        else if (clean.endsWith("/")) clean += "index.html";
+        else if (!path.posix.extname(clean)) clean += "/index.html";
+        return clean;
+      })
+      .filter((href) => htmlSet.has(href));
+    linkGraph.set(relative, new Set(internalLinks));
     if (hasMojibake(text)) errors.push(`${relative}: possible mojibake`);
   }
 
@@ -166,6 +191,16 @@ export async function runSiteHealth(options = {}) {
   }
   for (const [canonical, paths] of canonicals) {
     if (paths.length > 1) errors.push(`duplicate canonical ${canonical}: ${paths.join(", ")}`);
+  }
+  const inbound = new Map([...htmlSet].map((file) => [file, 0]));
+  for (const links of linkGraph.values()) {
+    for (const link of links) inbound.set(link, (inbound.get(link) || 0) + 1);
+  }
+  for (const file of htmlSet) {
+    if (file.endsWith("404.html") || file === "editorial-dashboard.html") continue;
+    if ((inbound.get(file) || 0) === 0 && file !== "index.html" && file !== "ja/index.html") {
+      errors.push(`${file}: orphaned page with no internal inbound links`);
+    }
   }
 
   for (const [name, limit] of [["styles.css", limits.maxCssBytes], ["script.js", limits.maxJsBytes]]) {

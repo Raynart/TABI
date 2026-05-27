@@ -7,8 +7,14 @@
   "scripts": {
     "generate": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/generate-site.ps1",
     "validate": "node ./scripts/validate-site.mjs",
+    "validate:data": "node ./scripts/validate-data.mjs",
     "health": "node ./scripts/site-health.mjs",
     "report": "node ./scripts/health-report.mjs",
+    "dashboard": "node ./scripts/editorial-dashboard.mjs",
+    "split:content": "node ./scripts/split-content.mjs",
+    "new:article": "node ./scripts/new-article.mjs",
+    "audit:content": "node ./scripts/site-health.mjs",
+    "audit:i18n": "node ./scripts/validate-data.mjs",
     "check": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/check-site.ps1",
     "visual": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/visual-check.ps1",
     "serve": "python -m http.server 4200 --bind 127.0.0.1"
