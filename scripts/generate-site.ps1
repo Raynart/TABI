@@ -86,6 +86,8 @@ $CategoryLabelsJa = @{
   "food" = "食"
   "things-to-buy" = "買い物"
   "hidden-gems" = "知られざる場所"
+  "nature-outdoors" = "自然とアウトドア"
+  "stays" = "宿と滞在"
 }
 $TagLabelsEn = @{
   "aesthetics" = "Aesthetics"; "art" = "Art"; "breakfast" = "Breakfast"; "budget" = "Budget"; "ceramics" = "Ceramics"; "cherry-blossoms" = "Cherry Blossoms"; "craft" = "Craft"; "design" = "Design"; "drugstore" = "Drugstore"; "fashion" = "Fashion"; "first-time" = "First-Time Japan"; "food" = "Food"; "forest" = "Forest"; "hanami" = "Hanami"; "heritage" = "Heritage"; "hiking" = "Hiking"; "islands" = "Islands"; "itinerary" = "Itinerary"; "izakaya" = "Izakaya"; "kintsugi" = "Kintsugi"; "kiso-valley" = "Kiso Valley"; "kitchen-knives" = "Kitchen Knives"; "konbini" = "Konbini"; "kyoto" = "Kyoto"; "language" = "Language"; "local-customs" = "Local Customs"; "local-food" = "Local Food"; "matcha" = "Matcha"; "menus" = "Menus"; "mount-fuji" = "Mount Fuji"; "nakasendo" = "Nakasendo"; "nightlife" = "Nightlife"; "osaka" = "Osaka"; "philosophy" = "Philosophy"; "planning" = "Planning"; "quiet-travel" = "Quiet Travel"; "ryokan" = "Ryokan"; "setouchi" = "Setouchi"; "shopping" = "Shopping"; "shrines" = "Shrines"; "skincare" = "Skincare"; "slow-travel" = "Slow Travel"; "souvenirs" = "Souvenirs"; "spring" = "Spring"; "street-food" = "Street Food"; "summer" = "Summer"; "tea" = "Tea"; "tokyo" = "Tokyo"; "travel-tips" = "Travel Tips"; "wabi-sabi" = "Wabi-Sabi"; "walking" = "Walking"; "where-to-stay" = "Where to Stay"; "yakushima" = "Yakushima"; "yukata" = "Yukata"
@@ -392,7 +394,7 @@ function Copy-ArticleForLanguage($Article, [string]$Lang) {
       $Copy[$PropertyName] = @($Override[0].$PropertyName)
     }
   }
-  foreach ($PropertyName in @("seoTitle", "seoDescription", "audience", "searchAliases")) {
+  foreach ($PropertyName in @("seoTitle", "seoDescription", "audience", "searchAliases", "sourceNote")) {
     if ($Override[0].PSObject.Properties.Name -contains $PropertyName) {
       $Copy[$PropertyName] = $Override[0].$PropertyName
     }
@@ -514,6 +516,8 @@ function Get-CategoryPriority([string]$Category, [string]$ContextCategory) {
   switch ($Category) {
     "travel-guide" { return 10 }
     "hidden-gems" { return 9 }
+    "nature-outdoors" { return 9 }
+    "stays" { return 8 }
     "food" { return 8 }
     "culture" { return 7 }
     "things-to-buy" { return 6 }
@@ -970,11 +974,7 @@ $RecentlyViewed
     <div>
       <p class="footer-col-title">$(Html (T "explore"))</p>
       <ul class="footer-links">
-        <li><a href="$(Get-CategoryUrl "travel-guide")">$(Html (Get-CategoryLabel "travel-guide"))</a></li>
-        <li><a href="$(Get-CategoryUrl "culture")">$(Html (Get-CategoryLabel "culture"))</a></li>
-        <li><a href="$(Get-CategoryUrl "food")">$(Html (Get-CategoryLabel "food"))</a></li>
-        <li><a href="$(Get-CategoryUrl "hidden-gems")">$(Html (Get-CategoryLabel "hidden-gems"))</a></li>
-        <li><a href="$(Get-CategoryUrl "things-to-buy")">$(Html (Get-CategoryLabel "things-to-buy"))</a></li>
+        $(@($Config.categories | ForEach-Object { '<li><a href="{0}">{1}</a></li>' -f (Get-CategoryUrl $_.slug), (Html (Get-CategoryLabel $_.slug)) }) -join "`n")
         <li><a href="$(Href "/areas/index.html")">$(if (Is-Japanese) { "地域ガイド" } else { "Area Guides" })</a></li>
       </ul>
     </div>
@@ -1194,7 +1194,7 @@ function Get-ArticleSourceMeta($Article) {
   $Default = $ContentPolicy.defaultArticleMeta
   $DefaultJa = $ContentPolicy.defaultArticleMetaJa
   $SourceNote = if ($Article.PSObject.Properties.Name -contains "sourceNote") { $Article.sourceNote } else { $Default.sourceNote }
-  if (Is-Japanese -and $SourceNote -eq $Default.sourceNote -and $null -ne $DefaultJa) {
+  if (Is-Japanese -and $null -ne $DefaultJa -and ($SourceNote -eq $Default.sourceNote -or $SourceNote -match "^(Created from|Original TABI editorial)")) {
     $SourceNote = $DefaultJa.sourceNote
   }
   return [pscustomobject]@{
@@ -1505,6 +1505,8 @@ function Get-CategoryDescription([string]$Slug, [string]$Label) {
       "food" { return "居酒屋、メニュー、コンビニ朝食、大阪の食べ歩きまで、旅の記憶を作る食の入口です。" }
       "things-to-buy" { return "包丁、抹茶、浴衣、ドラッグストア商品など、持ち帰ってからも使える買い物を選びます。" }
       "hidden-gems" { return "有名さよりも、静けさ、地域の文脈、歩いた後に残る感覚を重視した場所のガイドです。" }
+      "nature-outdoors" { return "森、海、山、島、里山を、無理なく安全に楽しむための自然とアウトドアのガイドです。" }
+      "stays" { return "旅館、民宿、町家、寺宿、農泊など、泊まる時間そのものを旅の体験として考えるガイドです。" }
     }
   }
   switch ($Slug) {
@@ -1513,6 +1515,8 @@ function Get-CategoryDescription([string]$Slug, [string]$Label) {
     "food" { return "Food guides for counters, menus, convenience-store mornings, Osaka eating days, and the habits that make meals easier." }
     "things-to-buy" { return "Shopping guides for practical, culturally grounded things worth bringing home from Japan." }
     "hidden-gems" { return "Quieter Japan guides selected for context, restraint, and places that do not need to become crowded checklists." }
+    "nature-outdoors" { return "Nature and outdoor guides for forests, coasts, mountains, islands, and rural landscapes with safer, slower planning." }
+    "stays" { return "Stay guides for ryokan, minshuku, machiya, temple lodgings, farm stays, and nights that become part of the trip." }
   }
   return if (Is-Japanese) { "日本の$Labelに関するTABIのガイドをまとめています。" } else { "Curated TABI guides for $($Label.ToLowerInvariant()) in Japan." }
 }
@@ -1936,7 +1940,8 @@ $(New-AlgorithmNote $Algorithm)
 $(New-Newsletter)
 "@
   $JsonLd = New-CollectionStructuredData "CollectionPage" $Title $Description (Get-TagUrl $Tag) $Items
-  return New-Layout "$Title - TABI" $Description (Get-TagUrl $Tag) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+  $PageTitle = if (Is-Japanese) { "タグ: $Title - TABI" } else { "$Title - TABI" }
+  return New-Layout $PageTitle $Description (Get-TagUrl $Tag) $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
 function New-TopicPage($Topic) {

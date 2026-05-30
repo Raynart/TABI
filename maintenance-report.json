@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-05-27T11:29:57.436Z",
+  "generatedAt": "2026-05-30T12:51:09.450Z",
   "implementedChecks": {
     "36": "content freshness calendar",
     "37": "content gap report",
@@ -71,14 +71,14 @@
     "102": "legal policy indexability audit"
   },
   "stats": {
-    "htmlFiles": 220,
-    "articles": 18,
-    "japaneseArticles": 18,
-    "tags": 54,
+    "htmlFiles": 452,
+    "articles": 68,
+    "japaneseArticles": 68,
+    "tags": 118,
     "externalLinks": 0,
     "legalPages": 6,
-    "sitemapUrls": 218,
-    "imageSitemapImages": 36,
+    "sitemapUrls": 450,
+    "imageSitemapImages": 136,
     "overdueReviews": 0,
     "dueSoonReviews": 0
   },
@@ -137,6 +137,125 @@
       "category": "travel-guide",
       "lastChecked": "2026-05-24",
       "nextReview": "2026-08-21",
+      "status": "ok"
+    },
+    {
+      "id": "best-japanese-cities-for-first-time-solo-travel",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-08-25",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-choose-an-onsen-ryokan-in-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-08-25",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-enjoy-japan-on-a-rainy-day",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-08-25",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-plan-a-cherry-blossom-trip-to-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-08-25",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-plan-a-restful-weekend-trip-in-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-08-25",
+      "status": "ok"
+    },
+    {
+      "id": "japan-travel-disaster-preparedness-checklist",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-08-25",
+      "status": "ok"
+    },
+    {
+      "id": "shinkansen-comfort-checklist",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-08-25",
+      "status": "ok"
+    },
+    {
+      "id": "buying-chopsticks-and-lacquerware-in-japan",
+      "category": "things-to-buy",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "capsule-hotels-and-business-hotels-in-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-plan-autumn-leaves-in-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-plan-your-first-day-arriving-in-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-use-luggage-forwarding-in-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "ic-card-and-cash-basics-for-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "summer-heat-travel-strategy-for-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "where-to-stay-in-tokyo-first-trip-neighborhoods",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "winter-onsen-and-snow-country-japan",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-08-26",
+      "status": "ok"
+    },
+    {
+      "id": "local-train-journeys-worth-slowing-down-for",
+      "category": "travel-guide",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-08-27",
       "status": "ok"
     },
     {
@@ -208,28 +327,267 @@
       "lastChecked": "2026-05-24",
       "nextReview": "2026-11-19",
       "status": "ok"
+    },
+    {
+      "id": "what-sustainable-tourism-means-in-japan",
+      "category": "culture",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-11-23",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-visit-local-morning-markets-in-japan",
+      "category": "food",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-11-23",
+      "status": "ok"
+    },
+    {
+      "id": "quiet-morning-kyoto-itinerary",
+      "category": "hidden-gems",
+      "lastChecked": "2026-05-28",
+      "nextReview": "2026-11-23",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-enjoy-japanese-gardens",
+      "category": "culture",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "omiyage-gift-culture-for-travelers",
+      "category": "culture",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "sento-public-bath-etiquette-in-japan",
+      "category": "culture",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "temple-and-shrine-etiquette-for-travelers",
+      "category": "culture",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-use-depachika-food-halls-in-japan",
+      "category": "food",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "japanese-breakfasts-worth-planning-for",
+      "category": "food",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "konbini-travel-hacks-that-actually-help",
+      "category": "food",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "regional-ramen-styles-travelers-should-know",
+      "category": "food",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "vegetarian-travel-in-japan-without-panic",
+      "category": "food",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "beginner-guide-to-japan-national-parks",
+      "category": "hidden-gems",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "small-castle-towns-for-slow-japan-travel",
+      "category": "hidden-gems",
+      "lastChecked": "2026-05-29",
+      "nextReview": "2026-11-24",
+      "status": "ok"
+    },
+    {
+      "id": "japanese-festivals-without-crowd-mistakes",
+      "category": "culture",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "jazz-kissa-and-listening-bars-in-japan",
+      "category": "culture",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "seafood-markets-beyond-tourist-sushi",
+      "category": "food",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "regional-wagashi-travelers-should-try",
+      "category": "food",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "craft-towns-for-pottery-and-textiles",
+      "category": "hidden-gems",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "forest-bathing-in-japan",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "beginner-cycling-routes-in-japan",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "coastal-walks-in-japan",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "japan-rice-terraces-travel-guide",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "wildlife-watching-in-japan-without-disturbing-it",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "scenic-ropeways-and-mountain-views-in-japan",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "island-hopping-beyond-okinawa",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "canoeing-and-kayaking-in-japan",
+      "category": "nature-outdoors",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "how-to-choose-a-minshuku-in-japan",
+      "category": "stays",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "temple-stays-in-japan-what-to-expect",
+      "category": "stays",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "farm-stays-in-rural-japan",
+      "category": "stays",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "machiya-townhouse-stays-in-japan",
+      "category": "stays",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "seaside-ryokan-and-fishing-town-stays",
+      "category": "stays",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
+    },
+    {
+      "id": "hotel-check-in-etiquette-in-japan",
+      "category": "stays",
+      "lastChecked": "2026-05-30",
+      "nextReview": "2026-11-25",
+      "status": "ok"
     }
   ],
   "contentGaps": [
     {
       "category": "travel-guide",
-      "articles": 4
+      "articles": 20
     },
     {
       "category": "culture",
-      "articles": 3
+      "articles": 10
     },
     {
       "category": "food",
-      "articles": 4
+      "articles": 12
     },
     {
       "category": "things-to-buy",
-      "articles": 4
+      "articles": 5
     },
     {
       "category": "hidden-gems",
-      "articles": 3
+      "articles": 7
+    },
+    {
+      "category": "nature-outdoors",
+      "articles": 8
+    },
+    {
+      "category": "stays",
+      "articles": 6
     }
   ],
   "externalLinks": [],

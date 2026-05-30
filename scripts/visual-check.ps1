@@ -29,22 +29,24 @@ $StartedServer = $false
 try {
   Invoke-WebRequest -UseBasicParsing -Uri "http://127.0.0.1:4200/" -TimeoutSec 2 | Out-Null
 } catch {
-  Start-Process -FilePath python -ArgumentList @("-m", "http.server", "4200", "--bind", "127.0.0.1") -WorkingDirectory $Root -WindowStyle Hidden | Out-Null
+  Start-Process -FilePath powershell -ArgumentList @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", (Join-Path $PSScriptRoot "Start-LocalServer.ps1"), "-Port", "4200") -WorkingDirectory $Root -WindowStyle Hidden | Out-Null
   $StartedServer = $true
   Start-Sleep -Seconds 2
 }
 
 foreach ($Page in $Pages) {
   $Target = Join-Path $OutputDir "$($Page.Name).png"
-  $UserDataDir = Join-Path $OutputDir "profile-$($Page.Name)"
+  $UserDataDir = Join-Path $OutputDir ("profile-{0}-{1}" -f $Page.Name, ([guid]::NewGuid().ToString("N")))
   $Arguments = @(
     "--headless",
     "--disable-gpu",
+    "--disable-extensions",
     "--hide-scrollbars",
-    "--user-data-dir=$UserDataDir",
+    "--no-first-run",
+    "--user-data-dir=`"$UserDataDir`"",
     "--window-size=$($Page.Width),$($Page.Height)",
-    "--screenshot=$Target",
-    $Page.Url
+    "--screenshot=`"$Target`"",
+    "`"$($Page.Url)`""
   )
   $Process = Start-Process -FilePath $Edge -ArgumentList $Arguments -Wait -PassThru -WindowStyle Hidden
   if ($Process.ExitCode -ne 0) {

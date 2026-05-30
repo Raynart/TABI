@@ -12,13 +12,17 @@
     { "slug": "culture",       "label": "Culture & Tradition" },
     { "slug": "food",          "label": "Food & Drink" },
     { "slug": "things-to-buy", "label": "Things to Buy" },
-    { "slug": "hidden-gems",   "label": "Hidden Gems" }
+    { "slug": "hidden-gems",   "label": "Hidden Gems" },
+    { "slug": "nature-outdoors", "label": "Nature & Outdoors" },
+    { "slug": "stays", "label": "Stays" }
   ],
   "nav": [
     { "label": "Travel",        "slug": "travel-guide" },
     { "label": "Culture",       "slug": "culture" },
     { "label": "Food",          "slug": "food" },
     { "label": "Things to Buy", "slug": "things-to-buy" },
-    { "label": "Hidden Gems",   "slug": "hidden-gems" }
+    { "label": "Hidden Gems",   "slug": "hidden-gems" },
+    { "label": "Nature",        "slug": "nature-outdoors" },
+    { "label": "Stays",         "slug": "stays" }
   ]
 }

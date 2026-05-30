@@ -7,273 +7,303 @@
     "language":  "ja",
     "items":  [
                   {
-                      "id":  "https://tabi.guide/ja/articles/hidden-shrines-kyoto-locals-keep-secret.html",
-                      "url":  "https://tabi.guide/ja/articles/hidden-shrines-kyoto-locals-keep-secret.html",
-                      "title":  "京都の人が静かに大切にしてきた、知られざる神社へ",
-                      "summary":  "伏見稲荷や金閣寺の外側には、苔むした小道や暮らしに近い祈りの場所が残っています。混雑を避けながら、場所を消費しないための歩き方と作法をまとめました。",
-                      "content_text":  "伏見稲荷や金閣寺の外側には、苔むした小道や暮らしに近い祈りの場所が残っています。混雑を避けながら、場所を消費しないための歩き方と作法をまとめました。",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-22T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/coastal-walks-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/coastal-walks-in-japan.html",
+                      "title":  "海風を感じる日本の海沿い散歩。急がない旅の作り方",
+                      "summary":  "日本の海沿いは、移動日を静かな体験に変えてくれます。足元、交通、小さな港町を確認し、遠くから眺めるだけではない海の時間を作ります。",
+                      "content_text":  "日本の海沿いは、移動日を静かな体験に変えてくれます。足元、交通、小さな港町を確認し、遠くから眺めるだけではない海の時間を作ります。",
+                      "image":  "https://tabi.guide/assets/images/coastal-walks-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "kyoto",
-                                   "shrines",
-                                   "quiet-travel",
-                                   "first-time"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/ten-days-japan-without-tourist-traps.html",
-                      "url":  "https://tabi.guide/ja/articles/ten-days-japan-without-tourist-traps.html",
-                      "title":  "観光地疲れを避ける、日本10日間の旅程",
-                      "summary":  "東京、京都、大阪という定番を残しつつ、暮らしの気配がある街歩き、小さな美術館、地元の食事を組み込む10日間の考え方です。",
-                      "content_text":  "東京、京都、大阪という定番を残しつつ、暮らしの気配がある街歩き、小さな美術館、地元の食事を組み込む10日間の考え方です。",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-20T00:00:00+09:00",
-                      "tags":  [
-                                   "itinerary",
-                                   "tokyo",
-                                   "kyoto",
-                                   "osaka"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/kyoto-ryokan-under-20000-yen.html",
-                      "url":  "https://tabi.guide/ja/articles/kyoto-ryokan-under-20000-yen.html",
-                      "title":  "2万円以下で泊まる、京都の小さな旅館の選び方",
-                      "summary":  "京都の旅館は高級宿だけではありません。小さな宿で何を期待し、部屋条件をどう読み、どこに価値が隠れやすいかを整理します。",
-                      "content_text":  "京都の旅館は高級宿だけではありません。小さな宿で何を期待し、部屋条件をどう読み、どこに価値が隠れやすいかを整理します。",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-18T00:00:00+09:00",
-                      "tags":  [
-                                   "kyoto",
-                                   "ryokan",
-                                   "budget",
-                                   "where-to-stay"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/osaka-three-day-eating-itinerary.html",
-                      "url":  "https://tabi.guide/ja/articles/osaka-three-day-eating-itinerary.html",
-                      "title":  "大阪3日間、食べ歩きと街歩きの旅程",
-                      "summary":  "食、路地、商店街、予定を決めすぎない時間を中心にした大阪3日間。道頓堀の熱気と、地元の人が使う静かな通りの両方を組み込みます。",
-                      "content_text":  "食、路地、商店街、予定を決めすぎない時間を中心にした大阪3日間。道頓堀の熱気と、地元の人が使う静かな通りの両方を組み込みます。",
-                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
-                      "date_published":  "2026-05-16T00:00:00+09:00",
-                      "tags":  [
-                                   "osaka",
-                                   "street-food",
-                                   "itinerary",
-                                   "nightlife"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/perfect-route-up-mount-fuji.html",
-                      "url":  "https://tabi.guide/ja/articles/perfect-route-up-mount-fuji.html",
-                      "title":  "富士山に登る前に知っておきたいルートと準備",
-                      "summary":  "富士登山は体力勝負だけではなく、時期、天候、睡眠、無理をしない判断が大切です。ルート選びと失敗しやすい点を整理します。",
-                      "content_text":  "富士登山は体力勝負だけではなく、時期、天候、睡眠、無理をしない判断が大切です。ルート選びと失敗しやすい点を整理します。",
-                      "image":  "https://tabi.guide/assets/images/fuji-trail.png",
-                      "date_published":  "2026-05-14T00:00:00+09:00",
-                      "tags":  [
-                                   "mount-fuji",
-                                   "hiking",
-                                   "summer",
-                                   "planning"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/yakushima-ancient-forest-few-tourists-find.html",
-                      "url":  "https://tabi.guide/ja/articles/yakushima-ancient-forest-few-tourists-find.html",
-                      "title":  "屋久島、雨と森を急がず味わう旅",
-                      "summary":  "屋久島は夢に見るほど有名でありながら、訪れるには少し手間がかかる島です。雨、苔、杉の森、海沿いの集落を急がず味わうための考え方です。",
-                      "content_text":  "屋久島は夢に見るほど有名でありながら、訪れるには少し手間がかかる島です。雨、苔、杉の森、海沿いの集落を急がず味わうための考え方です。",
-                      "image":  "https://tabi.guide/assets/images/yakushima-forest.png",
-                      "date_published":  "2026-05-12T00:00:00+09:00",
-                      "tags":  [
-                                   "yakushima",
-                                   "islands",
-                                   "forest",
-                                   "hiking"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/setouchi-islands-art-sea-slow-travel.html",
-                      "url":  "https://tabi.guide/ja/articles/setouchi-islands-art-sea-slow-travel.html",
-                      "title":  "瀬戸内の島々、アートと海風のゆっくり旅",
-                      "summary":  "直島だけでなく、瀬戸内は船、港、村、美術館、静かな海のリズムで理解すると楽しくなります。",
-                      "content_text":  "直島だけでなく、瀬戸内は船、港、村、美術館、静かな海のリズムで理解すると楽しくなります。",
-                      "image":  "https://tabi.guide/assets/images/yakushima-forest.png",
-                      "date_published":  "2026-05-10T00:00:00+09:00",
-                      "tags":  [
-                                   "setouchi",
-                                   "islands",
-                                   "art",
-                                   "slow-travel"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/kiso-valley-walk-between-post-towns.html",
-                      "url":  "https://tabi.guide/ja/articles/kiso-valley-walk-between-post-towns.html",
-                      "title":  "木曽路、宿場町の間を歩く旅",
-                      "summary":  "中山道の木曽路には、木の宿、山の空気、歩くための町があります。馬籠から妻籠までを急がず歩くための考え方です。",
-                      "content_text":  "中山道の木曽路には、木の宿、山の空気、歩くための町があります。馬籠から妻籠までを急がず歩くための考え方です。",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-08T00:00:00+09:00",
-                      "tags":  [
-                                   "kiso-valley",
-                                   "nakasendo",
                                    "walking",
-                                   "heritage"
+                                   "coast",
+                                   "slow-travel",
+                                   "nature"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/ja/articles/what-wabi-sabi-really-means.html",
-                      "url":  "https://tabi.guide/ja/articles/what-wabi-sabi-really-means.html",
-                      "title":  "わびさびとは何か。いま世界が求める感覚",
-                      "summary":  "わびさびは素朴なミニマリズムだけではありません。時間、傷、控えめな美しさをどう見るかという、もっと深い感覚です。",
-                      "content_text":  "わびさびは素朴なミニマリズムだけではありません。時間、傷、控えめな美しさをどう見るかという、もっと深い感覚です。",
-                      "image":  "https://tabi.guide/assets/images/kintsugi-studio.png",
-                      "date_published":  "2026-05-06T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/beginner-cycling-routes-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/beginner-cycling-routes-in-japan.html",
+                      "title":  "初心者にやさしい日本のサイクリングルートの選び方",
+                      "summary":  "日本のサイクリングは、距離よりもルート選びで快適さが変わります。専用道、レンタル体制、荷物、天候、途中離脱のしやすさを基準に考えます。",
+                      "content_text":  "日本のサイクリングは、距離よりもルート選びで快適さが変わります。専用道、レンタル体制、荷物、天候、途中離脱のしやすさを基準に考えます。",
+                      "image":  "https://tabi.guide/assets/images/beginner-cycling-routes-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "wabi-sabi",
-                                   "philosophy",
-                                   "aesthetics",
-                                   "design"
+                                   "cycling",
+                                   "slow-travel",
+                                   "regional-japan",
+                                   "transport"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/ja/articles/kintsugi-art-of-repairing-broken-things.html",
-                      "url":  "https://tabi.guide/ja/articles/kintsugi-art-of-repairing-broken-things.html",
-                      "title":  "金継ぎ、壊れたものを隠さず続ける技術",
-                      "summary":  "金継ぎが美しいのは、傷をなかったことにしないからです。技術としての手間、比喩として広がった意味、買うときの見分け方を整理します。",
-                      "content_text":  "金継ぎが美しいのは、傷をなかったことにしないからです。技術としての手間、比喩として広がった意味、買うときの見分け方を整理します。",
-                      "image":  "https://tabi.guide/assets/images/kintsugi-studio.png",
-                      "date_published":  "2026-05-04T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/local-train-journeys-worth-slowing-down-for.html",
+                      "url":  "https://tabi.guide/ja/articles/local-train-journeys-worth-slowing-down-for.html",
+                      "title":  "ゆっくり乗りたい、日本のローカル線の旅",
+                      "summary":  "列車移動は新幹線だけではありません。ローカル線は、景色、少ない本数、駅の食、待つ時間まで含めると、移動そのものが記憶になります。",
+                      "content_text":  "列車移動は新幹線だけではありません。ローカル線は、景色、少ない本数、駅の食、待つ時間まで含めると、移動そのものが記憶になります。",
+                      "image":  "https://tabi.guide/assets/images/local-train-journeys-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "kintsugi",
-                                   "craft",
-                                   "kyoto",
-                                   "ceramics"
+                                   "train-travel",
+                                   "slow-travel",
+                                   "regional-japan",
+                                   "transport"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/ja/articles/hanami-where-to-see-cherry-blossoms-like-local.html",
-                      "url":  "https://tabi.guide/ja/articles/hanami-where-to-see-cherry-blossoms-like-local.html",
-                      "title":  "地元の人のように楽しむ花見の場所と作法",
-                      "summary":  "桜の季節は有名な川沿いの写真だけではありません。地元の花見はもっとゆっくり、身近で、食べ物と会話の時間でもあります。",
-                      "content_text":  "桜の季節は有名な川沿いの写真だけではありません。地元の花見はもっとゆっくり、身近で、食べ物と会話の時間でもあります。",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-02T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/japan-rice-terraces-travel-guide.html",
+                      "url":  "https://tabi.guide/ja/articles/japan-rice-terraces-travel-guide.html",
+                      "title":  "日本の棚田を訪ねる。写真の背景として消費しないために",
+                      "summary":  "棚田は空っぽの景色ではなく、今も手入れされる農の風景です。農家、季節、細い道、地域の暮らしに配慮して訪れるための考え方をまとめます。",
+                      "content_text":  "棚田は空っぽの景色ではなく、今も手入れされる農の風景です。農家、季節、細い道、地域の暮らしに配慮して訪れるための考え方をまとめます。",
+                      "image":  "https://tabi.guide/assets/images/japan-rice-terraces.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "hanami",
-                                   "cherry-blossoms",
-                                   "spring",
-                                   "local-customs"
+                                   "rural-japan",
+                                   "landscape",
+                                   "responsible-travel",
+                                   "nature"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/ja/articles/how-to-read-japanese-menu-without-speaking-japanese.html",
-                      "url":  "https://tabi.guide/ja/articles/how-to-read-japanese-menu-without-speaking-japanese.html",
-                      "title":  "日本語が話せなくても、メニューを読むための実用ヒント",
-                      "summary":  "料理名、食券機、アレルギー表示、指差しのコツを知っておくと、言葉が完璧でなくても食事はずっと楽になります。",
-                      "content_text":  "料理名、食券機、アレルギー表示、指差しのコツを知っておくと、言葉が完璧でなくても食事はずっと楽になります。",
-                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
-                      "date_published":  "2026-04-30T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/regional-wagashi-travelers-should-try.html",
+                      "url":  "https://tabi.guide/ja/articles/regional-wagashi-travelers-should-try.html",
+                      "title":  "お茶と味わいたい日本各地の和菓子",
+                      "summary":  "和菓子は、場所、季節、お茶と結びつけるとよく分かります。見た目だけで選ばず、地域の素材、店のリズム、持ち帰りやすさを見ます。",
+                      "content_text":  "和菓子は、場所、季節、お茶と結びつけるとよく分かります。見た目だけで選ばず、地域の素材、店のリズム、持ち帰りやすさを見ます。",
+                      "image":  "https://tabi.guide/assets/images/regional-wagashi-tea.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "menus",
-                                   "food",
-                                   "language",
-                                   "first-time"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/tokyo-hidden-izakayas-locals-go.html",
-                      "url":  "https://tabi.guide/ja/articles/tokyo-hidden-izakayas-locals-go.html",
-                      "title":  "東京で地元の人が通う、小さな居酒屋の見つけ方",
-                      "summary":  "良い居酒屋の夜は、カウンター席、季節の小皿、予定を詰めすぎない余白でできています。",
-                      "content_text":  "良い居酒屋の夜は、カウンター席、季節の小皿、予定を詰めすぎない余白でできています。",
-                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
-                      "date_published":  "2026-04-28T00:00:00+09:00",
-                      "tags":  [
-                                   "tokyo",
-                                   "izakaya",
-                                   "nightlife",
-                                   "local-food"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/japanese-convenience-store-breakfasts-worth-trying.html",
-                      "url":  "https://tabi.guide/ja/articles/japanese-convenience-store-breakfasts-worth-trying.html",
-                      "title":  "日本のコンビニで選ぶ、旅の朝食",
-                      "summary":  "時差ぼけの朝、早い列車、朝食なしの宿では、コンビニがかなり頼りになります。非常食ではなく、ちゃんと使える選び方です。",
-                      "content_text":  "時差ぼけの朝、早い列車、朝食なしの宿では、コンビニがかなり頼りになります。非常食ではなく、ちゃんと使える選び方です。",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-26T00:00:00+09:00",
-                      "tags":  [
-                                   "konbini",
-                                   "breakfast",
-                                   "budget",
-                                   "travel-tips"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/ja/articles/best-japanese-kitchen-knives-to-bring-home.html",
-                      "url":  "https://tabi.guide/ja/articles/best-japanese-kitchen-knives-to-bring-home.html",
-                      "title":  "日本から持ち帰る包丁の選び方",
-                      "summary":  "鋼材名や産地名に迷いすぎず、自分の料理に合う一本を選ぶための買い物ガイドです。持ち帰り時の注意も整理します。",
-                      "content_text":  "鋼材名や産地名に迷いすぎず、自分の料理に合う一本を選ぶための買い物ガイドです。持ち帰り時の注意も整理します。",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-24T00:00:00+09:00",
-                      "tags":  [
-                                   "kitchen-knives",
-                                   "shopping",
-                                   "craft",
+                                   "wagashi",
+                                   "tea",
+                                   "local-food",
                                    "souvenirs"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/ja/articles/buying-matcha-ceremonial-vs-culinary-grade.html",
-                      "url":  "https://tabi.guide/ja/articles/buying-matcha-ceremonial-vs-culinary-grade.html",
-                      "title":  "抹茶を買う前に知る、飲む用と料理用の違い",
-                      "summary":  "抹茶の表示は英語でも日本語でも紛らわしいことがあります。飲む、焼く、ラテにするなど用途から選ぶと失敗しにくくなります。",
-                      "content_text":  "抹茶の表示は英語でも日本語でも紛らわしいことがあります。飲む、焼く、ラテにするなど用途から選ぶと失敗しにくくなります。",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-22T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/seafood-markets-beyond-tourist-sushi.html",
+                      "url":  "https://tabi.guide/ja/articles/seafood-markets-beyond-tourist-sushi.html",
+                      "title":  "観光寿司だけではない、日本の海鮮市場の歩き方",
+                      "summary":  "海鮮市場は、有名な寿司店に並ぶだけの場所ではありません。朝のリズム、地域の魚、気軽な惣菜、働く人の邪魔をしない姿勢を大切にします。",
+                      "content_text":  "海鮮市場は、有名な寿司店に並ぶだけの場所ではありません。朝のリズム、地域の魚、気軽な惣菜、働く人の邪魔をしない姿勢を大切にします。",
+                      "image":  "https://tabi.guide/assets/images/seafood-market-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "matcha",
-                                   "tea",
-                                   "shopping",
+                                   "seafood",
+                                   "markets",
+                                   "local-food",
+                                   "regional-japan"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/forest-bathing-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/forest-bathing-in-japan.html",
+                      "title":  "日本で森林浴を楽しむ。チェックリストにしない森の歩き方",
+                      "summary":  "森林浴は、有名な道を制覇することではなく、身体の速度を場所に合わせる体験です。無理のない森の選び方、地域のルール、写真以上に残る歩き方を整理します。",
+                      "content_text":  "森林浴は、有名な道を制覇することではなく、身体の速度を場所に合わせる体験です。無理のない森の選び方、地域のルール、写真以上に残る歩き方を整理します。",
+                      "image":  "https://tabi.guide/assets/images/forest-bathing-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "forest",
+                                   "wellness",
+                                   "slow-travel",
+                                   "nature"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/craft-towns-for-pottery-and-textiles.html",
+                      "url":  "https://tabi.guide/ja/articles/craft-towns-for-pottery-and-textiles.html",
+                      "title":  "陶器と織物に出会う、日本の工芸の町",
+                      "summary":  "工芸の町は、制作の過程を見る余白があるほど面白くなります。窯、工房、織物の通り、資料館、素材を説明してくれる店を探します。",
+                      "content_text":  "工芸の町は、制作の過程を見る余白があるほど面白くなります。窯、工房、織物の通り、資料館、素材を説明してくれる店を探します。",
+                      "image":  "https://tabi.guide/assets/images/craft-towns-pottery-textiles.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "craft",
+                                   "ceramics",
+                                   "textiles",
+                                   "regional-japan"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/scenic-ropeways-and-mountain-views-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/scenic-ropeways-and-mountain-views-in-japan.html",
+                      "title":  "日本のロープウェイと山の眺め。自分に合う場所の選び方",
+                      "summary":  "ロープウェイは山の景色を身近にしてくれますが、天気や混雑で満足度が変わります。雲が出ても楽しめる周辺の歩き方まで考えます。",
+                      "content_text":  "ロープウェイは山の景色を身近にしてくれますが、天気や混雑で満足度が変わります。雲が出ても楽しめる周辺の歩き方まで考えます。",
+                      "image":  "https://tabi.guide/assets/images/scenic-ropeways-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "mountains",
+                                   "weather",
+                                   "planning",
+                                   "nature"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/machiya-townhouse-stays-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/machiya-townhouse-stays-in-japan.html",
+                      "title":  "日本の町家に泊まる。魅力、ルール、実際の快適さ",
+                      "summary":  "町家の滞在は、古い商家町や京都で特に魅力があります。予約前に、音、階段、空調、近隣ルール、雰囲気とホテル機能の違いを理解します。",
+                      "content_text":  "町家の滞在は、古い商家町や京都で特に魅力があります。予約前に、音、階段、空調、近隣ルール、雰囲気とホテル機能の違いを理解します。",
+                      "image":  "https://tabi.guide/assets/images/machiya-townhouse-stay.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "machiya",
+                                   "architecture",
+                                   "where-to-stay",
                                    "kyoto"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/ja/articles/japanese-drugstore-products-worth-every-yen.html",
-                      "url":  "https://tabi.guide/ja/articles/japanese-drugstore-products-worth-every-yen.html",
-                      "title":  "日本のドラッグストアで本当に使いやすいもの",
-                      "summary":  "日本のドラッグストアは楽しい反面、情報量が多すぎます。日焼け止め、リップ、パッチ類など、旅で使いやすいものに絞ります。",
-                      "content_text":  "日本のドラッグストアは楽しい反面、情報量が多すぎます。日焼け止め、リップ、パッチ類など、旅で使いやすいものに絞ります。",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-20T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/farm-stays-in-rural-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/farm-stays-in-rural-japan.html",
+                      "title":  "日本の農泊を、仕事を美化せずに楽しむ",
+                      "summary":  "農泊は、働く時間を理解してこそ記憶に残る滞在になります。地域のもてなしを、現実的な期待、安全意識、日々の仕事への敬意とともに受け取ります。",
+                      "content_text":  "農泊は、働く時間を理解してこそ記憶に残る滞在になります。地域のもてなしを、現実的な期待、安全意識、日々の仕事への敬意とともに受け取ります。",
+                      "image":  "https://tabi.guide/assets/images/farm-stay-rural-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "drugstore",
-                                   "skincare",
-                                   "shopping",
-                                   "budget"
+                                   "farm-stay",
+                                   "rural-japan",
+                                   "responsible-travel",
+                                   "food"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/ja/articles/where-to-buy-authentic-yukata-in-tokyo.html",
-                      "url":  "https://tabi.guide/ja/articles/where-to-buy-authentic-yukata-in-tokyo.html",
-                      "title":  "東京で浴衣を買うなら、土産物以上の一枚を",
-                      "summary":  "浴衣は写真用の土産だけでなく、夏に実際に着られる服でもあります。新品、古着、セット商品の違いを見ながら選びます。",
-                      "content_text":  "浴衣は写真用の土産だけでなく、夏に実際に着られる服でもあります。新品、古着、セット商品の違いを見ながら選びます。",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-18T00:00:00+09:00",
+                      "id":  "https://tabi.guide/ja/articles/hotel-check-in-etiquette-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/hotel-check-in-etiquette-in-japan.html",
+                      "title":  "日本のホテルチェックイン作法。到着を楽にする小さな準備",
+                      "summary":  "日本のホテルのチェックインは、基本を知っていればスムーズです。パスポート、到着時間、荷物、風呂、支払いを先に整えておきます。",
+                      "content_text":  "日本のホテルのチェックインは、基本を知っていればスムーズです。パスポート、到着時間、荷物、風呂、支払いを先に整えておきます。",
+                      "image":  "https://tabi.guide/assets/images/hotel-check-in-etiquette-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "yukata",
-                                   "tokyo",
-                                   "shopping",
-                                   "fashion"
+                                   "hotels",
+                                   "local-customs",
+                                   "first-time",
+                                   "where-to-stay"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/seaside-ryokan-and-fishing-town-stays.html",
+                      "url":  "https://tabi.guide/ja/articles/seaside-ryokan-and-fishing-town-stays.html",
+                      "title":  "日本の海辺の旅館と漁師町に泊まる",
+                      "summary":  "海辺の宿では、夕食、朝の港、天候そのものが旅の一部になります。海の見える部屋だけでなく、町と交通まで見て選びます。",
+                      "content_text":  "海辺の宿では、夕食、朝の港、天候そのものが旅の一部になります。海の見える部屋だけでなく、町と交通まで見て選びます。",
+                      "image":  "https://tabi.guide/assets/images/seaside-ryokan-fishing-town.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "ryokan",
+                                   "coast",
+                                   "local-food",
+                                   "slow-travel"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/canoeing-and-kayaking-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/canoeing-and-kayaking-in-japan.html",
+                      "title":  "日本でカヌーとカヤックを楽しむ。旅人向けの穏やかな水辺時間",
+                      "summary":  "カヌーやカヤックは、日本の川、湖、海辺を近く感じさせてくれます。旅行者には、天候に対応できるガイド付きの穏やかな体験が向いています。",
+                      "content_text":  "カヌーやカヤックは、日本の川、湖、海辺を近く感じさせてくれます。旅行者には、天候に対応できるガイド付きの穏やかな体験が向いています。",
+                      "image":  "https://tabi.guide/assets/images/canoeing-kayaking-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "waterways",
+                                   "nature",
+                                   "slow-travel",
+                                   "seasonal-travel"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/island-hopping-beyond-okinawa.html",
+                      "url":  "https://tabi.guide/ja/articles/island-hopping-beyond-okinawa.html",
+                      "title":  "沖縄だけではない、日本の島旅の組み立て方",
+                      "summary":  "日本の島旅はひとつの型に収まりません。フェリー、アートの島、漁港、火山の風景、静かな宿を、時刻表と天候に合わせて考えます。",
+                      "content_text":  "日本の島旅はひとつの型に収まりません。フェリー、アートの島、漁港、火山の風景、静かな宿を、時刻表と天候に合わせて考えます。",
+                      "image":  "https://tabi.guide/assets/images/island-hopping-beyond-okinawa.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "islands",
+                                   "setouchi",
+                                   "slow-travel",
+                                   "coast"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/temple-stays-in-japan-what-to-expect.html",
+                      "url":  "https://tabi.guide/ja/articles/temple-stays-in-japan-what-to-expect.html",
+                      "title":  "日本の寺宿に泊まる前に知っておきたいこと",
+                      "summary":  "寺宿は静かな滞在になりますが、香りのよい高級ホテルではありません。食事、朝のお勤め、静かな時間、共同設備、宗教の場であることを理解して選びます。",
+                      "content_text":  "寺宿は静かな滞在になりますが、香りのよい高級ホテルではありません。食事、朝のお勤め、静かな時間、共同設備、宗教の場であることを理解して選びます。",
+                      "image":  "https://tabi.guide/assets/images/temple-stay-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "temples",
+                                   "stays",
+                                   "culture",
+                                   "quiet-travel"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/how-to-choose-a-minshuku-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/how-to-choose-a-minshuku-in-japan.html",
+                      "title":  "日本の民宿の選び方",
+                      "summary":  "民宿は地方の旅をぐっと個人的なものにしてくれますが、期待値の調整が大切です。食事、共同設備、言葉、家のリズムを読んで選びます。",
+                      "content_text":  "民宿は地方の旅をぐっと個人的なものにしてくれますが、期待値の調整が大切です。食事、共同設備、言葉、家のリズムを読んで選びます。",
+                      "image":  "https://tabi.guide/assets/images/minshuku-stay-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "minshuku",
+                                   "where-to-stay",
+                                   "rural-japan",
+                                   "local-customs"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/jazz-kissa-and-listening-bars-in-japan.html",
+                      "url":  "https://tabi.guide/ja/articles/jazz-kissa-and-listening-bars-in-japan.html",
+                      "title":  "日本のジャズ喫茶とリスニングバー",
+                      "summary":  "日本のリスニング文化は、音に向き合う時間を大切にします。ジャズ喫茶やリスニングバーでは、賑やかさよりもレコード、機材、静かな会話、聴く姿勢が中心です。",
+                      "content_text":  "日本のリスニング文化は、音に向き合う時間を大切にします。ジャズ喫茶やリスニングバーでは、賑やかさよりもレコード、機材、静かな会話、聴く姿勢が中心です。",
+                      "image":  "https://tabi.guide/assets/images/jazz-kissa-listening-bar.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "music",
+                                   "nightlife",
+                                   "culture",
+                                   "tokyo"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/japanese-festivals-without-crowd-mistakes.html",
+                      "url":  "https://tabi.guide/ja/articles/japanese-festivals-without-crowd-mistakes.html",
+                      "title":  "日本の祭りで混雑の失敗を避ける",
+                      "summary":  "祭りは楽しく、混み合い、同時に地域の行事でもあります。帰り道、行列の空間、地域の一日としての見方を整えて参加します。",
+                      "content_text":  "祭りは楽しく、混み合い、同時に地域の行事でもあります。帰り道、行列の空間、地域の一日としての見方を整えて参加します。",
+                      "image":  "https://tabi.guide/assets/images/japanese-festival-crowd-etiquette.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "festivals",
+                                   "local-customs",
+                                   "summer",
+                                   "culture"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/ja/articles/wildlife-watching-in-japan-without-disturbing-it.html",
+                      "url":  "https://tabi.guide/ja/articles/wildlife-watching-in-japan-without-disturbing-it.html",
+                      "title":  "日本で野生動物を見る。見に来たものを乱さないために",
+                      "summary":  "野生動物に出会えることは、保証ではなく偶然の恵みです。距離、静けさ、地域ルール、見られなくても引く判断を大切にします。",
+                      "content_text":  "野生動物に出会えることは、保証ではなく偶然の恵みです。距離、静けさ、地域ルール、見られなくても引く判断を大切にします。",
+                      "image":  "https://tabi.guide/assets/images/wildlife-watching-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "wildlife",
+                                   "nature",
+                                   "responsible-travel",
+                                   "seasonal-travel"
                                ]
                   }
               ]

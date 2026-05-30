@@ -2,1301 +2,440 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="content-language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TABI — Discover Japan</title>
+  <title>TABI - Discover Japan</title>
+  <meta name="description" content="Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://tabi.guide/">
+  <link rel="alternate" hreflang="en" href="https://tabi.guide/">
+  <link rel="alternate" hreflang="ja" href="https://tabi.guide/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://tabi.guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TABI">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:title" content="TABI - Discover Japan">
+  <meta property="og:description" content="Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.">
+  <meta property="og:url" content="https://tabi.guide/">
+  <meta property="og:image" content="https://tabi.guide/assets/images/yakushima-forest.png">
+  <meta property="og:image:alt" content="TABI - Discover Japan">
+  <meta name="theme-color" content="#111111">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TABI - Discover Japan">
+  <meta name="twitter:description" content="Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.">
+  <meta name="twitter:image" content="https://tabi.guide/assets/images/yakushima-forest.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --ink:       #111111;
-      --ink-soft:  #2c2c2c;
-      --paper:     #f7f4ef;
-      --paper-dark:#ede9e2;
-      --accent:    #b5271f;
-      --accent-light: #d4443b;
-      --indigo:    #2c3e6b;
-      --gold:      #c9a84c;
-      --zen:       #3d6b4a;
-      --mist:      #888;
-      --border:    #ddd9d0;
-      --white:     #ffffff;
-      --serif:     'Noto Serif', 'Noto Serif JP', Georgia, serif;
-      --sans:      'Noto Sans', system-ui, sans-serif;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    /* ===== TOP BAR ===== */
-    .top-bar {
-      background: var(--ink);
-      color: rgba(255,255,255,0.6);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      padding: 8px 0;
-      text-align: center;
-    }
-    .top-bar span { color: var(--gold); margin: 0 6px; }
-
-    /* ===== HEADER ===== */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      background: rgba(247, 244, 239, 0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .header-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-      height: 68px;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-    }
-    .header-nav-left {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-    .header-nav-left a {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--mist);
-      transition: color 0.2s;
-      position: relative;
-    }
-    .header-nav-left a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--accent);
-      transition: width 0.25s ease;
-    }
-    .header-nav-left a:hover { color: var(--ink); }
-    .header-nav-left a:hover::after { width: 100%; }
-    .header-nav-left a.active { color: var(--ink); }
-    .header-nav-left a.active::after { width: 100%; }
-
-    .site-logo {
-      text-align: center;
-    }
-    .logo-en {
-      font-family: var(--serif);
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      color: var(--ink);
-      display: block;
-      line-height: 1;
-    }
-    .logo-en .dot { color: var(--accent); }
-    .logo-jp {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.5em;
-      color: var(--mist);
-      display: block;
-      margin-top: 3px;
-    }
-
-    .header-right {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 20px;
-    }
-    .header-search {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-      color: var(--mist);
-      transition: color 0.2s;
-      font-size: 1.1rem;
-    }
-    .header-search:hover { color: var(--ink); }
-    .header-cta {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 9px 22px;
-      background: var(--accent);
-      color: var(--white);
-      transition: background 0.2s;
-    }
-    .header-cta:hover { background: var(--accent-light); }
-
-    /* ===== TICKER ===== */
-    .ticker {
-      background: var(--ink-soft);
-      overflow: hidden;
-      height: 36px;
-      display: flex;
-      align-items: center;
-    }
-    .ticker-label {
-      flex-shrink: 0;
-      background: var(--accent);
-      color: var(--white);
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0 20px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      z-index: 1;
-    }
-    .ticker-track {
-      display: flex;
-      gap: 0;
-      animation: ticker 30s linear infinite;
-      white-space: nowrap;
-    }
-    .ticker-item {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.65);
-      padding: 0 32px;
-      letter-spacing: 0.04em;
-      border-right: 1px solid rgba(255,255,255,0.1);
-    }
-    .ticker-item strong { color: var(--gold); font-weight: 500; }
-    @keyframes ticker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 90vh;
-      min-height: 600px;
-      max-height: 820px;
-      overflow: hidden;
-      background: var(--ink);
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(160deg, #0a0a1a 0%, #1a0808 40%, #2d1010 70%, #1a1a1a 100%);
-    }
-    /* 鳥居シルエット装飾 */
-    .hero-deco {
-      position: absolute;
-      right: 8%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 320px;
-      height: 480px;
-      opacity: 0.06;
-      pointer-events: none;
-    }
-    /* 和柄パターン */
-    .hero-pattern {
-      position: absolute;
-      inset: 0;
-      opacity: 0.04;
-      background-image:
-        radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 1px, transparent 0);
-      background-size: 32px 32px;
-    }
-    /* 漢字装飾 */
-    .hero-kanji {
-      position: absolute;
-      right: 6%;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: 'Noto Serif JP', serif;
-      font-size: 18rem;
-      font-weight: 300;
-      color: var(--white);
-      opacity: 0.04;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      pointer-events: none;
-      user-select: none;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 80px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding-bottom: 80px;
-    }
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--accent);
-      padding: 5px 14px;
-    }
-    .hero-num {
-      font-family: var(--serif);
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.35);
-      letter-spacing: 0.1em;
-    }
-    .hero-title {
-      font-family: var(--serif);
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.15;
-      max-width: 760px;
-      margin-bottom: 20px;
-      letter-spacing: -0.01em;
-    }
-    .hero-title em {
-      font-style: italic;
-      color: rgba(255,255,255,0.7);
-    }
-    .hero-desc {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.55);
-      max-width: 480px;
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .hero-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 14px 32px;
-      background: var(--white);
-      color: var(--ink);
-      transition: all 0.25s;
-    }
-    .hero-btn:hover {
-      background: var(--accent);
-      color: var(--white);
-    }
-    .hero-btn-ghost {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.06em;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .hero-btn-ghost:hover {
-      color: var(--white);
-      border-color: rgba(255,255,255,0.6);
-    }
-    /* Hero thumbnail dots */
-    .hero-dots {
-      position: absolute;
-      bottom: 80px;
-      right: 80px;
-      display: flex;
-      gap: 8px;
-      z-index: 10;
-    }
-    .hero-dot {
-      width: 6px;
-      height: 6px;
-      background: rgba(255,255,255,0.25);
-      border-radius: 50%;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    .hero-dot.active {
-      background: var(--white);
-      width: 24px;
-      border-radius: 3px;
-    }
-    /* Red vertical line accent */
-    .hero-line {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: linear-gradient(to bottom, var(--accent) 0%, transparent 100%);
-      z-index: 10;
-    }
-
-    /* ===== SCROLL INDICATOR ===== */
-    .scroll-hint {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.3);
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      z-index: 10;
-      animation: float 2.5s ease-in-out infinite;
-    }
-    .scroll-hint-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
-    }
-    @keyframes float {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50%       { transform: translateX(-50%) translateY(6px); }
-    }
-
-    /* ===== SECTION LABEL ===== */
-    .section-label {
-      max-width: 1280px;
-      margin: 64px auto 0;
-      padding: 0 32px 20px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    .section-label-jp {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 0.75rem;
-      color: var(--accent);
-      writing-mode: horizontal-tb;
-      letter-spacing: 0.2em;
-    }
-    .section-label-en {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-    .section-label-line {
-      flex: 1;
-    }
-    .section-label-link {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--mist);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-    .section-label-link:hover { color: var(--accent); }
-    .arrow { display: inline-block; transition: transform 0.2s; }
-    .section-label-link:hover .arrow { transform: translateX(4px); }
-
-    /* ===== EDITORIAL GRID ===== */
-    .editorial-grid {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 32px 32px 0;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 2px;
-    }
-    .ed-main {
-      grid-row: 1 / 3;
-    }
-    .ed-card {
-      position: relative;
-      overflow: hidden;
-      background: var(--ink-soft);
-      cursor: pointer;
-    }
-    .ed-main { aspect-ratio: 3/4; }
-    .ed-sub  { aspect-ratio: 4/3; }
-
-    .ed-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease, opacity 0.4s;
-      opacity: 0.82;
-    }
-    .ed-card:hover .ed-img {
-      transform: scale(1.04);
-      opacity: 0.95;
-    }
-    /* placeholder gradient images */
-    .grad-1 { background: linear-gradient(160deg, #0f0810 0%, #2e1030 40%, #6b2d5a 80%, #8b3070 100%); }
-    .grad-2 { background: linear-gradient(160deg, #080f10 0%, #10302e 40%, #1a5a50 80%, #207060 100%); }
-    .grad-3 { background: linear-gradient(160deg, #10080a 0%, #301015 40%, #6b1a28 80%, #8b2035 100%); }
-    .grad-4 { background: linear-gradient(160deg, #0a0f08 0%, #1a3010 40%, #3a601a 80%, #4a7820 100%); }
-    .grad-5 { background: linear-gradient(160deg, #0a080f 0%, #1a1030 40%, #3a206b 80%, #4a2888 100%); }
-    .grad-6 { background: linear-gradient(160deg, #0f0a08 0%, #302010 40%, #6b401a 80%, #8b5520 100%); }
-    .grad-torii { background: linear-gradient(160deg, #100808 0%, #2e1010 30%, #5a1a1a 60%, #7a2020 90%); }
-    .grad-fuji  { background: linear-gradient(180deg, #080a10 0%, #101830 30%, #202848 55%, #c0ccd8 75%, #d8e0e8 85%, #e8ede0 100%); }
-    .grad-forest{ background: linear-gradient(160deg, #080f08 0%, #101e10 40%, #1a381a 70%, #207820 100%); }
-    .grad-food  { background: linear-gradient(135deg, #100a04 0%, #301808 40%, #603010 70%, #8b4818 100%); }
-    .grad-city  { background: linear-gradient(160deg, #080808 0%, #181818 40%, #282828 70%, #383838 100%); }
-
-    .ed-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.2) 50%, transparent 80%);
-    }
-    .ed-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 28px 24px;
-      color: var(--white);
-    }
-    .ed-main .ed-content { padding: 36px 32px; }
-    .ed-cat {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent-light);
-      margin-bottom: 8px;
-    }
-    .ed-title {
-      font-family: var(--serif);
-      line-height: 1.3;
-      color: var(--white);
-    }
-    .ed-main .ed-title { font-size: 1.7rem; }
-    .ed-sub  .ed-title { font-size: 1rem; }
-    .ed-meta {
-      margin-top: 10px;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.45);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .ed-meta-dot { width: 3px; height: 3px; background: currentColor; border-radius: 50%; }
-    /* Japanese label strip on main card */
-    .ed-main-strip {
-      position: absolute;
-      top: 24px;
-      right: 0;
-      background: var(--accent);
-      color: var(--white);
-      font-family: 'Noto Serif JP', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      padding: 6px 12px 6px 16px;
-      z-index: 2;
-    }
-
-    /* ===== CULTURE STRIP ===== */
-    .culture-grid {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 32px 32px 0;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-    .culture-card {
-      border-top: 2px solid var(--border);
-      padding-top: 20px;
-      transition: border-color 0.2s;
-      cursor: pointer;
-    }
-    .culture-card:hover { border-color: var(--accent); }
-    .culture-num {
-      font-family: var(--serif);
-      font-size: 0.75rem;
-      color: var(--mist);
-      letter-spacing: 0.1em;
-      margin-bottom: 10px;
-    }
-    .culture-card-img {
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
-    .culture-card-img .img-block {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.5s ease;
-    }
-    .culture-card:hover .culture-card-img .img-block {
-      transform: scale(1.05);
-    }
-    .culture-card-cat {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-    .culture-card-title {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      line-height: 1.4;
-      color: var(--ink);
-      transition: color 0.2s;
-    }
-    .culture-card:hover .culture-card-title { color: var(--accent); }
-    .culture-card-desc {
-      margin-top: 8px;
-      font-size: 0.82rem;
-      color: var(--mist);
-      line-height: 1.65;
-    }
-
-    /* ===== INTERLUDE BANNER ===== */
-    .interlude {
-      background: var(--ink);
-      margin: 64px 0;
-      padding: 64px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .interlude-kanji {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Noto Serif JP', serif;
-      font-size: 28rem;
-      font-weight: 300;
-      color: var(--white);
-      opacity: 0.025;
-      line-height: 1;
-      pointer-events: none;
-      user-select: none;
-      white-space: nowrap;
-    }
-    .interlude-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 32px;
-      text-align: center;
-    }
-    .interlude-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    .interlude-quote {
-      font-family: var(--serif);
-      font-size: clamp(1.5rem, 3vw, 2.4rem);
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.5;
-      letter-spacing: 0.01em;
-      margin-bottom: 16px;
-    }
-    .interlude-quote strong {
-      font-weight: 700;
-      font-style: italic;
-    }
-    .interlude-sub {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.4);
-      letter-spacing: 0.06em;
-    }
-    /* 横線装飾 */
-    .interlude-lines {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 32px;
-    }
-    .iline { width: 48px; height: 1px; background: rgba(255,255,255,0.15); }
-    .isymbol {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 1.2rem;
-      color: var(--accent);
-      line-height: 1;
-    }
-
-    /* ===== THINGS TO BUY ===== */
-    .buy-grid {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 32px 32px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 1px;
-      background: var(--border);
-    }
-    .buy-card {
-      background: var(--paper);
-      padding: 28px 24px 32px;
-      transition: background 0.25s;
-      cursor: pointer;
-      position: relative;
-    }
-    .buy-card:hover { background: var(--white); }
-    .buy-icon {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      display: block;
-      line-height: 1;
-    }
-    .buy-tag {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--mist);
-      margin-bottom: 8px;
-    }
-    .buy-title {
-      font-family: var(--serif);
-      font-size: 1rem;
-      line-height: 1.45;
-      color: var(--ink);
-      margin-bottom: 10px;
-    }
-    .buy-card:hover .buy-title { color: var(--accent); }
-    .buy-price {
-      font-size: 0.8rem;
-      color: var(--zen);
-      font-weight: 600;
-    }
-    .buy-arrow {
-      position: absolute;
-      bottom: 24px;
-      right: 24px;
-      font-size: 1rem;
-      color: var(--border);
-      transition: color 0.2s, transform 0.2s;
-    }
-    .buy-card:hover .buy-arrow {
-      color: var(--accent);
-      transform: translate(2px, -2px);
-    }
-
-    /* ===== NEWSLETTER ===== */
-    .newsletter-wrap {
-      max-width: 1280px;
-      margin: 64px auto;
-      padding: 0 32px;
-    }
-    .newsletter {
-      background: var(--ink);
-      padding: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      overflow: hidden;
-    }
-    .nl-visual {
-      position: relative;
-      background: linear-gradient(135deg, #100810 0%, #20102e 50%, #3a1a50 100%);
-      min-height: 320px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .nl-visual-kanji {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 12rem;
-      font-weight: 300;
-      color: var(--white);
-      opacity: 0.08;
-      line-height: 1;
-      user-select: none;
-    }
-    .nl-visual-badge {
-      position: absolute;
-      text-align: center;
-    }
-    .nl-badge-en {
-      font-family: var(--serif);
-      font-size: 1rem;
-      color: var(--white);
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      opacity: 0.5;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .nl-badge-main {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1;
-      display: block;
-    }
-    .nl-badge-accent {
-      width: 32px;
-      height: 2px;
-      background: var(--accent);
-      margin: 12px auto 0;
-    }
-
-    .nl-content {
-      padding: 56px 56px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .nl-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    .nl-title {
-      font-family: var(--serif);
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
-    .nl-desc {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.75;
-      margin-bottom: 32px;
-    }
-    .nl-form {
-      display: flex;
-      gap: 0;
-    }
-    .nl-input {
-      flex: 1;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-right: none;
-      color: var(--white);
-      padding: 14px 20px;
-      font-family: var(--sans);
-      font-size: 0.88rem;
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .nl-input::placeholder { color: rgba(255,255,255,0.3); }
-    .nl-input:focus {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.35);
-    }
-    .nl-btn {
-      background: var(--accent);
-      color: var(--white);
-      border: none;
-      padding: 14px 28px;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .nl-btn:hover { background: var(--accent-light); }
-    .nl-note {
-      margin-top: 12px;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.25);
-    }
-
-    /* ===== FOOTER ===== */
-    .site-footer {
-      border-top: 1px solid var(--border);
-    }
-    .footer-top {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 56px 32px 40px;
-      display: grid;
-      grid-template-columns: 260px 1fr 1fr 1fr;
-      gap: 48px;
-    }
-    .footer-brand-logo {
-      font-family: var(--serif);
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      margin-bottom: 4px;
-    }
-    .footer-brand-logo .dot { color: var(--accent); }
-    .footer-brand-jp {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.35em;
-      color: var(--mist);
-      margin-bottom: 20px;
-    }
-    .footer-tagline {
-      font-size: 0.82rem;
-      color: var(--mist);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-    .footer-social {
-      display: flex;
-      gap: 12px;
-    }
-    .footer-social a {
-      width: 34px;
-      height: 34px;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      color: var(--mist);
-      transition: all 0.2s;
-    }
-    .footer-social a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    .footer-col-title {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink);
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .footer-links a {
-      font-size: 0.85rem;
-      color: var(--mist);
-      transition: color 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .footer-links a::before {
-      content: '';
-      width: 12px;
-      height: 1px;
-      background: var(--border);
-      flex-shrink: 0;
-      transition: background 0.2s, width 0.2s;
-    }
-    .footer-links a:hover { color: var(--ink); }
-    .footer-links a:hover::before {
-      background: var(--accent);
-      width: 18px;
-    }
-    .footer-bottom {
-      background: var(--ink);
-      padding: 18px 32px;
-      max-width: 100%;
-    }
-    .footer-bottom-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .footer-copy {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.3);
-    }
-    .footer-jp-strip {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.12);
-      letter-spacing: 0.4em;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1024px) {
-      .editorial-grid { grid-template-columns: 1fr 1fr; }
-      .ed-main { grid-row: auto; aspect-ratio: 16/10; }
-      .buy-grid { grid-template-columns: 1fr 1fr; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .header-inner { grid-template-columns: auto 1fr auto; }
-      .header-nav-left { display: none; }
-      .hero { height: 85vh; }
-      .hero-content { padding: 0 24px 48px; }
-      .hero-kanji { display: none; }
-      .editorial-grid { grid-template-columns: 1fr; }
-      .culture-grid { grid-template-columns: 1fr; }
-      .newsletter { grid-template-columns: 1fr; }
-      .nl-visual { display: none; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
-      .ticker-track { animation-duration: 18s; }
-    }
-    @media (max-width: 480px) {
-      .buy-grid { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr; }
-      .hero-title { font-size: 1.9rem; }
-    }
-  </style>
+  <link rel="preload" as="image" href="/assets/images/yakushima-forest-1536.webp" type="image/webp">
+  <link rel="alternate" type="application/rss+xml" title="TABI RSS" href="/feed.xml">
+  <link rel="alternate" type="application/feed+json" title="TABI JSON Feed" href="/feed.json">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-  Japan Travel &amp; Culture Guide &nbsp;<span>·</span>&nbsp; Updated weekly &nbsp;<span>·</span>&nbsp; Free newsletter every Friday
-</div>
-
-<!-- HEADER -->
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="top-bar"><span>Japan Travel &amp; Culture Guide</span><span class="top-extra"> / Updated weekly / Free newsletter every Friday</span></div>
 <header class="site-header">
   <div class="header-inner">
-    <ul class="header-nav-left">
-      <li><a href="#" class="active">Travel</a></li>
-      <li><a href="#">Culture</a></li>
-      <li><a href="#">Food</a></li>
-      <li><a href="#">Hidden Gems</a></li>
+    <ul class="header-nav">
+      <li><a href="/categories/travel-guide.html">Travel Guide</a></li>
+<li><a href="/categories/culture.html">Culture &amp; Tradition</a></li>
+<li><a href="/categories/food.html">Food &amp; Drink</a></li>
+<li><a href="/categories/things-to-buy.html">Things to Buy</a></li>
+<li><a href="/categories/hidden-gems.html">Hidden Gems</a></li>
+<li><a href="/categories/nature-outdoors.html">Nature &amp; Outdoors</a></li>
+<li><a href="/categories/stays.html">Stays</a></li>
     </ul>
-    <div class="site-logo">
+    <a class="site-logo" href="/" aria-label="TABI home">
       <span class="logo-en">TABI<span class="dot">.</span></span>
-      <span class="logo-jp">旅 — Discover Japan</span>
-    </div>
-    <div class="header-right">
-      <button class="header-search">&#9906;</button>
-      <a href="#newsletter" class="header-cta">Free Newsletter</a>
+      <span class="logo-jp">&#26053; - Discover Japan</span>
+    </a>
+    <div class="header-actions">
+      <nav class="language-switch" aria-label="Choose site language">
+        <a href="/" lang="en" hreflang="en" aria-current="true"><span>EN</span><small>English</small></a>
+        <a href="/ja/" lang="ja" hreflang="ja"><span>JP</span><small>日本語</small></a>
+      </nav>
+      <button class="header-search" type="button" aria-label="Search TABI" title="Search TABI" aria-expanded="false" aria-controls="site-search-panel" data-search-toggle>&#8981;</button>
+      <a class="header-cta" href="#newsletter">Free Newsletter</a>
     </div>
   </div>
 </header>
-
-<!-- TICKER -->
-<div class="ticker">
+<div class="ticker" aria-label="Latest articles">
   <div class="ticker-label">Latest</div>
-  <div class="ticker-track" id="ticker">
-    <span class="ticker-item"><strong>Travel Guide</strong> — The best ryokan in Kyoto under ¥20,000</span>
-    <span class="ticker-item"><strong>Culture</strong> — What wabi-sabi really means and why the world needs it</span>
-    <span class="ticker-item"><strong>Food</strong> — Tokyo's hidden izakayas locals actually go to</span>
-    <span class="ticker-item"><strong>Things to Buy</strong> — Best Japanese kitchen knives for every budget</span>
-    <span class="ticker-item"><strong>Hidden Gems</strong> — Yakushima island: Japan's ancient forest</span>
-    <span class="ticker-item"><strong>Travel Guide</strong> — The best ryokan in Kyoto under ¥20,000</span>
-    <span class="ticker-item"><strong>Culture</strong> — What wabi-sabi really means and why the world needs it</span>
-    <span class="ticker-item"><strong>Food</strong> — Tokyo's hidden izakayas locals actually go to</span>
-    <span class="ticker-item"><strong>Things to Buy</strong> — Best Japanese kitchen knives for every budget</span>
-    <span class="ticker-item"><strong>Hidden Gems</strong> — Yakushima island: Japan's ancient forest</span>
+  <div class="ticker-track">
+    <span class="ticker-item"><strong>Nature &amp; Outdoors</strong> - Coastal Walks in Japan for Travelers Who Want Sea Air, Not a Race</span>
+<span class="ticker-item"><strong>Nature &amp; Outdoors</strong> - Beginner-Friendly Cycling Routes in Japan</span>
+<span class="ticker-item"><strong>Travel Guide</strong> - Local Train Journeys in Japan Worth Slowing Down For</span>
+<span class="ticker-item"><strong>Nature &amp; Outdoors</strong> - Japan’s Rice Terraces: How to Visit Without Treating Them Like a Photo Prop</span>
+<span class="ticker-item"><strong>Food &amp; Drink</strong> - Regional Wagashi Travelers Should Try With Tea</span>
+<span class="ticker-item"><strong>Food &amp; Drink</strong> - Seafood Markets in Japan Beyond Tourist Sushi</span>
+<span class="ticker-item"><strong>Nature &amp; Outdoors</strong> - Coastal Walks in Japan for Travelers Who Want Sea Air, Not a Race</span>
+<span class="ticker-item"><strong>Nature &amp; Outdoors</strong> - Beginner-Friendly Cycling Routes in Japan</span>
+<span class="ticker-item"><strong>Travel Guide</strong> - Local Train Journeys in Japan Worth Slowing Down For</span>
+<span class="ticker-item"><strong>Nature &amp; Outdoors</strong> - Japan’s Rice Terraces: How to Visit Without Treating Them Like a Photo Prop</span>
+<span class="ticker-item"><strong>Food &amp; Drink</strong> - Regional Wagashi Travelers Should Try With Tea</span>
+<span class="ticker-item"><strong>Food &amp; Drink</strong> - Seafood Markets in Japan Beyond Tourist Sushi</span>
   </div>
 </div>
-
-<!-- HERO -->
+<nav class="mobile-nav" aria-label="Primary mobile navigation">
+  <a href="/categories/travel-guide.html">Travel Guide</a>
+<a href="/categories/culture.html">Culture &amp; Tradition</a>
+<a href="/categories/food.html">Food &amp; Drink</a>
+<a href="/categories/things-to-buy.html">Things to Buy</a>
+<a href="/categories/hidden-gems.html">Hidden Gems</a>
+<a href="/categories/nature-outdoors.html">Nature &amp; Outdoors</a>
+<a href="/categories/stays.html">Stays</a>
+<a href="/itineraries/index.html">Itineraries</a>
+<a href="/areas/index.html">Areas</a>
+<a href="/planning/index.html">Planning</a>
+</nav>
+<aside class="language-notice" aria-label="Language">
+  <div>
+    <span>Current language</span>
+    <strong>English</strong>
+  </div>
+  <p>This page has a Japanese edition with localized editorial wording.</p>
+  <a href="/ja/">Also available: 日本語</a>
+</aside>
+<nav class="quick-routes" aria-label="Quick routes">
+  <span>Quick routes</span>
+  <a href="/">Start here</a>
+  <a href="/collections/index.html">Browse collections</a>
+  <a href="/planning/index.html">Plan a trip</a>
+  <button type="button" data-search-toggle aria-expanded="false" aria-controls="site-search-panel">Open search</button>
+</nav>
+<div class="search-panel" id="site-search-panel" data-search-panel hidden>
+  <div class="search-panel-inner" role="dialog" aria-modal="true" aria-label="Search TABI">
+    <div class="search-panel-head">
+      <p class="search-panel-title">Search TABI</p>
+      <button class="icon-button" type="button" aria-label="Close search" data-search-close>&#10005;</button>
+    </div>
+    <input class="search-input" type="search" placeholder="Search Kyoto, food, craft, hidden gems..." data-search-input>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+<main id="main">
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-pattern"></div>
-  <div class="hero-kanji">旅</div>
-  <div class="hero-line"></div>
-
+  <div class="hero-media">
+    <picture>
+  <source type="image/webp" srcset="/assets/images/yakushima-forest-640.webp 640w, /assets/images/yakushima-forest-1024.webp 1024w, /assets/images/yakushima-forest-1536.webp 1536w" sizes="100vw">
+  <img src="/assets/images/yakushima-forest.png" alt="A misty ancient cedar forest path on Yakushima island after rain" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high">
+</picture>
+  </div>
+  <div class="hero-kanji">&#26053;</div>
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-tag">Travel Guide</span>
-      <span class="hero-num">01 / 05</span>
-    </div>
-    <h1 class="hero-title">
-      The Hidden Shrines of Kyoto<br>
-      <em>Locals Still Keep Secret</em>
-    </h1>
-    <p class="hero-desc">
-      Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto — quiet, moss-covered, and entirely yours. We asked local monks where they actually go.
-    </p>
+    <div class="eyebrow"><span class="eyebrow-mark">Japan Travel Intelligence</span><span>EN / JP</span></div>
+    <h1 class="hero-title">Find the Japan worth slowing down for.</h1>
+    <p class="hero-desc">TABI is a bilingual editorial guide to Japanese travel, food, culture, craft, hidden places, and things worth bringing home.</p>
+    <a class="hero-feature" href="/articles/yakushima-ancient-forest-few-tourists-find.html">
+  <span>Featured Guide / Hidden Gems / 9 min read</span>
+  <strong>Yakushima: Japan&#39;s Ancient Forest That Few Tourists Find</strong>
+</a>
     <div class="hero-actions">
-      <a href="#" class="hero-btn">Read the Guide &nbsp;→</a>
-      <a href="#" class="hero-btn-ghost">Browse all guides</a>
+      <a class="hero-btn" href="/articles/yakushima-ancient-forest-few-tourists-find.html">Read the Guide</a>
+      <a class="hero-link" href="/categories/travel-guide.html">Browse all guides</a>
     </div>
   </div>
-
-  <div class="hero-dots">
-    <div class="hero-dot active"></div>
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
+</section>
+<section aria-labelledby="travel-heading">
+  <div class="section-label">
+    <span class="section-label-jp">&#26053;</span>
+    <h2 class="section-label-en" id="travel-heading">Editor's Picks</h2>
+    <div class="section-label-line"></div>
+    <a class="section-label-link" href="/categories/travel-guide.html">All articles</a>
   </div>
-
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-hint-line"></div>
+  <p class="algorithm-note">Ranked by TABI&#39;s local article score: freshness, seasonality, quality, editorial weight, and category diversity.</p>
+  <div class="editorial-grid">
+    <a class="article-card featured" href="/articles/yakushima-ancient-forest-few-tourists-find.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/yakushima-forest-640.webp 640w, /assets/images/yakushima-forest-1024.webp 1024w, /assets/images/yakushima-forest-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/yakushima-forest.png" alt="A misty ancient cedar forest path on Yakushima island after rain" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <div class="card-content">
+    <p class="card-cat">Hidden Gems</p>
+    <h3 class="card-title">Yakushima: Japan&#39;s Ancient Forest That Few Tourists Find</h3>
+    <p class="card-meta">May 12, 2026 / 9 min read</p>
+  </div>
+</a>
+<a class="article-card" href="/articles/beginner-guide-to-japan-national-parks.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/japan-national-parks-guide-640.webp 640w, /assets/images/japan-national-parks-guide-1024.webp 1024w, /assets/images/japan-national-parks-guide-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/japan-national-parks-guide.png" alt="A boardwalk trail leading through a Japanese national park landscape with mountains beyond" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <div class="card-content">
+    <p class="card-cat">Hidden Gems</p>
+    <h3 class="card-title">A Beginner Guide to Japan National Parks</h3>
+    <p class="card-meta">May 29, 2026 / 7 min read</p>
+  </div>
+</a>
+<a class="article-card" href="/articles/summer-heat-travel-strategy-for-japan.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/summer-heat-japan-travel-640.webp 640w, /assets/images/summer-heat-japan-travel-1024.webp 1024w, /assets/images/summer-heat-japan-travel-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/summer-heat-japan-travel.png" alt="A traveler resting in the shade on a hot summer street in Japan with water and a fan" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <div class="card-content">
+    <p class="card-cat">Travel Guide</p>
+    <h3 class="card-title">How to Travel Japan in Summer Without Letting the Heat Win</h3>
+    <p class="card-meta">May 29, 2026 / 7 min read</p>
+  </div>
+</a>
+<a class="article-card" href="/articles/osaka-three-day-eating-itinerary.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/osaka-food-alley-640.webp 640w, /assets/images/osaka-food-alley-1024.webp 1024w, /assets/images/osaka-food-alley-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/osaka-food-alley.png" alt="A warm Osaka food alley with izakaya lanterns and small counters at night" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <div class="card-content">
+    <p class="card-cat">Food &amp; Drink</p>
+    <h3 class="card-title">Osaka in 3 Days: The Eating and Wandering Itinerary</h3>
+    <p class="card-meta">May 16, 2026 / 6 min read</p>
+  </div>
+</a>
+<a class="article-card" href="/articles/japanese-festivals-without-crowd-mistakes.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/japanese-festival-crowd-etiquette-640.webp 640w, /assets/images/japanese-festival-crowd-etiquette-1024.webp 1024w, /assets/images/japanese-festival-crowd-etiquette-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/japanese-festival-crowd-etiquette.png" alt="A lively Japanese summer festival street with lanterns, food stalls, and a moving crowd" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <div class="card-content">
+    <p class="card-cat">Culture &amp; Tradition</p>
+    <h3 class="card-title">Japanese Festivals Without the Crowd Mistakes</h3>
+    <p class="card-meta">May 30, 2026 / 6 min read</p>
+  </div>
+</a>
+  </div>
+</section>
+<section aria-labelledby="topics-heading">
+  <div class="section-label">
+    <span class="section-label-jp">&#36947;</span>
+    <h2 class="section-label-en" id="topics-heading">Topic Paths</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="topic-grid">
+    <a class="topic-card" href="/topics/kyoto-travel.html">
+  <span>Topic Cluster</span>
+  <strong>Kyoto Travel</strong>
+  <p>Quiet shrines, ryokan, craft, and routes for seeing Kyoto with more care.</p>
+  <small>38 guides</small>
+</a>
+<a class="topic-card" href="/topics/first-time-japan.html">
+  <span>Topic Cluster</span>
+  <strong>First-Time Japan</strong>
+  <p>Practical routes, food confidence, and gentle planning for a first trip to Japan.</p>
+  <small>39 guides</small>
+</a>
+<a class="topic-card" href="/topics/japanese-food.html">
+  <span>Topic Cluster</span>
+  <strong>Japanese Food</strong>
+  <p>Menus, alleys, counters, convenience-store saves, and the meals that shape a trip.</p>
+  <small>17 guides</small>
+</a>
+<a class="topic-card" href="/topics/shopping-in-japan.html">
+  <span>Topic Cluster</span>
+  <strong>Shopping in Japan</strong>
+  <p>Useful, packable, and culturally thoughtful things worth bringing home.</p>
+  <small>9 guides</small>
+</a>
+<a class="topic-card" href="/topics/slow-travel.html">
+  <span>Topic Cluster</span>
+  <strong>Slow Travel</strong>
+  <p>Forests, islands, walking routes, and quieter places where Japan has room to breathe.</p>
+  <small>17 guides</small>
+</a>
+  </div>
+</section>
+<section aria-labelledby="planning-heading">
+  <div class="section-label">
+    <span class="section-label-jp">&#35336;</span>
+    <h2 class="section-label-en" id="planning-heading">Plan Your Trip</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="utility-grid">
+    <a class="utility-card" href="/collections/index.html">
+  <span>Collections</span>
+  <strong>Browse by Intent</strong>
+  <p>Rainy days, solo travel, food-led routes, and things worth bringing home.</p>
+</a>
+<a class="utility-card" href="/itineraries/index.html">
+  <span>Itineraries</span>
+  <strong>Choose a Trip Length</strong>
+  <p>Static 3, 7, 10, and 14 day routes assembled from TABI&#39;s local article graph.</p>
+</a>
+<a class="utility-card" href="/areas/index.html">
+  <span>Areas</span>
+  <strong>Browse by Place</strong>
+  <p>Tokyo, Kyoto, Osaka, Yakushima, and Setouchi hubs built from tags and category fit.</p>
+</a>
+<a class="utility-card" href="/planning/japan-travel-checklist.html">
+  <span>Checklist</span>
+  <strong>Before You Fly</strong>
+  <p>A practical pre-trip checklist for money, transit, connectivity, luggage, and first-day friction.</p>
+</a>
   </div>
 </section>
 
-<!-- TRAVEL SECTION -->
-<div class="section-label">
-  <span class="section-label-jp">旅</span>
-  <h2 class="section-label-en">Travel Guide</h2>
-  <div class="section-label-line"></div>
-  <a href="#" class="section-label-link">All articles <span class="arrow">→</span></a>
-</div>
-<div class="editorial-grid">
-  <a href="#" class="ed-card ed-main">
-    <div class="img-block grad-torii" style="width:100%;height:100%;"></div>
-    <div class="ed-overlay"></div>
-    <div class="ed-main-strip">特集</div>
-    <div class="ed-content">
-      <p class="ed-cat">Travel Guide</p>
-      <h3 class="ed-title">How to Spend 10 Days in Japan Without a Single Tourist Trap</h3>
-      <div class="ed-meta">
-        <span>May 18, 2026</span>
-        <span class="ed-meta-dot"></span>
-        <span>12 min read</span>
-      </div>
-    </div>
-  </a>
-  <a href="#" class="ed-card ed-sub">
-    <div class="img-block grad-fuji" style="width:100%;height:100%;"></div>
-    <div class="ed-overlay"></div>
-    <div class="ed-content">
-      <p class="ed-cat">Hidden Gems</p>
-      <h3 class="ed-title">The Perfect Route up Mt. Fuji: What Nobody Tells You</h3>
-      <div class="ed-meta"><span>May 15, 2026</span><span class="ed-meta-dot"></span><span>8 min</span></div>
-    </div>
-  </a>
-  <a href="#" class="ed-card ed-sub">
-    <div class="img-block grad-city" style="width:100%;height:100%;"></div>
-    <div class="ed-overlay"></div>
-    <div class="ed-content">
-      <p class="ed-cat">Travel Guide</p>
-      <h3 class="ed-title">Osaka in 3 Days: The Eating and Wandering Itinerary</h3>
-      <div class="ed-meta"><span>May 12, 2026</span><span class="ed-meta-dot"></span><span>6 min</span></div>
-    </div>
-  </a>
-  <a href="#" class="ed-card ed-sub">
-    <div class="img-block grad-forest" style="width:100%;height:100%;"></div>
-    <div class="ed-overlay"></div>
-    <div class="ed-content">
-      <p class="ed-cat">Hidden Gems</p>
-      <h3 class="ed-title">Yakushima: Japan's Ancient Forest That Few Tourists Find</h3>
-      <div class="ed-meta"><span>May 10, 2026</span><span class="ed-meta-dot"></span><span>9 min</span></div>
-    </div>
-  </a>
-  <a href="#" class="ed-card ed-sub">
-    <div class="img-block grad-food" style="width:100%;height:100%;"></div>
-    <div class="ed-overlay"></div>
-    <div class="ed-content">
-      <p class="ed-cat">Food &amp; Drink</p>
-      <h3 class="ed-title">How to Read a Japanese Menu (Without Speaking Japanese)</h3>
-      <div class="ed-meta"><span>May 8, 2026</span><span class="ed-meta-dot"></span><span>5 min</span></div>
-    </div>
-  </a>
-</div>
-
-<!-- CULTURE SECTION -->
-<div class="section-label">
-  <span class="section-label-jp">文化</span>
-  <h2 class="section-label-en">Culture &amp; Tradition</h2>
-  <div class="section-label-line"></div>
-  <a href="#" class="section-label-link">All articles <span class="arrow">→</span></a>
-</div>
-<div class="culture-grid">
-  <div class="culture-card">
-    <p class="culture-num">01</p>
-    <div class="culture-card-img">
-      <div class="img-block grad-1" style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;">🎎</div>
-    </div>
-    <p class="culture-card-cat">Philosophy</p>
-    <h3 class="culture-card-title">What Wabi-Sabi Really Means — And Why the World Needs It Now</h3>
-    <p class="culture-card-desc">The Japanese aesthetic of imperfection and transience offers something Western design philosophy rarely does: permission to be incomplete.</p>
+<section aria-labelledby="culture-heading">
+  <div class="section-label">
+    <span class="section-label-jp">&#25991;&#21270;</span>
+    <h2 class="section-label-en" id="culture-heading">Culture &amp; Tradition</h2>
+    <div class="section-label-line"></div>
+    <a class="section-label-link" href="/categories/culture.html">All culture</a>
   </div>
-  <div class="culture-card">
-    <p class="culture-num">02</p>
-    <div class="culture-card-img">
-      <div class="img-block grad-2" style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;">🏺</div>
-    </div>
-    <p class="culture-card-cat">Craft</p>
-    <h3 class="culture-card-title">Kintsugi: The Art of Repairing Broken Things with Gold</h3>
-    <p class="culture-card-desc">A 500-year-old technique for mending ceramics has become a global metaphor for resilience. We visited a master craftsman in Kyoto.</p>
+  <div class="culture-grid">
+    <a class="culture-card" href="/articles/japanese-festivals-without-crowd-mistakes.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/japanese-festival-crowd-etiquette-640.webp 640w, /assets/images/japanese-festival-crowd-etiquette-1024.webp 1024w, /assets/images/japanese-festival-crowd-etiquette-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/japanese-festival-crowd-etiquette.png" alt="A lively Japanese summer festival street with lanterns, food stalls, and a moving crowd" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <p class="card-cat">Culture &amp; Tradition</p>
+  <h3>Japanese Festivals Without the Crowd Mistakes</h3>
+  <p>Festivals can be joyful, crowded, and deeply local at the same time. Plan your exit, respect procession space, and treat the event as a community day rather than a stage show.</p>
+</a>
+<a class="culture-card" href="/articles/what-wabi-sabi-really-means.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/kintsugi-studio-640.webp 640w, /assets/images/kintsugi-studio-1024.webp 1024w, /assets/images/kintsugi-studio-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/kintsugi-studio.png" alt="A quiet Kyoto craft studio table with a ceramic bowl and warm side light" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <p class="card-cat">Culture &amp; Tradition</p>
+  <h3>What Wabi-Sabi Really Means and Why the World Needs It Now</h3>
+  <p>Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.</p>
+</a>
+<a class="culture-card" href="/articles/jazz-kissa-and-listening-bars-in-japan.html" data-search-card>
+  <picture>
+  <source type="image/webp" srcset="/assets/images/jazz-kissa-listening-bar-640.webp 640w, /assets/images/jazz-kissa-listening-bar-1024.webp 1024w, /assets/images/jazz-kissa-listening-bar-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 33vw">
+  <img src="/assets/images/jazz-kissa-listening-bar.png" alt="A dim Japanese listening bar with vinyl records, warm lamps, and high-end speakers" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
+  <p class="card-cat">Culture &amp; Tradition</p>
+  <h3>Jazz Kissa and Listening Bars in Japan</h3>
+  <p>Japan’s listening culture rewards attention. A jazz kissa or listening bar is less about nightlife noise and more about records, equipment, quiet conversation, and knowing when to simply listen.</p>
+</a>
   </div>
-  <div class="culture-card">
-    <p class="culture-num">03</p>
-    <div class="culture-card-img">
-      <div class="img-block grad-3" style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;">🌸</div>
-    </div>
-    <p class="culture-card-cat">Seasonal</p>
-    <h3 class="culture-card-title">Hanami 2026: Where to See Cherry Blossoms Like a Local</h3>
-    <p class="culture-card-desc">Skip the tourist crowds. These lesser-known spots offer the full hanami experience without the elbows.</p>
-  </div>
-</div>
-
-<!-- INTERLUDE BANNER -->
-<div class="interlude">
-  <div class="interlude-kanji">旅文化</div>
+</section>
+<section class="interlude" aria-label="The TABI philosophy">
+  <div class="interlude-kanji">&#26053;&#25991;&#21270;</div>
   <div class="interlude-inner">
-    <div class="interlude-lines">
-      <div class="iline"></div>
-      <span class="isymbol">⛩</span>
-      <div class="iline"></div>
-    </div>
     <p class="interlude-label">The TABI Philosophy</p>
-    <p class="interlude-quote">
-      Japan is not a destination.<br>
-      <strong>It is a way of seeing.</strong>
-    </p>
-    <p class="interlude-sub">From ancient forest temples to 4am ramen counters — we find the Japan worth knowing.</p>
+    <p class="interlude-quote">Japan is not a destination.<br><strong>It is a way of seeing.</strong></p>
+    <p class="interlude-sub">From ancient forest temples to 4am ramen counters, we find the Japan worth knowing.</p>
   </div>
-</div>
-
-<!-- THINGS TO BUY -->
-<div class="section-label">
-  <span class="section-label-jp">買物</span>
-  <h2 class="section-label-en">Things to Buy</h2>
-  <div class="section-label-line"></div>
-  <a href="#" class="section-label-link">All guides <span class="arrow">→</span></a>
-</div>
-<div class="buy-grid">
-  <a href="#" class="buy-card">
-    <span class="buy-icon">🔪</span>
-    <p class="buy-tag">Kitchen</p>
-    <h3 class="buy-title">The Best Japanese Kitchen Knives to Bring Home</h3>
-    <p class="buy-price">From ¥4,000</p>
-    <span class="buy-arrow">↗</span>
-  </a>
-  <a href="#" class="buy-card">
-    <span class="buy-icon">🍵</span>
-    <p class="buy-tag">Tea &amp; Ceramics</p>
-    <h3 class="buy-title">Buying Matcha: Ceremonial vs. Culinary Grade Explained</h3>
-    <p class="buy-price">From ¥800</p>
-    <span class="buy-arrow">↗</span>
-  </a>
-  <a href="#" class="buy-card">
-    <span class="buy-icon">🧴</span>
-    <p class="buy-tag">Skincare</p>
-    <h3 class="buy-title">10 Japanese Drugstore Products Worth Every Yen</h3>
-    <p class="buy-price">From ¥300</p>
-    <span class="buy-arrow">↗</span>
-  </a>
-  <a href="#" class="buy-card">
-    <span class="buy-icon">👘</span>
-    <p class="buy-tag">Fashion</p>
-    <h3 class="buy-title">Where to Buy Authentic Yukata in Tokyo Without the Markup</h3>
-    <p class="buy-price">From ¥3,500</p>
-    <span class="buy-arrow">↗</span>
-  </a>
-</div>
-
-<!-- NEWSLETTER -->
-<div class="newsletter-wrap" id="newsletter">
+</section>
+<section aria-labelledby="buy-heading">
+  <div class="section-label">
+    <span class="section-label-jp">&#36023;&#29289;</span>
+    <h2 class="section-label-en" id="buy-heading">Things to Buy</h2>
+    <div class="section-label-line"></div>
+    <a class="section-label-link" href="/categories/things-to-buy.html">All guides</a>
+  </div>
+  <div class="buy-grid">
+    <a class="buy-card" href="/articles/best-japanese-kitchen-knives-to-bring-home.html" data-search-card>
+  <span class="buy-icon" aria-hidden="true">&#10022;</span>
+  <p class="buy-tag">kitchen-knives</p>
+  <h3 class="buy-title">The Best Japanese Kitchen Knives to Bring Home</h3>
+  <p class="buy-price">From JPY 4,000</p>
+</a>
+<a class="buy-card" href="/articles/buying-chopsticks-and-lacquerware-in-japan.html" data-search-card>
+  <span class="buy-icon" aria-hidden="true">&#10022;</span>
+  <p class="buy-tag">chopsticks</p>
+  <h3 class="buy-title">Buying Chopsticks and Lacquerware in Japan Without Choosing Randomly</h3>
+  <p class="buy-price">Guide</p>
+</a>
+<a class="buy-card" href="/articles/buying-matcha-ceremonial-vs-culinary-grade.html" data-search-card>
+  <span class="buy-icon" aria-hidden="true">&#127861;</span>
+  <p class="buy-tag">matcha</p>
+  <h3 class="buy-title">Buying Matcha: Ceremonial vs. Culinary Grade Explained</h3>
+  <p class="buy-price">From JPY 800</p>
+</a>
+<a class="buy-card" href="/articles/japanese-drugstore-products-worth-every-yen.html" data-search-card>
+  <span class="buy-icon" aria-hidden="true">&#129524;</span>
+  <p class="buy-tag">drugstore</p>
+  <h3 class="buy-title">10 Japanese Drugstore Products Worth Every Yen</h3>
+  <p class="buy-price">From JPY 300</p>
+</a>
+  </div>
+</section>
+<section class="newsletter-wrap" id="newsletter" aria-labelledby="newsletter-title">
   <div class="newsletter">
-    <div class="nl-visual">
-      <div class="nl-visual-kanji">旅</div>
-      <div class="nl-visual-badge">
-        <span class="nl-badge-en">Weekly</span>
-        <span class="nl-badge-main">TABI</span>
-        <div class="nl-badge-accent"></div>
-      </div>
+    <div class="newsletter-visual">
+      <picture>
+  <source type="image/webp" srcset="/assets/images/kyoto-shrine-hero-640.webp 640w, /assets/images/kyoto-shrine-hero-1024.webp 1024w, /assets/images/kyoto-shrine-hero-1536.webp 1536w" sizes="(max-width: 720px) 100vw, 40vw">
+  <img src="/assets/images/kyoto-shrine-hero.png" alt="A quiet Kyoto shrine path with lanterns at blue hour" width="1536" height="1024" loading="lazy" decoding="async">
+</picture>
     </div>
-    <div class="nl-content">
-      <p class="nl-label">Free Newsletter</p>
-      <h2 class="nl-title">Japan, delivered<br>to your inbox.</h2>
-      <p class="nl-desc">Every Friday: one destination, one cultural insight, one thing worth buying. No noise. No spam. Just the Japan worth knowing.</p>
-      <form class="nl-form">
-        <input class="nl-input" type="email" placeholder="your@email.com">
+    <div class="newsletter-content">
+      <p class="page-kicker">Free Newsletter</p>
+      <h2 id="newsletter-title">Japan, delivered to your inbox.</h2>
+      <p>Every Friday: one destination, one cultural insight, and one thing worth bringing home. No noise. Just the Japan worth knowing.</p>
+      <form class="nl-form" data-newsletter-form>
+        <input class="nl-input" type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
         <button class="nl-btn" type="submit">Subscribe</button>
       </form>
-      <p class="nl-note">Join 12,000+ Japan lovers. Unsubscribe anytime.</p>
+      <p class="nl-status" data-newsletter-status></p>
     </div>
   </div>
-</div>
-
-<!-- FOOTER -->
+</section>
+</main>
+<aside class="recently-viewed" data-recently-viewed hidden>
+  <div>
+    <span>Pick up where you left off</span>
+    <h2>Recently viewed</h2>
+  </div>
+  <div class="recently-viewed-list" data-recently-viewed-list></div>
+</aside>
 <footer class="site-footer">
   <div class="footer-top">
     <div>
-      <div class="footer-brand-logo">TABI<span class="dot">.</span></div>
-      <div class="footer-brand-jp">旅 — たび — Journey</div>
-      <p class="footer-tagline">Your guide to the real Japan — travel, culture, and the things worth bringing home.</p>
-      <div class="footer-social">
-        <a href="#" title="Instagram">&#9670;</a>
-        <a href="#" title="X">&#9632;</a>
-        <a href="#" title="Pinterest">&#9675;</a>
-        <a href="#" title="YouTube">&#9654;</a>
-      </div>
+      <div class="footer-logo">TABI<span class="dot">.</span></div>
+      <p class="footer-tagline">Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.</p>
     </div>
     <div>
       <p class="footer-col-title">Explore</p>
       <ul class="footer-links">
-        <li><a href="#">Travel Guide</a></li>
-        <li><a href="#">Culture &amp; Tradition</a></li>
-        <li><a href="#">Food &amp; Drink</a></li>
-        <li><a href="#">Hidden Gems</a></li>
-        <li><a href="#">Things to Buy</a></li>
+        <li><a href="/categories/travel-guide.html">Travel Guide</a></li>
+<li><a href="/categories/culture.html">Culture &amp; Tradition</a></li>
+<li><a href="/categories/food.html">Food &amp; Drink</a></li>
+<li><a href="/categories/things-to-buy.html">Things to Buy</a></li>
+<li><a href="/categories/hidden-gems.html">Hidden Gems</a></li>
+<li><a href="/categories/nature-outdoors.html">Nature &amp; Outdoors</a></li>
+<li><a href="/categories/stays.html">Stays</a></li>
+        <li><a href="/areas/index.html">Area Guides</a></li>
       </ul>
     </div>
     <div>
-      <p class="footer-col-title">About</p>
+      <p class="footer-col-title">TABI</p>
       <ul class="footer-links">
-        <li><a href="#">About TABI</a></li>
-        <li><a href="#">Newsletter</a></li>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
+        <li><a href="/itineraries/index.html">Itineraries</a></li>
+        <li><a href="/collections/index.html">Collections</a></li>
+        <li><a href="/planning/index.html">Planning Tools</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+        <li><a href="/articles/hidden-shrines-kyoto-locals-keep-secret.html">Start Here</a></li>
+        <li><a href="/topics/first-time-japan.html">First-Time Japan</a></li>
+        <li><a href="/topics/slow-travel.html">Slow Travel</a></li>
       </ul>
     </div>
     <div>
-      <p class="footer-col-title">Legal</p>
+      <p class="footer-col-title">Disclosure</p>
       <ul class="footer-links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Affiliate Disclosure</a></li>
-        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="/categories/things-to-buy.html">Shopping Guides</a></li>
+        <li><a href="/legal.html">Legal</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/source-policy.html">Source Policy</a></li>
+        <li><a href="/sitemap.xml">Sitemap</a></li>
+        <li><a href="mailto:hello@tabi.guide">Contact</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
-      <p class="footer-copy">&copy; 2026 TABI. All rights reserved. Affiliate links may earn us a commission.</p>
-      <p class="footer-jp-strip">旅 &nbsp;·&nbsp; たび &nbsp;·&nbsp; 文化 &nbsp;·&nbsp; 買物</p>
+      <span>&copy; 2026 TABI. All rights reserved.</span>
+      <span>Affiliate links may earn us a commission.</span>
     </div>
   </div>
 </footer>
-
+<script>window.TABI_ARTICLES = [{"title":"How to Enjoy Japanese Gardens Without Rushing Them","summary":"Japanese gardens are not only photo stops. Slow down, read the route, notice borrowed scenery, and let the garden change as you move.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["gardens","aesthetics","walking","slow-travel"],"tagLabels":["gardens","Aesthetics","Walking","Slow Travel"],"aliases":["Japanese garden guide","how to enjoy Japanese gardens","borrowed scenery Japan"],"audience":"Travelers interested in gardens, design, and slower cultural visits.","language":"en","languageLabel":"English","url":"/articles/how-to-enjoy-japanese-gardens.html","score":55,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Omiyage Gift Culture in Japan: What Travelers Can Learn From It","summary":"Omiyage is more than souvenir shopping. Understanding the custom helps travelers choose gifts with more care, context, and usefulness.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["omiyage","souvenirs","local-customs","shopping"],"tagLabels":["omiyage","Souvenirs","Local Customs","Shopping"],"aliases":["omiyage meaning","Japanese gift culture","Japan souvenir etiquette"],"audience":"Travelers buying gifts and souvenirs with more cultural context.","language":"en","languageLabel":"English","url":"/articles/omiyage-gift-culture-for-travelers.html","score":55,"qualityScore":92,"freshness":"Fresh","topic":"Shopping in Japan"},{"title":"Sento Public Bath Etiquette in Japan","summary":"A neighborhood sento can be one of the most grounding experiences in Japan. Learn the basic flow so the visit feels calm instead of confusing.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["sento","onsen","local-customs","wellness"],"tagLabels":["sento","onsen","Local Customs","wellness"],"aliases":["sento etiquette Japan","public bath Japan rules","tattoo sento Japan"],"audience":"Travelers interested in local bathing culture beyond hotel baths.","language":"en","languageLabel":"English","url":"/articles/sento-public-bath-etiquette-in-japan.html","score":55,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Temple and Shrine Etiquette in Japan: A Traveler-Friendly Guide","summary":"You do not need to know every ritual to visit respectfully. A few habits around quiet, cleansing, photography, and private space make sacred places easier to understand.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["shrines","temples","local-customs","etiquette"],"tagLabels":["Shrines","temples","Local Customs","etiquette"],"aliases":["Japan shrine etiquette","temple etiquette Japan","how to visit shrines Japan"],"audience":"Travelers visiting sacred sites in Japan for the first time.","language":"en","languageLabel":"English","url":"/articles/temple-and-shrine-etiquette-for-travelers.html","score":55,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"What Sustainable Tourism Means in Japan","summary":"Sustainable travel is not only about the environment. In Japan, it also means respecting local routines, supporting regional businesses, and reducing pressure on crowded places.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["sustainable-travel","local-customs","slow-travel","responsible-travel"],"tagLabels":["sustainable-travel","Local Customs","Slow Travel","responsible-travel"],"aliases":["sustainable tourism Japan","responsible travel Japan","Japan overtourism"],"audience":"Travelers who want their Japan trip to support rather than flatten the places they visit.","language":"en","languageLabel":"English","url":"/articles/what-sustainable-tourism-means-in-japan.html","score":55,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"What Wabi-Sabi Really Means and Why the World Needs It Now","summary":"Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["wabi-sabi","philosophy","aesthetics","design"],"tagLabels":["Wabi-Sabi","Philosophy","Aesthetics","Design"],"aliases":["wabi-sabi meaning","Japanese aesthetics","wabi sabi design"],"audience":"Readers interested in Japanese aesthetics, craft, design, and cultural context.","language":"en","languageLabel":"English","url":"/articles/what-wabi-sabi-really-means.html","score":63,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Kintsugi: The Art of Repairing Broken Things with Gold","summary":"Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["kintsugi","craft","kyoto","ceramics"],"tagLabels":["Kintsugi","Craft","Kyoto","Ceramics"],"aliases":["kintsugi meaning","Japanese repair art","kintsugi ceramics"],"audience":"Readers and shoppers interested in craft, ceramics, repair, and Japanese design.","language":"en","languageLabel":"English","url":"/articles/kintsugi-art-of-repairing-broken-things.html","score":51,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Hanami: Where to See Cherry Blossoms Like a Local","summary":"Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["hanami","cherry-blossoms","spring","local-customs"],"tagLabels":["Hanami","Cherry Blossoms","Spring","Local Customs"],"aliases":["hanami local","cherry blossoms Japan","where to see sakura"],"audience":"Travelers visiting Japan in spring who want calmer cherry blossom days.","language":"en","languageLabel":"English","url":"/articles/hanami-where-to-see-cherry-blossoms-like-local.html","score":51,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Japanese Festivals Without the Crowd Mistakes","summary":"Festivals can be joyful, crowded, and deeply local at the same time. Plan your exit, respect procession space, and treat the event as a community day rather than a stage show.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["festivals","local-customs","summer","culture"],"tagLabels":["festivals","Local Customs","Summer","culture"],"aliases":["Japanese festival etiquette","matsuri crowd tips","Japan summer festival travel"],"audience":"Travelers attending matsuri, parades, and seasonal festivals in Japan.","language":"en","languageLabel":"English","url":"/articles/japanese-festivals-without-crowd-mistakes.html","score":71,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Jazz Kissa and Listening Bars in Japan","summary":"Japan’s listening culture rewards attention. A jazz kissa or listening bar is less about nightlife noise and more about records, equipment, quiet conversation, and knowing when to simply listen.","category":"culture","categoryLabel":"Culture \u0026 Tradition","tags":["music","nightlife","culture","tokyo"],"tagLabels":["music","Nightlife","culture","Tokyo"],"aliases":["jazz kissa Japan","listening bar Tokyo","vinyl bar Japan"],"audience":"Travelers interested in music, vinyl, bars, and quieter night experiences.","language":"en","languageLabel":"English","url":"/articles/jazz-kissa-and-listening-bars-in-japan.html","score":55,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"How to Use Depachika Food Halls in Japan","summary":"Department-store basement food halls can be overwhelming in the best way. Learn how to browse, buy, and turn them into easy dinners, train meals, and edible souvenirs.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["depachika","food","shopping","first-time"],"tagLabels":["depachika","Food","Shopping","First-Time Japan"],"aliases":["depachika Japan","department store food hall Japan","Japan bento food hall"],"audience":"Food-focused travelers and first-time visitors to Japanese department stores.","language":"en","languageLabel":"English","url":"/articles/how-to-use-depachika-food-halls-in-japan.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"Japanese Breakfasts Worth Planning For","summary":"Breakfast can be one of the quiet highlights of a Japan trip. From ryokan trays to kissaten toast and market bowls, the morning meal can shape the whole day.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["breakfast","food","ryokan","local-food"],"tagLabels":["Breakfast","Food","Ryokan","Local Food"],"aliases":["Japanese breakfast travel","ryokan breakfast","breakfast in Japan"],"audience":"Travelers who want mornings in Japan to feel calmer and more local.","language":"en","languageLabel":"English","url":"/articles/japanese-breakfasts-worth-planning-for.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"Japanese Food"},{"title":"Konbini Travel Hacks That Actually Help in Japan","summary":"Japanese convenience stores are not just emergency snack stops. Used well, they solve breakfast, luggage days, rain, cash, and late arrivals without stealing the trip.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["konbini","travel-tips","breakfast","budget"],"tagLabels":["Konbini","Travel Tips","Breakfast","Budget"],"aliases":["konbini travel hacks","Japanese convenience store tips","konbini breakfast Japan"],"audience":"Travelers who want practical food and small logistics fixes in Japan.","language":"en","languageLabel":"English","url":"/articles/konbini-travel-hacks-that-actually-help.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"Regional Ramen Styles Travelers Should Know Before Ordering","summary":"Ramen is not one dish repeated across Japan. Knowing a few regional styles makes menus less intimidating and turns a bowl into part of the route.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["ramen","regional-japan","food","local-food"],"tagLabels":["ramen","regional-japan","Food","Local Food"],"aliases":["regional ramen Japan","ramen styles Japan","what ramen to order"],"audience":"Food travelers who want ramen to feel regional rather than generic.","language":"en","languageLabel":"English","url":"/articles/regional-ramen-styles-travelers-should-know.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"Japanese Food"},{"title":"Vegetarian Travel in Japan Without Panic","summary":"Vegetarian travel in Japan is possible, but it rewards preparation. Learn where hidden ingredients appear, how to choose safer meals, and why clarity matters more than assumptions.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["vegetarian","food","language","planning"],"tagLabels":["vegetarian","Food","Language","Planning"],"aliases":["vegetarian travel Japan","vegetarian food Japan","dashi vegetarian Japan"],"audience":"Vegetarian travelers and companions planning meals in Japan.","language":"en","languageLabel":"English","url":"/articles/vegetarian-travel-in-japan-without-panic.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"How to Visit Local Morning Markets in Japan","summary":"Morning markets and farm stands reveal what a region actually eats. Go slowly, ask before taking photos, and choose souvenirs that can survive the journey home.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["morning-market","local-food","regional-japan","shopping"],"tagLabels":["morning-market","Local Food","regional-japan","Shopping"],"aliases":["Japan morning market","local food Japan","farm stand Japan"],"audience":"Food-led travelers who want regional Japan beyond restaurants.","language":"en","languageLabel":"English","url":"/articles/how-to-visit-local-morning-markets-in-japan.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"Shopping in Japan"},{"title":"Osaka in 3 Days: The Eating and Wandering Itinerary","summary":"A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["osaka","street-food","itinerary","nightlife"],"tagLabels":["Osaka","Street Food","Itinerary","Nightlife"],"aliases":["Osaka food itinerary","3 days Osaka","Osaka street food"],"audience":"Food-focused travelers who want Osaka beyond a single Dotonbori night.","language":"en","languageLabel":"English","url":"/articles/osaka-three-day-eating-itinerary.html","score":72,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"How to Read a Japanese Menu Without Speaking Japanese","summary":"A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["menus","food","language","first-time"],"tagLabels":["Menus","Food","Language","First-Time Japan"],"aliases":["Japanese menu","ordering food in Japan","ticket machine restaurant"],"audience":"First-time visitors who want easier meals in Japan without language panic.","language":"en","languageLabel":"English","url":"/articles/how-to-read-japanese-menu-without-speaking-japanese.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"Tokyo\u0027s Hidden Izakayas Locals Actually Go To","summary":"The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["tokyo","izakaya","nightlife","local-food"],"tagLabels":["Tokyo","Izakaya","Nightlife","Local Food"],"aliases":["Tokyo izakaya","hidden izakaya Tokyo","local nightlife Japan"],"audience":"Travelers who want Tokyo nightlife beyond viral queues and loud recommendations.","language":"en","languageLabel":"English","url":"/articles/tokyo-hidden-izakayas-locals-go.html","score":68,"qualityScore":92,"freshness":"Review soon","topic":"Japanese Food"},{"title":"Japanese Convenience Store Breakfasts Worth Trying","summary":"Japan\u0027s convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["konbini","breakfast","budget","travel-tips"],"tagLabels":["Konbini","Breakfast","Budget","Travel Tips"],"aliases":["Japanese convenience store breakfast","konbini food","onigiri breakfast"],"audience":"Travelers using early trains, budget hotels, or jet-lagged mornings in Japan.","language":"en","languageLabel":"English","url":"/articles/japanese-convenience-store-breakfasts-worth-trying.html","score":55,"qualityScore":87,"freshness":"Review soon","topic":"First-Time Japan"},{"title":"Seafood Markets in Japan Beyond Tourist Sushi","summary":"Seafood markets are not only places to chase famous sushi counters. Go for morning rhythm, regional catch, simple cooked food, and the discipline of not blocking people who are working.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["seafood","markets","local-food","regional-japan"],"tagLabels":["seafood","markets","Local Food","regional-japan"],"aliases":["Japan seafood market","Japanese fish market travel","seafood market etiquette Japan"],"audience":"Food travelers who want markets without turning them into a queue for one famous meal.","language":"en","languageLabel":"English","url":"/articles/seafood-markets-beyond-tourist-sushi.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"Regional Wagashi Travelers Should Try With Tea","summary":"Wagashi makes more sense when you connect it to place, season, and tea. Skip the prettiest box as default and look for local ingredients, shop rhythm, and sweets that travel well.","category":"food","categoryLabel":"Food \u0026 Drink","tags":["wagashi","tea","local-food","souvenirs"],"tagLabels":["wagashi","Tea","Local Food","Souvenirs"],"aliases":["regional wagashi Japan","Japanese sweets tea","wagashi souvenir Japan"],"audience":"Food travelers and souvenir shoppers interested in Japanese sweets with context.","language":"en","languageLabel":"English","url":"/articles/regional-wagashi-travelers-should-try.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"Shopping in Japan"},{"title":"A Beginner Guide to Japan National Parks","summary":"Japan national parks are not all remote wilderness. Many combine villages, shrines, coastlines, hot springs, and trails that can fit into a thoughtful travel route.","category":"hidden-gems","categoryLabel":"Hidden Gems","tags":["national-parks","nature","hiking","slow-travel"],"tagLabels":["national-parks","nature","Hiking","Slow Travel"],"aliases":["Japan national parks","nature travel Japan","Japan park guide"],"audience":"Travelers who want nature in Japan without overcommitting to difficult logistics.","language":"en","languageLabel":"English","url":"/articles/beginner-guide-to-japan-national-parks.html","score":75,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Small Castle Towns for Slow Japan Travel","summary":"Japan castle towns can make excellent low-pressure stops. They offer history, walkable streets, local food, and a slower rhythm than major-city sightseeing.","category":"hidden-gems","categoryLabel":"Hidden Gems","tags":["castle-towns","heritage","walking","regional-japan"],"tagLabels":["castle-towns","Heritage","Walking","regional-japan"],"aliases":["Japan castle towns","small towns Japan travel","regional Japan heritage"],"audience":"Travelers seeking regional history beyond major cities.","language":"en","languageLabel":"English","url":"/articles/small-castle-towns-for-slow-japan-travel.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"A Quiet Morning Plan for Kyoto Before the Crowds Arrive","summary":"Kyoto changes completely when you start early and keep your route small. This guide shows how to build a calmer morning around walkable areas, respectful behavior, and realistic timing.","category":"hidden-gems","categoryLabel":"Hidden Gems","tags":["kyoto","morning","quiet-travel","local-customs"],"tagLabels":["Kyoto","morning","Quiet Travel","Local Customs"],"aliases":["quiet Kyoto morning","Kyoto before crowds","Kyoto etiquette"],"audience":"Travelers who want Kyoto to feel quieter, more local, and more respectful.","language":"en","languageLabel":"English","url":"/articles/quiet-morning-kyoto-itinerary.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Yakushima: Japan\u0027s Ancient Forest That Few Tourists Find","summary":"Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.","category":"hidden-gems","categoryLabel":"Hidden Gems","tags":["yakushima","islands","forest","hiking"],"tagLabels":["Yakushima","Islands","Forest","Hiking"],"aliases":["Yakushima forest","Yakushima itinerary","slow travel Japan island"],"audience":"Travelers who want Yakushima forests without rushing every famous trail.","language":"en","languageLabel":"English","url":"/articles/yakushima-ancient-forest-few-tourists-find.html","score":83,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"The Setouchi Islands for Art, Sea Air, and Slow Travel","summary":"Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.","category":"hidden-gems","categoryLabel":"Hidden Gems","tags":["setouchi","islands","art","slow-travel"],"tagLabels":["Setouchi","Islands","Art","Slow Travel"],"aliases":["Setouchi islands","Naoshima slow travel","Japan art islands"],"audience":"Travelers drawn to islands, contemporary art, ferries, and slow coastal days.","language":"en","languageLabel":"English","url":"/articles/setouchi-islands-art-sea-slow-travel.html","score":66,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Walking the Kiso Valley Between Old Post Towns","summary":"The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.","category":"hidden-gems","categoryLabel":"Hidden Gems","tags":["kiso-valley","nakasendo","walking","heritage"],"tagLabels":["Kiso Valley","Nakasendo","Walking","Heritage"],"aliases":["Kiso Valley walk","Nakasendo trail","Magome Tsumago"],"audience":"Travelers interested in walking routes, heritage towns, and slower rural Japan.","language":"en","languageLabel":"English","url":"/articles/kiso-valley-walk-between-post-towns.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Craft Towns in Japan for Pottery and Textiles","summary":"Craft towns reward travelers who slow down enough to see process. Look for workshops, kilns, weaving streets, local museums, and shops that explain materials rather than only selling souvenirs.","category":"hidden-gems","categoryLabel":"Hidden Gems","tags":["craft","ceramics","textiles","regional-japan"],"tagLabels":["Craft","Ceramics","textiles","regional-japan"],"aliases":["Japan craft towns","pottery town Japan","textile town Japan"],"audience":"Travelers interested in ceramics, textiles, regional towns, and craft process.","language":"en","languageLabel":"English","url":"/articles/craft-towns-for-pottery-and-textiles.html","score":60,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Forest Bathing in Japan: How to Slow Down Without Turning It Into a Checklist","summary":"Forest bathing is less about covering a famous trail and more about letting the body catch up with the place. This guide explains how to choose a gentle forest day, read local rules, and leave with more than photographs.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["forest","wellness","slow-travel","nature"],"tagLabels":["Forest","wellness","Slow Travel","nature"],"aliases":["forest bathing Japan","shinrin yoku travel","Japan forest walk"],"audience":"Travelers who want a calm nature day without turning it into a hike checklist.","language":"en","languageLabel":"English","url":"/articles/forest-bathing-in-japan.html","score":67,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Beginner-Friendly Cycling Routes in Japan","summary":"Cycling in Japan can be gentle, scenic, and surprisingly practical when the route is chosen well. Focus on separated paths, luggage plans, rental support, and weather before chasing distance.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["cycling","slow-travel","regional-japan","transport"],"tagLabels":["cycling","Slow Travel","regional-japan","transport"],"aliases":["cycling Japan beginner","Japan bike route","rental bicycle Japan travel"],"audience":"Travelers interested in scenic cycling without advanced touring experience.","language":"en","languageLabel":"English","url":"/articles/beginner-cycling-routes-in-japan.html","score":57,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Coastal Walks in Japan for Travelers Who Want Sea Air, Not a Race","summary":"Japan’s coast can turn a travel day into something slower and clearer. Pick walks with safe footing, realistic transport, and small towns nearby so the sea is part of the day rather than a distant view.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["walking","coast","slow-travel","nature"],"tagLabels":["Walking","coast","Slow Travel","nature"],"aliases":["Japan coastal walk","seaside walking Japan","Japan fishing town walk"],"audience":"Travelers who want a relaxed seaside day with walking, food, and local towns.","language":"en","languageLabel":"English","url":"/articles/coastal-walks-in-japan.html","score":57,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Japan’s Rice Terraces: How to Visit Without Treating Them Like a Photo Prop","summary":"Rice terraces are working landscapes, not empty scenery. Visit with respect for farmers, seasons, access roads, and the small communities that keep the view alive.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["rural-japan","landscape","responsible-travel","nature"],"tagLabels":["rural-japan","landscape","responsible-travel","nature"],"aliases":["Japan rice terraces","rural Japan landscape","tanada Japan travel"],"audience":"Travelers interested in rural landscapes, photography, and responsible travel.","language":"en","languageLabel":"English","url":"/articles/japan-rice-terraces-travel-guide.html","score":57,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Wildlife Watching in Japan Without Disturbing What You Came to See","summary":"Seeing wildlife in Japan is a privilege, not a guarantee. Better watching starts with distance, quiet, local rules, and the willingness to leave animals alone.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["wildlife","nature","responsible-travel","seasonal-travel"],"tagLabels":["wildlife","nature","responsible-travel","seasonal-travel"],"aliases":["wildlife watching Japan","Japan nature animals","responsible wildlife travel Japan"],"audience":"Nature travelers who want wildlife encounters without disturbing animals or habitats.","language":"en","languageLabel":"English","url":"/articles/wildlife-watching-in-japan-without-disturbing-it.html","score":57,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Scenic Ropeways and Mountain Views in Japan: How to Choose the Right One","summary":"A ropeway can make mountain scenery accessible, but not every viewpoint suits every day. Choose by weather, crowd flow, onward walks, and what you can still enjoy if clouds arrive.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["mountains","weather","planning","nature"],"tagLabels":["mountains","weather","Planning","nature"],"aliases":["Japan ropeway view","mountain ropeway Japan","Japan scenic cable car"],"audience":"Travelers who want mountain views without committing to a major hike.","language":"en","languageLabel":"English","url":"/articles/scenic-ropeways-and-mountain-views-in-japan.html","score":57,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Island Hopping in Japan Beyond Okinawa","summary":"Japan’s islands are not one kind of trip. Beyond Okinawa, ferries, art islands, fishing ports, volcanic landscapes, and quiet guesthouses create slower routes that need careful timing.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["islands","setouchi","slow-travel","coast"],"tagLabels":["Islands","Setouchi","Slow Travel","coast"],"aliases":["Japan island hopping","Setouchi islands travel","Japan ferry islands"],"audience":"Travelers interested in slower island routes, ferries, and coastal communities.","language":"en","languageLabel":"English","url":"/articles/island-hopping-beyond-okinawa.html","score":67,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"Canoeing and Kayaking in Japan: Gentle Water Days for Travelers","summary":"Canoeing and kayaking can make Japan’s rivers, lakes, and coasts feel immediate. For travelers, the best choice is usually a guided, weather-aware outing with simple logistics and enough quiet.","category":"nature-outdoors","categoryLabel":"Nature \u0026 Outdoors","tags":["waterways","nature","slow-travel","seasonal-travel"],"tagLabels":["waterways","nature","Slow Travel","seasonal-travel"],"aliases":["kayaking Japan travel","canoeing Japan","Japan lake kayak tour"],"audience":"Travelers who want a calm water activity without advanced paddling experience.","language":"en","languageLabel":"English","url":"/articles/canoeing-and-kayaking-in-japan.html","score":57,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"How to Choose a Minshuku in Japan","summary":"A minshuku can make a rural trip feel personal, but expectations matter. Read meal rules, shared facilities, language support, and household rhythm before booking.","category":"stays","categoryLabel":"Stays","tags":["minshuku","where-to-stay","rural-japan","local-customs"],"tagLabels":["minshuku","Where to Stay","rural-japan","Local Customs"],"aliases":["minshuku Japan","Japanese guesthouse rural","family-run lodging Japan"],"audience":"Travelers considering family-run rural stays and guesthouse-style lodging.","language":"en","languageLabel":"English","url":"/articles/how-to-choose-a-minshuku-in-japan.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Temple Stays in Japan: What to Expect Before You Book","summary":"Temple stays can be peaceful, but they are not luxury hotels with incense. Understand meals, morning practice, quiet hours, shared facilities, and the fact that the temple is still a religious place.","category":"stays","categoryLabel":"Stays","tags":["temples","stays","culture","quiet-travel"],"tagLabels":["temples","stays","culture","Quiet Travel"],"aliases":["temple stay Japan","shukubo Japan","Japanese temple lodging"],"audience":"Travelers considering shukubo or temple lodging in Japan.","language":"en","languageLabel":"English","url":"/articles/temple-stays-in-japan-what-to-expect.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Farm Stays in Rural Japan Without Romanticizing the Work","summary":"Farm stays can be generous and memorable when travelers understand the labor behind them. Approach rural hospitality with realistic expectations, safety awareness, and respect for daily work.","category":"stays","categoryLabel":"Stays","tags":["farm-stay","rural-japan","responsible-travel","food"],"tagLabels":["farm-stay","rural-japan","responsible-travel","Food"],"aliases":["farm stay Japan","rural Japan accommodation","Japanese farmhouse stay"],"audience":"Travelers interested in rural hospitality, food, and slower regional stays.","language":"en","languageLabel":"English","url":"/articles/farm-stays-in-rural-japan.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"Japanese Food"},{"title":"Machiya Townhouse Stays in Japan: Charm, Rules, and Real-World Comfort","summary":"A machiya stay can be beautiful, especially in old merchant towns. Before booking, understand sound, stairs, heating, neighborhood rules, and the difference between atmosphere and hotel convenience.","category":"stays","categoryLabel":"Stays","tags":["machiya","architecture","where-to-stay","kyoto"],"tagLabels":["machiya","architecture","Where to Stay","Kyoto"],"aliases":["machiya stay Japan","Kyoto townhouse accommodation","Japanese townhouse rental"],"audience":"Travelers drawn to traditional architecture and neighborhood stays.","language":"en","languageLabel":"English","url":"/articles/machiya-townhouse-stays-in-japan.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Seaside Ryokan and Fishing Town Stays in Japan","summary":"A seaside stay can make dinner, morning markets, and weather part of the trip. Choose the town as much as the inn, and check transport before falling for an ocean-view room.","category":"stays","categoryLabel":"Stays","tags":["ryokan","coast","local-food","slow-travel"],"tagLabels":["Ryokan","coast","Local Food","Slow Travel"],"aliases":["seaside ryokan Japan","fishing town stay Japan","coastal inn Japan"],"audience":"Travelers who want a slower coastal overnight stay with local food.","language":"en","languageLabel":"English","url":"/articles/seaside-ryokan-and-fishing-town-stays.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Hotel Check-In Etiquette in Japan: Small Things That Make Arrival Easier","summary":"Japanese hotel check-in is usually smooth when you know the basics. Prepare passports, arrival time, luggage expectations, bath rules, and payment details before the front desk conversation begins.","category":"stays","categoryLabel":"Stays","tags":["hotels","local-customs","first-time","where-to-stay"],"tagLabels":["hotels","Local Customs","First-Time Japan","Where to Stay"],"aliases":["Japan hotel check in","hotel etiquette Japan","Japan hotel passport luggage"],"audience":"First-time visitors who want smoother arrivals at Japanese hotels and inns.","language":"en","languageLabel":"English","url":"/articles/hotel-check-in-etiquette-in-japan.html","score":56,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"Buying Chopsticks and Lacquerware in Japan Without Choosing Randomly","summary":"Chopsticks and lacquerware can be beautiful, useful souvenirs if you know what to look for. Learn how to compare material, finish, care, and whether the item fits your life at home.","category":"things-to-buy","categoryLabel":"Things to Buy","tags":["chopsticks","lacquerware","souvenirs","craft"],"tagLabels":["chopsticks","lacquerware","Souvenirs","Craft"],"aliases":["buy chopsticks Japan","Japanese lacquerware souvenir","Japan craft shopping"],"audience":"Travelers shopping for useful Japanese craft souvenirs.","language":"en","languageLabel":"English","url":"/articles/buying-chopsticks-and-lacquerware-in-japan.html","score":56,"qualityScore":100,"freshness":"Fresh","topic":"Shopping in Japan"},{"title":"The Best Japanese Kitchen Knives to Bring Home","summary":"A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.","category":"things-to-buy","categoryLabel":"Things to Buy","tags":["kitchen-knives","shopping","craft","souvenirs"],"tagLabels":["Kitchen Knives","Shopping","Craft","Souvenirs"],"aliases":["Japanese kitchen knives","santoku gyuto nakiri","Japan knife souvenir"],"audience":"Home cooks shopping for practical Japanese knives and travel-safe souvenirs.","language":"en","languageLabel":"English","url":"/articles/best-japanese-kitchen-knives-to-bring-home.html","score":64,"qualityScore":100,"freshness":"Review soon","topic":"Shopping in Japan"},{"title":"Buying Matcha: Ceremonial vs. Culinary Grade Explained","summary":"Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.","category":"things-to-buy","categoryLabel":"Things to Buy","tags":["matcha","tea","shopping","kyoto"],"tagLabels":["Matcha","Tea","Shopping","Kyoto"],"aliases":["buying matcha Japan","ceremonial matcha","culinary matcha"],"audience":"Tea drinkers, bakers, and travelers shopping for matcha in Japan.","language":"en","languageLabel":"English","url":"/articles/buying-matcha-ceremonial-vs-culinary-grade.html","score":52,"qualityScore":100,"freshness":"Review soon","topic":"Shopping in Japan"},{"title":"10 Japanese Drugstore Products Worth Every Yen","summary":"Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.","category":"things-to-buy","categoryLabel":"Things to Buy","tags":["drugstore","skincare","shopping","budget"],"tagLabels":["Drugstore","Skincare","Shopping","Budget"],"aliases":["Japanese drugstore products","Japan skincare sunscreen","drugstore shopping Japan"],"audience":"Travelers who enjoy Japanese drugstores but want useful purchases instead of shelf panic.","language":"en","languageLabel":"English","url":"/articles/japanese-drugstore-products-worth-every-yen.html","score":52,"qualityScore":100,"freshness":"Review soon","topic":"Shopping in Japan"},{"title":"Where to Buy Authentic Yukata in Tokyo Without the Markup","summary":"Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.","category":"things-to-buy","categoryLabel":"Things to Buy","tags":["yukata","tokyo","shopping","fashion"],"tagLabels":["Yukata","Tokyo","Shopping","Fashion"],"aliases":["buy yukata Tokyo","authentic yukata","vintage kimono shop Tokyo"],"audience":"Travelers looking for a real wearable yukata rather than a costume-like souvenir.","language":"en","languageLabel":"English","url":"/articles/where-to-buy-authentic-yukata-in-tokyo.html","score":52,"qualityScore":100,"freshness":"Review soon","topic":"Shopping in Japan"},{"title":"Capsule Hotels and Business Hotels in Japan: How to Choose","summary":"Capsule hotels and business hotels solve different travel problems. Pick based on privacy, luggage, sleep, bath access, and the kind of night you actually need.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["hotels","budget","where-to-stay","solo-travel"],"tagLabels":["hotels","Budget","Where to Stay","solo-travel"],"aliases":["capsule hotel Japan","business hotel Japan","budget hotel Japan"],"audience":"Solo travelers and budget-conscious visitors comparing Japanese hotel formats.","language":"en","languageLabel":"English","url":"/articles/capsule-hotels-and-business-hotels-in-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"How to Plan an Autumn Leaves Trip in Japan","summary":"Autumn foliage is easier to plan than cherry blossoms, but it still rewards flexibility. Use elevation, region, timing, and transport reality to build a better fall route.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["autumn","seasonal-travel","planning","nature"],"tagLabels":["autumn","seasonal-travel","Planning","nature"],"aliases":["Japan autumn leaves","fall foliage Japan","koyo trip planning"],"audience":"Travelers planning fall routes around autumn leaves.","language":"en","languageLabel":"English","url":"/articles/how-to-plan-autumn-leaves-in-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"How to Plan Your First Day Arriving in Japan","summary":"The arrival day is not the time to prove anything. A good first day handles transport, food, cash, sleep, and one gentle walk without overloading a tired brain.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["airport","first-day","jet-lag","planning"],"tagLabels":["airport","first-day","jet-lag","Planning"],"aliases":["Japan arrival day","first day in Japan","airport to hotel Japan"],"audience":"Travelers arriving in Japan after a long flight.","language":"en","languageLabel":"English","url":"/articles/how-to-plan-your-first-day-arriving-in-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"How to Use Luggage Forwarding in Japan","summary":"Luggage forwarding can turn a tiring multi-city trip into a lighter route. Learn when it is worth using, what to pack separately, and how to avoid timing mistakes.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["luggage","transport","hotels","planning"],"tagLabels":["luggage","transport","hotels","Planning"],"aliases":["luggage forwarding Japan","takkyubin travel","hands free Japan"],"audience":"Travelers moving between cities with suitcases or complex transfers.","language":"en","languageLabel":"English","url":"/articles/how-to-use-luggage-forwarding-in-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"IC Cards and Cash in Japan: What Travelers Actually Need","summary":"Japan is increasingly cashless, but the smoothest trips still combine an IC card, a credit card, and some cash. This guide explains where each one helps and what to prepare before your first train ride.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["transport","money","first-time","travel-tips"],"tagLabels":["transport","money","First-Time Japan","Travel Tips"],"aliases":["IC card Japan","Suica cash Japan","Japan travel money"],"audience":"First-time visitors preparing money and transit basics.","language":"en","languageLabel":"English","url":"/articles/ic-card-and-cash-basics-for-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"How to Travel Japan in Summer Without Letting the Heat Win","summary":"Japanese summer can be humid, bright, and tiring, but it does not have to break the trip. Shift your timing, choose shade and water, and build the day around recovery.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["summer","weather","health","planning"],"tagLabels":["Summer","weather","health","Planning"],"aliases":["Japan summer travel heat","heat illness Japan travel","humid Japan summer"],"audience":"Travelers visiting Japan during hot and humid months.","language":"en","languageLabel":"English","url":"/articles/summer-heat-travel-strategy-for-japan.html","score":74,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Where to Stay in Tokyo on a First Trip: Neighborhoods That Make the City Easier","summary":"The best Tokyo base is not always the most famous station. Choose a neighborhood that matches your route, evening energy, and tolerance for transfers.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["tokyo","where-to-stay","first-time","neighborhoods"],"tagLabels":["Tokyo","Where to Stay","First-Time Japan","neighborhoods"],"aliases":["where to stay Tokyo first trip","Tokyo neighborhood hotel","best area Tokyo travel"],"audience":"First-time Tokyo visitors comparing hotel areas.","language":"en","languageLabel":"English","url":"/articles/where-to-stay-in-tokyo-first-trip-neighborhoods.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"Winter Onsen and Snow Country Japan: How to Plan the Trip","summary":"Snowy hot spring towns can be magical, but winter logistics need respect. Build the route around transport, footwear, arrival timing, and a stay worth slowing down for.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["winter","onsen","snow","ryokan"],"tagLabels":["winter","onsen","snow","Ryokan"],"aliases":["winter onsen Japan","snow country Japan travel","ryokan winter trip"],"audience":"Travelers planning hot spring stays or snow-country routes in winter.","language":"en","languageLabel":"English","url":"/articles/winter-onsen-and-snow-country-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"10 Japanese Cities That Are Ideal for a First Solo Trip","summary":"Your first solo trip in Japan should feel manageable, not overpacked. These cities are easy to navigate, rich in food and culture, and forgiving when plans change.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["solo-travel","first-time","city-guide","planning"],"tagLabels":["solo-travel","First-Time Japan","city-guide","Planning"],"aliases":["solo travel Japan","first solo trip Japan","easy Japanese cities"],"audience":"First-time solo travelers who want Japan to feel exciting but manageable.","language":"en","languageLabel":"English","url":"/articles/best-japanese-cities-for-first-time-solo-travel.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"How to Choose an Onsen Ryokan in Japan","summary":"A good ryokan stay depends on more than the prettiest room photo. Learn how to compare hot spring quality, meals, location, and arrival timing before you book.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["onsen","ryokan","hot-springs","where-to-stay"],"tagLabels":["onsen","Ryokan","hot-springs","Where to Stay"],"aliases":["choose onsen ryokan","Japan hot spring inn","ryokan booking tips"],"audience":"Travelers choosing a hot spring ryokan and trying to avoid booking by photos alone.","language":"en","languageLabel":"English","url":"/articles/how-to-choose-an-onsen-ryokan-in-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"How to Enjoy Japan on a Rainy Day","summary":"Rain does not have to ruin a trip through Japan. The key is choosing compact neighborhoods, indoor anchors, and short transfers that keep the day relaxed.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["rainy-day","weather","museums","planning"],"tagLabels":["rainy-day","weather","museums","Planning"],"aliases":["rainy day Japan","Japan weather travel","what to do in Japan rain"],"audience":"Travelers who want flexible plans when Japan weather changes.","language":"en","languageLabel":"English","url":"/articles/how-to-enjoy-japan-on-a-rainy-day.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"How to Plan a Cherry Blossom Trip to Japan Without Gambling Everything on One Date","summary":"Cherry blossom season is beautiful because it is brief, but that also makes it unpredictable. A better plan uses regional variety, flexible timing, and backup experiences beyond the flowers.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["cherry-blossoms","spring","seasonal-travel","planning"],"tagLabels":["Cherry Blossoms","Spring","seasonal-travel","Planning"],"aliases":["Japan cherry blossom trip","sakura planning","hanami travel"],"audience":"Travelers planning spring trips around sakura without wanting the itinerary to collapse if timing shifts.","language":"en","languageLabel":"English","url":"/articles/how-to-plan-a-cherry-blossom-trip-to-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"How to Plan a Restful Two-Day Trip in Japan","summary":"A weekend trip should restore you, not leave you exhausted by Monday morning. Choose lighter transfers, one main experience per day, and enough time to return home well.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["weekend-trip","slow-travel","planning","wellness"],"tagLabels":["weekend-trip","Slow Travel","Planning","wellness"],"aliases":["weekend trip Japan","slow weekend Japan","restful travel Japan"],"audience":"Travelers in Japan who want short trips that feel restorative rather than compressed.","language":"en","languageLabel":"English","url":"/articles/how-to-plan-a-restful-weekend-trip-in-japan.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"},{"title":"A Practical Disaster Preparedness Checklist for Traveling in Japan","summary":"Earthquakes, heavy rain, and typhoons are rare disruptions for most travelers, but they are worth preparing for. A few checks before and during the trip can make difficult moments much easier to handle.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["safety","weather","earthquakes","typhoons"],"tagLabels":["safety","weather","earthquakes","typhoons"],"aliases":["Japan travel safety","earthquake travel Japan","typhoon travel Japan"],"audience":"Travelers who want calm, practical preparation for Japan weather and disaster risks.","language":"en","languageLabel":"English","url":"/articles/japan-travel-disaster-preparedness-checklist.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"The Shinkansen Comfort Checklist","summary":"Japan\u0027s bullet trains are fast, but comfort depends on what you do before boarding. This checklist covers luggage, seating, food, transfers, and small items worth keeping close.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["shinkansen","train-travel","transport","luggage"],"tagLabels":["shinkansen","train-travel","transport","luggage"],"aliases":["shinkansen luggage","Japan bullet train tips","train travel checklist"],"audience":"Travelers using Japan bullet trains with luggage, transfers, and long travel days.","language":"en","languageLabel":"English","url":"/articles/shinkansen-comfort-checklist.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"The Hidden Shrines of Kyoto Locals Still Keep Secret","summary":"Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["kyoto","shrines","quiet-travel","first-time"],"tagLabels":["Kyoto","Shrines","Quiet Travel","First-Time Japan"],"aliases":["quiet Kyoto shrines","hidden shrines","Kyoto local walk","sacred etiquette"],"audience":"Travelers seeking quiet Kyoto, shrine etiquette, and crowd-light walking routes.","language":"en","languageLabel":"English","url":"/articles/hidden-shrines-kyoto-locals-keep-secret.html","score":70,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"How to Spend 10 Days in Japan Without a Single Tourist Trap","summary":"A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["itinerary","tokyo","kyoto","osaka"],"tagLabels":["Itinerary","Tokyo","Kyoto","Osaka"],"aliases":["10 days Japan itinerary","Japan without tourist traps","Tokyo Kyoto Osaka route"],"audience":"First-time and repeat visitors who want the classic route with more breathing room.","language":"en","languageLabel":"English","url":"/articles/ten-days-japan-without-tourist-traps.html","score":70,"qualityScore":92,"freshness":"Fresh","topic":"First-Time Japan"},{"title":"The Best Ryokan in Kyoto Under ¥20,000","summary":"Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["kyoto","ryokan","budget","where-to-stay"],"tagLabels":["Kyoto","Ryokan","Budget","Where to Stay"],"aliases":["Kyoto ryokan budget","ryokan under 20000 yen","where to stay Kyoto"],"audience":"Travelers comparing modest Kyoto ryokan and traditional stays.","language":"en","languageLabel":"English","url":"/articles/kyoto-ryokan-under-20000-yen.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"The Perfect Route up Mt. Fuji: What Nobody Tells You","summary":"Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["mount-fuji","hiking","summer","planning"],"tagLabels":["Mount Fuji","Hiking","Summer","Planning"],"aliases":["Mount Fuji route","Fuji climb preparation","Yoshida Subashiri Gotemba Fujinomiya"],"audience":"Travelers planning Fuji with safety, pacing, and route choice in mind.","language":"en","languageLabel":"English","url":"/articles/perfect-route-up-mount-fuji.html","score":70,"qualityScore":92,"freshness":"Fresh","topic":"Kyoto Travel"},{"title":"Local Train Journeys in Japan Worth Slowing Down For","summary":"Not every train day needs the shinkansen. Local lines can turn movement into memory when you plan for scenery, sparse timetables, station food, and the patience to miss nothing by going slower.","category":"travel-guide","categoryLabel":"Travel Guide","tags":["train-travel","slow-travel","regional-japan","transport"],"tagLabels":["train-travel","Slow Travel","regional-japan","transport"],"aliases":["local train Japan","regional train travel Japan","slow train journey Japan"],"audience":"Travelers who want regional Japan by rail without rushing every transfer.","language":"en","languageLabel":"English","url":"/articles/local-train-journeys-worth-slowing-down-for.html","score":58,"qualityScore":92,"freshness":"Fresh","topic":"Slow Travel"}];</script>
+<script src="/script.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://tabi.guide/#webpage","url":"https://tabi.guide/","name":"TABI - Discover Japan","description":"Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.","inLanguage":"en","isPartOf":{"@id":"https://tabi.guide/#website"},"publisher":{"@id":"https://tabi.guide/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://tabi.guide/assets/images/yakushima-forest.png"},"workTranslation":[{"@type":"WebPage","inLanguage":"en","url":"https://tabi.guide/"},{"@type":"WebPage","inLanguage":"ja","url":"https://tabi.guide/ja/"}]},{"@type":"Organization","@id":"https://tabi.guide/#organization","name":"TABI","url":"https://tabi.guide","logo":"https://tabi.guide/assets/images/kyoto-shrine-hero.png","contactPoint":{"email":"hello@tabi.guide","contactType":"editorial","@type":"ContactPoint","availableLanguage":["English","Japanese"]}},{"@type":"WebSite","@id":"https://tabi.guide/#website","name":"TABI","alternateName":["TABI Japan","TABI 日本"],"url":"https://tabi.guide","description":"Your guide to the real Japan: travel, culture, food, hidden places, and the things worth bringing home.","inLanguage":"en","publisher":{"@id":"https://tabi.guide/#organization"},"potentialAction":{"query-input":"required name=search_term_string","target":"https://tabi.guide/?q={search_term_string}","@type":"SearchAction"},"workTranslation":[{"@type":"WebPage","inLanguage":"en","url":"https://tabi.guide/"},{"@type":"WebPage","inLanguage":"ja","url":"https://tabi.guide/ja/"}]}]}</script>
 </body>
 </html>

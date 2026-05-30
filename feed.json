@@ -7,273 +7,303 @@
     "language":  "en",
     "items":  [
                   {
-                      "id":  "https://tabi.guide/articles/hidden-shrines-kyoto-locals-keep-secret.html",
-                      "url":  "https://tabi.guide/articles/hidden-shrines-kyoto-locals-keep-secret.html",
-                      "title":  "The Hidden Shrines of Kyoto Locals Still Keep Secret",
-                      "summary":  "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.",
-                      "content_text":  "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-22T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/coastal-walks-in-japan.html",
+                      "url":  "https://tabi.guide/articles/coastal-walks-in-japan.html",
+                      "title":  "Coastal Walks in Japan for Travelers Who Want Sea Air, Not a Race",
+                      "summary":  "Japan’s coast can turn a travel day into something slower and clearer. Pick walks with safe footing, realistic transport, and small towns nearby so the sea is part of the day rather than a distant view.",
+                      "content_text":  "Japan’s coast can turn a travel day into something slower and clearer. Pick walks with safe footing, realistic transport, and small towns nearby so the sea is part of the day rather than a distant view.",
+                      "image":  "https://tabi.guide/assets/images/coastal-walks-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "kyoto",
-                                   "shrines",
-                                   "quiet-travel",
-                                   "first-time"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/ten-days-japan-without-tourist-traps.html",
-                      "url":  "https://tabi.guide/articles/ten-days-japan-without-tourist-traps.html",
-                      "title":  "How to Spend 10 Days in Japan Without a Single Tourist Trap",
-                      "summary":  "A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.",
-                      "content_text":  "A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-20T00:00:00+09:00",
-                      "tags":  [
-                                   "itinerary",
-                                   "tokyo",
-                                   "kyoto",
-                                   "osaka"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/kyoto-ryokan-under-20000-yen.html",
-                      "url":  "https://tabi.guide/articles/kyoto-ryokan-under-20000-yen.html",
-                      "title":  "The Best Ryokan in Kyoto Under ¥20,000",
-                      "summary":  "Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.",
-                      "content_text":  "Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-18T00:00:00+09:00",
-                      "tags":  [
-                                   "kyoto",
-                                   "ryokan",
-                                   "budget",
-                                   "where-to-stay"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/osaka-three-day-eating-itinerary.html",
-                      "url":  "https://tabi.guide/articles/osaka-three-day-eating-itinerary.html",
-                      "title":  "Osaka in 3 Days: The Eating and Wandering Itinerary",
-                      "summary":  "A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.",
-                      "content_text":  "A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.",
-                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
-                      "date_published":  "2026-05-16T00:00:00+09:00",
-                      "tags":  [
-                                   "osaka",
-                                   "street-food",
-                                   "itinerary",
-                                   "nightlife"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/perfect-route-up-mount-fuji.html",
-                      "url":  "https://tabi.guide/articles/perfect-route-up-mount-fuji.html",
-                      "title":  "The Perfect Route up Mt. Fuji: What Nobody Tells You",
-                      "summary":  "Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.",
-                      "content_text":  "Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.",
-                      "image":  "https://tabi.guide/assets/images/fuji-trail.png",
-                      "date_published":  "2026-05-14T00:00:00+09:00",
-                      "tags":  [
-                                   "mount-fuji",
-                                   "hiking",
-                                   "summer",
-                                   "planning"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/yakushima-ancient-forest-few-tourists-find.html",
-                      "url":  "https://tabi.guide/articles/yakushima-ancient-forest-few-tourists-find.html",
-                      "title":  "Yakushima: Japan\u0027s Ancient Forest That Few Tourists Find",
-                      "summary":  "Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.",
-                      "content_text":  "Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.",
-                      "image":  "https://tabi.guide/assets/images/yakushima-forest.png",
-                      "date_published":  "2026-05-12T00:00:00+09:00",
-                      "tags":  [
-                                   "yakushima",
-                                   "islands",
-                                   "forest",
-                                   "hiking"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/setouchi-islands-art-sea-slow-travel.html",
-                      "url":  "https://tabi.guide/articles/setouchi-islands-art-sea-slow-travel.html",
-                      "title":  "The Setouchi Islands for Art, Sea Air, and Slow Travel",
-                      "summary":  "Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.",
-                      "content_text":  "Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.",
-                      "image":  "https://tabi.guide/assets/images/yakushima-forest.png",
-                      "date_published":  "2026-05-10T00:00:00+09:00",
-                      "tags":  [
-                                   "setouchi",
-                                   "islands",
-                                   "art",
-                                   "slow-travel"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/kiso-valley-walk-between-post-towns.html",
-                      "url":  "https://tabi.guide/articles/kiso-valley-walk-between-post-towns.html",
-                      "title":  "Walking the Kiso Valley Between Old Post Towns",
-                      "summary":  "The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.",
-                      "content_text":  "The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-08T00:00:00+09:00",
-                      "tags":  [
-                                   "kiso-valley",
-                                   "nakasendo",
                                    "walking",
-                                   "heritage"
+                                   "coast",
+                                   "slow-travel",
+                                   "nature"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/articles/what-wabi-sabi-really-means.html",
-                      "url":  "https://tabi.guide/articles/what-wabi-sabi-really-means.html",
-                      "title":  "What Wabi-Sabi Really Means and Why the World Needs It Now",
-                      "summary":  "Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.",
-                      "content_text":  "Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.",
-                      "image":  "https://tabi.guide/assets/images/kintsugi-studio.png",
-                      "date_published":  "2026-05-06T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/beginner-cycling-routes-in-japan.html",
+                      "url":  "https://tabi.guide/articles/beginner-cycling-routes-in-japan.html",
+                      "title":  "Beginner-Friendly Cycling Routes in Japan",
+                      "summary":  "Cycling in Japan can be gentle, scenic, and surprisingly practical when the route is chosen well. Focus on separated paths, luggage plans, rental support, and weather before chasing distance.",
+                      "content_text":  "Cycling in Japan can be gentle, scenic, and surprisingly practical when the route is chosen well. Focus on separated paths, luggage plans, rental support, and weather before chasing distance.",
+                      "image":  "https://tabi.guide/assets/images/beginner-cycling-routes-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "wabi-sabi",
-                                   "philosophy",
-                                   "aesthetics",
-                                   "design"
+                                   "cycling",
+                                   "slow-travel",
+                                   "regional-japan",
+                                   "transport"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/articles/kintsugi-art-of-repairing-broken-things.html",
-                      "url":  "https://tabi.guide/articles/kintsugi-art-of-repairing-broken-things.html",
-                      "title":  "Kintsugi: The Art of Repairing Broken Things with Gold",
-                      "summary":  "Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.",
-                      "content_text":  "Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.",
-                      "image":  "https://tabi.guide/assets/images/kintsugi-studio.png",
-                      "date_published":  "2026-05-04T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/local-train-journeys-worth-slowing-down-for.html",
+                      "url":  "https://tabi.guide/articles/local-train-journeys-worth-slowing-down-for.html",
+                      "title":  "Local Train Journeys in Japan Worth Slowing Down For",
+                      "summary":  "Not every train day needs the shinkansen. Local lines can turn movement into memory when you plan for scenery, sparse timetables, station food, and the patience to miss nothing by going slower.",
+                      "content_text":  "Not every train day needs the shinkansen. Local lines can turn movement into memory when you plan for scenery, sparse timetables, station food, and the patience to miss nothing by going slower.",
+                      "image":  "https://tabi.guide/assets/images/local-train-journeys-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "kintsugi",
-                                   "craft",
-                                   "kyoto",
-                                   "ceramics"
+                                   "train-travel",
+                                   "slow-travel",
+                                   "regional-japan",
+                                   "transport"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/articles/hanami-where-to-see-cherry-blossoms-like-local.html",
-                      "url":  "https://tabi.guide/articles/hanami-where-to-see-cherry-blossoms-like-local.html",
-                      "title":  "Hanami: Where to See Cherry Blossoms Like a Local",
-                      "summary":  "Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.",
-                      "content_text":  "Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.",
-                      "image":  "https://tabi.guide/assets/images/kyoto-shrine-hero.png",
-                      "date_published":  "2026-05-02T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/japan-rice-terraces-travel-guide.html",
+                      "url":  "https://tabi.guide/articles/japan-rice-terraces-travel-guide.html",
+                      "title":  "Japan’s Rice Terraces: How to Visit Without Treating Them Like a Photo Prop",
+                      "summary":  "Rice terraces are working landscapes, not empty scenery. Visit with respect for farmers, seasons, access roads, and the small communities that keep the view alive.",
+                      "content_text":  "Rice terraces are working landscapes, not empty scenery. Visit with respect for farmers, seasons, access roads, and the small communities that keep the view alive.",
+                      "image":  "https://tabi.guide/assets/images/japan-rice-terraces.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "hanami",
-                                   "cherry-blossoms",
-                                   "spring",
-                                   "local-customs"
+                                   "rural-japan",
+                                   "landscape",
+                                   "responsible-travel",
+                                   "nature"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/articles/how-to-read-japanese-menu-without-speaking-japanese.html",
-                      "url":  "https://tabi.guide/articles/how-to-read-japanese-menu-without-speaking-japanese.html",
-                      "title":  "How to Read a Japanese Menu Without Speaking Japanese",
-                      "summary":  "A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.",
-                      "content_text":  "A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.",
-                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
-                      "date_published":  "2026-04-30T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/regional-wagashi-travelers-should-try.html",
+                      "url":  "https://tabi.guide/articles/regional-wagashi-travelers-should-try.html",
+                      "title":  "Regional Wagashi Travelers Should Try With Tea",
+                      "summary":  "Wagashi makes more sense when you connect it to place, season, and tea. Skip the prettiest box as default and look for local ingredients, shop rhythm, and sweets that travel well.",
+                      "content_text":  "Wagashi makes more sense when you connect it to place, season, and tea. Skip the prettiest box as default and look for local ingredients, shop rhythm, and sweets that travel well.",
+                      "image":  "https://tabi.guide/assets/images/regional-wagashi-tea.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "menus",
-                                   "food",
-                                   "language",
-                                   "first-time"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/tokyo-hidden-izakayas-locals-go.html",
-                      "url":  "https://tabi.guide/articles/tokyo-hidden-izakayas-locals-go.html",
-                      "title":  "Tokyo\u0027s Hidden Izakayas Locals Actually Go To",
-                      "summary":  "The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.",
-                      "content_text":  "The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.",
-                      "image":  "https://tabi.guide/assets/images/osaka-food-alley.png",
-                      "date_published":  "2026-04-28T00:00:00+09:00",
-                      "tags":  [
-                                   "tokyo",
-                                   "izakaya",
-                                   "nightlife",
-                                   "local-food"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/japanese-convenience-store-breakfasts-worth-trying.html",
-                      "url":  "https://tabi.guide/articles/japanese-convenience-store-breakfasts-worth-trying.html",
-                      "title":  "Japanese Convenience Store Breakfasts Worth Trying",
-                      "summary":  "Japan\u0027s convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.",
-                      "content_text":  "Japan\u0027s convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-26T00:00:00+09:00",
-                      "tags":  [
-                                   "konbini",
-                                   "breakfast",
-                                   "budget",
-                                   "travel-tips"
-                               ]
-                  },
-                  {
-                      "id":  "https://tabi.guide/articles/best-japanese-kitchen-knives-to-bring-home.html",
-                      "url":  "https://tabi.guide/articles/best-japanese-kitchen-knives-to-bring-home.html",
-                      "title":  "The Best Japanese Kitchen Knives to Bring Home",
-                      "summary":  "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
-                      "content_text":  "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-24T00:00:00+09:00",
-                      "tags":  [
-                                   "kitchen-knives",
-                                   "shopping",
-                                   "craft",
+                                   "wagashi",
+                                   "tea",
+                                   "local-food",
                                    "souvenirs"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/articles/buying-matcha-ceremonial-vs-culinary-grade.html",
-                      "url":  "https://tabi.guide/articles/buying-matcha-ceremonial-vs-culinary-grade.html",
-                      "title":  "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
-                      "summary":  "Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.",
-                      "content_text":  "Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-22T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/seafood-markets-beyond-tourist-sushi.html",
+                      "url":  "https://tabi.guide/articles/seafood-markets-beyond-tourist-sushi.html",
+                      "title":  "Seafood Markets in Japan Beyond Tourist Sushi",
+                      "summary":  "Seafood markets are not only places to chase famous sushi counters. Go for morning rhythm, regional catch, simple cooked food, and the discipline of not blocking people who are working.",
+                      "content_text":  "Seafood markets are not only places to chase famous sushi counters. Go for morning rhythm, regional catch, simple cooked food, and the discipline of not blocking people who are working.",
+                      "image":  "https://tabi.guide/assets/images/seafood-market-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "matcha",
-                                   "tea",
-                                   "shopping",
+                                   "seafood",
+                                   "markets",
+                                   "local-food",
+                                   "regional-japan"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/forest-bathing-in-japan.html",
+                      "url":  "https://tabi.guide/articles/forest-bathing-in-japan.html",
+                      "title":  "Forest Bathing in Japan: How to Slow Down Without Turning It Into a Checklist",
+                      "summary":  "Forest bathing is less about covering a famous trail and more about letting the body catch up with the place. This guide explains how to choose a gentle forest day, read local rules, and leave with more than photographs.",
+                      "content_text":  "Forest bathing is less about covering a famous trail and more about letting the body catch up with the place. This guide explains how to choose a gentle forest day, read local rules, and leave with more than photographs.",
+                      "image":  "https://tabi.guide/assets/images/forest-bathing-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "forest",
+                                   "wellness",
+                                   "slow-travel",
+                                   "nature"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/craft-towns-for-pottery-and-textiles.html",
+                      "url":  "https://tabi.guide/articles/craft-towns-for-pottery-and-textiles.html",
+                      "title":  "Craft Towns in Japan for Pottery and Textiles",
+                      "summary":  "Craft towns reward travelers who slow down enough to see process. Look for workshops, kilns, weaving streets, local museums, and shops that explain materials rather than only selling souvenirs.",
+                      "content_text":  "Craft towns reward travelers who slow down enough to see process. Look for workshops, kilns, weaving streets, local museums, and shops that explain materials rather than only selling souvenirs.",
+                      "image":  "https://tabi.guide/assets/images/craft-towns-pottery-textiles.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "craft",
+                                   "ceramics",
+                                   "textiles",
+                                   "regional-japan"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/scenic-ropeways-and-mountain-views-in-japan.html",
+                      "url":  "https://tabi.guide/articles/scenic-ropeways-and-mountain-views-in-japan.html",
+                      "title":  "Scenic Ropeways and Mountain Views in Japan: How to Choose the Right One",
+                      "summary":  "A ropeway can make mountain scenery accessible, but not every viewpoint suits every day. Choose by weather, crowd flow, onward walks, and what you can still enjoy if clouds arrive.",
+                      "content_text":  "A ropeway can make mountain scenery accessible, but not every viewpoint suits every day. Choose by weather, crowd flow, onward walks, and what you can still enjoy if clouds arrive.",
+                      "image":  "https://tabi.guide/assets/images/scenic-ropeways-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "mountains",
+                                   "weather",
+                                   "planning",
+                                   "nature"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/machiya-townhouse-stays-in-japan.html",
+                      "url":  "https://tabi.guide/articles/machiya-townhouse-stays-in-japan.html",
+                      "title":  "Machiya Townhouse Stays in Japan: Charm, Rules, and Real-World Comfort",
+                      "summary":  "A machiya stay can be beautiful, especially in old merchant towns. Before booking, understand sound, stairs, heating, neighborhood rules, and the difference between atmosphere and hotel convenience.",
+                      "content_text":  "A machiya stay can be beautiful, especially in old merchant towns. Before booking, understand sound, stairs, heating, neighborhood rules, and the difference between atmosphere and hotel convenience.",
+                      "image":  "https://tabi.guide/assets/images/machiya-townhouse-stay.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "machiya",
+                                   "architecture",
+                                   "where-to-stay",
                                    "kyoto"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/articles/japanese-drugstore-products-worth-every-yen.html",
-                      "url":  "https://tabi.guide/articles/japanese-drugstore-products-worth-every-yen.html",
-                      "title":  "10 Japanese Drugstore Products Worth Every Yen",
-                      "summary":  "Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.",
-                      "content_text":  "Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-20T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/farm-stays-in-rural-japan.html",
+                      "url":  "https://tabi.guide/articles/farm-stays-in-rural-japan.html",
+                      "title":  "Farm Stays in Rural Japan Without Romanticizing the Work",
+                      "summary":  "Farm stays can be generous and memorable when travelers understand the labor behind them. Approach rural hospitality with realistic expectations, safety awareness, and respect for daily work.",
+                      "content_text":  "Farm stays can be generous and memorable when travelers understand the labor behind them. Approach rural hospitality with realistic expectations, safety awareness, and respect for daily work.",
+                      "image":  "https://tabi.guide/assets/images/farm-stay-rural-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "drugstore",
-                                   "skincare",
-                                   "shopping",
-                                   "budget"
+                                   "farm-stay",
+                                   "rural-japan",
+                                   "responsible-travel",
+                                   "food"
                                ]
                   },
                   {
-                      "id":  "https://tabi.guide/articles/where-to-buy-authentic-yukata-in-tokyo.html",
-                      "url":  "https://tabi.guide/articles/where-to-buy-authentic-yukata-in-tokyo.html",
-                      "title":  "Where to Buy Authentic Yukata in Tokyo Without the Markup",
-                      "summary":  "Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.",
-                      "content_text":  "Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.",
-                      "image":  "https://tabi.guide/assets/images/japanese-goods.png",
-                      "date_published":  "2026-04-18T00:00:00+09:00",
+                      "id":  "https://tabi.guide/articles/hotel-check-in-etiquette-in-japan.html",
+                      "url":  "https://tabi.guide/articles/hotel-check-in-etiquette-in-japan.html",
+                      "title":  "Hotel Check-In Etiquette in Japan: Small Things That Make Arrival Easier",
+                      "summary":  "Japanese hotel check-in is usually smooth when you know the basics. Prepare passports, arrival time, luggage expectations, bath rules, and payment details before the front desk conversation begins.",
+                      "content_text":  "Japanese hotel check-in is usually smooth when you know the basics. Prepare passports, arrival time, luggage expectations, bath rules, and payment details before the front desk conversation begins.",
+                      "image":  "https://tabi.guide/assets/images/hotel-check-in-etiquette-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
                       "tags":  [
-                                   "yukata",
-                                   "tokyo",
-                                   "shopping",
-                                   "fashion"
+                                   "hotels",
+                                   "local-customs",
+                                   "first-time",
+                                   "where-to-stay"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/seaside-ryokan-and-fishing-town-stays.html",
+                      "url":  "https://tabi.guide/articles/seaside-ryokan-and-fishing-town-stays.html",
+                      "title":  "Seaside Ryokan and Fishing Town Stays in Japan",
+                      "summary":  "A seaside stay can make dinner, morning markets, and weather part of the trip. Choose the town as much as the inn, and check transport before falling for an ocean-view room.",
+                      "content_text":  "A seaside stay can make dinner, morning markets, and weather part of the trip. Choose the town as much as the inn, and check transport before falling for an ocean-view room.",
+                      "image":  "https://tabi.guide/assets/images/seaside-ryokan-fishing-town.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "ryokan",
+                                   "coast",
+                                   "local-food",
+                                   "slow-travel"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/canoeing-and-kayaking-in-japan.html",
+                      "url":  "https://tabi.guide/articles/canoeing-and-kayaking-in-japan.html",
+                      "title":  "Canoeing and Kayaking in Japan: Gentle Water Days for Travelers",
+                      "summary":  "Canoeing and kayaking can make Japan’s rivers, lakes, and coasts feel immediate. For travelers, the best choice is usually a guided, weather-aware outing with simple logistics and enough quiet.",
+                      "content_text":  "Canoeing and kayaking can make Japan’s rivers, lakes, and coasts feel immediate. For travelers, the best choice is usually a guided, weather-aware outing with simple logistics and enough quiet.",
+                      "image":  "https://tabi.guide/assets/images/canoeing-kayaking-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "waterways",
+                                   "nature",
+                                   "slow-travel",
+                                   "seasonal-travel"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/island-hopping-beyond-okinawa.html",
+                      "url":  "https://tabi.guide/articles/island-hopping-beyond-okinawa.html",
+                      "title":  "Island Hopping in Japan Beyond Okinawa",
+                      "summary":  "Japan’s islands are not one kind of trip. Beyond Okinawa, ferries, art islands, fishing ports, volcanic landscapes, and quiet guesthouses create slower routes that need careful timing.",
+                      "content_text":  "Japan’s islands are not one kind of trip. Beyond Okinawa, ferries, art islands, fishing ports, volcanic landscapes, and quiet guesthouses create slower routes that need careful timing.",
+                      "image":  "https://tabi.guide/assets/images/island-hopping-beyond-okinawa.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "islands",
+                                   "setouchi",
+                                   "slow-travel",
+                                   "coast"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/temple-stays-in-japan-what-to-expect.html",
+                      "url":  "https://tabi.guide/articles/temple-stays-in-japan-what-to-expect.html",
+                      "title":  "Temple Stays in Japan: What to Expect Before You Book",
+                      "summary":  "Temple stays can be peaceful, but they are not luxury hotels with incense. Understand meals, morning practice, quiet hours, shared facilities, and the fact that the temple is still a religious place.",
+                      "content_text":  "Temple stays can be peaceful, but they are not luxury hotels with incense. Understand meals, morning practice, quiet hours, shared facilities, and the fact that the temple is still a religious place.",
+                      "image":  "https://tabi.guide/assets/images/temple-stay-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "temples",
+                                   "stays",
+                                   "culture",
+                                   "quiet-travel"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/how-to-choose-a-minshuku-in-japan.html",
+                      "url":  "https://tabi.guide/articles/how-to-choose-a-minshuku-in-japan.html",
+                      "title":  "How to Choose a Minshuku in Japan",
+                      "summary":  "A minshuku can make a rural trip feel personal, but expectations matter. Read meal rules, shared facilities, language support, and household rhythm before booking.",
+                      "content_text":  "A minshuku can make a rural trip feel personal, but expectations matter. Read meal rules, shared facilities, language support, and household rhythm before booking.",
+                      "image":  "https://tabi.guide/assets/images/minshuku-stay-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "minshuku",
+                                   "where-to-stay",
+                                   "rural-japan",
+                                   "local-customs"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/jazz-kissa-and-listening-bars-in-japan.html",
+                      "url":  "https://tabi.guide/articles/jazz-kissa-and-listening-bars-in-japan.html",
+                      "title":  "Jazz Kissa and Listening Bars in Japan",
+                      "summary":  "Japan’s listening culture rewards attention. A jazz kissa or listening bar is less about nightlife noise and more about records, equipment, quiet conversation, and knowing when to simply listen.",
+                      "content_text":  "Japan’s listening culture rewards attention. A jazz kissa or listening bar is less about nightlife noise and more about records, equipment, quiet conversation, and knowing when to simply listen.",
+                      "image":  "https://tabi.guide/assets/images/jazz-kissa-listening-bar.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "music",
+                                   "nightlife",
+                                   "culture",
+                                   "tokyo"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/japanese-festivals-without-crowd-mistakes.html",
+                      "url":  "https://tabi.guide/articles/japanese-festivals-without-crowd-mistakes.html",
+                      "title":  "Japanese Festivals Without the Crowd Mistakes",
+                      "summary":  "Festivals can be joyful, crowded, and deeply local at the same time. Plan your exit, respect procession space, and treat the event as a community day rather than a stage show.",
+                      "content_text":  "Festivals can be joyful, crowded, and deeply local at the same time. Plan your exit, respect procession space, and treat the event as a community day rather than a stage show.",
+                      "image":  "https://tabi.guide/assets/images/japanese-festival-crowd-etiquette.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "festivals",
+                                   "local-customs",
+                                   "summer",
+                                   "culture"
+                               ]
+                  },
+                  {
+                      "id":  "https://tabi.guide/articles/wildlife-watching-in-japan-without-disturbing-it.html",
+                      "url":  "https://tabi.guide/articles/wildlife-watching-in-japan-without-disturbing-it.html",
+                      "title":  "Wildlife Watching in Japan Without Disturbing What You Came to See",
+                      "summary":  "Seeing wildlife in Japan is a privilege, not a guarantee. Better watching starts with distance, quiet, local rules, and the willingness to leave animals alone.",
+                      "content_text":  "Seeing wildlife in Japan is a privilege, not a guarantee. Better watching starts with distance, quiet, local rules, and the willingness to leave animals alone.",
+                      "image":  "https://tabi.guide/assets/images/wildlife-watching-japan.png",
+                      "date_published":  "2026-05-30T00:00:00+09:00",
+                      "tags":  [
+                                   "wildlife",
+                                   "nature",
+                                   "responsible-travel",
+                                   "seasonal-travel"
                                ]
                   }
               ]

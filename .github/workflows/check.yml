@@ -4,8 +4,16 @@ on:
   push:
     branches:
       - main
-      - codex-tabi-site-foundation
+      - "codex/**"
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tabi-checks-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check:

@@ -1,5 +1,52 @@
 [
   {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "budget": "Prices range widely; the best value is the object whose care and use match your real life."
+    },
+    "id": "buying-chopsticks-and-lacquerware-in-japan",
+    "title": "Buying Chopsticks and Lacquerware in Japan Without Choosing Randomly",
+    "summary": "Chopsticks and lacquerware can be beautiful, useful souvenirs if you know what to look for. Learn how to compare material, finish, care, and whether the item fits your life at home.",
+    "category": "things-to-buy",
+    "tags": [
+      "chopsticks",
+      "lacquerware",
+      "souvenirs",
+      "craft"
+    ],
+    "publishedAt": "2026-05-29",
+    "readingTime": 6,
+    "affiliate": true,
+    "image": "/assets/images/chopsticks-lacquerware-souvenirs.png",
+    "imageAlt": "Handmade chopsticks and lacquerware displayed on a Japanese craft shop table",
+    "sections": [
+      {
+        "heading": "Start With Use, Not Display",
+        "body": "The best craft purchase is one you will actually use or care for properly. Chopsticks, bowls, trays, and small lacquer pieces vary widely in material, finish, durability, and maintenance."
+      },
+      {
+        "heading": "Ask About Care Before Buying",
+        "body": "Some lacquerware should avoid dishwashers, soaking, harsh detergents, or extreme dryness. If the care routine feels unrealistic, choose a simpler item that still carries the craft story well."
+      },
+      {
+        "heading": "Buy From Places That Explain the Work",
+        "body": "A good shop can tell you about region, maker, material, coating, and intended use. That context matters more than a vague premium label or a souvenir shelf arranged only by color."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including craft shop guidance, regional lacquerware information, tourism shopping materials, customs-aware packing guidance, and product care instructions. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "Buying Chopsticks and Lacquerware in Japan | TABI",
+    "seoDescription": "A practical guide to buying chopsticks and lacquerware in Japan by material, finish, care routine, maker context, and suitcase practicality.",
+    "audience": "Travelers shopping for useful Japanese craft souvenirs.",
+    "searchAliases": [
+      "buy chopsticks Japan",
+      "Japanese lacquerware souvenir",
+      "Japan craft shopping"
+    ]
+  },
+  {
     "id": "best-japanese-kitchen-knives-to-bring-home",
     "title": "The Best Japanese Kitchen Knives to Bring Home",
     "summary": "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
