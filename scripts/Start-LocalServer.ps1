@@ -14,7 +14,11 @@ function Write-Log {
   param([string]$Message)
 
   $Line = "{0} {1}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"), $Message
-  Add-Content -Path $LogPath -Value $Line
+  try {
+    Add-Content -Path $LogPath -Value $Line -ErrorAction Stop
+  } catch {
+    Write-Warning "Could not write to ${LogPath}: $($_.Exception.Message)"
+  }
   Write-Host $Line
 }
 
