@@ -926,6 +926,7 @@ function New-Layout([string]$Title, [string]$Description, [string]$Path, [string
 <html lang="$Script:CurrentLang">
 $Head
 <body>
+<div class="reading-progress" aria-hidden="true" data-reading-progress><span></span></div>
 <a class="skip-link" href="#main">$(Html (T "skip"))</a>
 <div class="top-bar"><span>$(Html (T "topBar"))</span><span class="top-extra">$(Html (T "topExtra"))</span></div>
 <header class="site-header">
@@ -957,7 +958,9 @@ $QuickRoutes
       <p class="search-panel-title">$(Html (T "search"))</p>
       <button class="icon-button" type="button" aria-label="$(Html (T "closeSearch"))" data-search-close>&#10005;</button>
     </div>
-    <input class="search-input" type="search" placeholder="$(Html (T "searchPlaceholder"))" data-search-input>
+    <label class="visually-hidden" for="site-search-input">$(Html (T "search"))</label>
+    <input class="search-input" id="site-search-input" type="search" aria-label="$(Html (T "search"))" placeholder="$(Html (T "searchPlaceholder"))" autocomplete="off" data-search-input>
+    <p class="search-hint">$(if (Is-Japanese) { "人気の検索語から始めるか、地名・食・旅程で探せます。" } else { "Start with a popular search, or try a place, food, or itinerary." })</p>
     <div class="search-results" data-search-results></div>
   </div>
 </div>
@@ -1135,6 +1138,7 @@ function New-QuickRoutes {
   <a href="$StartHref">$(Html (T "startHere"))</a>
   <a href="$(Href "/collections/index.html")">$(Html (T "browseCollections"))</a>
   <a href="$(Href "/planning/index.html")">$(Html (T "planTrip"))</a>
+  <a class="quick-newsletter" href="$(Href "/")#newsletter">$(Html (T "newsletter"))</a>
   <button type="button" data-search-toggle aria-expanded="false" aria-controls="site-search-panel">$(Html (T "openSearch"))</button>
 </nav>
 "@

@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<div class="reading-progress" aria-hidden="true" data-reading-progress><span></span></div>
 <a class="skip-link" href="#main">本文へ移動</a>
 <div class="top-bar"><span>日本の旅と文化のガイド</span><span class="top-extra"> / 毎週更新 / 金曜にニュースレター</span></div>
 <header class="site-header">
@@ -105,6 +106,7 @@
   <a href="/ja/">ここから読む</a>
   <a href="/ja/collections/index.html">目的別に探す</a>
   <a href="/ja/planning/index.html">旅を組み立てる</a>
+  <a class="quick-newsletter" href="/ja/#newsletter">無料ニュースレター</a>
   <button type="button" data-search-toggle aria-expanded="false" aria-controls="site-search-panel">検索を開く</button>
 </nav>
 <div class="search-panel" id="site-search-panel" data-search-panel hidden>
@@ -113,7 +115,9 @@
       <p class="search-panel-title">TABIを検索</p>
       <button class="icon-button" type="button" aria-label="検索を閉じる" data-search-close>&#10005;</button>
     </div>
-    <input class="search-input" type="search" placeholder="京都、食、工芸、穴場を検索..." data-search-input>
+    <label class="visually-hidden" for="site-search-input">TABIを検索</label>
+    <input class="search-input" id="site-search-input" type="search" aria-label="TABIを検索" placeholder="京都、食、工芸、穴場を検索..." autocomplete="off" data-search-input>
+    <p class="search-hint">人気の検索語から始めるか、地名・食・旅程で探せます。</p>
     <div class="search-results" data-search-results></div>
   </div>
 </div>
