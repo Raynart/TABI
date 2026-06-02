@@ -1,0 +1,701 @@
+{
+  "generatedAt": "2026-06-02T13:18:31.839Z",
+  "published": {
+    "english": 53,
+    "japanese": 53,
+    "categories": [
+      {
+        "key": "travel-guide",
+        "count": 13
+      },
+      {
+        "key": "culture",
+        "count": 11
+      },
+      {
+        "key": "food",
+        "count": 11
+      },
+      {
+        "key": "hidden-gems",
+        "count": 9
+      },
+      {
+        "key": "things-to-buy",
+        "count": 9
+      }
+    ],
+    "subcategories": [
+      {
+        "key": "heritage-walks",
+        "count": 10
+      },
+      {
+        "key": "first-time-routes",
+        "count": 6
+      },
+      {
+        "key": "city-food-routes",
+        "count": 5
+      },
+      {
+        "key": "seasonal-weather-plans",
+        "count": 4
+      },
+      {
+        "key": "textiles-clothing",
+        "count": 3
+      },
+      {
+        "key": "coastal-islands",
+        "count": 2
+      },
+      {
+        "key": "craft-studios",
+        "count": 2
+      },
+      {
+        "key": "izakaya-nightlife",
+        "count": 2
+      },
+      {
+        "key": "kitchen-tools",
+        "count": 2
+      },
+      {
+        "key": "stationery-paper",
+        "count": 2
+      },
+      {
+        "key": "temples-shrines",
+        "count": 2
+      },
+      {
+        "key": "aesthetics-philosophy",
+        "count": 1
+      },
+      {
+        "key": "beauty-drugstore",
+        "count": 1
+      },
+      {
+        "key": "depachika-food-halls",
+        "count": 1
+      },
+      {
+        "key": "ekiben-rail-food",
+        "count": 1
+      },
+      {
+        "key": "forests-and-islands",
+        "count": 1
+      },
+      {
+        "key": "konbini-everyday-food",
+        "count": 1
+      },
+      {
+        "key": "local-customs-etiquette",
+        "count": 1
+      },
+      {
+        "key": "mountain-hiking-routes",
+        "count": 1
+      },
+      {
+        "key": "ordering-guides",
+        "count": 1
+      },
+      {
+        "key": "pilgrimage-villages",
+        "count": 1
+      },
+      {
+        "key": "ryokan-onsen",
+        "count": 1
+      },
+      {
+        "key": "tea-matcha",
+        "count": 1
+      },
+      {
+        "key": "transport-slow-rail",
+        "count": 1
+      }
+    ],
+    "regions": [
+      {
+        "key": "multi-region",
+        "count": 24
+      },
+      {
+        "key": "tokyo",
+        "count": 16
+      },
+      {
+        "key": "osaka",
+        "count": 13
+      }
+    ]
+  },
+  "plan": {
+    "targetPublishedArticles": 1000,
+    "plannedNewArticles": 1000,
+    "existingPublishedArticlesIncluded": 28,
+    "items": 1028,
+    "statuses": [
+      {
+        "key": "planned",
+        "count": 1000
+      },
+      {
+        "key": "published",
+        "count": 28
+      }
+    ],
+    "categories": [
+      {
+        "key": "travel-guide",
+        "count": 340
+      },
+      {
+        "key": "food",
+        "count": 256
+      },
+      {
+        "key": "things-to-buy",
+        "count": 176
+      },
+      {
+        "key": "culture",
+        "count": 167
+      },
+      {
+        "key": "hidden-gems",
+        "count": 89
+      }
+    ],
+    "subcategories": [
+      {
+        "key": "transport-slow-rail",
+        "count": 169
+      },
+      {
+        "key": "textiles-clothing",
+        "count": 87
+      },
+      {
+        "key": "coastal-islands",
+        "count": 86
+      },
+      {
+        "key": "stationery-paper",
+        "count": 86
+      },
+      {
+        "key": "depachika-food-halls",
+        "count": 85
+      },
+      {
+        "key": "seasonal-weather-plans",
+        "count": 85
+      },
+      {
+        "key": "city-food-routes",
+        "count": 84
+      },
+      {
+        "key": "first-time-routes",
+        "count": 84
+      },
+      {
+        "key": "ordering-guides",
+        "count": 84
+      },
+      {
+        "key": "heritage-walks",
+        "count": 82
+      },
+      {
+        "key": "temples-shrines",
+        "count": 82
+      },
+      {
+        "key": "craft-studios",
+        "count": 2
+      },
+      {
+        "key": "aesthetics-philosophy",
+        "count": 1
+      },
+      {
+        "key": "beauty-drugstore",
+        "count": 1
+      },
+      {
+        "key": "ekiben-rail-food",
+        "count": 1
+      },
+      {
+        "key": "forests-and-islands",
+        "count": 1
+      },
+      {
+        "key": "izakaya-nightlife",
+        "count": 1
+      },
+      {
+        "key": "kitchen-tools",
+        "count": 1
+      },
+      {
+        "key": "konbini-everyday-food",
+        "count": 1
+      },
+      {
+        "key": "local-customs-etiquette",
+        "count": 1
+      },
+      {
+        "key": "mountain-hiking-routes",
+        "count": 1
+      },
+      {
+        "key": "pilgrimage-villages",
+        "count": 1
+      },
+      {
+        "key": "ryokan-onsen",
+        "count": 1
+      },
+      {
+        "key": "tea-matcha",
+        "count": 1
+      }
+    ],
+    "regions": [
+      {
+        "key": "tokyo",
+        "count": 433
+      },
+      {
+        "key": "osaka",
+        "count": 251
+      },
+      {
+        "key": "kanagawa",
+        "count": 160
+      },
+      {
+        "key": "chiba",
+        "count": 90
+      },
+      {
+        "key": "saitama",
+        "count": 70
+      },
+      {
+        "key": "multi-region",
+        "count": 24
+      }
+    ]
+  },
+  "quality": {
+    "issueArticles": [
+      {
+        "id": "best-japanese-kitchen-knives-to-bring-home",
+        "title": "The Best Japanese Kitchen Knives to Bring Home",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "buying-matcha-ceremonial-vs-culinary-grade",
+        "title": "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "depachika-food-halls-for-curious-travelers",
+        "title": "Depachika Food Halls: How to Shop Without Getting Overwhelmed",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "ekiben-how-to-choose-station-bento",
+        "title": "Ekiben: How to Choose a Station Bento That Feels Like the Region",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "hanami-where-to-see-cherry-blossoms-like-local",
+        "title": "Hanami: Where to See Cherry Blossoms Like a Local",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "hidden-shrines-kyoto-locals-keep-secret",
+        "title": "The Hidden Shrines of Kyoto Locals Still Keep Secret",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-read-japanese-menu-without-speaking-japanese",
+        "title": "How to Read a Japanese Menu Without Speaking Japanese",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "japanese-convenience-store-breakfasts-worth-trying",
+        "title": "Japanese Convenience Store Breakfasts Worth Trying",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "japanese-drugstore-products-worth-every-yen",
+        "title": "10 Japanese Drugstore Products Worth Every Yen",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "japanese-stationery-worth-bringing-home",
+        "title": "Japanese Stationery Worth Bringing Home, From Notebooks to Pens",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "kanazawa-gold-leaf-and-craft-neighborhoods",
+        "title": "Kanazawa Gold Leaf and Craft Neighborhoods Worth Slowing Down For",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "kintsugi-art-of-repairing-broken-things",
+        "title": "Kintsugi: The Art of Repairing Broken Things with Gold",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "kiso-valley-walk-between-post-towns",
+        "title": "Walking the Kiso Valley Between Old Post Towns",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "kumano-kodo-villages-without-rushing-the-pilgrimage",
+        "title": "Kumano Kodo Villages Without Rushing the Pilgrimage",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "kyoto-rainy-day-temples-cafes-and-covered-streets",
+        "title": "Kyoto on a Rainy Day: Temples, Cafes, and Covered Streets",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "kyoto-ryokan-under-20000-yen",
+        "title": "The Best Ryokan in Kyoto Under ¥20,000",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "local-train-routes-for-first-time-japan",
+        "title": "Local Train Routes That Make a First Japan Trip Feel Deeper",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "onsen-etiquette-for-the-first-visit",
+        "title": "Onsen Etiquette for Your First Visit Without Feeling Awkward",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "osaka-three-day-eating-itinerary",
+        "title": "Osaka in 3 Days: The Eating and Wandering Itinerary",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "perfect-route-up-mount-fuji",
+        "title": "The Perfect Route up Mt. Fuji: What Nobody Tells You",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "quiet-coastal-towns-for-slow-japan-travel",
+        "title": "Quiet Coastal Towns for a Slower Japan Trip",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "setouchi-islands-art-sea-slow-travel",
+        "title": "The Setouchi Islands for Art, Sea Air, and Slow Travel",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "ten-days-japan-without-tourist-traps",
+        "title": "How to Spend 10 Days in Japan Without a Single Tourist Trap",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "tenugui-guide-patterns-uses-and-souvenirs",
+        "title": "Tenugui Guide: Patterns, Uses, and How to Choose One as a Souvenir",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "tokyo-hidden-izakayas-locals-go",
+        "title": "Tokyo's Hidden Izakayas Locals Actually Go To",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "what-wabi-sabi-really-means",
+        "title": "What Wabi-Sabi Really Means and Why the World Needs It Now",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "where-to-buy-authentic-yukata-in-tokyo",
+        "title": "Where to Buy Authentic Yukata in Tokyo Without the Markup",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "yakushima-ancient-forest-few-tourists-find",
+        "title": "Yakushima: Japan's Ancient Forest That Few Tourists Find",
+        "issues": [
+          "Missing source URLs"
+        ]
+      }
+    ],
+    "duplicateImages": [
+      {
+        "key": "/assets/images/japanese-goods.png",
+        "count": 6
+      },
+      {
+        "key": "/assets/images/kyoto-shrine-hero.png",
+        "count": 5
+      },
+      {
+        "key": "/assets/images/osaka-food-alley.png",
+        "count": 5
+      },
+      {
+        "key": "/assets/images/osaka-castle-park.png",
+        "count": 3
+      },
+      {
+        "key": "/assets/images/osaka-dotonbori-night.png",
+        "count": 3
+      },
+      {
+        "key": "/assets/images/tokyo-shinjuku-blue-hour.png",
+        "count": 3
+      },
+      {
+        "key": "/assets/images/tokyo-ueno-park-museums.png",
+        "count": 3
+      },
+      {
+        "key": "/assets/images/depachika-food-hall.png",
+        "count": 2
+      },
+      {
+        "key": "/assets/images/japanese-stationery.png",
+        "count": 2
+      },
+      {
+        "key": "/assets/images/kintsugi-studio.png",
+        "count": 2
+      },
+      {
+        "key": "/assets/images/quiet-coastal-towns.png",
+        "count": 2
+      },
+      {
+        "key": "/assets/images/tokyo-asakusa-temple-street.png",
+        "count": 2
+      },
+      {
+        "key": "/assets/images/yakushima-forest.png",
+        "count": 2
+      }
+    ],
+    "thinSubcategories": [
+      {
+        "key": "aesthetics-philosophy",
+        "title": "Aesthetics & Philosophy",
+        "count": 1,
+        "category": "culture"
+      },
+      {
+        "key": "beauty-drugstore",
+        "title": "Beauty & Drugstore",
+        "count": 1,
+        "category": "things-to-buy"
+      },
+      {
+        "key": "depachika-food-halls",
+        "title": "Depachika Food Halls",
+        "count": 1,
+        "category": "food"
+      },
+      {
+        "key": "ekiben-rail-food",
+        "title": "Ekiben & Rail Food",
+        "count": 1,
+        "category": "food"
+      },
+      {
+        "key": "forests-and-islands",
+        "title": "Forests & Remote Nature",
+        "count": 1,
+        "category": "hidden-gems"
+      },
+      {
+        "key": "konbini-everyday-food",
+        "title": "Konbini & Everyday Food",
+        "count": 1,
+        "category": "food"
+      },
+      {
+        "key": "local-customs-etiquette",
+        "title": "Local Customs & Etiquette",
+        "count": 1,
+        "category": "culture"
+      },
+      {
+        "key": "mountain-hiking-routes",
+        "title": "Mountain & Hiking Routes",
+        "count": 1,
+        "category": "travel-guide"
+      },
+      {
+        "key": "ordering-guides",
+        "title": "Ordering Guides",
+        "count": 1,
+        "category": "food"
+      },
+      {
+        "key": "pilgrimage-villages",
+        "title": "Pilgrimage Villages",
+        "count": 1,
+        "category": "hidden-gems"
+      },
+      {
+        "key": "ryokan-onsen",
+        "title": "Ryokan & Onsen",
+        "count": 1,
+        "category": "travel-guide"
+      },
+      {
+        "key": "tea-matcha",
+        "title": "Tea & Matcha",
+        "count": 1,
+        "category": "things-to-buy"
+      },
+      {
+        "key": "transport-slow-rail",
+        "title": "Transport & Slow Rail",
+        "count": 1,
+        "category": "travel-guide"
+      },
+      {
+        "key": "coastal-islands",
+        "title": "Coastal Towns & Islands",
+        "count": 2,
+        "category": "hidden-gems"
+      },
+      {
+        "key": "craft-studios",
+        "title": "Craft Studios",
+        "count": 2,
+        "category": "culture"
+      },
+      {
+        "key": "izakaya-nightlife",
+        "title": "Izakaya & Nightlife",
+        "count": 2,
+        "category": "food"
+      },
+      {
+        "key": "kitchen-tools",
+        "title": "Kitchen Tools",
+        "count": 2,
+        "category": "things-to-buy"
+      },
+      {
+        "key": "stationery-paper",
+        "title": "Stationery & Paper",
+        "count": 2,
+        "category": "things-to-buy"
+      },
+      {
+        "key": "temples-shrines",
+        "title": "Temples & Shrines",
+        "count": 2,
+        "category": "culture"
+      }
+    ],
+    "planJapaneseTitleMojibake": 1000,
+    "articlesNotInPlan": [
+      "asakusa-sensoji-riverside-walk",
+      "ryogoku-sumo-history-half-day",
+      "osaka-castle-park-half-day-history",
+      "shinsekai-tsutenkaku-with-context",
+      "nakanoshima-river-architecture-walk",
+      "nakanoshima-osaka-river-architecture-walk",
+      "namba-dotonbori-first-night-food-route",
+      "tenma-evening-small-plates",
+      "kuromon-market-without-overdoing-it",
+      "tsuruhashi-koreatown-food-context",
+      "shinsekai-kushikatsu-and-retro-osaka-walk",
+      "yanaka-nezu-sendagi-slow-walk",
+      "kiyosumi-shirakawa-coffee-museum-walk",
+      "nakazakicho-cafes-small-shops",
+      "kichijoji-inokashira-park-slow-tokyo-day",
+      "ginza-nihonbashi-design-shopping-walk",
+      "shimokitazawa-koenji-vintage-music-day",
+      "sakai-knives-and-old-osaka-craft-day",
+      "shinjuku-first-day-without-burning-out",
+      "ueno-park-museums-half-day",
+      "tokyo-station-marunouchi-rainy-day-route",
+      "odaiba-toyosu-waterfront-family-day",
+      "umeda-underground-and-skyline-rainy-day",
+      "shibuya-first-night-orientation-walk",
+      "yokohama-minato-mirai-first-day-waterfront"
+    ]
+  }
+}

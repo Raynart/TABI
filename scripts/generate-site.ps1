@@ -92,6 +92,7 @@ $TagLabelsEn = @{
 }
 $SiteData = Get-Content -Raw -Encoding UTF8 (Join-Path $Root "site-data.json") | ConvertFrom-Json
 $TopicClusters = @($SiteData.topics)
+$SubcategoryDefinitions = @($SiteData.subcategories)
 $AreaClusters = @($SiteData.areas)
 $ItineraryPlans = @($SiteData.itineraries)
 $PlanningGuides = @($SiteData.planning)
@@ -305,6 +306,10 @@ function Get-CategoryUrl([string]$Slug) {
   return Href "/categories/$Slug.html"
 }
 
+function Get-GenreUrl([string]$Slug) {
+  return Href "/genres/$Slug.html"
+}
+
 function Get-TagUrl([string]$Tag) {
   return Href "/tags/$Tag.html"
 }
@@ -355,6 +360,30 @@ function Get-TopicDisplay($Topic) {
   return Get-LocalizedStatic $Topic "topics" $Topic.slug
 }
 
+function Get-SubcategoryDisplay($Subcategory) {
+  return Get-LocalizedStatic $Subcategory "subcategories" $Subcategory.slug
+}
+
+function Get-ArticleSubcategorySlug($Article) {
+  if ($Article.PSObject.Properties.Name -contains "subcategory") { return [string]$Article.subcategory }
+  return ""
+}
+
+function Get-SubcategoryBySlug([string]$Slug) {
+  foreach ($Subcategory in $SubcategoryDefinitions) {
+    if ($Subcategory.slug -eq $Slug) { return $Subcategory }
+  }
+  return $null
+}
+
+function Get-ArticleSubcategoryDisplay($Article) {
+  $Slug = Get-ArticleSubcategorySlug $Article
+  if ([string]::IsNullOrWhiteSpace($Slug)) { return $null }
+  $Subcategory = Get-SubcategoryBySlug $Slug
+  if ($null -eq $Subcategory) { return $null }
+  return Get-SubcategoryDisplay $Subcategory
+}
+
 function Get-AreaDisplay($Area) {
   return Get-LocalizedStatic $Area "areas" $Area.slug
 }
@@ -396,6 +425,18 @@ function Copy-ArticleForLanguage($Article, [string]$Lang) {
     if ($Override[0].PSObject.Properties.Name -contains $PropertyName) {
       $Copy[$PropertyName] = $Override[0].$PropertyName
     }
+  }
+  if (-not ($Override[0].PSObject.Properties.Name -contains "seoTitle")) {
+    $Copy["seoTitle"] = "$($Override[0].title) | TABI"
+  }
+  if (-not ($Override[0].PSObject.Properties.Name -contains "seoDescription")) {
+    $Copy["seoDescription"] = $Override[0].summary
+  }
+  if (-not ($Override[0].PSObject.Properties.Name -contains "audience")) {
+    $Copy["audience"] = "日本の旅を、事実情報に基づいて無理なく計画したい人。"
+  }
+  if (-not ($Override[0].PSObject.Properties.Name -contains "searchAliases")) {
+    $Copy["searchAliases"] = @($Override[0].title, "日本 旅行", "TABI")
   }
   if ($Override[0].PSObject.Properties.Name -contains "tripBrief") {
     $Copy["tripBrief"] = $Override[0].tripBrief
@@ -569,6 +610,7 @@ function Get-RelatedScore($BaseArticle, $Candidate) {
   $Score = 0
   $Score += $SharedTags * 18
   if ($Candidate.category -eq $BaseArticle.category) { $Score += 16 }
+  if ((Get-ArticleSubcategorySlug $Candidate) -eq (Get-ArticleSubcategorySlug $BaseArticle)) { $Score += 14 }
   if ($Candidate.affiliate -eq $true -and $BaseArticle.category -eq "things-to-buy") { $Score += 8 }
   $Score += Get-SeasonalityScore $Candidate
   $Score += [Math]::Round((Get-QualityScore $Candidate) / 10)
@@ -608,6 +650,11 @@ function Select-TopicArticles($Topic, [int]$Limit) {
     (@($Topic.categories) -contains $Article.category) -or (@($Tags | Where-Object { @($Topic.tags) -contains $_ }).Count -gt 0)
   })
   return Select-ScoredArticles $Items $Limit ""
+}
+
+function Select-GenreArticles($Genre, [int]$Limit) {
+  $Items = @($Articles | Where-Object { (Get-ArticleSubcategorySlug $_) -eq $Genre.slug })
+  return Select-ScoredArticles $Items $Limit $Genre.category
 }
 
 function Get-ClusterScore($Article, $Cluster) {
@@ -650,12 +697,19 @@ function Write-Page([string]$RelativePath, [string]$Html) {
   [System.IO.File]::WriteAllText($Target, $Html, $Utf8NoBom)
 }
 
+function Get-GenreIndexLabel {
+  if (Is-Japanese) { return "ジャンル" }
+  return "Genres"
+}
+
 function New-Nav([string]$CurrentCategory) {
   $Items = foreach ($NavItem in $Config.nav) {
     $Current = ""
     if ($NavItem.slug -eq $CurrentCategory) { $Current = ' aria-current="page"' }
     '<li><a href="{0}"{1}>{2}</a></li>' -f (Get-CategoryUrl $NavItem.slug), $Current, (Html (Get-CategoryLabel $NavItem.slug))
   }
+  $GenreCurrent = if ($CurrentCategory -eq "__genres") { ' aria-current="page"' } else { "" }
+  $Items += '<li><a href="{0}"{1}>{2}</a></li>' -f (Href "/genres/index.html"), $GenreCurrent, (Html (Get-GenreIndexLabel))
   return ($Items -join "`n")
 }
 
@@ -668,6 +722,8 @@ function New-SearchJson {
       summary = $Article.summary
       category = $Article.category
       categoryLabel = Get-CategoryLabel $Article.category
+      subcategory = Get-ArticleSubcategorySlug $Article
+      subcategoryLabel = if ($null -ne (Get-ArticleSubcategoryDisplay $Article)) { (Get-ArticleSubcategoryDisplay $Article).title } else { "" }
       tags = @($Article.tags)
       tagLabels = @($Article.tags | ForEach-Object { Get-TagLabel $_ })
       aliases = if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() }
@@ -759,6 +815,8 @@ function New-MobileNav([string]$CurrentCategory) {
     if ($NavItem.slug -eq $CurrentCategory) { $Current = ' aria-current="page"' }
     '<a href="{0}"{1}>{2}</a>' -f (Get-CategoryUrl $NavItem.slug), $Current, (Html (Get-CategoryLabel $NavItem.slug))
   }
+  $GenreCurrent = if ($CurrentCategory -eq "__genres") { ' aria-current="page"' } else { "" }
+  $Items += '<a href="{0}"{1}>{2}</a>' -f (Href "/genres/index.html"), $GenreCurrent, (Html (Get-GenreIndexLabel))
   $ItineraryLabel = if (Is-Japanese) { "旅程" } else { "Itineraries" }
   $AreaLabel = if (Is-Japanese) { "地域" } else { "Areas" }
   $PlanningLabel = if (Is-Japanese) { "準備" } else { "Planning" }
@@ -901,9 +959,11 @@ function New-CollectionStructuredData([string]$TypeName, [string]$Name, [string]
 
 function New-Layout([string]$Title, [string]$Description, [string]$Path, [string]$Main, [string]$CurrentCategory, [string]$Image, [string]$JsonLd) {
   $Head = New-Head $Title $Description $Path $Image
-  $Nav = New-Nav $CurrentCategory
+  $BasePathForNav = Get-BasePath $Path
+  $CurrentNav = if ($BasePathForNav -like "/genres/*") { "__genres" } else { $CurrentCategory }
+  $Nav = New-Nav $CurrentNav
   $Ticker = New-Ticker
-  $MobileNav = New-MobileNav $CurrentCategory
+  $MobileNav = New-MobileNav $CurrentNav
   $NewsletterHref = if ((Get-BasePath $Path) -eq "/404.html") { "$(Href "/")#newsletter" } else { "#newsletter" }
   $HomeHref = Href "/"
   $LangBase = Get-BasePath $Path
@@ -975,6 +1035,7 @@ $RecentlyViewed
         <li><a href="$(Get-CategoryUrl "food")">$(Html (Get-CategoryLabel "food"))</a></li>
         <li><a href="$(Get-CategoryUrl "hidden-gems")">$(Html (Get-CategoryLabel "hidden-gems"))</a></li>
         <li><a href="$(Get-CategoryUrl "things-to-buy")">$(Html (Get-CategoryLabel "things-to-buy"))</a></li>
+        <li><a href="$(Href "/genres/index.html")">$(Html (Get-GenreIndexLabel))</a></li>
         <li><a href="$(Href "/areas/index.html")">$(if (Is-Japanese) { "地域ガイド" } else { "Area Guides" })</a></li>
       </ul>
     </div>
@@ -1742,6 +1803,11 @@ function New-ArticlePage($Article) {
     $TopicDisplay = Get-TopicDisplay $Topic
     $TopicHtml = '<a class="tag-pill topic-pill" href="{0}">{1}</a>' -f (Get-TopicUrl $Topic.slug), (Html $TopicDisplay.title)
   }
+  $Subcategory = Get-ArticleSubcategoryDisplay $Article
+  $SubcategoryHtml = ""
+  if ($null -ne $Subcategory) {
+    $SubcategoryHtml = '<a class="tag-pill topic-pill" href="{0}">{1}</a>' -f (Get-GenreUrl $Subcategory.slug), (Html $Subcategory.title)
+  }
   $Related = Select-RelatedArticles $Article 4
   $RelatedHtml = foreach ($Item in $Related) {
     '<li><a href="{0}">{1}</a></li>' -f (Get-ArticleUrl $Item), (Html $Item.title)
@@ -1755,6 +1821,7 @@ function New-ArticlePage($Article) {
   $Breadcrumbs = New-Breadcrumbs @(
     [pscustomobject]@{ label = "Home"; url = "/" },
     [pscustomobject]@{ label = Get-CategoryLabel $Article.category; url = Get-CategoryUrl $Article.category },
+    [pscustomobject]@{ label = if ($null -ne $Subcategory) { $Subcategory.title } else { Get-CategoryLabel $Article.category }; url = if ($null -ne $Subcategory) { Get-GenreUrl $Subcategory.slug } else { Get-CategoryUrl $Article.category } },
     [pscustomobject]@{ label = $Article.title; url = "" }
   )
 
@@ -1785,6 +1852,7 @@ $ShoppingGuide
     $(New-ArticleSignals $Article)
     <p class="footer-col-title">$(Html (T "filedUnder"))</p>
     <a class="tag-pill" href="$(Get-CategoryUrl $Article.category)">$(Html (Get-CategoryLabel $Article.category))</a>
+    $SubcategoryHtml
     $TopicHtml
     <div class="tag-list">
       $(New-LinkedTagList $Article.tags)
@@ -1821,8 +1889,8 @@ $(New-Newsletter)
     headline = $Article.title
     description = $SeoDescription
     alternativeHeadline = Get-ArticleAudience $Article
-    articleSection = Get-CategoryLabel $Article.category
-    keywords = @($Article.tags | ForEach-Object { Get-TagLabel $_ }) + $(if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() })
+    articleSection = @((Get-CategoryLabel $Article.category), $(if ($null -ne $Subcategory) { $Subcategory.title } else { "" })) | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+    keywords = @($Article.tags | ForEach-Object { Get-TagLabel $_ }) + $(if ($null -ne $Subcategory) { @($Subcategory.title) } else { @() }) + $(if ($Article.PSObject.Properties.Name -contains "searchAliases") { @($Article.searchAliases) } else { @() })
     image = $ImageUrl
     thumbnailUrl = $ImageUrl
     datePublished = $Article.publishedAt
@@ -1841,7 +1909,8 @@ $(New-Newsletter)
     itemListElement = @(
       @{ "@type" = "ListItem"; position = 1; name = T "home"; item = SiteUrl (Href "/") },
       @{ "@type" = "ListItem"; position = 2; name = Get-CategoryLabel $Article.category; item = SiteUrl (Get-CategoryUrl $Article.category) },
-      @{ "@type" = "ListItem"; position = 3; name = $Article.title; item = SiteUrl (Get-ArticleUrl $Article) }
+      @{ "@type" = "ListItem"; position = 3; name = if ($null -ne $Subcategory) { $Subcategory.title } else { Get-CategoryLabel $Article.category }; item = if ($null -ne $Subcategory) { SiteUrl (Get-GenreUrl $Subcategory.slug) } else { SiteUrl (Get-CategoryUrl $Article.category) } },
+      @{ "@type" = "ListItem"; position = 4; name = $Article.title; item = SiteUrl (Get-ArticleUrl $Article) }
     )
   }
   $FaqJsonLd = @{
@@ -1872,6 +1941,27 @@ function New-CategoryPage($Category) {
   $Algorithm = if (Is-Japanese) { "カテゴリ適合、鮮度、季節性、編集上の重み、記事品質で並べています。" } else { "Sorted by category relevance, freshness, seasonality, editorial weight, and article quality." }
   $Items = Select-ScoredArticles @($Articles | Where-Object { $_.category -eq $Category.slug }) 100 $Category.slug
   $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $GenreCards = foreach ($Genre in @($SubcategoryDefinitions | Where-Object { ($_.category -eq $Category.slug) -or (@($_.categories) -contains $Category.slug) })) {
+    $GenreDisplay = Get-SubcategoryDisplay $Genre
+    $Count = @(Select-GenreArticles $Genre 500).Count
+    $CountLabel = if (Is-Japanese) { "$Count 件" } else { "$Count guides" }
+    New-UtilityCard $CountLabel $GenreDisplay.title $GenreDisplay.description (Get-GenreUrl $Genre.slug)
+  }
+  $GenreBlock = if (@($GenreCards).Count -gt 0) {
+    $GenreTitle = if (Is-Japanese) { "細かいジャンル" } else { "Genres in this category" }
+    @"
+<section aria-labelledby="category-genres">
+  <div class="section-label">
+    <span class="section-label-jp">棚</span>
+    <h2 class="section-label-en" id="category-genres">$(Html $GenreTitle)</h2>
+    <div class="section-label-line"></div>
+  </div>
+  <div class="utility-grid">
+    $($GenreCards -join "`n")
+  </div>
+</section>
+"@
+  } else { "" }
   $HubIntro = New-HubIntro (T "categoryHub") (T "hubIntro")
   $Breadcrumbs = New-Breadcrumbs @(
     [pscustomobject]@{ label = "Home"; url = "/" },
@@ -1885,6 +1975,7 @@ function New-CategoryPage($Category) {
   <p class="page-desc">$Description</p>
 </section>
 $HubIntro
+$GenreBlock
 $(New-AlgorithmNote $Algorithm)
 <section class="listing-grid" aria-label="$(Html $CategoryLabel) articles">
   $($Cards -join "`n")
@@ -1893,6 +1984,64 @@ $(New-Newsletter)
 "@
   $JsonLd = New-CollectionStructuredData "CollectionPage" $CategoryLabel $Description (Get-CategoryUrl $Category.slug) $Items
   return New-Layout "$CategoryLabel - TABI" $Description (Get-CategoryUrl $Category.slug) $Main $Category.slug "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
+
+function New-GenreIndexPage {
+  $Kicker = if (Is-Japanese) { "ジャンル" } else { "Genres" }
+  $Title = if (Is-Japanese) { "1000件に向けた細かい棚。" } else { "Smaller shelves for a 1,000-guide library." }
+  $Description = if (Is-Japanese) { "大カテゴリを保ちながら、食、旅程、工芸、買い物、穴場を細かいジャンルで探せるようにしています。" } else { "Keep the five main categories, then browse by focused genres built for a much larger TABI library." }
+  $Cards = foreach ($Genre in $SubcategoryDefinitions) {
+    $GenreDisplay = Get-SubcategoryDisplay $Genre
+    $Count = @(Select-GenreArticles $Genre 500).Count
+    $CountLabel = if (Is-Japanese) { "$(Get-CategoryLabel $Genre.category) / $Count 件" } else { "$(Get-CategoryLabel $Genre.category) / $Count guides" }
+    New-UtilityCard $CountLabel $GenreDisplay.title $GenreDisplay.description (Get-GenreUrl $Genre.slug)
+  }
+  $Main = @"
+<section class="page-hero">
+  $(New-Breadcrumbs @([pscustomobject]@{ label = "Home"; url = "/" }, [pscustomobject]@{ label = $Kicker; url = "" }))
+  <p class="page-kicker">$(Html $Kicker)</p>
+  <h1 class="page-title">$(Html $Title)</h1>
+  <p class="page-desc">$(Html $Description)</p>
+</section>
+<section class="utility-grid" aria-label="Genre links">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $Items = @($SubcategoryDefinitions | ForEach-Object { $Display = Get-SubcategoryDisplay $_; [pscustomobject]@{ title = $Display.title; url = Get-GenreUrl $_.slug } })
+  $JsonLd = New-CollectionStructuredData "CollectionPage" "TABI Genres" $Description "/genres/index.html" $Items
+  return New-Layout "$Kicker - TABI" $Description "/genres/index.html" $Main "" "/assets/images/kyoto-shrine-hero.png" $JsonLd
+}
+
+function New-GenrePage($Genre) {
+  $GenreDisplay = Get-SubcategoryDisplay $Genre
+  $Kicker = if (Is-Japanese) { "ジャンル" } else { "Genre" }
+  $GenreIndexLabel = if (Is-Japanese) { "ジャンル" } else { "Genres" }
+  $Algorithm = if (Is-Japanese) { "このジャンルに明示的に分類された記事を、鮮度、季節性、記事品質で並べています。" } else { "This page lists guides explicitly assigned to this genre, sorted by freshness, seasonal fit, and article quality." }
+  $Items = Select-GenreArticles $Genre 100
+  $Cards = foreach ($Article in $Items) { New-ListingCard $Article }
+  $Breadcrumbs = New-Breadcrumbs @(
+    [pscustomobject]@{ label = "Home"; url = "/" },
+    [pscustomobject]@{ label = Get-CategoryLabel $Genre.category; url = Get-CategoryUrl $Genre.category },
+    [pscustomobject]@{ label = $GenreIndexLabel; url = "/genres/index.html" },
+    [pscustomobject]@{ label = $GenreDisplay.title; url = "" }
+  )
+  $Main = @"
+<section class="page-hero">
+  $Breadcrumbs
+  <p class="page-kicker">$(Html $Kicker) / $(Html (Get-CategoryLabel $Genre.category))</p>
+  <h1 class="page-title">$(Html $GenreDisplay.title)</h1>
+  <p class="page-desc">$(Html $GenreDisplay.description)</p>
+</section>
+$(New-AlgorithmNote $Algorithm)
+<section class="listing-grid" aria-label="$(Html $GenreDisplay.title) articles">
+  $($Cards -join "`n")
+</section>
+$(New-Newsletter)
+"@
+  $JsonLd = New-CollectionStructuredData "CollectionPage" $GenreDisplay.title $GenreDisplay.description (Get-GenreUrl $Genre.slug) $Items
+  return New-Layout "$($GenreDisplay.title) - TABI" $GenreDisplay.description (Get-GenreUrl $Genre.slug) $Main $Genre.category "/assets/images/kyoto-shrine-hero.png" $JsonLd
 }
 
 function New-TagPage([string]$Tag) {
@@ -2802,6 +2951,8 @@ function New-Sitemap {
     $Urls += [pscustomobject]@{ loc = Href "/"; basePath = "/"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Urls += foreach ($Category in $Config.categories) { [pscustomobject]@{ loc = Get-CategoryUrl $Category.slug; basePath = "/categories/$($Category.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
     $Urls += foreach ($Topic in $TopicClusters) { [pscustomobject]@{ loc = Get-TopicUrl $Topic.slug; basePath = "/topics/$($Topic.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
+    $Urls += [pscustomobject]@{ loc = Href "/genres/index.html"; basePath = "/genres/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
+    $Urls += foreach ($Genre in $SubcategoryDefinitions) { [pscustomobject]@{ loc = Get-GenreUrl $Genre.slug; basePath = "/genres/$($Genre.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
     $Urls += [pscustomobject]@{ loc = Href "/areas/index.html"; basePath = "/areas/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
     $Urls += foreach ($Area in $AreaClusters) { [pscustomobject]@{ loc = Get-AreaUrl $Area.slug; basePath = "/areas/$($Area.slug).html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) } }
     $Urls += [pscustomobject]@{ loc = Href "/itineraries/index.html"; basePath = "/itineraries/index.html"; lastmod = $Today.ToString("yyyy-MM-dd", $EnglishCulture) }
@@ -2884,6 +3035,10 @@ function Write-LanguagePages([string]$Lang) {
   foreach ($Category in $Config.categories) {
     Write-Page (Get-OutputPath "categories/$($Category.slug).html") (New-CategoryPage $Category)
   }
+  Write-Page (Get-OutputPath "genres/index.html") (New-GenreIndexPage)
+  foreach ($Genre in $SubcategoryDefinitions) {
+    Write-Page (Get-OutputPath "genres/$($Genre.slug).html") (New-GenrePage $Genre)
+  }
   foreach ($Topic in $TopicClusters) {
     Write-Page (Get-OutputPath "topics/$($Topic.slug).html") (New-TopicPage $Topic)
   }
@@ -2926,4 +3081,4 @@ Write-Page "robots.txt" "User-agent: *`nAllow: /`nSitemap: $(SiteUrl '/sitemap.x
 Write-Page "site.webmanifest" (New-WebManifest)
 Write-Page "llms.txt" (New-LlmsText)
 
-Write-Host "Generated localized TABI site in English and Japanese: $($BaseArticles.Count) articles, $($Config.categories.Count) categories, $($TopicClusters.Count) topics, $($AreaClusters.Count) areas, and $($ItineraryPlans.Count) itineraries per language."
+Write-Host "Generated localized TABI site in English and Japanese: $($BaseArticles.Count) articles, $($Config.categories.Count) categories, $($TopicClusters.Count) topics, $($AreaClusters.Count) areas, and $($ItineraryPlans.Count) itineraries per language, with $($SubcategoryDefinitions.Count) genre pages."

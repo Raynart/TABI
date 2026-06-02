@@ -1,9 +1,495 @@
 [
   {
+    "id": "shinjuku-first-day-without-burning-out",
+    "title": "Shinjuku on Your First Day Without Burning Out",
+    "summary": "Shinjuku is useful on arrival because rail access, food, parks, department stores, and hotels cluster tightly. This guide keeps the first day practical instead of turning jet lag into a checklist.",
+    "category": "travel-guide",
+    "subcategory": "first-time-routes",
+    "tags": [
+      "tokyo",
+      "first-time",
+      "travel-tips",
+      "planning"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/tokyo-shinjuku-blue-hour.png",
+    "imageAlt": "Shinjuku Tokyo station-area streets at blue hour with office towers and soft city lights",
+    "sections": [
+      {
+        "heading": "Use Shinjuku as the anchor",
+        "body": "Official tourism and transport sources identify Shinjuku as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.gotokyo.org/en/",
+      "https://www.metro.tokyo.lg.jp/",
+      "https://www.tokyometro.jp/en/",
+      "https://www.kotsu.metro.tokyo.jp/eng/"
+    ],
+    "seoTitle": "Shinjuku on Your First Day Without Burning Out | TABI",
+    "seoDescription": "Shinjuku is useful on arrival because rail access, food, parks, department stores, and hotels cluster tightly. This guide keeps the first day practical instead of turning jet lag into a checklist.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Shinjuku",
+      "tokyo",
+      "arrival day"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "ueno-park-museums-half-day",
+    "title": "Ueno Park and Museums in a Half Day Without Museum Fatigue",
+    "summary": "Ueno works because the park, museums, zoo area, and station access sit close together. Choose one cultural anchor and leave room to walk.",
+    "category": "travel-guide",
+    "subcategory": "first-time-routes",
+    "tags": [
+      "tokyo",
+      "art",
+      "heritage",
+      "walking"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/tokyo-ueno-park-museums.png",
+    "imageAlt": "Ueno Tokyo park path with museum buildings and trees in soft daylight",
+    "sections": [
+      {
+        "heading": "Use Ueno as the anchor",
+        "body": "Official tourism and transport sources identify Ueno as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.gotokyo.org/en/",
+      "https://www.metro.tokyo.lg.jp/",
+      "https://www.tokyometro.jp/en/",
+      "https://www.kotsu.metro.tokyo.jp/eng/"
+    ],
+    "seoTitle": "Ueno Park and Museums in a Half Day Without Museum Fatigue | TABI",
+    "seoDescription": "Ueno works because the park, museums, zoo area, and station access sit close together. Choose one cultural anchor and leave room to walk.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Ueno",
+      "tokyo",
+      "museum day"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "tokyo-station-marunouchi-rainy-day-route",
+    "title": "Tokyo Station and Marunouchi on a Rainy Day",
+    "summary": "Tokyo Station and Marunouchi are useful when weather turns because rail access, underground passages, dining, museums, and architecture sit close together.",
+    "category": "travel-guide",
+    "subcategory": "seasonal-weather-plans",
+    "tags": [
+      "tokyo",
+      "travel-tips",
+      "walking",
+      "shopping"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/tokyo-shinjuku-blue-hour.png",
+    "imageAlt": "Tokyo city streets at blue hour suggesting a compact rainy-day urban route",
+    "sections": [
+      {
+        "heading": "Use Tokyo Station and Marunouchi as the anchor",
+        "body": "Official tourism and transport sources identify Tokyo Station and Marunouchi as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.gotokyo.org/en/",
+      "https://www.metro.tokyo.lg.jp/",
+      "https://www.tokyometro.jp/en/",
+      "https://www.kotsu.metro.tokyo.jp/eng/"
+    ],
+    "seoTitle": "Tokyo Station and Marunouchi on a Rainy Day | TABI",
+    "seoDescription": "Tokyo Station and Marunouchi are useful when weather turns because rail access, underground passages, dining, museums, and architecture sit close together.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Tokyo Station and Marunouchi",
+      "tokyo",
+      "rainy day"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "odaiba-toyosu-waterfront-family-day",
+    "title": "Odaiba and Toyosu for a Low-Friction Tokyo Waterfront Day",
+    "summary": "Odaiba and Toyosu work well when you need space, water views, shopping, and easier pacing. Treat the bay area as a flexible day rather than a list of attractions.",
+    "category": "travel-guide",
+    "subcategory": "first-time-routes",
+    "tags": [
+      "tokyo",
+      "first-time",
+      "shopping",
+      "walking"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/quiet-coastal-towns.png",
+    "imageAlt": "A quiet waterfront town and harbor scene suitable for a Tokyo bay route",
+    "sections": [
+      {
+        "heading": "Use Odaiba and Toyosu as the anchor",
+        "body": "Official tourism and transport sources identify Odaiba and Toyosu as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.gotokyo.org/en/",
+      "https://www.metro.tokyo.lg.jp/",
+      "https://www.tokyometro.jp/en/",
+      "https://www.kotsu.metro.tokyo.jp/eng/"
+    ],
+    "seoTitle": "Odaiba and Toyosu for a Low-Friction Tokyo Waterfront Day | TABI",
+    "seoDescription": "Odaiba and Toyosu work well when you need space, water views, shopping, and easier pacing. Treat the bay area as a flexible day rather than a list of attractions.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Odaiba and Toyosu",
+      "tokyo",
+      "waterfront"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "umeda-underground-and-skyline-rainy-day",
+    "title": "Umeda for Underground Routes, Food Floors, and Skyline Views",
+    "summary": "Umeda is useful in bad weather because stations, department stores, underground passages, and high-rise views cluster tightly. It rewards patience with maps.",
+    "category": "travel-guide",
+    "subcategory": "seasonal-weather-plans",
+    "tags": [
+      "osaka",
+      "shopping",
+      "travel-tips",
+      "food"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-dotonbori-night.png",
+    "imageAlt": "Osaka city lights and dense urban atmosphere suitable for an Umeda route",
+    "sections": [
+      {
+        "heading": "Use Umeda as the anchor",
+        "body": "Official tourism and transport sources identify Umeda as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.sakai-tcb.or.jp/en/"
+    ],
+    "seoTitle": "Umeda for Underground Routes, Food Floors, and Skyline Views | TABI",
+    "seoDescription": "Umeda is useful in bad weather because stations, department stores, underground passages, and high-rise views cluster tightly. It rewards patience with maps.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Umeda",
+      "osaka",
+      "rainy day"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "local-train-routes-for-first-time-japan",
+    "title": "Local Train Routes That Make a First Japan Trip Feel Deeper",
+    "summary": "Japan opens up when you leave a little room for slower trains, small stations, and neighborhoods between the famous stops. This guide shows how to add local rail days without making the itinerary fragile.",
+    "category": "travel-guide",
+    "subcategory": "transport-slow-rail",
+    "tags": [
+      "first-time",
+      "slow-travel",
+      "planning",
+      "travel-tips"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 7,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/local-train-platform.png",
+    "imageAlt": "A quiet local train platform in Japan at golden hour with mountains in the distance",
+    "sections": [
+      {
+        "heading": "Choose One Slow Rail Day",
+        "body": "A local train day works best when it replaces a crowded checklist, not when it is squeezed between major sights. Pick one line, one town, and one reason to stop."
+      },
+      {
+        "heading": "Let Stations Shape the Route",
+        "body": "Small stations often reveal bakeries, riverside paths, shotengai arcades, and everyday shrines. Build the route around walkable station areas instead of chasing distant landmarks."
+      },
+      {
+        "heading": "Keep Transfers Boring",
+        "body": "The experience can feel poetic, but the logistics should stay simple. Avoid last trains, tight transfers, and luggage-heavy detours so the slow part stays pleasant."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "Local Train Routes for a Deeper First Japan Trip | TABI",
+    "seoDescription": "Use local trains, small stations, and slower rail days to make a first Japan itinerary feel more grounded without adding fragile logistics.",
+    "audience": "First-time visitors who want the classic Japan route to feel less rushed.",
+    "searchAliases": [
+      "local trains Japan",
+      "slow train Japan",
+      "first Japan itinerary"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use local train travel as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
+      ],
+      "beforeYouGo": [
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
+      ],
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
+    }
+  },
+  {
+    "id": "kyoto-rainy-day-temples-cafes-and-covered-streets",
+    "title": "Kyoto on a Rainy Day: Temples, Cafes, and Covered Streets",
+    "summary": "Rain changes Kyoto, but it does not have to ruin the day. Use covered shopping streets, quieter temple gardens, and warm cafe breaks to turn bad weather into a softer route.",
+    "category": "travel-guide",
+    "subcategory": "seasonal-weather-plans",
+    "tags": [
+      "kyoto",
+      "quiet-travel",
+      "tea",
+      "walking"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/kyoto-rain-cafes.png",
+    "imageAlt": "A rainy Kyoto street with a small cafe, tiled roof, and soft green tones",
+    "sections": [
+      {
+        "heading": "Start Under Cover",
+        "body": "Begin with a covered arcade or station-adjacent street so you can adjust to the weather before committing to a long walk. Kyoto is easier in rain when the first hour is gentle."
+      },
+      {
+        "heading": "Choose Gardens That Like Rain",
+        "body": "Moss, stone paths, and temple eaves often look better under light rain. Pick one garden and give it time instead of trying to cross the city while damp and tired."
+      },
+      {
+        "heading": "Use Cafes as Route Anchors",
+        "body": "A rainy Kyoto day needs warm pauses. Mark two tea or coffee stops near transit, then let them divide the day into manageable pieces."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "Kyoto Rainy Day Route With Temples and Cafes | TABI",
+    "seoDescription": "Plan a calmer rainy day in Kyoto with covered streets, temple gardens, tea breaks, and fewer weather-sensitive mistakes.",
+    "audience": "Travelers facing wet weather in Kyoto who still want a memorable day.",
+    "searchAliases": [
+      "Kyoto rainy day",
+      "rain in Kyoto",
+      "Kyoto cafes temples"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use rainy Kyoto planning as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
+      ],
+      "beforeYouGo": [
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
+      ],
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
+    }
+  },
+  {
     "id": "hidden-shrines-kyoto-locals-keep-secret",
     "title": "The Hidden Shrines of Kyoto Locals Still Keep Secret",
     "summary": "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto: quiet, moss-covered, and easier to love slowly. This guide introduces lesser-known shrine routes, etiquette notes, and the best times to go without flattening the places that make them special.",
     "category": "travel-guide",
+    "subcategory": "temples-shrines",
     "tags": [
       "kyoto",
       "shrines",
@@ -77,6 +563,7 @@
     "title": "How to Spend 10 Days in Japan Without a Single Tourist Trap",
     "summary": "A first-timer route that keeps Tokyo, Kyoto, and Osaka in the plan while making room for neighborhoods, small museums, and food counters that feel lived-in. Use it when you want the classic trip, just with better decisions.",
     "category": "travel-guide",
+    "subcategory": "first-time-routes",
     "tags": [
       "itinerary",
       "tokyo",
@@ -149,6 +636,7 @@
     "title": "The Best Ryokan in Kyoto Under ¥20,000",
     "summary": "Kyoto ryokan do not have to be luxury splurges. This guide explains what to expect at smaller inns, how to read room plans, and where the real value usually hides.",
     "category": "travel-guide",
+    "subcategory": "ryokan-onsen",
     "tags": [
       "kyoto",
       "ryokan",
@@ -213,6 +701,7 @@
     "title": "The Perfect Route up Mt. Fuji: What Nobody Tells You",
     "summary": "Climbing Fuji is less about athletic heroics and more about timing, weather, sleep, and humility. This guide helps you choose a route and avoid the mistakes that make the mountain harder than it needs to be.",
     "category": "travel-guide",
+    "subcategory": "mountain-hiking-routes",
     "tags": [
       "mount-fuji",
       "hiking",
@@ -270,6 +759,166 @@
       "season": "Summer works best with heat, rain, and mountain or festival timing in mind.",
       "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
       "timeNeeded": "A half day to one full day usually works better than squeezing it between major stops."
+    }
+  },
+  {
+    "id": "shibuya-first-night-orientation-walk",
+    "title": "Shibuya on the First Night: An Orientation Walk That Does Not Overreach",
+    "summary": "Shibuya is useful on a first Tokyo evening because rail access, crossings, food streets, shopping, and hotels sit close together. This route keeps the night practical while still feeling like arrival in Tokyo.",
+    "category": "travel-guide",
+    "subcategory": "first-time-routes",
+    "tags": [
+      "tokyo",
+      "shibuya",
+      "first-time",
+      "walking",
+      "nightlife"
+    ],
+    "publishedAt": "2026-06-01",
+    "readingTime": 5,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/tokyo-shibuya-first-night.png",
+    "imageAlt": "Shibuya Tokyo streets at blue hour with pedestrians and city lights near the station area",
+    "sections": [
+      {
+        "heading": "Start with orientation, not distance",
+        "body": "Official Tokyo tourism and transport sources frame Shibuya as one of the city's major visitor hubs, and that makes it useful on an arrival night. The goal is not to see every famous corner. It is to understand station exits, the main crossing, food streets, convenience stops, and the simplest route back to the hotel while the city still feels exciting rather than confusing."
+      },
+      {
+        "heading": "Use the crossing as a landmark",
+        "body": "The station-area crossing is a practical meeting and navigation point, but it should not become the whole plan. Treat it as the center of a short loop: arrive, orient yourself, cross once or twice, step into a nearby food area, then return by a route you can repeat. This gives the first night a clear mental map."
+      },
+      {
+        "heading": "Check transit before the last move",
+        "body": "Tokyo Metro, Toei, JR, private railways, and buses do not share one simple rule for every late-night journey. Before dinner stretches too long, confirm the current route and last comfortable connection on official transport tools. If the return route requires transfers, choose the earlier option and save bigger nightlife plans for a less tired evening."
+      },
+      {
+        "heading": "Keep food plans flexible",
+        "body": "Shibuya has many casual dining choices, but opening days, queues, reservation rules, and payment options can change. A first-night plan should identify a compact food zone rather than one must-eat counter. If the first choice is full, the route still works because the walk itself remains short and the station is close."
+      },
+      {
+        "heading": "Best fit",
+        "body": "This is strongest for first-time Tokyo travelers, jet-lagged arrivals, and anyone staying on the west side of central Tokyo. It is less ideal if luggage storage, airport transfer fatigue, or a long hotel check-in still needs solving. In those cases, use Shibuya only for food and orientation, then stop."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-06-01",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets for Tokyo tourism and transit. Volatile details such as opening hours, fares, construction, event access, and final trains must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.gotokyo.org/en/",
+      "https://www.metro.tokyo.lg.jp/",
+      "https://www.tokyometro.jp/en/",
+      "https://www.kotsu.metro.tokyo.jp/eng/"
+    ],
+    "seoTitle": "Shibuya on the First Night Without Overreaching | TABI",
+    "seoDescription": "A practical first-night Shibuya route for Tokyo arrivals, built around official tourism and transport context.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Shibuya",
+      "Tokyo first night",
+      "Shibuya crossing"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Keep the route compact and anchored to one area.",
+        "Confirm current hours, fees, access, and event details from official sources before travel.",
+        "Build in weather, food, and transit pauses instead of treating the day as a checklist."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official tourism, park, museum, transport, or city pages for current notices.",
+        "Avoid adding distant stops unless the day still has slack."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not assume restaurants, observation areas, museums, or events are open daily.",
+        "Do not cross the city repeatedly when one neighborhood can carry the day."
+      ],
+      "season": "Shibuya works year-round, but weather, holidays, events, and closures can change the best order.",
+      "budget": "Costs vary; confirm current transport, entry, meal, and shopping prices directly.",
+      "timeNeeded": "A focused half day works for the core walk; allow a full day if you add museums, meals, or shopping."
+    }
+  },
+  {
+    "id": "yokohama-minato-mirai-first-day-waterfront",
+    "title": "Yokohama Minato Mirai for a First Easy Waterfront Day",
+    "summary": "Minato Mirai gives the Tokyo area a useful first-day alternative: bay views, wide promenades, museums, shopping, and rail access without the same pressure as a dense central Tokyo route.",
+    "category": "travel-guide",
+    "subcategory": "first-time-routes",
+    "tags": [
+      "kanagawa",
+      "yokohama",
+      "minato-mirai",
+      "waterfront",
+      "first-time"
+    ],
+    "publishedAt": "2026-06-01",
+    "readingTime": 5,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/yokohama-minato-mirai-waterfront.png",
+    "imageAlt": "Yokohama Minato Mirai waterfront promenade with bay skyline and people walking in afternoon light",
+    "sections": [
+      {
+        "heading": "Use the waterfront as a gentle start",
+        "body": "Minato Mirai is useful when travelers want a first day that still feels distinctive without demanding constant transfers. Waterfront paths, museums, shopping areas, hotels, and stations are close enough to keep the day understandable. The bay view also gives the route a clear orientation point, which helps when travelers are tired."
+      },
+      {
+        "heading": "Connect it to Yokohama, not only Tokyo",
+        "body": "It is tempting to treat Yokohama as a quick side trip from Tokyo, but Minato Mirai works better when given its own pace. Let the bay, skyline, and nearby neighborhoods carry the day instead of rushing back immediately. If time allows, choose one deeper stop rather than trying to sample every waterfront attraction."
+      },
+      {
+        "heading": "Confirm museum, event, and facility notices",
+        "body": "Large waterfront districts often have changing events, closures, ticket rules, and facility schedules. Check official Yokohama tourism, city, rail, and venue sources before locking in a specific indoor stop. This keeps the article factual without pretending that exhibitions, events, or ticket conditions stay fixed."
+      },
+      {
+        "heading": "Build a weather backup",
+        "body": "The waterfront is pleasant in good weather and exposed in heat, wind, or rain. Keep one indoor museum, shopping, or cafe pause in reserve so the day does not depend on perfect conditions. In summer, start earlier or add shade; in winter, keep the route close to stations after sunset."
+      },
+      {
+        "heading": "Best fit",
+        "body": "This route suits Tokyo-area repeat visitors, families, and first-day travelers who want wide paths, water views, and easier navigation before denser city days. It is less ideal if the goal is old-town atmosphere only, because Minato Mirai's strength is modern waterfront planning and easy movement."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-06-01",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets for Yokohama tourism, city information, and railway access. Volatile details such as events, tickets, facility hours, and transport changes must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.yokohamajapan.com/",
+      "https://www.city.yokohama.lg.jp/lang/residents/en/",
+      "https://www.jreast.co.jp/e/",
+      "https://www.japan.travel/en/destinations/kanto/kanagawa/"
+    ],
+    "seoTitle": "Yokohama Minato Mirai First Waterfront Day | TABI",
+    "seoDescription": "A first easy Yokohama waterfront day around Minato Mirai, with official-source checks for current details.",
+    "audience": "Travelers planning fact-aware Tokyo, Osaka, and greater Tokyo area days from official-source context.",
+    "searchAliases": [
+      "Yokohama",
+      "Minato Mirai",
+      "Kanagawa waterfront"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Keep the route compact and anchored to one area.",
+        "Confirm current hours, fees, access, and event details from official sources before travel.",
+        "Build in weather, food, and transit pauses instead of treating the day as a checklist."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official tourism, park, museum, transport, or city pages for current notices.",
+        "Avoid adding distant stops unless the day still has slack."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not assume restaurants, observation areas, museums, or events are open daily.",
+        "Do not cross the city repeatedly when one neighborhood can carry the day."
+      ],
+      "season": "Minato Mirai works year-round, but weather, holidays, events, and closures can change the best order.",
+      "budget": "Costs vary; confirm current transport, entry, meal, and shopping prices directly.",
+      "timeNeeded": "A focused half day works for the core walk; allow a full day if you add museums, meals, or shopping."
     }
   }
 ]

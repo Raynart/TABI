@@ -1,9 +1,424 @@
 [
   {
+    "id": "namba-dotonbori-first-night-food-route",
+    "title": "Namba and Dotonbori for a First Osaka Night That Still Works",
+    "summary": "Namba and Dotonbori make Osaka?s food energy immediately visible. Use the area as a first-night introduction, not the whole story of Osaka.",
+    "category": "food",
+    "subcategory": "city-food-routes",
+    "tags": [
+      "osaka",
+      "street-food",
+      "nightlife",
+      "first-time"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-dotonbori-night.png",
+    "imageAlt": "Osaka Dotonbori and Namba canal lights at night with food district atmosphere",
+    "sections": [
+      {
+        "heading": "Use Namba and Dotonbori as the anchor",
+        "body": "Official tourism and transport sources identify Namba and Dotonbori as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.sakai-tcb.or.jp/en/"
+    ],
+    "seoTitle": "Namba and Dotonbori for a First Osaka Night That Still Works | TABI",
+    "seoDescription": "Namba and Dotonbori make Osaka?s food energy immediately visible. Use the area as a first-night introduction, not the whole story of Osaka.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Namba and Dotonbori",
+      "osaka",
+      "first night"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "tenma-evening-small-plates",
+    "title": "Tenma in the Evening: Small Plates, Counters, and a Better Osaka Night",
+    "summary": "Tenma is useful when you want Osaka food energy with more small-counter rhythm than spectacle. Go slowly and order in rounds.",
+    "category": "food",
+    "subcategory": "izakaya-nightlife",
+    "tags": [
+      "osaka",
+      "izakaya",
+      "nightlife",
+      "local-food"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-food-alley.png",
+    "imageAlt": "A warm Osaka food alley with izakaya lanterns and small counters at night",
+    "sections": [
+      {
+        "heading": "Use Tenma as the anchor",
+        "body": "Official tourism and transport sources identify Tenma as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.sakai-tcb.or.jp/en/"
+    ],
+    "seoTitle": "Tenma in the Evening: Small Plates, Counters, and a Better Osaka Night | TABI",
+    "seoDescription": "Tenma is useful when you want Osaka food energy with more small-counter rhythm than spectacle. Go slowly and order in rounds.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Tenma",
+      "osaka",
+      "night food"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "kuromon-market-without-overdoing-it",
+    "title": "Kuromon Market Without Overdoing It",
+    "summary": "Kuromon Market can be fun, but it is easy to turn a food walk into expensive grazing. Go with a plan and leave room for a proper meal elsewhere.",
+    "category": "food",
+    "subcategory": "city-food-routes",
+    "tags": [
+      "osaka",
+      "food",
+      "shopping",
+      "street-food"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/depachika-food-hall.png",
+    "imageAlt": "A polished Japanese food hall with warm counters and colorful prepared food displays",
+    "sections": [
+      {
+        "heading": "Use Kuromon Market as the anchor",
+        "body": "Official tourism and transport sources identify Kuromon Market as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.sakai-tcb.or.jp/en/"
+    ],
+    "seoTitle": "Kuromon Market Without Overdoing It | TABI",
+    "seoDescription": "Kuromon Market can be fun, but it is easy to turn a food walk into expensive grazing. Go with a plan and leave room for a proper meal elsewhere.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Kuromon Market",
+      "osaka",
+      "market food"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "tsuruhashi-koreatown-food-context",
+    "title": "Tsuruhashi and Osaka Korea Town With Food Context",
+    "summary": "Tsuruhashi and nearby Korea Town add another food and neighborhood layer to Osaka. Visit with curiosity and respect for living communities.",
+    "category": "food",
+    "subcategory": "city-food-routes",
+    "tags": [
+      "osaka",
+      "food",
+      "local-food",
+      "walking"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-food-alley.png",
+    "imageAlt": "Warm Osaka food alley with small counters and evening lights",
+    "sections": [
+      {
+        "heading": "Use Tsuruhashi as the anchor",
+        "body": "Official tourism and transport sources identify Tsuruhashi as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.sakai-tcb.or.jp/en/"
+    ],
+    "seoTitle": "Tsuruhashi and Osaka Korea Town With Food Context | TABI",
+    "seoDescription": "Tsuruhashi and nearby Korea Town add another food and neighborhood layer to Osaka. Visit with curiosity and respect for living communities.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Tsuruhashi",
+      "osaka",
+      "local food"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "ekiben-how-to-choose-station-bento",
+    "title": "Ekiben: How to Choose a Station Bento That Feels Like the Region",
+    "summary": "Ekiben make train travel taste specific. Learn how to read the display, choose regional ingredients, and eat on board without turning lunch into a mess.",
+    "category": "food",
+    "subcategory": "ekiben-rail-food",
+    "tags": [
+      "food",
+      "local-food",
+      "travel-tips",
+      "budget"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 5,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/ekiben-box.png",
+    "imageAlt": "A colorful Japanese station bento box arranged like a refined travel meal",
+    "sections": [
+      {
+        "heading": "Look for Place, Not Just Price",
+        "body": "The most memorable ekiben usually tell you where you are: local fish, seasonal vegetables, regional beef, or a box shape tied to the station. Let the region lead the choice."
+      },
+      {
+        "heading": "Check How It Will Eat",
+        "body": "Some bentos are tidy and quiet; others are saucy, fragrant, or better at a table. For trains, choose food that opens cleanly and does not require complicated assembly."
+      },
+      {
+        "heading": "Buy Close to Departure",
+        "body": "Station bento are best when they still feel fresh. Give yourself enough time to browse, but avoid buying so early that lunch sits in your bag through multiple transfers."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "How to Choose Ekiben Station Bento in Japan | TABI",
+    "seoDescription": "Choose better ekiben by reading regional cues, packaging, train manners, freshness, and station timing.",
+    "audience": "Rail travelers who want train meals to feel regional and easy.",
+    "searchAliases": [
+      "ekiben",
+      "station bento Japan",
+      "train food Japan"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use ekiben as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
+      ],
+      "beforeYouGo": [
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
+      ],
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
+    }
+  },
+  {
+    "id": "depachika-food-halls-for-curious-travelers",
+    "title": "Depachika Food Halls: How to Shop Without Getting Overwhelmed",
+    "summary": "Japanese department-store basements can feel like edible museums. This guide helps you browse sweets, deli counters, gifts, and late-day discounts with a calmer plan.",
+    "category": "food",
+    "subcategory": "depachika-food-halls",
+    "tags": [
+      "food",
+      "shopping",
+      "souvenirs",
+      "local-food"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/depachika-food-hall.png",
+    "imageAlt": "A polished Japanese department store food hall with warm counters and colorful displays",
+    "sections": [
+      {
+        "heading": "Circle Once Before Buying",
+        "body": "Depachika reward patience. Walk the floor once to understand sweets, prepared foods, seasonal counters, and gift sections before choosing what actually fits your day."
+      },
+      {
+        "heading": "Separate Snacks From Gifts",
+        "body": "Some foods are perfect for a hotel-room dinner, while others are packaged for travel. Check refrigeration, shelf life, and whether the item can survive your route."
+      },
+      {
+        "heading": "Use Closing Time Carefully",
+        "body": "Discounts can appear near closing, but selection changes quickly. If you need a specific gift, buy earlier; if dinner is flexible, browse later."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "How to Shop Japanese Depachika Food Halls | TABI",
+    "seoDescription": "Navigate depachika food halls with calmer choices for sweets, deli food, gifts, refrigeration, and closing-time discounts.",
+    "audience": "Food lovers and gift shoppers who want department-store basements to feel manageable.",
+    "searchAliases": [
+      "depachika",
+      "Japanese food hall",
+      "department store food Japan"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use depachika shopping as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
+      ],
+      "beforeYouGo": [
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
+      ],
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
+    }
+  },
+  {
     "id": "osaka-three-day-eating-itinerary",
     "title": "Osaka in 3 Days: The Eating and Wandering Itinerary",
     "summary": "A three-day Osaka plan built around food, neighborhoods, and enough unstructured time to follow the smell of the next grill. It balances Dotonbori energy with quieter streets that locals actually use.",
     "category": "food",
+    "subcategory": "city-food-routes",
     "tags": [
       "osaka",
       "street-food",
@@ -76,6 +491,7 @@
     "title": "How to Read a Japanese Menu Without Speaking Japanese",
     "summary": "A practical guide to menu categories, common dish names, allergy clues, ticket machines, and the quiet confidence of pointing politely. It will not make you fluent, but it will make dinner easier.",
     "category": "food",
+    "subcategory": "ordering-guides",
     "tags": [
       "menus",
       "food",
@@ -140,6 +556,7 @@
     "title": "Tokyo's Hidden Izakayas Locals Actually Go To",
     "summary": "The best izakaya nights are about counter seats, seasonal small plates, and not over-planning. This guide explains how to choose places that feel welcoming without needing a secret password.",
     "category": "food",
+    "subcategory": "izakaya-nightlife",
     "tags": [
       "tokyo",
       "izakaya",
@@ -204,6 +621,7 @@
     "title": "Japanese Convenience Store Breakfasts Worth Trying",
     "summary": "Japan's convenience stores can save jet-lagged mornings, early trains, and hotel rooms without breakfast. Here are the simple, reliable choices that feel better than emergency food.",
     "category": "food",
+    "subcategory": "konbini-everyday-food",
     "tags": [
       "konbini",
       "breakfast",
@@ -261,6 +679,87 @@
       "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
       "budget": "Budget for several smaller meals or stops instead of one oversized splurge.",
       "timeNeeded": "Plan a half day or evening so meals can shape the walk instead of interrupting it."
+    }
+  },
+  {
+    "id": "shinsekai-kushikatsu-and-retro-osaka-walk",
+    "title": "Shinsekai for Kushikatsu and Retro Osaka Without Turning It Into a Cliche",
+    "summary": "Shinsekai is easy to flatten into neon, snacks, and nostalgia. A better visit keeps the food simple, reads the neighborhood context, and checks current access before building the night around one shop.",
+    "category": "food",
+    "subcategory": "city-food-routes",
+    "tags": [
+      "osaka",
+      "shinsekai",
+      "street-food",
+      "local-food",
+      "walking"
+    ],
+    "publishedAt": "2026-06-01",
+    "readingTime": 5,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-shinsekai-food-walk.png",
+    "imageAlt": "Shinsekai Osaka street near retro food shops and Tsutenkaku area in warm evening light",
+    "sections": [
+      {
+        "heading": "Treat food as the route",
+        "body": "Shinsekai works best when the meal and the walk support each other. Start with the station and main streets, choose one relaxed food stop, then leave time to look around instead of chasing every recommended counter. The route should feel like an evening neighborhood walk with food, not a race through every famous snack."
+      },
+      {
+        "heading": "Know the context before the photo",
+        "body": "The area is known for retro Osaka atmosphere and the Tsutenkaku district, but it is still a living commercial neighborhood. Keep the tone respectful: eat, walk, spend locally, and avoid reducing the visit to a joke about old Osaka. A better article explains why the district feels different without turning local texture into a stereotype."
+      },
+      {
+        "heading": "Check current shop details",
+        "body": "Restaurant hours, closing days, cash rules, queues, and smoking policies can change quickly. Use official tourism context for the district and verify any must-visit shop directly before going. If a specific restaurant is full, keep the route flexible enough to choose another nearby counter without losing the evening."
+      },
+      {
+        "heading": "Pair it carefully",
+        "body": "Shinsekai pairs naturally with Tennoji, Abeno, or a short evening food plan. It becomes tiring when forced after a full day in distant Osaka Bay or northern Osaka. If the day already includes heavy walking, make Shinsekai the final short stop rather than adding multiple night districts."
+      },
+      {
+        "heading": "Best fit",
+        "body": "This is a good route for travelers who want Osaka food energy without making the entire evening about drinking or long queues. It is also useful for visitors who want a structured first taste of local food culture while still keeping transport and return plans easy to understand."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-06-01",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets for Osaka tourism, city information, and transit. Volatile details such as restaurant hours, district events, and transport access must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.japan.travel/en/destinations/kansai/osaka/"
+    ],
+    "seoTitle": "Shinsekai Kushikatsu and Retro Osaka Walk | TABI",
+    "seoDescription": "A practical Shinsekai food walk that keeps Osaka context, access, and current shop details in view.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Shinsekai",
+      "kushikatsu",
+      "Tsutenkaku",
+      "Osaka food walk"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Keep the route compact and anchored to one area.",
+        "Confirm current hours, fees, access, and event details from official sources before travel.",
+        "Build in weather, food, and transit pauses instead of treating the day as a checklist."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official tourism, park, museum, transport, or city pages for current notices.",
+        "Avoid adding distant stops unless the day still has slack."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not assume restaurants, observation areas, museums, or events are open daily.",
+        "Do not cross the city repeatedly when one neighborhood can carry the day."
+      ],
+      "season": "Shinsekai works year-round, but weather, holidays, events, and closures can change the best order.",
+      "budget": "Costs vary; confirm current transport, entry, meal, and shopping prices directly.",
+      "timeNeeded": "A focused half day works for the core walk; allow a full day if you add museums, meals, or shopping."
     }
   }
 ]

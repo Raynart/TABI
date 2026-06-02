@@ -15,7 +15,7 @@ function requireArray(item, key, label) {
 }
 
 function validateArticle(article, label) {
-  for (const key of ["id", "title", "summary", "category", "publishedAt", "image", "imageAlt", "sourcePolicy", "verificationLevel", "lastChecked", "sourceNote"]) {
+  for (const key of ["id", "title", "summary", "category", "subcategory", "publishedAt", "image", "imageAlt", "sourcePolicy", "verificationLevel", "lastChecked", "sourceNote"]) {
     requireString(article, key, label);
   }
   requireArray(article, "tags", label);
@@ -43,6 +43,7 @@ const config = JSON.parse(await readFile(path.join(root, "site.config.json"), "u
 const siteData = JSON.parse(await readFile(path.join(root, "site-data.json"), "utf8"));
 const policy = JSON.parse(await readFile(path.join(root, "content-policy.json"), "utf8"));
 const categorySet = new Set(config.categories.map((category) => category.slug));
+const subcategoryBySlug = new Map((siteData.subcategories || []).map((item) => [item.slug, item]));
 const articleIds = new Set();
 
 for (const article of articles) {
@@ -50,6 +51,9 @@ for (const article of articles) {
   if (articleIds.has(article.id)) errors.push(`duplicate article id: ${article.id}`);
   articleIds.add(article.id);
   if (!categorySet.has(article.category)) errors.push(`${article.id}: unknown category ${article.category}`);
+  const subcategory = subcategoryBySlug.get(article.subcategory);
+  if (!subcategory) errors.push(`${article.id}: unknown subcategory ${article.subcategory}`);
+  else if (![subcategory.category, ...(subcategory.categories || [])].includes(article.category)) errors.push(`${article.id}: subcategory ${article.subcategory} does not allow category ${article.category}`);
 }
 
 for (const article of japaneseArticles) {
@@ -57,7 +61,7 @@ for (const article of japaneseArticles) {
   if (!articleIds.has(article.id)) errors.push(`articles.ja:${article.id} has no English source`);
 }
 
-for (const key of ["topics", "areas", "itineraries", "planning", "glossary"]) {
+for (const key of ["topics", "subcategories", "areas", "itineraries", "planning", "glossary"]) {
   if (!Array.isArray(siteData[key]) || siteData[key].length === 0) errors.push(`site-data.json: missing ${key}`);
 }
 for (const key of ["allowedSourceTypes", "disallowedSourceTypes", "reuseRules", "editorialPrinciples", "correctionPolicy"]) {

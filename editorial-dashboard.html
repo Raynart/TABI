@@ -8,163 +8,863 @@
   <link rel="stylesheet" href="/styles.css">
   <style>
     main { max-width: 1180px; margin: 0 auto; padding: 48px 24px; }
+    section { margin-top: 36px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 24px 0; }
+    .metric { border: 1px solid #d8d0c3; background: #fff; padding: 16px; }
+    .metric strong { display: block; font-size: 1.8rem; line-height: 1; }
+    .grid-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
     table { width: 100%; border-collapse: collapse; background: #fff; }
     th, td { border: 1px solid #d8d0c3; padding: 10px; text-align: left; vertical-align: top; }
     th { font-size: 0.78rem; text-transform: uppercase; color: #6f6a62; }
+    code { overflow-wrap: anywhere; }
   </style>
 </head>
 <body>
 <main>
   <p class="page-kicker">Maintenance</p>
   <h1 class="page-title">TABI Editorial Dashboard</h1>
-  <p class="page-desc">Static local dashboard for source review, translation coverage, and article maintenance.</p>
-  <table>
-    <thead><tr><th>Article</th><th>Category</th><th>Last checked</th><th>Status</th><th>JA</th><th>Sections</th></tr></thead>
-    <tbody><tr>
+  <p class="page-desc">Static local dashboard for article volume, genre balance, source review, translation coverage, image reuse, and plan maintenance.</p>
+  <div class="metric-grid">
+    <div class="metric"><strong>53</strong><span>English articles</span></div>
+    <div class="metric"><strong>53</strong><span>Japanese articles</span></div>
+    <div class="metric"><strong>28</strong><span>Articles with issues</span></div>
+    <div class="metric"><strong>19</strong><span>Genres below 3 articles</span></div>
+    <div class="metric"><strong>13</strong><span>Reused image files</span></div>
+    <div class="metric"><strong>1000</strong><span>Plan JA title mojibake candidates</span></div>
+  </div>
+
+  <section>
+    <h2>Published Coverage</h2>
+    <div class="grid-two">
+      <div><h3>Categories</h3><table>
+    <thead><tr><th>Name</th><th>Count</th></tr></thead>
+    <tbody><tr><td>travel-guide</td><td>13</td></tr>
+<tr><td>culture</td><td>11</td></tr>
+<tr><td>food</td><td>11</td></tr>
+<tr><td>hidden-gems</td><td>9</td></tr>
+<tr><td>things-to-buy</td><td>9</td></tr></tbody>
+  </table></div>
+      <div><h3>Genres</h3><table>
+    <thead><tr><th>Name</th><th>Count</th></tr></thead>
+    <tbody><tr><td>Heritage Walks</td><td>10</td></tr>
+<tr><td>First-Time Routes</td><td>6</td></tr>
+<tr><td>City Food Routes</td><td>5</td></tr>
+<tr><td>Seasonal &amp; Weather Plans</td><td>4</td></tr>
+<tr><td>Textiles &amp; Clothing</td><td>3</td></tr>
+<tr><td>Coastal Towns &amp; Islands</td><td>2</td></tr>
+<tr><td>Craft Studios</td><td>2</td></tr>
+<tr><td>Izakaya &amp; Nightlife</td><td>2</td></tr>
+<tr><td>Kitchen Tools</td><td>2</td></tr>
+<tr><td>Stationery &amp; Paper</td><td>2</td></tr>
+<tr><td>Temples &amp; Shrines</td><td>2</td></tr>
+<tr><td>Aesthetics &amp; Philosophy</td><td>1</td></tr>
+<tr><td>Beauty &amp; Drugstore</td><td>1</td></tr>
+<tr><td>Depachika Food Halls</td><td>1</td></tr>
+<tr><td>Ekiben &amp; Rail Food</td><td>1</td></tr>
+<tr><td>Forests &amp; Remote Nature</td><td>1</td></tr>
+<tr><td>Konbini &amp; Everyday Food</td><td>1</td></tr>
+<tr><td>Local Customs &amp; Etiquette</td><td>1</td></tr>
+<tr><td>Mountain &amp; Hiking Routes</td><td>1</td></tr>
+<tr><td>Ordering Guides</td><td>1</td></tr>
+<tr><td>Pilgrimage Villages</td><td>1</td></tr>
+<tr><td>Ryokan &amp; Onsen</td><td>1</td></tr>
+<tr><td>Tea &amp; Matcha</td><td>1</td></tr>
+<tr><td>Transport &amp; Slow Rail</td><td>1</td></tr></tbody>
+  </table></div>
+      <div><h3>Regions</h3><table>
+    <thead><tr><th>Name</th><th>Count</th></tr></thead>
+    <tbody><tr><td>multi-region</td><td>24</td></tr>
+<tr><td>tokyo</td><td>16</td></tr>
+<tr><td>osaka</td><td>13</td></tr></tbody>
+  </table></div>
+      <div><h3>Thin Genres</h3><table>
+    <thead><tr><th>Name</th><th>Count</th></tr></thead>
+    <tbody><tr><td>Aesthetics &amp; Philosophy (culture)</td><td>1</td></tr>
+<tr><td>Beauty &amp; Drugstore (things-to-buy)</td><td>1</td></tr>
+<tr><td>Depachika Food Halls (food)</td><td>1</td></tr>
+<tr><td>Ekiben &amp; Rail Food (food)</td><td>1</td></tr>
+<tr><td>Forests &amp; Remote Nature (hidden-gems)</td><td>1</td></tr>
+<tr><td>Konbini &amp; Everyday Food (food)</td><td>1</td></tr>
+<tr><td>Local Customs &amp; Etiquette (culture)</td><td>1</td></tr>
+<tr><td>Mountain &amp; Hiking Routes (travel-guide)</td><td>1</td></tr>
+<tr><td>Ordering Guides (food)</td><td>1</td></tr>
+<tr><td>Pilgrimage Villages (hidden-gems)</td><td>1</td></tr>
+<tr><td>Ryokan &amp; Onsen (travel-guide)</td><td>1</td></tr>
+<tr><td>Tea &amp; Matcha (things-to-buy)</td><td>1</td></tr>
+<tr><td>Transport &amp; Slow Rail (travel-guide)</td><td>1</td></tr>
+<tr><td>Coastal Towns &amp; Islands (hidden-gems)</td><td>2</td></tr>
+<tr><td>Craft Studios (culture)</td><td>2</td></tr>
+<tr><td>Izakaya &amp; Nightlife (food)</td><td>2</td></tr>
+<tr><td>Kitchen Tools (things-to-buy)</td><td>2</td></tr>
+<tr><td>Stationery &amp; Paper (things-to-buy)</td><td>2</td></tr>
+<tr><td>Temples &amp; Shrines (culture)</td><td>2</td></tr></tbody>
+  </table></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>1000 Article Plan</h2>
+    <div class="grid-two">
+      <div><h3>Planned Regions</h3><table>
+    <thead><tr><th>Name</th><th>Count</th></tr></thead>
+    <tbody><tr><td>tokyo</td><td>433</td></tr>
+<tr><td>osaka</td><td>251</td></tr>
+<tr><td>kanagawa</td><td>160</td></tr>
+<tr><td>chiba</td><td>90</td></tr>
+<tr><td>saitama</td><td>70</td></tr>
+<tr><td>multi-region</td><td>24</td></tr></tbody>
+  </table></div>
+      <div><h3>Planned Categories</h3><table>
+    <thead><tr><th>Name</th><th>Count</th></tr></thead>
+    <tbody><tr><td>travel-guide</td><td>340</td></tr>
+<tr><td>food</td><td>256</td></tr>
+<tr><td>things-to-buy</td><td>176</td></tr>
+<tr><td>culture</td><td>167</td></tr>
+<tr><td>hidden-gems</td><td>89</td></tr></tbody>
+  </table></div>
+      <div><h3>Planned Genres</h3><table>
+    <thead><tr><th>Name</th><th>Count</th></tr></thead>
+    <tbody><tr><td>Transport &amp; Slow Rail</td><td>169</td></tr>
+<tr><td>Textiles &amp; Clothing</td><td>87</td></tr>
+<tr><td>Coastal Towns &amp; Islands</td><td>86</td></tr>
+<tr><td>Stationery &amp; Paper</td><td>86</td></tr>
+<tr><td>Depachika Food Halls</td><td>85</td></tr>
+<tr><td>Seasonal &amp; Weather Plans</td><td>85</td></tr>
+<tr><td>City Food Routes</td><td>84</td></tr>
+<tr><td>First-Time Routes</td><td>84</td></tr>
+<tr><td>Ordering Guides</td><td>84</td></tr>
+<tr><td>Heritage Walks</td><td>82</td></tr>
+<tr><td>Temples &amp; Shrines</td><td>82</td></tr>
+<tr><td>Craft Studios</td><td>2</td></tr>
+<tr><td>Aesthetics &amp; Philosophy</td><td>1</td></tr>
+<tr><td>Beauty &amp; Drugstore</td><td>1</td></tr>
+<tr><td>Ekiben &amp; Rail Food</td><td>1</td></tr>
+<tr><td>Forests &amp; Remote Nature</td><td>1</td></tr>
+<tr><td>Izakaya &amp; Nightlife</td><td>1</td></tr>
+<tr><td>Kitchen Tools</td><td>1</td></tr>
+<tr><td>Konbini &amp; Everyday Food</td><td>1</td></tr>
+<tr><td>Local Customs &amp; Etiquette</td><td>1</td></tr>
+<tr><td>Mountain &amp; Hiking Routes</td><td>1</td></tr>
+<tr><td>Pilgrimage Villages</td><td>1</td></tr>
+<tr><td>Ryokan &amp; Onsen</td><td>1</td></tr>
+<tr><td>Tea &amp; Matcha</td><td>1</td></tr></tbody>
+  </table></div>
+      <div>
+        <h3>Plan Maintenance</h3>
+        <table>
+          <tbody>
+            <tr><td>Target published articles</td><td>1000</td></tr>
+            <tr><td>Planned new articles</td><td>1000</td></tr>
+            <tr><td>Plan items</td><td>1028</td></tr>
+            <tr><td>Published articles not in plan items</td><td>25</td></tr>
+            <tr><td>JA title mojibake candidates</td><td>1000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quality Watchlist</h2>
+    <div class="grid-two">
+      <div>
+        <h3>Article Issues</h3>
+        <table>
+          <thead><tr><th>Article</th><th>Issues</th></tr></thead>
+          <tbody><tr><td>The Best Japanese Kitchen Knives to Bring Home</td><td>Missing source URLs</td></tr>
+<tr><td>Buying Matcha: Ceremonial vs. Culinary Grade Explained</td><td>Missing source URLs</td></tr>
+<tr><td>Depachika Food Halls: How to Shop Without Getting Overwhelmed</td><td>Missing source URLs</td></tr>
+<tr><td>Ekiben: How to Choose a Station Bento That Feels Like the Region</td><td>Missing source URLs</td></tr>
+<tr><td>Hanami: Where to See Cherry Blossoms Like a Local</td><td>Missing source URLs</td></tr>
+<tr><td>The Hidden Shrines of Kyoto Locals Still Keep Secret</td><td>Missing source URLs</td></tr>
+<tr><td>How to Read a Japanese Menu Without Speaking Japanese</td><td>Missing source URLs</td></tr>
+<tr><td>Japanese Convenience Store Breakfasts Worth Trying</td><td>Missing source URLs</td></tr>
+<tr><td>10 Japanese Drugstore Products Worth Every Yen</td><td>Missing source URLs</td></tr>
+<tr><td>Japanese Stationery Worth Bringing Home, From Notebooks to Pens</td><td>Missing source URLs</td></tr>
+<tr><td>Kanazawa Gold Leaf and Craft Neighborhoods Worth Slowing Down For</td><td>Missing source URLs</td></tr>
+<tr><td>Kintsugi: The Art of Repairing Broken Things with Gold</td><td>Missing source URLs</td></tr>
+<tr><td>Walking the Kiso Valley Between Old Post Towns</td><td>Missing source URLs</td></tr>
+<tr><td>Kumano Kodo Villages Without Rushing the Pilgrimage</td><td>Missing source URLs</td></tr>
+<tr><td>Kyoto on a Rainy Day: Temples, Cafes, and Covered Streets</td><td>Missing source URLs</td></tr>
+<tr><td>The Best Ryokan in Kyoto Under ¥20,000</td><td>Missing source URLs</td></tr>
+<tr><td>Local Train Routes That Make a First Japan Trip Feel Deeper</td><td>Missing source URLs</td></tr>
+<tr><td>Onsen Etiquette for Your First Visit Without Feeling Awkward</td><td>Missing source URLs</td></tr>
+<tr><td>Osaka in 3 Days: The Eating and Wandering Itinerary</td><td>Missing source URLs</td></tr>
+<tr><td>The Perfect Route up Mt. Fuji: What Nobody Tells You</td><td>Missing source URLs</td></tr>
+<tr><td>Quiet Coastal Towns for a Slower Japan Trip</td><td>Missing source URLs</td></tr>
+<tr><td>The Setouchi Islands for Art, Sea Air, and Slow Travel</td><td>Missing source URLs</td></tr>
+<tr><td>How to Spend 10 Days in Japan Without a Single Tourist Trap</td><td>Missing source URLs</td></tr>
+<tr><td>Tenugui Guide: Patterns, Uses, and How to Choose One as a Souvenir</td><td>Missing source URLs</td></tr>
+<tr><td>Tokyo's Hidden Izakayas Locals Actually Go To</td><td>Missing source URLs</td></tr>
+<tr><td>What Wabi-Sabi Really Means and Why the World Needs It Now</td><td>Missing source URLs</td></tr>
+<tr><td>Where to Buy Authentic Yukata in Tokyo Without the Markup</td><td>Missing source URLs</td></tr>
+<tr><td>Yakushima: Japan's Ancient Forest That Few Tourists Find</td><td>Missing source URLs</td></tr></tbody>
+        </table>
+      </div>
+      <div>
+        <h3>Duplicate Images</h3>
+        <table>
+          <thead><tr><th>Image</th><th>Uses</th></tr></thead>
+          <tbody><tr><td>/assets/images/japanese-goods.png</td><td>6</td></tr>
+<tr><td>/assets/images/kyoto-shrine-hero.png</td><td>5</td></tr>
+<tr><td>/assets/images/osaka-food-alley.png</td><td>5</td></tr>
+<tr><td>/assets/images/osaka-castle-park.png</td><td>3</td></tr>
+<tr><td>/assets/images/osaka-dotonbori-night.png</td><td>3</td></tr>
+<tr><td>/assets/images/tokyo-shinjuku-blue-hour.png</td><td>3</td></tr>
+<tr><td>/assets/images/tokyo-ueno-park-museums.png</td><td>3</td></tr>
+<tr><td>/assets/images/depachika-food-hall.png</td><td>2</td></tr>
+<tr><td>/assets/images/japanese-stationery.png</td><td>2</td></tr>
+<tr><td>/assets/images/kintsugi-studio.png</td><td>2</td></tr>
+<tr><td>/assets/images/quiet-coastal-towns.png</td><td>2</td></tr>
+<tr><td>/assets/images/tokyo-asakusa-temple-street.png</td><td>2</td></tr>
+<tr><td>/assets/images/yakushima-forest.png</td><td>2</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Article Detail</h2>
+    <table>
+      <thead><tr><th>Article</th><th>Category</th><th>Genre</th><th>Region</th><th>Last checked</th><th>Status</th><th>JA</th><th>Sources</th><th>Image uses</th><th>Sections</th></tr></thead>
+      <tbody><tr>
+    <td><a href="/articles/asakusa-sensoji-riverside-walk.html">Asakusa, Sensoji, and a Riverside Walk That Still Feels Grounded</a></td>
+    <td>culture</td>
+    <td>temples-shrines</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/ryogoku-sumo-history-half-day.html">Ryogoku for Sumo History, Museums, and an Older Tokyo Feel</a></td>
+    <td>culture</td>
+    <td>heritage-walks</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/osaka-castle-park-half-day-history.html">Osaka Castle Park in a Half Day: History Without Rushing</a></td>
+    <td>culture</td>
+    <td>heritage-walks</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/shinsekai-tsutenkaku-with-context.html">Shinsekai and Tsutenkaku With Context, Not Just Neon</a></td>
+    <td>culture</td>
+    <td>heritage-walks</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/nakanoshima-river-architecture-walk.html">Nakanoshima for River Views, Architecture, and a Calmer Osaka Walk</a></td>
+    <td>culture</td>
+    <td>heritage-walks</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/kanazawa-gold-leaf-and-craft-neighborhoods.html">Kanazawa Gold Leaf and Craft Neighborhoods Worth Slowing Down For</a></td>
+    <td>culture</td>
+    <td>craft-studios</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/onsen-etiquette-for-the-first-visit.html">Onsen Etiquette for Your First Visit Without Feeling Awkward</a></td>
+    <td>culture</td>
+    <td>local-customs-etiquette</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
+    <td>3</td>
+  </tr>
+<tr>
     <td><a href="/articles/what-wabi-sabi-really-means.html">What Wabi-Sabi Really Means and Why the World Needs It Now</a></td>
     <td>culture</td>
+    <td>aesthetics-philosophy</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>2</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/kintsugi-art-of-repairing-broken-things.html">Kintsugi: The Art of Repairing Broken Things with Gold</a></td>
     <td>culture</td>
+    <td>craft-studios</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>2</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/hanami-where-to-see-cherry-blossoms-like-local.html">Hanami: Where to See Cherry Blossoms Like a Local</a></td>
     <td>culture</td>
+    <td>seasonal-weather-plans</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/nakanoshima-osaka-river-architecture-walk.html">Nakanoshima, Osaka: A River and Architecture Walk Between Busy Districts</a></td>
+    <td>culture</td>
+    <td>heritage-walks</td>
+    <td>osaka</td>
+    <td>2026-06-01</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>1</td>
+    <td>5</td>
+  </tr>
+<tr>
+    <td><a href="/articles/namba-dotonbori-first-night-food-route.html">Namba and Dotonbori for a First Osaka Night That Still Works</a></td>
+    <td>food</td>
+    <td>city-food-routes</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/tenma-evening-small-plates.html">Tenma in the Evening: Small Plates, Counters, and a Better Osaka Night</a></td>
+    <td>food</td>
+    <td>izakaya-nightlife</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/kuromon-market-without-overdoing-it.html">Kuromon Market Without Overdoing It</a></td>
+    <td>food</td>
+    <td>city-food-routes</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/tsuruhashi-koreatown-food-context.html">Tsuruhashi and Osaka Korea Town With Food Context</a></td>
+    <td>food</td>
+    <td>city-food-routes</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/ekiben-how-to-choose-station-bento.html">Ekiben: How to Choose a Station Bento That Feels Like the Region</a></td>
+    <td>food</td>
+    <td>ekiben-rail-food</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/depachika-food-halls-for-curious-travelers.html">Depachika Food Halls: How to Shop Without Getting Overwhelmed</a></td>
+    <td>food</td>
+    <td>depachika-food-halls</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>2</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/osaka-three-day-eating-itinerary.html">Osaka in 3 Days: The Eating and Wandering Itinerary</a></td>
     <td>food</td>
+    <td>city-food-routes</td>
+    <td>osaka</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
     <td>5</td>
   </tr>
 <tr>
     <td><a href="/articles/how-to-read-japanese-menu-without-speaking-japanese.html">How to Read a Japanese Menu Without Speaking Japanese</a></td>
     <td>food</td>
+    <td>ordering-guides</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/tokyo-hidden-izakayas-locals-go.html">Tokyo's Hidden Izakayas Locals Actually Go To</a></td>
     <td>food</td>
+    <td>izakaya-nightlife</td>
+    <td>tokyo</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/japanese-convenience-store-breakfasts-worth-trying.html">Japanese Convenience Store Breakfasts Worth Trying</a></td>
     <td>food</td>
+    <td>konbini-everyday-food</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>6</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html">Shinsekai for Kushikatsu and Retro Osaka Without Turning It Into a Cliche</a></td>
+    <td>food</td>
+    <td>city-food-routes</td>
+    <td>osaka</td>
+    <td>2026-06-01</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>1</td>
+    <td>5</td>
+  </tr>
+<tr>
+    <td><a href="/articles/yanaka-nezu-sendagi-slow-walk.html">Yanaka, Nezu, and Sendagi for a Slower Tokyo Walk</a></td>
+    <td>hidden-gems</td>
+    <td>heritage-walks</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/kiyosumi-shirakawa-coffee-museum-walk.html">Kiyosumi-Shirakawa for Coffee, Gardens, and a Softer Tokyo Morning</a></td>
+    <td>hidden-gems</td>
+    <td>heritage-walks</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/nakazakicho-cafes-small-shops.html">Nakazakicho for Cafes, Small Shops, and a Slower Osaka Afternoon</a></td>
+    <td>hidden-gems</td>
+    <td>heritage-walks</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/quiet-coastal-towns-for-slow-japan-travel.html">Quiet Coastal Towns for a Slower Japan Trip</a></td>
+    <td>hidden-gems</td>
+    <td>coastal-islands</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html">Kumano Kodo Villages Without Rushing the Pilgrimage</a></td>
+    <td>hidden-gems</td>
+    <td>pilgrimage-villages</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/yakushima-ancient-forest-few-tourists-find.html">Yakushima: Japan's Ancient Forest That Few Tourists Find</a></td>
     <td>hidden-gems</td>
+    <td>forests-and-islands</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>2</td>
     <td>5</td>
   </tr>
 <tr>
     <td><a href="/articles/setouchi-islands-art-sea-slow-travel.html">The Setouchi Islands for Art, Sea Air, and Slow Travel</a></td>
     <td>hidden-gems</td>
+    <td>coastal-islands</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>2</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/kiso-valley-walk-between-post-towns.html">Walking the Kiso Valley Between Old Post Towns</a></td>
     <td>hidden-gems</td>
+    <td>heritage-walks</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/kichijoji-inokashira-park-slow-tokyo-day.html">Kichijoji and Inokashira Park for a Slower Tokyo Day</a></td>
+    <td>hidden-gems</td>
+    <td>heritage-walks</td>
+    <td>tokyo</td>
+    <td>2026-06-01</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>1</td>
+    <td>5</td>
+  </tr>
+<tr>
+    <td><a href="/articles/ginza-nihonbashi-design-shopping-walk.html">Ginza and Nihonbashi for Design, Food Halls, and Calm Shopping</a></td>
+    <td>things-to-buy</td>
+    <td>stationery-paper</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/shimokitazawa-koenji-vintage-music-day.html">Shimokitazawa and Koenji for Vintage Shops and Small Music Energy</a></td>
+    <td>things-to-buy</td>
+    <td>textiles-clothing</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/sakai-knives-and-old-osaka-craft-day.html">Sakai for Knives, Craft, and an Old Osaka Day Trip</a></td>
+    <td>things-to-buy</td>
+    <td>kitchen-tools</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>6</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/japanese-stationery-worth-bringing-home.html">Japanese Stationery Worth Bringing Home, From Notebooks to Pens</a></td>
+    <td>things-to-buy</td>
+    <td>stationery-paper</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/tenugui-guide-patterns-uses-and-souvenirs.html">Tenugui Guide: Patterns, Uses, and How to Choose One as a Souvenir</a></td>
+    <td>things-to-buy</td>
+    <td>textiles-clothing</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/best-japanese-kitchen-knives-to-bring-home.html">The Best Japanese Kitchen Knives to Bring Home</a></td>
     <td>things-to-buy</td>
+    <td>kitchen-tools</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>6</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/buying-matcha-ceremonial-vs-culinary-grade.html">Buying Matcha: Ceremonial vs. Culinary Grade Explained</a></td>
     <td>things-to-buy</td>
+    <td>tea-matcha</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>6</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/japanese-drugstore-products-worth-every-yen.html">10 Japanese Drugstore Products Worth Every Yen</a></td>
     <td>things-to-buy</td>
+    <td>beauty-drugstore</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>6</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/where-to-buy-authentic-yukata-in-tokyo.html">Where to Buy Authentic Yukata in Tokyo Without the Markup</a></td>
     <td>things-to-buy</td>
+    <td>textiles-clothing</td>
+    <td>tokyo</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>6</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/shinjuku-first-day-without-burning-out.html">Shinjuku on Your First Day Without Burning Out</a></td>
+    <td>travel-guide</td>
+    <td>first-time-routes</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/ueno-park-museums-half-day.html">Ueno Park and Museums in a Half Day Without Museum Fatigue</a></td>
+    <td>travel-guide</td>
+    <td>first-time-routes</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/tokyo-station-marunouchi-rainy-day-route.html">Tokyo Station and Marunouchi on a Rainy Day</a></td>
+    <td>travel-guide</td>
+    <td>seasonal-weather-plans</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/odaiba-toyosu-waterfront-family-day.html">Odaiba and Toyosu for a Low-Friction Tokyo Waterfront Day</a></td>
+    <td>travel-guide</td>
+    <td>first-time-routes</td>
+    <td>tokyo</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/umeda-underground-and-skyline-rainy-day.html">Umeda for Underground Routes, Food Floors, and Skyline Views</a></td>
+    <td>travel-guide</td>
+    <td>seasonal-weather-plans</td>
+    <td>osaka</td>
+    <td>2026-05-31</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/local-train-routes-for-first-time-japan.html">Local Train Routes That Make a First Japan Trip Feel Deeper</a></td>
+    <td>travel-guide</td>
+    <td>transport-slow-rail</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/kyoto-rainy-day-temples-cafes-and-covered-streets.html">Kyoto on a Rainy Day: Temples, Cafes, and Covered Streets</a></td>
+    <td>travel-guide</td>
+    <td>seasonal-weather-plans</td>
+    <td>multi-region</td>
+    <td>2026-05-31</td>
+    <td>Missing source URLs</td>
+    <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/hidden-shrines-kyoto-locals-keep-secret.html">The Hidden Shrines of Kyoto Locals Still Keep Secret</a></td>
     <td>travel-guide</td>
+    <td>temples-shrines</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
     <td>5</td>
   </tr>
 <tr>
     <td><a href="/articles/ten-days-japan-without-tourist-traps.html">How to Spend 10 Days in Japan Without a Single Tourist Trap</a></td>
     <td>travel-guide</td>
+    <td>first-time-routes</td>
+    <td>tokyo</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
     <td>5</td>
   </tr>
 <tr>
     <td><a href="/articles/kyoto-ryokan-under-20000-yen.html">The Best Ryokan in Kyoto Under ¥20,000</a></td>
     <td>travel-guide</td>
+    <td>ryokan-onsen</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>5</td>
     <td>3</td>
   </tr>
 <tr>
     <td><a href="/articles/perfect-route-up-mount-fuji.html">The Perfect Route up Mt. Fuji: What Nobody Tells You</a></td>
     <td>travel-guide</td>
+    <td>mountain-hiking-routes</td>
+    <td>multi-region</td>
     <td>2026-05-24</td>
-    <td>Needs source detail</td>
+    <td>Missing source URLs</td>
     <td>Yes</td>
+    <td>0</td>
+    <td>1</td>
     <td>3</td>
+  </tr>
+<tr>
+    <td><a href="/articles/shibuya-first-night-orientation-walk.html">Shibuya on the First Night: An Orientation Walk That Does Not Overreach</a></td>
+    <td>travel-guide</td>
+    <td>first-time-routes</td>
+    <td>tokyo</td>
+    <td>2026-06-01</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>1</td>
+    <td>5</td>
+  </tr>
+<tr>
+    <td><a href="/articles/yokohama-minato-mirai-first-day-waterfront.html">Yokohama Minato Mirai for a First Easy Waterfront Day</a></td>
+    <td>travel-guide</td>
+    <td>first-time-routes</td>
+    <td>tokyo</td>
+    <td>2026-06-01</td>
+    <td>OK</td>
+    <td>Yes</td>
+    <td>4</td>
+    <td>1</td>
+    <td>5</td>
   </tr></tbody>
-  </table>
+    </table>
+  </section>
 </main>
 </body>
 </html>
