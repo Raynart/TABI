@@ -45,6 +45,7 @@ const policy = JSON.parse(await readFile(path.join(root, "content-policy.json"),
 const categorySet = new Set(config.categories.map((category) => category.slug));
 const subcategoryBySlug = new Map((siteData.subcategories || []).map((item) => [item.slug, item]));
 const articleIds = new Set();
+const japaneseArticleIds = new Set();
 
 for (const article of articles) {
   validateArticle(article, `articles:${article.id || "unknown"}`);
@@ -59,6 +60,16 @@ for (const article of articles) {
 for (const article of japaneseArticles) {
   validateJapaneseArticle(article, `articles.ja:${article.id || "unknown"}`);
   if (!articleIds.has(article.id)) errors.push(`articles.ja:${article.id} has no English source`);
+  if (japaneseArticleIds.has(article.id)) errors.push(`duplicate Japanese article id: ${article.id}`);
+  japaneseArticleIds.add(article.id);
+}
+
+for (const article of articles) {
+  if (!japaneseArticleIds.has(article.id)) errors.push(`articles:${article.id} has no Japanese mirror`);
+}
+
+if (articleIds.size !== japaneseArticleIds.size) {
+  errors.push(`article mirror mismatch: ${articleIds.size} English articles, ${japaneseArticleIds.size} Japanese articles`);
 }
 
 for (const key of ["topics", "subcategories", "areas", "itineraries", "planning", "glossary"]) {

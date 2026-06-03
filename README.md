@@ -79,13 +79,21 @@ node ".\scripts\validate-site.mjs"
 
 The validation script checks generated HTML links, anchors, assets, `hreflang`, JSON-LD, feeds, sitemap alternates, and frontend JavaScript syntax.
 
+Article media can be checked separately:
+
+```powershell
+node ".\scripts\validate-assets.mjs"
+```
+
+This verifies that each article image exists, has the expected `640`, `1024`, and `1536` WebP variants, and carries useful alt text.
+
 ## Maintenance Check
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check-site.ps1"
 ```
 
-The maintenance check regenerates the site, runs validation, then runs `scripts/site-health.mjs` and `scripts/audit-ops.mjs`. The health check catches duplicate canonicals, missing generated files, sitemap count drift, stale article source dates, category mismatches, orphaned Japanese translations, and basic CSS/JS/HTML size budgets. The operational audit adds numbered checks 36-100 across freshness calendars, i18n parity, media, social metadata, JSON-LD, feeds, robots, deployment headers, page fundamentals, accessibility landmarks, hreflang, sitemap targets, and article data chronology.
+The maintenance check regenerates the site, runs validation, checks article media assets, then runs `scripts/site-health.mjs` and `scripts/audit-ops.mjs`. The health check catches duplicate canonicals, missing generated files, sitemap count drift, stale article source dates, category mismatches, orphaned Japanese translations, possible mojibake, and basic CSS/JS/HTML size budgets. The operational audit adds numbered checks 36-102 across freshness calendars, i18n parity, media, social metadata, JSON-LD, feeds, robots, deployment headers, page fundamentals, accessibility landmarks, hreflang, sitemap targets, legal pages, and article data chronology.
 
 Equivalent npm shortcuts are also available:
 
@@ -93,6 +101,7 @@ Equivalent npm shortcuts are also available:
 npm run generate
 npm run validate
 npm run validate:data
+npm run validate:assets
 npm run health
 npm run audit:ops
 npm run report
@@ -107,6 +116,18 @@ npm run serve
 
 `npm run report` prints a compact maintenance report for review. `npm run visual` captures desktop and mobile screenshots for representative English and Japanese pages into `screenshots/visual-check/`; run `npm run serve` first if a local server is not already running.
 `npm run split:content` refreshes the category-split article files from the canonical JSON files. `npm run new:article` creates a local draft article template in `content/articles/`.
+
+## Local Server
+
+```powershell
+npm run serve
+```
+
+The local server is implemented in `scripts/Start-LocalServer.ps1`. It binds to `127.0.0.1`, serves `index.html` or `tabi-mockup.html` as the directory default, exposes `/healthz`, logs to `local-server.log`, and automatically searches nearby ports if `4200` is already in use.
+
+## CI Pipeline
+
+GitHub Actions runs `npm run check` on pull requests, pushes to `main`, and pushes to `codex/**` branches. The workflow also prints the maintenance report after checks pass.
 
 ## Editorial Algorithms
 

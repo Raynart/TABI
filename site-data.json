@@ -1,890 +1,950 @@
 {
-    "topics":  [
-                   {
-                       "slug":  "kyoto-travel",
-                       "title":  "Kyoto Travel",
-                       "description":  "Quiet shrines, ryokan, craft, and routes for seeing Kyoto with more care.",
-                       "tags":  [
-                                    "kyoto",
-                                    "shrines",
-                                    "ryokan",
-                                    "craft",
-                                    "wabi-sabi",
-                                    "kintsugi"
-                                ],
-                       "categories":  [
-                                          "travel-guide",
-                                          "culture"
-                                      ]
-                   },
-                   {
-                       "slug":  "first-time-japan",
-                       "title":  "First-Time Japan",
-                       "description":  "Practical routes, food confidence, and gentle planning for a first trip to Japan.",
-                       "tags":  [
-                                    "first-time",
-                                    "itinerary",
-                                    "tokyo",
-                                    "kyoto",
-                                    "osaka",
-                                    "language",
-                                    "travel-tips"
-                                ],
-                       "categories":  [
-                                          "travel-guide",
-                                          "food"
-                                      ]
-                   },
-                   {
-                       "slug":  "japanese-food",
-                       "title":  "Japanese Food",
-                       "description":  "Menus, alleys, counters, convenience-store saves, and the meals that shape a trip.",
-                       "tags":  [
-                                    "food",
-                                    "osaka",
-                                    "tokyo",
-                                    "izakaya",
-                                    "menus",
-                                    "konbini",
-                                    "street-food"
-                                ],
-                       "categories":  [
-                                          "food"
-                                      ]
-                   },
-                   {
-                       "slug":  "shopping-in-japan",
-                       "title":  "Shopping in Japan",
-                       "description":  "Useful, packable, and culturally thoughtful things worth bringing home.",
-                       "tags":  [
-                                    "shopping",
-                                    "souvenirs",
-                                    "kitchen-knives",
-                                    "matcha",
-                                    "drugstore",
-                                    "yukata",
-                                    "skincare"
-                                ],
-                       "categories":  [
-                                          "things-to-buy"
-                                      ]
-                   },
-                   {
-                       "slug":  "slow-travel",
-                       "title":  "Slow Travel",
-                       "description":  "Forests, islands, walking routes, and quieter places where Japan has room to breathe.",
-                       "tags":  [
-                                    "slow-travel",
-                                    "hidden-gems",
-                                    "yakushima",
-                                    "setouchi",
-                                    "walking",
-                                    "forest",
-                                    "islands"
-                                ],
-                       "categories":  [
-                                          "hidden-gems"
-                                      ]
-                   }
-               ],
-    "subcategories":  [
-                          {
-                              "slug":  "first-time-routes",
-                              "title":  "First-Time Routes",
-                              "description":  "Classic Japan routes with more breathing room, clearer pacing, and fewer fragile decisions.",
-                              "category":  "travel-guide",
-                              "tags":  [
-                                           "first-time",
-                                           "itinerary",
-                                           "planning",
-                                           "travel-tips"
-                                       ],
-                              "categories":  [
-                                                 "travel-guide"
-                                             ]
-                          },
-                          {
-                              "slug":  "transport-slow-rail",
-                              "title":  "Transport \u0026 Slow Rail",
-                              "description":  "Rail days, local trains, transfers, and slower movement that makes the trip feel grounded.",
-                              "category":  "travel-guide",
-                              "tags":  [
-                                           "slow-travel",
-                                           "travel-tips",
-                                           "walking",
-                                           "planning"
-                                       ],
-                              "categories":  [
-                                                 "travel-guide"
-                                             ]
-                          },
-                          {
-                              "slug":  "seasonal-weather-plans",
-                              "title":  "Seasonal \u0026 Weather Plans",
-                              "description":  "Rain, flowers, heat, seasonal timing, and backup days that still feel intentional.",
-                              "category":  "travel-guide",
-                              "tags":  [
-                                           "spring",
-                                           "hanami",
-                                           "quiet-travel",
-                                           "travel-tips"
-                                       ],
-                              "categories":  [
-                                                 "travel-guide",
-                                                 "culture"
-                                             ]
-                          },
-                          {
-                              "slug":  "ryokan-onsen",
-                              "title":  "Ryokan \u0026 Onsen",
-                              "description":  "Bathing, inns, etiquette, and overnight stays that require cultural context before booking.",
-                              "category":  "travel-guide",
-                              "tags":  [
-                                           "ryokan",
-                                           "where-to-stay",
-                                           "local-customs",
-                                           "first-time"
-                                       ],
-                              "categories":  [
-                                                 "travel-guide"
-                                             ]
-                          },
-                          {
-                              "slug":  "mountain-hiking-routes",
-                              "title":  "Mountain \u0026 Hiking Routes",
-                              "description":  "Mountain paths, pilgrimage walks, and outdoor days that need realistic pacing.",
-                              "category":  "travel-guide",
-                              "tags":  [
-                                           "hiking",
-                                           "mount-fuji",
-                                           "walking",
-                                           "forest"
-                                       ],
-                              "categories":  [
-                                                 "travel-guide"
-                                             ]
-                          },
-                          {
-                              "slug":  "craft-studios",
-                              "title":  "Craft Studios",
-                              "description":  "Kintsugi, gold leaf, ceramics, textiles, and workshops where materials carry the story.",
-                              "category":  "culture",
-                              "tags":  [
-                                           "craft",
-                                           "kintsugi",
-                                           "ceramics",
-                                           "design"
-                                       ],
-                              "categories":  [
-                                                 "culture"
-                                             ]
-                          },
-                          {
-                              "slug":  "local-customs-etiquette",
-                              "title":  "Local Customs \u0026 Etiquette",
-                              "description":  "Everyday manners, bathing, ordering, gift giving, and quiet rules that make travel smoother.",
-                              "category":  "culture",
-                              "tags":  [
-                                           "local-customs",
-                                           "language",
-                                           "travel-tips",
-                                           "first-time"
-                                       ],
-                              "categories":  [
-                                                 "culture"
-                                             ]
-                          },
-                          {
-                              "slug":  "aesthetics-philosophy",
-                              "title":  "Aesthetics \u0026 Philosophy",
-                              "description":  "Wabi-sabi, repair, seasonality, and the ideas behind how Japan is seen and made.",
-                              "category":  "culture",
-                              "tags":  [
-                                           "wabi-sabi",
-                                           "philosophy",
-                                           "aesthetics",
-                                           "design"
-                                       ],
-                              "categories":  [
-                                                 "culture"
-                                             ]
-                          },
-                          {
-                              "slug":  "temples-shrines",
-                              "title":  "Temples \u0026 Shrines",
-                              "description":  "Sacred places, etiquette, quiet routes, and the difference between seeing and intruding.",
-                              "category":  "culture",
-                              "tags":  [
-                                           "shrines",
-                                           "kyoto",
-                                           "heritage",
-                                           "quiet-travel"
-                                       ],
-                              "categories":  [
-                                                 "culture",
-                                                 "travel-guide"
-                                             ]
-                          },
-                          {
-                              "slug":  "heritage-walks",
-                              "title":  "Heritage Walks",
-                              "description":  "Post towns, old roads, historic districts, and routes where walking is the main lens.",
-                              "category":  "culture",
-                              "tags":  [
-                                           "heritage",
-                                           "walking",
-                                           "nakasendo",
-                                           "kiso-valley"
-                                       ],
-                              "categories":  [
-                                                 "culture",
-                                                 "hidden-gems"
-                                             ]
-                          },
-                          {
-                              "slug":  "city-food-routes",
-                              "title":  "City Food Routes",
-                              "description":  "Food-led days through Osaka, Tokyo, markets, counters, and neighborhoods.",
-                              "category":  "food",
-                              "tags":  [
-                                           "food",
-                                           "osaka",
-                                           "street-food",
-                                           "local-food"
-                                       ],
-                              "categories":  [
-                                                 "food"
-                                             ]
-                          },
-                          {
-                              "slug":  "izakaya-nightlife",
-                              "title":  "Izakaya \u0026 Nightlife",
-                              "description":  "Counter seats, small plates, otoshi, drinking streets, and local night rhythm.",
-                              "category":  "food",
-                              "tags":  [
-                                           "izakaya",
-                                           "nightlife",
-                                           "tokyo",
-                                           "local-food"
-                                       ],
-                              "categories":  [
-                                                 "food"
-                                             ]
-                          },
-                          {
-                              "slug":  "ordering-guides",
-                              "title":  "Ordering Guides",
-                              "description":  "Menus, ticket machines, allergy notes, food words, and confidence at the counter.",
-                              "category":  "food",
-                              "tags":  [
-                                           "menus",
-                                           "language",
-                                           "first-time",
-                                           "food"
-                                       ],
-                              "categories":  [
-                                                 "food"
-                                             ]
-                          },
-                          {
-                              "slug":  "konbini-everyday-food",
-                              "title":  "Konbini \u0026 Everyday Food",
-                              "description":  "Convenience-store breakfasts, quick saves, train snacks, and low-stress food choices.",
-                              "category":  "food",
-                              "tags":  [
-                                           "konbini",
-                                           "breakfast",
-                                           "budget",
-                                           "travel-tips"
-                                       ],
-                              "categories":  [
-                                                 "food"
-                                             ]
-                          },
-                          {
-                              "slug":  "ekiben-rail-food",
-                              "title":  "Ekiben \u0026 Rail Food",
-                              "description":  "Station bentos, regional train meals, and food that belongs to the route.",
-                              "category":  "food",
-                              "tags":  [
-                                           "food",
-                                           "local-food",
-                                           "travel-tips",
-                                           "budget"
-                                       ],
-                              "categories":  [
-                                                 "food"
-                                             ]
-                          },
-                          {
-                              "slug":  "depachika-food-halls",
-                              "title":  "Depachika Food Halls",
-                              "description":  "Department-store basements, sweets, deli counters, food gifts, and closing-time browsing.",
-                              "category":  "food",
-                              "tags":  [
-                                           "food",
-                                           "shopping",
-                                           "souvenirs",
-                                           "local-food"
-                                       ],
-                              "categories":  [
-                                                 "food"
-                                             ]
-                          },
-                          {
-                              "slug":  "kitchen-tools",
-                              "title":  "Kitchen Tools",
-                              "description":  "Knives, cooking tools, care notes, and useful things that deserve luggage space.",
-                              "category":  "things-to-buy",
-                              "tags":  [
-                                           "kitchen-knives",
-                                           "shopping",
-                                           "souvenirs",
-                                           "craft"
-                                       ],
-                              "categories":  [
-                                                 "things-to-buy"
-                                             ]
-                          },
-                          {
-                              "slug":  "tea-matcha",
-                              "title":  "Tea \u0026 Matcha",
-                              "description":  "Tea, matcha grades, sweets, storage, and buying choices that survive the trip home.",
-                              "category":  "things-to-buy",
-                              "tags":  [
-                                           "matcha",
-                                           "tea",
-                                           "souvenirs",
-                                           "shopping"
-                                       ],
-                              "categories":  [
-                                                 "things-to-buy"
-                                             ]
-                          },
-                          {
-                              "slug":  "beauty-drugstore",
-                              "title":  "Beauty \u0026 Drugstore",
-                              "description":  "Skincare, daily goods, drugstore browsing, and useful low-risk purchases.",
-                              "category":  "things-to-buy",
-                              "tags":  [
-                                           "drugstore",
-                                           "skincare",
-                                           "shopping",
-                                           "souvenirs"
-                                       ],
-                              "categories":  [
-                                                 "things-to-buy"
-                                             ]
-                          },
-                          {
-                              "slug":  "textiles-clothing",
-                              "title":  "Textiles \u0026 Clothing",
-                              "description":  "Yukata, tenugui, cloth, patterns, fit, and culturally grounded wearable souvenirs.",
-                              "category":  "things-to-buy",
-                              "tags":  [
-                                           "yukata",
-                                           "fashion",
-                                           "souvenirs",
-                                           "craft"
-                                       ],
-                              "categories":  [
-                                                 "things-to-buy"
-                                             ]
-                          },
-                          {
-                              "slug":  "stationery-paper",
-                              "title":  "Stationery \u0026 Paper",
-                              "description":  "Notebooks, pens, washi, paper goods, and small tools that remain useful after travel.",
-                              "category":  "things-to-buy",
-                              "tags":  [
-                                           "shopping",
-                                           "souvenirs",
-                                           "design",
-                                           "craft"
-                                       ],
-                              "categories":  [
-                                                 "things-to-buy"
-                                             ]
-                          },
-                          {
-                              "slug":  "coastal-islands",
-                              "title":  "Coastal Towns \u0026 Islands",
-                              "description":  "Setouchi, fishing towns, ferries, sea walls, and slower days shaped by water.",
-                              "category":  "hidden-gems",
-                              "tags":  [
-                                           "islands",
-                                           "setouchi",
-                                           "slow-travel",
-                                           "local-food"
-                                       ],
-                              "categories":  [
-                                                 "hidden-gems"
-                                             ]
-                          },
-                          {
-                              "slug":  "forests-and-islands",
-                              "title":  "Forests \u0026 Remote Nature",
-                              "description":  "Yakushima, moss, rain, forests, and nature routes where restraint matters.",
-                              "category":  "hidden-gems",
-                              "tags":  [
-                                           "forest",
-                                           "yakushima",
-                                           "hiking",
-                                           "slow-travel"
-                                       ],
-                              "categories":  [
-                                                 "hidden-gems"
-                                             ]
-                          },
-                          {
-                              "slug":  "pilgrimage-villages",
-                              "title":  "Pilgrimage Villages",
-                              "description":  "Kumano-style villages, old paths, inns, baths, and routes that should not be rushed.",
-                              "category":  "hidden-gems",
-                              "tags":  [
-                                           "hiking",
-                                           "heritage",
-                                           "forest",
-                                           "slow-travel"
-                                       ],
-                              "categories":  [
-                                                 "hidden-gems"
-                                             ]
-                          }
-                      ],
-    "areas":  [
-                  {
-                      "slug":  "tokyo",
-                      "title":  "Tokyo",
-                      "description":  "Neighborhood food, shopping, nightlife, and low-friction first-trip decisions.",
-                      "image":  "/assets/images/osaka-food-alley.png",
-                      "tags":  [
-                                   "tokyo",
-                                   "izakaya",
-                                   "nightlife",
-                                   "yukata",
-                                   "shopping"
-                               ],
-                      "categories":  [
-                                         "food",
-                                         "things-to-buy",
-                                         "travel-guide"
-                                     ],
-                      "neighborhoods":  [
-                                            {
-                                                "name":  "Yanaka",
-                                                "note":  "Slow streets, small shops, and first-day wandering."
-                                            },
-                                            {
-                                                "name":  "Shibuya",
-                                                "note":  "Big-city energy that works best when paired with a quieter pocket."
-                                            },
-                                            {
-                                                "name":  "Asakusa",
-                                                "note":  "Useful for craft, tradition, and easy transit links."
-                                            }
-                                        ]
-                  },
-                  {
-                      "slug":  "kyoto",
-                      "title":  "Kyoto",
-                      "description":  "Shrines, ryokan, craft, tea, and routes that reward early starts.",
-                      "image":  "/assets/images/kyoto-shrine-hero.png",
-                      "tags":  [
-                                   "kyoto",
-                                   "shrines",
-                                   "ryokan",
-                                   "craft",
-                                   "matcha",
-                                   "kintsugi",
-                                   "wabi-sabi"
-                               ],
-                      "categories":  [
-                                         "travel-guide",
-                                         "culture",
-                                         "things-to-buy"
-                                     ],
-                      "neighborhoods":  [
-                                            {
-                                                "name":  "Northern Kyoto",
-                                                "note":  "Quieter temples, hills, and slower transit days."
-                                            },
-                                            {
-                                                "name":  "Demachiyanagi",
-                                                "note":  "A good edge for cafes, riverside time, and local rhythm."
-                                            },
-                                            {
-                                                "name":  "Higashiyama",
-                                                "note":  "Best early or late, with careful pacing."
-                                            }
-                                        ]
-                  },
-                  {
-                      "slug":  "osaka",
-                      "title":  "Osaka",
-                      "description":  "Food-first planning, markets, alleys, and neighborhoods beyond the obvious photo stop.",
-                      "image":  "/assets/images/osaka-food-alley.png",
-                      "tags":  [
-                                   "osaka",
-                                   "street-food",
-                                   "nightlife",
-                                   "food",
-                                   "itinerary"
-                               ],
-                      "categories":  [
-                                         "food",
-                                         "travel-guide"
-                                     ],
-                      "neighborhoods":  [
-                                            {
-                                                "name":  "Namba",
-                                                "note":  "A practical base for first nights and late food."
-                                            },
-                                            {
-                                                "name":  "Nakazakicho",
-                                                "note":  "Cafes, small shops, and a slower counterpoint to Dotonbori."
-                                            },
-                                            {
-                                                "name":  "Tenma",
-                                                "note":  "Compact food energy that rewards small rounds."
-                                            }
-                                        ]
-                  },
-                  {
-                      "slug":  "yakushima",
-                      "title":  "Yakushima",
-                      "description":  "Ancient forest, rain, coastal villages, and slower island planning.",
-                      "image":  "/assets/images/yakushima-forest.png",
-                      "tags":  [
-                                   "yakushima",
-                                   "forest",
-                                   "hiking",
-                                   "islands",
-                                   "slow-travel"
-                               ],
-                      "categories":  [
-                                         "hidden-gems"
-                                     ],
-                      "neighborhoods":  [
-                                            {
-                                                "name":  "Forest trails",
-                                                "note":  "Choose one major route and leave room for weather."
-                                            },
-                                            {
-                                                "name":  "Coastal villages",
-                                                "note":  "Useful for scale, meals, and recovery time."
-                                            },
-                                            {
-                                                "name":  "Short walks",
-                                                "note":  "Good backup plans when rain changes the day."
-                                            }
-                                        ]
-                  },
-                  {
-                      "slug":  "setouchi",
-                      "title":  "Setouchi",
-                      "description":  "Island art, ferries, sea air, and slow travel between small ports.",
-                      "image":  "/assets/images/yakushima-forest.png",
-                      "tags":  [
-                                   "setouchi",
-                                   "islands",
-                                   "art",
-                                   "slow-travel"
-                               ],
-                      "categories":  [
-                                         "hidden-gems",
-                                         "culture"
-                                     ],
-                      "neighborhoods":  [
-                                            {
-                                                "name":  "Museum islands",
-                                                "note":  "Plan around ferry rhythm, not a crowded checklist."
-                                            },
-                                            {
-                                                "name":  "Harbor towns",
-                                                "note":  "Good for ordinary time between art stops."
-                                            },
-                                            {
-                                                "name":  "Sunset routes",
-                                                "note":  "Worth protecting when the timetable allows."
-                                            }
-                                        ]
-                  }
-              ],
-    "itineraries":  [
-                        {
-                            "slug":  "three-days",
-                            "title":  "3 Days in Japan",
-                            "duration":  "3 days",
-                            "pace":  "Focused",
-                            "description":  "A tight route for travelers adding Japan to a larger trip or using Tokyo as a short gateway.",
-                            "tags":  [
-                                         "tokyo",
-                                         "food",
-                                         "first-time",
-                                         "shopping"
-                                     ],
-                            "categories":  [
-                                               "travel-guide",
-                                               "food",
-                                               "things-to-buy"
-                                           ],
-                            "steps":  [
-                                          {
-                                              "label":  "Day 1",
-                                              "title":  "Arrive gently",
-                                              "body":  "Stay in one Tokyo neighborhood, solve cash, transit, and first meal decisions, then stop early."
-                                          },
-                                          {
-                                              "label":  "Day 2",
-                                              "title":  "Food and texture",
-                                              "body":  "Pair a market or old street with one planned dinner and a low-pressure shopping stop."
-                                          },
-                                          {
-                                              "label":  "Day 3",
-                                              "title":  "One final loop",
-                                              "body":  "Use the last morning for a compact route near your departure station or airport line."
-                                          }
-                                      ]
-                        },
-                        {
-                            "slug":  "seven-days",
-                            "title":  "7 Days in Japan",
-                            "duration":  "7 days",
-                            "pace":  "Balanced",
-                            "description":  "A first-timer plan that keeps Tokyo and Kyoto readable without turning every day into transit.",
-                            "tags":  [
-                                         "tokyo",
-                                         "kyoto",
-                                         "first-time",
-                                         "itinerary",
-                                         "shrines",
-                                         "food"
-                                     ],
-                            "categories":  [
-                                               "travel-guide",
-                                               "culture",
-                                               "food"
-                                           ],
-                            "steps":  [
-                                          {
-                                              "label":  "Days 1-3",
-                                              "title":  "Tokyo base",
-                                              "body":  "Use Tokyo for food confidence, practical setup, and one quiet neighborhood day."
-                                          },
-                                          {
-                                              "label":  "Days 4-6",
-                                              "title":  "Kyoto slower",
-                                              "body":  "Move early, build around shrines and craft, and avoid overloading temple days."
-                                          },
-                                          {
-                                              "label":  "Day 7",
-                                              "title":  "Return cleanly",
-                                              "body":  "Keep the final day close to your departure route and finish shopping before luggage becomes a problem."
-                                          }
-                                      ]
-                        },
-                        {
-                            "slug":  "ten-days",
-                            "title":  "10 Days in Japan",
-                            "duration":  "10 days",
-                            "pace":  "Classic",
-                            "description":  "The classic Tokyo, Kyoto, and Osaka route with more space for neighborhoods and food.",
-                            "tags":  [
-                                         "itinerary",
-                                         "tokyo",
-                                         "kyoto",
-                                         "osaka",
-                                         "food",
-                                         "shopping"
-                                     ],
-                            "categories":  [
-                                               "travel-guide",
-                                               "food",
-                                               "things-to-buy"
-                                           ],
-                            "steps":  [
-                                          {
-                                              "label":  "Days 1-3",
-                                              "title":  "Tokyo",
-                                              "body":  "Start with food, transit confidence, and one older neighborhood before the trip speeds up."
-                                          },
-                                          {
-                                              "label":  "Days 4-6",
-                                              "title":  "Kyoto",
-                                              "body":  "Anchor mornings with quiet places and afternoons with craft, tea, or riverside time."
-                                          },
-                                          {
-                                              "label":  "Days 7-9",
-                                              "title":  "Osaka",
-                                              "body":  "Make food the structure and let neighborhoods fill the gaps."
-                                          },
-                                          {
-                                              "label":  "Day 10",
-                                              "title":  "Departure buffer",
-                                              "body":  "Protect time for packing, gifts, and one simple final meal."
-                                          }
-                                      ]
-                        },
-                        {
-                            "slug":  "fourteen-days",
-                            "title":  "14 Days in Japan",
-                            "duration":  "14 days",
-                            "pace":  "Slow extension",
-                            "description":  "A longer plan that adds forest, islands, or walking routes after the classic first-trip core.",
-                            "tags":  [
-                                         "slow-travel",
-                                         "yakushima",
-                                         "setouchi",
-                                         "walking",
-                                         "islands",
-                                         "kyoto"
-                                     ],
-                            "categories":  [
-                                               "hidden-gems",
-                                               "travel-guide",
-                                               "culture"
-                                           ],
-                            "steps":  [
-                                          {
-                                              "label":  "Days 1-6",
-                                              "title":  "First-trip core",
-                                              "body":  "Use Tokyo and Kyoto for orientation, food, shrines, and practical shopping."
-                                          },
-                                          {
-                                              "label":  "Days 7-10",
-                                              "title":  "Choose one extension",
-                                              "body":  "Pick Yakushima, Setouchi, Fuji, or Kiso Valley instead of collecting all of them."
-                                          },
-                                          {
-                                              "label":  "Days 11-13",
-                                              "title":  "Recover the rhythm",
-                                              "body":  "Return through Osaka or Tokyo with space for laundry, food, and lower-pressure wandering."
-                                          },
-                                          {
-                                              "label":  "Day 14",
-                                              "title":  "Leave deliberately",
-                                              "body":  "Use the final day for calm logistics rather than a new major sight."
-                                          }
-                                      ]
-                        }
-                    ],
-    "planning":  [
-                     {
-                         "slug":  "japan-travel-checklist",
-                         "title":  "Japan Travel Checklist",
-                         "description":  "A practical pre-trip checklist for first-time Japan travelers, designed to avoid last-minute friction.",
-                         "kicker":  "Before You Fly",
-                         "blocks":  [
-                                        {
-                                            "heading":  "Two weeks before",
-                                            "items":  [
-                                                          "Confirm passport validity and entry requirements from official sources.",
-                                                          "Reserve any must-have stays or restaurants.",
-                                                          "Choose a communication plan and save offline maps."
-                                                      ]
-                                        },
-                                        {
-                                            "heading":  "One week before",
-                                            "items":  [
-                                                          "Add transit cards, key addresses, and hotel names to your phone.",
-                                                          "Check luggage forwarding needs and pack a small day bag.",
-                                                          "Prepare written allergy or medication notes if relevant."
-                                                      ]
-                                        },
-                                        {
-                                            "heading":  "First day in Japan",
-                                            "items":  [
-                                                          "Withdraw or prepare cash for small shops.",
-                                                          "Confirm the airport-to-hotel route before leaving arrivals.",
-                                                          "Eat simply and sleep early enough to protect the next day."
-                                                      ]
-                                        }
-                                    ]
-                     },
-                     {
-                         "slug":  "budget-transport-connectivity",
-                         "title":  "Budget, Transport, and Connectivity",
-                         "description":  "A local-first planning page for money, trains, luggage, and phone access without relying on live external feeds.",
-                         "kicker":  "Trip Basics",
-                         "blocks":  [
-                                        {
-                                            "heading":  "Money",
-                                            "items":  [
-                                                          "Carry a mix of cards and cash because small restaurants and rural stops can still be cash-friendly.",
-                                                          "Use price ranges as planning cues, then confirm current fares and fees before travel.",
-                                                          "Keep tax-free shopping sealed only when it fits your actual travel plan."
-                                                      ]
-                                        },
-                                        {
-                                            "heading":  "Transport",
-                                            "items":  [
-                                                          "Build days around one or two anchors instead of maximum transfers.",
-                                                          "Use station-area stays when the route has several city changes.",
-                                                          "Treat luggage forwarding as a comfort tool on multi-city routes."
-                                                      ]
-                                        },
-                                        {
-                                            "heading":  "Connectivity",
-                                            "items":  [
-                                                          "Choose eSIM, SIM, or pocket Wi-Fi based on device compatibility and group size.",
-                                                          "Save hotel addresses, train routes, and emergency notes offline.",
-                                                          "Keep a battery plan for long food, shrine, and walking days."
-                                                      ]
-                                        }
-                                    ]
-                     }
-                 ],
-    "glossary":  [
-                     {
-                         "term":  "Otoshi",
-                         "category":  "Food",
-                         "definition":  "A small starter served at many izakaya as part of a seating charge."
-                     },
-                     {
-                         "term":  "Shotengai",
-                         "category":  "City",
-                         "definition":  "A local shopping arcade or street, often useful for everyday food and small shops."
-                     },
-                     {
-                         "term":  "Ryokan",
-                         "category":  "Stay",
-                         "definition":  "A Japanese-style inn, usually shaped by tatami rooms, baths, meal timing, and house rules."
-                     },
-                     {
-                         "term":  "Onsen",
-                         "category":  "Stay",
-                         "definition":  "A hot spring bath with etiquette around washing, towels, tattoos, and quiet behavior."
-                     },
-                     {
-                         "term":  "Tax-free",
-                         "category":  "Shopping",
-                         "definition":  "A visitor shopping process that may require sealed bags and passport handling."
-                     },
-                     {
-                         "term":  "Konbini",
-                         "category":  "Food",
-                         "definition":  "A convenience store, useful for breakfasts, tickets, ATMs, and small travel fixes."
-                     },
-                     {
-                         "term":  "IC card",
-                         "category":  "Transport",
-                         "definition":  "A stored-value transit card or mobile wallet setup used for many trains, buses, and small purchases."
-                     },
-                     {
-                         "term":  "Takkyubin",
-                         "category":  "Logistics",
-                         "definition":  "Luggage delivery service that can make multi-city routes easier."
-                     },
-                     {
-                         "term":  "Kaiseki",
-                         "category":  "Food",
-                         "definition":  "A seasonal multi-course meal often associated with ryokan and refined restaurants."
-                     },
-                     {
-                         "term":  "Shukubo",
-                         "category":  "Stay",
-                         "definition":  "Temple lodging, usually simple and rule-driven, with a focus on quiet and routine."
-                     }
-                 ]
+  "topics": [
+    {
+      "slug": "kyoto-travel",
+      "title": "Kyoto Travel",
+      "description": "Quiet shrines, ryokan, craft, and routes for seeing Kyoto with more care.",
+      "tags": [
+        "kyoto",
+        "shrines",
+        "ryokan",
+        "craft",
+        "wabi-sabi",
+        "kintsugi"
+      ],
+      "categories": [
+        "travel-guide",
+        "culture"
+      ]
+    },
+    {
+      "slug": "first-time-japan",
+      "title": "First-Time Japan",
+      "description": "Practical routes, food confidence, and gentle planning for a first trip to Japan.",
+      "tags": [
+        "first-time",
+        "itinerary",
+        "tokyo",
+        "kyoto",
+        "osaka",
+        "language",
+        "travel-tips"
+      ],
+      "categories": [
+        "travel-guide",
+        "food"
+      ]
+    },
+    {
+      "slug": "japanese-food",
+      "title": "Japanese Food",
+      "description": "Menus, alleys, counters, convenience-store saves, and the meals that shape a trip.",
+      "tags": [
+        "food",
+        "osaka",
+        "tokyo",
+        "izakaya",
+        "menus",
+        "konbini",
+        "street-food"
+      ],
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "slug": "shopping-in-japan",
+      "title": "Shopping in Japan",
+      "description": "Useful, packable, and culturally thoughtful things worth bringing home.",
+      "tags": [
+        "shopping",
+        "souvenirs",
+        "kitchen-knives",
+        "matcha",
+        "drugstore",
+        "yukata",
+        "skincare"
+      ],
+      "categories": [
+        "things-to-buy"
+      ]
+    },
+    {
+      "slug": "slow-travel",
+      "title": "Slow Travel",
+      "description": "Forests, islands, walking routes, and quieter places where Japan has room to breathe.",
+      "tags": [
+        "slow-travel",
+        "hidden-gems",
+        "yakushima",
+        "setouchi",
+        "walking",
+        "forest",
+        "islands"
+      ],
+      "categories": [
+        "hidden-gems"
+      ]
+    }
+  ],
+  "subcategories": [
+    {
+      "slug": "first-time-routes",
+      "title": "First-Time Routes",
+      "description": "Classic Japan routes with more breathing room, clearer pacing, and fewer fragile decisions.",
+      "category": "travel-guide",
+      "tags": [
+        "first-time",
+        "itinerary",
+        "planning",
+        "travel-tips"
+      ],
+      "categories": [
+        "travel-guide"
+      ]
+    },
+    {
+      "slug": "transport-slow-rail",
+      "title": "Transport & Slow Rail",
+      "description": "Rail days, local trains, transfers, and slower movement that makes the trip feel grounded.",
+      "category": "travel-guide",
+      "tags": [
+        "slow-travel",
+        "travel-tips",
+        "walking",
+        "planning"
+      ],
+      "categories": [
+        "travel-guide"
+      ]
+    },
+    {
+      "slug": "seasonal-weather-plans",
+      "title": "Seasonal & Weather Plans",
+      "description": "Rain, flowers, heat, seasonal timing, and backup days that still feel intentional.",
+      "category": "travel-guide",
+      "tags": [
+        "spring",
+        "hanami",
+        "quiet-travel",
+        "travel-tips"
+      ],
+      "categories": [
+        "travel-guide",
+        "culture"
+      ]
+    },
+    {
+      "slug": "ryokan-onsen",
+      "title": "Ryokan & Onsen",
+      "description": "Bathing, inns, etiquette, and overnight stays that require cultural context before booking.",
+      "category": "travel-guide",
+      "tags": [
+        "ryokan",
+        "where-to-stay",
+        "local-customs",
+        "first-time"
+      ],
+      "categories": [
+        "travel-guide",
+        "stays"
+      ]
+    },
+    {
+      "slug": "mountain-hiking-routes",
+      "title": "Mountain & Hiking Routes",
+      "description": "Mountain paths, pilgrimage walks, and outdoor days that need realistic pacing.",
+      "category": "travel-guide",
+      "tags": [
+        "hiking",
+        "mount-fuji",
+        "walking",
+        "forest"
+      ],
+      "categories": [
+        "travel-guide",
+        "nature-outdoors"
+      ]
+    },
+    {
+      "slug": "craft-studios",
+      "title": "Craft Studios",
+      "description": "Kintsugi, gold leaf, ceramics, textiles, and workshops where materials carry the story.",
+      "category": "culture",
+      "tags": [
+        "craft",
+        "kintsugi",
+        "ceramics",
+        "design"
+      ],
+      "categories": [
+        "culture",
+        "hidden-gems"
+      ]
+    },
+    {
+      "slug": "local-customs-etiquette",
+      "title": "Local Customs & Etiquette",
+      "description": "Everyday manners, bathing, ordering, gift giving, and quiet rules that make travel smoother.",
+      "category": "culture",
+      "tags": [
+        "local-customs",
+        "language",
+        "travel-tips",
+        "first-time"
+      ],
+      "categories": [
+        "culture"
+      ]
+    },
+    {
+      "slug": "aesthetics-philosophy",
+      "title": "Aesthetics & Philosophy",
+      "description": "Wabi-sabi, repair, seasonality, and the ideas behind how Japan is seen and made.",
+      "category": "culture",
+      "tags": [
+        "wabi-sabi",
+        "philosophy",
+        "aesthetics",
+        "design"
+      ],
+      "categories": [
+        "culture"
+      ]
+    },
+    {
+      "slug": "temples-shrines",
+      "title": "Temples & Shrines",
+      "description": "Sacred places, etiquette, quiet routes, and the difference between seeing and intruding.",
+      "category": "culture",
+      "tags": [
+        "shrines",
+        "kyoto",
+        "heritage",
+        "quiet-travel"
+      ],
+      "categories": [
+        "culture",
+        "travel-guide"
+      ]
+    },
+    {
+      "slug": "heritage-walks",
+      "title": "Heritage Walks",
+      "description": "Post towns, old roads, historic districts, and routes where walking is the main lens.",
+      "category": "culture",
+      "tags": [
+        "heritage",
+        "walking",
+        "nakasendo",
+        "kiso-valley"
+      ],
+      "categories": [
+        "culture",
+        "hidden-gems"
+      ]
+    },
+    {
+      "slug": "city-food-routes",
+      "title": "City Food Routes",
+      "description": "Food-led days through Osaka, Tokyo, markets, counters, and neighborhoods.",
+      "category": "food",
+      "tags": [
+        "food",
+        "osaka",
+        "street-food",
+        "local-food"
+      ],
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "slug": "izakaya-nightlife",
+      "title": "Izakaya & Nightlife",
+      "description": "Counter seats, small plates, otoshi, drinking streets, and local night rhythm.",
+      "category": "food",
+      "tags": [
+        "izakaya",
+        "nightlife",
+        "tokyo",
+        "local-food"
+      ],
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "slug": "ordering-guides",
+      "title": "Ordering Guides",
+      "description": "Menus, ticket machines, allergy notes, food words, and confidence at the counter.",
+      "category": "food",
+      "tags": [
+        "menus",
+        "language",
+        "first-time",
+        "food"
+      ],
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "slug": "konbini-everyday-food",
+      "title": "Konbini & Everyday Food",
+      "description": "Convenience-store breakfasts, quick saves, train snacks, and low-stress food choices.",
+      "category": "food",
+      "tags": [
+        "konbini",
+        "breakfast",
+        "budget",
+        "travel-tips"
+      ],
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "slug": "ekiben-rail-food",
+      "title": "Ekiben & Rail Food",
+      "description": "Station bentos, regional train meals, and food that belongs to the route.",
+      "category": "food",
+      "tags": [
+        "food",
+        "local-food",
+        "travel-tips",
+        "budget"
+      ],
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "slug": "depachika-food-halls",
+      "title": "Depachika Food Halls",
+      "description": "Department-store basements, sweets, deli counters, food gifts, and closing-time browsing.",
+      "category": "food",
+      "tags": [
+        "food",
+        "shopping",
+        "souvenirs",
+        "local-food"
+      ],
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "slug": "kitchen-tools",
+      "title": "Kitchen Tools",
+      "description": "Knives, cooking tools, care notes, and useful things that deserve luggage space.",
+      "category": "things-to-buy",
+      "tags": [
+        "kitchen-knives",
+        "shopping",
+        "souvenirs",
+        "craft"
+      ],
+      "categories": [
+        "things-to-buy"
+      ]
+    },
+    {
+      "slug": "tea-matcha",
+      "title": "Tea & Matcha",
+      "description": "Tea, matcha grades, sweets, storage, and buying choices that survive the trip home.",
+      "category": "things-to-buy",
+      "tags": [
+        "matcha",
+        "tea",
+        "souvenirs",
+        "shopping"
+      ],
+      "categories": [
+        "things-to-buy"
+      ]
+    },
+    {
+      "slug": "beauty-drugstore",
+      "title": "Beauty & Drugstore",
+      "description": "Skincare, daily goods, drugstore browsing, and useful low-risk purchases.",
+      "category": "things-to-buy",
+      "tags": [
+        "drugstore",
+        "skincare",
+        "shopping",
+        "souvenirs"
+      ],
+      "categories": [
+        "things-to-buy"
+      ]
+    },
+    {
+      "slug": "textiles-clothing",
+      "title": "Textiles & Clothing",
+      "description": "Yukata, tenugui, cloth, patterns, fit, and culturally grounded wearable souvenirs.",
+      "category": "things-to-buy",
+      "tags": [
+        "yukata",
+        "fashion",
+        "souvenirs",
+        "craft"
+      ],
+      "categories": [
+        "things-to-buy"
+      ]
+    },
+    {
+      "slug": "stationery-paper",
+      "title": "Stationery & Paper",
+      "description": "Notebooks, pens, washi, paper goods, and small tools that remain useful after travel.",
+      "category": "things-to-buy",
+      "tags": [
+        "shopping",
+        "souvenirs",
+        "design",
+        "craft"
+      ],
+      "categories": [
+        "things-to-buy"
+      ]
+    },
+    {
+      "slug": "coastal-islands",
+      "title": "Coastal Towns & Islands",
+      "description": "Setouchi, fishing towns, ferries, sea walls, and slower days shaped by water.",
+      "category": "hidden-gems",
+      "tags": [
+        "islands",
+        "setouchi",
+        "slow-travel",
+        "local-food"
+      ],
+      "categories": [
+        "hidden-gems",
+        "nature-outdoors"
+      ]
+    },
+    {
+      "slug": "forests-and-islands",
+      "title": "Forests & Remote Nature",
+      "description": "Yakushima, moss, rain, forests, and nature routes where restraint matters.",
+      "category": "hidden-gems",
+      "tags": [
+        "forest",
+        "yakushima",
+        "hiking",
+        "slow-travel"
+      ],
+      "categories": [
+        "hidden-gems",
+        "nature-outdoors"
+      ]
+    },
+    {
+      "slug": "pilgrimage-villages",
+      "title": "Pilgrimage Villages",
+      "description": "Kumano-style villages, old paths, inns, baths, and routes that should not be rushed.",
+      "category": "hidden-gems",
+      "tags": [
+        "hiking",
+        "heritage",
+        "forest",
+        "slow-travel"
+      ],
+      "categories": [
+        "hidden-gems"
+      ]
+    },
+    {
+      "slug": "outdoor-routes",
+      "title": "Outdoor Routes",
+      "description": "Walking, cycling, paddling, and mountain-view routes planned with weather, safety, and slower pacing in mind.",
+      "category": "nature-outdoors",
+      "categories": [
+        "nature-outdoors"
+      ],
+      "tags": [
+        "nature",
+        "walking",
+        "cycling",
+        "waterways",
+        "coast",
+        "mountains",
+        "wildlife",
+        "slow-travel"
+      ]
+    },
+    {
+      "slug": "rural-nature",
+      "title": "Rural Nature",
+      "description": "Rural landscapes, forests, rice terraces, national parks, and responsible ways to experience quieter natural places.",
+      "category": "nature-outdoors",
+      "categories": [
+        "nature-outdoors",
+        "hidden-gems"
+      ],
+      "tags": [
+        "rural-japan",
+        "landscape",
+        "forest",
+        "national-parks",
+        "responsible-travel",
+        "nature"
+      ]
+    },
+    {
+      "slug": "lodging-stays",
+      "title": "Lodging & Stays",
+      "description": "Hotels, minshuku, machiya, farm stays, temple lodgings, and where-to-stay choices that shape the trip itself.",
+      "category": "stays",
+      "categories": [
+        "stays",
+        "travel-guide"
+      ],
+      "tags": [
+        "hotels",
+        "minshuku",
+        "machiya",
+        "farm-stay",
+        "where-to-stay",
+        "stays"
+      ]
+    }
+  ],
+  "areas": [
+    {
+      "slug": "tokyo",
+      "title": "Tokyo",
+      "description": "Neighborhood food, shopping, nightlife, and low-friction first-trip decisions.",
+      "image": "/assets/images/osaka-food-alley.png",
+      "tags": [
+        "tokyo",
+        "izakaya",
+        "nightlife",
+        "yukata",
+        "shopping"
+      ],
+      "categories": [
+        "food",
+        "things-to-buy",
+        "travel-guide"
+      ],
+      "neighborhoods": [
+        {
+          "name": "Yanaka",
+          "note": "Slow streets, small shops, and first-day wandering."
+        },
+        {
+          "name": "Shibuya",
+          "note": "Big-city energy that works best when paired with a quieter pocket."
+        },
+        {
+          "name": "Asakusa",
+          "note": "Useful for craft, tradition, and easy transit links."
+        }
+      ]
+    },
+    {
+      "slug": "kyoto",
+      "title": "Kyoto",
+      "description": "Shrines, ryokan, craft, tea, and routes that reward early starts.",
+      "image": "/assets/images/kyoto-shrine-hero.png",
+      "tags": [
+        "kyoto",
+        "shrines",
+        "ryokan",
+        "craft",
+        "matcha",
+        "kintsugi",
+        "wabi-sabi"
+      ],
+      "categories": [
+        "travel-guide",
+        "culture",
+        "things-to-buy"
+      ],
+      "neighborhoods": [
+        {
+          "name": "Northern Kyoto",
+          "note": "Quieter temples, hills, and slower transit days."
+        },
+        {
+          "name": "Demachiyanagi",
+          "note": "A good edge for cafes, riverside time, and local rhythm."
+        },
+        {
+          "name": "Higashiyama",
+          "note": "Best early or late, with careful pacing."
+        }
+      ]
+    },
+    {
+      "slug": "osaka",
+      "title": "Osaka",
+      "description": "Food-first planning, markets, alleys, and neighborhoods beyond the obvious photo stop.",
+      "image": "/assets/images/osaka-food-alley.png",
+      "tags": [
+        "osaka",
+        "street-food",
+        "nightlife",
+        "food",
+        "itinerary"
+      ],
+      "categories": [
+        "food",
+        "travel-guide"
+      ],
+      "neighborhoods": [
+        {
+          "name": "Namba",
+          "note": "A practical base for first nights and late food."
+        },
+        {
+          "name": "Nakazakicho",
+          "note": "Cafes, small shops, and a slower counterpoint to Dotonbori."
+        },
+        {
+          "name": "Tenma",
+          "note": "Compact food energy that rewards small rounds."
+        }
+      ]
+    },
+    {
+      "slug": "yakushima",
+      "title": "Yakushima",
+      "description": "Ancient forest, rain, coastal villages, and slower island planning.",
+      "image": "/assets/images/yakushima-forest.png",
+      "tags": [
+        "yakushima",
+        "forest",
+        "hiking",
+        "islands",
+        "slow-travel"
+      ],
+      "categories": [
+        "hidden-gems"
+      ],
+      "neighborhoods": [
+        {
+          "name": "Forest trails",
+          "note": "Choose one major route and leave room for weather."
+        },
+        {
+          "name": "Coastal villages",
+          "note": "Useful for scale, meals, and recovery time."
+        },
+        {
+          "name": "Short walks",
+          "note": "Good backup plans when rain changes the day."
+        }
+      ]
+    },
+    {
+      "slug": "setouchi",
+      "title": "Setouchi",
+      "description": "Island art, ferries, sea air, and slow travel between small ports.",
+      "image": "/assets/images/yakushima-forest.png",
+      "tags": [
+        "setouchi",
+        "islands",
+        "art",
+        "slow-travel"
+      ],
+      "categories": [
+        "hidden-gems",
+        "culture"
+      ],
+      "neighborhoods": [
+        {
+          "name": "Museum islands",
+          "note": "Plan around ferry rhythm, not a crowded checklist."
+        },
+        {
+          "name": "Harbor towns",
+          "note": "Good for ordinary time between art stops."
+        },
+        {
+          "name": "Sunset routes",
+          "note": "Worth protecting when the timetable allows."
+        }
+      ]
+    }
+  ],
+  "itineraries": [
+    {
+      "slug": "three-days",
+      "title": "3 Days in Japan",
+      "duration": "3 days",
+      "pace": "Focused",
+      "description": "A tight route for travelers adding Japan to a larger trip or using Tokyo as a short gateway.",
+      "tags": [
+        "tokyo",
+        "food",
+        "first-time",
+        "shopping"
+      ],
+      "categories": [
+        "travel-guide",
+        "food",
+        "things-to-buy"
+      ],
+      "steps": [
+        {
+          "label": "Day 1",
+          "title": "Arrive gently",
+          "body": "Stay in one Tokyo neighborhood, solve cash, transit, and first meal decisions, then stop early."
+        },
+        {
+          "label": "Day 2",
+          "title": "Food and texture",
+          "body": "Pair a market or old street with one planned dinner and a low-pressure shopping stop."
+        },
+        {
+          "label": "Day 3",
+          "title": "One final loop",
+          "body": "Use the last morning for a compact route near your departure station or airport line."
+        }
+      ]
+    },
+    {
+      "slug": "seven-days",
+      "title": "7 Days in Japan",
+      "duration": "7 days",
+      "pace": "Balanced",
+      "description": "A first-timer plan that keeps Tokyo and Kyoto readable without turning every day into transit.",
+      "tags": [
+        "tokyo",
+        "kyoto",
+        "first-time",
+        "itinerary",
+        "shrines",
+        "food"
+      ],
+      "categories": [
+        "travel-guide",
+        "culture",
+        "food"
+      ],
+      "steps": [
+        {
+          "label": "Days 1-3",
+          "title": "Tokyo base",
+          "body": "Use Tokyo for food confidence, practical setup, and one quiet neighborhood day."
+        },
+        {
+          "label": "Days 4-6",
+          "title": "Kyoto slower",
+          "body": "Move early, build around shrines and craft, and avoid overloading temple days."
+        },
+        {
+          "label": "Day 7",
+          "title": "Return cleanly",
+          "body": "Keep the final day close to your departure route and finish shopping before luggage becomes a problem."
+        }
+      ]
+    },
+    {
+      "slug": "ten-days",
+      "title": "10 Days in Japan",
+      "duration": "10 days",
+      "pace": "Classic",
+      "description": "The classic Tokyo, Kyoto, and Osaka route with more space for neighborhoods and food.",
+      "tags": [
+        "itinerary",
+        "tokyo",
+        "kyoto",
+        "osaka",
+        "food",
+        "shopping"
+      ],
+      "categories": [
+        "travel-guide",
+        "food",
+        "things-to-buy"
+      ],
+      "steps": [
+        {
+          "label": "Days 1-3",
+          "title": "Tokyo",
+          "body": "Start with food, transit confidence, and one older neighborhood before the trip speeds up."
+        },
+        {
+          "label": "Days 4-6",
+          "title": "Kyoto",
+          "body": "Anchor mornings with quiet places and afternoons with craft, tea, or riverside time."
+        },
+        {
+          "label": "Days 7-9",
+          "title": "Osaka",
+          "body": "Make food the structure and let neighborhoods fill the gaps."
+        },
+        {
+          "label": "Day 10",
+          "title": "Departure buffer",
+          "body": "Protect time for packing, gifts, and one simple final meal."
+        }
+      ]
+    },
+    {
+      "slug": "fourteen-days",
+      "title": "14 Days in Japan",
+      "duration": "14 days",
+      "pace": "Slow extension",
+      "description": "A longer plan that adds forest, islands, or walking routes after the classic first-trip core.",
+      "tags": [
+        "slow-travel",
+        "yakushima",
+        "setouchi",
+        "walking",
+        "islands",
+        "kyoto"
+      ],
+      "categories": [
+        "hidden-gems",
+        "travel-guide",
+        "culture"
+      ],
+      "steps": [
+        {
+          "label": "Days 1-6",
+          "title": "First-trip core",
+          "body": "Use Tokyo and Kyoto for orientation, food, shrines, and practical shopping."
+        },
+        {
+          "label": "Days 7-10",
+          "title": "Choose one extension",
+          "body": "Pick Yakushima, Setouchi, Fuji, or Kiso Valley instead of collecting all of them."
+        },
+        {
+          "label": "Days 11-13",
+          "title": "Recover the rhythm",
+          "body": "Return through Osaka or Tokyo with space for laundry, food, and lower-pressure wandering."
+        },
+        {
+          "label": "Day 14",
+          "title": "Leave deliberately",
+          "body": "Use the final day for calm logistics rather than a new major sight."
+        }
+      ]
+    }
+  ],
+  "planning": [
+    {
+      "slug": "japan-travel-checklist",
+      "title": "Japan Travel Checklist",
+      "description": "A practical pre-trip checklist for first-time Japan travelers, designed to avoid last-minute friction.",
+      "kicker": "Before You Fly",
+      "blocks": [
+        {
+          "heading": "Two weeks before",
+          "items": [
+            "Confirm passport validity and entry requirements from official sources.",
+            "Reserve any must-have stays or restaurants.",
+            "Choose a communication plan and save offline maps."
+          ]
+        },
+        {
+          "heading": "One week before",
+          "items": [
+            "Add transit cards, key addresses, and hotel names to your phone.",
+            "Check luggage forwarding needs and pack a small day bag.",
+            "Prepare written allergy or medication notes if relevant."
+          ]
+        },
+        {
+          "heading": "First day in Japan",
+          "items": [
+            "Withdraw or prepare cash for small shops.",
+            "Confirm the airport-to-hotel route before leaving arrivals.",
+            "Eat simply and sleep early enough to protect the next day."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "budget-transport-connectivity",
+      "title": "Budget, Transport, and Connectivity",
+      "description": "A local-first planning page for money, trains, luggage, and phone access without relying on live external feeds.",
+      "kicker": "Trip Basics",
+      "blocks": [
+        {
+          "heading": "Money",
+          "items": [
+            "Carry a mix of cards and cash because small restaurants and rural stops can still be cash-friendly.",
+            "Use price ranges as planning cues, then confirm current fares and fees before travel.",
+            "Keep tax-free shopping sealed only when it fits your actual travel plan."
+          ]
+        },
+        {
+          "heading": "Transport",
+          "items": [
+            "Build days around one or two anchors instead of maximum transfers.",
+            "Use station-area stays when the route has several city changes.",
+            "Treat luggage forwarding as a comfort tool on multi-city routes."
+          ]
+        },
+        {
+          "heading": "Connectivity",
+          "items": [
+            "Choose eSIM, SIM, or pocket Wi-Fi based on device compatibility and group size.",
+            "Save hotel addresses, train routes, and emergency notes offline.",
+            "Keep a battery plan for long food, shrine, and walking days."
+          ]
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Otoshi",
+      "category": "Food",
+      "definition": "A small starter served at many izakaya as part of a seating charge."
+    },
+    {
+      "term": "Shotengai",
+      "category": "City",
+      "definition": "A local shopping arcade or street, often useful for everyday food and small shops."
+    },
+    {
+      "term": "Ryokan",
+      "category": "Stay",
+      "definition": "A Japanese-style inn, usually shaped by tatami rooms, baths, meal timing, and house rules."
+    },
+    {
+      "term": "Onsen",
+      "category": "Stay",
+      "definition": "A hot spring bath with etiquette around washing, towels, tattoos, and quiet behavior."
+    },
+    {
+      "term": "Tax-free",
+      "category": "Shopping",
+      "definition": "A visitor shopping process that may require sealed bags and passport handling."
+    },
+    {
+      "term": "Konbini",
+      "category": "Food",
+      "definition": "A convenience store, useful for breakfasts, tickets, ATMs, and small travel fixes."
+    },
+    {
+      "term": "IC card",
+      "category": "Transport",
+      "definition": "A stored-value transit card or mobile wallet setup used for many trains, buses, and small purchases."
+    },
+    {
+      "term": "Takkyubin",
+      "category": "Logistics",
+      "definition": "Luggage delivery service that can make multi-city routes easier."
+    },
+    {
+      "term": "Kaiseki",
+      "category": "Food",
+      "definition": "A seasonal multi-course meal often associated with ryokan and refined restaurants."
+    },
+    {
+      "term": "Shukubo",
+      "category": "Stay",
+      "definition": "Temple lodging, usually simple and rule-driven, with a focus on quiet and routine."
+    }
+  ]
 }

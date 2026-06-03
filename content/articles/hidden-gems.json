@@ -1,73 +1,82 @@
 [
   {
-    "id": "yanaka-nezu-sendagi-slow-walk",
-    "title": "Yanaka, Nezu, and Sendagi for a Slower Tokyo Walk",
-    "summary": "The Yanesen area shows Tokyo at a smaller scale: lanes, temples, old shops, and residential rhythm. It is best treated as a walk, not a checklist.",
+    "id": "kichijoji-inokashira-park-slow-tokyo-day",
+    "title": "Kichijoji and Inokashira Park for a Slower Tokyo Day",
+    "summary": "Kichijoji works when Tokyo needs air, shade, local shopping, and a park-centered pause. The day is strongest when Inokashira Park is the anchor, not just a quick photo stop.",
     "category": "hidden-gems",
     "subcategory": "heritage-walks",
     "tags": [
       "tokyo",
+      "kichijoji",
+      "parks",
       "walking",
-      "quiet-travel",
-      "heritage"
+      "slow-travel"
     ],
-    "publishedAt": "2026-05-31",
-    "readingTime": 6,
+    "publishedAt": "2026-06-01",
+    "readingTime": 5,
     "affiliate": false,
     "featured": false,
-    "image": "/assets/images/tokyo-ueno-park-museums.png",
-    "imageAlt": "A quiet Tokyo park and neighborhood path suggesting a slower Yanaka walk",
+    "image": "/assets/images/tokyo-kichijoji-inokashira-park.png",
+    "imageAlt": "Inokashira Park pond and walking paths in Kichijoji Tokyo with people strolling under trees",
     "sections": [
       {
-        "heading": "Use Yanaka, Nezu, and Sendagi as the anchor",
-        "body": "Official tourism and transport sources identify Yanaka, Nezu, and Sendagi as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+        "heading": "Make the park the anchor",
+        "body": "Inokashira Park gives Kichijoji a different rhythm from major station districts. A useful visit starts with the pond, paths, bridges, and green space, then adds neighborhood shopping or a cafe only if the day still feels unhurried. If the park becomes just a quick photo stop, the route loses the slower quality that makes this side of Tokyo valuable."
       },
       {
-        "heading": "Check live details before committing",
-        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+        "heading": "Use Kichijoji for contrast",
+        "body": "The area is still urban Tokyo, but it offers a softer contrast to Shinjuku, Shibuya, and central business districts. That contrast is the point: fewer transfers, more walking, and more time to notice daily neighborhood patterns. It works well after several dense city days because it changes the pace without requiring a long regional trip."
       },
       {
-        "heading": "Build in a slower pause",
-        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+        "heading": "Check park and facility notices",
+        "body": "Park facilities, museum tickets, boats, maintenance areas, and event rules can change by date and season. Before building a day around one activity, confirm the latest notices from official park, museum, city, or tourism sources. If a facility is closed, the walk can still work by shifting the focus to the pond loop and station-side streets."
+      },
+      {
+        "heading": "Add shopping lightly",
+        "body": "Kichijoji has lanes, department stores, small shops, and food stops near the station. Keep shopping as a loop around the station rather than spreading the route across too many disconnected streets. The best version of this day leaves room for a second park pause or an early dinner instead of turning into a shopping checklist."
+      },
+      {
+        "heading": "Best fit",
+        "body": "This day suits repeat Tokyo visitors, families who need an easier pace, and travelers who want a local-feeling break without leaving the metropolitan area. It is also a good weather-adjustable day: shorten the park loop in heat or rain, then use station-area shops and cafes as the backup."
       }
     ],
     "sourcePolicy": "official-primary-summary",
     "verificationLevel": "official-source-reviewed",
-    "lastChecked": "2026-05-31",
-    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
+    "lastChecked": "2026-06-01",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets for Tokyo tourism, metropolitan park information, and transport. Volatile details must be checked on official pages before travel.",
     "sourceUrls": [
       "https://www.gotokyo.org/en/",
       "https://www.metro.tokyo.lg.jp/",
-      "https://www.tokyometro.jp/en/",
-      "https://www.kotsu.metro.tokyo.jp/eng/"
+      "https://www.tokyo-park.or.jp/",
+      "https://www.jreast.co.jp/e/"
     ],
-    "seoTitle": "Yanaka, Nezu, and Sendagi for a Slower Tokyo Walk | TABI",
-    "seoDescription": "The Yanesen area shows Tokyo at a smaller scale: lanes, temples, old shops, and residential rhythm. It is best treated as a walk, not a checklist.",
+    "seoTitle": "Kichijoji and Inokashira Park for a Slower Tokyo Day | TABI",
+    "seoDescription": "A calm Tokyo day plan around Kichijoji and Inokashira Park, with official-source checks for current details.",
     "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
     "searchAliases": [
-      "Yanaka, Nezu, and Sendagi",
-      "tokyo",
-      "slow walk"
+      "Kichijoji",
+      "Inokashira Park",
+      "slow Tokyo"
     ],
     "tripBrief": {
       "takeaways": [
-        "Anchor the day around one compact area.",
-        "Confirm current access, hours, fees, and closures from official sources.",
-        "Keep food, weather, and transit breaks in the plan."
+        "Keep the route compact and anchored to one area.",
+        "Confirm current hours, fees, access, and event details from official sources before travel.",
+        "Build in weather, food, and transit pauses instead of treating the day as a checklist."
       ],
       "beforeYouGo": [
         "Save the nearest station and one backup route offline.",
-        "Check official facility and transport pages.",
-        "Avoid overfilling the day."
+        "Check official tourism, park, museum, transport, or city pages for current notices.",
+        "Avoid adding distant stops unless the day still has slack."
       ],
       "avoid": [
         "Do not rely on old social posts for operating details.",
-        "Do not cross the city repeatedly with luggage.",
-        "Do not assume events or observation areas are open daily."
+        "Do not assume restaurants, observation areas, museums, or events are open daily.",
+        "Do not cross the city repeatedly when one neighborhood can carry the day."
       ],
-      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
-      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
-      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+      "season": "Kichijoji works year-round, but weather, holidays, events, and closures can change the best order.",
+      "budget": "Costs vary; confirm current transport, entry, meal, and shopping prices directly.",
+      "timeNeeded": "A focused half day works for the core walk; allow a full day if you add museums, meals, or shopping."
     }
   },
   {
@@ -139,6 +148,71 @@
       "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
       "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
       "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "kumano-kodo-villages-without-rushing-the-pilgrimage",
+    "title": "Kumano Kodo Villages Without Rushing the Pilgrimage",
+    "summary": "The Kumano Kodo is not only a trail; it is a chain of villages, baths, forest paths, and small meals. Slow the route down and the pilgrimage becomes easier to feel.",
+    "category": "hidden-gems",
+    "subcategory": "pilgrimage-villages",
+    "tags": [
+      "hiking",
+      "forest",
+      "heritage",
+      "slow-travel"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 8,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/kumano-villages.png",
+    "imageAlt": "A forest pilgrimage path inspired by Kumano Kodo with trees, a village path, and warm earth tones",
+    "sections": [
+      {
+        "heading": "Choose Fewer Trail Segments",
+        "body": "The route is more rewarding when you do not turn every day into a distance test. Pick segments that match your fitness, luggage plan, and lodging reality."
+      },
+      {
+        "heading": "Value the Villages Between",
+        "body": "Small inns, baths, lunch stops, and morning roads are part of the pilgrimage texture. Give the villages time instead of treating them as sleep-only logistics."
+      },
+      {
+        "heading": "Prepare for Weather and Terrain",
+        "body": "Forest paths can be wet, steep, and quiet. Carry water, check current trail information, and keep a fallback plan if weather changes."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "Kumano Kodo Villages and Slower Pilgrimage Planning | TABI",
+    "seoDescription": "Plan the Kumano Kodo more slowly through villages, baths, forest paths, lodging, weather, and realistic trail segments.",
+    "audience": "Hikers and slow travelers interested in pilgrimage routes with cultural context.",
+    "searchAliases": [
+      "Kumano Kodo villages",
+      "Kumano Kodo slow travel",
+      "Japan pilgrimage walk"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use Kumano Kodo walking as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
+      ],
+      "beforeYouGo": [
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
+      ],
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
     }
   },
   {
@@ -278,76 +352,325 @@
     }
   },
   {
-    "id": "kumano-kodo-villages-without-rushing-the-pilgrimage",
-    "title": "Kumano Kodo Villages Without Rushing the Pilgrimage",
-    "summary": "The Kumano Kodo is not only a trail; it is a chain of villages, baths, forest paths, and small meals. Slow the route down and the pilgrimage becomes easier to feel.",
+    "id": "yanaka-nezu-sendagi-slow-walk",
+    "title": "Yanaka, Nezu, and Sendagi for a Slower Tokyo Walk",
+    "summary": "The Yanesen area shows Tokyo at a smaller scale: lanes, temples, old shops, and residential rhythm. It is best treated as a walk, not a checklist.",
     "category": "hidden-gems",
-    "subcategory": "pilgrimage-villages",
+    "subcategory": "heritage-walks",
     "tags": [
-      "hiking",
-      "forest",
-      "heritage",
-      "slow-travel"
+      "tokyo",
+      "walking",
+      "quiet-travel",
+      "heritage"
     ],
     "publishedAt": "2026-05-31",
-    "readingTime": 8,
+    "readingTime": 6,
     "affiliate": false,
     "featured": false,
-    "image": "/assets/images/kumano-villages.png",
-    "imageAlt": "A forest pilgrimage path inspired by Kumano Kodo with trees, a village path, and warm earth tones",
+    "image": "/assets/images/tokyo-ueno-park-museums.png",
+    "imageAlt": "A quiet Tokyo park and neighborhood path suggesting a slower Yanaka walk",
     "sections": [
       {
-        "heading": "Choose Fewer Trail Segments",
-        "body": "The route is more rewarding when you do not turn every day into a distance test. Pick segments that match your fitness, luggage plan, and lodging reality."
+        "heading": "Use Yanaka, Nezu, and Sendagi as the anchor",
+        "body": "Official tourism and transport sources identify Yanaka, Nezu, and Sendagi as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
       },
       {
-        "heading": "Value the Villages Between",
-        "body": "Small inns, baths, lunch stops, and morning roads are part of the pilgrimage texture. Give the villages time instead of treating them as sleep-only logistics."
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
       },
       {
-        "heading": "Prepare for Weather and Terrain",
-        "body": "Forest paths can be wet, steep, and quiet. Carry water, check current trail information, and keep a fallback plan if weather changes."
+        "heading": "Build in a slower pause",
+        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
       }
     ],
-    "sourcePolicy": "tabi-local-editorial",
-    "verificationLevel": "static-editorial",
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
     "lastChecked": "2026-05-31",
-    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
-    "seoTitle": "Kumano Kodo Villages and Slower Pilgrimage Planning | TABI",
-    "seoDescription": "Plan the Kumano Kodo more slowly through villages, baths, forest paths, lodging, weather, and realistic trail segments.",
-    "audience": "Hikers and slow travelers interested in pilgrimage routes with cultural context.",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.gotokyo.org/en/",
+      "https://www.metro.tokyo.lg.jp/",
+      "https://www.tokyometro.jp/en/",
+      "https://www.kotsu.metro.tokyo.jp/eng/"
+    ],
+    "seoTitle": "Yanaka, Nezu, and Sendagi for a Slower Tokyo Walk | TABI",
+    "seoDescription": "The Yanesen area shows Tokyo at a smaller scale: lanes, temples, old shops, and residential rhythm. It is best treated as a walk, not a checklist.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
     "searchAliases": [
-      "Kumano Kodo villages",
-      "Kumano Kodo slow travel",
-      "Japan pilgrimage walk"
+      "Yanaka, Nezu, and Sendagi",
+      "tokyo",
+      "slow walk"
     ],
     "tripBrief": {
       "takeaways": [
-        "Use Kumano Kodo walking as a lens for slower decisions, not as another checklist.",
-        "Build the day around one anchor and leave room for weather, meals, and transit.",
-        "Confirm current details from official sources before you go."
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
       ],
       "beforeYouGo": [
-        "Save the key station, neighborhood, and fallback route offline.",
-        "Check current opening days, seasonal closures, and reservation needs.",
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-30",
+    "publishedAt": "2026-05-30",
+    "affiliate": false,
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including JNTO travel guidance, Japan Tourism Agency responsible travel materials, Ministry of the Environment national park information, local tourism office guidance, and accommodation or facility policies where relevant. Live prices, access rules, opening details, safety notices, booking conditions, and transport operations should be confirmed directly with official sources before travel.",
+    "id": "craft-towns-for-pottery-and-textiles",
+    "title": "Craft Towns in Japan for Pottery and Textiles",
+    "summary": "Craft towns reward travelers who slow down enough to see process. Look for workshops, kilns, weaving streets, local museums, and shops that explain materials rather than only selling souvenirs.",
+    "category": "hidden-gems",
+    "tags": [
+      "craft",
+      "ceramics",
+      "textiles",
+      "regional-japan"
+    ],
+    "readingTime": 6,
+    "image": "/assets/images/craft-towns-pottery-textiles.png",
+    "imageAlt": "A Japanese craft town street with pottery displayed outside a small workshop",
+    "sections": [
+      {
+        "heading": "Look for Process, Not Just Products",
+        "body": "A good craft town shows how materials move through hands: clay, glaze, dye, thread, firing, drying, cutting, and repair. Museums and workshops often make shopping more meaningful."
+      },
+      {
+        "heading": "Plan Around Opening Days",
+        "body": "Small studios may keep irregular hours, close for events, or require reservations. Check official town or workshop information before building a route around one maker."
+      },
+      {
+        "heading": "Buy Less, Understand More",
+        "body": "One carefully chosen bowl, cloth, or tool can carry more memory than a full bag of generic goods. Ask about care, origin, and use so the object keeps its context at home."
+      }
+    ],
+    "seoTitle": "Craft Towns in Japan for Pottery and Textiles | TABI",
+    "seoDescription": "How to visit Japanese craft towns for pottery and textiles through workshops, museums, opening-day checks, and meaningful shopping.",
+    "audience": "Travelers interested in ceramics, textiles, regional towns, and craft process.",
+    "searchAliases": [
+      "Japan craft towns",
+      "pottery town Japan",
+      "textile town Japan"
+    ],
+    "subcategory": "craft-studios"
+  },
+  {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "takeaways": [
+        "Plan around one clear purpose, then leave room for the place to breathe.",
+        "Use official sources for live details before spending time or money.",
+        "Protect energy, weather flexibility, and meal timing as part of the route."
+      ],
+      "beforeYouGo": [
+        "Save key addresses and fallback routes offline.",
+        "Check current transport, opening, or local rule changes.",
         "Keep the plan lighter than it looks on a map."
       ],
       "avoid": [
-        "Do not stack too many distant stops into one day.",
-        "Avoid treating small local places as photo sets.",
-        "Do not rely on old prices, timetables, or social media posts."
+        "Do not rely only on social posts or outdated blog details.",
+        "Avoid overloading one day with distant stops.",
+        "Do not ignore local etiquette, weather, or fatigue."
       ],
-      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
-      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
-      "timeNeeded": "A half day to one full day usually gives the experience enough room."
-    }
+      "season": "The core advice is evergreen, but timing, weather, crowding, and local events can change the best choice.",
+      "budget": "Costs vary by season, city, and booking timing; confirm current prices before travel.",
+      "timeNeeded": "Use this guide as a planning lens for a half day, full day, or wider route depending on the topic."
+    },
+    "id": "beginner-guide-to-japan-national-parks",
+    "title": "A Beginner Guide to Japan National Parks",
+    "summary": "Japan national parks are not all remote wilderness. Many combine villages, shrines, coastlines, hot springs, and trails that can fit into a thoughtful travel route.",
+    "category": "hidden-gems",
+    "tags": [
+      "national-parks",
+      "nature",
+      "hiking",
+      "slow-travel"
+    ],
+    "publishedAt": "2026-05-29",
+    "readingTime": 7,
+    "affiliate": false,
+    "image": "/assets/images/japan-national-parks-guide.png",
+    "imageAlt": "A boardwalk trail leading through a Japanese national park landscape with mountains beyond",
+    "sections": [
+      {
+        "heading": "Think Culture and Nature Together",
+        "body": "Japanese national parks often include working communities, sacred places, roads, ferries, farms, and hot springs. They are not only empty landscapes, and that makes planning more interesting."
+      },
+      {
+        "heading": "Choose Access Before Ambition",
+        "body": "A park with simple train, bus, or ferry access may create a better first visit than a famous trail requiring complex transfers. Start with a route you can enjoy safely and slowly."
+      },
+      {
+        "heading": "Respect Local Rules and Conditions",
+        "body": "Trail closures, weather, wildlife, volcanic activity, and seasonal transport can change plans. Use official park and local transport information before committing to a route."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including Ministry of the Environment national park information, official park websites, local transport operators, JNTO nature travel materials, and weather guidance. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "Beginner Guide to Japan National Parks | TABI",
+    "seoDescription": "How to plan a first Japan national park visit around access, local culture, trails, weather, hot springs, and official park rules.",
+    "audience": "Travelers who want nature in Japan without overcommitting to difficult logistics.",
+    "searchAliases": [
+      "Japan national parks",
+      "nature travel Japan",
+      "Japan park guide"
+    ],
+    "subcategory": "rural-nature"
+  },
+  {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "takeaways": [
+        "Plan around one clear purpose, then leave room for the place to breathe.",
+        "Use official sources for live details before spending time or money.",
+        "Protect energy, weather flexibility, and meal timing as part of the route."
+      ],
+      "beforeYouGo": [
+        "Save key addresses and fallback routes offline.",
+        "Check current transport, opening, or local rule changes.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not rely only on social posts or outdated blog details.",
+        "Avoid overloading one day with distant stops.",
+        "Do not ignore local etiquette, weather, or fatigue."
+      ],
+      "season": "The core advice is evergreen, but timing, weather, crowding, and local events can change the best choice.",
+      "budget": "Costs vary by season, city, and booking timing; confirm current prices before travel.",
+      "timeNeeded": "Use this guide as a planning lens for a half day, full day, or wider route depending on the topic."
+    },
+    "id": "small-castle-towns-for-slow-japan-travel",
+    "title": "Small Castle Towns for Slow Japan Travel",
+    "summary": "Japan castle towns can make excellent low-pressure stops. They offer history, walkable streets, local food, and a slower rhythm than major-city sightseeing.",
+    "category": "hidden-gems",
+    "tags": [
+      "castle-towns",
+      "heritage",
+      "walking",
+      "regional-japan"
+    ],
+    "publishedAt": "2026-05-29",
+    "readingTime": 6,
+    "affiliate": false,
+    "image": "/assets/images/small-castle-towns-japan.png",
+    "imageAlt": "A quiet Japanese castle town street leading toward a small castle keep",
+    "sections": [
+      {
+        "heading": "Use the Castle as an Anchor, Not the Whole Day",
+        "body": "The castle, keep, ruins, or moat gives the town structure, but the real pleasure is often the surrounding streets, cafes, museums, craft shops, and riverside walks."
+      },
+      {
+        "heading": "Choose Towns With Walkable Edges",
+        "body": "A good castle-town stop lets you arrive by train or bus, walk without rushing, eat locally, and leave without complicated transfers. The best small cities make the day feel coherent."
+      },
+      {
+        "heading": "Read Preservation With Care",
+        "body": "Some castles are reconstructions, some are ruins, and some have surviving original structures. Instead of treating that as a ranking, use it to understand how the town remembers itself."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including local castle and museum information, municipal tourism offices, cultural property materials, transport operator schedules, and JNTO regional travel guidance. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "Small Castle Towns for Slow Japan Travel | TABI",
+    "seoDescription": "How to use Japan castle towns as slower travel stops, with walkable streets, local food, heritage context, and realistic access.",
+    "audience": "Travelers seeking regional history beyond major cities.",
+    "searchAliases": [
+      "Japan castle towns",
+      "small towns Japan travel",
+      "regional Japan heritage"
+    ],
+    "subcategory": "heritage-walks"
+  },
+  {
+    "id": "quiet-morning-kyoto-itinerary",
+    "title": "A Quiet Morning Plan for Kyoto Before the Crowds Arrive",
+    "summary": "Kyoto changes completely when you start early and keep your route small. This guide shows how to build a calmer morning around walkable areas, respectful behavior, and realistic timing.",
+    "category": "hidden-gems",
+    "tags": [
+      "kyoto",
+      "morning",
+      "quiet-travel",
+      "local-customs"
+    ],
+    "publishedAt": "2026-05-28",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/quiet-kyoto-morning.png",
+    "imageAlt": "A quiet Kyoto-style wooden street just after sunrise with stone pavement and no crowds",
+    "sections": [
+      {
+        "heading": "Start Early, But Keep It Gentle",
+        "body": "A calm Kyoto morning does not require racing from temple to temple. Begin with one walkable area, one quiet anchor, and a nearby breakfast or coffee plan so the morning has a rhythm rather than a checklist."
+      },
+      {
+        "heading": "Stay Within One Neighborhood",
+        "body": "Cross-city movement can quickly erase the benefit of an early start. Choose a district near your hotel or near a simple transit line, then let side streets and small shrines carry the morning."
+      },
+      {
+        "heading": "Respect That People Live Here",
+        "body": "Many beautiful Kyoto lanes are residential. Keep voices low, avoid blocking doorways, do not enter private property, and treat photography as secondary to being a considerate guest."
+      },
+      {
+        "heading": "Leave Before the Peak",
+        "body": "The quietest plan often ends before the busiest part of the day. After a walk, move to lunch, a museum, or a less congested area instead of staying until the crowd catches up."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-28",
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including Kyoto official tourism guidance, Kyoto City tourism policy information, JNTO destination materials, and local transport guidance. Live schedules, prices, warnings, access rules, and opening details should be confirmed directly with official sources before travel.",
+    "seoTitle": "Quiet Morning Kyoto Itinerary | TABI",
+    "seoDescription": "How to plan a calmer Kyoto morning with early timing, compact routes, respectful behavior, and fewer crowd-heavy decisions.",
+    "audience": "Travelers who want Kyoto to feel quieter, more local, and more respectful.",
+    "searchAliases": [
+      "quiet Kyoto morning",
+      "Kyoto before crowds",
+      "Kyoto etiquette"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Build the day around one clear anchor instead of a crowded checklist.",
+        "Confirm live details from official sources before you commit money or time.",
+        "Leave enough space for weather, meals, transit, and recovery."
+      ],
+      "beforeYouGo": [
+        "Save key addresses and transport options offline.",
+        "Check official guidance for closures, safety notes, or seasonal changes.",
+        "Choose one backup plan that still feels worthwhile if the weather changes."
+      ],
+      "avoid": [
+        "Do not rely only on social media recommendations.",
+        "Avoid stacking distant stops into a short day.",
+        "Do not treat local neighborhoods as photo sets."
+      ],
+      "season": "This advice is broadly evergreen, but seasonal weather, holidays, and local events can change the best timing.",
+      "budget": "Costs vary by city, season, and booking timing; use this as a planning lens rather than a price guarantee.",
+      "timeNeeded": "Two to four morning hours are enough; the strength of the plan is restraint."
+    },
+    "subcategory": "heritage-walks"
   },
   {
     "id": "yakushima-ancient-forest-few-tourists-find",
     "title": "Yakushima: Japan's Ancient Forest That Few Tourists Find",
     "summary": "Yakushima is famous enough to dream about and remote enough to still feel earned. Here is how to plan the island without rushing its rain, moss, cedar trails, and quiet coastal villages.",
     "category": "hidden-gems",
-    "subcategory": "forests-and-islands",
     "tags": [
       "yakushima",
       "islands",
@@ -413,14 +736,14 @@
       "season": "Shoulder seasons are often easier, with weather flexibility built in.",
       "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
       "timeNeeded": "Give the place at least a half day, and longer when weather or ferries are involved."
-    }
+    },
+    "subcategory": "forests-and-islands"
   },
   {
     "id": "setouchi-islands-art-sea-slow-travel",
     "title": "The Setouchi Islands for Art, Sea Air, and Slow Travel",
     "summary": "Naoshima may be the headline, but the Seto Inland Sea is best understood as a rhythm of ferries, villages, museums, and quiet water. This is a slower way to plan it.",
     "category": "hidden-gems",
-    "subcategory": "coastal-islands",
     "tags": [
       "setouchi",
       "islands",
@@ -478,14 +801,14 @@
       "season": "Shoulder seasons are often easier, with weather flexibility built in.",
       "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
       "timeNeeded": "Give the place at least a half day, and longer when weather or ferries are involved."
-    }
+    },
+    "subcategory": "coastal-islands"
   },
   {
     "id": "kiso-valley-walk-between-post-towns",
     "title": "Walking the Kiso Valley Between Old Post Towns",
     "summary": "The Nakasendo trail offers a different Japan: wooden inns, mountain air, and post towns designed for walking. This guide explains how to do Magome to Tsumago without turning it into a race.",
     "category": "hidden-gems",
-    "subcategory": "heritage-walks",
     "tags": [
       "kiso-valley",
       "nakasendo",
@@ -543,86 +866,7 @@
       "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
       "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
       "timeNeeded": "Give the place at least a half day, and longer when weather or ferries are involved."
-    }
-  },
-  {
-    "id": "kichijoji-inokashira-park-slow-tokyo-day",
-    "title": "Kichijoji and Inokashira Park for a Slower Tokyo Day",
-    "summary": "Kichijoji works when Tokyo needs air, shade, local shopping, and a park-centered pause. The day is strongest when Inokashira Park is the anchor, not just a quick photo stop.",
-    "category": "hidden-gems",
-    "subcategory": "heritage-walks",
-    "tags": [
-      "tokyo",
-      "kichijoji",
-      "parks",
-      "walking",
-      "slow-travel"
-    ],
-    "publishedAt": "2026-06-01",
-    "readingTime": 5,
-    "affiliate": false,
-    "featured": false,
-    "image": "/assets/images/tokyo-kichijoji-inokashira-park.png",
-    "imageAlt": "Inokashira Park pond and walking paths in Kichijoji Tokyo with people strolling under trees",
-    "sections": [
-      {
-        "heading": "Make the park the anchor",
-        "body": "Inokashira Park gives Kichijoji a different rhythm from major station districts. A useful visit starts with the pond, paths, bridges, and green space, then adds neighborhood shopping or a cafe only if the day still feels unhurried. If the park becomes just a quick photo stop, the route loses the slower quality that makes this side of Tokyo valuable."
-      },
-      {
-        "heading": "Use Kichijoji for contrast",
-        "body": "The area is still urban Tokyo, but it offers a softer contrast to Shinjuku, Shibuya, and central business districts. That contrast is the point: fewer transfers, more walking, and more time to notice daily neighborhood patterns. It works well after several dense city days because it changes the pace without requiring a long regional trip."
-      },
-      {
-        "heading": "Check park and facility notices",
-        "body": "Park facilities, museum tickets, boats, maintenance areas, and event rules can change by date and season. Before building a day around one activity, confirm the latest notices from official park, museum, city, or tourism sources. If a facility is closed, the walk can still work by shifting the focus to the pond loop and station-side streets."
-      },
-      {
-        "heading": "Add shopping lightly",
-        "body": "Kichijoji has lanes, department stores, small shops, and food stops near the station. Keep shopping as a loop around the station rather than spreading the route across too many disconnected streets. The best version of this day leaves room for a second park pause or an early dinner instead of turning into a shopping checklist."
-      },
-      {
-        "heading": "Best fit",
-        "body": "This day suits repeat Tokyo visitors, families who need an easier pace, and travelers who want a local-feeling break without leaving the metropolitan area. It is also a good weather-adjustable day: shorten the park loop in heat or rain, then use station-area shops and cafes as the backup."
-      }
-    ],
-    "sourcePolicy": "official-primary-summary",
-    "verificationLevel": "official-source-reviewed",
-    "lastChecked": "2026-06-01",
-    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets for Tokyo tourism, metropolitan park information, and transport. Volatile details must be checked on official pages before travel.",
-    "sourceUrls": [
-      "https://www.gotokyo.org/en/",
-      "https://www.metro.tokyo.lg.jp/",
-      "https://www.tokyo-park.or.jp/",
-      "https://www.jreast.co.jp/e/"
-    ],
-    "seoTitle": "Kichijoji and Inokashira Park for a Slower Tokyo Day | TABI",
-    "seoDescription": "A calm Tokyo day plan around Kichijoji and Inokashira Park, with official-source checks for current details.",
-    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
-    "searchAliases": [
-      "Kichijoji",
-      "Inokashira Park",
-      "slow Tokyo"
-    ],
-    "tripBrief": {
-      "takeaways": [
-        "Keep the route compact and anchored to one area.",
-        "Confirm current hours, fees, access, and event details from official sources before travel.",
-        "Build in weather, food, and transit pauses instead of treating the day as a checklist."
-      ],
-      "beforeYouGo": [
-        "Save the nearest station and one backup route offline.",
-        "Check official tourism, park, museum, transport, or city pages for current notices.",
-        "Avoid adding distant stops unless the day still has slack."
-      ],
-      "avoid": [
-        "Do not rely on old social posts for operating details.",
-        "Do not assume restaurants, observation areas, museums, or events are open daily.",
-        "Do not cross the city repeatedly when one neighborhood can carry the day."
-      ],
-      "season": "Kichijoji works year-round, but weather, holidays, events, and closures can change the best order.",
-      "budget": "Costs vary; confirm current transport, entry, meal, and shopping prices directly.",
-      "timeNeeded": "A focused half day works for the core walk; allow a full day if you add museums, meals, or shopping."
-    }
+    },
+    "subcategory": "heritage-walks"
   }
 ]

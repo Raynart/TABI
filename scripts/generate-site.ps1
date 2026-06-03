@@ -86,6 +86,8 @@ $CategoryLabelsJa = @{
   "food" = "食"
   "things-to-buy" = "買い物"
   "hidden-gems" = "知られざる場所"
+  "nature-outdoors" = "自然とアウトドア"
+  "stays" = "宿と滞在"
 }
 $TagLabelsEn = @{
   "aesthetics" = "Aesthetics"; "art" = "Art"; "breakfast" = "Breakfast"; "budget" = "Budget"; "ceramics" = "Ceramics"; "cherry-blossoms" = "Cherry Blossoms"; "craft" = "Craft"; "design" = "Design"; "drugstore" = "Drugstore"; "fashion" = "Fashion"; "first-time" = "First-Time Japan"; "food" = "Food"; "forest" = "Forest"; "hanami" = "Hanami"; "heritage" = "Heritage"; "hiking" = "Hiking"; "islands" = "Islands"; "itinerary" = "Itinerary"; "izakaya" = "Izakaya"; "kintsugi" = "Kintsugi"; "kiso-valley" = "Kiso Valley"; "kitchen-knives" = "Kitchen Knives"; "konbini" = "Konbini"; "kyoto" = "Kyoto"; "language" = "Language"; "local-customs" = "Local Customs"; "local-food" = "Local Food"; "matcha" = "Matcha"; "menus" = "Menus"; "mount-fuji" = "Mount Fuji"; "nakasendo" = "Nakasendo"; "nightlife" = "Nightlife"; "osaka" = "Osaka"; "philosophy" = "Philosophy"; "planning" = "Planning"; "quiet-travel" = "Quiet Travel"; "ryokan" = "Ryokan"; "setouchi" = "Setouchi"; "shopping" = "Shopping"; "shrines" = "Shrines"; "skincare" = "Skincare"; "slow-travel" = "Slow Travel"; "souvenirs" = "Souvenirs"; "spring" = "Spring"; "street-food" = "Street Food"; "summer" = "Summer"; "tea" = "Tea"; "tokyo" = "Tokyo"; "travel-tips" = "Travel Tips"; "wabi-sabi" = "Wabi-Sabi"; "walking" = "Walking"; "where-to-stay" = "Where to Stay"; "yakushima" = "Yakushima"; "yukata" = "Yukata"
@@ -1574,8 +1576,11 @@ function Get-CategoryDescription([string]$Slug, [string]$Label) {
     "food" { return "Food guides for counters, menus, convenience-store mornings, Osaka eating days, and the habits that make meals easier." }
     "things-to-buy" { return "Shopping guides for practical, culturally grounded things worth bringing home from Japan." }
     "hidden-gems" { return "Quieter Japan guides selected for context, restraint, and places that do not need to become crowded checklists." }
+    "nature-outdoors" { return "Nature and outdoor guides for forests, coasts, mountains, islands, and rural landscapes with safer, slower planning." }
+    "stays" { return "Stay guides for ryokan, minshuku, machiya, temple lodgings, farm stays, and nights that become part of the trip." }
   }
-  return if (Is-Japanese) { "日本の$Labelに関するTABIのガイドをまとめています。" } else { "Curated TABI guides for $($Label.ToLowerInvariant()) in Japan." }
+  if (Is-Japanese) { return "日本の$Labelに関するTABIのガイドをまとめています。" }
+  return "Curated TABI guides for $($Label.ToLowerInvariant()) in Japan."
 }
 
 function New-UtilityCard([string]$Label, [string]$Title, [string]$Description, [string]$Url) {

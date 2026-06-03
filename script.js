@@ -7,6 +7,9 @@
   const newsletterForms = document.querySelectorAll("[data-newsletter-form]");
   const recentlyViewed = document.querySelector("[data-recently-viewed]");
   const recentlyViewedList = document.querySelector("[data-recently-viewed-list]");
+  const readingProgress = document.querySelector("[data-reading-progress] span");
+  const articleBody = document.querySelector(".article-body");
+  const currentMobileNavItem = document.querySelector(".mobile-nav a[aria-current=\"page\"]");
   const articles = Array.isArray(window.TABI_ARTICLES) ? window.TABI_ARTICLES : [];
   let lastFocusedElement = null;
   const lang = document.documentElement.lang === "ja" ? "ja" : "en";
@@ -39,7 +42,7 @@
     if (!searchPanel) return;
     lastFocusedElement = document.activeElement;
     searchPanel.hidden = false;
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("search-open");
     searchToggles.forEach((searchToggle) => searchToggle.setAttribute("aria-expanded", "true"));
     renderSearch("");
     window.setTimeout(() => searchInput && searchInput.focus(), 0);
@@ -48,7 +51,7 @@
   function closeSearch() {
     if (!searchPanel) return;
     searchPanel.hidden = true;
-    document.body.style.overflow = "";
+    document.body.classList.remove("search-open");
     searchToggles.forEach((searchToggle) => searchToggle.setAttribute("aria-expanded", "false"));
     if (searchInput) searchInput.value = "";
     if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
@@ -80,7 +83,8 @@
       return;
     }
 
-    searchResults.innerHTML = matches
+    const popularSearches = tokens.length ? "" : renderPopularSearches("top");
+    searchResults.innerHTML = popularSearches + matches
       .map((item) => {
         const article = item.article;
         const labels = Array.isArray(article.tagLabels) && article.tagLabels.length ? article.tagLabels : article.tags || [];
@@ -132,10 +136,11 @@
       .trim();
   }
 
-  function renderPopularSearches() {
+  function renderPopularSearches(variant) {
     const searches = messages[lang].popularSearches || messages.en.popularSearches || [];
     if (!searches.length) return "";
-    return '<div class="search-suggestions">' + searches.map((term) => '<button type="button" data-search-suggestion="' + escapeHtml(term) + '">' + escapeHtml(term) + '</button>').join("") + '</div>';
+    const className = variant === "top" ? "search-suggestions search-suggestions-top" : "search-suggestions";
+    return '<div class="' + className + '">' + searches.map((term) => '<button type="button" data-search-suggestion="' + escapeHtml(term) + '">' + escapeHtml(term) + '</button>').join("") + '</div>';
   }
 
   function escapeHtml(value) {
@@ -267,6 +272,26 @@
     writeRecentPages([current].concat(items));
   }
 
+
+  function updateReadingProgress() {
+    if (!readingProgress || !articleBody) return;
+    const rect = articleBody.getBoundingClientRect();
+    const total = Math.max(1, rect.height - window.innerHeight * 0.35);
+    const read = Math.min(total, Math.max(0, -rect.top + window.innerHeight * 0.12));
+    readingProgress.style.transform = "scaleX(" + (read / total).toFixed(4) + ")";
+  }
+
+  if (currentMobileNavItem) {
+    window.setTimeout(() => {
+      currentMobileNavItem.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }, 120);
+  }
+
+  if (readingProgress && articleBody) {
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress);
+  }
   const initialQuery = new URLSearchParams(window.location.search).get("q");
   if (initialQuery && searchInput) {
     openSearch();

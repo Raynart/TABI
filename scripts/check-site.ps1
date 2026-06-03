@@ -14,6 +14,9 @@ Write-Host "Validating links, feeds, hreflang, JSON-LD, and policy requirements.
 Write-Host "Validating structured content data..."
 & node (Join-Path $PSScriptRoot "validate-data.mjs")
 
+Write-Host "Validating article media assets..."
+& node (Join-Path $PSScriptRoot "validate-assets.mjs")
+
 Write-Host "Running maintenance health checks..."
 & node (Join-Path $PSScriptRoot "site-health.mjs")
 

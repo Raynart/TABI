@@ -71,74 +71,68 @@
     }
   },
   {
-    "id": "shimokitazawa-koenji-vintage-music-day",
-    "title": "Shimokitazawa and Koenji for Vintage Shops and Small Music Energy",
-    "summary": "Shimokitazawa and Koenji are useful for Tokyo small-shop culture without a department-store day. Browse slowly and avoid turning secondhand shopping into a haul.",
+    "id": "japanese-stationery-worth-bringing-home",
+    "title": "Japanese Stationery Worth Bringing Home, From Notebooks to Pens",
+    "summary": "Japan is a stationery country if you know where to look. Choose notebooks, pens, tapes, and desk tools that are useful after the trip, not just beautiful in the shop.",
     "category": "things-to-buy",
-    "subcategory": "textiles-clothing",
+    "subcategory": "stationery-paper",
     "tags": [
-      "tokyo",
       "shopping",
-      "fashion",
-      "nightlife"
+      "souvenirs",
+      "design",
+      "craft"
     ],
     "publishedAt": "2026-05-31",
     "readingTime": 6,
-    "affiliate": false,
+    "affiliate": true,
     "featured": false,
-    "image": "/assets/images/tokyo-shinjuku-blue-hour.png",
-    "imageAlt": "Tokyo evening streets with warm shop lights and urban texture",
+    "image": "/assets/images/japanese-stationery.png",
+    "imageAlt": "A refined arrangement of Japanese notebooks, pens, and paper goods on a warm desk",
     "sections": [
       {
-        "heading": "Use Shimokitazawa and Koenji as the anchor",
-        "body": "Official tourism and transport sources identify Shimokitazawa and Koenji as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+        "heading": "Start With How You Write",
+        "body": "The best notebook depends on paper feel, binding, size, and whether you use fountain pens, pencils, or gel ink. Test the tool against your real habits."
       },
       {
-        "heading": "Check live details before committing",
-        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+        "heading": "Look Beyond Famous Brands",
+        "body": "Large stores are useful, but smaller sections often reveal local papers, seasonal colors, and clever desk objects. Leave room for one practical surprise."
       },
       {
-        "heading": "Build in a slower pause",
-        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+        "heading": "Pack Paper Properly",
+        "body": "Paper dents easily in luggage. Slide notebooks against a flat surface, keep small items together, and avoid overbuying heavy stacks you will not use."
       }
     ],
-    "sourcePolicy": "official-primary-summary",
-    "verificationLevel": "official-source-reviewed",
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
     "lastChecked": "2026-05-31",
-    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
-    "sourceUrls": [
-      "https://www.gotokyo.org/en/",
-      "https://www.metro.tokyo.lg.jp/",
-      "https://www.tokyometro.jp/en/",
-      "https://www.kotsu.metro.tokyo.jp/eng/"
-    ],
-    "seoTitle": "Shimokitazawa and Koenji for Vintage Shops and Small Music Energy | TABI",
-    "seoDescription": "Shimokitazawa and Koenji are useful for Tokyo small-shop culture without a department-store day. Browse slowly and avoid turning secondhand shopping into a haul.",
-    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "Japanese Stationery Worth Bringing Home | TABI",
+    "seoDescription": "Buy better Japanese stationery by choosing notebooks, pens, paper, tapes, and desk tools that suit your real writing habits.",
+    "audience": "Design-minded travelers looking for useful, packable Japanese souvenirs.",
     "searchAliases": [
-      "Shimokitazawa and Koenji",
-      "tokyo",
-      "vintage"
+      "Japanese stationery",
+      "stationery souvenirs Japan",
+      "Japan notebooks pens"
     ],
     "tripBrief": {
       "takeaways": [
-        "Anchor the day around one compact area.",
-        "Confirm current access, hours, fees, and closures from official sources.",
-        "Keep food, weather, and transit breaks in the plan."
+        "Use stationery shopping as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
       ],
       "beforeYouGo": [
-        "Save the nearest station and one backup route offline.",
-        "Check official facility and transport pages.",
-        "Avoid overfilling the day."
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
       ],
       "avoid": [
-        "Do not rely on old social posts for operating details.",
-        "Do not cross the city repeatedly with luggage.",
-        "Do not assume events or observation areas are open daily."
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
       ],
-      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
-      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
-      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
     }
   },
   {
@@ -213,68 +207,74 @@
     }
   },
   {
-    "id": "japanese-stationery-worth-bringing-home",
-    "title": "Japanese Stationery Worth Bringing Home, From Notebooks to Pens",
-    "summary": "Japan is a stationery country if you know where to look. Choose notebooks, pens, tapes, and desk tools that are useful after the trip, not just beautiful in the shop.",
+    "id": "shimokitazawa-koenji-vintage-music-day",
+    "title": "Shimokitazawa and Koenji for Vintage Shops and Small Music Energy",
+    "summary": "Shimokitazawa and Koenji are useful for Tokyo small-shop culture without a department-store day. Browse slowly and avoid turning secondhand shopping into a haul.",
     "category": "things-to-buy",
-    "subcategory": "stationery-paper",
+    "subcategory": "textiles-clothing",
     "tags": [
+      "tokyo",
       "shopping",
-      "souvenirs",
-      "design",
-      "craft"
+      "fashion",
+      "nightlife"
     ],
     "publishedAt": "2026-05-31",
     "readingTime": 6,
-    "affiliate": true,
+    "affiliate": false,
     "featured": false,
-    "image": "/assets/images/japanese-stationery.png",
-    "imageAlt": "A refined arrangement of Japanese notebooks, pens, and paper goods on a warm desk",
+    "image": "/assets/images/tokyo-shinjuku-blue-hour.png",
+    "imageAlt": "Tokyo evening streets with warm shop lights and urban texture",
     "sections": [
       {
-        "heading": "Start With How You Write",
-        "body": "The best notebook depends on paper feel, binding, size, and whether you use fountain pens, pencils, or gel ink. Test the tool against your real habits."
+        "heading": "Use Shimokitazawa and Koenji as the anchor",
+        "body": "Official tourism and transport sources identify Shimokitazawa and Koenji as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
       },
       {
-        "heading": "Look Beyond Famous Brands",
-        "body": "Large stores are useful, but smaller sections often reveal local papers, seasonal colors, and clever desk objects. Leave room for one practical surprise."
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
       },
       {
-        "heading": "Pack Paper Properly",
-        "body": "Paper dents easily in luggage. Slide notebooks against a flat surface, keep small items together, and avoid overbuying heavy stacks you will not use."
+        "heading": "Build in a slower pause",
+        "body": "The best Tokyo day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
       }
     ],
-    "sourcePolicy": "tabi-local-editorial",
-    "verificationLevel": "static-editorial",
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
     "lastChecked": "2026-05-31",
-    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
-    "seoTitle": "Japanese Stationery Worth Bringing Home | TABI",
-    "seoDescription": "Buy better Japanese stationery by choosing notebooks, pens, paper, tapes, and desk tools that suit your real writing habits.",
-    "audience": "Design-minded travelers looking for useful, packable Japanese souvenirs.",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.gotokyo.org/en/; https://www.metro.tokyo.lg.jp/; https://www.tokyometro.jp/en/; https://www.kotsu.metro.tokyo.jp/eng/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.gotokyo.org/en/",
+      "https://www.metro.tokyo.lg.jp/",
+      "https://www.tokyometro.jp/en/",
+      "https://www.kotsu.metro.tokyo.jp/eng/"
+    ],
+    "seoTitle": "Shimokitazawa and Koenji for Vintage Shops and Small Music Energy | TABI",
+    "seoDescription": "Shimokitazawa and Koenji are useful for Tokyo small-shop culture without a department-store day. Browse slowly and avoid turning secondhand shopping into a haul.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
     "searchAliases": [
-      "Japanese stationery",
-      "stationery souvenirs Japan",
-      "Japan notebooks pens"
+      "Shimokitazawa and Koenji",
+      "tokyo",
+      "vintage"
     ],
     "tripBrief": {
       "takeaways": [
-        "Use stationery shopping as a lens for slower decisions, not as another checklist.",
-        "Build the day around one anchor and leave room for weather, meals, and transit.",
-        "Confirm current details from official sources before you go."
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
       ],
       "beforeYouGo": [
-        "Save the key station, neighborhood, and fallback route offline.",
-        "Check current opening days, seasonal closures, and reservation needs.",
-        "Keep the plan lighter than it looks on a map."
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
       ],
       "avoid": [
-        "Do not stack too many distant stops into one day.",
-        "Avoid treating small local places as photo sets.",
-        "Do not rely on old prices, timetables, or social media posts."
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
       ],
-      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
-      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
-      "timeNeeded": "A half day to one full day usually gives the experience enough room."
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
     }
   },
   {
@@ -343,11 +343,58 @@
     }
   },
   {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "budget": "Prices range widely; the best value is the object whose care and use match your real life."
+    },
+    "id": "buying-chopsticks-and-lacquerware-in-japan",
+    "title": "Buying Chopsticks and Lacquerware in Japan Without Choosing Randomly",
+    "summary": "Chopsticks and lacquerware can be beautiful, useful souvenirs if you know what to look for. Learn how to compare material, finish, care, and whether the item fits your life at home.",
+    "category": "things-to-buy",
+    "tags": [
+      "chopsticks",
+      "lacquerware",
+      "souvenirs",
+      "craft"
+    ],
+    "publishedAt": "2026-05-29",
+    "readingTime": 6,
+    "affiliate": true,
+    "image": "/assets/images/chopsticks-lacquerware-souvenirs.png",
+    "imageAlt": "Handmade chopsticks and lacquerware displayed on a Japanese craft shop table",
+    "sections": [
+      {
+        "heading": "Start With Use, Not Display",
+        "body": "The best craft purchase is one you will actually use or care for properly. Chopsticks, bowls, trays, and small lacquer pieces vary widely in material, finish, durability, and maintenance."
+      },
+      {
+        "heading": "Ask About Care Before Buying",
+        "body": "Some lacquerware should avoid dishwashers, soaking, harsh detergents, or extreme dryness. If the care routine feels unrealistic, choose a simpler item that still carries the craft story well."
+      },
+      {
+        "heading": "Buy From Places That Explain the Work",
+        "body": "A good shop can tell you about region, maker, material, coating, and intended use. That context matters more than a vague premium label or a souvenir shelf arranged only by color."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including craft shop guidance, regional lacquerware information, tourism shopping materials, customs-aware packing guidance, and product care instructions. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "Buying Chopsticks and Lacquerware in Japan | TABI",
+    "seoDescription": "A practical guide to buying chopsticks and lacquerware in Japan by material, finish, care routine, maker context, and suitcase practicality.",
+    "audience": "Travelers shopping for useful Japanese craft souvenirs.",
+    "searchAliases": [
+      "buy chopsticks Japan",
+      "Japanese lacquerware souvenir",
+      "Japan craft shopping"
+    ],
+    "subcategory": "kitchen-tools"
+  },
+  {
     "id": "best-japanese-kitchen-knives-to-bring-home",
     "title": "The Best Japanese Kitchen Knives to Bring Home",
     "summary": "A buying guide for travelers who want a serious Japanese knife without getting lost in steel types, regional names, and display-case intimidation. Learn what to buy, what to skip, and how to fly home with it.",
     "category": "things-to-buy",
-    "subcategory": "kitchen-tools",
     "tags": [
       "kitchen-knives",
       "shopping",
@@ -437,14 +484,14 @@
       "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
       "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
       "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
-    }
+    },
+    "subcategory": "kitchen-tools"
   },
   {
     "id": "buying-matcha-ceremonial-vs-culinary-grade",
     "title": "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
     "summary": "Matcha labels can be confusing, especially when shops use English terms loosely. This guide explains what to look for, how much to spend, and which tins make sense for drinking versus baking.",
     "category": "things-to-buy",
-    "subcategory": "tea-matcha",
     "tags": [
       "matcha",
       "tea",
@@ -534,14 +581,14 @@
       "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
       "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
       "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
-    }
+    },
+    "subcategory": "tea-matcha"
   },
   {
     "id": "japanese-drugstore-products-worth-every-yen",
     "title": "10 Japanese Drugstore Products Worth Every Yen",
     "summary": "Japanese drugstores are overwhelming in the best and worst ways. This guide narrows the shelves to practical skincare, travel fixes, and small daily items that are actually worth suitcase space.",
     "category": "things-to-buy",
-    "subcategory": "beauty-drugstore",
     "tags": [
       "drugstore",
       "skincare",
@@ -631,14 +678,14 @@
       "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
       "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
       "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
-    }
+    },
+    "subcategory": "beauty-drugstore"
   },
   {
     "id": "where-to-buy-authentic-yukata-in-tokyo",
     "title": "Where to Buy Authentic Yukata in Tokyo Without the Markup",
     "summary": "Yukata shopping can be meaningful, beautiful, and surprisingly affordable if you know where to look. Learn the difference between souvenir sets, vintage finds, and pieces you will actually wear.",
     "category": "things-to-buy",
-    "subcategory": "textiles-clothing",
     "tags": [
       "yukata",
       "tokyo",
@@ -728,6 +775,7 @@
       "season": "Summer works best with heat, rain, and mountain or festival timing in mind.",
       "budget": "Set a ceiling before entering the shop, then spend on fit, quality, and care rather than novelty.",
       "timeNeeded": "Allow 45 to 90 minutes if you want to compare carefully and ask questions."
-    }
+    },
+    "subcategory": "textiles-clothing"
   }
 ]

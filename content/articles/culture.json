@@ -1,5 +1,85 @@
 [
   {
+    "id": "nakanoshima-osaka-river-architecture-walk",
+    "title": "Nakanoshima, Osaka: A River and Architecture Walk Between Busy Districts",
+    "summary": "Nakanoshima is useful because it gives Osaka a quieter civic and riverside layer between busier shopping and nightlife areas. The best route treats the island as a bridge, not a detour.",
+    "category": "culture",
+    "subcategory": "heritage-walks",
+    "tags": [
+      "osaka",
+      "nakanoshima",
+      "architecture",
+      "walking",
+      "heritage"
+    ],
+    "publishedAt": "2026-06-01",
+    "readingTime": 5,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-nakanoshima-waterfront.png",
+    "imageAlt": "Nakanoshima Osaka riverside with bridges trees and civic architecture in soft daylight",
+    "sections": [
+      {
+        "heading": "Walk the rivers first",
+        "body": "Nakanoshima sits between waterways, so the route makes most sense on foot. Bridges, river edges, civic buildings, museums, and cafes create a compact cultural walk without requiring a long transfer across Osaka. Start by reading the area as a riverside district, then choose the indoor stops that match the day's weather and current opening information."
+      },
+      {
+        "heading": "Use it between Umeda and central Osaka",
+        "body": "The area is practical when paired with Umeda, Yodoyabashi, Kitahama, or a later food stop. Instead of making it a full-day obligation, use it as the calmer middle of an Osaka day. This keeps travel time low and gives the city a civic, architectural layer between shopping, food, and nightlife."
+      },
+      {
+        "heading": "Confirm museum and event details",
+        "body": "Exhibition schedules, museum openings, waterfront events, and building access can change. Check official city, tourism, museum, and venue pages before promising a specific indoor stop. This is especially important when an article route depends on a museum, special exhibition, concert hall, or seasonal riverside program."
+      },
+      {
+        "heading": "Rain plan",
+        "body": "Nakanoshima can still work in light rain if you keep the route near stations and indoor cultural stops. Heavy rain or riverfront wind calls for a shorter loop and more time indoors. In summer, shade and hydration matter; in winter, the riverside can feel colder than the shopping districts nearby."
+      },
+      {
+        "heading": "Best fit",
+        "body": "This works well for architecture fans, museum travelers, couples who want a quieter Osaka walk, and anyone staying near Umeda who wants something more measured than shopping only. It is less suitable for travelers who want a single iconic photo stop, because the strength of Nakanoshima is cumulative."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-06-01",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets for Osaka tourism, city information, and transit. Volatile details such as events, exhibitions, facility hours, and access rules must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.japan.travel/en/destinations/kansai/osaka/"
+    ],
+    "seoTitle": "Nakanoshima Osaka River and Architecture Walk | TABI",
+    "seoDescription": "A fact-aware Osaka walking route around Nakanoshima's riverside, civic buildings, museums, and nearby stations.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Nakanoshima",
+      "Osaka architecture",
+      "Osaka river walk"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Keep the route compact and anchored to one area.",
+        "Confirm current hours, fees, access, and event details from official sources before travel.",
+        "Build in weather, food, and transit pauses instead of treating the day as a checklist."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official tourism, park, museum, transport, or city pages for current notices.",
+        "Avoid adding distant stops unless the day still has slack."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not assume restaurants, observation areas, museums, or events are open daily.",
+        "Do not cross the city repeatedly when one neighborhood can carry the day."
+      ],
+      "season": "Nakanoshima works year-round, but weather, holidays, events, and closures can change the best order.",
+      "budget": "Costs vary; confirm current transport, entry, meal, and shopping prices directly.",
+      "timeNeeded": "A focused half day works for the core walk; allow a full day if you add museums, meals, or shopping."
+    }
+  },
+  {
     "id": "asakusa-sensoji-riverside-walk",
     "title": "Asakusa, Sensoji, and a Riverside Walk That Still Feels Grounded",
     "summary": "Asakusa is one of Tokyo?s clearest introductions to older city texture: temple approach, shopping streets, river views, and easy transit. Leave space around Sensoji instead of rushing it.",
@@ -48,6 +128,278 @@
       "Asakusa",
       "tokyo",
       "heritage walk"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "kanazawa-gold-leaf-and-craft-neighborhoods",
+    "title": "Kanazawa Gold Leaf and Craft Neighborhoods Worth Slowing Down For",
+    "summary": "Kanazawa is more than one garden and a quick station stop. Its craft districts, gold leaf workshops, and quiet lanes reward travelers who move slowly and look closely.",
+    "category": "culture",
+    "subcategory": "craft-studios",
+    "tags": [
+      "craft",
+      "design",
+      "heritage",
+      "slow-travel"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 7,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/kanazawa-gold-leaf.png",
+    "imageAlt": "A refined craft studio scene inspired by Kanazawa gold leaf and traditional tools",
+    "sections": [
+      {
+        "heading": "Treat Craft as Context",
+        "body": "Gold leaf is not just a souvenir surface. It connects Kanazawa to restoration, lacquerware, architecture, and the citys long habit of making beauty feel precise."
+      },
+      {
+        "heading": "Walk Between Workshops",
+        "body": "The best craft day links one formal visit with smaller streets, galleries, and tea stops. Give yourself time to notice materials rather than only buying the finished object."
+      },
+      {
+        "heading": "Buy With Care",
+        "body": "Small items travel well, but delicate finishes need padding and realistic expectations. Ask about care, moisture, and whether the piece is decorative or meant for daily use."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "Kanazawa Gold Leaf and Craft Neighborhood Guide | TABI",
+    "seoDescription": "Explore Kanazawa through gold leaf, craft neighborhoods, galleries, tea stops, and slower cultural context.",
+    "audience": "Culture-focused travelers who want Kanazawa beyond a quick garden visit.",
+    "searchAliases": [
+      "Kanazawa gold leaf",
+      "Kanazawa craft",
+      "Japanese craft travel"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use craft travel as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
+      ],
+      "beforeYouGo": [
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
+      ],
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
+    }
+  },
+  {
+    "id": "nakanoshima-river-architecture-walk",
+    "title": "Nakanoshima for River Views, Architecture, and a Calmer Osaka Walk",
+    "summary": "Nakanoshima shows a more spacious side of Osaka through river paths, civic buildings, museums, and cafes. It is a good counterweight to Namba and Umeda.",
+    "category": "culture",
+    "subcategory": "heritage-walks",
+    "tags": [
+      "osaka",
+      "art",
+      "walking",
+      "heritage"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-castle-park.png",
+    "imageAlt": "A spacious Osaka daylight scene with park trees and civic atmosphere",
+    "sections": [
+      {
+        "heading": "Use Nakanoshima as the anchor",
+        "body": "Official tourism and transport sources identify Nakanoshima as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.sakai-tcb.or.jp/en/"
+    ],
+    "seoTitle": "Nakanoshima for River Views, Architecture, and a Calmer Osaka Walk | TABI",
+    "seoDescription": "Nakanoshima shows a more spacious side of Osaka through river paths, civic buildings, museums, and cafes. It is a good counterweight to Namba and Umeda.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Nakanoshima",
+      "osaka",
+      "architecture"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Anchor the day around one compact area.",
+        "Confirm current access, hours, fees, and closures from official sources.",
+        "Keep food, weather, and transit breaks in the plan."
+      ],
+      "beforeYouGo": [
+        "Save the nearest station and one backup route offline.",
+        "Check official facility and transport pages.",
+        "Avoid overfilling the day."
+      ],
+      "avoid": [
+        "Do not rely on old social posts for operating details.",
+        "Do not cross the city repeatedly with luggage.",
+        "Do not assume events or observation areas are open daily."
+      ],
+      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
+      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
+      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
+    }
+  },
+  {
+    "id": "onsen-etiquette-for-the-first-visit",
+    "title": "Onsen Etiquette for Your First Visit Without Feeling Awkward",
+    "summary": "A first onsen visit can feel intimidating until the rhythm is clear. This guide explains washing, towels, quiet behavior, and how to choose a bath that suits your comfort level.",
+    "category": "culture",
+    "subcategory": "local-customs-etiquette",
+    "tags": [
+      "local-customs",
+      "ryokan",
+      "first-time",
+      "travel-tips"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/onsen-etiquette.png",
+    "imageAlt": "A quiet outdoor onsen pool with steam, stones, and forested hills",
+    "sections": [
+      {
+        "heading": "Learn the Basic Sequence",
+        "body": "Undress in the changing room, wash thoroughly before entering, keep the small towel out of the bath, and move quietly. Once the order makes sense, the experience becomes much easier."
+      },
+      {
+        "heading": "Choose the Right Setting",
+        "body": "Large public baths can feel efficient, while ryokan baths may feel calmer. Private baths are useful for travelers who want more control over privacy, tattoos, or nervous first steps."
+      },
+      {
+        "heading": "Respect the Shared Quiet",
+        "body": "Onsen are social spaces, but they are not loud ones. Keep conversation low, avoid splashing, and treat the bath as a place to reset rather than perform."
+      }
+    ],
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "static-editorial",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
+    "seoTitle": "Onsen Etiquette for First-Time Visitors | TABI",
+    "seoDescription": "Understand onsen etiquette, washing order, towels, tattoos, privacy, and first-visit confidence before bathing in Japan.",
+    "audience": "First-time visitors who want to enjoy Japanese baths respectfully.",
+    "searchAliases": [
+      "onsen etiquette",
+      "Japanese bath rules",
+      "first onsen visit"
+    ],
+    "tripBrief": {
+      "takeaways": [
+        "Use onsen etiquette as a lens for slower decisions, not as another checklist.",
+        "Build the day around one anchor and leave room for weather, meals, and transit.",
+        "Confirm current details from official sources before you go."
+      ],
+      "beforeYouGo": [
+        "Save the key station, neighborhood, and fallback route offline.",
+        "Check current opening days, seasonal closures, and reservation needs.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not stack too many distant stops into one day.",
+        "Avoid treating small local places as photo sets.",
+        "Do not rely on old prices, timetables, or social media posts."
+      ],
+      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
+      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
+      "timeNeeded": "A half day to one full day usually gives the experience enough room."
+    }
+  },
+  {
+    "id": "osaka-castle-park-half-day-history",
+    "title": "Osaka Castle Park in a Half Day: History Without Rushing",
+    "summary": "Osaka Castle Park gives visitors a broad historical anchor in the city. Combine the castle area, park time, and official checks for current access.",
+    "category": "culture",
+    "subcategory": "heritage-walks",
+    "tags": [
+      "osaka",
+      "heritage",
+      "walking",
+      "first-time"
+    ],
+    "publishedAt": "2026-05-31",
+    "readingTime": 6,
+    "affiliate": false,
+    "featured": false,
+    "image": "/assets/images/osaka-castle-park.png",
+    "imageAlt": "Osaka Castle tower beyond stone walls moat and park trees in daylight",
+    "sections": [
+      {
+        "heading": "Use Osaka Castle Park as the anchor",
+        "body": "Official tourism and transport sources identify Osaka Castle Park as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+      },
+      {
+        "heading": "Check live details before committing",
+        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+      },
+      {
+        "heading": "Build in a slower pause",
+        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+      }
+    ],
+    "sourcePolicy": "official-primary-summary",
+    "verificationLevel": "official-source-reviewed",
+    "lastChecked": "2026-05-31",
+    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
+    "sourceUrls": [
+      "https://www.osaka-info.jp/en/",
+      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
+      "https://subway.osakametro.co.jp/en/",
+      "https://www.sakai-tcb.or.jp/en/"
+    ],
+    "seoTitle": "Osaka Castle Park in a Half Day: History Without Rushing | TABI",
+    "seoDescription": "Osaka Castle Park gives visitors a broad historical anchor in the city. Combine the castle area, park time, and official checks for current access.",
+    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "searchAliases": [
+      "Osaka Castle Park",
+      "osaka",
+      "history"
     ],
     "tripBrief": {
       "takeaways": [
@@ -142,77 +494,6 @@
     }
   },
   {
-    "id": "osaka-castle-park-half-day-history",
-    "title": "Osaka Castle Park in a Half Day: History Without Rushing",
-    "summary": "Osaka Castle Park gives visitors a broad historical anchor in the city. Combine the castle area, park time, and official checks for current access.",
-    "category": "culture",
-    "subcategory": "heritage-walks",
-    "tags": [
-      "osaka",
-      "heritage",
-      "walking",
-      "first-time"
-    ],
-    "publishedAt": "2026-05-31",
-    "readingTime": 6,
-    "affiliate": false,
-    "featured": false,
-    "image": "/assets/images/osaka-castle-park.png",
-    "imageAlt": "Osaka Castle tower beyond stone walls moat and park trees in daylight",
-    "sections": [
-      {
-        "heading": "Use Osaka Castle Park as the anchor",
-        "body": "Official tourism and transport sources identify Osaka Castle Park as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
-      },
-      {
-        "heading": "Check live details before committing",
-        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
-      },
-      {
-        "heading": "Build in a slower pause",
-        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
-      }
-    ],
-    "sourcePolicy": "official-primary-summary",
-    "verificationLevel": "official-source-reviewed",
-    "lastChecked": "2026-05-31",
-    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
-    "sourceUrls": [
-      "https://www.osaka-info.jp/en/",
-      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
-      "https://subway.osakametro.co.jp/en/",
-      "https://www.sakai-tcb.or.jp/en/"
-    ],
-    "seoTitle": "Osaka Castle Park in a Half Day: History Without Rushing | TABI",
-    "seoDescription": "Osaka Castle Park gives visitors a broad historical anchor in the city. Combine the castle area, park time, and official checks for current access.",
-    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
-    "searchAliases": [
-      "Osaka Castle Park",
-      "osaka",
-      "history"
-    ],
-    "tripBrief": {
-      "takeaways": [
-        "Anchor the day around one compact area.",
-        "Confirm current access, hours, fees, and closures from official sources.",
-        "Keep food, weather, and transit breaks in the plan."
-      ],
-      "beforeYouGo": [
-        "Save the nearest station and one backup route offline.",
-        "Check official facility and transport pages.",
-        "Avoid overfilling the day."
-      ],
-      "avoid": [
-        "Do not rely on old social posts for operating details.",
-        "Do not cross the city repeatedly with luggage.",
-        "Do not assume events or observation areas are open daily."
-      ],
-      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
-      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
-      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
-    }
-  },
-  {
     "id": "shinsekai-tsutenkaku-with-context",
     "title": "Shinsekai and Tsutenkaku With Context, Not Just Neon",
     "summary": "Shinsekai is colorful, nostalgic, and easy to flatten into a photo stop. Treat the area around Tsutenkaku as food, history, and street texture.",
@@ -284,212 +565,429 @@
     }
   },
   {
-    "id": "nakanoshima-river-architecture-walk",
-    "title": "Nakanoshima for River Views, Architecture, and a Calmer Osaka Walk",
-    "summary": "Nakanoshima shows a more spacious side of Osaka through river paths, civic buildings, museums, and cafes. It is a good counterweight to Namba and Umeda.",
-    "category": "culture",
-    "subcategory": "heritage-walks",
-    "tags": [
-      "osaka",
-      "art",
-      "walking",
-      "heritage"
-    ],
-    "publishedAt": "2026-05-31",
-    "readingTime": 6,
-    "affiliate": false,
     "featured": false,
-    "image": "/assets/images/osaka-castle-park.png",
-    "imageAlt": "A spacious Osaka daylight scene with park trees and civic atmosphere",
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-30",
+    "publishedAt": "2026-05-30",
+    "affiliate": false,
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including JNTO travel guidance, Japan Tourism Agency responsible travel materials, Ministry of the Environment national park information, local tourism office guidance, and accommodation or facility policies where relevant. Live prices, access rules, opening details, safety notices, booking conditions, and transport operations should be confirmed directly with official sources before travel.",
+    "id": "japanese-festivals-without-crowd-mistakes",
+    "title": "Japanese Festivals Without the Crowd Mistakes",
+    "summary": "Festivals can be joyful, crowded, and deeply local at the same time. Plan your exit, respect procession space, and treat the event as a community day rather than a stage show.",
+    "category": "culture",
+    "tags": [
+      "festivals",
+      "local-customs",
+      "summer",
+      "culture"
+    ],
+    "readingTime": 6,
+    "image": "/assets/images/japanese-festival-crowd-etiquette.png",
+    "imageAlt": "A lively Japanese summer festival street with lanterns, food stalls, and a moving crowd",
     "sections": [
       {
-        "heading": "Use Nakanoshima as the anchor",
-        "body": "Official tourism and transport sources identify Nakanoshima as a practical area for visitors. Keep the route compact and use the neighborhood as the main frame rather than adding distant stops."
+        "heading": "Know the Flow Before You Arrive",
+        "body": "Check the official route, start time, road closures, station exits, and final trains. The most stressful festival mistakes often happen after the main event ends."
       },
       {
-        "heading": "Check live details before committing",
-        "body": "Opening days, event schedules, admission rules, prices, and transport conditions can change. Confirm any must-visit venue with official or primary sources before travel."
+        "heading": "Protect Procession Space",
+        "body": "Floats, dancers, portable shrines, musicians, and volunteers need room to move. Avoid stepping into routes for photos, and follow staff instructions even when the crowd is confusing."
       },
       {
-        "heading": "Build in a slower pause",
-        "body": "The best Osaka day is not only movement. Leave space for a meal, a weather break, and a short walk so the article route stays useful in real conditions."
+        "heading": "Eat and Watch Like a Guest",
+        "body": "Buy locally, keep trash under control, and notice how residents use the festival. It is entertainment, but it is also a community rhythm with people working behind it."
       }
     ],
-    "sourcePolicy": "official-primary-summary",
-    "verificationLevel": "official-source-reviewed",
-    "lastChecked": "2026-05-31",
-    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets: https://www.osaka-info.jp/en/; https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/; https://subway.osakametro.co.jp/en/; https://www.sakai-tcb.or.jp/en/. Volatile details must be checked on official pages before travel.",
-    "sourceUrls": [
-      "https://www.osaka-info.jp/en/",
-      "https://www.city.osaka.lg.jp/contents/wdu020/enjoy/en/",
-      "https://subway.osakametro.co.jp/en/",
-      "https://www.sakai-tcb.or.jp/en/"
-    ],
-    "seoTitle": "Nakanoshima for River Views, Architecture, and a Calmer Osaka Walk | TABI",
-    "seoDescription": "Nakanoshima shows a more spacious side of Osaka through river paths, civic buildings, museums, and cafes. It is a good counterweight to Namba and Umeda.",
-    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
+    "seoTitle": "Japanese Festival Etiquette and Crowd Tips | TABI",
+    "seoDescription": "How to enjoy Japanese festivals with better crowd planning, procession etiquette, food stall manners, exits, and local respect.",
+    "audience": "Travelers attending matsuri, parades, and seasonal festivals in Japan.",
     "searchAliases": [
-      "Nakanoshima",
-      "osaka",
-      "architecture"
+      "Japanese festival etiquette",
+      "matsuri crowd tips",
+      "Japan summer festival travel"
     ],
-    "tripBrief": {
-      "takeaways": [
-        "Anchor the day around one compact area.",
-        "Confirm current access, hours, fees, and closures from official sources.",
-        "Keep food, weather, and transit breaks in the plan."
-      ],
-      "beforeYouGo": [
-        "Save the nearest station and one backup route offline.",
-        "Check official facility and transport pages.",
-        "Avoid overfilling the day."
-      ],
-      "avoid": [
-        "Do not rely on old social posts for operating details.",
-        "Do not cross the city repeatedly with luggage.",
-        "Do not assume events or observation areas are open daily."
-      ],
-      "season": "Usable year-round, but weather, holidays, events, and closures can change the best route.",
-      "budget": "Costs vary; confirm current transport, entry, and meal prices directly.",
-      "timeNeeded": "A focused half day works; allow a full day if you add museums or meals."
-    }
+    "subcategory": "local-customs-etiquette"
   },
   {
-    "id": "kanazawa-gold-leaf-and-craft-neighborhoods",
-    "title": "Kanazawa Gold Leaf and Craft Neighborhoods Worth Slowing Down For",
-    "summary": "Kanazawa is more than one garden and a quick station stop. Its craft districts, gold leaf workshops, and quiet lanes reward travelers who move slowly and look closely.",
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-30",
+    "publishedAt": "2026-05-30",
+    "affiliate": false,
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including JNTO travel guidance, Japan Tourism Agency responsible travel materials, Ministry of the Environment national park information, local tourism office guidance, and accommodation or facility policies where relevant. Live prices, access rules, opening details, safety notices, booking conditions, and transport operations should be confirmed directly with official sources before travel.",
+    "id": "jazz-kissa-and-listening-bars-in-japan",
+    "title": "Jazz Kissa and Listening Bars in Japan",
+    "summary": "Japan’s listening culture rewards attention. A jazz kissa or listening bar is less about nightlife noise and more about records, equipment, quiet conversation, and knowing when to simply listen.",
     "category": "culture",
-    "subcategory": "craft-studios",
     "tags": [
-      "craft",
-      "design",
-      "heritage",
+      "music",
+      "nightlife",
+      "culture",
+      "tokyo"
+    ],
+    "readingTime": 5,
+    "image": "/assets/images/jazz-kissa-listening-bar.png",
+    "imageAlt": "A dim Japanese listening bar with vinyl records, warm lamps, and high-end speakers",
+    "sections": [
+      {
+        "heading": "Understand the Listening First",
+        "body": "In many jazz kissa and listening bars, the sound system and record selection are the main event. Conversation may be welcome, but the room often asks for a lower volume."
+      },
+      {
+        "heading": "Order Simply and Settle In",
+        "body": "Expect coffee, whisky, cocktails, or a cover charge depending on the place. Read the menu, avoid taking over the counter, and let the staff set the pace."
+      },
+      {
+        "heading": "Do Not Turn the Room Into Content",
+        "body": "Some venues allow photos; others do not. Even when photos are fine, the better memory may be a record side, a quiet drink, and the feeling of not needing to perform."
+      }
+    ],
+    "seoTitle": "Jazz Kissa and Listening Bars in Japan | TABI",
+    "seoDescription": "How to visit jazz kissa and listening bars in Japan with attention to sound, manners, ordering, photos, and quiet nightlife culture.",
+    "audience": "Travelers interested in music, vinyl, bars, and quieter night experiences.",
+    "searchAliases": [
+      "jazz kissa Japan",
+      "listening bar Tokyo",
+      "vinyl bar Japan"
+    ],
+    "subcategory": "aesthetics-philosophy"
+  },
+  {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "takeaways": [
+        "Plan around one clear purpose, then leave room for the place to breathe.",
+        "Use official sources for live details before spending time or money.",
+        "Protect energy, weather flexibility, and meal timing as part of the route."
+      ],
+      "beforeYouGo": [
+        "Save key addresses and fallback routes offline.",
+        "Check current transport, opening, or local rule changes.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not rely only on social posts or outdated blog details.",
+        "Avoid overloading one day with distant stops.",
+        "Do not ignore local etiquette, weather, or fatigue."
+      ],
+      "season": "The core advice is evergreen, but timing, weather, crowding, and local events can change the best choice.",
+      "budget": "Costs vary by season, city, and booking timing; confirm current prices before travel.",
+      "timeNeeded": "Use this guide as a planning lens for a half day, full day, or wider route depending on the topic."
+    },
+    "id": "how-to-enjoy-japanese-gardens",
+    "title": "How to Enjoy Japanese Gardens Without Rushing Them",
+    "summary": "Japanese gardens are not only photo stops. Slow down, read the route, notice borrowed scenery, and let the garden change as you move.",
+    "category": "culture",
+    "tags": [
+      "gardens",
+      "aesthetics",
+      "walking",
       "slow-travel"
     ],
-    "publishedAt": "2026-05-31",
+    "publishedAt": "2026-05-29",
+    "readingTime": 6,
+    "affiliate": false,
+    "image": "/assets/images/japanese-garden-guide.png",
+    "imageAlt": "A visitor sitting quietly beside a pond in a traditional Japanese garden",
+    "sections": [
+      {
+        "heading": "Walk the Garden as a Sequence",
+        "body": "Many gardens are designed to unfold gradually. Bridges, stones, ponds, gates, and framed views change the scene as you move, so rushing to the most famous viewpoint misses much of the design."
+      },
+      {
+        "heading": "Notice What Is Outside the Garden",
+        "body": "Borrowed scenery, skyline control, hills, trees, and surrounding buildings can all affect the composition. A garden may be using the wider landscape more deliberately than it first appears."
+      },
+      {
+        "heading": "Let Seasons Change the Meaning",
+        "body": "Moss after rain, winter branches, spring blossoms, summer green, and autumn color all create different experiences. The same garden can be worth revisiting because it is never exactly the same."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including official garden visitor information, cultural property guidance, local tourism offices, and Japanese aesthetics references. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "How to Enjoy Japanese Gardens | TABI",
+    "seoDescription": "A slower guide to Japanese gardens, including walking routes, borrowed scenery, seasonal change, and how to look beyond photos.",
+    "audience": "Travelers interested in gardens, design, and slower cultural visits.",
+    "searchAliases": [
+      "Japanese garden guide",
+      "how to enjoy Japanese gardens",
+      "borrowed scenery Japan"
+    ],
+    "subcategory": "aesthetics-philosophy"
+  },
+  {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "takeaways": [
+        "Plan around one clear purpose, then leave room for the place to breathe.",
+        "Use official sources for live details before spending time or money.",
+        "Protect energy, weather flexibility, and meal timing as part of the route."
+      ],
+      "beforeYouGo": [
+        "Save key addresses and fallback routes offline.",
+        "Check current transport, opening, or local rule changes.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not rely only on social posts or outdated blog details.",
+        "Avoid overloading one day with distant stops.",
+        "Do not ignore local etiquette, weather, or fatigue."
+      ],
+      "season": "The core advice is evergreen, but timing, weather, crowding, and local events can change the best choice.",
+      "budget": "Costs vary by season, city, and booking timing; confirm current prices before travel.",
+      "timeNeeded": "Use this guide as a planning lens for a half day, full day, or wider route depending on the topic."
+    },
+    "id": "omiyage-gift-culture-for-travelers",
+    "title": "Omiyage Gift Culture in Japan: What Travelers Can Learn From It",
+    "summary": "Omiyage is more than souvenir shopping. Understanding the custom helps travelers choose gifts with more care, context, and usefulness.",
+    "category": "culture",
+    "tags": [
+      "omiyage",
+      "souvenirs",
+      "local-customs",
+      "shopping"
+    ],
+    "publishedAt": "2026-05-29",
+    "readingTime": 5,
+    "affiliate": false,
+    "image": "/assets/images/omiyage-gift-culture.png",
+    "imageAlt": "Wrapped omiyage gift boxes arranged carefully on a hotel desk",
+    "sections": [
+      {
+        "heading": "Omiyage Is About the Receiver",
+        "body": "The best omiyage is easy to share, tied to a place, and considerate of the person receiving it. It is less about proving where you went and more about carrying a small piece of the trip back responsibly."
+      },
+      {
+        "heading": "Regional Specificity Matters",
+        "body": "Station sweets, local tea, ceramics, seasonally wrapped snacks, and craft items can tell a clearer story than generic souvenirs. Look for items that belong to the region rather than the airport shelf alone."
+      },
+      {
+        "heading": "Think About Practical Carrying",
+        "body": "Good gifts survive luggage, heat, customs rules, and the time until you return. Fragile, perishable, or bulky items may be beautiful but poor choices if they create stress."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including regional tourism shopping guidance, department store and station retail practices, JNTO souvenir information, and customs-aware travel planning. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "Omiyage Gift Culture in Japan | TABI",
+    "seoDescription": "What travelers can learn from Japanese omiyage culture when choosing thoughtful, regional, packable souvenirs.",
+    "audience": "Travelers buying gifts and souvenirs with more cultural context.",
+    "searchAliases": [
+      "omiyage meaning",
+      "Japanese gift culture",
+      "Japan souvenir etiquette"
+    ],
+    "subcategory": "local-customs-etiquette"
+  },
+  {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "takeaways": [
+        "Plan around one clear purpose, then leave room for the place to breathe.",
+        "Use official sources for live details before spending time or money.",
+        "Protect energy, weather flexibility, and meal timing as part of the route."
+      ],
+      "beforeYouGo": [
+        "Save key addresses and fallback routes offline.",
+        "Check current transport, opening, or local rule changes.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not rely only on social posts or outdated blog details.",
+        "Avoid overloading one day with distant stops.",
+        "Do not ignore local etiquette, weather, or fatigue."
+      ],
+      "season": "The core advice is evergreen, but timing, weather, crowding, and local events can change the best choice.",
+      "budget": "Costs vary by season, city, and booking timing; confirm current prices before travel.",
+      "timeNeeded": "Use this guide as a planning lens for a half day, full day, or wider route depending on the topic."
+    },
+    "id": "sento-public-bath-etiquette-in-japan",
+    "title": "Sento Public Bath Etiquette in Japan",
+    "summary": "A neighborhood sento can be one of the most grounding experiences in Japan. Learn the basic flow so the visit feels calm instead of confusing.",
+    "category": "culture",
+    "tags": [
+      "sento",
+      "onsen",
+      "local-customs",
+      "wellness"
+    ],
+    "publishedAt": "2026-05-29",
+    "readingTime": 6,
+    "affiliate": false,
+    "image": "/assets/images/sento-public-bath-etiquette.png",
+    "imageAlt": "A clean Japanese sento entrance with shoe lockers, towels, and bath baskets",
+    "sections": [
+      {
+        "heading": "Know the Order Before You Enter",
+        "body": "Pay, undress in the changing area, wash thoroughly before entering the bath, soak quietly, and keep towels out of the water. The sequence is simple once you know it."
+      },
+      {
+        "heading": "Travel Light and Respect the Room",
+        "body": "Bring only what you need, keep belongings contained, avoid loud conversation, and watch how regulars move through the space. A sento is public, but it is also deeply local."
+      },
+      {
+        "heading": "Check Tattoo and Facility Rules",
+        "body": "Rules vary by bathhouse. Some welcome tattoos, some request covers, and some have separate policies. Look for current information and choose places that clearly fit your needs."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including local sento association guidance, public bath facility rules, JNTO etiquette materials, and municipal visitor information. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "Sento Etiquette in Japan | TABI",
+    "seoDescription": "How to visit a Japanese public bath respectfully, including washing order, towel rules, tattoo checks, and local sento behavior.",
+    "audience": "Travelers interested in local bathing culture beyond hotel baths.",
+    "searchAliases": [
+      "sento etiquette Japan",
+      "public bath Japan rules",
+      "tattoo sento Japan"
+    ],
+    "subcategory": "local-customs-etiquette"
+  },
+  {
+    "featured": false,
+    "sourcePolicy": "tabi-local-editorial",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-29",
+    "tripBrief": {
+      "takeaways": [
+        "Plan around one clear purpose, then leave room for the place to breathe.",
+        "Use official sources for live details before spending time or money.",
+        "Protect energy, weather flexibility, and meal timing as part of the route."
+      ],
+      "beforeYouGo": [
+        "Save key addresses and fallback routes offline.",
+        "Check current transport, opening, or local rule changes.",
+        "Keep the plan lighter than it looks on a map."
+      ],
+      "avoid": [
+        "Do not rely only on social posts or outdated blog details.",
+        "Avoid overloading one day with distant stops.",
+        "Do not ignore local etiquette, weather, or fatigue."
+      ],
+      "season": "The core advice is evergreen, but timing, weather, crowding, and local events can change the best choice.",
+      "budget": "Costs vary by season, city, and booking timing; confirm current prices before travel.",
+      "timeNeeded": "Use this guide as a planning lens for a half day, full day, or wider route depending on the topic."
+    },
+    "id": "temple-and-shrine-etiquette-for-travelers",
+    "title": "Temple and Shrine Etiquette in Japan: A Traveler-Friendly Guide",
+    "summary": "You do not need to know every ritual to visit respectfully. A few habits around quiet, cleansing, photography, and private space make sacred places easier to understand.",
+    "category": "culture",
+    "tags": [
+      "shrines",
+      "temples",
+      "local-customs",
+      "etiquette"
+    ],
+    "publishedAt": "2026-05-29",
+    "readingTime": 6,
+    "affiliate": false,
+    "image": "/assets/images/temple-shrine-etiquette.png",
+    "imageAlt": "A visitor respectfully bowing near a quiet shrine approach in Japan",
+    "sections": [
+      {
+        "heading": "Start With Quiet Attention",
+        "body": "Sacred sites are not performance spaces. Walk slowly, keep voices low, and watch how local visitors move before worrying about perfect ritual order."
+      },
+      {
+        "heading": "Photography Is Secondary",
+        "body": "Some places allow photos, some restrict them, and some feel too private even without a sign. Avoid blocking paths, photographing worshippers closely, or turning prayer spaces into backdrops."
+      },
+      {
+        "heading": "Respect Boundaries You Cannot Read",
+        "body": "Ropes, steps, inner halls, grave areas, and residential edges all matter. When unsure, stay outside the boundary and let the uncertainty make you more careful."
+      }
+    ],
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including official shrine and temple visitor guidance, local tourism etiquette pages, cultural property information, and JNTO travel etiquette materials. Live prices, access rules, opening details, safety notices, and transport operations should be confirmed directly with official sources before travel.",
+    "seoTitle": "Temple and Shrine Etiquette in Japan | TABI",
+    "seoDescription": "A practical guide to visiting Japanese temples and shrines respectfully, including quiet behavior, photography, cleansing, and boundaries.",
+    "audience": "Travelers visiting sacred sites in Japan for the first time.",
+    "searchAliases": [
+      "Japan shrine etiquette",
+      "temple etiquette Japan",
+      "how to visit shrines Japan"
+    ],
+    "subcategory": "temples-shrines"
+  },
+  {
+    "id": "what-sustainable-tourism-means-in-japan",
+    "title": "What Sustainable Tourism Means in Japan",
+    "summary": "Sustainable travel is not only about the environment. In Japan, it also means respecting local routines, supporting regional businesses, and reducing pressure on crowded places.",
+    "category": "culture",
+    "tags": [
+      "sustainable-travel",
+      "local-customs",
+      "slow-travel",
+      "responsible-travel"
+    ],
+    "publishedAt": "2026-05-28",
     "readingTime": 7,
     "affiliate": false,
     "featured": false,
-    "image": "/assets/images/kanazawa-gold-leaf.png",
-    "imageAlt": "A refined craft studio scene inspired by Kanazawa gold leaf and traditional tools",
+    "image": "/assets/images/sustainable-tourism.png",
+    "imageAlt": "A small countryside inn beside rice fields with a paper map and reusable bottle on a wooden railing",
     "sections": [
       {
-        "heading": "Treat Craft as Context",
-        "body": "Gold leaf is not just a souvenir surface. It connects Kanazawa to restoration, lacquerware, architecture, and the citys long habit of making beauty feel precise."
+        "heading": "Think Beyond a Low-Impact Checklist",
+        "body": "Sustainable tourism is about the relationship between visitors and the places that host them. In Japan, that can mean reducing waste, but it also means protecting neighborhood routines, respecting sacred sites, and helping money reach local businesses."
       },
       {
-        "heading": "Walk Between Workshops",
-        "body": "The best craft day links one formal visit with smaller streets, galleries, and tea stops. Give yourself time to notice materials rather than only buying the finished object."
+        "heading": "Travel Outside the Narrow Peak",
+        "body": "Overcrowding often happens at the same famous places, at the same time, in the same season. Shifting the hour, staying overnight nearby, visiting lesser-known districts, or choosing shoulder seasons can make the trip better for both travelers and residents."
       },
       {
-        "heading": "Buy With Care",
-        "body": "Small items travel well, but delicate finishes need padding and realistic expectations. Ask about care, moisture, and whether the piece is decorative or meant for daily use."
+        "heading": "Spend Where the Place Lives",
+        "body": "Small inns, family restaurants, local guides, craft workshops, regional trains, and neighborhood shops make travel more specific. They also keep more value in the community than a trip built only around extractive photo stops."
+      },
+      {
+        "heading": "Use Official Local Guidance",
+        "body": "Many destinations publish etiquette, conservation, or crowd-management information. Checking those sources before arrival helps you understand what the place is asking from visitors."
       }
     ],
     "sourcePolicy": "tabi-local-editorial",
-    "verificationLevel": "static-editorial",
-    "lastChecked": "2026-05-31",
-    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
-    "seoTitle": "Kanazawa Gold Leaf and Craft Neighborhood Guide | TABI",
-    "seoDescription": "Explore Kanazawa through gold leaf, craft neighborhoods, galleries, tea stops, and slower cultural context.",
-    "audience": "Culture-focused travelers who want Kanazawa beyond a quick garden visit.",
+    "verificationLevel": "official-source-informed",
+    "lastChecked": "2026-05-28",
+    "sourceNote": "Original TABI editorial article prepared from multiple official and high-trust sources, including UN Tourism sustainable tourism guidance, JNTO sustainability materials, Japan Tourism Agency information, and local destination rules. Live schedules, prices, warnings, access rules, and opening details should be confirmed directly with official sources before travel.",
+    "seoTitle": "Sustainable Tourism in Japan: A Practical Guide | TABI",
+    "seoDescription": "What sustainable tourism means in Japan, from local spending and crowd reduction to cultural respect and official destination guidance.",
+    "audience": "Travelers who want their Japan trip to support rather than flatten the places they visit.",
     "searchAliases": [
-      "Kanazawa gold leaf",
-      "Kanazawa craft",
-      "Japanese craft travel"
+      "sustainable tourism Japan",
+      "responsible travel Japan",
+      "Japan overtourism"
     ],
     "tripBrief": {
       "takeaways": [
-        "Use craft travel as a lens for slower decisions, not as another checklist.",
-        "Build the day around one anchor and leave room for weather, meals, and transit.",
-        "Confirm current details from official sources before you go."
+        "Build the day around one clear anchor instead of a crowded checklist.",
+        "Confirm live details from official sources before you commit money or time.",
+        "Leave enough space for weather, meals, transit, and recovery."
       ],
       "beforeYouGo": [
-        "Save the key station, neighborhood, and fallback route offline.",
-        "Check current opening days, seasonal closures, and reservation needs.",
-        "Keep the plan lighter than it looks on a map."
+        "Save key addresses and transport options offline.",
+        "Check official guidance for closures, safety notes, or seasonal changes.",
+        "Choose one backup plan that still feels worthwhile if the weather changes."
       ],
       "avoid": [
-        "Do not stack too many distant stops into one day.",
-        "Avoid treating small local places as photo sets.",
-        "Do not rely on old prices, timetables, or social media posts."
+        "Do not rely only on social media recommendations.",
+        "Avoid stacking distant stops into a short day.",
+        "Do not treat local neighborhoods as photo sets."
       ],
-      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
-      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
-      "timeNeeded": "A half day to one full day usually gives the experience enough room."
-    }
-  },
-  {
-    "id": "onsen-etiquette-for-the-first-visit",
-    "title": "Onsen Etiquette for Your First Visit Without Feeling Awkward",
-    "summary": "A first onsen visit can feel intimidating until the rhythm is clear. This guide explains washing, towels, quiet behavior, and how to choose a bath that suits your comfort level.",
-    "category": "culture",
-    "subcategory": "local-customs-etiquette",
-    "tags": [
-      "local-customs",
-      "ryokan",
-      "first-time",
-      "travel-tips"
-    ],
-    "publishedAt": "2026-05-31",
-    "readingTime": 6,
-    "affiliate": false,
-    "featured": false,
-    "image": "/assets/images/onsen-etiquette.png",
-    "imageAlt": "A quiet outdoor onsen pool with steam, stones, and forested hills",
-    "sections": [
-      {
-        "heading": "Learn the Basic Sequence",
-        "body": "Undress in the changing room, wash thoroughly before entering, keep the small towel out of the bath, and move quietly. Once the order makes sense, the experience becomes much easier."
-      },
-      {
-        "heading": "Choose the Right Setting",
-        "body": "Large public baths can feel efficient, while ryokan baths may feel calmer. Private baths are useful for travelers who want more control over privacy, tattoos, or nervous first steps."
-      },
-      {
-        "heading": "Respect the Shared Quiet",
-        "body": "Onsen are social spaces, but they are not loud ones. Keep conversation low, avoid splashing, and treat the bath as a place to reset rather than perform."
-      }
-    ],
-    "sourcePolicy": "tabi-local-editorial",
-    "verificationLevel": "static-editorial",
-    "lastChecked": "2026-05-31",
-    "sourceNote": "Created from TABI-owned editorial drafts and general travel knowledge. Live operating details, prices, opening hours, closures, and rules should be confirmed with official sources before travel.",
-    "seoTitle": "Onsen Etiquette for First-Time Visitors | TABI",
-    "seoDescription": "Understand onsen etiquette, washing order, towels, tattoos, privacy, and first-visit confidence before bathing in Japan.",
-    "audience": "First-time visitors who want to enjoy Japanese baths respectfully.",
-    "searchAliases": [
-      "onsen etiquette",
-      "Japanese bath rules",
-      "first onsen visit"
-    ],
-    "tripBrief": {
-      "takeaways": [
-        "Use onsen etiquette as a lens for slower decisions, not as another checklist.",
-        "Build the day around one anchor and leave room for weather, meals, and transit.",
-        "Confirm current details from official sources before you go."
-      ],
-      "beforeYouGo": [
-        "Save the key station, neighborhood, and fallback route offline.",
-        "Check current opening days, seasonal closures, and reservation needs.",
-        "Keep the plan lighter than it looks on a map."
-      ],
-      "avoid": [
-        "Do not stack too many distant stops into one day.",
-        "Avoid treating small local places as photo sets.",
-        "Do not rely on old prices, timetables, or social media posts."
-      ],
-      "season": "The core advice is evergreen, but weather, holidays, and seasonal closures can change the best route.",
-      "budget": "Costs vary by city and season; use this as an editorial planning lens and confirm current prices directly.",
-      "timeNeeded": "A half day to one full day usually gives the experience enough room."
-    }
+      "season": "This advice is broadly evergreen, but seasonal weather, holidays, and local events can change the best timing.",
+      "budget": "Costs vary by city, season, and booking timing; use this as a planning lens rather than a price guarantee.",
+      "timeNeeded": "Use this as a decision filter across the whole trip, not as a single-day itinerary."
+    },
+    "subcategory": "local-customs-etiquette"
   },
   {
     "id": "what-wabi-sabi-really-means",
     "title": "What Wabi-Sabi Really Means and Why the World Needs It Now",
     "summary": "Wabi-sabi is often reduced to rustic minimalism, but the idea is deeper and more useful than a design mood board. This primer explains the feeling without flattening it into a slogan.",
     "category": "culture",
-    "subcategory": "aesthetics-philosophy",
     "tags": [
       "wabi-sabi",
       "philosophy",
@@ -547,14 +1045,14 @@
       "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
       "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
       "timeNeeded": "Allow one slow visit or reading session instead of trying to master the idea quickly."
-    }
+    },
+    "subcategory": "aesthetics-philosophy"
   },
   {
     "id": "kintsugi-art-of-repairing-broken-things",
     "title": "Kintsugi: The Art of Repairing Broken Things with Gold",
     "summary": "Kintsugi is beautiful because it refuses to hide damage. Learn what the craft actually involves, why the metaphor became global, and how to recognize meaningful work from souvenir shorthand.",
     "category": "culture",
-    "subcategory": "craft-studios",
     "tags": [
       "kintsugi",
       "craft",
@@ -612,14 +1110,14 @@
       "season": "Most of the advice is evergreen, but confirm seasonal closures and local conditions before travel.",
       "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
       "timeNeeded": "Allow one slow visit or reading session instead of trying to master the idea quickly."
-    }
+    },
+    "subcategory": "craft-studios"
   },
   {
     "id": "hanami-where-to-see-cherry-blossoms-like-local",
     "title": "Hanami: Where to See Cherry Blossoms Like a Local",
     "summary": "Cherry blossom season is not just about the most famous riverside photo. Local hanami is slower, more social, and often found in ordinary parks with good convenience-store snacks nearby.",
     "category": "culture",
-    "subcategory": "seasonal-weather-plans",
     "tags": [
       "hanami",
       "cherry-blossoms",
@@ -677,86 +1175,7 @@
       "season": "Spring is the main draw, but neighborhood timing matters more than peak predictions.",
       "budget": "Costs vary by season and city; use this as a planning lens and confirm current prices directly.",
       "timeNeeded": "Allow one slow visit or reading session instead of trying to master the idea quickly."
-    }
-  },
-  {
-    "id": "nakanoshima-osaka-river-architecture-walk",
-    "title": "Nakanoshima, Osaka: A River and Architecture Walk Between Busy Districts",
-    "summary": "Nakanoshima is useful because it gives Osaka a quieter civic and riverside layer between busier shopping and nightlife areas. The best route treats the island as a bridge, not a detour.",
-    "category": "culture",
-    "subcategory": "heritage-walks",
-    "tags": [
-      "osaka",
-      "nakanoshima",
-      "architecture",
-      "walking",
-      "heritage"
-    ],
-    "publishedAt": "2026-06-01",
-    "readingTime": 5,
-    "affiliate": false,
-    "featured": false,
-    "image": "/assets/images/osaka-nakanoshima-waterfront.png",
-    "imageAlt": "Nakanoshima Osaka riverside with bridges trees and civic architecture in soft daylight",
-    "sections": [
-      {
-        "heading": "Walk the rivers first",
-        "body": "Nakanoshima sits between waterways, so the route makes most sense on foot. Bridges, river edges, civic buildings, museums, and cafes create a compact cultural walk without requiring a long transfer across Osaka. Start by reading the area as a riverside district, then choose the indoor stops that match the day's weather and current opening information."
-      },
-      {
-        "heading": "Use it between Umeda and central Osaka",
-        "body": "The area is practical when paired with Umeda, Yodoyabashi, Kitahama, or a later food stop. Instead of making it a full-day obligation, use it as the calmer middle of an Osaka day. This keeps travel time low and gives the city a civic, architectural layer between shopping, food, and nightlife."
-      },
-      {
-        "heading": "Confirm museum and event details",
-        "body": "Exhibition schedules, museum openings, waterfront events, and building access can change. Check official city, tourism, museum, and venue pages before promising a specific indoor stop. This is especially important when an article route depends on a museum, special exhibition, concert hall, or seasonal riverside program."
-      },
-      {
-        "heading": "Rain plan",
-        "body": "Nakanoshima can still work in light rain if you keep the route near stations and indoor cultural stops. Heavy rain or riverfront wind calls for a shorter loop and more time indoors. In summer, shade and hydration matter; in winter, the riverside can feel colder than the shopping districts nearby."
-      },
-      {
-        "heading": "Best fit",
-        "body": "This works well for architecture fans, museum travelers, couples who want a quieter Osaka walk, and anyone staying near Umeda who wants something more measured than shopping only. It is less suitable for travelers who want a single iconic photo stop, because the strength of Nakanoshima is cumulative."
-      }
-    ],
-    "sourcePolicy": "official-primary-summary",
-    "verificationLevel": "official-source-reviewed",
-    "lastChecked": "2026-06-01",
-    "sourceNote": "Original TABI editorial summary drafted from official/primary source targets for Osaka tourism, city information, and transit. Volatile details such as events, exhibitions, facility hours, and access rules must be checked on official pages before travel.",
-    "sourceUrls": [
-      "https://osaka-info.jp/en/",
-      "https://www.city.osaka.lg.jp/",
-      "https://subway.osakametro.co.jp/en/",
-      "https://www.japan.travel/en/destinations/kansai/osaka/"
-    ],
-    "seoTitle": "Nakanoshima Osaka River and Architecture Walk | TABI",
-    "seoDescription": "A fact-aware Osaka walking route around Nakanoshima's riverside, civic buildings, museums, and nearby stations.",
-    "audience": "Travelers planning fact-aware Tokyo or Osaka days from official-source context.",
-    "searchAliases": [
-      "Nakanoshima",
-      "Osaka architecture",
-      "Osaka river walk"
-    ],
-    "tripBrief": {
-      "takeaways": [
-        "Keep the route compact and anchored to one area.",
-        "Confirm current hours, fees, access, and event details from official sources before travel.",
-        "Build in weather, food, and transit pauses instead of treating the day as a checklist."
-      ],
-      "beforeYouGo": [
-        "Save the nearest station and one backup route offline.",
-        "Check official tourism, park, museum, transport, or city pages for current notices.",
-        "Avoid adding distant stops unless the day still has slack."
-      ],
-      "avoid": [
-        "Do not rely on old social posts for operating details.",
-        "Do not assume restaurants, observation areas, museums, or events are open daily.",
-        "Do not cross the city repeatedly when one neighborhood can carry the day."
-      ],
-      "season": "Nakanoshima works year-round, but weather, holidays, events, and closures can change the best order.",
-      "budget": "Costs vary; confirm current transport, entry, meal, and shopping prices directly.",
-      "timeNeeded": "A focused half day works for the core walk; allow a full day if you add museums, meals, or shopping."
-    }
+    },
+    "subcategory": "seasonal-weather-plans"
   }
 ]

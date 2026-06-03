@@ -1,43 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://tabi.guide/articles/nakanoshima-osaka-river-architecture-walk.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-nakanoshima-waterfront.png</image:loc>
+      <image:title>Nakanoshima, Osaka: A River and Architecture Walk Between Busy Districts</image:title>
+      <image:caption>Nakanoshima Osaka riverside with bridges trees and civic architecture in soft daylight</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://tabi.guide/articles/asakusa-sensoji-riverside-walk.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/tokyo-asakusa-temple-street.png</image:loc>
       <image:title>Asakusa, Sensoji, and a Riverside Walk That Still Feels Grounded</image:title>
       <image:caption>Asakusa Tokyo temple approach with lanterns tiled roofs and soft morning light</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/ryogoku-sumo-history-half-day.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-asakusa-temple-street.png</image:loc>
-      <image:title>Ryogoku for Sumo History, Museums, and an Older Tokyo Feel</image:title>
-      <image:caption>Old Tokyo atmosphere with traditional roofs and warm street detail</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/osaka-castle-park-half-day-history.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-castle-park.png</image:loc>
-      <image:title>Osaka Castle Park in a Half Day: History Without Rushing</image:title>
-      <image:caption>Osaka Castle tower beyond stone walls moat and park trees in daylight</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/shinsekai-tsutenkaku-with-context.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
-      <image:title>Shinsekai and Tsutenkaku With Context, Not Just Neon</image:title>
-      <image:caption>Osaka night food district lights with warm nostalgic street atmosphere</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/nakanoshima-river-architecture-walk.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-castle-park.png</image:loc>
-      <image:title>Nakanoshima for River Views, Architecture, and a Calmer Osaka Walk</image:title>
-      <image:caption>A spacious Osaka daylight scene with park trees and civic atmosphere</image:caption>
     </image:image>
   </url>
   <url>
@@ -49,11 +25,99 @@
     </image:image>
   </url>
   <url>
+    <loc>https://tabi.guide/articles/nakanoshima-river-architecture-walk.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-castle-park.png</image:loc>
+      <image:title>Nakanoshima for River Views, Architecture, and a Calmer Osaka Walk</image:title>
+      <image:caption>A spacious Osaka daylight scene with park trees and civic atmosphere</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://tabi.guide/articles/onsen-etiquette-for-the-first-visit.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/onsen-etiquette.png</image:loc>
       <image:title>Onsen Etiquette for Your First Visit Without Feeling Awkward</image:title>
       <image:caption>A quiet outdoor onsen pool with steam, stones, and forested hills</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/osaka-castle-park-half-day-history.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-castle-park.png</image:loc>
+      <image:title>Osaka Castle Park in a Half Day: History Without Rushing</image:title>
+      <image:caption>Osaka Castle tower beyond stone walls moat and park trees in daylight</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ryogoku-sumo-history-half-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-asakusa-temple-street.png</image:loc>
+      <image:title>Ryogoku for Sumo History, Museums, and an Older Tokyo Feel</image:title>
+      <image:caption>Old Tokyo atmosphere with traditional roofs and warm street detail</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/shinsekai-tsutenkaku-with-context.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
+      <image:title>Shinsekai and Tsutenkaku With Context, Not Just Neon</image:title>
+      <image:caption>Osaka night food district lights with warm nostalgic street atmosphere</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/japanese-festivals-without-crowd-mistakes.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japanese-festival-crowd-etiquette.png</image:loc>
+      <image:title>Japanese Festivals Without the Crowd Mistakes</image:title>
+      <image:caption>A lively Japanese summer festival street with lanterns, food stalls, and a moving crowd</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/jazz-kissa-and-listening-bars-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/jazz-kissa-listening-bar.png</image:loc>
+      <image:title>Jazz Kissa and Listening Bars in Japan</image:title>
+      <image:caption>A dim Japanese listening bar with vinyl records, warm lamps, and high-end speakers</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-enjoy-japanese-gardens.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japanese-garden-guide.png</image:loc>
+      <image:title>How to Enjoy Japanese Gardens Without Rushing Them</image:title>
+      <image:caption>A visitor sitting quietly beside a pond in a traditional Japanese garden</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/omiyage-gift-culture-for-travelers.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/omiyage-gift-culture.png</image:loc>
+      <image:title>Omiyage Gift Culture in Japan: What Travelers Can Learn From It</image:title>
+      <image:caption>Wrapped omiyage gift boxes arranged carefully on a hotel desk</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/sento-public-bath-etiquette-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sento-public-bath-etiquette.png</image:loc>
+      <image:title>Sento Public Bath Etiquette in Japan</image:title>
+      <image:caption>A clean Japanese sento entrance with shoe lockers, towels, and bath baskets</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/temple-and-shrine-etiquette-for-travelers.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/temple-shrine-etiquette.png</image:loc>
+      <image:title>Temple and Shrine Etiquette in Japan: A Traveler-Friendly Guide</image:title>
+      <image:caption>A visitor respectfully bowing near a quiet shrine approach in Japan</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/what-sustainable-tourism-means-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sustainable-tourism.png</image:loc>
+      <image:title>What Sustainable Tourism Means in Japan</image:title>
+      <image:caption>A small countryside inn beside rice fields with a paper map and reusable bottle on a wooden railing</image:caption>
     </image:image>
   </url>
   <url>
@@ -81,11 +145,35 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/nakanoshima-osaka-river-architecture-walk.html</loc>
+    <loc>https://tabi.guide/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-nakanoshima-waterfront.png</image:loc>
-      <image:title>Nakanoshima, Osaka: A River and Architecture Walk Between Busy Districts</image:title>
-      <image:caption>Nakanoshima Osaka riverside with bridges trees and civic architecture in soft daylight</image:caption>
+      <image:loc>https://tabi.guide/assets/images/osaka-shinsekai-food-walk.png</image:loc>
+      <image:title>Shinsekai for Kushikatsu and Retro Osaka Without Turning It Into a Cliche</image:title>
+      <image:caption>Shinsekai Osaka street near retro food shops and Tsutenkaku area in warm evening light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/depachika-food-halls-for-curious-travelers.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
+      <image:title>Depachika Food Halls: How to Shop Without Getting Overwhelmed</image:title>
+      <image:caption>A polished Japanese department store food hall with warm counters and colorful displays</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ekiben-how-to-choose-station-bento.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ekiben-box.png</image:loc>
+      <image:title>Ekiben: How to Choose a Station Bento That Feels Like the Region</image:title>
+      <image:caption>A colorful Japanese station bento box arranged like a refined travel meal</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/kuromon-market-without-overdoing-it.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
+      <image:title>Kuromon Market Without Overdoing It</image:title>
+      <image:caption>A polished Japanese food hall with warm counters and colorful prepared food displays</image:caption>
     </image:image>
   </url>
   <url>
@@ -105,14 +193,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/kuromon-market-without-overdoing-it.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
-      <image:title>Kuromon Market Without Overdoing It</image:title>
-      <image:caption>A polished Japanese food hall with warm counters and colorful prepared food displays</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://tabi.guide/articles/tsuruhashi-koreatown-food-context.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/osaka-food-alley.png</image:loc>
@@ -121,19 +201,67 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/ekiben-how-to-choose-station-bento.html</loc>
+    <loc>https://tabi.guide/articles/regional-wagashi-travelers-should-try.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/ekiben-box.png</image:loc>
-      <image:title>Ekiben: How to Choose a Station Bento That Feels Like the Region</image:title>
-      <image:caption>A colorful Japanese station bento box arranged like a refined travel meal</image:caption>
+      <image:loc>https://tabi.guide/assets/images/regional-wagashi-tea.png</image:loc>
+      <image:title>Regional Wagashi Travelers Should Try With Tea</image:title>
+      <image:caption>Regional Japanese wagashi sweets served with green tea on a simple ceramic plate</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/depachika-food-halls-for-curious-travelers.html</loc>
+    <loc>https://tabi.guide/articles/seafood-markets-beyond-tourist-sushi.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
-      <image:title>Depachika Food Halls: How to Shop Without Getting Overwhelmed</image:title>
-      <image:caption>A polished Japanese department store food hall with warm counters and colorful displays</image:caption>
+      <image:loc>https://tabi.guide/assets/images/seafood-market-japan.png</image:loc>
+      <image:title>Seafood Markets in Japan Beyond Tourist Sushi</image:title>
+      <image:caption>A bright Japanese seafood market aisle with fresh fish, handwritten signs, and morning shoppers</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-use-depachika-food-halls-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/depachika-food-halls.png</image:loc>
+      <image:title>How to Use Depachika Food Halls in Japan</image:title>
+      <image:caption>Prepared foods and desserts displayed in a bright Japanese department-store food hall</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/japanese-breakfasts-worth-planning-for.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japanese-breakfast-guide.png</image:loc>
+      <image:title>Japanese Breakfasts Worth Planning For</image:title>
+      <image:caption>A traditional Japanese breakfast set served in warm morning light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/konbini-travel-hacks-that-actually-help.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/konbini-travel-hacks.png</image:loc>
+      <image:title>Konbini Travel Hacks That Actually Help in Japan</image:title>
+      <image:caption>Japanese convenience store travel items arranged on a hotel desk</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/regional-ramen-styles-travelers-should-know.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/regional-ramen-guide.png</image:loc>
+      <image:title>Regional Ramen Styles Travelers Should Know Before Ordering</image:title>
+      <image:caption>Three bowls of regional ramen styles on a warm Japanese counter</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/vegetarian-travel-in-japan-without-panic.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/vegetarian-japan-guide.png</image:loc>
+      <image:title>Vegetarian Travel in Japan Without Panic</image:title>
+      <image:caption>A vegetarian Japanese set meal with rice, tofu, vegetables, and tea</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-visit-local-morning-markets-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/local-morning-market.png</image:loc>
+      <image:title>How to Visit Local Morning Markets in Japan</image:title>
+      <image:caption>Seasonal vegetables and handmade foods in wooden crates at a small Japanese morning market</image:caption>
     </image:image>
   </url>
   <url>
@@ -169,19 +297,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</loc>
+    <loc>https://tabi.guide/articles/kichijoji-inokashira-park-slow-tokyo-day.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-shinsekai-food-walk.png</image:loc>
-      <image:title>Shinsekai for Kushikatsu and Retro Osaka Without Turning It Into a Cliche</image:title>
-      <image:caption>Shinsekai Osaka street near retro food shops and Tsutenkaku area in warm evening light</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/yanaka-nezu-sendagi-slow-walk.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
-      <image:title>Yanaka, Nezu, and Sendagi for a Slower Tokyo Walk</image:title>
-      <image:caption>A quiet Tokyo park and neighborhood path suggesting a slower Yanaka walk</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-kichijoji-inokashira-park.png</image:loc>
+      <image:title>Kichijoji and Inokashira Park for a Slower Tokyo Day</image:title>
+      <image:caption>Inokashira Park pond and walking paths in Kichijoji Tokyo with people strolling under trees</image:caption>
     </image:image>
   </url>
   <url>
@@ -190,6 +310,14 @@
       <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
       <image:title>Kiyosumi-Shirakawa for Coffee, Gardens, and a Softer Tokyo Morning</image:title>
       <image:caption>A quiet Tokyo park path and cultural district in soft daylight</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/kumano-villages.png</image:loc>
+      <image:title>Kumano Kodo Villages Without Rushing the Pilgrimage</image:title>
+      <image:caption>A forest pilgrimage path inspired by Kumano Kodo with trees, a village path, and warm earth tones</image:caption>
     </image:image>
   </url>
   <url>
@@ -209,11 +337,43 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</loc>
+    <loc>https://tabi.guide/articles/yanaka-nezu-sendagi-slow-walk.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/kumano-villages.png</image:loc>
-      <image:title>Kumano Kodo Villages Without Rushing the Pilgrimage</image:title>
-      <image:caption>A forest pilgrimage path inspired by Kumano Kodo with trees, a village path, and warm earth tones</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
+      <image:title>Yanaka, Nezu, and Sendagi for a Slower Tokyo Walk</image:title>
+      <image:caption>A quiet Tokyo park and neighborhood path suggesting a slower Yanaka walk</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/craft-towns-for-pottery-and-textiles.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/craft-towns-pottery-textiles.png</image:loc>
+      <image:title>Craft Towns in Japan for Pottery and Textiles</image:title>
+      <image:caption>A Japanese craft town street with pottery displayed outside a small workshop</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/beginner-guide-to-japan-national-parks.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japan-national-parks-guide.png</image:loc>
+      <image:title>A Beginner Guide to Japan National Parks</image:title>
+      <image:caption>A boardwalk trail leading through a Japanese national park landscape with mountains beyond</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/small-castle-towns-for-slow-japan-travel.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/small-castle-towns-japan.png</image:loc>
+      <image:title>Small Castle Towns for Slow Japan Travel</image:title>
+      <image:caption>A quiet Japanese castle town street leading toward a small castle keep</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/quiet-morning-kyoto-itinerary.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/quiet-kyoto-morning.png</image:loc>
+      <image:title>A Quiet Morning Plan for Kyoto Before the Crowds Arrive</image:title>
+      <image:caption>A quiet Kyoto-style wooden street just after sunrise with stone pavement and no crowds</image:caption>
     </image:image>
   </url>
   <url>
@@ -241,11 +401,115 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/kichijoji-inokashira-park-slow-tokyo-day.html</loc>
+    <loc>https://tabi.guide/articles/forest-bathing-in-japan.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-kichijoji-inokashira-park.png</image:loc>
-      <image:title>Kichijoji and Inokashira Park for a Slower Tokyo Day</image:title>
-      <image:caption>Inokashira Park pond and walking paths in Kichijoji Tokyo with people strolling under trees</image:caption>
+      <image:loc>https://tabi.guide/assets/images/forest-bathing-japan.png</image:loc>
+      <image:title>Forest Bathing in Japan: How to Slow Down Without Turning It Into a Checklist</image:title>
+      <image:caption>A quiet cedar forest path in Japan with soft morning light and no crowds</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/beginner-cycling-routes-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/beginner-cycling-routes-japan.png</image:loc>
+      <image:title>Beginner-Friendly Cycling Routes in Japan</image:title>
+      <image:caption>Travelers riding rental bicycles on a calm riverside path in rural Japan</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/coastal-walks-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/coastal-walks-japan.png</image:loc>
+      <image:title>Coastal Walks in Japan for Travelers Who Want Sea Air, Not a Race</image:title>
+      <image:caption>A quiet coastal walking path in Japan with blue sea, fishing boats, and low hills</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/japan-rice-terraces-travel-guide.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japan-rice-terraces.png</image:loc>
+      <image:title>Japan’s Rice Terraces: How to Visit Without Treating Them Like a Photo Prop</image:title>
+      <image:caption>Layered rice terraces in rural Japan glowing in late afternoon light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/wildlife-watching-in-japan-without-disturbing-it.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/wildlife-watching-japan.png</image:loc>
+      <image:title>Wildlife Watching in Japan Without Disturbing What You Came to See</image:title>
+      <image:caption>A distant deer standing at the edge of a misty Japanese forest clearing</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/scenic-ropeways-and-mountain-views-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/scenic-ropeways-japan.png</image:loc>
+      <image:title>Scenic Ropeways and Mountain Views in Japan: How to Choose the Right One</image:title>
+      <image:caption>A Japanese mountain ropeway cabin rising above green forest toward a cloudy ridge</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/island-hopping-beyond-okinawa.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/island-hopping-beyond-okinawa.png</image:loc>
+      <image:title>Island Hopping in Japan Beyond Okinawa</image:title>
+      <image:caption>A small ferry approaching a quiet Japanese island with fishing boats and blue water</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/canoeing-and-kayaking-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/canoeing-kayaking-japan.png</image:loc>
+      <image:title>Canoeing and Kayaking in Japan: Gentle Water Days for Travelers</image:title>
+      <image:caption>Two kayaks moving across a calm Japanese lake with forested hills in the background</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-choose-a-minshuku-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/minshuku-stay-japan.png</image:loc>
+      <image:title>How to Choose a Minshuku in Japan</image:title>
+      <image:caption>A simple family-run Japanese minshuku entrance with noren curtain and potted plants</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/temple-stays-in-japan-what-to-expect.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/temple-stay-japan.png</image:loc>
+      <image:title>Temple Stays in Japan: What to Expect Before You Book</image:title>
+      <image:caption>A serene Japanese temple lodging corridor with tatami rooms and a garden view</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/farm-stays-in-rural-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/farm-stay-rural-japan.png</image:loc>
+      <image:title>Farm Stays in Rural Japan Without Romanticizing the Work</image:title>
+      <image:caption>A rural Japanese farmhouse beside vegetable fields in warm morning light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/machiya-townhouse-stays-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/machiya-townhouse-stay.png</image:loc>
+      <image:title>Machiya Townhouse Stays in Japan: Charm, Rules, and Real-World Comfort</image:title>
+      <image:caption>A restored Japanese machiya townhouse interior with tatami, wooden beams, and garden light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/seaside-ryokan-and-fishing-town-stays.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/seaside-ryokan-fishing-town.png</image:loc>
+      <image:title>Seaside Ryokan and Fishing Town Stays in Japan</image:title>
+      <image:caption>A seaside Japanese ryokan facing a small fishing harbor at sunrise</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/hotel-check-in-etiquette-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/hotel-check-in-etiquette-japan.png</image:loc>
+      <image:title>Hotel Check-In Etiquette in Japan: Small Things That Make Arrival Easier</image:title>
+      <image:caption>A calm Japanese hotel front desk with passports, key cards, and neatly placed luggage</image:caption>
     </image:image>
   </url>
   <url>
@@ -257,11 +521,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/shimokitazawa-koenji-vintage-music-day.html</loc>
+    <loc>https://tabi.guide/articles/japanese-stationery-worth-bringing-home.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
-      <image:title>Shimokitazawa and Koenji for Vintage Shops and Small Music Energy</image:title>
-      <image:caption>Tokyo evening streets with warm shop lights and urban texture</image:caption>
+      <image:loc>https://tabi.guide/assets/images/japanese-stationery.png</image:loc>
+      <image:title>Japanese Stationery Worth Bringing Home, From Notebooks to Pens</image:title>
+      <image:caption>A refined arrangement of Japanese notebooks, pens, and paper goods on a warm desk</image:caption>
     </image:image>
   </url>
   <url>
@@ -273,11 +537,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/japanese-stationery-worth-bringing-home.html</loc>
+    <loc>https://tabi.guide/articles/shimokitazawa-koenji-vintage-music-day.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/japanese-stationery.png</image:loc>
-      <image:title>Japanese Stationery Worth Bringing Home, From Notebooks to Pens</image:title>
-      <image:caption>A refined arrangement of Japanese notebooks, pens, and paper goods on a warm desk</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
+      <image:title>Shimokitazawa and Koenji for Vintage Shops and Small Music Energy</image:title>
+      <image:caption>Tokyo evening streets with warm shop lights and urban texture</image:caption>
     </image:image>
   </url>
   <url>
@@ -286,6 +550,14 @@
       <image:loc>https://tabi.guide/assets/images/tenugui-textiles.png</image:loc>
       <image:title>Tenugui Guide: Patterns, Uses, and How to Choose One as a Souvenir</image:title>
       <image:caption>Japanese tenugui cloths with indigo, red, and pale textile patterns hanging in soft light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/buying-chopsticks-and-lacquerware-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/chopsticks-lacquerware-souvenirs.png</image:loc>
+      <image:title>Buying Chopsticks and Lacquerware in Japan Without Choosing Randomly</image:title>
+      <image:caption>Handmade chopsticks and lacquerware displayed on a Japanese craft shop table</image:caption>
     </image:image>
   </url>
   <url>
@@ -321,43 +593,27 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/shinjuku-first-day-without-burning-out.html</loc>
+    <loc>https://tabi.guide/articles/shibuya-first-night-orientation-walk.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
-      <image:title>Shinjuku on Your First Day Without Burning Out</image:title>
-      <image:caption>Shinjuku Tokyo station-area streets at blue hour with office towers and soft city lights</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shibuya-first-night.png</image:loc>
+      <image:title>Shibuya on the First Night: An Orientation Walk That Does Not Overreach</image:title>
+      <image:caption>Shibuya Tokyo streets at blue hour with pedestrians and city lights near the station area</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/ueno-park-museums-half-day.html</loc>
+    <loc>https://tabi.guide/articles/yokohama-minato-mirai-first-day-waterfront.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
-      <image:title>Ueno Park and Museums in a Half Day Without Museum Fatigue</image:title>
-      <image:caption>Ueno Tokyo park path with museum buildings and trees in soft daylight</image:caption>
+      <image:loc>https://tabi.guide/assets/images/yokohama-minato-mirai-waterfront.png</image:loc>
+      <image:title>Yokohama Minato Mirai for a First Easy Waterfront Day</image:title>
+      <image:caption>Yokohama Minato Mirai waterfront promenade with bay skyline and people walking in afternoon light</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/tokyo-station-marunouchi-rainy-day-route.html</loc>
+    <loc>https://tabi.guide/articles/kyoto-rainy-day-temples-cafes-and-covered-streets.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
-      <image:title>Tokyo Station and Marunouchi on a Rainy Day</image:title>
-      <image:caption>Tokyo city streets at blue hour suggesting a compact rainy-day urban route</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/odaiba-toyosu-waterfront-family-day.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/quiet-coastal-towns.png</image:loc>
-      <image:title>Odaiba and Toyosu for a Low-Friction Tokyo Waterfront Day</image:title>
-      <image:caption>A quiet waterfront town and harbor scene suitable for a Tokyo bay route</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/umeda-underground-and-skyline-rainy-day.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
-      <image:title>Umeda for Underground Routes, Food Floors, and Skyline Views</image:title>
-      <image:caption>Osaka city lights and dense urban atmosphere suitable for an Umeda route</image:caption>
+      <image:loc>https://tabi.guide/assets/images/kyoto-rain-cafes.png</image:loc>
+      <image:title>Kyoto on a Rainy Day: Temples, Cafes, and Covered Streets</image:title>
+      <image:caption>A rainy Kyoto street with a small cafe, tiled roof, and soft green tones</image:caption>
     </image:image>
   </url>
   <url>
@@ -369,11 +625,171 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/kyoto-rainy-day-temples-cafes-and-covered-streets.html</loc>
+    <loc>https://tabi.guide/articles/odaiba-toyosu-waterfront-family-day.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/kyoto-rain-cafes.png</image:loc>
-      <image:title>Kyoto on a Rainy Day: Temples, Cafes, and Covered Streets</image:title>
-      <image:caption>A rainy Kyoto street with a small cafe, tiled roof, and soft green tones</image:caption>
+      <image:loc>https://tabi.guide/assets/images/quiet-coastal-towns.png</image:loc>
+      <image:title>Odaiba and Toyosu for a Low-Friction Tokyo Waterfront Day</image:title>
+      <image:caption>A quiet waterfront town and harbor scene suitable for a Tokyo bay route</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/shinjuku-first-day-without-burning-out.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
+      <image:title>Shinjuku on Your First Day Without Burning Out</image:title>
+      <image:caption>Shinjuku Tokyo station-area streets at blue hour with office towers and soft city lights</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/tokyo-station-marunouchi-rainy-day-route.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
+      <image:title>Tokyo Station and Marunouchi on a Rainy Day</image:title>
+      <image:caption>Tokyo city streets at blue hour suggesting a compact rainy-day urban route</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ueno-park-museums-half-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
+      <image:title>Ueno Park and Museums in a Half Day Without Museum Fatigue</image:title>
+      <image:caption>Ueno Tokyo park path with museum buildings and trees in soft daylight</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/umeda-underground-and-skyline-rainy-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
+      <image:title>Umeda for Underground Routes, Food Floors, and Skyline Views</image:title>
+      <image:caption>Osaka city lights and dense urban atmosphere suitable for an Umeda route</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/local-train-journeys-worth-slowing-down-for.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/local-train-journeys-japan.png</image:loc>
+      <image:title>Local Train Journeys in Japan Worth Slowing Down For</image:title>
+      <image:caption>A small local train passing rice fields and low mountains in regional Japan</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/capsule-hotels-and-business-hotels-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/capsule-business-hotel-guide.png</image:loc>
+      <image:title>Capsule Hotels and Business Hotels in Japan: How to Choose</image:title>
+      <image:caption>A compact modern Japanese hotel room with a neatly made bed and small desk</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-plan-autumn-leaves-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/autumn-foliage-planning.png</image:loc>
+      <image:title>How to Plan an Autumn Leaves Trip in Japan</image:title>
+      <image:caption>A quiet Japanese garden path under red and gold autumn maple leaves</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-plan-your-first-day-arriving-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japan-airport-arrival-day.png</image:loc>
+      <image:title>How to Plan Your First Day Arriving in Japan</image:title>
+      <image:caption>A traveler organizing essentials beside luggage in a bright Japanese airport arrival hall</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-use-luggage-forwarding-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/luggage-forwarding-japan.png</image:loc>
+      <image:title>How to Use Luggage Forwarding in Japan</image:title>
+      <image:caption>A hotel staff member helping a traveler prepare a suitcase for luggage forwarding in Japan</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ic-card-and-cash-basics-for-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ic-card-transit-basics.png</image:loc>
+      <image:title>IC Cards and Cash in Japan: What Travelers Actually Need</image:title>
+      <image:caption>A traveler tapping an IC card at a Japanese station gate with yen cash nearby</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/summer-heat-travel-strategy-for-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/summer-heat-japan-travel.png</image:loc>
+      <image:title>How to Travel Japan in Summer Without Letting the Heat Win</image:title>
+      <image:caption>A traveler resting in the shade on a hot summer street in Japan with water and a fan</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/where-to-stay-in-tokyo-first-trip-neighborhoods.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-neighborhood-base.png</image:loc>
+      <image:title>Where to Stay in Tokyo on a First Trip: Neighborhoods That Make the City Easier</image:title>
+      <image:caption>A quiet Tokyo neighborhood view from a hotel window at blue hour</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/winter-onsen-and-snow-country-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/winter-onsen-snow.png</image:loc>
+      <image:title>Winter Onsen and Snow Country Japan: How to Plan the Trip</image:title>
+      <image:caption>A snowy Japanese hot spring town at dusk with warm ryokan lights and rising steam</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/best-japanese-cities-for-first-time-solo-travel.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/solo-travel.png</image:loc>
+      <image:title>10 Japanese Cities That Are Ideal for a First Solo Trip</image:title>
+      <image:caption>A compact travel backpack and camera on a quiet Japanese station bench in morning light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-choose-an-onsen-ryokan-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/onsen-ryokan.png</image:loc>
+      <image:title>How to Choose an Onsen Ryokan in Japan</image:title>
+      <image:caption>A quiet wooden onsen ryokan entrance with a stone path and soft evening light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-enjoy-japan-on-a-rainy-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/rainy-day-travel.png</image:loc>
+      <image:title>How to Enjoy Japan on a Rainy Day</image:title>
+      <image:caption>An umbrella beside a cafe table with a rainy Japanese street outside the window</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-plan-a-cherry-blossom-trip-to-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/cherry-blossom-planning.png</image:loc>
+      <image:title>How to Plan a Cherry Blossom Trip to Japan Without Gambling Everything on One Date</image:title>
+      <image:caption>A travel notebook and simple train tickets beneath cherry blossoms beside a quiet river</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/how-to-plan-a-restful-weekend-trip-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/slow-weekend-trip.png</image:loc>
+      <image:title>How to Plan a Restful Two-Day Trip in Japan</image:title>
+      <image:caption>A small overnight bag and paperback book on a low table beside a window overlooking a quiet coastal town</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/japan-travel-disaster-preparedness-checklist.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/travel-disaster-preparedness.png</image:loc>
+      <image:title>A Practical Disaster Preparedness Checklist for Traveling in Japan</image:title>
+      <image:caption>A travel backpack with compact emergency items on a hotel desk beside a rainy city window</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/shinkansen-comfort-checklist.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/shinkansen-comfort.png</image:loc>
+      <image:title>The Shinkansen Comfort Checklist</image:title>
+      <image:caption>A suitcase, lunch box, headphones, and travel items on a clean train platform bench</image:caption>
     </image:image>
   </url>
   <url>
@@ -409,19 +825,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/articles/shibuya-first-night-orientation-walk.html</loc>
+    <loc>https://tabi.guide/ja/articles/nakanoshima-osaka-river-architecture-walk.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shibuya-first-night.png</image:loc>
-      <image:title>Shibuya on the First Night: An Orientation Walk That Does Not Overreach</image:title>
-      <image:caption>Shibuya Tokyo streets at blue hour with pedestrians and city lights near the station area</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/articles/yokohama-minato-mirai-first-day-waterfront.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/yokohama-minato-mirai-waterfront.png</image:loc>
-      <image:title>Yokohama Minato Mirai for a First Easy Waterfront Day</image:title>
-      <image:caption>Yokohama Minato Mirai waterfront promenade with bay skyline and people walking in afternoon light</image:caption>
+      <image:loc>https://tabi.guide/assets/images/osaka-nakanoshima-waterfront.png</image:loc>
+      <image:title>中之島で歩く、大阪の川と建築の時間</image:title>
+      <image:caption>中之島で歩く、大阪の川と建築の時間をイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -433,27 +841,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/ryogoku-sumo-history-half-day.html</loc>
+    <loc>https://tabi.guide/ja/articles/kanazawa-gold-leaf-and-craft-neighborhoods.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-asakusa-temple-street.png</image:loc>
-      <image:title>両国で相撲と歴史を半日で知る</image:title>
-      <image:caption>両国で相撲と歴史を半日で知るをイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/ja/articles/osaka-castle-park-half-day-history.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-castle-park.png</image:loc>
-      <image:title>大阪城公園を半日で、急がず歴史に触れる</image:title>
-      <image:caption>大阪城公園を半日で、急がず歴史に触れるをイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/ja/articles/shinsekai-tsutenkaku-with-context.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
-      <image:title>新世界と通天閣を、ネオンだけで終わらせない</image:title>
-      <image:caption>新世界と通天閣を、ネオンだけで終わらせないをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/kanazawa-gold-leaf.png</image:loc>
+      <image:title>金沢の金箔と工芸の街を、ゆっくり歩く</image:title>
+      <image:caption>金沢の金箔と工芸の街を、ゆっくり歩くをイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -465,19 +857,91 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/kanazawa-gold-leaf-and-craft-neighborhoods.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/kanazawa-gold-leaf.png</image:loc>
-      <image:title>金沢の金箔と工芸の街を、ゆっくり歩く</image:title>
-      <image:caption>金沢の金箔と工芸の街を、ゆっくり歩くをイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://tabi.guide/ja/articles/onsen-etiquette-for-the-first-visit.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/onsen-etiquette.png</image:loc>
       <image:title>初めてでも気まずくならない温泉の入り方</image:title>
       <image:caption>初めてでも気まずくならない温泉の入り方をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/osaka-castle-park-half-day-history.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-castle-park.png</image:loc>
+      <image:title>大阪城公園を半日で、急がず歴史に触れる</image:title>
+      <image:caption>大阪城公園を半日で、急がず歴史に触れるをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ryogoku-sumo-history-half-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-asakusa-temple-street.png</image:loc>
+      <image:title>両国で相撲と歴史を半日で知る</image:title>
+      <image:caption>両国で相撲と歴史を半日で知るをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/shinsekai-tsutenkaku-with-context.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
+      <image:title>新世界と通天閣を、ネオンだけで終わらせない</image:title>
+      <image:caption>新世界と通天閣を、ネオンだけで終わらせないをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/japanese-festivals-without-crowd-mistakes.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japanese-festival-crowd-etiquette.png</image:loc>
+      <image:title>日本の祭りで混雑の失敗を避ける</image:title>
+      <image:caption>提灯、屋台、人の流れがある日本の夏祭りの通り</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/jazz-kissa-and-listening-bars-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/jazz-kissa-listening-bar.png</image:loc>
+      <image:title>日本のジャズ喫茶とリスニングバー</image:title>
+      <image:caption>レコード、暖かい照明、大きなスピーカーがある日本の静かなリスニングバー</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-enjoy-japanese-gardens.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japanese-garden-guide.png</image:loc>
+      <image:title>日本庭園を急がず楽しむ方法</image:title>
+      <image:caption>伝統的な日本庭園の池のそばで静かに座る人</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/omiyage-gift-culture-for-travelers.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/omiyage-gift-culture.png</image:loc>
+      <image:title>日本のお土産文化「おみやげ」から旅行者が学べること</image:title>
+      <image:caption>ホテルの机に丁寧に並べられた包み紙のおみやげ箱</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/sento-public-bath-etiquette-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sento-public-bath-etiquette.png</image:loc>
+      <image:title>日本の銭湯マナーを旅行者向けに整理する</image:title>
+      <image:caption>靴箱、タオル、湯かごが見える清潔な日本の銭湯入口</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/temple-and-shrine-etiquette-for-travelers.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/temple-shrine-etiquette.png</image:loc>
+      <image:title>旅行者のための日本の寺社マナー</image:title>
+      <image:caption>静かな神社参道で丁寧に一礼する旅行者</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/what-sustainable-tourism-means-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sustainable-tourism.png</image:loc>
+      <image:title>日本でサステナブルな観光とは何を意味するか</image:title>
+      <image:caption>静かな日本の町で地域の店先を歩く旅行者</image:caption>
     </image:image>
   </url>
   <url>
@@ -505,11 +969,35 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/nakanoshima-osaka-river-architecture-walk.html</loc>
+    <loc>https://tabi.guide/ja/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-nakanoshima-waterfront.png</image:loc>
-      <image:title>中之島で歩く、大阪の川と建築の時間</image:title>
-      <image:caption>中之島で歩く、大阪の川と建築の時間をイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/osaka-shinsekai-food-walk.png</image:loc>
+      <image:title>新世界で串カツとレトロな大阪を、記号だけで終わらせない歩き方</image:title>
+      <image:caption>新世界で串カツとレトロな大阪を、記号だけで終わらせない歩き方をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/depachika-food-halls-for-curious-travelers.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
+      <image:title>デパ地下を迷わず楽しむ、旅人のための歩き方</image:title>
+      <image:caption>デパ地下を迷わず楽しむ、旅人のための歩き方をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ekiben-how-to-choose-station-bento.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ekiben-box.png</image:loc>
+      <image:title>駅弁の選び方、地域らしさを味わう列車の昼食</image:title>
+      <image:caption>駅弁の選び方、地域らしさを味わう列車の昼食をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/kuromon-market-without-overdoing-it.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
+      <image:title>黒門市場を食べすぎず楽しむ</image:title>
+      <image:caption>黒門市場を食べすぎず楽しむをイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -529,14 +1017,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/kuromon-market-without-overdoing-it.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
-      <image:title>黒門市場を食べすぎず楽しむ</image:title>
-      <image:caption>黒門市場を食べすぎず楽しむをイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://tabi.guide/ja/articles/tsuruhashi-koreatown-food-context.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/osaka-food-alley.png</image:loc>
@@ -545,19 +1025,67 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/ekiben-how-to-choose-station-bento.html</loc>
+    <loc>https://tabi.guide/ja/articles/regional-wagashi-travelers-should-try.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/ekiben-box.png</image:loc>
-      <image:title>駅弁の選び方、地域らしさを味わう列車の昼食</image:title>
-      <image:caption>駅弁の選び方、地域らしさを味わう列車の昼食をイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/regional-wagashi-tea.png</image:loc>
+      <image:title>お茶と味わいたい日本各地の和菓子</image:title>
+      <image:caption>陶器の皿に盛られ、緑茶と一緒に出された日本各地の和菓子</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/depachika-food-halls-for-curious-travelers.html</loc>
+    <loc>https://tabi.guide/ja/articles/seafood-markets-beyond-tourist-sushi.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/depachika-food-hall.png</image:loc>
-      <image:title>デパ地下を迷わず楽しむ、旅人のための歩き方</image:title>
-      <image:caption>デパ地下を迷わず楽しむ、旅人のための歩き方をイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/seafood-market-japan.png</image:loc>
+      <image:title>観光寿司だけではない、日本の海鮮市場の歩き方</image:title>
+      <image:caption>新鮮な魚、手書きの札、朝の買い物客がいる明るい日本の海鮮市場</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-use-depachika-food-halls-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/depachika-food-halls.png</image:loc>
+      <image:title>日本のデパ地下を上手に使う方法</image:title>
+      <image:caption>明るい日本の百貨店食品売場に並ぶ惣菜とデザート</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/japanese-breakfasts-worth-planning-for.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japanese-breakfast-guide.png</image:loc>
+      <image:title>予定に入れる価値のある日本の朝食</image:title>
+      <image:caption>朝の光の中で提供された伝統的な日本の朝食膳</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/konbini-travel-hacks-that-actually-help.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/konbini-travel-hacks.png</image:loc>
+      <image:title>日本のコンビニを旅で本当に役立てる方法</image:title>
+      <image:caption>ホテルの机に並べられた日本のコンビニ食品と旅行用品</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/regional-ramen-styles-travelers-should-know.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/regional-ramen-guide.png</image:loc>
+      <image:title>注文前に知っておきたい日本の地域ラーメン</image:title>
+      <image:caption>温かい日本のカウンターに並んだ三種類の地域ラーメン</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/vegetarian-travel-in-japan-without-panic.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/vegetarian-japan-guide.png</image:loc>
+      <image:title>日本でベジタリアン旅行を落ち着いて進める方法</image:title>
+      <image:caption>豆腐、野菜、ご飯、お茶が並ぶベジタリアンの和食膳</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-visit-local-morning-markets-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/local-morning-market.png</image:loc>
+      <image:title>日本の朝市を楽しむための訪れ方</image:title>
+      <image:caption>日本の朝市で季節の食品が並ぶ売り場</image:caption>
     </image:image>
   </url>
   <url>
@@ -593,19 +1121,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</loc>
+    <loc>https://tabi.guide/ja/articles/kichijoji-inokashira-park-slow-tokyo-day.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-shinsekai-food-walk.png</image:loc>
-      <image:title>新世界で串カツとレトロな大阪を、記号だけで終わらせない歩き方</image:title>
-      <image:caption>新世界で串カツとレトロな大阪を、記号だけで終わらせない歩き方をイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/ja/articles/yanaka-nezu-sendagi-slow-walk.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
-      <image:title>谷中、根津、千駄木をゆっくり歩く</image:title>
-      <image:caption>谷中、根津、千駄木をゆっくり歩くをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-kichijoji-inokashira-park.png</image:loc>
+      <image:title>吉祥寺と井の頭公園で過ごす、少しゆっくりした東京の日</image:title>
+      <image:caption>吉祥寺と井の頭公園で過ごす、少しゆっくりした東京の日をイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -614,6 +1134,14 @@
       <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
       <image:title>清澄白河で喫茶と庭をめぐる静かな朝</image:title>
       <image:caption>清澄白河で喫茶と庭をめぐる静かな朝をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/kumano-villages.png</image:loc>
+      <image:title>熊野古道の村を急がず歩く、巡礼の旅</image:title>
+      <image:caption>熊野古道の村を急がず歩く、巡礼の旅をイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -633,11 +1161,43 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</loc>
+    <loc>https://tabi.guide/ja/articles/yanaka-nezu-sendagi-slow-walk.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/kumano-villages.png</image:loc>
-      <image:title>熊野古道の村を急がず歩く、巡礼の旅</image:title>
-      <image:caption>熊野古道の村を急がず歩く、巡礼の旅をイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
+      <image:title>谷中、根津、千駄木をゆっくり歩く</image:title>
+      <image:caption>谷中、根津、千駄木をゆっくり歩くをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/craft-towns-for-pottery-and-textiles.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/craft-towns-pottery-textiles.png</image:loc>
+      <image:title>陶器と織物に出会う、日本の工芸の町</image:title>
+      <image:caption>小さな工房の前に陶器が並ぶ日本の工芸の町の通り</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/beginner-guide-to-japan-national-parks.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japan-national-parks-guide.png</image:loc>
+      <image:title>はじめての日本の国立公園ガイド</image:title>
+      <image:caption>山々を望む日本の国立公園を進む木道の道</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/small-castle-towns-for-slow-japan-travel.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/small-castle-towns-japan.png</image:loc>
+      <image:title>ゆっくり旅したい日本の小さな城下町</image:title>
+      <image:caption>小さな城へ続く静かな日本の城下町の通り</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/quiet-morning-kyoto-itinerary.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/quiet-kyoto-morning.png</image:loc>
+      <image:title>混雑前に歩く、京都の静かな朝の過ごし方</image:title>
+      <image:caption>朝の京都の静かな路地と寺社の入口</image:caption>
     </image:image>
   </url>
   <url>
@@ -665,11 +1225,115 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/kichijoji-inokashira-park-slow-tokyo-day.html</loc>
+    <loc>https://tabi.guide/ja/articles/forest-bathing-in-japan.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-kichijoji-inokashira-park.png</image:loc>
-      <image:title>吉祥寺と井の頭公園で過ごす、少しゆっくりした東京の日</image:title>
-      <image:caption>吉祥寺と井の頭公園で過ごす、少しゆっくりした東京の日をイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/forest-bathing-japan.png</image:loc>
+      <image:title>日本で森林浴を楽しむ。チェックリストにしない森の歩き方</image:title>
+      <image:caption>朝の柔らかい光が差す、日本の静かな杉林の小道</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/beginner-cycling-routes-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/beginner-cycling-routes-japan.png</image:loc>
+      <image:title>初心者にやさしい日本のサイクリングルートの選び方</image:title>
+      <image:caption>日本の静かな川沿いの道をレンタサイクルで走る旅行者</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/coastal-walks-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/coastal-walks-japan.png</image:loc>
+      <image:title>海風を感じる日本の海沿い散歩。急がない旅の作り方</image:title>
+      <image:caption>青い海と漁船、低い山が見える日本の静かな海沿いの歩道</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/japan-rice-terraces-travel-guide.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japan-rice-terraces.png</image:loc>
+      <image:title>日本の棚田を訪ねる。写真の背景として消費しないために</image:title>
+      <image:caption>夕方の光に照らされた日本の山里の段々の棚田</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/wildlife-watching-in-japan-without-disturbing-it.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/wildlife-watching-japan.png</image:loc>
+      <image:title>日本で野生動物を見る。見に来たものを乱さないために</image:title>
+      <image:caption>霧のかかった日本の森の開けた場所に遠く立つ鹿</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/scenic-ropeways-and-mountain-views-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/scenic-ropeways-japan.png</image:loc>
+      <image:title>日本のロープウェイと山の眺め。自分に合う場所の選び方</image:title>
+      <image:caption>緑の森の上を雲のかかる稜線へ向かう日本の山岳ロープウェイ</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/island-hopping-beyond-okinawa.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/island-hopping-beyond-okinawa.png</image:loc>
+      <image:title>沖縄だけではない、日本の島旅の組み立て方</image:title>
+      <image:caption>青い海と漁船のある静かな日本の島に近づく小さなフェリー</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/canoeing-and-kayaking-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/canoeing-kayaking-japan.png</image:loc>
+      <image:title>日本でカヌーとカヤックを楽しむ。旅人向けの穏やかな水辺時間</image:title>
+      <image:caption>森の山を背景に、静かな日本の湖を進む二艇のカヤック</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-choose-a-minshuku-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/minshuku-stay-japan.png</image:loc>
+      <image:title>日本の民宿の選び方</image:title>
+      <image:caption>暖簾と鉢植えがある、日本の家族経営の小さな民宿の玄関</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/temple-stays-in-japan-what-to-expect.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/temple-stay-japan.png</image:loc>
+      <image:title>日本の寺宿に泊まる前に知っておきたいこと</image:title>
+      <image:caption>畳の部屋と庭が見える、日本の静かな寺宿の廊下</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/farm-stays-in-rural-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/farm-stay-rural-japan.png</image:loc>
+      <image:title>日本の農泊を、仕事を美化せずに楽しむ</image:title>
+      <image:caption>朝の光に包まれた畑の横に立つ日本の農家民宿</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/machiya-townhouse-stays-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/machiya-townhouse-stay.png</image:loc>
+      <image:title>日本の町家に泊まる。魅力、ルール、実際の快適さ</image:title>
+      <image:caption>畳、木の梁、庭の光がある、改修された日本の町家の室内</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/seaside-ryokan-and-fishing-town-stays.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/seaside-ryokan-fishing-town.png</image:loc>
+      <image:title>日本の海辺の旅館と漁師町に泊まる</image:title>
+      <image:caption>日の出の小さな漁港に面した日本の海辺の旅館</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/hotel-check-in-etiquette-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/hotel-check-in-etiquette-japan.png</image:loc>
+      <image:title>日本のホテルチェックイン作法。到着を楽にする小さな準備</image:title>
+      <image:caption>パスポート、カードキー、整えられた荷物が置かれた日本の静かなホテルフロント</image:caption>
     </image:image>
   </url>
   <url>
@@ -681,11 +1345,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/shimokitazawa-koenji-vintage-music-day.html</loc>
+    <loc>https://tabi.guide/ja/articles/japanese-stationery-worth-bringing-home.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
-      <image:title>下北沢と高円寺で古着と小さな音楽の空気を歩く</image:title>
-      <image:caption>下北沢と高円寺で古着と小さな音楽の空気を歩くをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/japanese-stationery.png</image:loc>
+      <image:title>持ち帰りたい日本の文房具、ノートからペンまで</image:title>
+      <image:caption>持ち帰りたい日本の文房具、ノートからペンまでをイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -697,11 +1361,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/japanese-stationery-worth-bringing-home.html</loc>
+    <loc>https://tabi.guide/ja/articles/shimokitazawa-koenji-vintage-music-day.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/japanese-stationery.png</image:loc>
-      <image:title>持ち帰りたい日本の文房具、ノートからペンまで</image:title>
-      <image:caption>持ち帰りたい日本の文房具、ノートからペンまでをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
+      <image:title>下北沢と高円寺で古着と小さな音楽の空気を歩く</image:title>
+      <image:caption>下北沢と高円寺で古着と小さな音楽の空気を歩くをイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -710,6 +1374,14 @@
       <image:loc>https://tabi.guide/assets/images/tenugui-textiles.png</image:loc>
       <image:title>手ぬぐいの選び方、柄、使い道、土産としての魅力</image:title>
       <image:caption>手ぬぐいの選び方、柄、使い道、土産としての魅力をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/buying-chopsticks-and-lacquerware-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/chopsticks-lacquerware-souvenirs.png</image:loc>
+      <image:title>日本で箸と漆器をなんとなく選ばないために</image:title>
+      <image:caption>日本の工芸店のテーブルに並ぶ手作りの箸と漆器</image:caption>
     </image:image>
   </url>
   <url>
@@ -745,43 +1417,27 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/shinjuku-first-day-without-burning-out.html</loc>
+    <loc>https://tabi.guide/ja/articles/shibuya-first-night-orientation-walk.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
-      <image:title>初日に疲れすぎず新宿を使うためのガイド</image:title>
-      <image:caption>初日に疲れすぎず新宿を使うためのガイドをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shibuya-first-night.png</image:loc>
+      <image:title>初日の夜に無理をしない渋谷オリエンテーション散歩</image:title>
+      <image:caption>初日の夜に無理をしない渋谷オリエンテーション散歩をイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/ueno-park-museums-half-day.html</loc>
+    <loc>https://tabi.guide/ja/articles/yokohama-minato-mirai-first-day-waterfront.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
-      <image:title>上野公園と美術館を半日で疲れず楽しむ</image:title>
-      <image:caption>上野公園と美術館を半日で疲れず楽しむをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/yokohama-minato-mirai-waterfront.png</image:loc>
+      <image:title>横浜みなとみらいで始める、歩きやすい水辺の一日</image:title>
+      <image:caption>横浜みなとみらいで始める、歩きやすい水辺の一日をイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/tokyo-station-marunouchi-rainy-day-route.html</loc>
+    <loc>https://tabi.guide/ja/articles/kyoto-rainy-day-temples-cafes-and-covered-streets.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
-      <image:title>雨の日の東京駅と丸の内ルート</image:title>
-      <image:caption>雨の日の東京駅と丸の内ルートをイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/ja/articles/odaiba-toyosu-waterfront-family-day.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/quiet-coastal-towns.png</image:loc>
-      <image:title>お台場と豊洲で、余白のある東京湾岸の一日</image:title>
-      <image:caption>お台場と豊洲で、余白のある東京湾岸の一日をイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/ja/articles/umeda-underground-and-skyline-rainy-day.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
-      <image:title>梅田で地下街、食、眺望を使う雨の日ルート</image:title>
-      <image:caption>梅田で地下街、食、眺望を使う雨の日ルートをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/kyoto-rain-cafes.png</image:loc>
+      <image:title>雨の日の京都、寺、喫茶、屋根のある通りをめぐる</image:title>
+      <image:caption>雨の日の京都、寺、喫茶、屋根のある通りをめぐるをイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -793,11 +1449,171 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tabi.guide/ja/articles/kyoto-rainy-day-temples-cafes-and-covered-streets.html</loc>
+    <loc>https://tabi.guide/ja/articles/odaiba-toyosu-waterfront-family-day.html</loc>
     <image:image>
-      <image:loc>https://tabi.guide/assets/images/kyoto-rain-cafes.png</image:loc>
-      <image:title>雨の日の京都、寺、喫茶、屋根のある通りをめぐる</image:title>
-      <image:caption>雨の日の京都、寺、喫茶、屋根のある通りをめぐるをイメージしたTABIのメインビジュアル</image:caption>
+      <image:loc>https://tabi.guide/assets/images/quiet-coastal-towns.png</image:loc>
+      <image:title>お台場と豊洲で、余白のある東京湾岸の一日</image:title>
+      <image:caption>お台場と豊洲で、余白のある東京湾岸の一日をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/shinjuku-first-day-without-burning-out.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
+      <image:title>初日に疲れすぎず新宿を使うためのガイド</image:title>
+      <image:caption>初日に疲れすぎず新宿を使うためのガイドをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/tokyo-station-marunouchi-rainy-day-route.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-shinjuku-blue-hour.png</image:loc>
+      <image:title>雨の日の東京駅と丸の内ルート</image:title>
+      <image:caption>雨の日の東京駅と丸の内ルートをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ueno-park-museums-half-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-ueno-park-museums.png</image:loc>
+      <image:title>上野公園と美術館を半日で疲れず楽しむ</image:title>
+      <image:caption>上野公園と美術館を半日で疲れず楽しむをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/umeda-underground-and-skyline-rainy-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-dotonbori-night.png</image:loc>
+      <image:title>梅田で地下街、食、眺望を使う雨の日ルート</image:title>
+      <image:caption>梅田で地下街、食、眺望を使う雨の日ルートをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/local-train-journeys-worth-slowing-down-for.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/local-train-journeys-japan.png</image:loc>
+      <image:title>ゆっくり乗りたい、日本のローカル線の旅</image:title>
+      <image:caption>田んぼと低い山の間を走る日本の小さなローカル列車</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/capsule-hotels-and-business-hotels-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/capsule-business-hotel-guide.png</image:loc>
+      <image:title>日本のカプセルホテルとビジネスホテル、どう選ぶか</image:title>
+      <image:caption>整ったベッドと小さな机がある日本のコンパクトなホテル客室</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-plan-autumn-leaves-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/autumn-foliage-planning.png</image:loc>
+      <image:title>日本の紅葉旅行を計画する方法</image:title>
+      <image:caption>赤や金色のもみじに包まれた静かな日本庭園の小道</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-plan-your-first-day-arriving-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/japan-airport-arrival-day.png</image:loc>
+      <image:title>日本到着日の過ごし方を無理なく組み立てる</image:title>
+      <image:caption>明るい日本の空港到着ロビーで荷物の横に必需品を整理する旅行者</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-use-luggage-forwarding-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/luggage-forwarding-japan.png</image:loc>
+      <image:title>日本の荷物配送サービスを旅で使う方法</image:title>
+      <image:caption>ホテルスタッフが旅行者のスーツケース配送を手伝っている場面</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ic-card-and-cash-basics-for-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ic-card-transit-basics.png</image:loc>
+      <image:title>日本旅行で必要なICカード、現金、クレジットカードの基本</image:title>
+      <image:caption>日本の駅改札で旅行者がICカードをタッチし、近くに円の現金が置かれている場面</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/summer-heat-travel-strategy-for-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/summer-heat-japan-travel.png</image:loc>
+      <image:title>日本の夏を暑さに負けず旅する方法</image:title>
+      <image:caption>暑い日本の夏の通りで水と扇子を持って日陰で休む旅行者</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/where-to-stay-in-tokyo-first-trip-neighborhoods.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-neighborhood-base.png</image:loc>
+      <image:title>初めての東京で泊まる場所をどう選ぶか</image:title>
+      <image:caption>夕暮れの東京の住宅街とホテルの窓から見える静かな街並み</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/winter-onsen-and-snow-country-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/winter-onsen-snow.png</image:loc>
+      <image:title>冬の温泉と雪国の日本を計画する方法</image:title>
+      <image:caption>雪の温泉街で夕暮れの旅館の灯りと湯けむりが上がる風景</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/best-japanese-cities-for-first-time-solo-travel.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/solo-travel.png</image:loc>
+      <image:title>初めてのひとり旅に向いている日本の10都市</image:title>
+      <image:caption>日本の駅のベンチに置かれた小さな旅行バッグとカメラ</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-choose-an-onsen-ryokan-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/onsen-ryokan.png</image:loc>
+      <image:title>日本の温泉旅館をどう選ぶか</image:title>
+      <image:caption>石畳の小道の奥にある静かな温泉旅館の入口</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-enjoy-japan-on-a-rainy-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/rainy-day-travel.png</image:loc>
+      <image:title>雨の日の日本旅行を楽しむ方法</image:title>
+      <image:caption>雨の日本の通りを窓越しに眺めるカフェのテーブルと傘</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-plan-a-cherry-blossom-trip-to-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/cherry-blossom-planning.png</image:loc>
+      <image:title>桜の日本旅行を一日だけに賭けずに計画する方法</image:title>
+      <image:caption>桜のそばに置かれた旅行ノートと切符</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/how-to-plan-a-restful-weekend-trip-in-japan.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/slow-weekend-trip.png</image:loc>
+      <image:title>日本で疲れを残さない二日旅を計画する方法</image:title>
+      <image:caption>静かな海辺の町を望む窓辺に置かれた小さな旅行バッグと本</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/japan-travel-disaster-preparedness-checklist.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/travel-disaster-preparedness.png</image:loc>
+      <image:title>日本旅行のための実用的な防災チェックリスト</image:title>
+      <image:caption>雨の街を望むホテルの机に置かれた旅行用の防災用品</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/shinkansen-comfort-checklist.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/shinkansen-comfort.png</image:loc>
+      <image:title>新幹線を快適に使うためのチェックリスト</image:title>
+      <image:caption>新幹線ホームのベンチに置かれたスーツケース、弁当、旅の小物</image:caption>
     </image:image>
   </url>
   <url>
@@ -830,22 +1646,6 @@
       <image:loc>https://tabi.guide/assets/images/fuji-trail.png</image:loc>
       <image:title>富士山に登る前に知っておきたいルートと準備</image:title>
       <image:caption>富士山に登る前に知っておきたいルートと準備をイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/ja/articles/shibuya-first-night-orientation-walk.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/tokyo-shibuya-first-night.png</image:loc>
-      <image:title>初日の夜に無理をしない渋谷オリエンテーション散歩</image:title>
-      <image:caption>初日の夜に無理をしない渋谷オリエンテーション散歩をイメージしたTABIのメインビジュアル</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tabi.guide/ja/articles/yokohama-minato-mirai-first-day-waterfront.html</loc>
-    <image:image>
-      <image:loc>https://tabi.guide/assets/images/yokohama-minato-mirai-waterfront.png</image:loc>
-      <image:title>横浜みなとみらいで始める、歩きやすい水辺の一日</image:title>
-      <image:caption>横浜みなとみらいで始める、歩きやすい水辺の一日をイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
 </urlset>

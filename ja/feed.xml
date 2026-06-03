@@ -7,30 +7,6 @@
   <language>ja</language>
   <lastBuildDate>Sun, 31 May 2026 15:00:00 GMT</lastBuildDate>
   <item>
-    <title>中之島で歩く、大阪の川と建築の時間</title>
-    <link>https://tabi.guide/ja/articles/nakanoshima-osaka-river-architecture-walk.html</link>
-    <guid>https://tabi.guide/ja/articles/nakanoshima-osaka-river-architecture-walk.html</guid>
-    <pubDate>Sun, 31 May 2026 15:00:00 GMT</pubDate>
-    <description>中之島は大阪のにぎやかなエリアの間にある、川沿いと市民文化を感じやすい場所です。遠回りの観光地ではなく、梅田や淀屋橋周辺の一日の中に組み込むと使いやすくなります。</description>
-    <category>文化と伝統</category>
-  </item>
-  <item>
-    <title>吉祥寺と井の頭公園で過ごす、少しゆっくりした東京の日</title>
-    <link>https://tabi.guide/ja/articles/kichijoji-inokashira-park-slow-tokyo-day.html</link>
-    <guid>https://tabi.guide/ja/articles/kichijoji-inokashira-park-slow-tokyo-day.html</guid>
-    <pubDate>Sun, 31 May 2026 15:00:00 GMT</pubDate>
-    <description>吉祥寺は東京の中で、緑、池、散歩、買い物、カフェを無理なく組み合わせやすい場所です。井の頭公園を主役にすると、ただの寄り道ではなく、落ち着いた一日になります。</description>
-    <category>知られざる場所</category>
-  </item>
-  <item>
-    <title>新世界で串カツとレトロな大阪を、記号だけで終わらせない歩き方</title>
-    <link>https://tabi.guide/ja/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</link>
-    <guid>https://tabi.guide/ja/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</guid>
-    <pubDate>Sun, 31 May 2026 15:00:00 GMT</pubDate>
-    <description>新世界はネオン、串カツ、懐かしい雰囲気だけで語られがちです。食事をシンプルに楽しみつつ、地域の文脈と現在の営業情報を確認して歩くと、より実用的な夜になります。</description>
-    <category>食</category>
-  </item>
-  <item>
     <title>初日の夜に無理をしない渋谷オリエンテーション散歩</title>
     <link>https://tabi.guide/ja/articles/shibuya-first-night-orientation-walk.html</link>
     <guid>https://tabi.guide/ja/articles/shibuya-first-night-orientation-walk.html</guid>
@@ -47,12 +23,124 @@
     <category>旅行ガイド</category>
   </item>
   <item>
-    <title>浅草、浅草寺、隅田川を地に足のついた一日にする</title>
-    <link>https://tabi.guide/ja/articles/asakusa-sensoji-riverside-walk.html</link>
-    <guid>https://tabi.guide/ja/articles/asakusa-sensoji-riverside-walk.html</guid>
+    <title>吉祥寺と井の頭公園で過ごす、少しゆっくりした東京の日</title>
+    <link>https://tabi.guide/ja/articles/kichijoji-inokashira-park-slow-tokyo-day.html</link>
+    <guid>https://tabi.guide/ja/articles/kichijoji-inokashira-park-slow-tokyo-day.html</guid>
+    <pubDate>Sun, 31 May 2026 15:00:00 GMT</pubDate>
+    <description>吉祥寺は東京の中で、緑、池、散歩、買い物、カフェを無理なく組み合わせやすい場所です。井の頭公園を主役にすると、ただの寄り道ではなく、落ち着いた一日になります。</description>
+    <category>知られざる場所</category>
+  </item>
+  <item>
+    <title>中之島で歩く、大阪の川と建築の時間</title>
+    <link>https://tabi.guide/ja/articles/nakanoshima-osaka-river-architecture-walk.html</link>
+    <guid>https://tabi.guide/ja/articles/nakanoshima-osaka-river-architecture-walk.html</guid>
+    <pubDate>Sun, 31 May 2026 15:00:00 GMT</pubDate>
+    <description>中之島は大阪のにぎやかなエリアの間にある、川沿いと市民文化を感じやすい場所です。遠回りの観光地ではなく、梅田や淀屋橋周辺の一日の中に組み込むと使いやすくなります。</description>
+    <category>文化と伝統</category>
+  </item>
+  <item>
+    <title>新世界で串カツとレトロな大阪を、記号だけで終わらせない歩き方</title>
+    <link>https://tabi.guide/ja/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</link>
+    <guid>https://tabi.guide/ja/articles/shinsekai-kushikatsu-and-retro-osaka-walk.html</guid>
+    <pubDate>Sun, 31 May 2026 15:00:00 GMT</pubDate>
+    <description>新世界はネオン、串カツ、懐かしい雰囲気だけで語られがちです。食事をシンプルに楽しみつつ、地域の文脈と現在の営業情報を確認して歩くと、より実用的な夜になります。</description>
+    <category>食</category>
+  </item>
+  <item>
+    <title>天満の夜、小皿とカウンターで大阪を味わう</title>
+    <link>https://tabi.guide/ja/articles/tenma-evening-small-plates.html</link>
+    <guid>https://tabi.guide/ja/articles/tenma-evening-small-plates.html</guid>
     <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
     <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>文化と伝統</category>
+    <category>食</category>
+  </item>
+  <item>
+    <title>手ぬぐいの選び方、柄、使い道、土産としての魅力</title>
+    <link>https://tabi.guide/ja/articles/tenugui-guide-patterns-uses-and-souvenirs.html</link>
+    <guid>https://tabi.guide/ja/articles/tenugui-guide-patterns-uses-and-souvenirs.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>手ぬぐいは軽く、使いやすく、柄に意味があります。布、文様、季節、使うか飾るか贈るかを考えて選びます。</description>
+    <category>買い物</category>
+  </item>
+  <item>
+    <title>鶴橋と大阪コリアタウンを食と地域の文脈で歩く</title>
+    <link>https://tabi.guide/ja/articles/tsuruhashi-koreatown-food-context.html</link>
+    <guid>https://tabi.guide/ja/articles/tsuruhashi-koreatown-food-context.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
+    <category>食</category>
+  </item>
+  <item>
+    <title>駅弁の選び方、地域らしさを味わう列車の昼食</title>
+    <link>https://tabi.guide/ja/articles/ekiben-how-to-choose-station-bento.html</link>
+    <guid>https://tabi.guide/ja/articles/ekiben-how-to-choose-station-bento.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>駅弁は列車移動を地域の味に変えてくれます。売り場の見方、地域食材の選び方、車内で食べやすい弁当の判断をまとめます。</description>
+    <category>食</category>
+  </item>
+  <item>
+    <title>黒門市場を食べすぎず楽しむ</title>
+    <link>https://tabi.guide/ja/articles/kuromon-market-without-overdoing-it.html</link>
+    <guid>https://tabi.guide/ja/articles/kuromon-market-without-overdoing-it.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
+    <category>食</category>
+  </item>
+  <item>
+    <title>難波と道頓堀で、大阪初日の夜をうまく使う</title>
+    <link>https://tabi.guide/ja/articles/namba-dotonbori-first-night-food-route.html</link>
+    <guid>https://tabi.guide/ja/articles/namba-dotonbori-first-night-food-route.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
+    <category>食</category>
+  </item>
+  <item>
+    <title>中崎町で喫茶と小さな店を歩く午後</title>
+    <link>https://tabi.guide/ja/articles/nakazakicho-cafes-small-shops.html</link>
+    <guid>https://tabi.guide/ja/articles/nakazakicho-cafes-small-shops.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
+    <category>知られざる場所</category>
+  </item>
+  <item>
+    <title>熊野古道の村を急がず歩く、巡礼の旅</title>
+    <link>https://tabi.guide/ja/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</link>
+    <guid>https://tabi.guide/ja/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>熊野古道は道だけでなく、村、湯、森、宿、小さな食事の連なりです。距離を詰め込みすぎないと、巡礼の感覚が残ります。</description>
+    <category>知られざる場所</category>
+  </item>
+  <item>
+    <title>谷中、根津、千駄木をゆっくり歩く</title>
+    <link>https://tabi.guide/ja/articles/yanaka-nezu-sendagi-slow-walk.html</link>
+    <guid>https://tabi.guide/ja/articles/yanaka-nezu-sendagi-slow-walk.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
+    <category>知られざる場所</category>
+  </item>
+  <item>
+    <title>ゆっくり旅したい日本の静かな海辺の町</title>
+    <link>https://tabi.guide/ja/articles/quiet-coastal-towns-for-slow-japan-travel.html</link>
+    <guid>https://tabi.guide/ja/articles/quiet-coastal-towns-for-slow-japan-travel.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>日本の海辺には、魚、港、朝市、フェリーの時間で動く小さな町があります。旅程を複雑にせず、海辺の余白を一つ加える考え方です。</description>
+    <category>知られざる場所</category>
+  </item>
+  <item>
+    <title>清澄白河で喫茶と庭をめぐる静かな朝</title>
+    <link>https://tabi.guide/ja/articles/kiyosumi-shirakawa-coffee-museum-walk.html</link>
+    <guid>https://tabi.guide/ja/articles/kiyosumi-shirakawa-coffee-museum-walk.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
+    <category>知られざる場所</category>
+  </item>
+  <item>
+    <title>堺で包丁と工芸に触れる大阪近郊の一日</title>
+    <link>https://tabi.guide/ja/articles/sakai-knives-and-old-osaka-craft-day.html</link>
+    <guid>https://tabi.guide/ja/articles/sakai-knives-and-old-osaka-craft-day.html</guid>
+    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
+    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
+    <category>買い物</category>
   </item>
   <item>
     <title>下北沢と高円寺で古着と小さな音楽の空気を歩く</title>
@@ -68,94 +156,6 @@
     <guid>https://tabi.guide/ja/articles/ginza-nihonbashi-design-shopping-walk.html</guid>
     <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
     <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>買い物</category>
-  </item>
-  <item>
-    <title>熊野古道の村を急がず歩く、巡礼の旅</title>
-    <link>https://tabi.guide/ja/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</link>
-    <guid>https://tabi.guide/ja/articles/kumano-kodo-villages-without-rushing-the-pilgrimage.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>熊野古道は道だけでなく、村、湯、森、宿、小さな食事の連なりです。距離を詰め込みすぎないと、巡礼の感覚が残ります。</description>
-    <category>知られざる場所</category>
-  </item>
-  <item>
-    <title>清澄白河で喫茶と庭をめぐる静かな朝</title>
-    <link>https://tabi.guide/ja/articles/kiyosumi-shirakawa-coffee-museum-walk.html</link>
-    <guid>https://tabi.guide/ja/articles/kiyosumi-shirakawa-coffee-museum-walk.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>知られざる場所</category>
-  </item>
-  <item>
-    <title>雨の日の京都、寺、喫茶、屋根のある通りをめぐる</title>
-    <link>https://tabi.guide/ja/articles/kyoto-rainy-day-temples-cafes-and-covered-streets.html</link>
-    <guid>https://tabi.guide/ja/articles/kyoto-rainy-day-temples-cafes-and-covered-streets.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>雨は京都の予定を変えますが、台無しにするとは限りません。商店街、静かな庭、温かい喫茶をつなぐと、雨の日らしい柔らかい一日になります。</description>
-    <category>旅行ガイド</category>
-  </item>
-  <item>
-    <title>ゆっくり旅したい日本の静かな海辺の町</title>
-    <link>https://tabi.guide/ja/articles/quiet-coastal-towns-for-slow-japan-travel.html</link>
-    <guid>https://tabi.guide/ja/articles/quiet-coastal-towns-for-slow-japan-travel.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>日本の海辺には、魚、港、朝市、フェリーの時間で動く小さな町があります。旅程を複雑にせず、海辺の余白を一つ加える考え方です。</description>
-    <category>知られざる場所</category>
-  </item>
-  <item>
-    <title>中崎町で喫茶と小さな店を歩く午後</title>
-    <link>https://tabi.guide/ja/articles/nakazakicho-cafes-small-shops.html</link>
-    <guid>https://tabi.guide/ja/articles/nakazakicho-cafes-small-shops.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>知られざる場所</category>
-  </item>
-  <item>
-    <title>堺で包丁と工芸に触れる大阪近郊の一日</title>
-    <link>https://tabi.guide/ja/articles/sakai-knives-and-old-osaka-craft-day.html</link>
-    <guid>https://tabi.guide/ja/articles/sakai-knives-and-old-osaka-craft-day.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>買い物</category>
-  </item>
-  <item>
-    <title>お台場と豊洲で、余白のある東京湾岸の一日</title>
-    <link>https://tabi.guide/ja/articles/odaiba-toyosu-waterfront-family-day.html</link>
-    <guid>https://tabi.guide/ja/articles/odaiba-toyosu-waterfront-family-day.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>旅行ガイド</category>
-  </item>
-  <item>
-    <title>雨の日の東京駅と丸の内ルート</title>
-    <link>https://tabi.guide/ja/articles/tokyo-station-marunouchi-rainy-day-route.html</link>
-    <guid>https://tabi.guide/ja/articles/tokyo-station-marunouchi-rainy-day-route.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>旅行ガイド</category>
-  </item>
-  <item>
-    <title>はじめての日本を深くする、ローカル線の使い方</title>
-    <link>https://tabi.guide/ja/articles/local-train-routes-for-first-time-japan.html</link>
-    <guid>https://tabi.guide/ja/articles/local-train-routes-for-first-time-japan.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>有名スポットの間に、小さな駅と普通列車の時間を少し入れるだけで旅の印象は変わります。予定を壊さず、ゆっくりした鉄道の日を組み込むためのガイドです。</description>
-    <category>旅行ガイド</category>
-  </item>
-  <item>
-    <title>梅田で地下街、食、眺望を使う雨の日ルート</title>
-    <link>https://tabi.guide/ja/articles/umeda-underground-and-skyline-rainy-day.html</link>
-    <guid>https://tabi.guide/ja/articles/umeda-underground-and-skyline-rainy-day.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>公式・一次情報で確認すべき点を分けながら、東京または大阪の一地域を無理なく歩くための実用ガイドです。</description>
-    <category>旅行ガイド</category>
-  </item>
-  <item>
-    <title>手ぬぐいの選び方、柄、使い道、土産としての魅力</title>
-    <link>https://tabi.guide/ja/articles/tenugui-guide-patterns-uses-and-souvenirs.html</link>
-    <guid>https://tabi.guide/ja/articles/tenugui-guide-patterns-uses-and-souvenirs.html</guid>
-    <pubDate>Sat, 30 May 2026 15:00:00 GMT</pubDate>
-    <description>手ぬぐいは軽く、使いやすく、柄に意味があります。布、文様、季節、使うか飾るか贈るかを考えて選びます。</description>
     <category>買い物</category>
   </item>
   <item>

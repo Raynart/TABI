@@ -1,57 +1,105 @@
 {
-  "generatedAt": "2026-06-02T13:18:31.839Z",
+  "generatedAt": "2026-06-03T00:38:34.423Z",
   "published": {
-    "english": 53,
-    "japanese": 53,
+    "english": 103,
+    "japanese": 103,
     "categories": [
       {
         "key": "travel-guide",
-        "count": 13
-      },
-      {
-        "key": "culture",
-        "count": 11
+        "count": 29
       },
       {
         "key": "food",
-        "count": 11
+        "count": 19
+      },
+      {
+        "key": "culture",
+        "count": 18
       },
       {
         "key": "hidden-gems",
-        "count": 9
+        "count": 13
       },
       {
         "key": "things-to-buy",
-        "count": 9
+        "count": 10
+      },
+      {
+        "key": "nature-outdoors",
+        "count": 8
+      },
+      {
+        "key": "stays",
+        "count": 6
       }
     ],
     "subcategories": [
       {
         "key": "heritage-walks",
+        "count": 12
+      },
+      {
+        "key": "city-food-routes",
         "count": 10
       },
       {
         "key": "first-time-routes",
-        "count": 6
-      },
-      {
-        "key": "city-food-routes",
-        "count": 5
+        "count": 9
       },
       {
         "key": "seasonal-weather-plans",
+        "count": 9
+      },
+      {
+        "key": "lodging-stays",
+        "count": 7
+      },
+      {
+        "key": "local-customs-etiquette",
+        "count": 5
+      },
+      {
+        "key": "transport-slow-rail",
+        "count": 5
+      },
+      {
+        "key": "rural-nature",
         "count": 4
+      },
+      {
+        "key": "ryokan-onsen",
+        "count": 4
+      },
+      {
+        "key": "aesthetics-philosophy",
+        "count": 3
+      },
+      {
+        "key": "coastal-islands",
+        "count": 3
+      },
+      {
+        "key": "craft-studios",
+        "count": 3
+      },
+      {
+        "key": "kitchen-tools",
+        "count": 3
+      },
+      {
+        "key": "outdoor-routes",
+        "count": 3
+      },
+      {
+        "key": "temples-shrines",
+        "count": 3
       },
       {
         "key": "textiles-clothing",
         "count": 3
       },
       {
-        "key": "coastal-islands",
-        "count": 2
-      },
-      {
-        "key": "craft-studios",
+        "key": "depachika-food-halls",
         "count": 2
       },
       {
@@ -59,7 +107,15 @@
         "count": 2
       },
       {
-        "key": "kitchen-tools",
+        "key": "konbini-everyday-food",
+        "count": 2
+      },
+      {
+        "key": "mountain-hiking-routes",
+        "count": 2
+      },
+      {
+        "key": "ordering-guides",
         "count": 2
       },
       {
@@ -67,19 +123,7 @@
         "count": 2
       },
       {
-        "key": "temples-shrines",
-        "count": 2
-      },
-      {
-        "key": "aesthetics-philosophy",
-        "count": 1
-      },
-      {
         "key": "beauty-drugstore",
-        "count": 1
-      },
-      {
-        "key": "depachika-food-halls",
         "count": 1
       },
       {
@@ -91,46 +135,26 @@
         "count": 1
       },
       {
-        "key": "konbini-everyday-food",
-        "count": 1
-      },
-      {
-        "key": "local-customs-etiquette",
-        "count": 1
-      },
-      {
-        "key": "mountain-hiking-routes",
-        "count": 1
-      },
-      {
-        "key": "ordering-guides",
-        "count": 1
-      },
-      {
         "key": "pilgrimage-villages",
-        "count": 1
-      },
-      {
-        "key": "ryokan-onsen",
         "count": 1
       },
       {
         "key": "tea-matcha",
         "count": 1
-      },
-      {
-        "key": "transport-slow-rail",
-        "count": 1
       }
     ],
     "regions": [
+      {
+        "key": "unassigned",
+        "count": 48
+      },
       {
         "key": "multi-region",
         "count": 24
       },
       {
         "key": "tokyo",
-        "count": 16
+        "count": 18
       },
       {
         "key": "osaka",
@@ -303,6 +327,27 @@
   "quality": {
     "issueArticles": [
       {
+        "id": "beginner-cycling-routes-in-japan",
+        "title": "Beginner-Friendly Cycling Routes in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "beginner-guide-to-japan-national-parks",
+        "title": "A Beginner Guide to Japan National Parks",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "best-japanese-cities-for-first-time-solo-travel",
+        "title": "10 Japanese Cities That Are Ideal for a First Solo Trip",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "best-japanese-kitchen-knives-to-bring-home",
         "title": "The Best Japanese Kitchen Knives to Bring Home",
         "issues": [
@@ -310,8 +355,43 @@
         ]
       },
       {
+        "id": "buying-chopsticks-and-lacquerware-in-japan",
+        "title": "Buying Chopsticks and Lacquerware in Japan Without Choosing Randomly",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "buying-matcha-ceremonial-vs-culinary-grade",
         "title": "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "canoeing-and-kayaking-in-japan",
+        "title": "Canoeing and Kayaking in Japan: Gentle Water Days for Travelers",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "capsule-hotels-and-business-hotels-in-japan",
+        "title": "Capsule Hotels and Business Hotels in Japan: How to Choose",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "coastal-walks-in-japan",
+        "title": "Coastal Walks in Japan for Travelers Who Want Sea Air, Not a Race",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "craft-towns-for-pottery-and-textiles",
+        "title": "Craft Towns in Japan for Pottery and Textiles",
         "issues": [
           "Missing source URLs"
         ]
@@ -331,6 +411,20 @@
         ]
       },
       {
+        "id": "farm-stays-in-rural-japan",
+        "title": "Farm Stays in Rural Japan Without Romanticizing the Work",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "forest-bathing-in-japan",
+        "title": "Forest Bathing in Japan: How to Slow Down Without Turning It Into a Checklist",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "hanami-where-to-see-cherry-blossoms-like-local",
         "title": "Hanami: Where to See Cherry Blossoms Like a Local",
         "issues": [
@@ -345,8 +439,127 @@
         ]
       },
       {
+        "id": "hotel-check-in-etiquette-in-japan",
+        "title": "Hotel Check-In Etiquette in Japan: Small Things That Make Arrival Easier",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-choose-a-minshuku-in-japan",
+        "title": "How to Choose a Minshuku in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-choose-an-onsen-ryokan-in-japan",
+        "title": "How to Choose an Onsen Ryokan in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-enjoy-japan-on-a-rainy-day",
+        "title": "How to Enjoy Japan on a Rainy Day",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-enjoy-japanese-gardens",
+        "title": "How to Enjoy Japanese Gardens Without Rushing Them",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-plan-a-cherry-blossom-trip-to-japan",
+        "title": "How to Plan a Cherry Blossom Trip to Japan Without Gambling Everything on One Date",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-plan-a-restful-weekend-trip-in-japan",
+        "title": "How to Plan a Restful Two-Day Trip in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-plan-autumn-leaves-in-japan",
+        "title": "How to Plan an Autumn Leaves Trip in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-plan-your-first-day-arriving-in-japan",
+        "title": "How to Plan Your First Day Arriving in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "how-to-read-japanese-menu-without-speaking-japanese",
         "title": "How to Read a Japanese Menu Without Speaking Japanese",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-use-depachika-food-halls-in-japan",
+        "title": "How to Use Depachika Food Halls in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-use-luggage-forwarding-in-japan",
+        "title": "How to Use Luggage Forwarding in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "how-to-visit-local-morning-markets-in-japan",
+        "title": "How to Visit Local Morning Markets in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "ic-card-and-cash-basics-for-japan",
+        "title": "IC Cards and Cash in Japan: What Travelers Actually Need",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "island-hopping-beyond-okinawa",
+        "title": "Island Hopping in Japan Beyond Okinawa",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "japan-rice-terraces-travel-guide",
+        "title": "Japan’s Rice Terraces: How to Visit Without Treating Them Like a Photo Prop",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "japan-travel-disaster-preparedness-checklist",
+        "title": "A Practical Disaster Preparedness Checklist for Traveling in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "japanese-breakfasts-worth-planning-for",
+        "title": "Japanese Breakfasts Worth Planning For",
         "issues": [
           "Missing source URLs"
         ]
@@ -366,8 +579,22 @@
         ]
       },
       {
+        "id": "japanese-festivals-without-crowd-mistakes",
+        "title": "Japanese Festivals Without the Crowd Mistakes",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "japanese-stationery-worth-bringing-home",
         "title": "Japanese Stationery Worth Bringing Home, From Notebooks to Pens",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "jazz-kissa-and-listening-bars-in-japan",
+        "title": "Jazz Kissa and Listening Bars in Japan",
         "issues": [
           "Missing source URLs"
         ]
@@ -394,6 +621,13 @@
         ]
       },
       {
+        "id": "konbini-travel-hacks-that-actually-help",
+        "title": "Konbini Travel Hacks That Actually Help in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "kumano-kodo-villages-without-rushing-the-pilgrimage",
         "title": "Kumano Kodo Villages Without Rushing the Pilgrimage",
         "issues": [
@@ -415,8 +649,29 @@
         ]
       },
       {
+        "id": "local-train-journeys-worth-slowing-down-for",
+        "title": "Local Train Journeys in Japan Worth Slowing Down For",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "local-train-routes-for-first-time-japan",
         "title": "Local Train Routes That Make a First Japan Trip Feel Deeper",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "machiya-townhouse-stays-in-japan",
+        "title": "Machiya Townhouse Stays in Japan: Charm, Rules, and Real-World Comfort",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "omiyage-gift-culture-for-travelers",
+        "title": "Omiyage Gift Culture in Japan: What Travelers Can Learn From It",
         "issues": [
           "Missing source URLs"
         ]
@@ -450,8 +705,92 @@
         ]
       },
       {
+        "id": "quiet-morning-kyoto-itinerary",
+        "title": "A Quiet Morning Plan for Kyoto Before the Crowds Arrive",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "regional-ramen-styles-travelers-should-know",
+        "title": "Regional Ramen Styles Travelers Should Know Before Ordering",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "regional-wagashi-travelers-should-try",
+        "title": "Regional Wagashi Travelers Should Try With Tea",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "scenic-ropeways-and-mountain-views-in-japan",
+        "title": "Scenic Ropeways and Mountain Views in Japan: How to Choose the Right One",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "seafood-markets-beyond-tourist-sushi",
+        "title": "Seafood Markets in Japan Beyond Tourist Sushi",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "seaside-ryokan-and-fishing-town-stays",
+        "title": "Seaside Ryokan and Fishing Town Stays in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "sento-public-bath-etiquette-in-japan",
+        "title": "Sento Public Bath Etiquette in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "setouchi-islands-art-sea-slow-travel",
         "title": "The Setouchi Islands for Art, Sea Air, and Slow Travel",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "shinkansen-comfort-checklist",
+        "title": "The Shinkansen Comfort Checklist",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "small-castle-towns-for-slow-japan-travel",
+        "title": "Small Castle Towns for Slow Japan Travel",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "summer-heat-travel-strategy-for-japan",
+        "title": "How to Travel Japan in Summer Without Letting the Heat Win",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "temple-and-shrine-etiquette-for-travelers",
+        "title": "Temple and Shrine Etiquette in Japan: A Traveler-Friendly Guide",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "temple-stays-in-japan-what-to-expect",
+        "title": "Temple Stays in Japan: What to Expect Before You Book",
         "issues": [
           "Missing source URLs"
         ]
@@ -478,6 +817,20 @@
         ]
       },
       {
+        "id": "vegetarian-travel-in-japan-without-panic",
+        "title": "Vegetarian Travel in Japan Without Panic",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "what-sustainable-tourism-means-in-japan",
+        "title": "What Sustainable Tourism Means in Japan",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
         "id": "what-wabi-sabi-really-means",
         "title": "What Wabi-Sabi Really Means and Why the World Needs It Now",
         "issues": [
@@ -487,6 +840,27 @@
       {
         "id": "where-to-buy-authentic-yukata-in-tokyo",
         "title": "Where to Buy Authentic Yukata in Tokyo Without the Markup",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "where-to-stay-in-tokyo-first-trip-neighborhoods",
+        "title": "Where to Stay in Tokyo on a First Trip: Neighborhoods That Make the City Easier",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "wildlife-watching-in-japan-without-disturbing-it",
+        "title": "Wildlife Watching in Japan Without Disturbing What You Came to See",
+        "issues": [
+          "Missing source URLs"
+        ]
+      },
+      {
+        "id": "winter-onsen-and-snow-country-japan",
+        "title": "Winter Onsen and Snow Country Japan: How to Plan the Trip",
         "issues": [
           "Missing source URLs"
         ]
@@ -555,22 +929,10 @@
     ],
     "thinSubcategories": [
       {
-        "key": "aesthetics-philosophy",
-        "title": "Aesthetics & Philosophy",
-        "count": 1,
-        "category": "culture"
-      },
-      {
         "key": "beauty-drugstore",
         "title": "Beauty & Drugstore",
         "count": 1,
         "category": "things-to-buy"
-      },
-      {
-        "key": "depachika-food-halls",
-        "title": "Depachika Food Halls",
-        "count": 1,
-        "category": "food"
       },
       {
         "key": "ekiben-rail-food",
@@ -585,40 +947,10 @@
         "category": "hidden-gems"
       },
       {
-        "key": "konbini-everyday-food",
-        "title": "Konbini & Everyday Food",
-        "count": 1,
-        "category": "food"
-      },
-      {
-        "key": "local-customs-etiquette",
-        "title": "Local Customs & Etiquette",
-        "count": 1,
-        "category": "culture"
-      },
-      {
-        "key": "mountain-hiking-routes",
-        "title": "Mountain & Hiking Routes",
-        "count": 1,
-        "category": "travel-guide"
-      },
-      {
-        "key": "ordering-guides",
-        "title": "Ordering Guides",
-        "count": 1,
-        "category": "food"
-      },
-      {
         "key": "pilgrimage-villages",
         "title": "Pilgrimage Villages",
         "count": 1,
         "category": "hidden-gems"
-      },
-      {
-        "key": "ryokan-onsen",
-        "title": "Ryokan & Onsen",
-        "count": 1,
-        "category": "travel-guide"
       },
       {
         "key": "tea-matcha",
@@ -627,22 +959,10 @@
         "category": "things-to-buy"
       },
       {
-        "key": "transport-slow-rail",
-        "title": "Transport & Slow Rail",
-        "count": 1,
-        "category": "travel-guide"
-      },
-      {
-        "key": "coastal-islands",
-        "title": "Coastal Towns & Islands",
+        "key": "depachika-food-halls",
+        "title": "Depachika Food Halls",
         "count": 2,
-        "category": "hidden-gems"
-      },
-      {
-        "key": "craft-studios",
-        "title": "Craft Studios",
-        "count": 2,
-        "category": "culture"
+        "category": "food"
       },
       {
         "key": "izakaya-nightlife",
@@ -651,51 +971,107 @@
         "category": "food"
       },
       {
-        "key": "kitchen-tools",
-        "title": "Kitchen Tools",
+        "key": "konbini-everyday-food",
+        "title": "Konbini & Everyday Food",
         "count": 2,
-        "category": "things-to-buy"
+        "category": "food"
+      },
+      {
+        "key": "mountain-hiking-routes",
+        "title": "Mountain & Hiking Routes",
+        "count": 2,
+        "category": "travel-guide"
+      },
+      {
+        "key": "ordering-guides",
+        "title": "Ordering Guides",
+        "count": 2,
+        "category": "food"
       },
       {
         "key": "stationery-paper",
         "title": "Stationery & Paper",
         "count": 2,
         "category": "things-to-buy"
-      },
-      {
-        "key": "temples-shrines",
-        "title": "Temples & Shrines",
-        "count": 2,
-        "category": "culture"
       }
     ],
     "planJapaneseTitleMojibake": 1000,
     "articlesNotInPlan": [
-      "asakusa-sensoji-riverside-walk",
-      "ryogoku-sumo-history-half-day",
-      "osaka-castle-park-half-day-history",
-      "shinsekai-tsutenkaku-with-context",
-      "nakanoshima-river-architecture-walk",
       "nakanoshima-osaka-river-architecture-walk",
+      "asakusa-sensoji-riverside-walk",
+      "nakanoshima-river-architecture-walk",
+      "osaka-castle-park-half-day-history",
+      "ryogoku-sumo-history-half-day",
+      "shinsekai-tsutenkaku-with-context",
+      "japanese-festivals-without-crowd-mistakes",
+      "jazz-kissa-and-listening-bars-in-japan",
+      "how-to-enjoy-japanese-gardens",
+      "omiyage-gift-culture-for-travelers",
+      "sento-public-bath-etiquette-in-japan",
+      "temple-and-shrine-etiquette-for-travelers",
+      "what-sustainable-tourism-means-in-japan",
+      "shinsekai-kushikatsu-and-retro-osaka-walk",
+      "kuromon-market-without-overdoing-it",
       "namba-dotonbori-first-night-food-route",
       "tenma-evening-small-plates",
-      "kuromon-market-without-overdoing-it",
       "tsuruhashi-koreatown-food-context",
-      "shinsekai-kushikatsu-and-retro-osaka-walk",
-      "yanaka-nezu-sendagi-slow-walk",
+      "regional-wagashi-travelers-should-try",
+      "seafood-markets-beyond-tourist-sushi",
+      "how-to-use-depachika-food-halls-in-japan",
+      "japanese-breakfasts-worth-planning-for",
+      "konbini-travel-hacks-that-actually-help",
+      "regional-ramen-styles-travelers-should-know",
+      "vegetarian-travel-in-japan-without-panic",
+      "how-to-visit-local-morning-markets-in-japan",
+      "kichijoji-inokashira-park-slow-tokyo-day",
       "kiyosumi-shirakawa-coffee-museum-walk",
       "nakazakicho-cafes-small-shops",
-      "kichijoji-inokashira-park-slow-tokyo-day",
+      "yanaka-nezu-sendagi-slow-walk",
+      "craft-towns-for-pottery-and-textiles",
+      "beginner-guide-to-japan-national-parks",
+      "small-castle-towns-for-slow-japan-travel",
+      "quiet-morning-kyoto-itinerary",
+      "forest-bathing-in-japan",
+      "beginner-cycling-routes-in-japan",
+      "coastal-walks-in-japan",
+      "japan-rice-terraces-travel-guide",
+      "wildlife-watching-in-japan-without-disturbing-it",
+      "scenic-ropeways-and-mountain-views-in-japan",
+      "island-hopping-beyond-okinawa",
+      "canoeing-and-kayaking-in-japan",
+      "how-to-choose-a-minshuku-in-japan",
+      "temple-stays-in-japan-what-to-expect",
+      "farm-stays-in-rural-japan",
+      "machiya-townhouse-stays-in-japan",
+      "seaside-ryokan-and-fishing-town-stays",
+      "hotel-check-in-etiquette-in-japan",
       "ginza-nihonbashi-design-shopping-walk",
-      "shimokitazawa-koenji-vintage-music-day",
       "sakai-knives-and-old-osaka-craft-day",
-      "shinjuku-first-day-without-burning-out",
-      "ueno-park-museums-half-day",
-      "tokyo-station-marunouchi-rainy-day-route",
-      "odaiba-toyosu-waterfront-family-day",
-      "umeda-underground-and-skyline-rainy-day",
+      "shimokitazawa-koenji-vintage-music-day",
+      "buying-chopsticks-and-lacquerware-in-japan",
       "shibuya-first-night-orientation-walk",
-      "yokohama-minato-mirai-first-day-waterfront"
+      "yokohama-minato-mirai-first-day-waterfront",
+      "odaiba-toyosu-waterfront-family-day",
+      "shinjuku-first-day-without-burning-out",
+      "tokyo-station-marunouchi-rainy-day-route",
+      "ueno-park-museums-half-day",
+      "umeda-underground-and-skyline-rainy-day",
+      "local-train-journeys-worth-slowing-down-for",
+      "capsule-hotels-and-business-hotels-in-japan",
+      "how-to-plan-autumn-leaves-in-japan",
+      "how-to-plan-your-first-day-arriving-in-japan",
+      "how-to-use-luggage-forwarding-in-japan",
+      "ic-card-and-cash-basics-for-japan",
+      "summer-heat-travel-strategy-for-japan",
+      "where-to-stay-in-tokyo-first-trip-neighborhoods",
+      "winter-onsen-and-snow-country-japan",
+      "best-japanese-cities-for-first-time-solo-travel",
+      "how-to-choose-an-onsen-ryokan-in-japan",
+      "how-to-enjoy-japan-on-a-rainy-day",
+      "how-to-plan-a-cherry-blossom-trip-to-japan",
+      "how-to-plan-a-restful-weekend-trip-in-japan",
+      "japan-travel-disaster-preparedness-checklist",
+      "shinkansen-comfort-checklist"
     ]
   }
 }
