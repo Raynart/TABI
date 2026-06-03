@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-03T00:38:34.423Z",
+  "generatedAt": "2026-06-03T03:46:15.590Z",
   "published": {
-    "english": 103,
-    "japanese": 103,
+    "english": 123,
+    "japanese": 123,
     "categories": [
       {
         "key": "travel-guide",
@@ -10,23 +10,23 @@
       },
       {
         "key": "food",
-        "count": 19
+        "count": 23
       },
       {
         "key": "culture",
+        "count": 20
+      },
+      {
+        "key": "things-to-buy",
         "count": 18
       },
       {
         "key": "hidden-gems",
-        "count": 13
-      },
-      {
-        "key": "things-to-buy",
-        "count": 10
+        "count": 15
       },
       {
         "key": "nature-outdoors",
-        "count": 8
+        "count": 12
       },
       {
         "key": "stays",
@@ -63,6 +63,26 @@
         "count": 5
       },
       {
+        "key": "beauty-drugstore",
+        "count": 4
+      },
+      {
+        "key": "coastal-islands",
+        "count": 4
+      },
+      {
+        "key": "ekiben-rail-food",
+        "count": 4
+      },
+      {
+        "key": "forests-and-islands",
+        "count": 4
+      },
+      {
+        "key": "kitchen-tools",
+        "count": 4
+      },
+      {
         "key": "rural-nature",
         "count": 4
       },
@@ -71,11 +91,19 @@
         "count": 4
       },
       {
-        "key": "aesthetics-philosophy",
-        "count": 3
+        "key": "stationery-paper",
+        "count": 4
       },
       {
-        "key": "coastal-islands",
+        "key": "tea-matcha",
+        "count": 4
+      },
+      {
+        "key": "temples-shrines",
+        "count": 4
+      },
+      {
+        "key": "aesthetics-philosophy",
         "count": 3
       },
       {
@@ -83,7 +111,7 @@
         "count": 3
       },
       {
-        "key": "kitchen-tools",
+        "key": "mountain-hiking-routes",
         "count": 3
       },
       {
@@ -91,7 +119,7 @@
         "count": 3
       },
       {
-        "key": "temples-shrines",
+        "key": "pilgrimage-villages",
         "count": 3
       },
       {
@@ -111,36 +139,8 @@
         "count": 2
       },
       {
-        "key": "mountain-hiking-routes",
-        "count": 2
-      },
-      {
         "key": "ordering-guides",
         "count": 2
-      },
-      {
-        "key": "stationery-paper",
-        "count": 2
-      },
-      {
-        "key": "beauty-drugstore",
-        "count": 1
-      },
-      {
-        "key": "ekiben-rail-food",
-        "count": 1
-      },
-      {
-        "key": "forests-and-islands",
-        "count": 1
-      },
-      {
-        "key": "pilgrimage-villages",
-        "count": 1
-      },
-      {
-        "key": "tea-matcha",
-        "count": 1
       }
     ],
     "regions": [
@@ -149,16 +149,20 @@
         "count": 48
       },
       {
+        "key": "tokyo",
+        "count": 30
+      },
+      {
         "key": "multi-region",
         "count": 24
       },
       {
-        "key": "tokyo",
-        "count": 18
+        "key": "osaka",
+        "count": 20
       },
       {
-        "key": "osaka",
-        "count": 13
+        "key": "kanagawa",
+        "count": 1
       }
     ]
   },
@@ -929,36 +933,6 @@
     ],
     "thinSubcategories": [
       {
-        "key": "beauty-drugstore",
-        "title": "Beauty & Drugstore",
-        "count": 1,
-        "category": "things-to-buy"
-      },
-      {
-        "key": "ekiben-rail-food",
-        "title": "Ekiben & Rail Food",
-        "count": 1,
-        "category": "food"
-      },
-      {
-        "key": "forests-and-islands",
-        "title": "Forests & Remote Nature",
-        "count": 1,
-        "category": "hidden-gems"
-      },
-      {
-        "key": "pilgrimage-villages",
-        "title": "Pilgrimage Villages",
-        "count": 1,
-        "category": "hidden-gems"
-      },
-      {
-        "key": "tea-matcha",
-        "title": "Tea & Matcha",
-        "count": 1,
-        "category": "things-to-buy"
-      },
-      {
         "key": "depachika-food-halls",
         "title": "Depachika Food Halls",
         "count": 2,
@@ -977,26 +951,16 @@
         "category": "food"
       },
       {
-        "key": "mountain-hiking-routes",
-        "title": "Mountain & Hiking Routes",
-        "count": 2,
-        "category": "travel-guide"
-      },
-      {
         "key": "ordering-guides",
         "title": "Ordering Guides",
         "count": 2,
         "category": "food"
-      },
-      {
-        "key": "stationery-paper",
-        "title": "Stationery & Paper",
-        "count": 2,
-        "category": "things-to-buy"
       }
     ],
     "planJapaneseTitleMojibake": 1000,
     "articlesNotInPlan": [
+      "sumiyoshi-taisha-osaka-ritual-walk",
+      "kamakura-temple-pilgrimage-day",
       "nakanoshima-osaka-river-architecture-walk",
       "asakusa-sensoji-riverside-walk",
       "nakanoshima-river-architecture-walk",
@@ -1010,6 +974,10 @@
       "sento-public-bath-etiquette-in-japan",
       "temple-and-shrine-etiquette-for-travelers",
       "what-sustainable-tourism-means-in-japan",
+      "ueno-asakusa-casual-matcha-break",
+      "ueno-station-ekiben-and-park-day",
+      "shin-osaka-ekiben-transfer-lunch",
+      "tokyo-station-ekiben-before-shinkansen",
       "shinsekai-kushikatsu-and-retro-osaka-walk",
       "kuromon-market-without-overdoing-it",
       "namba-dotonbori-first-night-food-route",
@@ -1023,6 +991,8 @@
       "regional-ramen-styles-travelers-should-know",
       "vegetarian-travel-in-japan-without-panic",
       "how-to-visit-local-morning-markets-in-japan",
+      "tokyo-ferry-to-sarushima-island",
+      "chichibu-temple-walk-from-tokyo",
       "kichijoji-inokashira-park-slow-tokyo-day",
       "kiyosumi-shirakawa-coffee-museum-walk",
       "nakazakicho-cafes-small-shops",
@@ -1031,6 +1001,10 @@
       "beginner-guide-to-japan-national-parks",
       "small-castle-towns-for-slow-japan-travel",
       "quiet-morning-kyoto-itinerary",
+      "okutama-lake-forest-day-from-tokyo",
+      "hinohara-tokyo-forest-valley-day",
+      "mino-o-waterfall-osaka-forest-walk",
+      "mt-takao-first-hike-from-tokyo",
       "forest-bathing-in-japan",
       "beginner-cycling-routes-in-japan",
       "coastal-walks-in-japan",
@@ -1045,6 +1019,14 @@
       "machiya-townhouse-stays-in-japan",
       "seaside-ryokan-and-fishing-town-stays",
       "hotel-check-in-etiquette-in-japan",
+      "sakai-knife-maintenance-shopping-day",
+      "osaka-stationery-umeda-namba",
+      "ginza-stationery-paper-gifts",
+      "shinjuku-beauty-floor-first-time",
+      "osaka-drugstore-travel-health-kit",
+      "tokyo-drugstore-sunscreen-skincare-basics",
+      "osaka-department-store-matcha-sweets",
+      "ginza-nihonbashi-matcha-shopping",
       "ginza-nihonbashi-design-shopping-walk",
       "sakai-knives-and-old-osaka-craft-day",
       "shimokitazawa-koenji-vintage-music-day",

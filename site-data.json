@@ -361,7 +361,8 @@
         "shopping"
       ],
       "categories": [
-        "things-to-buy"
+        "things-to-buy",
+        "food"
       ]
     },
     {
@@ -453,7 +454,8 @@
         "slow-travel"
       ],
       "categories": [
-        "hidden-gems"
+        "hidden-gems",
+        "culture"
       ]
     },
     {

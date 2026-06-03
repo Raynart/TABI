@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://tabi.guide/articles/sumiyoshi-taisha-osaka-ritual-walk.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sumiyoshi-taisha-osaka-ritual-walk.png</image:loc>
+      <image:title>Sumiyoshi Taisha in Osaka: A Shrine Walk With Ritual Context</image:title>
+      <image:caption>Sumiyoshi Taisha shrine grounds in Osaka with arched bridge, trees, and visitors in realistic daylight</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/kamakura-temple-pilgrimage-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/kamakura-temple-pilgrimage-day.png</image:loc>
+      <image:title>Kamakura Temple Pilgrimage Day Without Turning It Into a Checklist</image:title>
+      <image:caption>Kamakura temple approach with stone steps, greenery, and visitors walking quietly in natural light</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://tabi.guide/articles/nakanoshima-osaka-river-architecture-walk.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/osaka-nakanoshima-waterfront.png</image:loc>
@@ -142,6 +158,38 @@
       <image:loc>https://tabi.guide/assets/images/kyoto-shrine-hero.png</image:loc>
       <image:title>Hanami: Where to See Cherry Blossoms Like a Local</image:title>
       <image:caption>A quiet seasonal path in Japan with soft evening light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ueno-asakusa-casual-matcha-break.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ueno-asakusa-casual-matcha-break.png</image:loc>
+      <image:title>Ueno to Asakusa Casual Matcha Breaks for a Slow Tokyo Afternoon</image:title>
+      <image:caption>Casual Tokyo cafe table with matcha drink and wagashi near old town streets between Ueno and Asakusa</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ueno-station-ekiben-and-park-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ueno-station-ekiben-park-day.png</image:loc>
+      <image:title>Ueno Station Ekiben and Park Day: Food Before Museums or a Northbound Train</image:title>
+      <image:caption>Ueno station food area with boxed lunches and a hint of park greenery beyond the station concourse</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/shin-osaka-ekiben-transfer-lunch.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/shin-osaka-ekiben-transfer-lunch.png</image:loc>
+      <image:title>Shin-Osaka Ekiben Transfer Lunch: A Practical Stop Between Trains</image:title>
+      <image:caption>Shin-Osaka station concourse with boxed lunches displayed near travelers moving between trains</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/tokyo-station-ekiben-before-shinkansen.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-station-ekiben-before-shinkansen.png</image:loc>
+      <image:title>Tokyo Station Ekiben Before the Shinkansen: How to Choose Without Rushing</image:title>
+      <image:caption>Tokyo Station indoor food counter with arranged ekiben boxes and travelers under warm station lighting</image:caption>
     </image:image>
   </url>
   <url>
@@ -297,6 +345,22 @@
     </image:image>
   </url>
   <url>
+    <loc>https://tabi.guide/articles/tokyo-ferry-to-sarushima-island.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sarushima-island-day-kanagawa.png</image:loc>
+      <image:title>Sarushima From Tokyo or Yokohama: A Small Island Day With Real Timing</image:title>
+      <image:caption>Sarushima island coastal path near Yokosuka with brick ruins, greenery, and sea light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/chichibu-temple-walk-from-tokyo.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/chichibu-temple-walk-from-tokyo.png</image:loc>
+      <image:title>Chichibu Temple Walk From Tokyo: A Slower Pilgrimage-Minded Day</image:title>
+      <image:caption>Chichibu town temple approach with quiet streets, low mountains, and soft afternoon light</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://tabi.guide/articles/kichijoji-inokashira-park-slow-tokyo-day.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/tokyo-kichijoji-inokashira-park.png</image:loc>
@@ -398,6 +462,38 @@
       <image:loc>https://tabi.guide/assets/images/kyoto-shrine-hero.png</image:loc>
       <image:title>Walking the Kiso Valley Between Old Post Towns</image:title>
       <image:caption>A quiet historic path in Japan surrounded by trees</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/okutama-lake-forest-day-from-tokyo.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/okutama-lake-forest-day-from-tokyo.png</image:loc>
+      <image:title>Okutama Lake and Forest Day From Tokyo Without Overstretching</image:title>
+      <image:caption>Okutama lake and forest landscape west of Tokyo with calm water, green mountains, and soft daylight</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/hinohara-tokyo-forest-valley-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/hinohara-tokyo-forest-valley-day.png</image:loc>
+      <image:title>Hinohara Forest Valley Day: Tokyo Nature Beyond the Usual City Plan</image:title>
+      <image:caption>Quiet forest valley road in Hinohara Tokyo with deep green trees, mountain light, and a narrow stream</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/mino-o-waterfall-osaka-forest-walk.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/mino-o-waterfall-osaka-forest-walk.png</image:loc>
+      <image:title>Minoo Waterfall From Osaka: A Forest Walk With Enough Time to Breathe</image:title>
+      <image:caption>Minoo forest path near Osaka leading toward a waterfall with green trees and natural daylight</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/mt-takao-first-hike-from-tokyo.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/mt-takao-first-hike-from-tokyo.png</image:loc>
+      <image:title>Mt. Takao From Tokyo: A First Hike That Still Needs Real Planning</image:title>
+      <image:caption>Mt Takao forest trail near Tokyo with hikers, cedar trees, and soft mountain daylight</image:caption>
     </image:image>
   </url>
   <url>
@@ -510,6 +606,70 @@
       <image:loc>https://tabi.guide/assets/images/hotel-check-in-etiquette-japan.png</image:loc>
       <image:title>Hotel Check-In Etiquette in Japan: Small Things That Make Arrival Easier</image:title>
       <image:caption>A calm Japanese hotel front desk with passports, key cards, and neatly placed luggage</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/sakai-knife-maintenance-shopping-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sakai-knife-maintenance-shopping-day.png</image:loc>
+      <image:title>Sakai Knife Shopping and Maintenance Questions Before You Buy</image:title>
+      <image:caption>Sakai knife workshop counter with polished Japanese kitchen knives and craft tools in realistic light</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/osaka-stationery-umeda-namba.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-stationery-umeda-namba.png</image:loc>
+      <image:title>Osaka Stationery in Umeda and Namba: Practical Paper, Pens, and Desk Gifts</image:title>
+      <image:caption>Osaka stationery store display with notebooks, pens, and paper gifts near a busy shopping district</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ginza-stationery-paper-gifts.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ginza-stationery-paper-gifts.png</image:loc>
+      <image:title>Ginza Stationery and Paper Gifts: Small Things Worth Bringing Home</image:title>
+      <image:caption>Ginza stationery shop table with notebooks, paper goods, pens, and refined Tokyo retail lighting</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/shinjuku-beauty-floor-first-time.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/shinjuku-beauty-floor-first-time.png</image:loc>
+      <image:title>Shinjuku Beauty Floors for First-Time Visitors Who Do Not Want to Overbuy</image:title>
+      <image:caption>Shinjuku department store beauty floor with cosmetic counters and shoppers in polished realistic lighting</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/osaka-drugstore-travel-health-kit.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-drugstore-travel-health-kit.png</image:loc>
+      <image:title>Osaka Drugstore Travel Kit: Practical Items Before a Long Day Out</image:title>
+      <image:caption>Osaka drugstore aisle with travel health items, skincare, and small toiletries in a realistic shop interior</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/tokyo-drugstore-sunscreen-skincare-basics.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-drugstore-sunscreen-skincare.png</image:loc>
+      <image:title>Tokyo Drugstore Sunscreen and Skincare Basics for Travelers</image:title>
+      <image:caption>Tokyo drugstore skincare shelf with sunscreen bottles and travel toiletries arranged in bright realistic retail lighting</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/osaka-department-store-matcha-sweets.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-department-store-matcha-sweets.png</image:loc>
+      <image:title>Osaka Department Store Matcha Sweets: Choosing Gifts That Travel Well</image:title>
+      <image:caption>Osaka department store food floor with matcha sweets boxes arranged neatly under warm retail lighting</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/articles/ginza-nihonbashi-matcha-shopping.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ginza-nihonbashi-matcha-shopping.png</image:loc>
+      <image:title>Ginza and Nihonbashi Matcha Shopping Without Guessing at Labels</image:title>
+      <image:caption>Refined Tokyo tea shop counter with matcha tins, tea utensils, and soft daylight in Ginza or Nihonbashi</image:caption>
     </image:image>
   </url>
   <url>
@@ -825,6 +985,22 @@
     </image:image>
   </url>
   <url>
+    <loc>https://tabi.guide/ja/articles/sumiyoshi-taisha-osaka-ritual-walk.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sumiyoshi-taisha-osaka-ritual-walk.png</image:loc>
+      <image:title>大阪・住吉大社を、作法と文脈を見ながら歩く</image:title>
+      <image:caption>大阪・住吉大社を、作法と文脈を見ながら歩くをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/kamakura-temple-pilgrimage-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/kamakura-temple-pilgrimage-day.png</image:loc>
+      <image:title>鎌倉の寺社巡りを、チェックリストにしない一日</image:title>
+      <image:caption>鎌倉の寺社巡りを、チェックリストにしない一日をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://tabi.guide/ja/articles/nakanoshima-osaka-river-architecture-walk.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/osaka-nakanoshima-waterfront.png</image:loc>
@@ -966,6 +1142,38 @@
       <image:loc>https://tabi.guide/assets/images/kyoto-shrine-hero.png</image:loc>
       <image:title>地元の人のように楽しむ花見の場所と作法</image:title>
       <image:caption>地元の人のように楽しむ花見の場所と作法をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ueno-asakusa-casual-matcha-break.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ueno-asakusa-casual-matcha-break.png</image:loc>
+      <image:title>上野から浅草で、午後を整える気軽な抹茶休憩</image:title>
+      <image:caption>上野から浅草で、午後を整える気軽な抹茶休憩をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ueno-station-ekiben-and-park-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ueno-station-ekiben-park-day.png</image:loc>
+      <image:title>上野駅の駅弁と公園の日を、博物館や北方面の移動前に使う</image:title>
+      <image:caption>上野駅の駅弁と公園の日を、博物館や北方面の移動前に使うをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/shin-osaka-ekiben-transfer-lunch.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/shin-osaka-ekiben-transfer-lunch.png</image:loc>
+      <image:title>新大阪の乗り換え駅弁ランチを実用的に使う</image:title>
+      <image:caption>新大阪の乗り換え駅弁ランチを実用的に使うをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/tokyo-station-ekiben-before-shinkansen.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-station-ekiben-before-shinkansen.png</image:loc>
+      <image:title>新幹線前の東京駅駅弁を、急がず選ぶ方法</image:title>
+      <image:caption>新幹線前の東京駅駅弁を、急がず選ぶ方法をイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -1121,6 +1329,22 @@
     </image:image>
   </url>
   <url>
+    <loc>https://tabi.guide/ja/articles/tokyo-ferry-to-sarushima-island.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sarushima-island-day-kanagawa.png</image:loc>
+      <image:title>東京・横浜から猿島へ、時間をきちんと見る小さな島の日</image:title>
+      <image:caption>東京・横浜から猿島へ、時間をきちんと見る小さな島の日をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/chichibu-temple-walk-from-tokyo.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/chichibu-temple-walk-from-tokyo.png</image:loc>
+      <image:title>東京から秩父へ、巡礼の文脈を意識した寺歩き</image:title>
+      <image:caption>東京から秩父へ、巡礼の文脈を意識した寺歩きをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://tabi.guide/ja/articles/kichijoji-inokashira-park-slow-tokyo-day.html</loc>
     <image:image>
       <image:loc>https://tabi.guide/assets/images/tokyo-kichijoji-inokashira-park.png</image:loc>
@@ -1222,6 +1446,38 @@
       <image:loc>https://tabi.guide/assets/images/kyoto-shrine-hero.png</image:loc>
       <image:title>木曽路、宿場町の間を歩く旅</image:title>
       <image:caption>木曽路、宿場町の間を歩く旅をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/okutama-lake-forest-day-from-tokyo.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/okutama-lake-forest-day-from-tokyo.png</image:loc>
+      <image:title>奥多摩湖と森を、東京から無理なく歩く</image:title>
+      <image:caption>奥多摩湖と森を、東京から無理なく歩くをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/hinohara-tokyo-forest-valley-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/hinohara-tokyo-forest-valley-day.png</image:loc>
+      <image:title>檜原村の森と谷で、東京の外側を静かに歩く</image:title>
+      <image:caption>檜原村の森と谷で、東京の外側を静かに歩くをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/mino-o-waterfall-osaka-forest-walk.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/mino-o-waterfall-osaka-forest-walk.png</image:loc>
+      <image:title>大阪から箕面大滝へ、呼吸できる森の散歩</image:title>
+      <image:caption>大阪から箕面大滝へ、呼吸できる森の散歩をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/mt-takao-first-hike-from-tokyo.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/mt-takao-first-hike-from-tokyo.png</image:loc>
+      <image:title>東京から高尾山へ、初めてでも計画はきちんと立てる</image:title>
+      <image:caption>東京から高尾山へ、初めてでも計画はきちんと立てるをイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
@@ -1334,6 +1590,70 @@
       <image:loc>https://tabi.guide/assets/images/hotel-check-in-etiquette-japan.png</image:loc>
       <image:title>日本のホテルチェックイン作法。到着を楽にする小さな準備</image:title>
       <image:caption>パスポート、カードキー、整えられた荷物が置かれた日本の静かなホテルフロント</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/sakai-knife-maintenance-shopping-day.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/sakai-knife-maintenance-shopping-day.png</image:loc>
+      <image:title>堺の包丁選びで、買う前に手入れを確認する</image:title>
+      <image:caption>堺の包丁選びで、買う前に手入れを確認するをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/osaka-stationery-umeda-namba.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-stationery-umeda-namba.png</image:loc>
+      <image:title>梅田・なんばで選ぶ大阪の文具と紙もの</image:title>
+      <image:caption>梅田・なんばで選ぶ大阪の文具と紙ものをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ginza-stationery-paper-gifts.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ginza-stationery-paper-gifts.png</image:loc>
+      <image:title>銀座で選ぶ文具と紙もの、小さく持ち帰る価値</image:title>
+      <image:caption>銀座で選ぶ文具と紙もの、小さく持ち帰る価値をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/shinjuku-beauty-floor-first-time.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/shinjuku-beauty-floor-first-time.png</image:loc>
+      <image:title>買いすぎない初めての新宿ビューティーフロア</image:title>
+      <image:caption>買いすぎない初めての新宿ビューティーフロアをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/osaka-drugstore-travel-health-kit.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-drugstore-travel-health-kit.png</image:loc>
+      <image:title>大阪の長い外出前に整えるドラッグストア旅キット</image:title>
+      <image:caption>大阪の長い外出前に整えるドラッグストア旅キットをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/tokyo-drugstore-sunscreen-skincare-basics.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/tokyo-drugstore-sunscreen-skincare.png</image:loc>
+      <image:title>東京のドラッグストアで選ぶ日焼け止めとスキンケアの基本</image:title>
+      <image:caption>東京のドラッグストアで選ぶ日焼け止めとスキンケアの基本をイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/osaka-department-store-matcha-sweets.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/osaka-department-store-matcha-sweets.png</image:loc>
+      <image:title>大阪の百貨店で、持ち帰りやすい抹茶菓子を選ぶ</image:title>
+      <image:caption>大阪の百貨店で、持ち帰りやすい抹茶菓子を選ぶをイメージしたTABIのメインビジュアル</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tabi.guide/ja/articles/ginza-nihonbashi-matcha-shopping.html</loc>
+    <image:image>
+      <image:loc>https://tabi.guide/assets/images/ginza-nihonbashi-matcha-shopping.png</image:loc>
+      <image:title>銀座・日本橋で抹茶をラベル頼みにしすぎず選ぶ</image:title>
+      <image:caption>銀座・日本橋で抹茶をラベル頼みにしすぎず選ぶをイメージしたTABIのメインビジュアル</image:caption>
     </image:image>
   </url>
   <url>
