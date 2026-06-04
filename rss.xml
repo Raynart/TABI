@@ -2,10 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>TABI 窶・Discover Japan</title>
-  <link>https://tabi.guide</link>
+  <link>https://raynart.github.io/TABI</link>
   <description>Your guide to the real Japan — travel, culture, and the things worth bringing home.</description>
   <language>en</language>
-  <lastBuildDate>金, 05 6 2026 07:39:16 +0000</lastBuildDate>
-  <atom:link href="https://tabi.guide/rss.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>金, 05 6 2026 08:10:57 +0000</lastBuildDate>
+  <atom:link href="https://raynart.github.io/TABI/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>The Hidden Shrines of Kyoto Locals Still Keep Secret</title>
+    <link>https://raynart.github.io/TABI/articles/hidden-shrines-kyoto.html</link>
+    <description></description>
+    <pubDate>木, 28 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/hidden-shrines-kyoto.html</guid>
+  </item>
+  <item>
+    <title>How to Spend 10 Days in Japan Without a Single Tourist Trap</title>
+    <link>https://raynart.github.io/TABI/articles/10-days-japan-no-tourist-traps.html</link>
+    <description></description>
+    <pubDate>月, 18 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/10-days-japan-no-tourist-traps.html</guid>
+  </item>
+  <item>
+    <title>The Perfect Route up Mt. Fuji: What Nobody Tells You</title>
+    <link>https://raynart.github.io/TABI/articles/mt-fuji-route-guide.html</link>
+    <description></description>
+    <pubDate>金, 15 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/mt-fuji-route-guide.html</guid>
+  </item>
+  <item>
+    <title>Osaka in 3 Days: The Eating and Wandering Itinerary</title>
+    <link>https://raynart.github.io/TABI/articles/osaka-3-days-itinerary.html</link>
+    <description></description>
+    <pubDate>火, 12 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/osaka-3-days-itinerary.html</guid>
+  </item>
+  <item>
+    <title>Yakushima: Japan&apos;s Ancient Forest That Few Tourists Find</title>
+    <link>https://raynart.github.io/TABI/articles/yakushima-ancient-forest.html</link>
+    <description></description>
+    <pubDate>日, 10 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/yakushima-ancient-forest.html</guid>
+  </item>
+  <item>
+    <title>How to Read a Japanese Menu Without Speaking Japanese</title>
+    <link>https://raynart.github.io/TABI/articles/japanese-menu-guide.html</link>
+    <description></description>
+    <pubDate>金, 08 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/japanese-menu-guide.html</guid>
+  </item>
+  <item>
+    <title>What Wabi-Sabi Really Means — And Why the World Needs It Now</title>
+    <link>https://raynart.github.io/TABI/articles/wabi-sabi-explained.html</link>
+    <description></description>
+    <pubDate>水, 06 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/wabi-sabi-explained.html</guid>
+  </item>
+  <item>
+    <title>Kintsugi: The Art of Repairing Broken Things with Gold</title>
+    <link>https://raynart.github.io/TABI/articles/kintsugi-art-of-gold.html</link>
+    <description></description>
+    <pubDate>土, 02 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/kintsugi-art-of-gold.html</guid>
+  </item>
+  <item>
+    <title>Hanami 2026: Where to See Cherry Blossoms Like a Local</title>
+    <link>https://raynart.github.io/TABI/articles/hanami-2026-guide.html</link>
+    <description></description>
+    <pubDate>土, 25 4 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/hanami-2026-guide.html</guid>
+  </item>
+  <item>
+    <title>The Best Japanese Kitchen Knives to Bring Home</title>
+    <link>https://raynart.github.io/TABI/articles/japanese-kitchen-knives.html</link>
+    <description></description>
+    <pubDate>月, 20 4 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/japanese-kitchen-knives.html</guid>
+  </item>
+  <item>
+    <title>Buying Matcha: Ceremonial vs. Culinary Grade Explained</title>
+    <link>https://raynart.github.io/TABI/articles/buying-matcha-guide.html</link>
+    <description></description>
+    <pubDate>水, 15 4 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/buying-matcha-guide.html</guid>
+  </item>
+  <item>
+    <title>10 Japanese Drugstore Products Worth Every Yen</title>
+    <link>https://raynart.github.io/TABI/articles/japanese-drugstore-finds.html</link>
+    <description></description>
+    <pubDate>金, 10 4 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/japanese-drugstore-finds.html</guid>
+  </item>
+  <item>
+    <title>Where to Buy Authentic Yukata in Tokyo Without the Markup</title>
+    <link>https://raynart.github.io/TABI/articles/authentic-yukata-tokyo.html</link>
+    <description></description>
+    <pubDate>日, 05 4 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/authentic-yukata-tokyo.html</guid>
+  </item>
 </channel>
 </rss>

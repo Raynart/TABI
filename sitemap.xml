@@ -1,9 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tabi.guide/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tabi.guide/categories/travel-guide.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tabi.guide/categories/culture.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tabi.guide/categories/food.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tabi.guide/categories/things-to-buy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tabi.guide/categories/hidden-gems.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://raynart.github.io/TABI/categories/travel-guide.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/categories/culture.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/categories/food.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/categories/things-to-buy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/categories/hidden-gems.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/hidden-shrines-kyoto.html</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/10-days-japan-no-tourist-traps.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/mt-fuji-route-guide.html</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/osaka-3-days-itinerary.html</loc><lastmod>2026-05-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/yakushima-ancient-forest.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/japanese-menu-guide.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/wabi-sabi-explained.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/kintsugi-art-of-gold.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/hanami-2026-guide.html</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/japanese-kitchen-knives.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/buying-matcha-guide.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/japanese-drugstore-finds.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles/authentic-yukata-tokyo.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

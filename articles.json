@@ -1,1 +1,132 @@
-[]
+[
+  {
+    "id": "hidden-shrines-kyoto",
+    "title": "The Hidden Shrines of Kyoto Locals Still Keep Secret",
+    "summary": "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto — quiet, moss-covered, and entirely yours. We asked local monks and longtime residents where they actually go when the crowds become too much. These are the shrines that rarely appear in guidebooks.",
+    "category": "travel-guide",
+    "tags": ["kyoto", "shrine", "off-the-beaten-path"],
+    "publishedAt": "2026-05-28",
+    "readingTime": 8,
+    "affiliate": false
+  },
+  {
+    "id": "10-days-japan-no-tourist-traps",
+    "title": "How to Spend 10 Days in Japan Without a Single Tourist Trap",
+    "summary": "Most first-time visitors follow the same Golden Route — Tokyo, Kyoto, Osaka — and come home feeling like they saw a theme park. This itinerary takes a different approach: slower, deeper, and built around the neighborhoods that locals actually use.",
+    "category": "travel-guide",
+    "tags": ["itinerary", "first-time", "tokyo", "kyoto"],
+    "publishedAt": "2026-05-18",
+    "readingTime": 12,
+    "affiliate": false
+  },
+  {
+    "id": "mt-fuji-route-guide",
+    "title": "The Perfect Route up Mt. Fuji: What Nobody Tells You",
+    "summary": "Climbing Fuji is one of those experiences that sounds straightforward until you're doing it at 3am in a headlamp queue. The mountain rewards preparation and punishes assumptions — here's what we learned from five ascents across different seasons.",
+    "category": "hidden-gems",
+    "tags": ["fuji", "hiking", "adventure"],
+    "publishedAt": "2026-05-15",
+    "readingTime": 9,
+    "affiliate": false
+  },
+  {
+    "id": "osaka-3-days-itinerary",
+    "title": "Osaka in 3 Days: The Eating and Wandering Itinerary",
+    "summary": "Osaka has a reputation as Japan's kitchen, but that barely scratches the surface. This city rewards those who eat their way through it without a plan — we've structured the chaos into three days that still feel spontaneous.",
+    "category": "travel-guide",
+    "tags": ["osaka", "food", "itinerary"],
+    "publishedAt": "2026-05-12",
+    "readingTime": 7,
+    "affiliate": false
+  },
+  {
+    "id": "yakushima-ancient-forest",
+    "title": "Yakushima: Japan's Ancient Forest That Few Tourists Find",
+    "summary": "A UNESCO-listed island covered in cedar trees that are older than many civilizations, Yakushima sits off the southern tip of Kyushu and sees a fraction of the visitors it deserves. The hike through Shiratani Unsuikyo inspired Princess Mononoke — and it still feels that way.",
+    "category": "hidden-gems",
+    "tags": ["yakushima", "hiking", "nature", "kyushu"],
+    "publishedAt": "2026-05-10",
+    "readingTime": 10,
+    "affiliate": false
+  },
+  {
+    "id": "japanese-menu-guide",
+    "title": "How to Read a Japanese Menu Without Speaking Japanese",
+    "summary": "Most Japanese restaurants don't have English menus, and that's not a problem once you know what to look for. A handful of kanji, some pattern recognition, and the willingness to point gets you through almost any restaurant in the country.",
+    "category": "food",
+    "tags": ["language", "restaurant", "practical"],
+    "publishedAt": "2026-05-08",
+    "readingTime": 6,
+    "affiliate": false
+  },
+  {
+    "id": "wabi-sabi-explained",
+    "title": "What Wabi-Sabi Really Means — And Why the World Needs It Now",
+    "summary": "The Japanese aesthetic of imperfection and transience offers something Western design philosophy rarely does: permission to be incomplete. Wabi-sabi isn't a style — it's a way of perceiving, and learning to see it changes how you look at almost everything.",
+    "category": "culture",
+    "tags": ["philosophy", "design", "aesthetics"],
+    "publishedAt": "2026-05-06",
+    "readingTime": 7,
+    "affiliate": false
+  },
+  {
+    "id": "kintsugi-art-of-gold",
+    "title": "Kintsugi: The Art of Repairing Broken Things with Gold",
+    "summary": "A 500-year-old technique for mending ceramics with lacquer mixed with gold, silver, or platinum has become a global metaphor for resilience. We visited a master craftsman in Kyoto to understand why kintsugi is about far more than broken bowls.",
+    "category": "culture",
+    "tags": ["craft", "kyoto", "ceramics", "philosophy"],
+    "publishedAt": "2026-05-02",
+    "readingTime": 8,
+    "affiliate": false
+  },
+  {
+    "id": "hanami-2026-guide",
+    "title": "Hanami 2026: Where to See Cherry Blossoms Like a Local",
+    "summary": "Skip the tourist crowds at Maruyama Park and Ueno. The best hanami spots are the ones you stumble into — a neighborhood embankment, a school gate, a canal nobody bothered to list. We've found them, so you don't have to.",
+    "category": "culture",
+    "tags": ["sakura", "spring", "tokyo", "kyoto", "seasonal"],
+    "publishedAt": "2026-04-25",
+    "readingTime": 6,
+    "affiliate": false
+  },
+  {
+    "id": "japanese-kitchen-knives",
+    "title": "The Best Japanese Kitchen Knives to Bring Home",
+    "summary": "Japanese knives are the single best souvenir you can carry out of Japan — functional, beautiful, and something you'll use every day for decades. This guide covers every price point from a ¥4,000 entry knife to the hand-forged blade worth saving up for.",
+    "category": "things-to-buy",
+    "tags": ["kitchen", "knives", "tokyo", "gift"],
+    "publishedAt": "2026-04-20",
+    "readingTime": 9,
+    "affiliate": true
+  },
+  {
+    "id": "buying-matcha-guide",
+    "title": "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
+    "summary": "The matcha market is flooded with products that taste nothing like what you drink in a tea ceremony — and the price tag is not a reliable guide. Here's how to read labels, what to taste for, and where to buy the real thing.",
+    "category": "things-to-buy",
+    "tags": ["matcha", "tea", "food", "gift"],
+    "publishedAt": "2026-04-15",
+    "readingTime": 6,
+    "affiliate": true
+  },
+  {
+    "id": "japanese-drugstore-finds",
+    "title": "10 Japanese Drugstore Products Worth Every Yen",
+    "summary": "Japanese pharmacies are overwhelming in the best way — walls of skincare, hair treatments, and stomach remedies at prices that make no sense until you try them. These are the ten products that actually earn their place in your luggage.",
+    "category": "things-to-buy",
+    "tags": ["skincare", "drugstore", "beauty", "gift"],
+    "publishedAt": "2026-04-10",
+    "readingTime": 7,
+    "affiliate": true
+  },
+  {
+    "id": "authentic-yukata-tokyo",
+    "title": "Where to Buy Authentic Yukata in Tokyo Without the Markup",
+    "summary": "The tourist-district yukata sold near Asakusa are fine, but the ones sold at department store basements and specialist shops are extraordinary — and often cheaper. This guide takes you past the obvious options to the places worth visiting.",
+    "category": "things-to-buy",
+    "tags": ["yukata", "fashion", "tokyo", "traditional"],
+    "publishedAt": "2026-04-05",
+    "readingTime": 6,
+    "affiliate": true
+  }
+]

@@ -31,6 +31,7 @@ function Get-Head {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="$siteUrl/">
   <title>$title</title>
   <meta name="description" content="$desc">
   <meta property="og:title" content="$title">
@@ -40,15 +41,15 @@ function Get-Head {
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="$canonical">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="alternate" type="application/rss+xml" title="$siteName RSS" href="/rss.xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="alternate" type="application/rss+xml" title="$siteName RSS" href="rss.xml">
   $font
 </head>
 "@
 }
 
 function Get-TopBar {
-    return '<div class="top-bar">Japan Travel &amp; Culture Guide &nbsp;<span>&middot;</span>&nbsp; Updated weekly &nbsp;<span>&middot;</span>&nbsp; <a href="/newsletter.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Free newsletter every Friday</a></div>'
+    return '<div class="top-bar">Japan Travel &amp; Culture Guide &nbsp;<span>&middot;</span>&nbsp; Updated weekly &nbsp;<span>&middot;</span>&nbsp; <a href="newsletter.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Free newsletter every Friday</a></div>'
 }
 
 function Get-Header {
@@ -64,7 +65,7 @@ function Get-Header {
     <ul class="header-nav" role="navigation" aria-label="Main navigation">
       $navItems
     </ul>
-    <a href="/" class="site-logo" aria-label="$siteName home">
+    <a href="index.html" class="site-logo" aria-label="$siteName home">
       <span class="logo-en">$siteName<span class="dot">.</span></span>
       <span class="logo-jp">&#26053; &#8212; $tagline</span>
     </a>
@@ -121,17 +122,17 @@ function Get-Footer {
     <div>
       <p class="footer-col-title">About</p>
       <ul class="footer-links">
-        <li><a href="/about.html">About TABI</a></li>
-        <li><a href="/newsletter.html">Newsletter</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="about.html">About TABI</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div>
       <p class="footer-col-title">Legal</p>
       <ul class="footer-links">
-        <li><a href="/privacy.html">Privacy Policy</a></li>
-        <li><a href="/terms.html">Terms of Use</a></li>
-        <li><a href="/affiliate.html">Affiliate Disclosure</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="affiliate.html">Affiliate Disclosure</a></li>
       </ul>
     </div>
   </div>
@@ -143,15 +144,16 @@ function Get-Footer {
   </div>
 </footer>
 <button class="back-top" aria-label="Back to top">&#8593;</button>
-<script src="/script.js"></script>
+<script src="script.js"></script>
 </body></html>
 "@
 }
 
+$EnUs = [System.Globalization.CultureInfo]::GetCultureInfo("en-US")
 function Format-Date {
     param($dateStr)
     try {
-        return [datetime]::ParseExact($dateStr, 'yyyy-MM-dd', $null).ToString('MMMM d, yyyy')
+        return [datetime]::ParseExact($dateStr, 'yyyy-MM-dd', $EnUs).ToString('MMMM d, yyyy', $EnUs)
     } catch {
         return $dateStr
     }
@@ -177,7 +179,7 @@ function Get-ArticleCard {
         '<div class="ed-img" style="width:100%;height:100%;background:linear-gradient(160deg,#100808 0%,#2e1010 40%,#5a1a1a 100%);"></div>'
     }
     return @"
-<a href="/articles/$($article.id).html" class="ed-card ed-$size">
+<a href="articles/$($article.id).html" class="ed-card ed-$size">
   $imgTag
   <div class="ed-overlay"></div>
   $strip
@@ -204,7 +206,7 @@ $buyArticles = $articles | Where-Object { $_.category -eq 'things-to-buy' } | So
 
 $heroImg = if ($heroArticle -and $heroArticle.heroImage) { $heroArticle.heroImage } else { '' }
 $heroTitle = if ($heroArticle) { [System.Net.WebUtility]::HtmlEncode($heroArticle.title) } else { 'Welcome to TABI' }
-$heroDesc  = if ($heroArticle) { [System.Net.WebUtility]::HtmlEncode($heroArticle.excerpt) } else { 'Your guide to the real Japan.' }
+$heroDesc  = if ($heroArticle -and $heroArticle.excerpt) { [System.Net.WebUtility]::HtmlEncode($heroArticle.excerpt) } elseif ($heroArticle -and $heroArticle.summary) { [System.Net.WebUtility]::HtmlEncode($heroArticle.summary) } else { 'Your guide to the real Japan.' }
 $heroCat   = if ($heroArticle) { Get-CategoryLabel $heroArticle.category } else { 'Travel Guide' }
 $heroKanji = '&#26053;'
 
@@ -221,11 +223,11 @@ $ci = 1
 foreach ($a in $cultureArticles) {
     $cat  = Get-CategoryLabel $a.category
     $title = [System.Net.WebUtility]::HtmlEncode($a.title)
-    $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } else { '' }
+    $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
     $img   = if ($a.heroImage) { "<img data-src=""$($a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;background:var(--ink-soft);""></div>" }
     $numStr = $ci.ToString().PadLeft(2, '0')
     $cultureHtml += @"
-<a href="/articles/$($a.id).html" class="culture-card">
+<a href="articles/$($a.id).html" class="culture-card">
   <p class="culture-num">$numStr</p>
   <div class="culture-card-img">$img</div>
   <p class="culture-card-cat">$cat</p>
@@ -243,7 +245,7 @@ foreach ($a in $buyArticles) {
     $priceHtml = if ($price) { "<p class=""buy-price"">From $price</p>" } else { '' }
     $tagLabel = if ($a.tags -and $a.tags.Count -gt 0) { $a.tags[0] } else { 'Shopping' }
     $buyHtml += @"
-<a href="/articles/$($a.id).html" class="buy-card">
+<a href="articles/$($a.id).html" class="buy-card">
   <p class="buy-tag">$tagLabel</p>
   <h3 class="buy-title">$title</h3>
   $priceHtml
@@ -297,7 +299,7 @@ if ($gridHtml) {
     $indexLines.Add('  <span class="section-label-jp" aria-hidden="true">&#26053;</span>')
     $indexLines.Add('  <h2 class="section-label-en">Travel Guide</h2>')
     $indexLines.Add('  <div class="section-label-line"></div>')
-    $indexLines.Add('  <a href="/categories/travel-guide.html" class="section-label-link">All articles <span class="arrow">&rarr;</span></a>')
+    $indexLines.Add('  <a href="categories/travel-guide.html" class="section-label-link">All articles <span class="arrow">&rarr;</span></a>')
     $indexLines.Add('</div>')
     $indexLines.Add('<div class="editorial-grid">')
     $indexLines.Add($gridHtml)
@@ -310,7 +312,7 @@ if ($cultureHtml) {
     $indexLines.Add('  <span class="section-label-jp" aria-hidden="true">&#25991;&#21270;</span>')
     $indexLines.Add('  <h2 class="section-label-en">Culture &amp; Tradition</h2>')
     $indexLines.Add('  <div class="section-label-line"></div>')
-    $indexLines.Add('  <a href="/categories/culture.html" class="section-label-link">All articles <span class="arrow">&rarr;</span></a>')
+    $indexLines.Add('  <a href="categories/culture.html" class="section-label-link">All articles <span class="arrow">&rarr;</span></a>')
     $indexLines.Add('</div>')
     $indexLines.Add('<div class="culture-grid">')
     $indexLines.Add($cultureHtml)
@@ -334,7 +336,7 @@ if ($buyHtml) {
     $indexLines.Add('  <span class="section-label-jp" aria-hidden="true">&#36023;&#29289;</span>')
     $indexLines.Add('  <h2 class="section-label-en">Things to Buy</h2>')
     $indexLines.Add('  <div class="section-label-line"></div>')
-    $indexLines.Add('  <a href="/categories/things-to-buy.html" class="section-label-link">All guides <span class="arrow">&rarr;</span></a>')
+    $indexLines.Add('  <a href="categories/things-to-buy.html" class="section-label-link">All guides <span class="arrow">&rarr;</span></a>')
     $indexLines.Add('</div>')
     $indexLines.Add('<div class="buy-grid">')
     $indexLines.Add($buyHtml)
@@ -369,7 +371,7 @@ Write-Host "Generated index.html"
 Write-Host "Generating $($articles.Count) article pages..."
 foreach ($a in $articles) {
     $title    = [System.Net.WebUtility]::HtmlEncode($a.title)
-    $excerpt  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } else { '' }
+    $excerpt  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
     $cat      = Get-CategoryLabel $a.category
     $date     = Format-Date $a.publishedAt
     $canonical = "$siteUrl/articles/$($a.id).html"
@@ -490,7 +492,8 @@ foreach ($cat in $config.categories) {
 
 # ===== TAG PAGES =====
 Write-Host "Generating tag pages..."
-foreach ($tag in $config.tags) {
+$allTags = @($articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
+foreach ($tag in $allTags) {
     $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { $_.publishedAt } -Descending
     $canonical = "$siteUrl/tags/$tag.html"
     $headHtml  = Get-Head "#$tag &mdash; $siteName" "Articles tagged $tag on $siteName." '' $canonical
@@ -524,7 +527,7 @@ foreach ($tag in $config.tags) {
 
     [System.IO.File]::WriteAllText("$root\tags\$tag.html", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
 }
-Write-Host "Generated $($config.tags.Count) tag pages"
+Write-Host "Generated $($allTags.Count) tag pages"
 
 # ===== 404.html =====
 $headHtml = Get-Head "Page Not Found &mdash; $siteName" "The page you are looking for could not be found." '' "$siteUrl/404.html"
@@ -538,7 +541,7 @@ $lines.Add('<div style="max-width:640px;margin:120px auto;padding:0 32px;text-al
 $lines.Add('  <p style="font-family:var(--serif);font-size:6rem;color:var(--border);line-height:1;">404</p>')
 $lines.Add('  <h1 style="font-family:var(--serif);font-size:1.8rem;margin:16px 0 12px;">Page not found</h1>')
 $lines.Add('  <p style="color:var(--mist);margin-bottom:32px;">The page you&#8217;re looking for doesn&#8217;t exist or has moved.</p>')
-$lines.Add('  <a href="/" style="display:inline-block;background:var(--accent);color:#fff;padding:12px 28px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">&larr; Back to Home</a>')
+$lines.Add('  <a href="index.html" style="display:inline-block;background:var(--accent);color:#fff;padding:12px 28px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">&larr; Back to Home</a>')
 $lines.Add('</div>')
 $lines.Add((Get-Footer))
 [System.IO.File]::WriteAllText("$root\404.html", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
