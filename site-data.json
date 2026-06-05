@@ -271,7 +271,9 @@
         "local-food"
       ],
       "categories": [
-        "food"
+        "food",
+        "travel-guide",
+        "hidden-gems"
       ]
     },
     {
