@@ -5,7 +5,7 @@
   <link>https://raynart.github.io/TABI</link>
   <description>Your guide to the real Japan — travel, culture, and the things worth bringing home.</description>
   <language>en</language>
-  <lastBuildDate>月, 15 6 2026 08:13:12 +0000</lastBuildDate>
+  <lastBuildDate>月, 15 6 2026 08:30:43 +0000</lastBuildDate>
   <atom:link href="https://raynart.github.io/TABI/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>Your First Ryokan: What to Expect, What to Do, and What Not to Wear</title>
@@ -78,6 +78,41 @@
     <guid isPermaLink="true">https://raynart.github.io/TABI/articles/naoshima-art-island-guide.html</guid>
   </item>
   <item>
+    <title>The JR Pass: Who It&apos;s For, Who It Isn&apos;t, and How to Not Overpay</title>
+    <link>https://raynart.github.io/TABI/articles/shinkansen-guide.html</link>
+    <description>The JR Pass is one of Japan&apos;s most famous travel products. It&apos;s also, for a lot of itineraries, a waste of money.</description>
+    <pubDate>火, 02 6 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/shinkansen-guide.html</guid>
+  </item>
+  <item>
+    <title>Where to Stay in Tokyo: Honest Assessments of Each Neighborhood</title>
+    <link>https://raynart.github.io/TABI/articles/tokyo-neighborhoods-guide.html</link>
+    <description>Every first-time visitor books Shinjuku because someone told them to. Some of those people are right.</description>
+    <pubDate>月, 01 6 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/tokyo-neighborhoods-guide.html</guid>
+  </item>
+  <item>
+    <title>Japan&apos;s Four Major Ramen Styles: What They Are and Where to Actually Eat Them</title>
+    <link>https://raynart.github.io/TABI/articles/ramen-regional-guide.html</link>
+    <description>Ramen in Japan is not one food. Depending on where you are, the word covers a range of things that share almost nothing except noodles.</description>
+    <pubDate>日, 31 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/ramen-regional-guide.html</guid>
+  </item>
+  <item>
+    <title>How to Watch a Sumo Tournament Without Watching It on TV</title>
+    <link>https://raynart.github.io/TABI/articles/sumo-tournament-guide.html</link>
+    <description>Six tournaments a year, three of them in Tokyo. Tickets go on sale months in advance and sell out. Here&apos;s how to actually get in.</description>
+    <pubDate>土, 30 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/sumo-tournament-guide.html</guid>
+  </item>
+  <item>
+    <title>The Onsen Rules Nobody Bothers to Tell You</title>
+    <link>https://raynart.github.io/TABI/articles/japanese-onsen-etiquette.html</link>
+    <description>The water is shared. The silence is expected. The tattoo policy is more complicated than you&apos;ve been told.</description>
+    <pubDate>金, 29 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/japanese-onsen-etiquette.html</guid>
+  </item>
+  <item>
     <title>The Hidden Shrines of Kyoto Locals Still Keep Secret</title>
     <link>https://raynart.github.io/TABI/articles/hidden-shrines-kyoto.html</link>
     <description></description>
@@ -85,67 +120,32 @@
     <guid isPermaLink="true">https://raynart.github.io/TABI/articles/hidden-shrines-kyoto.html</guid>
   </item>
   <item>
-    <title>How to Spend 10 Days in Japan Without a Single Tourist Trap</title>
-    <link>https://raynart.github.io/TABI/articles/10-days-japan-no-tourist-traps.html</link>
-    <description></description>
-    <pubDate>月, 18 5 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/10-days-japan-no-tourist-traps.html</guid>
+    <title>Don Quijote: What to Buy, What to Skip, and How to Survive the Store</title>
+    <link>https://raynart.github.io/TABI/articles/donki-shopping-guide.html</link>
+    <description>Don Quijote is five floors of everything at prices that make no sense. The key is knowing what you came for before you walk in.</description>
+    <pubDate>木, 28 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/donki-shopping-guide.html</guid>
   </item>
   <item>
-    <title>The Perfect Route up Mt. Fuji: What Nobody Tells You</title>
-    <link>https://raynart.github.io/TABI/articles/mt-fuji-route-guide.html</link>
-    <description></description>
-    <pubDate>金, 15 5 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/mt-fuji-route-guide.html</guid>
+    <title>Hiroshima Is More Than the Peace Park — And the Peace Park Is More Than You Think</title>
+    <link>https://raynart.github.io/TABI/articles/hiroshima-guide.html</link>
+    <description>People visit Hiroshima for one reason. Most leave having found three or four others.</description>
+    <pubDate>水, 27 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/hiroshima-guide.html</guid>
   </item>
   <item>
-    <title>Osaka in 3 Days: The Eating and Wandering Itinerary</title>
-    <link>https://raynart.github.io/TABI/articles/osaka-3-days-itinerary.html</link>
-    <description></description>
-    <pubDate>火, 12 5 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/osaka-3-days-itinerary.html</guid>
+    <title>Autumn Leaves in Japan: Where to Go and When the Timing Actually Works</title>
+    <link>https://raynart.github.io/TABI/articles/autumn-foliage-japan.html</link>
+    <description>Koyo — autumn foliage — is not a fixed event. It starts in Hokkaido in September and ends in Kyushu in December. The timing requires a decision.</description>
+    <pubDate>火, 26 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/autumn-foliage-japan.html</guid>
   </item>
   <item>
-    <title>Yakushima: Japan&apos;s Ancient Forest That Few Tourists Find</title>
-    <link>https://raynart.github.io/TABI/articles/yakushima-ancient-forest.html</link>
-    <description></description>
-    <pubDate>日, 10 5 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/yakushima-ancient-forest.html</guid>
-  </item>
-  <item>
-    <title>How to Read a Japanese Menu Without Speaking Japanese</title>
-    <link>https://raynart.github.io/TABI/articles/japanese-menu-guide.html</link>
-    <description></description>
-    <pubDate>金, 08 5 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/japanese-menu-guide.html</guid>
-  </item>
-  <item>
-    <title>What Wabi-Sabi Really Means — And Why the World Needs It Now</title>
-    <link>https://raynart.github.io/TABI/articles/wabi-sabi-explained.html</link>
-    <description></description>
-    <pubDate>水, 06 5 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/wabi-sabi-explained.html</guid>
-  </item>
-  <item>
-    <title>Kintsugi: The Art of Repairing Broken Things with Gold</title>
-    <link>https://raynart.github.io/TABI/articles/kintsugi-art-of-gold.html</link>
-    <description></description>
-    <pubDate>土, 02 5 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/kintsugi-art-of-gold.html</guid>
-  </item>
-  <item>
-    <title>Hanami 2026: Where to See Cherry Blossoms Like a Local</title>
-    <link>https://raynart.github.io/TABI/articles/hanami-2026-guide.html</link>
-    <description></description>
-    <pubDate>土, 25 4 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/hanami-2026-guide.html</guid>
-  </item>
-  <item>
-    <title>The Best Japanese Kitchen Knives to Bring Home</title>
-    <link>https://raynart.github.io/TABI/articles/japanese-kitchen-knives.html</link>
-    <description></description>
-    <pubDate>月, 20 4 2026 00:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/japanese-kitchen-knives.html</guid>
+    <title>Beppu: The Onsen City That&apos;s Stranger and Better Than You Expect</title>
+    <link>https://raynart.github.io/TABI/articles/beppu-onsen-guide.html</link>
+    <description>Beppu produces more geothermal steam per day than anywhere in Japan and possibly anywhere outside Iceland. The city treats this as completely normal.</description>
+    <pubDate>月, 25 5 2026 00:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://raynart.github.io/TABI/articles/beppu-onsen-guide.html</guid>
   </item>
 </channel>
 </rss>
