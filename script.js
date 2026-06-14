@@ -134,6 +134,141 @@
     });
   }
 
+  /* ===== SEARCH ===== */
+  function initSearch() {
+    var openBtn  = document.getElementById('search-open');
+    var overlay  = document.getElementById('search-overlay');
+    var closeBtn = document.getElementById('search-close');
+    var input    = document.getElementById('search-input');
+    var results  = document.getElementById('search-results');
+    if (!openBtn || !overlay) return;
+
+    var articles = null;
+    var base = (document.querySelector('base') || {}).href || '/';
+
+    function openSearch() {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      openBtn.setAttribute('aria-expanded', 'true');
+      input.focus();
+      if (!articles) {
+        fetch(base + 'articles-slim.json')
+          .then(function (r) { return r.json(); })
+          .then(function (data) { articles = data; })
+          .catch(function () { articles = []; });
+      }
+    }
+
+    function closeSearch() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      openBtn.setAttribute('aria-expanded', 'false');
+      input.value = '';
+      results.innerHTML = '';
+    }
+
+    openBtn.addEventListener('click', openSearch);
+    closeBtn.addEventListener('click', closeSearch);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeSearch(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSearch(); });
+
+    var searchTimer;
+    input.addEventListener('input', function () {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(function () {
+        var q = input.value.trim().toLowerCase();
+        if (!q || !articles) { results.innerHTML = ''; return; }
+        var hits = articles.filter(function (a) {
+          return a.title.toLowerCase().indexOf(q) !== -1 ||
+                 (a.excerpt || '').toLowerCase().indexOf(q) !== -1 ||
+                 (a.tags || []).some(function (t) { return t.indexOf(q) !== -1; });
+        }).slice(0, 6);
+        if (!hits.length) {
+          results.innerHTML = '<p class="search-empty">No results for “' + q + '”</p>';
+          return;
+        }
+        results.innerHTML = hits.map(function (a) {
+          var url     = base + 'articles/' + a.id + '.html';
+          var catFmt  = (a.category || '').replace(/-/g, ' ');
+          var excerpt = (a.excerpt || '').slice(0, 90) + '…';
+          return '<a href="' + url + '" class="search-result">' +
+                 '<span class="search-result-cat">' + catFmt + '</span>' +
+                 '<span class="search-result-title">' + a.title + '</span>' +
+                 '<span class="search-result-excerpt">' + excerpt + '</span>' +
+                 '</a>';
+        }).join('');
+      }, 200);
+    });
+  }
+
+  /* ===== SHARE BUTTONS ===== */
+  function initShareButtons() {
+    document.querySelectorAll('.share-copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var url = btn.dataset.url;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(function () {
+            var orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function () { btn.textContent = orig; }, 2000);
+          });
+        }
+      });
+    });
+  }
+
+  /* ===== GDPR BANNER ===== */
+  function initGdprBanner() {
+    var banner = document.getElementById('gdpr-banner');
+    if (!banner || localStorage.getItem('tabi-cookie-consent')) return;
+    banner.classList.add('visible');
+    document.getElementById('gdpr-accept').addEventListener('click', function () {
+      localStorage.setItem('tabi-cookie-consent', 'accepted');
+      banner.classList.remove('visible');
+    });
+    document.getElementById('gdpr-decline').addEventListener('click', function () {
+      localStorage.setItem('tabi-cookie-consent', 'declined');
+      banner.classList.remove('visible');
+    });
+  }
+
+  /* ===== PAGINATION ===== */
+  function initPagination() {
+    document.querySelectorAll('[data-paginate]').forEach(function (grid) {
+      var perPage = parseInt(grid.dataset.paginate, 10) || 12;
+      var cards   = Array.from(grid.querySelectorAll('.ed-card'));
+      if (cards.length <= perPage) return;
+
+      var currentPage  = 1;
+      var totalPages   = Math.ceil(cards.length / perPage);
+      var paginationEl = document.createElement('div');
+      paginationEl.className = 'pagination';
+      grid.parentNode.insertBefore(paginationEl, grid.nextSibling);
+
+      function showPage(page) {
+        currentPage = page;
+        cards.forEach(function (card, i) {
+          card.style.display = (i >= (page - 1) * perPage && i < page * perPage) ? '' : 'none';
+        });
+        paginationEl.innerHTML = '';
+        for (var i = 1; i <= totalPages; i++) {
+          var btn = document.createElement('button');
+          btn.className = 'pg-btn' + (i === currentPage ? ' active' : '');
+          btn.textContent = i;
+          (function (p) {
+            btn.addEventListener('click', function () {
+              showPage(p);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+          }(i));
+          paginationEl.appendChild(btn);
+        }
+      }
+
+      showPage(1);
+    });
+  }
+
   /* ===== INIT ===== */
   document.addEventListener('DOMContentLoaded', function () {
     initTicker();
@@ -145,6 +280,10 @@
     initLazyImages();
     initScrollHint();
     initActiveNav();
+    initSearch();
+    initShareButtons();
+    initGdprBanner();
+    initPagination();
   });
 
 })();

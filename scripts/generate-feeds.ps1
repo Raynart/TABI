@@ -71,3 +71,18 @@ Sitemap: $siteUrl/sitemap.xml
 "@
 [System.IO.File]::WriteAllText("$root\robots.txt", $robots, [System.Text.Encoding]::UTF8)
 Write-Host "Generated robots.txt"
+
+# ===== articles-slim.json (for client-side search) =====
+$slim = $articles | ForEach-Object {
+    [PSCustomObject]@{
+        id          = $_.id
+        title       = $_.title
+        excerpt     = if ($_.excerpt) { $_.excerpt } else { '' }
+        category    = $_.category
+        tags        = if ($_.tags) { $_.tags } else { @() }
+        publishedAt = $_.publishedAt
+    }
+}
+$slimJson = $slim | ConvertTo-Json -Depth 3 -Compress
+[System.IO.File]::WriteAllText("$root\articles-slim.json", $slimJson, [System.Text.Encoding]::UTF8)
+Write-Host "Generated articles-slim.json ($($slim.Count) items)"

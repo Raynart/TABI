@@ -60,6 +60,7 @@ function Get-Head {
   <meta name="twitter:image" content="$og">
   <link rel="canonical" href="$canonical">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
   <link rel="alternate" type="application/rss+xml" title="$siteName RSS" href="rss.xml">
   $font
@@ -91,6 +92,7 @@ function Get-Header {
       <span class="logo-jp">&#26053; &#8212; $tagline</span>
     </a>
     <div class="header-right">
+      <button class="header-search-btn" id="search-open" aria-label="Search" aria-expanded="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M15 15l-3-3"/></svg></button>
       <button class="header-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
       <a href="#newsletter" class="header-cta">Free Newsletter</a>
     </div>
@@ -165,6 +167,21 @@ function Get-Footer {
   </div>
 </footer>
 <button class="back-top" aria-label="Back to top">&#8593;</button>
+<div class="search-overlay" id="search-overlay">
+  <div class="search-modal">
+    <button class="search-close" id="search-close" aria-label="Close search">&times;</button>
+    <input class="search-input" id="search-input" type="search" placeholder="Search Japan guides&#8230;" autocomplete="off" aria-label="Search">
+    <p class="search-hint">Try &#8220;kyoto&#8221;, &#8220;budget&#8221;, &#8220;food&#8221;</p>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<div class="gdpr-banner" id="gdpr-banner">
+  <p class="gdpr-text">We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="gdpr-actions">
+    <button class="gdpr-btn gdpr-decline" id="gdpr-decline">Decline</button>
+    <button class="gdpr-btn gdpr-accept" id="gdpr-accept">Accept</button>
+  </div>
+</div>
 <script src="script.js"></script>
 </body></html>
 "@
@@ -430,6 +447,21 @@ foreach ($a in $articles) {
         }
     }
 
+    # Share bar
+    $tweetUrl  = [System.Uri]::EscapeDataString($canonical)
+    $tweetText = [System.Uri]::EscapeDataString($a.title)
+    $shareHtml = "<div class=""share-bar""><span class=""share-label"">Share</span><a href=""https://twitter.com/intent/tweet?url=$tweetUrl&amp;text=$tweetText"" class=""share-btn share-x"" target=""_blank"" rel=""noopener noreferrer"" aria-label=""Share on X"">X / Twitter</a><button class=""share-btn share-copy"" data-url=""$canonical"" aria-label=""Copy link"">Copy link</button></div>"
+
+    # Related articles
+    $relatedHtml = ''
+    if ($a.relatedIds -and $a.relatedIds.Count -gt 0) {
+        $relatedArticles = @($articles | Where-Object { $a.relatedIds -contains $_.id })
+        if ($relatedArticles.Count -gt 0) {
+            $relatedCards = ($relatedArticles | ForEach-Object { Get-ArticleCard $_ 'sub' }) -join ''
+            $relatedHtml = "<section class=""related-articles""><h2 class=""related-title"">Related Articles</h2><div class=""related-grid"">$relatedCards</div></section>"
+        }
+    }
+
     # Affiliate links
     $affiliateHtml = ''
     if ($a.affiliate -and $a.affiliateLinks -and $a.affiliateLinks.Count -gt 0) {
@@ -479,7 +511,9 @@ foreach ($a in $articles) {
     if ($tagsHtml) {
         $lines.Add("  <div class=""article-tags"">$tagsHtml</div>")
     }
+    $lines.Add($shareHtml)
     $lines.Add('</main>')
+    if ($relatedHtml) { $lines.Add($relatedHtml) }
     $lines.Add((Get-Footer))
 
     [System.IO.File]::WriteAllText("$root\articles\$($a.id).html", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
@@ -516,7 +550,7 @@ foreach ($cat in $config.categories) {
     $lines.Add('  <div class="section-label-line"></div>')
     $lines.Add("  <span style=""font-size:0.78rem;color:var(--mist);"">$($catArticles.Count) articles</span>")
     $lines.Add('</div>')
-    $lines.Add('<div class="editorial-grid">')
+    $lines.Add('<div class="editorial-grid" data-paginate="12">')
     $lines.Add($cardsHtml)
     $lines.Add('</div>')
     $lines.Add((Get-Footer))
@@ -557,7 +591,7 @@ foreach ($tag in $allTags) {
     $lines.Add('  <div class="section-label-line"></div>')
     $lines.Add("  <span style=""font-size:0.78rem;color:var(--mist);"">$($tagArticles.Count) articles</span>")
     $lines.Add('</div>')
-    $lines.Add('<div class="editorial-grid">')
+    $lines.Add('<div class="editorial-grid" data-paginate="12">')
     $lines.Add($cardsHtml)
     $lines.Add('</div>')
     $lines.Add((Get-Footer))
