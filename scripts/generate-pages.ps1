@@ -23,14 +23,23 @@ function Get-FontLink {
 }
 
 function Get-Head {
-    param($title, $desc, $og, $canonical)
+    param($title, $desc, $og, $canonical, $ogType = 'website')
     $font = Get-FontLink
+
+    # GA4 — only emitted when googleAnalyticsId is set
+    $gaScript = ''
+    if ($config.googleAnalyticsId) {
+        $gaId = $config.googleAnalyticsId
+        $gaScript = "  <script async src=""https://www.googletagmanager.com/gtag/js?id=$gaId""></script>`n  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','$gaId');</script>"
+    }
+
     return @"
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
   <base href="$siteUrl/">
   <title>$title</title>
   <meta name="description" content="$desc">
@@ -38,12 +47,17 @@ function Get-Head {
   <meta property="og:description" content="$desc">
   <meta property="og:image" content="$og">
   <meta property="og:url" content="$canonical">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="$ogType">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="$title">
+  <meta name="twitter:description" content="$desc">
+  <meta name="twitter:image" content="$og">
   <link rel="canonical" href="$canonical">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <link rel="alternate" type="application/rss+xml" title="$siteName RSS" href="rss.xml">
   $font
+$gaScript
 </head>
 "@
 }
@@ -344,6 +358,9 @@ if ($buyHtml) {
 }
 
 # Newsletter
+$nlAction = if ($config.beehiivUrl) { $config.beehiivUrl } else { '#' }
+$nlMethod  = if ($config.beehiivUrl) { 'get' } else { 'post' }
+$nlTarget  = if ($config.beehiivUrl) { ' target="_blank" rel="noopener"' } else { '' }
 $indexLines.Add('<div class="newsletter-wrap" id="newsletter">')
 $indexLines.Add('  <div class="newsletter">')
 $indexLines.Add('    <div class="nl-visual" aria-hidden="true">')
@@ -354,7 +371,7 @@ $indexLines.Add('    <div class="nl-content">')
 $indexLines.Add('      <p class="nl-label">Free Newsletter</p>')
 $indexLines.Add('      <h2 class="nl-title">Japan, delivered<br>to your inbox.</h2>')
 $indexLines.Add('      <p class="nl-desc">Every Friday: one destination, one cultural insight, one thing worth buying. No noise. Just the Japan worth knowing.</p>')
-$indexLines.Add('      <form class="nl-form" action="#" method="post">')
+$indexLines.Add("      <form class=""nl-form"" action=""$nlAction"" method=""$nlMethod""$nlTarget>")
 $indexLines.Add('        <input class="nl-input" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">')
 $indexLines.Add('        <button class="nl-btn" type="submit">Subscribe</button>')
 $indexLines.Add('      </form>')
@@ -375,9 +392,9 @@ foreach ($a in $articles) {
     $cat      = Get-CategoryLabel $a.category
     $date     = Format-Date $a.publishedAt
     $canonical = "$siteUrl/articles/$($a.id).html"
-    $ogImg    = if ($a.heroImage) { $a.heroImage } else { "$siteUrl/assets/images/og-default.jpg" }
+    $ogImg    = if ($a.heroImage) { $a.heroImage } else { '' }
 
-    $headHtml = Get-Head "$title &mdash; $siteName" $excerpt $ogImg $canonical
+    $headHtml = Get-Head "$title &mdash; $siteName" $excerpt $ogImg $canonical 'article'
     $headerHtml = Get-Header $a.category
 
     # Body paragraphs
@@ -569,7 +586,11 @@ $staticPages = @(
         heading = 'The TABI Newsletter'
         body    = @(
             '<p>Every Friday: one destination, one cultural insight, one thing worth buying. No noise. Just the Japan worth knowing.</p>',
-            '<form class="nl-form" action="#" method="post" style="margin-top:24px;">',
+            $(if ($config.beehiivUrl) {
+                "<form class=""nl-form"" action=""$($config.beehiivUrl)"" method=""get"" target=""_blank"" rel=""noopener"" style=""margin-top:24px;"">"
+            } else {
+                '<form class="nl-form" action="#" method="post" style="margin-top:24px;">'
+            }),
             '  <input class="nl-input" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">',
             '  <button class="nl-btn" type="submit">Subscribe</button>',
             '</form>',
