@@ -18,12 +18,18 @@ $tagline  = $config.tagline
 
 # ===== HELPERS =====
 
+function Escape-Json {
+    param($str)
+    if (-not $str) { return '' }
+    return ($str -replace '\\', '\\' -replace '"', '\"' -replace "`n", '\n' -replace "`r", '' -replace "`t", '\t')
+}
+
 function Get-FontLink {
     return '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">'
 }
 
 function Get-Head {
-    param($title, $desc, $og, $canonical, $ogType = 'website')
+    param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '')
     $font = Get-FontLink
 
     # GA4 — only emitted when googleAnalyticsId is set
@@ -58,6 +64,7 @@ function Get-Head {
   <link rel="alternate" type="application/rss+xml" title="$siteName RSS" href="rss.xml">
   $font
 $gaScript
+$(if ($jsonLd) { ($jsonLd -split "`n" | Where-Object { $_.Trim() } | ForEach-Object { "  <script type=""application/ld+json"">$($_.Trim())</script>" }) -join "`n" })
 </head>
 "@
 }
@@ -271,7 +278,10 @@ foreach ($a in $buyArticles) {
 $tickerHtml = Get-Ticker $articles
 $headerHtml = Get-Header
 $footerHtml = Get-Footer
-$headHtml   = Get-Head "$siteName &mdash; $tagline" $config.description $heroImg "$siteUrl/"
+$websiteSchema = @"
+{"@context":"https://schema.org","@type":"WebSite","name":"$(Escape-Json $siteName)","url":"$siteUrl/","description":"$(Escape-Json $config.description)"}
+"@
+$headHtml   = Get-Head "$siteName &mdash; $tagline" $config.description $heroImg "$siteUrl/" 'website' $websiteSchema.Trim()
 $topBarHtml = Get-TopBar
 
 $indexLines = [System.Collections.Generic.List[string]]::new()
@@ -394,7 +404,14 @@ foreach ($a in $articles) {
     $canonical = "$siteUrl/articles/$($a.id).html"
     $ogImg    = if ($a.heroImage) { $a.heroImage } else { '' }
 
-    $headHtml = Get-Head "$title &mdash; $siteName" $excerpt $ogImg $canonical 'article'
+    $catLabel  = Get-CategoryLabel $a.category
+    $imgForSchema = if ($a.heroImage) { """$(Escape-Json $a.heroImage)""" } else { 'null' }
+    $updatedAt = if ($a.updatedAt) { $a.updatedAt } else { $a.publishedAt }
+    $articleSchema = "{""@context"":""https://schema.org"",""@type"":""Article"",""headline"":""$(Escape-Json $a.title)"",""description"":""$(Escape-Json ($a.excerpt))"",""image"":$imgForSchema,""datePublished"":""$($a.publishedAt)"",""dateModified"":""$updatedAt"",""author"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)""},""publisher"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)"",""logo"":{""@type"":""ImageObject"",""url"":""$siteUrl/favicon.svg""}},""mainEntityOfPage"":{""@type"":""WebPage"",""@id"":""$canonical""}}"
+    $breadcrumbSchema = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $catLabel)"",""item"":""$siteUrl/categories/$($a.category).html""},{""@type"":""ListItem"",""position"":3,""name"":""$(Escape-Json $a.title)"",""item"":""$canonical""}]}"
+    $jsonLd = "$articleSchema`n$breadcrumbSchema"
+
+    $headHtml = Get-Head "$title &mdash; $siteName" $excerpt $ogImg $canonical 'article' $jsonLd
     $headerHtml = Get-Header $a.category
 
     # Body paragraphs
@@ -474,7 +491,8 @@ Write-Host "Generating category pages..."
 foreach ($cat in $config.categories) {
     $catArticles = $articles | Where-Object { $_.category -eq $cat.slug } | Sort-Object { $_.publishedAt } -Descending
     $canonical = "$siteUrl/categories/$($cat.slug).html"
-    $headHtml  = Get-Head "$($cat.label) &mdash; $siteName" "Browse all $($cat.label) articles on $siteName." '' $canonical
+    $catBreadcrumb = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $cat.label)"",""item"":""$canonical""}]}"
+    $headHtml  = Get-Head "$($cat.label) &mdash; $siteName" "Browse all $($cat.label) articles on $siteName." '' $canonical 'website' $catBreadcrumb
     $headerHtml = Get-Header $cat.slug
 
     $cardsHtml = ''
@@ -509,11 +527,13 @@ foreach ($cat in $config.categories) {
 
 # ===== TAG PAGES =====
 Write-Host "Generating tag pages..."
-$allTags = @($articles | ForEach-Object { $_.tags } | Sort-Object -Unique)
+# Only generate pages for the 15 canonical tags defined in site.config.json
+$allTags = $config.tags
 foreach ($tag in $allTags) {
     $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { $_.publishedAt } -Descending
     $canonical = "$siteUrl/tags/$tag.html"
-    $headHtml  = Get-Head "#$tag &mdash; $siteName" "Articles tagged $tag on $siteName." '' $canonical
+    $tagBreadcrumb = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""#$tag"",""item"":""$canonical""}]}"
+    $headHtml  = Get-Head "#$tag &mdash; $siteName" "Articles tagged $tag on $siteName." '' $canonical 'website' $tagBreadcrumb
     $headerHtml = Get-Header
 
     $cardsHtml = ''
