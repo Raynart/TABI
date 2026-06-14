@@ -57,7 +57,7 @@ function Get-Header {
     $navItems = ''
     foreach ($cat in $config.categories) {
         $active = if ($cat.slug -eq $activeCat) { ' class="active"' } else { '' }
-        $navItems += "<li><a href=""/categories/$($cat.slug).html""$active>$($cat.nav)</a></li>"
+        $navItems += "<li><a href=""categories/$($cat.slug).html""$active>$($cat.nav)</a></li>"
     }
     return @"
 <header class="site-header">
@@ -100,7 +100,7 @@ function Get-Footer {
     $year = (Get-Date).Year
     $catLinks = ''
     foreach ($cat in $config.categories) {
-        $catLinks += "<li><a href=""/categories/$($cat.slug).html"">$($cat.label)</a></li>"
+        $catLinks += "<li><a href=""categories/$($cat.slug).html"">$($cat.label)</a></li>"
     }
     return @"
 <footer class="site-footer">
@@ -285,9 +285,9 @@ $indexLines.Add("    <h1 class=""hero-title"">$heroTitle</h1>")
 $indexLines.Add("    <p class=""hero-desc"">$heroDesc</p>")
 $indexLines.Add('    <div class="hero-actions">')
 if ($heroArticle) {
-    $indexLines.Add("      <a href=""/articles/$($heroArticle.id).html"" class=""hero-btn"">Read the Guide &nbsp;&rarr;</a>")
+    $indexLines.Add("      <a href=""articles/$($heroArticle.id).html"" class=""hero-btn"">Read the Guide &nbsp;&rarr;</a>")
 }
-$indexLines.Add("      <a href=""/categories/travel-guide.html"" class=""hero-btn-ghost"">Browse all guides</a>")
+$indexLines.Add("      <a href=""categories/travel-guide.html"" class=""hero-btn-ghost"">Browse all guides</a>")
 $indexLines.Add('    </div>')
 $indexLines.Add('  </div>')
 $indexLines.Add('  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><div class="scroll-hint-line"></div></div>')
@@ -392,7 +392,7 @@ foreach ($a in $articles) {
     $tagsHtml = ''
     if ($a.tags) {
         foreach ($tag in $a.tags) {
-            $tagsHtml += "<a href=""/tags/$tag.html"" class=""article-tag"">$tag</a>"
+            $tagsHtml += "<a href=""tags/$tag.html"" class=""article-tag"">$tag</a>"
         }
     }
 
@@ -548,3 +548,104 @@ $lines.Add((Get-Footer))
 Write-Host "Generated 404.html"
 
 Write-Host "`nAll pages generated successfully."
+
+# ===== STATIC STUB PAGES =====
+Write-Host "Generating static pages..."
+
+$staticPages = @(
+    @{
+        file    = 'about.html'
+        title   = "About TABI &mdash; $siteName"
+        heading = 'About TABI'
+        body    = @(
+            '<p>TABI is an independent guide to Japan for international travellers.</p>',
+            '<p>We cover travel, culture, food, and the things worth bringing home &mdash; written by people who actually live here.</p>',
+            '<p>Questions or pitches? <a href="contact.html">Get in touch.</a></p>'
+        )
+    },
+    @{
+        file    = 'newsletter.html'
+        title   = "Newsletter &mdash; $siteName"
+        heading = 'The TABI Newsletter'
+        body    = @(
+            '<p>Every Friday: one destination, one cultural insight, one thing worth buying. No noise. Just the Japan worth knowing.</p>',
+            '<form class="nl-form" action="#" method="post" style="margin-top:24px;">',
+            '  <input class="nl-input" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">',
+            '  <button class="nl-btn" type="submit">Subscribe</button>',
+            '</form>',
+            '<p class="nl-note" style="margin-top:12px;">No spam. Unsubscribe anytime.</p>'
+        )
+    },
+    @{
+        file    = 'contact.html'
+        title   = "Contact &mdash; $siteName"
+        heading = 'Contact'
+        body    = @(
+            '<p>For editorial enquiries, article pitches, or partnership proposals:</p>',
+            "<p><a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a></p>",
+            '<p style="margin-top:24px;color:var(--mist);font-size:0.85rem;">We read every email and aim to reply within 3 business days.</p>'
+        )
+    },
+    @{
+        file    = 'privacy.html'
+        title   = "Privacy Policy &mdash; $siteName"
+        heading = 'Privacy Policy'
+        body    = @(
+            '<p style="color:var(--mist);font-size:0.82rem;">Last updated: June 2026</p>',
+            '<p>TABI collects minimal data to operate the site. We may use analytics tools (such as Google Analytics) to understand how visitors use our content. No personal data is sold to third parties.</p>',
+            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Cookies</h2>',
+            '<p>We may set cookies for analytics and functionality. You can disable cookies in your browser settings at any time.</p>',
+            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Affiliate Links</h2>',
+            '<p>Some links on this site are affiliate links. Clicking them and making a purchase may earn TABI a small commission at no extra cost to you. See our <a href="affiliate.html">Affiliate Disclosure</a> for details.</p>',
+            "<h2 style=""font-size:1.05rem;margin:28px 0 10px;"">Contact</h2>",
+            "<p>Questions about privacy? Email us at <a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a>.</p>"
+        )
+    },
+    @{
+        file    = 'terms.html'
+        title   = "Terms of Use &mdash; $siteName"
+        heading = 'Terms of Use'
+        body    = @(
+            '<p style="color:var(--mist);font-size:0.82rem;">Last updated: June 2026</p>',
+            '<p>By using TABI you agree to these terms. All content on this site is for informational purposes only. We make no guarantees about the accuracy or completeness of travel information, which can change without notice.</p>',
+            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Intellectual Property</h2>',
+            '<p>All text, images, and design on TABI are &copy; TABI unless otherwise noted. Do not reproduce content without written permission.</p>',
+            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">External Links</h2>',
+            '<p>TABI links to third-party sites for convenience. We are not responsible for their content or practices.</p>'
+        )
+    },
+    @{
+        file    = 'affiliate.html'
+        title   = "Affiliate Disclosure &mdash; $siteName"
+        heading = 'Affiliate Disclosure'
+        body    = @(
+            '<p>TABI participates in affiliate programmes. This means that some links to products or services may be affiliate links &mdash; if you click through and make a purchase, we may earn a small commission at no additional cost to you.</p>',
+            '<p>We only recommend products and services we genuinely believe in. Affiliate relationships do not influence our editorial content or opinions.</p>',
+            '<p>Affiliate links are marked with <strong>rel="nofollow sponsored"</strong> in our HTML and may be indicated in the article text.</p>',
+            "<p style=""margin-top:24px;"">Questions? <a href=""contact.html"">Contact us.</a></p>"
+        )
+    }
+)
+
+foreach ($page in $staticPages) {
+    $canonical = "$siteUrl/$($page.file)"
+    $headHtml  = Get-Head $page.title $config.description '' $canonical
+    $headerHtml = Get-Header
+
+    $lines = [System.Collections.Generic.List[string]]::new()
+    $lines.Add($headHtml)
+    $lines.Add('<body>')
+    $lines.Add('<div class="progress-bar" role="progressbar" aria-hidden="true"></div>')
+    $lines.Add((Get-TopBar))
+    $lines.Add($headerHtml)
+    $lines.Add('<main style="max-width:720px;margin:80px auto 120px;padding:0 32px;">')
+    $lines.Add("  <h1 style=""font-family:var(--serif);font-size:2rem;font-weight:300;margin-bottom:28px;letter-spacing:-0.01em;"">$($page.heading)</h1>")
+    foreach ($line in $page.body) {
+        $lines.Add("  $line")
+    }
+    $lines.Add('</main>')
+    $lines.Add((Get-Footer))
+
+    [System.IO.File]::WriteAllText("$root\$($page.file)", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
+    Write-Host "  Generated $($page.file)"
+}

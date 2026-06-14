@@ -10,8 +10,7 @@
   function initTicker() {
     var track = document.getElementById('ticker-track');
     if (!track) return;
-    var items = track.innerHTML;
-    track.innerHTML = items + items; // duplicate for infinite scroll
+    // HTML already duplicates items for seamless loop — no JS duplication needed
   }
 
   /* ===== HERO DOTS ===== */
