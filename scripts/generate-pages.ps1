@@ -431,9 +431,28 @@ foreach ($a in $articles) {
     $headHtml = Get-Head "$title &mdash; $siteName" $excerpt $ogImg $canonical 'article' $jsonLd
     $headerHtml = Get-Header $a.category
 
-    # Body paragraphs
+    # Article body — sections (with ToC) or legacy flat body
     $bodyHtml = ''
-    if ($a.body -and $a.body.Count -gt 0) {
+    $tocHtml  = ''
+    if ($a.sections -and $a.sections.Count -gt 0) {
+        $tocItems = ''
+        for ($si = 0; $si -lt $a.sections.Count; $si++) {
+            $hText    = [System.Net.WebUtility]::HtmlEncode($a.sections[$si].heading)
+            $tocItems += "<li><a href=""#s$si"">$hText</a></li>"
+        }
+        $tocHtml = "<nav class=""toc"" aria-label=""Article contents""><p class=""toc-title"">In this article</p><ol class=""toc-list"">$tocItems</ol></nav>"
+        for ($si = 0; $si -lt $a.sections.Count; $si++) {
+            $sec   = $a.sections[$si]
+            $hText = [System.Net.WebUtility]::HtmlEncode($sec.heading)
+            $bodyHtml += "<section class=""article-section""><h2 id=""s$si"">$hText</h2>"
+            if ($sec.paragraphs) {
+                foreach ($p in $sec.paragraphs) {
+                    $bodyHtml += "<p>$([System.Net.WebUtility]::HtmlEncode($p))</p>"
+                }
+            }
+            $bodyHtml += "</section>`n"
+        }
+    } elseif ($a.body -and $a.body.Count -gt 0) {
         foreach ($p in $a.body) {
             $bodyHtml += "<p>$([System.Net.WebUtility]::HtmlEncode($p))</p>`n"
         }
@@ -504,6 +523,7 @@ foreach ($a in $articles) {
     $lines.Add("  </div>")
     $lines.Add("  <h1 class=""article-title"">$title</h1>")
     $lines.Add("  <p class=""article-excerpt"">$excerpt</p>")
+    $lines.Add($tocHtml)
     $lines.Add('  <div class="article-body">')
     $lines.Add($bodyHtml)
     $lines.Add($affiliateHtml)
