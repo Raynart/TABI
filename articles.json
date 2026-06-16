@@ -1,9 +1,671 @@
-﻿[
+[
+    {
+        "id":  "train-etiquette-japan",
+        "title":  "The Unwritten Rules of Japanese Trains 窶・Read This Before You Board",
+        "excerpt":  "Japan窶冱 trains run on time to the minute and operate on a set of social rules that nobody posts on a sign. Here窶冱 what they are.",
+        "category":  "rules-etiquette",
+        "tags":  [
+                     "first-time",
+                     "transport",
+                     "tradition"
+                 ],
+        "publishedAt":  "2026-06-16",
+        "updatedAt":  "",
+        "readingTime":  5,
+        "heroImage":  "",
+        "heroImageAlt":  "The interior of a Tokyo commuter train with passengers sitting quietly",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "ic-card-japan-guide",
+                           "tokyo-subway-guide",
+                           "public-behavior-japan"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "Silent mode means silent",
+                             "paragraphs":  [
+                                                "The first thing Japanese train operators ask is that you set your phone to manner mode (silent). This means no ringtone, no notification sounds, no speaker audio of any kind. It does not mean vibrate. In a quiet carriage, a buzzing phone on a hard surface is clearly audible to the six people nearest you. Put it fully silent. This takes two seconds and prevents one of the more uncomfortable social experiences available to a visitor."
+                                            ]
+                         },
+                         {
+                             "heading":  "Phone calls are not done",
+                             "paragraphs":  [
+                                                "Taking a phone call on a Japanese commuter train is a social violation roughly equivalent to eating a sandwich in a library. The standard approach is to let it go to voicemail, or to answer, say quietly that you are on a train and will call back, and end the call immediately. This is what Japanese commuters do. On long-distance Shinkansen, calls are generally acceptable in the space between carriages. In the carriage itself, the same rules apply."
+                                            ]
+                         },
+                         {
+                             "heading":  "Priority seats",
+                             "paragraphs":  [
+                                                "The seats marked with a priority label near the carriage doors (often in a different color or fabric) are reserved for elderly passengers, pregnant women, passengers with young children, and those with injuries or disabilities. On a crowded train, these seats fill up like any other. On a less crowded train, the norm is to leave them empty unless you are one of the intended users. The nuance: at 11pm on a Friday, nobody enforces this strictly. At 8am on a Monday, a healthy young person sitting in a priority seat while an elderly passenger stands nearby is making a choice that other passengers will notice."
+                                            ]
+                         },
+                         {
+                             "heading":  "Platform queuing",
+                             "paragraphs":  [
+                                                "Most Tokyo platforms have painted lines on the ground showing where train doors will open and which direction passengers should queue. You queue behind the lines, in two parallel columns, and you let people off the train before you board. This is not complicated, but it is enforced by social pressure rather than barriers, and it fails immediately when visitors don窶冲 understand the system. Look at the floor. Find the lines. Stand in them."
+                                            ]
+                         },
+                         {
+                             "heading":  "Bags and backpacks",
+                             "paragraphs":  [
+                                                "On a crowded train, a backpack worn on your back occupies the space of an additional person and hits other passengers every time you turn. The protocol is to take it off and either hold it in front of you or place it in the overhead luggage shelf. Large rolling suitcases go in the space at the end of the carriage near the doors, not in the aisle. This is an issue specifically at peak hours on the Narita Express and on Shinkansen platforms during tourist seasons."
+                                            ]
+                         },
+                         {
+                             "heading":  "Eating on trains",
+                             "paragraphs":  [
+                                                "Eating on local commuter trains is generally not done. Drinking from a closed container is fine. On long-distance Shinkansen, eating is acceptable and expected 窶・the ekiben (station bento) culture exists specifically for this. The distinction is between a 10-minute metro ride and a two-hour bullet train journey. If in doubt, the rule is: if the person next to you isn窶冲 eating, you probably shouldn窶冲 be either."
+                                            ]
+                         },
+                         {
+                             "heading":  "Why these rules matter",
+                             "paragraphs":  [
+                                                "Japan窶冱 train system carries millions of people every day with near-zero conflict. The reason is not enforcement 窶・there are no transit police watching for phone calls or checking priority seats. The reason is that everybody in the carriage has implicitly agreed to the same set of rules, and the rules work because they are followed consistently. A visitor who doesn窶冲 know them isn窶冲 being judged harshly; they窶决e just outside the system. Knowing them before you board means you spend the journey looking at the city, not at an awkward situation."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "temple-shrine-etiquette",
+        "title":  "How to Visit a Japanese Temple or Shrine Without Being Accidentally Rude",
+        "excerpt":  "Temples and shrines have different rules, different purposes, and different gods. Getting them confused is the starting mistake. Everything else follows from there.",
+        "category":  "rules-etiquette",
+        "tags":  [
+                     "first-time",
+                     "tradition",
+                     "kyoto"
+                 ],
+        "publishedAt":  "2026-06-16",
+        "updatedAt":  "",
+        "readingTime":  6,
+        "heroImage":  "",
+        "heroImageAlt":  "A stone torii gate leading to a Shinto shrine path lined with lanterns",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "hidden-shrines-kyoto",
+                           "public-behavior-japan",
+                           "tipping-in-japan"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "Temple vs shrine 窶・the difference matters",
+                             "paragraphs":  [
+                                                "Temples (o-tera) are Buddhist. Shrines (jinja) are Shinto. The buildings look different, the rituals are different, and the correct behavior is slightly different at each. The fastest way to tell them apart: if there is a torii gate 窶・the distinctive arch, usually red or stone 窶・you are at a shrine. If there is a large incense burner and a main hall with Buddha imagery, you are at a temple. Many famous sites have both on the same grounds, particularly in Kyoto, because Buddhism and Shinto coexisted for centuries."
+                                            ]
+                         },
+                         {
+                             "heading":  "The torii gate",
+                             "paragraphs":  [
+                                                "Walking through a torii gate marks the transition from the ordinary world into sacred space. Walk through it, not around it. The center of the path through a shrine is considered the route of the deity; some people walk slightly to one side as a gesture of deference. This is not required of visitors, but it窶冱 the kind of thing worth knowing exists."
+                                            ]
+                         },
+                         {
+                             "heading":  "Temizuya: the purification fountain",
+                             "paragraphs":  [
+                                                "Near the entrance of both shrines and many temples there is a temizuya 窶・a stone basin with ladles. The ritual: take a ladle with your right hand, pour water over your left hand. Transfer the ladle to your left hand, pour over your right. Pour a small amount into your left palm and rinse your mouth (spit to the side, not into the basin). Pour the remaining water from the ladle over both hands simultaneously, tilting the ladle so the water runs down the handle rather than being poured from the bowl. Most foreign visitors skip this entirely and it窶冱 not obligatory, but doing it correctly is a straightforward gesture of respect."
+                                            ]
+                         },
+                         {
+                             "heading":  "How to pray at a shrine",
+                             "paragraphs":  [
+                                                "Approach the main hall (haiden). Toss a coin into the offering box 窶・five yen (go-en) coins are traditional because 窶枠o-en窶・also means 窶枠ood fortune.窶・Ring the bell if there is one. Bow deeply twice. Clap twice. Pray or hold the moment. Bow once more. That窶冱 the full sequence. You don窶冲 need to remember all of it. Two deep bows and two claps gets you 80% of the way there and nobody will correct you."
+                                            ]
+                         },
+                         {
+                             "heading":  "How to pray at a temple",
+                             "paragraphs":  [
+                                                "Buddhist temples don窶冲 involve clapping. The general approach: place a coin in the offering box, place your hands together (gassho), bow, and hold the moment. Incense burners at temples allow you to light a stick and wave the smoke toward yourself 窶・considered purifying, and particularly common for waving smoke toward aching joints. Buy the incense at the counter, not from someone else窶冱 bundle."
+                                            ]
+                         },
+                         {
+                             "heading":  "Photography",
+                             "paragraphs":  [
+                                                "Photography of the exterior grounds is almost always permitted. Photography inside the main hall is often not, and there will usually be a sign. If there is no sign and you are unsure, look at what other visitors are doing. Taking a photograph while someone else is praying is poor form regardless of whether signs permit it. At some Kyoto shrines, photography at certain hours has been restricted specifically because of past overcrowding by tourists 窶・check in advance for Fushimi Inari and Gion Shrine."
+                                            ]
+                         },
+                         {
+                             "heading":  "What to buy",
+                             "paragraphs":  [
+                                                "Omamori are amulets sold at most shrines and temples, intended for specific purposes: safe travel, good health, exam success. They are meant to be replaced annually 窶・return the old one to the shrine when you buy a new one, or dispose of it respectfully. Ema are wooden plaques for writing wishes and prayers, hung on a rack at the shrine. You don窶冲 need to write in Japanese; English works. The wish is between you and whatever you are choosing to address."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "tipping-in-japan",
+        "title":  "Why You Should Never Tip in Japan 窶・and What to Do Instead",
+        "excerpt":  "In Japan, the service is built into the price. Adding a tip doesn窶冲 reward the server 窶・it creates an awkward situation for both of you.",
+        "category":  "rules-etiquette",
+        "tags":  [
+                     "first-time",
+                     "tradition",
+                     "food"
+                 ],
+        "publishedAt":  "2026-06-16",
+        "updatedAt":  "",
+        "readingTime":  4,
+        "heroImage":  "",
+        "heroImageAlt":  "A server at a traditional Japanese restaurant carefully placing dishes on a low table",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "izakaya-guide-first-timers",
+                           "ryokan-first-time-guide",
+                           "public-behavior-japan"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "The rule",
+                             "paragraphs":  [
+                                                "Do not tip in Japan. Not at restaurants. Not in taxis. Not at the ryokan. Not at the hotel. The rule applies everywhere, with essentially no exceptions. This is not a matter of the tip being too small or the service not meriting it. Tipping is simply not part of the service culture, and attempting it creates confusion rather than goodwill."
+                                            ]
+                         },
+                         {
+                             "heading":  "Why tipping is not done",
+                             "paragraphs":  [
+                                                "In Japan, service is understood as part of what you paid for. The waiter who refills your water, the taxi driver who opens and closes the door automatically from the front seat, the ryokan attendant who arranges your futon 窶・they are doing their job with the full understanding that it will be done to a high standard because that is the expectation, not because there is a financial incentive to exceed it. Tipping implies that the service was beyond what was expected, which suggests the expectation was low. This is not the message most people intend to send."
+                                            ]
+                         },
+                         {
+                             "heading":  "What happens if you try",
+                             "paragraphs":  [
+                                                "If you leave cash on the table at a restaurant, staff will often chase you down the street to return it, assuming you forgot it. If you hand money directly to a server as a tip, it is likely to be declined, or accepted with visible discomfort. In rare cases it may be accepted with genuine bewilderment. None of these outcomes is the one you were hoping for."
+                                            ]
+                         },
+                         {
+                             "heading":  "At a ryokan",
+                             "paragraphs":  [
+                                                "Ryokan are the one context where something resembling a tip exists 窶・but it operates on different logic. An o-shibori (a small envelope with a gratuity inside) can be given to the ryokan attendant assigned to your room on arrival, as a gesture of appreciation for the personal service throughout the stay. This is not expected and is not common among foreign guests. If you want to do it, the amount is typically ﾂ･1,000窶・,000, placed in an envelope (not loose cash, never loose cash). The envelope matters as much as the money."
+                                            ]
+                         },
+                         {
+                             "heading":  "In taxis",
+                             "paragraphs":  [
+                                                "Taxi fare is metered. You pay the meter. You do not round up. You do not add anything. The driver will make precise change for whatever you give them, and expect you to take it. Declining the change and saying 窶鰐eep it窶・will land as strange, not generous."
+                                            ]
+                         },
+                         {
+                             "heading":  "What to do instead",
+                             "paragraphs":  [
+                                                "What Japanese culture does value in place of tips: acknowledgment. A genuine 窶和rigatou gozaimashita窶・(thank you very much) at the end of a meal, a bow at the door of the ryokan, a simple gesture of appreciation that the person can receive without awkwardness. The service culture in Japan is built on mutual respect that doesn窶冲 require cash to function. The best thing you can do is participate in it on its own terms."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "shoes-off-guide",
+        "title":  "When to Take Your Shoes Off in Japan: The Complete Guide",
+        "excerpt":  "The shoe rule in Japan is not arbitrary. It reflects a clear line between outside space and inside space that structures daily life. Here is where that line is drawn.",
+        "category":  "rules-etiquette",
+        "tags":  [
+                     "first-time",
+                     "accommodation",
+                     "tradition"
+                 ],
+        "publishedAt":  "2026-06-16",
+        "updatedAt":  "",
+        "readingTime":  4,
+        "heroImage":  "",
+        "heroImageAlt":  "A row of shoes neatly arranged in a traditional Japanese entryway genkan",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "ryokan-first-time-guide",
+                           "temple-shrine-etiquette",
+                           "public-behavior-japan"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "The genkan",
+                             "paragraphs":  [
+                                                "Traditional Japanese homes, ryokan, and many older buildings have a genkan 窶・an entrance area slightly lower than the rest of the floor, designed specifically for removing shoes. You step into the genkan, take off your shoes, and step up into the interior in socks or bare feet. The directional convention: shoes are placed pointing toward the door, so they窶决e ready to put on when you leave. This isn窶冲 required of guests, but it窶冱 what you窶冤l observe."
+                                            ]
+                         },
+                         {
+                             "heading":  "At ryokan",
+                             "paragraphs":  [
+                                                "At a ryokan, shoes come off at the main entrance and you窶决e given slippers. These slippers go everywhere inside the building except tatami rooms (where you go in socks or bare feet) and the toilet (which has its own dedicated pair). The slippers-off-at-tatami rule catches most visitors at least once. Look at the floor: if it窶冱 tatami, your slippers stay outside."
+                                            ]
+                         },
+                         {
+                             "heading":  "At some restaurants",
+                             "paragraphs":  [
+                                                "Traditional Japanese restaurants 窶・particularly those with tatami seating or private rooms 窶・will have a designated shoe removal area near the entrance. The signal is usually a raised floor, a row of slippers, or a staff member making the gesture. If you窶决e unsure, look at what other guests near the entrance are doing. Western-style restaurants in Japan do not require shoe removal."
+                                            ]
+                         },
+                         {
+                             "heading":  "At some temples",
+                             "paragraphs":  [
+                                                "Certain temple halls require shoes to be removed before entering. There will be a step at the entrance and either a rack for shoes or plastic bags to carry them inside with you. This varies by temple. Fushimi Inari in Kyoto does not require shoe removal for the main torii paths. Todai-ji in Nara does for the main hall interior. The entrance step is the consistent signal."
+                                            ]
+                         },
+                         {
+                             "heading":  "The toilet slipper trap",
+                             "paragraphs":  [
+                                                "The most reliable mistake visitors make: walking out of the toilet in the toilet slippers. At ryokan and some traditional homes, there is a dedicated pair of slippers inside the toilet room. You put them on to enter, and you take them off when you leave. Walking back through the inn in toilet slippers is the equivalent of walking through the house carrying the toilet brush. It happens to almost everyone once. The correction is to look down at your feet before exiting the toilet."
+                                            ]
+                         },
+                         {
+                             "heading":  "Reading the signals",
+                             "paragraphs":  [
+                                                "The consistent signal that shoes come off: a step at the entrance that marks a change in floor level. When you see a step, assume shoes off until you have evidence otherwise. Modern hotels, convenience stores, restaurants with Western seating, and most commercial buildings do not follow this rule. The genkan-step is the dividing line."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "public-behavior-japan",
+        "title":  "How to Behave in Public in Japan: The Unwritten Rules",
+        "excerpt":  "Japanese public spaces operate on a set of unspoken rules that make them exceptionally pleasant. Most visitors don窶冲 know them. All of them are learnable in ten minutes.",
+        "category":  "rules-etiquette",
+        "tags":  [
+                     "first-time",
+                     "tradition",
+                     "tokyo"
+                 ],
+        "publishedAt":  "2026-06-16",
+        "updatedAt":  "",
+        "readingTime":  5,
+        "heroImage":  "",
+        "heroImageAlt":  "A busy pedestrian crossing in Tokyo with people moving in orderly streams",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "train-etiquette-japan",
+                           "tipping-in-japan",
+                           "shoes-off-guide"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "Don窶冲 eat while walking",
+                             "paragraphs":  [
+                                                "Eating while walking is generally not done in Japan. The exception is festival food from stalls at a matsuri (festival), where the eating-while-standing context is explicit. The rule applies elsewhere: you finish your konbini onigiri standing outside the shop, not while walking down the street. Street food vendors at tourist sites have started providing small eating areas specifically because this norm exists and tourists don窶冲 know it. Use them."
+                                            ]
+                         },
+                         {
+                             "heading":  "Queuing is not optional",
+                             "paragraphs":  [
+                                                "Japan queues. It queues at ATMs, at crosswalks, at train doors, at ramen shops, at theme park rides. Cutting in line is an extremely unwelcome behavior. If there is no visible queue but a crowd, look for the end of it and join there. Lines at Japanese institutions are remarkably orderly and self-policing 窶・no one will say anything if you push in, but everyone will notice, and the social discomfort this creates for you is real and immediate."
+                                            ]
+                         },
+                         {
+                             "heading":  "Noise levels",
+                             "paragraphs":  [
+                                                "Japan is quieter than most countries in public spaces. Not silent 窶・Shinjuku at 6pm is genuinely loud 窶・but the background noise level in trains, restaurants, and streets comes from the environment rather than individual conversations. Speaking at a volume that carries beyond your table in a restaurant, laughing loudly in a way that commands the room窶冱 attention, or holding a speakerphone conversation in a convenience store are all behaviors that will cause people to move away from you. This is the social feedback system."
+                                            ]
+                         },
+                         {
+                             "heading":  "Escalators",
+                             "paragraphs":  [
+                                                "On escalators, the standing side is the left. The right side is for walking. This is the Tokyo convention; Osaka does it in reverse (stand right, walk left) and this causes visible confusion at every point where Tokyoites and Osakans intersect. When in doubt, follow the person in front of you. The escalator rule is enforced entirely by social pressure and the occasional polite request to stand to one side, but it is real and consistent."
+                                            ]
+                         },
+                         {
+                             "heading":  "There are no rubbish bins",
+                             "paragraphs":  [
+                                                "Japan removed most public rubbish bins following a 1995 sarin gas attack. This means that in most public spaces 窶・streets, parks, station platforms 窶・there is nowhere to throw away your waste. You carry it with you until you reach a convenience store (which has a bin near the register), a restaurant, or your accommodation. Konbini is the practical answer for most of the day. This is not as inconvenient as it sounds once you accept that the rubbish is coming with you."
+                                            ]
+                         },
+                         {
+                             "heading":  "Photography of strangers",
+                             "paragraphs":  [
+                                                "Photographing people without consent in Japan operates under the same social norms as most countries, but with one additional consideration: the geisha districts of Kyoto (particularly Gion) have become sites of harassment as visitors photograph geiko and maiko at close range. Some streets in Gion now restrict photography entirely during certain hours. Photographing someone in traditional dress without asking, following them for a shot, or blocking a path for a photograph are all behaviors that have become serious enough to prompt legal responses in some areas. In all other contexts: use judgment, ask when in doubt, and take no for an answer."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "cash-vs-card-japan",
+        "title":  "Japan Still Runs on Cash 窶・Here窶冱 How Much to Bring and Where to Get It",
+        "excerpt":  "Cards are increasingly accepted in Japan, but 窶亙ncreasingly窶・is not the same as 窶腕eliably.窶・Plan for cash and treat the card acceptance as a bonus.",
+        "category":  "before-you-go",
+        "tags":  [
+                     "first-time",
+                     "budget",
+                     "practical"
+                 ],
+        "publishedAt":  "2026-06-15",
+        "updatedAt":  "",
+        "readingTime":  5,
+        "heroImage":  "",
+        "heroImageAlt":  "A hand holding Japanese yen banknotes in front of a temple market",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "ic-card-japan-guide",
+                           "japan-convenience-store-guide",
+                           "basic-japanese-phrases"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "Why Japan still uses cash",
+                             "paragraphs":  [
+                                                "Japan窶冱 cash culture is not technological backwardness. It reflects a combination of historical distrust of credit, very low crime rates that make carrying cash safe, a retail infrastructure built around cash transactions, and a cultural preference for precise payments. The ﾂ･100, ﾂ･500, and ﾂ･1,000 denominations handle most daily transactions efficiently. Japan also has one of the lowest cash crime rates in the world 窶・losing a wallet in Tokyo has a high probability of recovery."
+                                            ]
+                         },
+                         {
+                             "heading":  "Is it changing",
+                             "paragraphs":  [
+                                                "Yes, slowly. Since 2020, card acceptance has expanded significantly 窶・major chains (convenience stores, department stores, chain restaurants) almost universally accept Visa and Mastercard now. But neighborhood restaurants, small temple admission counters, some bus routes, onsen entrance fees, market stalls, and many rural businesses remain cash-only. You will encounter cash-only situations, and the choice of whether to have cash available is not really a choice."
+                                            ]
+                         },
+                         {
+                             "heading":  "How much to bring",
+                             "paragraphs":  [
+                                                "A reasonable daily cash budget for someone eating well and visiting paid attractions is ﾂ･5,000窶・,000 per day. For a one-week trip to Tokyo and Kyoto, ﾂ･50,000窶・0,000 in cash is a workable target, supplemented by card use where available. Carry ﾂ･10,000窶・0,000 on you at any given time 窶・enough for a day窶冱 expenses with a buffer. More than ﾂ･30,000 in a wallet is unnecessary given the ATM density in Japan."
+                                            ]
+                         },
+                         {
+                             "heading":  "The 7-Eleven ATM",
+                             "paragraphs":  [
+                                                "The most reliable cash source for foreign visitors: 7-Bank ATMs at 7-Eleven convenience stores. These accept almost all international cards, have English menus, charge a flat fee (around ﾂ･110窶・20 depending on your bank), and are open 24 hours. Japan Post ATMs (in post offices) and some AEON bank ATMs are also reliable. Traditional Japanese bank ATMs 窶・Mizuho, MUFG, SMBC 窶・frequently do not accept foreign cards or only accept them during banking hours. Use the convenience store ATMs."
+                                            ]
+                         },
+                         {
+                             "heading":  "Where cards are now accepted",
+                             "paragraphs":  [
+                                                "Cards work reliably at: hotel check-in and checkout, department stores and major shopping centers, chain restaurants (Yoshinoya, Sukiya, many ramen chains), most supermarkets, Shinkansen ticket machines (for online booking pickup), pharmacy chains, and tourist attractions in major cities. Cards work unreliably or not at all at: local izakaya, neighborhood restaurants, temples and shrines, market stalls, some local buses, small guesthouses, and anything described as 窶惑amily run.窶・When you see a menu without a payment logo visible, assume cash."
+                                            ]
+                         },
+                         {
+                             "heading":  "The IC card exception",
+                             "paragraphs":  [
+                                                "The IC card (Suica or ICOCA) sits between cash and card and is worth treating separately. It functions as a prepaid card accepted on trains, buses, and at convenience stores, and it can be loaded at any JR ticket machine with cash. Load it from a 7-Eleven ATM withdrawal, use it everywhere it窶冱 accepted, and keep ﾂ･2,000+ on it at all times. The combination of an IC card and a cash reserve handles 95% of daily transactions without any friction."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "japan-sim-card-guide",
+        "title":  "SIM Card vs Pocket Wi-Fi in Japan: What Nobody Tells You Before You Choose",
+        "excerpt":  "Both work. One is significantly more convenient. The answer has changed in the last three years and most travel articles haven窶冲 caught up.",
+        "category":  "before-you-go",
+        "tags":  [
+                     "first-time",
+                     "practical",
+                     "transport"
+                 ],
+        "publishedAt":  "2026-06-15",
+        "updatedAt":  "",
+        "readingTime":  5,
+        "heroImage":  "",
+        "heroImageAlt":  "A person holding a phone with a Japan map open in a busy train station",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "ic-card-japan-guide",
+                           "tokyo-subway-guide",
+                           "cash-vs-card-japan"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "Why you need internet",
+                             "paragraphs":  [
+                                                "Navigation in Japan without internet access is not impossible 窶・the signage in major train stations is multilingual and the numbered exit system at Tokyo Metro stations is excellent 窶・but it is significantly harder. Google Maps with Japanese public transit data is the most useful single tool available to a visitor, and it requires a live connection to function well. Sort this before you arrive."
+                                            ]
+                         },
+                         {
+                             "heading":  "Pocket Wi-Fi: the case for",
+                             "paragraphs":  [
+                                                "A pocket Wi-Fi is a small device you carry that creates a personal Wi-Fi hotspot using a Japanese mobile network. The main advantages: it can connect multiple devices simultaneously (useful if you窶决e traveling with a partner or need a tablet for navigation), it doesn窶冲 require changing your phone窶冱 SIM or settings, and it窶冱 been the standard solution for visitors for years 窶・airport rental desks are efficient and the return process is a prepaid envelope drop."
+                                            ]
+                         },
+                         {
+                             "heading":  "Pocket Wi-Fi: the case against",
+                             "paragraphs":  [
+                                                "It窶冱 one more thing to carry and charge. The battery typically lasts 8窶・0 hours under normal use, which is not a full travel day. You need to remember it. If you leave it at the hotel, you have no internet until you get back. The data may be throttled after 3窶・GB per day depending on the provider, which matters if you窶决e using video navigation or uploading photos."
+                                            ]
+                         },
+                         {
+                             "heading":  "SIM cards",
+                             "paragraphs":  [
+                                                "A Japanese tourist SIM replaces your existing SIM and gives you a Japanese data connection. Data-only SIMs (no calls, no texts) run about ﾂ･3,000窶・,000 for 15窶・0 days with 5窶・0GB. Voice SIMs are more expensive. The advantages: you carry nothing extra, battery life is your phone窶冱 own, and you窶决e always connected. The disadvantages: you need to physically swap SIMs, store your original one safely, and configure the APN settings (which take 5 minutes and require looking up your provider)."
+                                            ]
+                         },
+                         {
+                             "heading":  "eSIM: the best option now",
+                             "paragraphs":  [
+                                                "If your phone supports eSIM (most phones released after 2020 do), a Japanese eSIM is the cleanest solution. You download the profile before you arrive, activate it at the airport, and your phone connects to a Japanese network while keeping your original SIM active for calls and texts from home. No physical swap, no extra device, no configuration beyond installing the profile. Providers like IIJmio, Ubigi, Airalo, and several others offer Japan eSIMs starting around $15窶・5 USD for 7窶・0 days. Check compatibility before you buy."
+                                            ]
+                         },
+                         {
+                             "heading":  "Where to get them",
+                             "paragraphs":  [
+                                                "Pocket Wi-Fi rental counters are at Narita, Haneda, Kansai, and most other major airports. Booking in advance online is cheaper than walk-up rental. Physical SIMs are sold at airport convenience stores and electronics retailers (Bic Camera, Yodobashi). eSIMs are purchased online before departure 窶・activate them when you land. For a trip of 5窶・4 days with a single traveler, the eSIM or a basic tourist SIM is the practical recommendation."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "basic-japanese-phrases",
+        "title":  "The Only Japanese Phrases You Actually Need",
+        "excerpt":  "Japanese is difficult. A handful of phrases isn窶冲. The ten expressions below will handle the majority of situations a visitor encounters, and they take about 20 minutes to learn.",
+        "category":  "before-you-go",
+        "tags":  [
+                     "first-time",
+                     "language",
+                     "practical"
+                 ],
+        "publishedAt":  "2026-06-15",
+        "updatedAt":  "",
+        "readingTime":  4,
+        "heroImage":  "",
+        "heroImageAlt":  "A Japanese menu board with handwritten chalk specials at a small restaurant",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "izakaya-guide-first-timers",
+                           "japanese-menu-guide",
+                           "tipping-in-japan"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "Why bother",
+                             "paragraphs":  [
+                                                "English in Japan is available, patchily. Major chain restaurants have English menus or picture menus. Train stations in Tokyo and Kyoto are multilingual. Hotel staff at international properties speak English. Beyond these contexts 窶・at the neighborhood izakaya, the market stall, the onsen town窶冱 local restaurant 窶・Japanese is what you have. A few phrases, used with reasonable pronunciation and a willingness to repeat them, will get you through almost everything. Nobody expects fluency. They do notice the attempt."
+                                            ]
+                         },
+                         {
+                             "heading":  "The four daily essentials",
+                             "paragraphs":  [
+                                                "Sumimasen 窶・excuse me, sorry to bother you. The Swiss Army knife of Japanese phrases. Use it to get attention in a restaurant, to apologize for bumping into someone, to start a question, to ask for help. Arigatou gozaimasu 窶・thank you very much. The formal version. Useful for anything beyond casual thanks. Hai 窶・yes. More affirmative than it translates; also used to acknowledge that you heard something. Ie / iie 窶・no. Softer than it sounds. These four phrases, repeated calmly and clearly, handle a remarkable proportion of basic daily interactions."
+                                            ]
+                         },
+                         {
+                             "heading":  "At restaurants",
+                             "paragraphs":  [
+                                                "Kore wo kudasai 窶・this please. Point at the menu item. Three words, works everywhere. Hitotsu / futatsu / mittsu 窶・one / two / three. Ordering quantities. O-kaikei kudasai 窶・the bill please. You can also do the universal rectangular-finger-gesture (tracing a rectangle in the air with both index fingers) and everyone understands. Oishii 窶・delicious. Using this mid-meal in a small restaurant will reliably cause the chef to emerge from the kitchen."
+                                            ]
+                         },
+                         {
+                             "heading":  "Getting around",
+                             "paragraphs":  [
+                                                "[ Destination ] wa doko desu ka? 窶・Where is [ destination ]? Fill in the location name. Show the name written down and follow this phrase with the map on your phone and you will receive directions, usually very thorough directions, sometimes with an escort. Chotto matte kudasai 窶・please wait a moment. For when someone is talking faster than you can process."
+                                            ]
+                         },
+                         {
+                             "heading":  "Shopping",
+                             "paragraphs":  [
+                                                "Ikura desu ka? 窶・How much is it? Most shops will simply type the price on a calculator or show you the price tag, but the question opens the interaction correctly. Kore wa nan desu ka? 窶・What is this? For menus and market stalls where the item is unidentifiable. Expect a demonstration."
+                                            ]
+                         },
+                         {
+                             "heading":  "Pronunciation",
+                             "paragraphs":  [
+                                                "Japanese vowels are consistent: A is 窶和h,窶・I is 窶脇e,窶・U is 窶椀o,窶・E is 窶脇h,窶・O is 窶椀h.窶・They don窶冲 shift the way English vowels do. 窶連rigatou窶・is pronounced ah-ree-gah-toh, not ah-rig-uh-toe. Getting the vowels right matters more than anything else and takes five minutes of practice. Japanese people will meet you much more than halfway on pronunciation as long as the vowels are approximately correct."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "tokyo-subway-guide",
+        "title":  "The Tokyo Subway: How to Navigate It Without Getting Lost",
+        "excerpt":  "Tokyo窶冱 train network is the most complex urban rail system in the world. It is also, once you understand the basics, extremely easy to use.",
+        "category":  "getting-around",
+        "tags":  [
+                     "first-time",
+                     "transport",
+                     "tokyo"
+                 ],
+        "publishedAt":  "2026-06-15",
+        "updatedAt":  "",
+        "readingTime":  5,
+        "heroImage":  "",
+        "heroImageAlt":  "The platform at Shinjuku Station during morning rush hour with commuters boarding a train",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "ic-card-japan-guide",
+                           "train-etiquette-japan",
+                           "tokyo-neighborhoods-guide"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "Two networks, one system",
+                             "paragraphs":  [
+                                                "Tokyo窶冱 rail network is operated by multiple companies, of which two matter most to visitors: Tokyo Metro (13 lines, run by Tokyo Metro Co.) and Toei Subway (4 lines, run by the Tokyo Metropolitan Government). They connect at major stations, but they are separate systems with separate fares 窶・transferring between them costs extra unless you have an IC card, which handles the fare calculation automatically. On an IC card, the transfer cost is minimal and seamless. On a paper ticket, you窶冤l need to buy a new one each time. Get the IC card."
+                                            ]
+                         },
+                         {
+                             "heading":  "The Yamanote Line",
+                             "paragraphs":  [
+                                                "The Yamanote Line is not a subway 窶・it窶冱 a JR surface rail loop that runs around central Tokyo, connecting Shinjuku, Shibuya, Harajuku, Ebisu, Osaki, Shinagawa, Tokyo, Akihabara, Ueno, Nippori, Ikebukuro, and back. It takes about an hour to complete the full loop. Think of it as your outer ring: when you want to move between major neighborhoods, this is usually how you do it. Frequency during peak hours is every two to three minutes."
+                                            ]
+                         },
+                         {
+                             "heading":  "IC card vs paper ticket",
+                             "paragraphs":  [
+                                                "Buy a Suica IC card at any JR ticket machine at the airport or a major station. Load it with ﾂ･2,000窶・,000 to start. Tap in, tap out, and the fare is deducted automatically. You never need to calculate fares or buy destination-specific tickets. A paper ticket requires you to select the exact destination and correct fare before you board, which requires reading a map that is entirely in Japanese at some smaller stations. There is no scenario where a paper ticket is preferable to an IC card."
+                                            ]
+                         },
+                         {
+                             "heading":  "Reading the maps",
+                             "paragraphs":  [
+                                                "Tokyo Metro maps are color-coded by line and numbered by station. Each line has a letter prefix and each station a number (e.g., G07 for Ginza on the Ginza line). This number system is displayed on platform signs and inside carriages, which means you can navigate without reading kanji at all. The printed maps at train stations are free and multi-language. Inside the carriages, digital displays above the doors show the next station in Japanese, English, Chinese, and Korean."
+                                            ]
+                         },
+                         {
+                             "heading":  "Google Maps",
+                             "paragraphs":  [
+                                                "Google Maps with transit mode is accurate and reliable for Tokyo public transport. Enter your destination, select the transit option, and it will show you the correct line, platform, number of stops, and transfer instructions. The journey planner also shows fare estimates. Use it as your primary navigation tool. Japan-specific apps like HyperDia and Navitime are more detailed for complex Shinkansen bookings but offer nothing additional for basic subway navigation."
+                                            ]
+                         },
+                         {
+                             "heading":  "The last train",
+                             "paragraphs":  [
+                                                "Tokyo窶冱 trains stop running around midnight (times vary by line and station; check Google Maps for the exact last train). This is not like New York or London where the service continues through the night with reduced frequency. The trains stop, full stop. Taxis are available but expensive after midnight and in short supply on Friday and Saturday nights. If you窶决e out late, plan your route in advance and know your last train time. Getting stranded at midnight in Shibuya is solvable but inconvenient and expensive."
+                                            ]
+                         }
+                     ]
+    },
+    {
+        "id":  "photography-rules-japan",
+        "title":  "What You Can and Cannot Photograph in Japan",
+        "excerpt":  "Japan is exceptionally photogenic. It also has specific places and situations where photography is restricted, disrespectful, or now actively prohibited. Knowing the difference matters.",
+        "category":  "rules-etiquette",
+        "tags":  [
+                     "first-time",
+                     "tradition",
+                     "kyoto"
+                 ],
+        "publishedAt":  "2026-06-15",
+        "updatedAt":  "",
+        "readingTime":  4,
+        "heroImage":  "",
+        "heroImageAlt":  "A photographer framing a traditional Japanese street scene at dawn with no other people visible",
+        "heroImageCredit":  "",
+        "affiliate":  false,
+        "affiliateLinks":  [
+
+                           ],
+        "relatedIds":  [
+                           "temple-shrine-etiquette",
+                           "public-behavior-japan",
+                           "hidden-shrines-kyoto"
+                       ],
+        "author":  "TABI Editorial",
+        "sections":  [
+                         {
+                             "heading":  "The general principle",
+                             "paragraphs":  [
+                                                "In most outdoor public spaces in Japan, photography is unrestricted. Streets, parks, temple grounds, shrine pathways, market areas, train stations 窶・all are freely photographable. The restrictions apply inside specific buildings, in areas where signage prohibits it, and in situations where the photography causes problems for other people or for the place itself. Read the signs, watch what other people are doing, and when in doubt, ask."
+                                            ]
+                         },
+                         {
+                             "heading":  "Inside temples and shrines",
+                             "paragraphs":  [
+                                                "Interior photography inside the main hall of a temple or shrine is usually prohibited. The sign will typically show a camera with a red line through it. Some places allow photography inside with a fee; some famous main halls (Kinkaku-ji窶冱 interior, Todai-ji窶冱 Buddha) are not accessible at all. Gardens attached to temples are generally freely photographable. Detailed garden photography is expected 窶・it窶冱 one of the primary reasons people visit."
+                                            ]
+                         },
+                         {
+                             "heading":  "At onsen and public baths",
+                             "paragraphs":  [
+                                                "Photography is prohibited at onsen and sento (public baths), including in the changing rooms. This is absolute and enforced. Phones are not permitted in the bathing areas of most facilities, and taking your phone into a bathing area is both a rule violation and a privacy invasion of every other person present. Leave the phone in the locker."
+                                            ]
+                         },
+                         {
+                             "heading":  "Photographing strangers",
+                             "paragraphs":  [
+                                                "Japan doesn窶冲 have a specific law against street photography, but the social norms around photographing strangers are similar to those in most countries: pointing a camera directly at someone窶冱 face without consent, following someone for a photograph, or photographing children without parental consent all cross reasonable lines. Most Japanese people will not object verbally, but this reflects a cultural reluctance to confront rather than permission."
+                                            ]
+                         },
+                         {
+                             "heading":  "In Gion, Kyoto",
+                             "paragraphs":  [
+                                                "Gion and the surrounding geisha districts of Kyoto are a specific and documented problem. Years of tourists surrounding and following maiko and geiko for photographs has led to complaints from residents, businesses, and the performers themselves. Some streets now have photography restriction signs during evening hours. Obeying these is not optional 窶・local authorities have the ability to issue fines. More simply: if you see a maiko walking to an appointment, she is not a photo opportunity. She is a person doing her job."
+                                            ]
+                         },
+                         {
+                             "heading":  "On trains",
+                             "paragraphs":  [
+                                                "Photography on trains is not explicitly prohibited but is not commonly practiced for good reason: photographing other passengers without consent in an enclosed space they cannot leave is uncomfortable regardless of country. Photographing the view from the window is universally fine. Photographing your own group is fine. Pointing a camera at strangers in a carriage is not."
+                                            ]
+                         }
+                     ]
+    },
     {
         "id":  "ryokan-first-time-guide",
         "title":  "Your First Ryokan: What to Expect, What to Do, and What Not to Wear",
         "excerpt":  "A traditional Japanese inn is not a hotel. The sooner you accept that, the better the stay.",
-        "category":  "travel-guide",
+        "category":  "before-you-go",
         "tags":  [
                      "accommodation",
                      "luxury",
@@ -80,7 +742,7 @@
         "id":  "japan-winter-travel-guide",
         "title":  "Why January Is the Best Month to Visit Japan (Yes, Really)",
         "excerpt":  "No cherry blossoms. No 38-degree humidity. No crowds. January is when Japan stops performing for tourists and just exists.",
-        "category":  "travel-guide",
+        "category":  "before-you-go",
         "tags":  [
                      "first-time",
                      "budget",
@@ -156,7 +818,7 @@
         "id":  "japan-convenience-store-guide",
         "title":  "The Convenience Store Is Japan\u0027s Greatest Culinary Achievement",
         "excerpt":  "Seven-Eleven in Japan is not Seven-Eleven anywhere else. This distinction matters and deserves your full attention.",
-        "category":  "food",
+        "category":  "eat-drink",
         "tags":  [
                      "food",
                      "budget",
@@ -227,7 +889,7 @@
         "id":  "kissaten-tokyo-coffee-culture",
         "title":  "Tokyo\u0027s Kissaten: The Coffee Shops That Refuse to Change",
         "excerpt":  "Somewhere between the third-wave cafés and the chain stores, Tokyo\u0027s old coffee shops have been quietly waiting.",
-        "category":  "culture",
+        "category":  "eat-drink",
         "tags":  [
                      "tokyo",
                      "tradition",
@@ -303,7 +965,7 @@
         "id":  "kanazawa-japan-guide",
         "title":  "Kanazawa: The City Most Japan Itineraries Skip — and Shouldn\u0027t",
         "excerpt":  "Three hours from Tokyo by bullet train. A fraction of Kyoto\u0027s crowds. Arguably better seafood. There is no good reason it\u0027s on so few itineraries.",
-        "category":  "travel-guide",
+        "category":  "hidden-japan",
         "tags":  [
                      "off-the-beaten-path",
                      "food",
@@ -380,7 +1042,7 @@
         "id":  "tsukiji-outer-market-guide",
         "title":  "Tsukiji Outer Market: Where to Actually Eat (and What to Skip)",
         "excerpt":  "The inner market moved to Toyosu in 2018. The outer market never moved and never needed to.",
-        "category":  "food",
+        "category":  "eat-drink",
         "tags":  [
                      "food",
                      "tokyo",
@@ -457,7 +1119,7 @@
         "id":  "izakaya-guide-first-timers",
         "title":  "How to Eat at an Izakaya Without Looking Completely Lost",
         "excerpt":  "The curtain over the door. The laminated menu with pictures on maybe two pages. The small charge you didn\u0027t order. You\u0027ll be fine.",
-        "category":  "food",
+        "category":  "eat-drink",
         "tags":  [
                      "food",
                      "first-time",
@@ -534,7 +1196,7 @@
         "id":  "ic-card-japan-guide",
         "title":  "The IC Card Is the Best Thing in Japan. Here\u0027s How to Actually Use It.",
         "excerpt":  "You can survive Tokyo\u0027s train network without one. You just won\u0027t want to.",
-        "category":  "travel-guide",
+        "category":  "getting-around",
         "tags":  [
                      "transport",
                      "first-time",
@@ -691,7 +1353,7 @@
         "id":  "naoshima-art-island-guide",
         "title":  "Naoshima Is Japan\u0027s Art Island — and Nobody Tells You How to Do It Right",
         "excerpt":  "It\u0027s a real island with real people living on it. The art just happens to be everywhere.",
-        "category":  "hidden-gems",
+        "category":  "hidden-japan",
         "tags":  [
                      "off-the-beaten-path",
                      "nature"
@@ -766,7 +1428,7 @@
         "id":  "shinkansen-guide",
         "title":  "The JR Pass: Who It\u0027s For, Who It Isn\u0027t, and How to Not Overpay",
         "excerpt":  "The JR Pass is one of Japan\u0027s most famous travel products. It\u0027s also, for a lot of itineraries, a waste of money.",
-        "category":  "travel-guide",
+        "category":  "getting-around",
         "tags":  [
                      "transport",
                      "first-time",
@@ -831,7 +1493,7 @@
         "id":  "tokyo-neighborhoods-guide",
         "title":  "Where to Stay in Tokyo: Honest Assessments of Each Neighborhood",
         "excerpt":  "Every first-time visitor books Shinjuku because someone told them to. Some of those people are right.",
-        "category":  "travel-guide",
+        "category":  "before-you-go",
         "tags":  [
                      "tokyo",
                      "first-time",
@@ -902,7 +1564,7 @@
         "id":  "ramen-regional-guide",
         "title":  "Japan\u0027s Four Major Ramen Styles: What They Are and Where to Actually Eat Them",
         "excerpt":  "Ramen in Japan is not one food. Depending on where you are, the word covers a range of things that share almost nothing except noodles.",
-        "category":  "food",
+        "category":  "eat-drink",
         "tags":  [
                      "food",
                      "first-time",
@@ -961,7 +1623,7 @@
         "id":  "sumo-tournament-guide",
         "title":  "How to Watch a Sumo Tournament Without Watching It on TV",
         "excerpt":  "Six tournaments a year, three of them in Tokyo. Tickets go on sale months in advance and sell out. Here\u0027s how to actually get in.",
-        "category":  "culture",
+        "category":  "before-you-go",
         "tags":  [
                      "tradition",
                      "first-time"
@@ -1024,7 +1686,7 @@
         "id":  "japanese-onsen-etiquette",
         "title":  "The Onsen Rules Nobody Bothers to Tell You",
         "excerpt":  "The water is shared. The silence is expected. The tattoo policy is more complicated than you\u0027ve been told.",
-        "category":  "culture",
+        "category":  "rules-etiquette",
         "tags":  [
                      "tradition",
                      "first-time",
@@ -1154,7 +1816,7 @@
         "id":  "hiroshima-guide",
         "title":  "Hiroshima Is More Than the Peace Park — And the Peace Park Is More Than You Think",
         "excerpt":  "People visit Hiroshima for one reason. Most leave having found three or four others.",
-        "category":  "travel-guide",
+        "category":  "hidden-japan",
         "tags":  [
                      "tradition",
                      "first-time",
@@ -1213,7 +1875,7 @@
         "id":  "autumn-foliage-japan",
         "title":  "Autumn Leaves in Japan: Where to Go and When the Timing Actually Works",
         "excerpt":  "Koyo — autumn foliage — is not a fixed event. It starts in Hokkaido in September and ends in Kyushu in December. The timing requires a decision.",
-        "category":  "travel-guide",
+        "category":  "before-you-go",
         "tags":  [
                      "nature",
                      "off-the-beaten-path"
@@ -1277,7 +1939,7 @@
         "id":  "beppu-onsen-guide",
         "title":  "Beppu: The Onsen City That\u0027s Stranger and Better Than You Expect",
         "excerpt":  "Beppu produces more geothermal steam per day than anywhere in Japan and possibly anywhere outside Iceland. The city treats this as completely normal.",
-        "category":  "hidden-gems",
+        "category":  "hidden-japan",
         "tags":  [
                      "nature",
                      "off-the-beaten-path"
@@ -1399,7 +2061,7 @@
         "id":  "sushi-counter-guide",
         "title":  "Eating at a Sushi Counter: What to Expect and How to Not Ruin It",
         "excerpt":  "The sushi counter is not intimidating once you understand that there are three rules, they\u0027re easy, and the chef wants you to enjoy it.",
-        "category":  "food",
+        "category":  "eat-drink",
         "tags":  [
                      "food",
                      "luxury",
@@ -1458,7 +2120,7 @@
         "id":  "nara-day-trip",
         "title":  "Nara Beyond the Deer: What to Do After the First Hour",
         "excerpt":  "Yes, the deer are free-roaming and yes, they will bow to get crackers from you. This takes about 40 minutes. Nara has a full day\u0027s worth of things after that.",
-        "category":  "travel-guide",
+        "category":  "hidden-japan",
         "tags":  [
                      "off-the-beaten-path",
                      "tradition",
@@ -1517,7 +2179,7 @@
         "id":  "golden-week-avoid",
         "title":  "Golden Week: What It Is, Why It Will Destroy Your Trip, and When to Go Instead",
         "excerpt":  "Golden Week runs from late April to early May. If your Japan trip overlaps with it, you have two options: embrace the chaos or reschedule.",
-        "category":  "travel-guide",
+        "category":  "before-you-go",
         "tags":  [
                      "first-time",
                      "budget"
@@ -1639,7 +2301,7 @@
         "id":  "hokkaido-summer-guide",
         "title":  "Hokkaido in July: Japan\u0027s Best-Kept Summer Secret",
         "excerpt":  "Tokyo in July is 35 degrees and 90% humidity. Hokkaido in July is 22 degrees and clear. These two facts explain a lot.",
-        "category":  "travel-guide",
+        "category":  "hidden-japan",
         "tags":  [
                      "nature",
                      "off-the-beaten-path"
@@ -1703,7 +2365,7 @@
         "id":  "koenji-shimokitazawa",
         "title":  "Koenji and Shimokitazawa: Tokyo for People Who\u0027ve Already Done Harajuku",
         "excerpt":  "Two stops on different lines. Two neighborhoods that run on thrift stores, live music, and a specific refusal to be improved.",
-        "category":  "culture",
+        "category":  "hidden-japan",
         "tags":  [
                      "tokyo",
                      "tradition"
@@ -1761,7 +2423,7 @@
         "id":  "wagyu-guide",
         "title":  "How to Actually Eat Wagyu Beef in Japan",
         "excerpt":  "Wagyu is expensive. This is not a misunderstanding. The question is what you\u0027re getting for the expense, and whether a ¥5,000 lunch version is the same as a ¥30,000 dinner.",
-        "category":  "food",
+        "category":  "eat-drink",
         "tags":  [
                      "food",
                      "luxury"
@@ -1819,7 +2481,7 @@
         "id":  "japanese-vending-machines",
         "title":  "Japan\u0027s Vending Machines Are a Serious Subject",
         "excerpt":  "There are 4 million vending machines in Japan. One for every 31 people. This is not an accident.",
-        "category":  "culture",
+        "category":  "before-you-go",
         "tags":  [
                      "tokyo",
                      "first-time"
@@ -1883,7 +2545,7 @@
         "id":  "tokyo-day-trips",
         "title":  "Day Trips From Tokyo That Aren\u0027t Hakone or Nikko",
         "excerpt":  "Hakone is excellent. Nikko is impressive. Both are in every guidebook and overrun on weekends. There are better options if you\u0027re willing to look slightly further.",
-        "category":  "travel-guide",
+        "category":  "getting-around",
         "tags":  [
                      "nature",
                      "budget"
@@ -1999,7 +2661,7 @@
         "id":  "hidden-shrines-kyoto",
         "title":  "The Hidden Shrines of Kyoto Locals Still Keep Secret",
         "summary":  "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto — quiet, moss-covered, and entirely yours. We asked local monks and longtime residents where they actually go when the crowds become too much. These are the shrines that rarely appear in guidebooks.",
-        "category":  "travel-guide",
+        "category":  "hidden-japan",
         "tags":  [
                      "kyoto",
                      "shrine",
@@ -2013,7 +2675,7 @@
         "id":  "10-days-japan-no-tourist-traps",
         "title":  "How to Spend 10 Days in Japan Without a Single Tourist Trap",
         "summary":  "Most first-time visitors follow the same Golden Route — Tokyo, Kyoto, Osaka — and come home feeling like they saw a theme park. This itinerary takes a different approach: slower, deeper, and built around the neighborhoods that locals actually use.",
-        "category":  "travel-guide",
+        "category":  "before-you-go",
         "tags":  [
                      "itinerary",
                      "first-time",
@@ -2028,7 +2690,7 @@
         "id":  "mt-fuji-route-guide",
         "title":  "The Perfect Route up Mt. Fuji: What Nobody Tells You",
         "summary":  "Climbing Fuji is one of those experiences that sounds straightforward until you\u0027re doing it at 3am in a headlamp queue. The mountain rewards preparation and punishes assumptions — here\u0027s what we learned from five ascents across different seasons.",
-        "category":  "hidden-gems",
+        "category":  "hidden-japan",
         "tags":  [
                      "fuji",
                      "hiking",
@@ -2042,7 +2704,7 @@
         "id":  "osaka-3-days-itinerary",
         "title":  "Osaka in 3 Days: The Eating and Wandering Itinerary",
         "summary":  "Osaka has a reputation as Japan\u0027s kitchen, but that barely scratches the surface. This city rewards those who eat their way through it without a plan — we\u0027ve structured the chaos into three days that still feel spontaneous.",
-        "category":  "travel-guide",
+        "category":  "getting-around",
         "tags":  [
                      "osaka",
                      "food",
@@ -2056,7 +2718,7 @@
         "id":  "yakushima-ancient-forest",
         "title":  "Yakushima: Japan\u0027s Ancient Forest That Few Tourists Find",
         "summary":  "A UNESCO-listed island covered in cedar trees that are older than many civilizations, Yakushima sits off the southern tip of Kyushu and sees a fraction of the visitors it deserves. The hike through Shiratani Unsuikyo inspired Princess Mononoke — and it still feels that way.",
-        "category":  "hidden-gems",
+        "category":  "hidden-japan",
         "tags":  [
                      "yakushima",
                      "hiking",
@@ -2071,7 +2733,7 @@
         "id":  "japanese-menu-guide",
         "title":  "How to Read a Japanese Menu Without Speaking Japanese",
         "summary":  "Most Japanese restaurants don\u0027t have English menus, and that\u0027s not a problem once you know what to look for. A handful of kanji, some pattern recognition, and the willingness to point gets you through almost any restaurant in the country.",
-        "category":  "food",
+        "category":  "eat-drink",
         "tags":  [
                      "language",
                      "restaurant",
@@ -2085,7 +2747,7 @@
         "id":  "wabi-sabi-explained",
         "title":  "What Wabi-Sabi Really Means — And Why the World Needs It Now",
         "summary":  "The Japanese aesthetic of imperfection and transience offers something Western design philosophy rarely does: permission to be incomplete. Wabi-sabi isn\u0027t a style — it\u0027s a way of perceiving, and learning to see it changes how you look at almost everything.",
-        "category":  "culture",
+        "category":  "rules-etiquette",
         "tags":  [
                      "philosophy",
                      "design",
@@ -2099,7 +2761,7 @@
         "id":  "kintsugi-art-of-gold",
         "title":  "Kintsugi: The Art of Repairing Broken Things with Gold",
         "summary":  "A 500-year-old technique for mending ceramics with lacquer mixed with gold, silver, or platinum has become a global metaphor for resilience. We visited a master craftsman in Kyoto to understand why kintsugi is about far more than broken bowls.",
-        "category":  "culture",
+        "category":  "rules-etiquette",
         "tags":  [
                      "craft",
                      "kyoto",
@@ -2114,7 +2776,7 @@
         "id":  "hanami-2026-guide",
         "title":  "Hanami 2026: Where to See Cherry Blossoms Like a Local",
         "summary":  "Skip the tourist crowds at Maruyama Park and Ueno. The best hanami spots are the ones you stumble into — a neighborhood embankment, a school gate, a canal nobody bothered to list. We\u0027ve found them, so you don\u0027t have to.",
-        "category":  "culture",
+        "category":  "before-you-go",
         "tags":  [
                      "sakura",
                      "spring",
