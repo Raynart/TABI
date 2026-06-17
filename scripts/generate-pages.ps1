@@ -236,7 +236,7 @@ function Get-ArticleCard {
   <div class="ed-overlay"></div>
   $strip
   <div class="ed-content">
-    <p class="ed-cat">$cat</p>
+    <p class="ed-cat cat--$($article.category)">$cat</p>
     <h3 class="ed-title">$title</h3>
     <div class="ed-meta">
       <span>$date</span>
@@ -283,7 +283,7 @@ foreach ($a in $cultureArticles) {
 <a href="articles/$($a.id).html" class="culture-card">
   <p class="culture-num">$numStr</p>
   <div class="culture-card-img">$img</div>
-  <p class="culture-card-cat">$cat</p>
+  <p class="culture-card-cat cat--$($a.category)">$cat</p>
   <h3 class="culture-card-title">$title</h3>
   <p class="culture-card-desc">$desc</p>
 </a>
@@ -564,7 +564,7 @@ foreach ($a in $articles) {
     $lines.Add('<main class="article-wrap">')
     $lines.Add($breadcrumbHtml)
     $lines.Add("  <div class=""article-eyebrow"">")
-    $lines.Add("    <span class=""article-cat"">$cat</span>")
+    $lines.Add("    <span class=""article-cat cat--$($a.category)"">$cat</span>")
     $lines.Add('    <span class="article-dot"></span>')
     $lines.Add("    <span class=""article-date"">$date</span>")
     $lines.Add('    <span class="article-dot"></span>')

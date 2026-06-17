@@ -952,8 +952,9 @@ ul, ol {
   border-bottom: 1px solid var(--border);
 }
 .article-body p {
-  font-size: 1rem;
-  line-height: 1.85;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.9;
   color: var(--ink-soft);
   margin-bottom: 24px;
 }
@@ -1482,7 +1483,7 @@ html { scroll-behavior: smooth; }
 .toc {
   margin: 2rem 0 2.5rem;
   padding: 1.25rem 1.5rem;
-  background: var(--mist);
+  background: var(--paper-dark);
   border-left: 3px solid var(--accent);
   border-radius: 0 4px 4px 0;
 }
@@ -1522,15 +1523,31 @@ html { scroll-behavior: smooth; }
 /* ===== ARTICLE SECTIONS ===== */
 .article-section { margin-bottom: 2.25rem; }
 .article-section h2 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--ink);
   margin: 0 0 0.85rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border);
+  padding-left: 14px;
+  border-bottom: none;
+  position: relative;
   scroll-margin-top: 80px;
 }
-.article-section p { margin: 0 0 1rem; }
+.article-section h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  bottom: 2px;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.article-section p {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin: 0 0 1.1rem;
+}
 
 /* ===== PREV / NEXT NAVIGATION ===== */
 .prev-next {
@@ -1552,7 +1569,7 @@ html { scroll-behavior: smooth; }
   text-decoration: none;
   transition: background 0.15s;
 }
-.prev-next-link:hover { background: var(--mist); }
+.prev-next-link:hover { background: var(--paper-dark); }
 .prev-next-next { text-align: right; }
 .prev-next-label {
   font-family: var(--sans);
@@ -1587,4 +1604,23 @@ html { scroll-behavior: smooth; }
   font-size: 2.5rem;
   opacity: 0.25;
   line-height: 1;
+}
+
+/* ===== CATEGORY COLORS ===== */
+.cat--travel-guide  { color: #3d8a5c; }
+.cat--food          { color: #c05a20; }
+.cat--culture       { color: #6b4faa; }
+.cat--things-to-buy { color: #9a7820; }
+.cat--hidden-gems   { color: #2878a0; }
+
+/* ===== DROP CAP ===== */
+.article-section:first-of-type > p:first-of-type::first-letter,
+.article-body > p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 3.2em;
+  font-weight: 700;
+  float: left;
+  line-height: 0.78;
+  margin: 0.06em 0.1em 0 0;
+  color: var(--accent);
 }
