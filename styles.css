@@ -1445,8 +1445,38 @@ ul, ol {
   border-radius: 3px;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
+html { scroll-behavior: smooth; }
+
 .pg-btn:hover { border-color: var(--accent); color: var(--accent); }
 .pg-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.breadcrumb a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.breadcrumb-sep { opacity: 0.4; }
+.breadcrumb-current {
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
 
 /* ===== TABLE OF CONTENTS ===== */
 .toc {
@@ -1483,6 +1513,11 @@ ul, ol {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
+.toc-list a.toc-active {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom-color: var(--accent);
+}
 
 /* ===== ARTICLE SECTIONS ===== */
 .article-section { margin-bottom: 2.25rem; }
@@ -1496,3 +1531,60 @@ ul, ol {
   scroll-margin-top: 80px;
 }
 .article-section p { margin: 0 0 1rem; }
+
+/* ===== PREV / NEXT NAVIGATION ===== */
+.prev-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+}
+.prev-next-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.25rem;
+  background: var(--paper);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.prev-next-link:hover { background: var(--mist); }
+.prev-next-next { text-align: right; }
+.prev-next-label {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.prev-next-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (max-width: 620px) {
+  .prev-next { grid-template-columns: 1fr; }
+  .prev-next-next { text-align: left; }
+}
+
+/* ===== CARD IMAGE FALLBACK ===== */
+.ed-img-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fallback-icon {
+  font-size: 2.5rem;
+  opacity: 0.25;
+  line-height: 1;
+}

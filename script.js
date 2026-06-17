@@ -269,6 +269,31 @@
     });
   }
 
+  /* ===== TOC SCROLL SPY ===== */
+  function initTocSpy() {
+    var toc = document.querySelector('.toc');
+    if (!toc) return;
+    var sections = document.querySelectorAll('.article-section');
+    if (!sections.length) return;
+    var active = null;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var h2 = entry.target.querySelector('h2');
+        if (!h2) return;
+        var link = toc.querySelector('a[href="#' + h2.id + '"]');
+        if (!link) return;
+        if (entry.isIntersecting) {
+          if (active) active.classList.remove('toc-active');
+          link.classList.add('toc-active');
+          active = link;
+        }
+      });
+    }, { rootMargin: '-8% 0px -78% 0px' });
+
+    sections.forEach(function (sec) { observer.observe(sec); });
+  }
+
   /* ===== INIT ===== */
   document.addEventListener('DOMContentLoaded', function () {
     initTicker();
@@ -284,6 +309,7 @@
     initShareButtons();
     initGdprBanner();
     initPagination();
+    initTocSpy();
   });
 
 })();

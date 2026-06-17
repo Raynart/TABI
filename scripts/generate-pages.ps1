@@ -203,6 +203,19 @@ function Get-CategoryLabel {
     if ($cat) { return $cat.label } else { return $slug }
 }
 
+# ===== CATEGORY FALLBACK GRADIENTS + ICONS =====
+function Get-CardFallback {
+    param($category)
+    switch ($category) {
+        'travel-guide'  { return @{ grad = 'linear-gradient(160deg,#081f0d 0%,#1a4a2e 55%,#0d3320 100%)'; icon = '&#9992;' } }
+        'food'          { return @{ grad = 'linear-gradient(160deg,#200a02 0%,#5c2008 55%,#3a1205 100%)'; icon = '&#127837;' } }
+        'culture'       { return @{ grad = 'linear-gradient(160deg,#12082a 0%,#371a66 55%,#200d45 100%)'; icon = '&#26319;' } }
+        'things-to-buy' { return @{ grad = 'linear-gradient(160deg,#1a1400 0%,#4a3800 55%,#2e2400 100%)'; icon = '&#127850;' } }
+        'hidden-gems'   { return @{ grad = 'linear-gradient(160deg,#04141f 0%,#0d3a55 55%,#072840 100%)'; icon = '&#128142;' } }
+        default         { return @{ grad = 'linear-gradient(160deg,#100808 0%,#2e1010 55%,#5a1a1a 100%)'; icon = '&#127758;' } }
+    }
+}
+
 # ===== ARTICLE CARDS (used in index + category pages) =====
 function Get-ArticleCard {
     param($article, $size = 'sub')  # 'main' or 'sub'
@@ -211,10 +224,11 @@ function Get-ArticleCard {
     $title = [System.Net.WebUtility]::HtmlEncode($article.title)
     $img   = if ($article.heroImage) { $article.heroImage } else { '' }
     $strip = if ($size -eq 'main') { '<div class="ed-main-strip">&#29305;&#38598;</div>' } else { '' }
+    $fb    = Get-CardFallback $article.category
     $imgTag = if ($img) {
         "<img data-src=""$img"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"" loading=""lazy"">"
     } else {
-        '<div class="ed-img" style="width:100%;height:100%;background:linear-gradient(160deg,#100808 0%,#2e1010 40%,#5a1a1a 100%);"></div>'
+        "<div class=""ed-img ed-img-fallback"" style=""background:$($fb.grad);""><span class=""fallback-icon"">$($fb.icon)</span></div>"
     }
     return @"
 <a href="articles/$($article.id).html" class="ed-card ed-$size">
@@ -262,7 +276,8 @@ foreach ($a in $cultureArticles) {
     $cat  = Get-CategoryLabel $a.category
     $title = [System.Net.WebUtility]::HtmlEncode($a.title)
     $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
-    $img   = if ($a.heroImage) { "<img data-src=""$($a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;background:var(--ink-soft);""></div>" }
+    $fb2   = Get-CardFallback $a.category
+    $img   = if ($a.heroImage) { "<img data-src=""$($a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
     $numStr = $ci.ToString().PadLeft(2, '0')
     $cultureHtml += @"
 <a href="articles/$($a.id).html" class="culture-card">
@@ -413,6 +428,13 @@ Write-Host "Generated index.html"
 
 # ===== ARTICLE PAGES =====
 Write-Host "Generating $($articles.Count) article pages..."
+
+# Pre-build per-category sorted lists for prev/next navigation
+$catPeersMap = @{}
+foreach ($c in $config.categories) {
+    $catPeersMap[$c.slug] = @($articles | Where-Object { $_.category -eq $c.slug } | Sort-Object { $_.publishedAt } -Descending)
+}
+
 foreach ($a in $articles) {
     $title    = [System.Net.WebUtility]::HtmlEncode($a.title)
     $excerpt  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
@@ -493,6 +515,32 @@ foreach ($a in $articles) {
         $affiliateHtml += '</div>'
     }
 
+    # Breadcrumb
+    $breadcrumbHtml = "<nav class=""breadcrumb"" aria-label=""Breadcrumb""><a href=""index.html"">Home</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><a href=""categories/$($a.category).html"">$cat</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><span class=""breadcrumb-current"">$title</span></nav>"
+
+    # Prev / Next navigation (same category, sorted newest-first)
+    $prevNextHtml = ''
+    $peers = if ($catPeersMap.ContainsKey($a.category)) { $catPeersMap[$a.category] } else { @() }
+    $peerIdx = -1
+    for ($pi = 0; $pi -lt $peers.Count; $pi++) {
+        if ($peers[$pi].id -eq $a.id) { $peerIdx = $pi; break }
+    }
+    if ($peers.Count -gt 1) {
+        $prevA = if ($peerIdx -lt $peers.Count - 1) { $peers[$peerIdx + 1] } else { $null }  # older
+        $nextA = if ($peerIdx -gt 0)                { $peers[$peerIdx - 1] } else { $null }  # newer
+        $prevHtml = if ($prevA) {
+            "<a href=""$($prevA.id).html"" class=""prev-next-link prev-next-prev""><span class=""prev-next-label"">&larr; Previous</span><span class=""prev-next-title"">$([System.Net.WebUtility]::HtmlEncode($prevA.title))</span></a>"
+        } else {
+            "<span class=""prev-next-link prev-next-prev"" aria-hidden=""true""></span>"
+        }
+        $nextHtml = if ($nextA) {
+            "<a href=""$($nextA.id).html"" class=""prev-next-link prev-next-next""><span class=""prev-next-label"">Next &rarr;</span><span class=""prev-next-title"">$([System.Net.WebUtility]::HtmlEncode($nextA.title))</span></a>"
+        } else {
+            "<span class=""prev-next-link prev-next-next"" aria-hidden=""true""></span>"
+        }
+        $prevNextHtml = "<nav class=""prev-next"" aria-label=""More in $cat"">$prevHtml$nextHtml</nav>"
+    }
+
     # Hero image
     $heroHtml = ''
     if ($a.heroImage) {
@@ -514,6 +562,7 @@ foreach ($a in $articles) {
     $lines.Add($headerHtml)
     $lines.Add($heroHtml)
     $lines.Add('<main class="article-wrap">')
+    $lines.Add($breadcrumbHtml)
     $lines.Add("  <div class=""article-eyebrow"">")
     $lines.Add("    <span class=""article-cat"">$cat</span>")
     $lines.Add('    <span class="article-dot"></span>')
@@ -532,6 +581,7 @@ foreach ($a in $articles) {
         $lines.Add("  <div class=""article-tags"">$tagsHtml</div>")
     }
     $lines.Add($shareHtml)
+    $lines.Add($prevNextHtml)
     $lines.Add('</main>')
     if ($relatedHtml) { $lines.Add($relatedHtml) }
     $lines.Add((Get-Footer))
@@ -565,6 +615,7 @@ foreach ($cat in $config.categories) {
     $lines.Add('<div class="progress-bar" role="progressbar" aria-hidden="true"></div>')
     $lines.Add((Get-TopBar))
     $lines.Add($headerHtml)
+    $lines.Add("<nav class=""breadcrumb"" aria-label=""Breadcrumb"" style=""padding:0 var(--gutter);max-width:var(--max-w);margin:1.5rem auto 0;""><a href=""index.html"">Home</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><span class=""breadcrumb-current"">$($cat.label)</span></nav>")
     $lines.Add('<div class="section-label">')
     $lines.Add("  <h1 class=""section-label-en"">$($cat.label)</h1>")
     $lines.Add('  <div class="section-label-line"></div>')
