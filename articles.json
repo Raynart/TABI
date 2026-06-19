@@ -2245,9 +2245,9 @@
         "publishedAt":  "2026-05-30",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/sumo-tournament-guide.webp",
         "heroImageAlt":  "Two sumo wrestlers facing off in the dohyo ring at Ryogoku Kokugikan",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2309,9 +2309,9 @@
         "publishedAt":  "2026-05-29",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-onsen-etiquette.webp",
         "heroImageAlt":  "Outdoor rotenburo onsen with steam rising over a stone tub surrounded by bamboo",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2374,9 +2374,9 @@
         "publishedAt":  "2026-05-28",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
-        "heroImageAlt":  "Don Quijote store exterior at night with colourful signs in Tokyo",
-        "heroImageCredit":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/donki-shopping-guide.webp",
+        "heroImageAlt":  "A colorful Japanese discount store exterior at night with bright signs in Tokyo",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2439,9 +2439,9 @@
         "publishedAt":  "2026-05-27",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/hiroshima-guide.webp",
         "heroImageAlt":  "The Genbaku Dome atomic bomb memorial in Hiroshima beside the river",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2497,9 +2497,9 @@
         "publishedAt":  "2026-05-26",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/autumn-foliage-japan.webp",
         "heroImageAlt":  "Maple trees in full autumn colour reflected in a garden pond in Kyoto",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2561,9 +2561,9 @@
         "publishedAt":  "2026-05-25",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/beppu-onsen-guide.webp",
         "heroImageAlt":  "Blue-green geothermal pool steaming at Umi Jigoku in Beppu",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2619,9 +2619,9 @@
         "publishedAt":  "2026-05-24",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
-        "heroImageAlt":  "Rows of colourful MT washi tape rolls and stationery at a Japanese stationery shop",
-        "heroImageCredit":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-stationery-guide.webp",
+        "heroImageAlt":  "Rows of colorful washi tape rolls and stationery at a Japanese stationery shop",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2684,9 +2684,9 @@
         "publishedAt":  "2026-05-23",
         "updatedAt":  "",
         "readingTime":  4,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/sushi-counter-guide.webp",
         "heroImageAlt":  "A sushi chef preparing nigiri behind a counter with fresh fish displayed in a glass case",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2743,9 +2743,9 @@
         "publishedAt":  "2026-05-22",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/nara-day-trip.webp",
         "heroImageAlt":  "Sika deer roaming free in Nara Park with Todai-ji temple visible through the trees",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -3283,6 +3283,9 @@
                  ],
         "publishedAt":  "2026-05-28",
         "readingTime":  8,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/hidden-shrines-kyoto.webp",
+        "heroImageAlt":  "A quiet moss-covered shrine path in Kyoto lined with stone lanterns",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
