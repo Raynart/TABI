@@ -2801,9 +2801,9 @@
         "publishedAt":  "2026-05-21",
         "updatedAt":  "",
         "readingTime":  4,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/golden-week-avoid.webp",
         "heroImageAlt":  "Crowded hanami cherry blossom viewing in Ueno Park during Golden Week",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2859,9 +2859,9 @@
         "publishedAt":  "2026-05-20",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-sake-guide.webp",
         "heroImageAlt":  "Rows of sake bottles at a specialist sake shop in Japan",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2923,9 +2923,9 @@
         "publishedAt":  "2026-05-19",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/hokkaido-summer-guide.webp",
         "heroImageAlt":  "Lavender fields in full bloom at Farm Tomita in Furano, Hokkaido",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -2987,9 +2987,9 @@
         "publishedAt":  "2026-05-18",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/koenji-shimokitazawa.webp",
         "heroImageAlt":  "Narrow street in Shimokitazawa lined with vintage clothing shops and cafes",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -3045,9 +3045,9 @@
         "publishedAt":  "2026-05-17",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/wagyu-guide.webp",
         "heroImageAlt":  "Thinly sliced wagyu beef with visible marbling on a wooden board",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -3103,9 +3103,9 @@
         "publishedAt":  "2026-05-16",
         "updatedAt":  "",
         "readingTime":  4,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-vending-machines.webp",
         "heroImageAlt":  "A row of colourful Japanese vending machines on a city street at night",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -3167,9 +3167,9 @@
         "publishedAt":  "2026-05-15",
         "updatedAt":  "",
         "readingTime":  5,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/tokyo-day-trips.webp",
         "heroImageAlt":  "Kurazukuri Street in Kawagoe with traditional clay-walled Edo-period storehouses",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -3225,9 +3225,9 @@
         "publishedAt":  "2026-05-14",
         "updatedAt":  "",
         "readingTime":  4,
-        "heroImage":  "",
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-gift-omiyage.webp",
         "heroImageAlt":  "Beautifully packaged Japanese confectionery boxes displayed at a station gift shop",
-        "heroImageCredit":  "",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false,
         "affiliateLinks":  [
 
@@ -3301,6 +3301,9 @@
                  ],
         "publishedAt":  "2026-05-18",
         "readingTime":  12,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/10-days-japan-no-tourist-traps.webp",
+        "heroImageAlt":  "A quiet local train platform in Japan at sunrise during a slow travel itinerary",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
@@ -3315,6 +3318,9 @@
                  ],
         "publishedAt":  "2026-05-15",
         "readingTime":  9,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/mt-fuji-route-guide.webp",
+        "heroImageAlt":  "A rocky Mt. Fuji climbing trail before sunrise with hikers silhouetted in the distance",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
