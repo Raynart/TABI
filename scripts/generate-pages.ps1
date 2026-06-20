@@ -9,6 +9,7 @@ $articles = Get-Content "$root\articles.json" -Raw -Encoding UTF8 | ConvertFrom-
 $siteUrl  = $config.siteUrl
 $siteName = $config.siteName
 $tagline  = $config.tagline
+$defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 1).heroImage)
 
 # Ensure output directories exist
 @('articles','categories','tags') | ForEach-Object {
@@ -31,6 +32,7 @@ function Get-FontLink {
 function Get-Head {
     param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '')
     $font = Get-FontLink
+    $ogImage = if ($og) { $og } else { $defaultOgImage }
 
     # GA4 — only emitted when googleAnalyticsId is set
     $gaScript = ''
@@ -51,13 +53,13 @@ function Get-Head {
   <meta name="description" content="$desc">
   <meta property="og:title" content="$title">
   <meta property="og:description" content="$desc">
-  <meta property="og:image" content="$og">
+  <meta property="og:image" content="$ogImage">
   <meta property="og:url" content="$canonical">
   <meta property="og:type" content="$ogType">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="$title">
   <meta name="twitter:description" content="$desc">
-  <meta name="twitter:image" content="$og">
+  <meta name="twitter:image" content="$ogImage">
   <link rel="canonical" href="$canonical">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="manifest" href="manifest.json">
@@ -592,11 +594,16 @@ Write-Host "Generated $($articles.Count) article pages"
 
 # ===== CATEGORY PAGES =====
 Write-Host "Generating category pages..."
+$validCategoryFiles = @($config.categories | ForEach-Object { "$($_.slug).html" })
+Get-ChildItem "$root\categories" -Filter *.html | Where-Object { $validCategoryFiles -notcontains $_.Name } | ForEach-Object {
+    Remove-Item -LiteralPath $_.FullName
+}
 foreach ($cat in $config.categories) {
     $catArticles = $articles | Where-Object { $_.category -eq $cat.slug } | Sort-Object { $_.publishedAt } -Descending
     $canonical = "$siteUrl/categories/$($cat.slug).html"
     $catBreadcrumb = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $cat.label)"",""item"":""$canonical""}]}"
-    $headHtml  = Get-Head "$($cat.label) &mdash; $siteName" "Browse all $($cat.label) articles on $siteName." '' $canonical 'website' $catBreadcrumb
+    $catOgImage = (($catArticles | Where-Object { $_.heroImage } | Select-Object -First 1).heroImage)
+    $headHtml  = Get-Head "$($cat.label) &mdash; $siteName" "Browse all $($cat.label) articles on $siteName." $catOgImage $canonical 'website' $catBreadcrumb
     $headerHtml = Get-Header $cat.slug
 
     $cardsHtml = ''
@@ -632,13 +639,19 @@ foreach ($cat in $config.categories) {
 
 # ===== TAG PAGES =====
 Write-Host "Generating tag pages..."
-# Only generate pages for the 15 canonical tags defined in site.config.json
-$allTags = $config.tags
+# Generate pages for configured tags and every tag currently used by articles.
+$articleTags = @($articles | ForEach-Object { if ($_.tags) { $_.tags } })
+$allTags = @($config.tags + $articleTags | Where-Object { $_ } | Sort-Object -Unique)
+$validTagFiles = @($allTags | ForEach-Object { "$_.html" })
+Get-ChildItem "$root\tags" -Filter *.html | Where-Object { $validTagFiles -notcontains $_.Name } | ForEach-Object {
+    Remove-Item -LiteralPath $_.FullName
+}
 foreach ($tag in $allTags) {
     $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { $_.publishedAt } -Descending
     $canonical = "$siteUrl/tags/$tag.html"
     $tagBreadcrumb = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""#$tag"",""item"":""$canonical""}]}"
-    $headHtml  = Get-Head "#$tag &mdash; $siteName" "Articles tagged $tag on $siteName." '' $canonical 'website' $tagBreadcrumb
+    $tagOgImage = (($tagArticles | Where-Object { $_.heroImage } | Select-Object -First 1).heroImage)
+    $headHtml  = Get-Head "#$tag &mdash; $siteName" "Articles tagged $tag on $siteName." $tagOgImage $canonical 'website' $tagBreadcrumb
     $headerHtml = Get-Header
 
     $cardsHtml = ''
