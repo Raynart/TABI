@@ -3335,6 +3335,9 @@
                  ],
         "publishedAt":  "2026-05-12",
         "readingTime":  7,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/osaka-3-days-itinerary.webp",
+        "heroImageAlt":  "A lively Osaka evening food street with warm lanterns and small restaurants",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
@@ -3350,6 +3353,9 @@
                  ],
         "publishedAt":  "2026-05-10",
         "readingTime":  10,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/yakushima-ancient-forest.webp",
+        "heroImageAlt":  "A misty ancient cedar forest path in Yakushima covered with moss",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
@@ -3364,6 +3370,9 @@
                  ],
         "publishedAt":  "2026-05-08",
         "readingTime":  6,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-menu-guide.webp",
+        "heroImageAlt":  "A Japanese restaurant menu on a table with chopsticks and a bowl of noodles nearby",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
@@ -3378,6 +3387,9 @@
                  ],
         "publishedAt":  "2026-05-06",
         "readingTime":  7,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/wabi-sabi-explained.webp",
+        "heroImageAlt":  "A weathered ceramic vase in a quiet Japanese room with soft garden light",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
@@ -3393,6 +3405,9 @@
                  ],
         "publishedAt":  "2026-05-02",
         "readingTime":  8,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/kintsugi-art-of-gold.webp",
+        "heroImageAlt":  "A repaired ceramic kintsugi bowl with gold seams on an artisan worktable",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
@@ -3409,6 +3424,9 @@
                  ],
         "publishedAt":  "2026-04-25",
         "readingTime":  6,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/hanami-2026-guide.webp",
+        "heroImageAlt":  "A peaceful riverside hanami picnic scene under cherry blossoms in Japan",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  false
     },
     {
@@ -3424,6 +3442,9 @@
                  ],
         "publishedAt":  "2026-04-20",
         "readingTime":  9,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-kitchen-knives.webp",
+        "heroImageAlt":  "Japanese kitchen knives displayed on a dark wooden shop counter",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  true
     },
     {
@@ -3439,6 +3460,9 @@
                  ],
         "publishedAt":  "2026-04-15",
         "readingTime":  6,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/buying-matcha-guide.webp",
+        "heroImageAlt":  "Matcha powder in ceramic bowls with a bamboo whisk and tea scoop",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  true
     },
     {
@@ -3454,6 +3478,9 @@
                  ],
         "publishedAt":  "2026-04-10",
         "readingTime":  7,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/japanese-drugstore-finds.webp",
+        "heroImageAlt":  "Japanese drugstore skincare and travel products arranged neatly on bright shelves",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  true
     },
     {
@@ -3469,6 +3496,9 @@
                  ],
         "publishedAt":  "2026-04-05",
         "readingTime":  6,
+        "heroImage":  "https://raynart.github.io/TABI/assets/images/authentic-yukata-tokyo.webp",
+        "heroImageAlt":  "Folded cotton yukata fabrics and obi sashes displayed in a Tokyo shop",
+        "heroImageCredit":  "AI-generated image by OpenAI",
         "affiliate":  true
     }
 ]
