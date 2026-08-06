@@ -27,10 +27,29 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Uploading '.' published the whole repository, including the generator
+      # scripts, design mockups and agent instruction files. Stage only what the
+      # site actually serves.
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude '_site/' \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.claude/' \
+            --exclude 'scripts/' \
+            --exclude 'docs/' \
+            --exclude 'new-articles*.json' \
+            --exclude 'CLAUDE.md' \
+            --exclude 'AGENTS.md' \
+            --exclude 'README.md' \
+            ./ _site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment

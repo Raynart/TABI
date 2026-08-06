@@ -44,7 +44,7 @@ $remap = @{
 }
 
 # ── load & remap existing articles ──────────────────────────────────────────
-$existing = Get-Content $articlesPath -Raw | ConvertFrom-Json
+$existing = Get-Content $articlesPath -Raw -Encoding UTF8 | ConvertFrom-Json
 foreach ($a in $existing) {
     if ($remap.ContainsKey($a.id)) {
         $a.category = $remap[$a.id]
@@ -52,7 +52,7 @@ foreach ($a in $existing) {
 }
 
 # ── load new articles ────────────────────────────────────────────────────────
-$newArticles = Get-Content $newPath -Raw | ConvertFrom-Json
+$newArticles = Get-Content $newPath -Raw -Encoding UTF8 | ConvertFrom-Json
 
 # ── merge: new articles first (newest dates) ─────────────────────────────────
 $all = @($newArticles) + @($existing)

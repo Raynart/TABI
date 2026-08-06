@@ -4,8 +4,8 @@ $root = Split-Path $PSScriptRoot -Parent
 $articlesPath = Join-Path $root 'articles.json'
 $newPath      = Join-Path $root 'new-articles-2.json'
 
-$existing    = Get-Content $articlesPath -Raw | ConvertFrom-Json
-$newArticles = Get-Content $newPath      -Raw | ConvertFrom-Json
+$existing    = Get-Content $articlesPath -Raw -Encoding UTF8 | ConvertFrom-Json
+$newArticles = Get-Content $newPath      -Raw -Encoding UTF8 | ConvertFrom-Json
 
 $all = @($newArticles) + @($existing)
 

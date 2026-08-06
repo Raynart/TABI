@@ -6,16 +6,50 @@ $root     = Split-Path $PSScriptRoot -Parent
 $config   = Get-Content "$root\site.config.json"  -Raw -Encoding UTF8 | ConvertFrom-Json
 $articles = Get-Content "$root\articles.json" -Raw -Encoding UTF8 | ConvertFrom-Json
 
-$siteUrl  = $config.siteUrl
+# Every page carries <base href="$siteUrl/">, so a build made with the production
+# URL cannot be previewed locally -- the browser would fetch styles.css, script.js
+# and every link from the live site. Set TABI_SITE_URL (e.g. http://localhost:8080)
+# to produce a build that runs against a local server. Unset for real builds.
+$siteUrl  = if ($env:TABI_SITE_URL) { $env:TABI_SITE_URL.TrimEnd('/') } else { $config.siteUrl }
 $siteName = $config.siteName
 $tagline  = $config.tagline
 $defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 1).heroImage)
+
+$script:ImageSizeCache = @{}
+
+# Appended to image URLs so a change forces browsers past a stale cached copy.
+# Bump this when image files are replaced in place.
 $imageVersion = '20260806-list-images'
 
 # Ensure output directories exist
 @('articles','categories','tags') | ForEach-Object {
     $d = "$root\$_"
     if (-not (Test-Path $d)) { New-Item -ItemType Directory $d | Out-Null }
+}
+
+# ===== VALIDATE ARTICLE DATA =====
+# Ad-hoc tags and categories used to slip in silently and produce thin one-article
+# tag pages, or pages nothing linked to. Fail the build instead.
+$validCategories = @($config.categories | ForEach-Object { $_.slug })
+$validTags       = @($config.tags)
+$dataErrors      = [System.Collections.Generic.List[string]]::new()
+
+foreach ($a in $articles) {
+    if ($validCategories -notcontains $a.category) {
+        $dataErrors.Add("$($a.id): unknown category '$($a.category)'")
+    }
+    foreach ($t in @($a.tags)) {
+        if ($validTags -notcontains $t) {
+            $dataErrors.Add("$($a.id): unknown tag '$t'")
+        }
+    }
+    if (-not $a.excerpt)  { $dataErrors.Add("$($a.id): empty excerpt") }
+    if (-not $a.sections) { $dataErrors.Add("$($a.id): no body sections") }
+}
+
+if ($dataErrors.Count -gt 0) {
+    $dataErrors | ForEach-Object { Write-Host "  DATA ERROR: $_" -ForegroundColor Red }
+    throw "articles.json failed validation ($($dataErrors.Count) problem(s)). Fix articles.json or site.config.json and re-run."
 }
 
 # ===== HELPERS =====
@@ -26,30 +60,197 @@ function Escape-Json {
     return ($str -replace '\\', '\\' -replace '"', '\"' -replace "`n", '\n' -replace "`r", '' -replace "`t", '\t')
 }
 
+function Get-ImageSize {
+    # Reads a WebP file's intrinsic size so <img> can carry width/height and the
+    # browser can reserve space before the bytes arrive (no layout shift).
+    # heroImage holds an absolute site URL; map it back to the file on disk.
+    param($url)
+    if (-not $url) { return $null }
+    # heroImage values are written with the production URL, which stays put even in
+    # a local preview build, so match against both.
+    $prefix = @("$($config.siteUrl)/", "$siteUrl/") | Where-Object { $url.StartsWith($_) } | Select-Object -First 1
+    if (-not $prefix) { return $null }   # external image, size unknown
+    $path = Join-Path $root ($url.Substring($prefix.Length) -replace '/', '\')
+    if ($script:ImageSizeCache.ContainsKey($path)) { return $script:ImageSizeCache[$path] }
+
+    $size = $null
+    if (Test-Path $path) {
+        $b = New-Object byte[] 32
+        $fs = [System.IO.File]::OpenRead($path)
+        try { $read = $fs.Read($b, 0, 32) } finally { $fs.Dispose() }
+        if ($read -ge 30 -and [System.Text.Encoding]::ASCII.GetString($b, 0, 4) -eq 'RIFF') {
+            switch ([System.Text.Encoding]::ASCII.GetString($b, 12, 4)) {
+                'VP8 ' { $size = @{ w = ([BitConverter]::ToUInt16($b, 26) -band 0x3FFF)
+                                    h = ([BitConverter]::ToUInt16($b, 28) -band 0x3FFF) } }
+                'VP8L' { $n = [BitConverter]::ToUInt32($b, 21)
+                         $size = @{ w = (($n -band 0x3FFF) + 1)
+                                    h = ((($n -shr 14) -band 0x3FFF) + 1) } }
+                'VP8X' { $size = @{ w = ($b[24] + $b[25] * 256 + $b[26] * 65536 + 1)
+                                    h = ($b[27] + $b[28] * 256 + $b[29] * 65536 + 1) } }
+            }
+        }
+    }
+    $script:ImageSizeCache[$path] = $size
+    return $size
+}
+
 function Get-ImageSrc {
+    # Adds the cache-busting query to locally hosted images.
     param($url)
     if (-not $url) { return '' }
-    if ($url -like "$siteUrl/assets/images/*" -or $url -like 'assets/images/*') {
+    if ($url -like "$($config.siteUrl)/assets/images/*" -or $url -like "$siteUrl/assets/images/*" -or $url -like 'assets/images/*') {
         $sep = if ($url.Contains('?')) { '&' } else { '?' }
         return "$url${sep}v=$imageVersion"
     }
     return $url
 }
 
+function Get-ImageDimAttr {
+    param($url)
+    $d = Get-ImageSize $url
+    if ($d) { return " width=""$($d.w)"" height=""$($d.h)""" }
+    return ''
+}
+
+function Get-ImageSrcset {
+    # Cards display at roughly 400-850 CSS px but the source images are ~1670px wide.
+    # An 800w variant sits beside each original (see scripts/make-image-variants.py),
+    # so let the browser pick. Falls back to no srcset if the variant is missing.
+    param($url, $sizes)
+    if (-not $url -or -not $url.EndsWith('.webp')) { return '' }
+    $small = $url.Substring(0, $url.Length - 5) + '-800.webp'
+    $dim   = Get-ImageSize $small
+    if (-not $dim) { return '' }
+    $full  = Get-ImageSize $url
+    if (-not $full) { return '' }
+    return " srcset=""$(Get-ImageSrc $small) $($dim.w)w, $(Get-ImageSrc $url) $($full.w)w"" sizes=""$sizes"""
+}
+
+function Write-ListingPages {
+    # Writes a card listing across as many real pages as it needs, instead of
+    # emitting every card and hiding the overflow with JavaScript. Page 2 onward
+    # get their own URL, so they are linkable and crawlable, and the listing still
+    # works with scripting turned off.
+    param(
+        $items,           # articles, already sorted
+        $slugBase,        # e.g. 'categories/eat-drink' or 'articles'
+        $heading,
+        $description,
+        $kanji = '',
+        $activeCat = '',
+        $perPage = 12
+    )
+    $total     = @($items).Count
+    $pageCount = [Math]::Max(1, [Math]::Ceiling($total / [double]$perPage))
+
+    for ($pageNo = 1; $pageNo -le $pageCount; $pageNo++) {
+        $file      = if ($pageNo -eq 1) { "$slugBase.html" } else { "$slugBase-$pageNo.html" }
+        $canonical = "$siteUrl/$file"
+        $pageItems = @($items) | Select-Object -Skip (($pageNo - 1) * $perPage) -First $perPage
+
+        # rel=prev/next tell crawlers these pages are one sequence.
+        $extra = ''
+        if ($pageNo -gt 1) {
+            $prevFile = if ($pageNo -eq 2) { "$slugBase.html" } else { "$slugBase-$($pageNo - 1).html" }
+            $extra += "  <link rel=""prev"" href=""$siteUrl/$prevFile"">`n"
+        }
+        if ($pageNo -lt $pageCount) {
+            $extra += "  <link rel=""next"" href=""$siteUrl/$slugBase-$($pageNo + 1).html"">`n"
+        }
+
+        $suffix    = if ($pageNo -gt 1) { " &mdash; Page $pageNo" } else { '' }
+        $pageDesc  = if ($pageNo -gt 1) { "$description Page $pageNo of $pageCount." } else { $description }
+        $ogImage   = ((@($pageItems) | Where-Object { $_.heroImage } | Select-Object -First 1).heroImage)
+
+        $itemList = ''
+        $pos = 1
+        foreach ($a in $pageItems) {
+            if ($itemList) { $itemList += ',' }
+            $itemList += "{""@type"":""ListItem"",""position"":$pos,""url"":""$siteUrl/articles/$($a.id).html"",""name"":""$(Escape-Json $a.title)""}"
+            $pos++
+        }
+        $schema = "{""@context"":""https://schema.org"",""@type"":""CollectionPage"",""name"":""$(Escape-Json $heading)"",""url"":""$canonical"",""mainEntity"":{""@type"":""ItemList"",""itemListElement"":[$itemList]}}"
+        $crumb  = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $heading)"",""item"":""$canonical""}]}"
+
+        $headHtml = Get-Head "$heading$suffix &mdash; $siteName" $pageDesc $ogImage $canonical 'website' "$schema`n$crumb" $extra
+
+        $cardsHtml = ''
+        $isFirst = ($pageNo -eq 1)
+        foreach ($a in $pageItems) {
+            $size = if ($isFirst) { 'main'; $isFirst = $false } else { 'sub' }
+            $cardsHtml += Get-ArticleCard $a $size
+        }
+        if (-not $cardsHtml) {
+            $cardsHtml = '<p style="padding:48px 32px;color:var(--mist);">No articles yet. Check back soon.</p>'
+        }
+
+        $kanjiHtml = if ($kanji) { "  <span class=""section-label-jp"" aria-hidden=""true"">$kanji</span>`n" } else { '' }
+
+        $lines = [System.Collections.Generic.List[string]]::new()
+        $lines.Add($headHtml)
+        $lines.Add('<body>')
+        $lines.Add('<div class="progress-bar" aria-hidden="true"></div>')
+        $lines.Add((Get-TopBar))
+        $lines.Add((Get-Header $activeCat))
+        $lines.Add('<main id="main">')
+        $lines.Add("<nav class=""breadcrumb"" aria-label=""Breadcrumb"" style=""padding:0 var(--pad-x);max-width:var(--max-w);margin:1.5rem auto 0;""><a href=""index.html"">Home</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><span class=""breadcrumb-current"">$heading</span></nav>")
+        $lines.Add('<div class="section-label">')
+        $lines.Add($kanjiHtml.TrimEnd())
+        $lines.Add("  <h1 class=""section-label-en"">$heading</h1>")
+        $lines.Add('  <div class="section-label-line"></div>')
+        $lines.Add("  <span style=""font-size:0.78rem;color:var(--mist);"">$total articles</span>")
+        $lines.Add('</div>')
+        $lines.Add('<div class="editorial-grid">')
+        $lines.Add($cardsHtml)
+        $lines.Add('</div>')
+
+        if ($pageCount -gt 1) {
+            $pg = [System.Collections.Generic.List[string]]::new()
+            $pg.Add('<nav class="pagination" aria-label="Pagination">')
+            for ($i = 1; $i -le $pageCount; $i++) {
+                $href = if ($i -eq 1) { "$slugBase.html" } else { "$slugBase-$i.html" }
+                if ($i -eq $pageNo) {
+                    $pg.Add("  <a class=""pg-btn active"" href=""$href"" aria-current=""page"" aria-label=""Page $i"">$i</a>")
+                } else {
+                    $pg.Add("  <a class=""pg-btn"" href=""$href"" aria-label=""Page $i"">$i</a>")
+                }
+            }
+            $pg.Add('</nav>')
+            $lines.Add(($pg -join "`n"))
+        }
+
+        $lines.Add('</main>')
+        $lines.Add((Get-Footer))
+
+        $outPath = Join-Path $root ($file -replace '/', '\')
+        [System.IO.File]::WriteAllText($outPath, ($lines -join "`n"), (New-Object System.Text.UTF8Encoding($false)))
+    }
+    return $pageCount
+}
+
 function Get-FontLink {
-    return '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">'
+    # Noto Sans 700 is requested because styles.css uses font-weight:700 on var(--sans);
+    # without it the browser synthesises a bold, which renders noticeably worse.
+    $href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap'
+    # Loaded with media="print" and switched to "all" on load, so the font CSS does
+    # not block the first render. display=swap already means text paints in the
+    # fallback face first, so this costs nothing visually and removes a round trip.
+    return @"
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="$href" media="print" onload="this.media='all';this.onload=null"><noscript><link rel="stylesheet" href="$href"></noscript>
+"@
 }
 
 function Get-Head {
-    param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '')
+    param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '', $extraHead = '')
     $font = Get-FontLink
     $ogImage = if ($og) { $og } else { $defaultOgImage }
 
-    # GA4 — only emitted when googleAnalyticsId is set
+    # GA4 is only configured here; script.js loads it after the visitor consents.
+    # Loading the tag directly in <head> would run analytics before the cookie
+    # banner was answered, which is exactly what the banner is supposed to prevent.
     $gaScript = ''
     if ($config.googleAnalyticsId) {
-        $gaId = $config.googleAnalyticsId
-        $gaScript = "  <script async src=""https://www.googletagmanager.com/gtag/js?id=$gaId""></script>`n  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','$gaId');</script>"
+        $gaScript = "  <script>window.TABI_GA_ID='$($config.googleAnalyticsId)';</script>"
     }
 
     return @"
@@ -76,7 +277,7 @@ function Get-Head {
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
   <link rel="alternate" type="application/rss+xml" title="$siteName RSS" href="rss.xml">
-  $font
+$extraHead  $font
 $gaScript
 $(if ($jsonLd) { ($jsonLd -split "`n" | Where-Object { $_.Trim() } | ForEach-Object { "  <script type=""application/ld+json"">$($_.Trim())</script>" }) -join "`n" })
 </head>
@@ -95,11 +296,14 @@ function Get-Header {
         $navItems += "<li><a href=""categories/$($cat.slug).html""$active>$($cat.nav)</a></li>"
     }
     return @"
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <ul class="header-nav" role="navigation" aria-label="Main navigation">
-      $navItems
-    </ul>
+    <nav class="header-nav-wrap" aria-label="Main navigation">
+      <ul class="header-nav">
+        $navItems
+      </ul>
+    </nav>
     <a href="index.html" class="site-logo" aria-label="$siteName home">
       <span class="logo-en">$siteName<span class="dot">.</span></span>
       <span class="logo-jp">&#26053; &#8212; $tagline</span>
@@ -137,6 +341,22 @@ function Get-Footer {
     $catLinks = ''
     foreach ($cat in $config.categories) {
         $catLinks += "<li><a href=""categories/$($cat.slug).html"">$($cat.label)</a></li>"
+    }
+
+    # Only ask for cookie consent when there is actually something to consent to.
+    # With no analytics ID configured the site sets no cookies at all, so the
+    # banner was asking permission for something that never happened.
+    $gdprBanner = ''
+    if ($config.googleAnalyticsId) {
+        $gdprBanner = @'
+<div class="gdpr-banner" id="gdpr-banner">
+  <p class="gdpr-text">We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="gdpr-actions">
+    <button class="gdpr-btn gdpr-decline" id="gdpr-decline">Decline</button>
+    <button class="gdpr-btn gdpr-accept" id="gdpr-accept">Accept</button>
+  </div>
+</div>
+'@
     }
     return @"
 <footer class="site-footer">
@@ -180,22 +400,17 @@ function Get-Footer {
   </div>
 </footer>
 <button class="back-top" aria-label="Back to top">&#8593;</button>
-<div class="search-overlay" id="search-overlay">
-  <div class="search-modal">
+<div class="search-overlay" id="search-overlay" aria-hidden="true" inert>
+  <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <h2 class="visually-hidden" id="search-title">Search</h2>
     <button class="search-close" id="search-close" aria-label="Close search">&times;</button>
     <input class="search-input" id="search-input" type="search" placeholder="Search Japan guides&#8230;" autocomplete="off" aria-label="Search">
     <p class="search-hint">Try &#8220;kyoto&#8221;, &#8220;budget&#8221;, &#8220;food&#8221;</p>
-    <div class="search-results" id="search-results"></div>
+    <div class="search-results" id="search-results" role="region" aria-live="polite" aria-label="Search results"></div>
   </div>
 </div>
-<div class="gdpr-banner" id="gdpr-banner">
-  <p class="gdpr-text">We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.</p>
-  <div class="gdpr-actions">
-    <button class="gdpr-btn gdpr-decline" id="gdpr-decline">Decline</button>
-    <button class="gdpr-btn gdpr-accept" id="gdpr-accept">Accept</button>
-  </div>
-</div>
-<script src="script.js"></script>
+$gdprBanner
+<script src="script.js" defer></script>
 </body></html>
 "@
 }
@@ -236,11 +451,10 @@ function Get-ArticleCard {
     $date  = Format-Date $article.publishedAt
     $title = [System.Net.WebUtility]::HtmlEncode($article.title)
     $img   = if ($article.heroImage) { $article.heroImage } else { '' }
-    $imgSrc = if ($img) { Get-ImageSrc $img } else { '' }
     $strip = if ($size -eq 'main') { '<div class="ed-main-strip">&#29305;&#38598;</div>' } else { '' }
     $fb    = Get-CardFallback $article.category
-    $imgTag = if ($imgSrc) {
-        "<img src=""$imgSrc"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"">"
+    $imgTag = if ($img) {
+        "<img src=""$(Get-ImageSrc $img)"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $img '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px')$(Get-ImageDimAttr $img)>"
     } else {
         "<div class=""ed-img ed-img-fallback"" style=""background:$($fb.grad);""><span class=""fallback-icon"">$($fb.icon)</span></div>"
     }
@@ -271,7 +485,6 @@ $cultureArticles = $articles | Where-Object { $_.category -eq 'culture' } | Sort
 $buyArticles = $articles | Where-Object { $_.category -eq 'things-to-buy' } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 4
 
 $heroImg = if ($heroArticle -and $heroArticle.heroImage) { $heroArticle.heroImage } else { '' }
-$heroImgSrc = if ($heroImg) { Get-ImageSrc $heroImg } else { '' }
 $heroTitle = if ($heroArticle) { [System.Net.WebUtility]::HtmlEncode($heroArticle.title) } else { 'Welcome to TABI' }
 $heroDesc  = if ($heroArticle -and $heroArticle.excerpt) { [System.Net.WebUtility]::HtmlEncode($heroArticle.excerpt) } elseif ($heroArticle -and $heroArticle.summary) { [System.Net.WebUtility]::HtmlEncode($heroArticle.summary) } else { 'Your guide to the real Japan.' }
 $heroCat   = if ($heroArticle) { Get-CategoryLabel $heroArticle.category } else { 'Travel Guide' }
@@ -292,8 +505,7 @@ foreach ($a in $cultureArticles) {
     $title = [System.Net.WebUtility]::HtmlEncode($a.title)
     $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
     $fb2   = Get-CardFallback $a.category
-    $imgSrc = if ($a.heroImage) { Get-ImageSrc $a.heroImage } else { '' }
-    $img   = if ($imgSrc) { "<img src=""$imgSrc"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
+    $img   = if ($a.heroImage) { "<img src=""$(Get-ImageSrc $a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $a.heroImage '(max-width: 768px) 100vw, 400px')$(Get-ImageDimAttr $a.heroImage) style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
     $numStr = $ci.ToString().PadLeft(2, '0')
     $cultureHtml += @"
 <a href="articles/$($a.id).html" class="culture-card">
@@ -335,9 +547,10 @@ $topBarHtml = Get-TopBar
 $indexLines = [System.Collections.Generic.List[string]]::new()
 $indexLines.Add($headHtml)
 $indexLines.Add('<body>')
-$indexLines.Add('<div class="progress-bar" role="progressbar" aria-hidden="true"></div>')
+$indexLines.Add('<div class="progress-bar" aria-hidden="true"></div>')
 $indexLines.Add($topBarHtml)
 $indexLines.Add($headerHtml)
+$indexLines.Add('<main id="main">')
 $indexLines.Add($tickerHtml)
 
 # Hero
@@ -346,8 +559,8 @@ $indexLines.Add('  <div class="hero-bg"></div>')
 $indexLines.Add('  <div class="hero-pattern"></div>')
 $indexLines.Add("  <div class=""hero-kanji"" aria-hidden=""true"">$heroKanji</div>")
 $indexLines.Add('  <div class="hero-line"></div>')
-if ($heroImgSrc) {
-    $indexLines.Add("  <img src=""$heroImgSrc"" alt=""$heroTitle"" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"">")
+if ($heroImg) {
+    $indexLines.Add("  <img src=""$(Get-ImageSrc $heroImg)"" alt="""" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"" fetchpriority=""high"" decoding=""async""$(Get-ImageDimAttr $heroImg)>")
 }
 $indexLines.Add('  <div class="hero-content">')
 $indexLines.Add('    <div class="hero-eyebrow">')
@@ -359,7 +572,7 @@ $indexLines.Add('    <div class="hero-actions">')
 if ($heroArticle) {
     $indexLines.Add("      <a href=""articles/$($heroArticle.id).html"" class=""hero-btn"">Read the Guide &nbsp;&rarr;</a>")
 }
-$indexLines.Add("      <a href=""categories/travel-guide.html"" class=""hero-btn-ghost"">Browse all guides</a>")
+$indexLines.Add("      <a href=""articles.html"" class=""hero-btn-ghost"">Browse all guides</a>")
 $indexLines.Add('    </div>')
 $indexLines.Add('  </div>')
 $indexLines.Add('  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><div class="scroll-hint-line"></div></div>')
@@ -371,7 +584,7 @@ if ($gridHtml) {
     $indexLines.Add('  <span class="section-label-jp" aria-hidden="true">&#26053;</span>')
     $indexLines.Add('  <h2 class="section-label-en">Travel Guide</h2>')
     $indexLines.Add('  <div class="section-label-line"></div>')
-    $indexLines.Add('  <a href="categories/travel-guide.html" class="section-label-link">All articles <span class="arrow">&rarr;</span></a>')
+    $indexLines.Add('  <a href="articles.html" class="section-label-link">All articles <span class="arrow">&rarr;</span></a>')
     $indexLines.Add('</div>')
     $indexLines.Add('<div class="editorial-grid">')
     $indexLines.Add($gridHtml)
@@ -438,8 +651,9 @@ $indexLines.Add('    </div>')
 $indexLines.Add('  </div>')
 $indexLines.Add('</div>')
 
+$indexLines.Add('</main>')
 $indexLines.Add($footerHtml)
-[System.IO.File]::WriteAllText("$root\index.html", ($indexLines -join "`n"), [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$root\index.html", ($indexLines -join "`n"), (New-Object System.Text.UTF8Encoding($false)))
 Write-Host "Generated index.html"
 
 # ===== ARTICLE PAGES =====
@@ -545,12 +759,12 @@ foreach ($a in $articles) {
         $prevA = if ($peerIdx -lt $peers.Count - 1) { $peers[$peerIdx + 1] } else { $null }  # older
         $nextA = if ($peerIdx -gt 0)                { $peers[$peerIdx - 1] } else { $null }  # newer
         $prevHtml = if ($prevA) {
-            "<a href=""$($prevA.id).html"" class=""prev-next-link prev-next-prev""><span class=""prev-next-label"">&larr; Previous</span><span class=""prev-next-title"">$([System.Net.WebUtility]::HtmlEncode($prevA.title))</span></a>"
+            "<a href=""articles/$($prevA.id).html"" class=""prev-next-link prev-next-prev""><span class=""prev-next-label"">&larr; Previous</span><span class=""prev-next-title"">$([System.Net.WebUtility]::HtmlEncode($prevA.title))</span></a>"
         } else {
             "<span class=""prev-next-link prev-next-prev"" aria-hidden=""true""></span>"
         }
         $nextHtml = if ($nextA) {
-            "<a href=""$($nextA.id).html"" class=""prev-next-link prev-next-next""><span class=""prev-next-label"">Next &rarr;</span><span class=""prev-next-title"">$([System.Net.WebUtility]::HtmlEncode($nextA.title))</span></a>"
+            "<a href=""articles/$($nextA.id).html"" class=""prev-next-link prev-next-next""><span class=""prev-next-label"">Next &rarr;</span><span class=""prev-next-title"">$([System.Net.WebUtility]::HtmlEncode($nextA.title))</span></a>"
         } else {
             "<span class=""prev-next-link prev-next-next"" aria-hidden=""true""></span>"
         }
@@ -561,10 +775,9 @@ foreach ($a in $articles) {
     $heroHtml = ''
     if ($a.heroImage) {
         $credit = if ($a.heroImageCredit) { "<span class=""img-credit"">Image: $([System.Net.WebUtility]::HtmlEncode($a.heroImageCredit))</span>" } else { '' }
-        $articleHeroSrc = Get-ImageSrc $a.heroImage
         $heroHtml = @"
 <div class="article-hero">
-  <img src="$articleHeroSrc" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager">
+  <img src="$(Get-ImageSrc $a.heroImage)" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager" fetchpriority="high" decoding="async"$(Get-ImageDimAttr $a.heroImage)>
   <div class="article-hero-overlay"></div>
   $credit
 </div>
@@ -574,11 +787,12 @@ foreach ($a in $articles) {
     $lines = [System.Collections.Generic.List[string]]::new()
     $lines.Add($headHtml)
     $lines.Add('<body>')
-    $lines.Add('<div class="progress-bar" role="progressbar" aria-hidden="true"></div>')
+    $lines.Add('<div class="progress-bar" aria-hidden="true"></div>')
     $lines.Add((Get-TopBar))
     $lines.Add($headerHtml)
+    $lines.Add('<main id="main">')
     $lines.Add($heroHtml)
-    $lines.Add('<main class="article-wrap">')
+    $lines.Add('<div class="article-wrap">')
     $lines.Add($breadcrumbHtml)
     $lines.Add("  <div class=""article-eyebrow"">")
     $lines.Add("    <span class=""article-cat cat--$($a.category)"">$cat</span>")
@@ -599,103 +813,69 @@ foreach ($a in $articles) {
     }
     $lines.Add($shareHtml)
     $lines.Add($prevNextHtml)
-    $lines.Add('</main>')
+    $lines.Add('</div>')
     if ($relatedHtml) { $lines.Add($relatedHtml) }
+    $lines.Add('</main>')
     $lines.Add((Get-Footer))
 
-    [System.IO.File]::WriteAllText("$root\articles\$($a.id).html", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText("$root\articles\$($a.id).html", ($lines -join "`n"), (New-Object System.Text.UTF8Encoding($false)))
 }
 Write-Host "Generated $($articles.Count) article pages"
 
 # ===== CATEGORY PAGES =====
 Write-Host "Generating category pages..."
-$validCategoryFiles = @($config.categories | ForEach-Object { "$($_.slug).html" })
+# Stale files, including page-2+ files from a run when a category was larger.
+$validCategoryFiles = @()
+foreach ($cat in $config.categories) {
+    $n = @($articles | Where-Object { $_.category -eq $cat.slug }).Count
+    $pages = [Math]::Max(1, [Math]::Ceiling($n / 12.0))
+    for ($i = 1; $i -le $pages; $i++) {
+        $validCategoryFiles += if ($i -eq 1) { "$($cat.slug).html" } else { "$($cat.slug)-$i.html" }
+    }
+}
 Get-ChildItem "$root\categories" -Filter *.html | Where-Object { $validCategoryFiles -notcontains $_.Name } | ForEach-Object {
     Remove-Item -LiteralPath $_.FullName
 }
+
 foreach ($cat in $config.categories) {
     $catArticles = $articles | Where-Object { $_.category -eq $cat.slug } | Sort-Object { $_.publishedAt } -Descending
-    $canonical = "$siteUrl/categories/$($cat.slug).html"
-    $catBreadcrumb = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $cat.label)"",""item"":""$canonical""}]}"
-    $catOgImage = (($catArticles | Where-Object { $_.heroImage } | Select-Object -First 1).heroImage)
-    $headHtml  = Get-Head "$($cat.label) &mdash; $siteName" "Browse all $($cat.label) articles on $siteName." $catOgImage $canonical 'website' $catBreadcrumb
-    $headerHtml = Get-Header $cat.slug
-
-    $cardsHtml = ''
-    $isFirst = $true
-    foreach ($a in $catArticles) {
-        $size = if ($isFirst) { 'main'; $isFirst = $false } else { 'sub' }
-        $cardsHtml += Get-ArticleCard $a $size
-    }
-    if (-not $cardsHtml) {
-        $cardsHtml = '<p style="padding:48px 32px;color:var(--mist);">No articles yet. Check back soon.</p>'
-    }
-
-    $lines = [System.Collections.Generic.List[string]]::new()
-    $lines.Add($headHtml)
-    $lines.Add('<body>')
-    $lines.Add('<div class="progress-bar" role="progressbar" aria-hidden="true"></div>')
-    $lines.Add((Get-TopBar))
-    $lines.Add($headerHtml)
-    $lines.Add("<nav class=""breadcrumb"" aria-label=""Breadcrumb"" style=""padding:0 var(--gutter);max-width:var(--max-w);margin:1.5rem auto 0;""><a href=""index.html"">Home</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><span class=""breadcrumb-current"">$($cat.label)</span></nav>")
-    $lines.Add('<div class="section-label">')
-    $lines.Add("  <h1 class=""section-label-en"">$($cat.label)</h1>")
-    $lines.Add('  <div class="section-label-line"></div>')
-    $lines.Add("  <span style=""font-size:0.78rem;color:var(--mist);"">$($catArticles.Count) articles</span>")
-    $lines.Add('</div>')
-    $lines.Add('<div class="editorial-grid" data-paginate="12">')
-    $lines.Add($cardsHtml)
-    $lines.Add('</div>')
-    $lines.Add((Get-Footer))
-
-    [System.IO.File]::WriteAllText("$root\categories\$($cat.slug).html", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
-    Write-Host "  Generated categories/$($cat.slug).html ($($catArticles.Count) articles)"
+    $n = Write-ListingPages $catArticles "categories/$($cat.slug)" $cat.label `
+        "Browse all $($cat.label) articles on $siteName." '' $cat.slug
+    Write-Host "  Generated categories/$($cat.slug).html ($(@($catArticles).Count) articles, $n page(s))"
 }
+
+# ===== ALL ARTICLES ARCHIVE =====
+# The homepage grid shows the 4 most recent articles regardless of category, so its
+# "All articles" link needs a real archive to point at. That link and the hero button
+# both used to point at a category page that does not exist.
+Write-Host "Generating articles.html..."
+$archiveArticles = $articles | Sort-Object { $_.publishedAt } -Descending
+Get-ChildItem $root -Filter 'articles-*.html' | ForEach-Object { Remove-Item -LiteralPath $_.FullName }
+$n = Write-ListingPages $archiveArticles 'articles' 'All Articles' `
+    "Every guide on $siteName - travelling, eating and living well in Japan." '&#26053;'
+Write-Host "  Generated articles.html ($(@($archiveArticles).Count) articles, $n page(s))"
 
 # ===== TAG PAGES =====
 Write-Host "Generating tag pages..."
 # Generate pages for configured tags and every tag currently used by articles.
 $articleTags = @($articles | ForEach-Object { if ($_.tags) { $_.tags } })
 $allTags = @($config.tags + $articleTags | Where-Object { $_ } | Sort-Object -Unique)
-$validTagFiles = @($allTags | ForEach-Object { "$_.html" })
+
+$validTagFiles = @()
+foreach ($tag in $allTags) {
+    $n = @($articles | Where-Object { $_.tags -and $_.tags -contains $tag }).Count
+    $pages = [Math]::Max(1, [Math]::Ceiling($n / 12.0))
+    for ($i = 1; $i -le $pages; $i++) {
+        $validTagFiles += if ($i -eq 1) { "$tag.html" } else { "$tag-$i.html" }
+    }
+}
 Get-ChildItem "$root\tags" -Filter *.html | Where-Object { $validTagFiles -notcontains $_.Name } | ForEach-Object {
     Remove-Item -LiteralPath $_.FullName
 }
+
 foreach ($tag in $allTags) {
     $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { $_.publishedAt } -Descending
-    $canonical = "$siteUrl/tags/$tag.html"
-    $tagBreadcrumb = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""#$tag"",""item"":""$canonical""}]}"
-    $tagOgImage = (($tagArticles | Where-Object { $_.heroImage } | Select-Object -First 1).heroImage)
-    $headHtml  = Get-Head "#$tag &mdash; $siteName" "Articles tagged $tag on $siteName." $tagOgImage $canonical 'website' $tagBreadcrumb
-    $headerHtml = Get-Header
-
-    $cardsHtml = ''
-    $isFirst = $true
-    foreach ($a in $tagArticles) {
-        $size = if ($isFirst) { 'main'; $isFirst = $false } else { 'sub' }
-        $cardsHtml += Get-ArticleCard $a $size
-    }
-    if (-not $cardsHtml) {
-        $cardsHtml = '<p style="padding:48px 32px;color:var(--mist);">No articles yet.</p>'
-    }
-
-    $lines = [System.Collections.Generic.List[string]]::new()
-    $lines.Add($headHtml)
-    $lines.Add('<body>')
-    $lines.Add('<div class="progress-bar" role="progressbar" aria-hidden="true"></div>')
-    $lines.Add((Get-TopBar))
-    $lines.Add($headerHtml)
-    $lines.Add('<div class="section-label">')
-    $lines.Add("  <h1 class=""section-label-en"">#$tag</h1>")
-    $lines.Add('  <div class="section-label-line"></div>')
-    $lines.Add("  <span style=""font-size:0.78rem;color:var(--mist);"">$($tagArticles.Count) articles</span>")
-    $lines.Add('</div>')
-    $lines.Add('<div class="editorial-grid" data-paginate="12">')
-    $lines.Add($cardsHtml)
-    $lines.Add('</div>')
-    $lines.Add((Get-Footer))
-
-    [System.IO.File]::WriteAllText("$root\tags\$tag.html", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
+    Write-ListingPages $tagArticles "tags/$tag" "#$tag" "Articles tagged $tag on $siteName." | Out-Null
 }
 Write-Host "Generated $($allTags.Count) tag pages"
 
@@ -707,14 +887,16 @@ $lines.Add($headHtml)
 $lines.Add('<body>')
 $lines.Add((Get-TopBar))
 $lines.Add($headerHtml)
+$lines.Add('<main id="main">')
 $lines.Add('<div style="max-width:640px;margin:120px auto;padding:0 32px;text-align:center;">')
 $lines.Add('  <p style="font-family:var(--serif);font-size:6rem;color:var(--border);line-height:1;">404</p>')
 $lines.Add('  <h1 style="font-family:var(--serif);font-size:1.8rem;margin:16px 0 12px;">Page not found</h1>')
 $lines.Add('  <p style="color:var(--mist);margin-bottom:32px;">The page you&#8217;re looking for doesn&#8217;t exist or has moved.</p>')
 $lines.Add('  <a href="index.html" style="display:inline-block;background:var(--accent);color:#fff;padding:12px 28px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">&larr; Back to Home</a>')
 $lines.Add('</div>')
+$lines.Add('</main>')
 $lines.Add((Get-Footer))
-[System.IO.File]::WriteAllText("$root\404.html", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$root\404.html", ($lines -join "`n"), (New-Object System.Text.UTF8Encoding($false)))
 Write-Host "Generated 404.html"
 
 Write-Host "`nAll pages generated successfully."
@@ -809,10 +991,10 @@ foreach ($page in $staticPages) {
     $lines = [System.Collections.Generic.List[string]]::new()
     $lines.Add($headHtml)
     $lines.Add('<body>')
-    $lines.Add('<div class="progress-bar" role="progressbar" aria-hidden="true"></div>')
+    $lines.Add('<div class="progress-bar" aria-hidden="true"></div>')
     $lines.Add((Get-TopBar))
     $lines.Add($headerHtml)
-    $lines.Add('<main style="max-width:720px;margin:80px auto 120px;padding:0 32px;">')
+    $lines.Add('<main id="main" style="max-width:720px;margin:80px auto 120px;padding:0 32px;">')
     $lines.Add("  <h1 style=""font-family:var(--serif);font-size:2rem;font-weight:300;margin-bottom:28px;letter-spacing:-0.01em;"">$($page.heading)</h1>")
     foreach ($line in $page.body) {
         $lines.Add("  $line")
@@ -820,6 +1002,6 @@ foreach ($page in $staticPages) {
     $lines.Add('</main>')
     $lines.Add((Get-Footer))
 
-    [System.IO.File]::WriteAllText("$root\$($page.file)", ($lines -join "`n"), [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText("$root\$($page.file)", ($lines -join "`n"), (New-Object System.Text.UTF8Encoding($false)))
     Write-Host "  Generated $($page.file)"
 }

@@ -283,5 +283,5 @@ foreach ($a in $articles) {
 }
 
 $json = $articles | ConvertTo-Json -Depth 10
-[System.IO.File]::WriteAllText("$root\articles.json", $json, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$root\articles.json", $json, (New-Object System.Text.UTF8Encoding($false)))
 Write-Host "Done. Converted $converted articles."

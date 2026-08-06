@@ -6,6 +6,13 @@
 (function () {
   'use strict';
 
+  /* Escape text before it goes into innerHTML. */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
   /* ===== TICKER: duplicate items for seamless loop ===== */
   function initTicker() {
     var track = document.getElementById('ticker-track');
@@ -55,22 +62,22 @@
 
   /* ===== MOBILE MENU ===== */
   function initMobileMenu() {
-    var btn  = document.querySelector('.header-menu-btn');
-    var nav  = document.querySelector('.header-nav');
+    var btn = document.querySelector('.header-menu-btn');
+    var nav = document.querySelector('.header-nav');
     if (!btn || !nav) return;
+    // Toggle a class rather than writing inline styles: inline display:flex used to
+    // survive a resize past the breakpoint, leaving the menu stuck open on desktop.
     btn.addEventListener('click', function () {
-      var isOpen = nav.style.display === 'flex';
-      nav.style.display = isOpen ? '' : 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.position = 'absolute';
-      nav.style.top = '68px';
-      nav.style.left = '0';
-      nav.style.right = '0';
-      nav.style.background = 'var(--paper)';
-      nav.style.padding = '16px 32px 24px';
-      nav.style.borderBottom = '1px solid var(--border)';
-      nav.style.zIndex = '100';
-      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      var isOpen = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+      }
     });
   }
 
@@ -92,6 +99,12 @@
       });
     });
   }
+
+  /* ===== LAZY IMAGES =====
+     Images now ship with a real src and loading="lazy", so the browser handles
+     deferral natively and the preload scanner can see them. Nothing to do here.
+     The old data-src observer defeated both, and left every image blank when it
+     did not run. */
 
   /* ===== SCROLL HINT: hide on scroll ===== */
   function initScrollHint() {
@@ -128,9 +141,15 @@
 
     var articles = null;
     var base = (document.querySelector('base') || {}).href || '/';
+    var lastFocused = null;
+
+    function isOpen() { return overlay.classList.contains('open'); }
 
     function openSearch() {
+      lastFocused = document.activeElement;
       overlay.classList.add('open');
+      overlay.removeAttribute('aria-hidden');
+      overlay.removeAttribute('inert');
       document.body.style.overflow = 'hidden';
       openBtn.setAttribute('aria-expanded', 'true');
       input.focus();
@@ -143,17 +162,39 @@
     }
 
     function closeSearch() {
+      if (!isOpen()) return;
       overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.setAttribute('inert', '');
       document.body.style.overflow = '';
       openBtn.setAttribute('aria-expanded', 'false');
       input.value = '';
       results.innerHTML = '';
+      // Return focus to whatever opened the dialog, not the top of the document.
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+      lastFocused = null;
     }
 
     openBtn.addEventListener('click', openSearch);
     closeBtn.addEventListener('click', closeSearch);
     overlay.addEventListener('click', function (e) { if (e.target === overlay) closeSearch(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSearch(); });
+
+    document.addEventListener('keydown', function (e) {
+      if (!isOpen()) return;
+      if (e.key === 'Escape') { closeSearch(); return; }
+      if (e.key !== 'Tab') return;
+      // Keep focus inside the dialog while it is open.
+      var focusable = overlay.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last  = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    });
 
     var searchTimer;
     input.addEventListener('input', function () {
@@ -167,17 +208,17 @@
                  (a.tags || []).some(function (t) { return t.indexOf(q) !== -1; });
         }).slice(0, 6);
         if (!hits.length) {
-          results.innerHTML = '<p class="search-empty">No results for “' + q + '”</p>';
+          results.innerHTML = '<p class="search-empty">No results for &ldquo;' + esc(q) + '&rdquo;</p>';
           return;
         }
         results.innerHTML = hits.map(function (a) {
-          var url     = base + 'articles/' + a.id + '.html';
+          var url     = base + 'articles/' + encodeURIComponent(a.id) + '.html';
           var catFmt  = (a.category || '').replace(/-/g, ' ');
           var excerpt = (a.excerpt || '').slice(0, 90) + '…';
-          return '<a href="' + url + '" class="search-result">' +
-                 '<span class="search-result-cat">' + catFmt + '</span>' +
-                 '<span class="search-result-title">' + a.title + '</span>' +
-                 '<span class="search-result-excerpt">' + excerpt + '</span>' +
+          return '<a href="' + esc(url) + '" class="search-result">' +
+                 '<span class="search-result-cat">' + esc(catFmt) + '</span>' +
+                 '<span class="search-result-title">' + esc(a.title) + '</span>' +
+                 '<span class="search-result-excerpt">' + esc(excerpt) + '</span>' +
                  '</a>';
         }).join('');
       }, 200);
@@ -200,14 +241,36 @@
     });
   }
 
+  /* ===== ANALYTICS (consent-gated) =====
+     The page only declares window.TABI_GA_ID; the tag itself is loaded here, and
+     only once the visitor has accepted. Loading it in <head> would have run
+     analytics before the banner was answered. */
+  function loadAnalytics() {
+    if (!window.TABI_GA_ID || window.__tabiGaLoaded) return;
+    window.__tabiGaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(window.TABI_GA_ID);
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', window.TABI_GA_ID);
+  }
+
   /* ===== GDPR BANNER ===== */
   function initGdprBanner() {
+    var choice = localStorage.getItem('tabi-cookie-consent');
+    if (choice === 'accepted') loadAnalytics();
+
     var banner = document.getElementById('gdpr-banner');
-    if (!banner || localStorage.getItem('tabi-cookie-consent')) return;
+    if (!banner || choice) return;
     banner.classList.add('visible');
     document.getElementById('gdpr-accept').addEventListener('click', function () {
       localStorage.setItem('tabi-cookie-consent', 'accepted');
       banner.classList.remove('visible');
+      loadAnalytics();
     });
     document.getElementById('gdpr-decline').addEventListener('click', function () {
       localStorage.setItem('tabi-cookie-consent', 'declined');
@@ -215,42 +278,10 @@
     });
   }
 
-  /* ===== PAGINATION ===== */
-  function initPagination() {
-    document.querySelectorAll('[data-paginate]').forEach(function (grid) {
-      var perPage = parseInt(grid.dataset.paginate, 10) || 12;
-      var cards   = Array.from(grid.querySelectorAll('.ed-card'));
-      if (cards.length <= perPage) return;
-
-      var currentPage  = 1;
-      var totalPages   = Math.ceil(cards.length / perPage);
-      var paginationEl = document.createElement('div');
-      paginationEl.className = 'pagination';
-      grid.parentNode.insertBefore(paginationEl, grid.nextSibling);
-
-      function showPage(page) {
-        currentPage = page;
-        cards.forEach(function (card, i) {
-          card.style.display = (i >= (page - 1) * perPage && i < page * perPage) ? '' : 'none';
-        });
-        paginationEl.innerHTML = '';
-        for (var i = 1; i <= totalPages; i++) {
-          var btn = document.createElement('button');
-          btn.className = 'pg-btn' + (i === currentPage ? ' active' : '');
-          btn.textContent = i;
-          (function (p) {
-            btn.addEventListener('click', function () {
-              showPage(p);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-          }(i));
-          paginationEl.appendChild(btn);
-        }
-      }
-
-      showPage(1);
-    });
-  }
+  /* ===== PAGINATION =====
+     Listings are now paginated when the pages are generated: page 2 onward have
+     their own URLs and the links are plain anchors, so pagination works without
+     JavaScript and each page can be linked to and indexed. Nothing to do here. */
 
   /* ===== TOC SCROLL SPY ===== */
   function initTocSpy() {
@@ -290,7 +321,6 @@
     initSearch();
     initShareButtons();
     initGdprBanner();
-    initPagination();
     initTocSpy();
   });
 
