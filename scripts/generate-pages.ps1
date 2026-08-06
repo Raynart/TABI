@@ -17,6 +17,10 @@ $defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { $_
 
 $script:ImageSizeCache = @{}
 
+# Appended to image URLs so a change forces browsers past a stale cached copy.
+# Bump this when image files are replaced in place.
+$imageVersion = '20260806-list-images'
+
 # Ensure output directories exist
 @('articles','categories','tags') | ForEach-Object {
     $d = "$root\$_"
@@ -90,6 +94,17 @@ function Get-ImageSize {
     return $size
 }
 
+function Get-ImageSrc {
+    # Adds the cache-busting query to locally hosted images.
+    param($url)
+    if (-not $url) { return '' }
+    if ($url -like "$($config.siteUrl)/assets/images/*" -or $url -like "$siteUrl/assets/images/*" -or $url -like 'assets/images/*') {
+        $sep = if ($url.Contains('?')) { '&' } else { '?' }
+        return "$url${sep}v=$imageVersion"
+    }
+    return $url
+}
+
 function Get-ImageDimAttr {
     param($url)
     $d = Get-ImageSize $url
@@ -108,7 +123,7 @@ function Get-ImageSrcset {
     if (-not $dim) { return '' }
     $full  = Get-ImageSize $url
     if (-not $full) { return '' }
-    return " srcset=""$small $($dim.w)w, $url $($full.w)w"" sizes=""$sizes"""
+    return " srcset=""$(Get-ImageSrc $small) $($dim.w)w, $(Get-ImageSrc $url) $($full.w)w"" sizes=""$sizes"""
 }
 
 function Write-ListingPages {
@@ -439,7 +454,7 @@ function Get-ArticleCard {
     $strip = if ($size -eq 'main') { '<div class="ed-main-strip">&#29305;&#38598;</div>' } else { '' }
     $fb    = Get-CardFallback $article.category
     $imgTag = if ($img) {
-        "<img src=""$img"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $img '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px')$(Get-ImageDimAttr $img)>"
+        "<img src=""$(Get-ImageSrc $img)"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $img '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px')$(Get-ImageDimAttr $img)>"
     } else {
         "<div class=""ed-img ed-img-fallback"" style=""background:$($fb.grad);""><span class=""fallback-icon"">$($fb.icon)</span></div>"
     }
@@ -490,7 +505,7 @@ foreach ($a in $cultureArticles) {
     $title = [System.Net.WebUtility]::HtmlEncode($a.title)
     $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
     $fb2   = Get-CardFallback $a.category
-    $img   = if ($a.heroImage) { "<img src=""$($a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $a.heroImage '(max-width: 768px) 100vw, 400px')$(Get-ImageDimAttr $a.heroImage) style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
+    $img   = if ($a.heroImage) { "<img src=""$(Get-ImageSrc $a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $a.heroImage '(max-width: 768px) 100vw, 400px')$(Get-ImageDimAttr $a.heroImage) style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
     $numStr = $ci.ToString().PadLeft(2, '0')
     $cultureHtml += @"
 <a href="articles/$($a.id).html" class="culture-card">
@@ -545,7 +560,7 @@ $indexLines.Add('  <div class="hero-pattern"></div>')
 $indexLines.Add("  <div class=""hero-kanji"" aria-hidden=""true"">$heroKanji</div>")
 $indexLines.Add('  <div class="hero-line"></div>')
 if ($heroImg) {
-    $indexLines.Add("  <img src=""$heroImg"" alt="""" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"" fetchpriority=""high"" decoding=""async""$(Get-ImageDimAttr $heroImg)>")
+    $indexLines.Add("  <img src=""$(Get-ImageSrc $heroImg)"" alt="""" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"" fetchpriority=""high"" decoding=""async""$(Get-ImageDimAttr $heroImg)>")
 }
 $indexLines.Add('  <div class="hero-content">')
 $indexLines.Add('    <div class="hero-eyebrow">')
@@ -762,7 +777,7 @@ foreach ($a in $articles) {
         $credit = if ($a.heroImageCredit) { "<span class=""img-credit"">Image: $([System.Net.WebUtility]::HtmlEncode($a.heroImageCredit))</span>" } else { '' }
         $heroHtml = @"
 <div class="article-hero">
-  <img src="$($a.heroImage)" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager" fetchpriority="high" decoding="async"$(Get-ImageDimAttr $a.heroImage)>
+  <img src="$(Get-ImageSrc $a.heroImage)" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager" fetchpriority="high" decoding="async"$(Get-ImageDimAttr $a.heroImage)>
   <div class="article-hero-overlay"></div>
   $credit
 </div>
