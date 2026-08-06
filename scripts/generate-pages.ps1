@@ -228,7 +228,7 @@ function Get-ArticleCard {
     $strip = if ($size -eq 'main') { '<div class="ed-main-strip">&#29305;&#38598;</div>' } else { '' }
     $fb    = Get-CardFallback $article.category
     $imgTag = if ($img) {
-        "<img src=""$img"" data-src=""$img"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"" loading=""lazy"">"
+        "<img src=""$img"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"">"
     } else {
         "<div class=""ed-img ed-img-fallback"" style=""background:$($fb.grad);""><span class=""fallback-icon"">$($fb.icon)</span></div>"
     }
@@ -279,7 +279,7 @@ foreach ($a in $cultureArticles) {
     $title = [System.Net.WebUtility]::HtmlEncode($a.title)
     $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
     $fb2   = Get-CardFallback $a.category
-    $img   = if ($a.heroImage) { "<img src=""$($a.heroImage)"" data-src=""$($a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
+    $img   = if ($a.heroImage) { "<img src=""$($a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
     $numStr = $ci.ToString().PadLeft(2, '0')
     $cultureHtml += @"
 <a href="articles/$($a.id).html" class="culture-card">
