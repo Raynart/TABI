@@ -95,13 +95,20 @@
 
   /* ===== LAZY IMAGES ===== */
   function initLazyImages() {
-    if (!('IntersectionObserver' in window)) return;
     var images = document.querySelectorAll('img[data-src]');
+    if (!images.length) return;
+    if (!('IntersectionObserver' in window)) {
+      images.forEach(function (img) {
+        if (!img.getAttribute('src')) img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      });
+      return;
+    }
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           var img = entry.target;
-          img.src = img.dataset.src;
+          if (!img.getAttribute('src')) img.src = img.dataset.src;
           img.removeAttribute('data-src');
           observer.unobserve(img);
         }
