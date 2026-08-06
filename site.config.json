@@ -1,4 +1,4 @@
-{
+﻿{
   "siteName": "TABI",
   "tagline": "Discover Japan",
   "description": "Your guide to the real Japan — travel, culture, and the things worth bringing home.",
@@ -8,18 +8,55 @@
   "contactEmail": "hello@tabi.guide",
   "googleAnalyticsId": "",
   "categories": [
-    { "slug": "before-you-go",   "label": "Before You Go",     "nav": "Before You Go"  },
-    { "slug": "rules-etiquette", "label": "Rules & Etiquette", "nav": "Rules"          },
-    { "slug": "getting-around",  "label": "Getting Around",    "nav": "Getting Around" },
-    { "slug": "eat-drink",       "label": "Eat & Drink",       "nav": "Eat & Drink"    },
-    { "slug": "things-to-buy",   "label": "Things to Buy",     "nav": "Things to Buy"  },
-    { "slug": "hidden-japan",    "label": "Hidden Japan",      "nav": "Hidden Japan"   }
+    {
+      "slug": "before-you-go",
+      "label": "Before You Go",
+      "nav": "Before You Go"
+    },
+    {
+      "slug": "rules-etiquette",
+      "label": "Rules & Etiquette",
+      "nav": "Rules"
+    },
+    {
+      "slug": "getting-around",
+      "label": "Getting Around",
+      "nav": "Getting Around"
+    },
+    {
+      "slug": "eat-drink",
+      "label": "Eat & Drink",
+      "nav": "Eat & Drink"
+    },
+    {
+      "slug": "things-to-buy",
+      "label": "Things to Buy",
+      "nav": "Things to Buy"
+    },
+    {
+      "slug": "hidden-japan",
+      "label": "Hidden Japan",
+      "nav": "Hidden Japan"
+    }
   ],
   "tags": [
-    "first-time", "tokyo", "kyoto", "osaka", "nature", "food",
-    "tradition", "festival", "shopping", "budget", "luxury",
-    "off-the-beaten-path", "transport", "accommodation", "affiliate",
-    "rules", "etiquette", "practical", "language"
+    "accommodation",
+    "affiliate",
+    "budget",
+    "festival",
+    "first-time",
+    "food",
+    "kyoto",
+    "language",
+    "luxury",
+    "nature",
+    "off-the-beaten-path",
+    "osaka",
+    "practical",
+    "shopping",
+    "tokyo",
+    "tradition",
+    "transport"
   ],
   "social": {
     "twitter": "",
