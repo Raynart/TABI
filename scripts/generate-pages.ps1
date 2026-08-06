@@ -47,6 +47,10 @@ foreach ($a in $articles) {
     if (-not $a.sections) { $dataErrors.Add("$($a.id): no body sections") }
 }
 
+if (-not ($validCategories -contains $config.homepageFeature.category)) {
+    $dataErrors.Add("site.config.json: homepageFeature.category '$($config.homepageFeature.category)' is not a configured category")
+}
+
 if ($dataErrors.Count -gt 0) {
     $dataErrors | ForEach-Object { Write-Host "  DATA ERROR: $_" -ForegroundColor Red }
     throw "articles.json failed validation ($($dataErrors.Count) problem(s)). Fix articles.json or site.config.json and re-run."
@@ -481,7 +485,11 @@ Write-Host "Generating index.html..."
 
 $heroArticle = $articles | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 1
 $gridArticles = $articles | Sort-Object { $_.publishedAt } -Descending | Select-Object -Skip 1 -First 4
-$cultureArticles = $articles | Where-Object { $_.category -eq 'culture' } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 3
+# Homepage feature section. This used to filter on a hardcoded category 'culture'
+# that no articles have had since the taxonomy was reworked, so the section never
+# rendered at all. Driven from site.config.json now, and validated at startup.
+$featureCat = $config.categories | Where-Object { $_.slug -eq $config.homepageFeature.category } | Select-Object -First 1
+$cultureArticles = $articles | Where-Object { $_.category -eq $featureCat.slug } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 3
 $buyArticles = $articles | Where-Object { $_.category -eq 'things-to-buy' } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 4
 
 $heroImg = if ($heroArticle -and $heroArticle.heroImage) { $heroArticle.heroImage } else { '' }
@@ -560,7 +568,7 @@ $indexLines.Add('  <div class="hero-pattern"></div>')
 $indexLines.Add("  <div class=""hero-kanji"" aria-hidden=""true"">$heroKanji</div>")
 $indexLines.Add('  <div class="hero-line"></div>')
 if ($heroImg) {
-    $indexLines.Add("  <img src=""$(Get-ImageSrc $heroImg)"" alt="""" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"" fetchpriority=""high"" decoding=""async""$(Get-ImageDimAttr $heroImg)>")
+    $indexLines.Add("  <img src=""$(Get-ImageSrc $heroImg)"" alt="""" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"" fetchpriority=""high"" decoding=""async""$(Get-ImageSrcset $heroImg '100vw')$(Get-ImageDimAttr $heroImg)>")
 }
 $indexLines.Add('  <div class="hero-content">')
 $indexLines.Add('    <div class="hero-eyebrow">')
@@ -594,10 +602,10 @@ if ($gridHtml) {
 # Culture section
 if ($cultureHtml) {
     $indexLines.Add('<div class="section-label">')
-    $indexLines.Add('  <span class="section-label-jp" aria-hidden="true">&#25991;&#21270;</span>')
-    $indexLines.Add('  <h2 class="section-label-en">Culture &amp; Tradition</h2>')
+    $indexLines.Add("  <span class=""section-label-jp"" aria-hidden=""true"">$($config.homepageFeature.kanji)</span>")
+    $indexLines.Add("  <h2 class=""section-label-en"">$([System.Net.WebUtility]::HtmlEncode($featureCat.label))</h2>")
     $indexLines.Add('  <div class="section-label-line"></div>')
-    $indexLines.Add('  <a href="categories/culture.html" class="section-label-link">All articles <span class="arrow">&rarr;</span></a>')
+    $indexLines.Add("  <a href=""categories/$($featureCat.slug).html"" class=""section-label-link"">All articles <span class=""arrow"">&rarr;</span></a>")
     $indexLines.Add('</div>')
     $indexLines.Add('<div class="culture-grid">')
     $indexLines.Add($cultureHtml)
@@ -777,7 +785,7 @@ foreach ($a in $articles) {
         $credit = if ($a.heroImageCredit) { "<span class=""img-credit"">Image: $([System.Net.WebUtility]::HtmlEncode($a.heroImageCredit))</span>" } else { '' }
         $heroHtml = @"
 <div class="article-hero">
-  <img src="$(Get-ImageSrc $a.heroImage)" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager" fetchpriority="high" decoding="async"$(Get-ImageDimAttr $a.heroImage)>
+  <img src="$(Get-ImageSrc $a.heroImage)" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager" fetchpriority="high" decoding="async"$(Get-ImageSrcset $a.heroImage '100vw')$(Get-ImageDimAttr $a.heroImage)>
   <div class="article-hero-overlay"></div>
   $credit
 </div>
