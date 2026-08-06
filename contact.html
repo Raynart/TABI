@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,18 +21,21 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
   <link rel="alternate" type="application/rss+xml" title="TABI RSS" href="rss.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" media="print" onload="this.media='all';this.onload=null"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap"></noscript>
 
 
 </head>
 <body>
-<div class="progress-bar" role="progressbar" aria-hidden="true"></div>
+<div class="progress-bar" aria-hidden="true"></div>
 <div class="top-bar">Japan Travel &amp; Culture Guide &nbsp;<span>&middot;</span>&nbsp; Updated weekly &nbsp;<span>&middot;</span>&nbsp; <a href="newsletter.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Free newsletter every Friday</a></div>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <ul class="header-nav" role="navigation" aria-label="Main navigation">
-      <li><a href="categories/before-you-go.html">Before You Go</a></li><li><a href="categories/rules-etiquette.html">Rules</a></li><li><a href="categories/getting-around.html">Getting Around</a></li><li><a href="categories/eat-drink.html">Eat & Drink</a></li><li><a href="categories/things-to-buy.html">Things to Buy</a></li><li><a href="categories/hidden-japan.html">Hidden Japan</a></li>
-    </ul>
+    <nav class="header-nav-wrap" aria-label="Main navigation">
+      <ul class="header-nav">
+        <li><a href="categories/before-you-go.html">Before You Go</a></li><li><a href="categories/rules-etiquette.html">Rules</a></li><li><a href="categories/getting-around.html">Getting Around</a></li><li><a href="categories/eat-drink.html">Eat & Drink</a></li><li><a href="categories/things-to-buy.html">Things to Buy</a></li><li><a href="categories/hidden-japan.html">Hidden Japan</a></li>
+      </ul>
+    </nav>
     <a href="index.html" class="site-logo" aria-label="TABI home">
       <span class="logo-en">TABI<span class="dot">.</span></span>
       <span class="logo-jp">&#26053; &#8212; Discover Japan</span>
@@ -44,7 +47,7 @@
     </div>
   </div>
 </header>
-<main style="max-width:720px;margin:80px auto 120px;padding:0 32px;">
+<main id="main" style="max-width:720px;margin:80px auto 120px;padding:0 32px;">
   <h1 style="font-family:var(--serif);font-size:2rem;font-weight:300;margin-bottom:28px;letter-spacing:-0.01em;">Contact</h1>
   <p>For editorial enquiries, article pitches, or partnership proposals:</p>
   <p><a href="mailto:hello@tabi.guide">hello@tabi.guide</a></p>
@@ -91,20 +94,15 @@
   </div>
 </footer>
 <button class="back-top" aria-label="Back to top">&#8593;</button>
-<div class="search-overlay" id="search-overlay">
-  <div class="search-modal">
+<div class="search-overlay" id="search-overlay" aria-hidden="true" inert>
+  <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <h2 class="visually-hidden" id="search-title">Search</h2>
     <button class="search-close" id="search-close" aria-label="Close search">&times;</button>
     <input class="search-input" id="search-input" type="search" placeholder="Search Japan guides&#8230;" autocomplete="off" aria-label="Search">
     <p class="search-hint">Try &#8220;kyoto&#8221;, &#8220;budget&#8221;, &#8220;food&#8221;</p>
-    <div class="search-results" id="search-results"></div>
+    <div class="search-results" id="search-results" role="region" aria-live="polite" aria-label="Search results"></div>
   </div>
 </div>
-<div class="gdpr-banner" id="gdpr-banner">
-  <p class="gdpr-text">We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.</p>
-  <div class="gdpr-actions">
-    <button class="gdpr-btn gdpr-decline" id="gdpr-decline">Decline</button>
-    <button class="gdpr-btn gdpr-accept" id="gdpr-accept">Accept</button>
-  </div>
-</div>
-<script src="script.js"></script>
+
+<script src="script.js" defer></script>
 </body></html>
