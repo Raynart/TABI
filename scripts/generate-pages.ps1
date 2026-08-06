@@ -10,6 +10,7 @@ $siteUrl  = $config.siteUrl
 $siteName = $config.siteName
 $tagline  = $config.tagline
 $defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 1).heroImage)
+$imageVersion = '20260806-list-images'
 
 # Ensure output directories exist
 @('articles','categories','tags') | ForEach-Object {
@@ -23,6 +24,16 @@ function Escape-Json {
     param($str)
     if (-not $str) { return '' }
     return ($str -replace '\\', '\\' -replace '"', '\"' -replace "`n", '\n' -replace "`r", '' -replace "`t", '\t')
+}
+
+function Get-ImageSrc {
+    param($url)
+    if (-not $url) { return '' }
+    if ($url -like "$siteUrl/assets/images/*" -or $url -like 'assets/images/*') {
+        $sep = if ($url.Contains('?')) { '&' } else { '?' }
+        return "$url${sep}v=$imageVersion"
+    }
+    return $url
 }
 
 function Get-FontLink {
@@ -225,10 +236,11 @@ function Get-ArticleCard {
     $date  = Format-Date $article.publishedAt
     $title = [System.Net.WebUtility]::HtmlEncode($article.title)
     $img   = if ($article.heroImage) { $article.heroImage } else { '' }
+    $imgSrc = if ($img) { Get-ImageSrc $img } else { '' }
     $strip = if ($size -eq 'main') { '<div class="ed-main-strip">&#29305;&#38598;</div>' } else { '' }
     $fb    = Get-CardFallback $article.category
-    $imgTag = if ($img) {
-        "<img src=""$img"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"">"
+    $imgTag = if ($imgSrc) {
+        "<img src=""$imgSrc"" alt=""$([System.Net.WebUtility]::HtmlEncode($article.heroImageAlt))"" class=""ed-img"">"
     } else {
         "<div class=""ed-img ed-img-fallback"" style=""background:$($fb.grad);""><span class=""fallback-icon"">$($fb.icon)</span></div>"
     }
@@ -259,6 +271,7 @@ $cultureArticles = $articles | Where-Object { $_.category -eq 'culture' } | Sort
 $buyArticles = $articles | Where-Object { $_.category -eq 'things-to-buy' } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 4
 
 $heroImg = if ($heroArticle -and $heroArticle.heroImage) { $heroArticle.heroImage } else { '' }
+$heroImgSrc = if ($heroImg) { Get-ImageSrc $heroImg } else { '' }
 $heroTitle = if ($heroArticle) { [System.Net.WebUtility]::HtmlEncode($heroArticle.title) } else { 'Welcome to TABI' }
 $heroDesc  = if ($heroArticle -and $heroArticle.excerpt) { [System.Net.WebUtility]::HtmlEncode($heroArticle.excerpt) } elseif ($heroArticle -and $heroArticle.summary) { [System.Net.WebUtility]::HtmlEncode($heroArticle.summary) } else { 'Your guide to the real Japan.' }
 $heroCat   = if ($heroArticle) { Get-CategoryLabel $heroArticle.category } else { 'Travel Guide' }
@@ -279,7 +292,8 @@ foreach ($a in $cultureArticles) {
     $title = [System.Net.WebUtility]::HtmlEncode($a.title)
     $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
     $fb2   = Get-CardFallback $a.category
-    $img   = if ($a.heroImage) { "<img src=""$($a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
+    $imgSrc = if ($a.heroImage) { Get-ImageSrc $a.heroImage } else { '' }
+    $img   = if ($imgSrc) { "<img src=""$imgSrc"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
     $numStr = $ci.ToString().PadLeft(2, '0')
     $cultureHtml += @"
 <a href="articles/$($a.id).html" class="culture-card">
@@ -332,8 +346,8 @@ $indexLines.Add('  <div class="hero-bg"></div>')
 $indexLines.Add('  <div class="hero-pattern"></div>')
 $indexLines.Add("  <div class=""hero-kanji"" aria-hidden=""true"">$heroKanji</div>")
 $indexLines.Add('  <div class="hero-line"></div>')
-if ($heroImg) {
-    $indexLines.Add("  <img src=""$heroImg"" alt=""$heroTitle"" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"">")
+if ($heroImgSrc) {
+    $indexLines.Add("  <img src=""$heroImgSrc"" alt=""$heroTitle"" style=""position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;"" loading=""eager"">")
 }
 $indexLines.Add('  <div class="hero-content">')
 $indexLines.Add('    <div class="hero-eyebrow">')
@@ -547,9 +561,10 @@ foreach ($a in $articles) {
     $heroHtml = ''
     if ($a.heroImage) {
         $credit = if ($a.heroImageCredit) { "<span class=""img-credit"">Image: $([System.Net.WebUtility]::HtmlEncode($a.heroImageCredit))</span>" } else { '' }
+        $articleHeroSrc = Get-ImageSrc $a.heroImage
         $heroHtml = @"
 <div class="article-hero">
-  <img src="$($a.heroImage)" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager">
+  <img src="$articleHeroSrc" alt="$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))" loading="eager">
   <div class="article-hero-overlay"></div>
   $credit
 </div>
