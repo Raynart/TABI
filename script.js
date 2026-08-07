@@ -81,21 +81,27 @@
     });
   }
 
-  /* ===== NEWSLETTER FORM ===== */
+  /* ===== NEWSLETTER FORM =====
+     This used to call preventDefault() on every submit and then set the button to
+     "Thanks! ✓". Nothing was ever sent anywhere: the form reported success to the
+     visitor and discarded the address. The submission now goes through to the
+     configured provider, and the form is only rendered when one is configured. */
   function initNewsletter() {
     var forms = document.querySelectorAll('.nl-form');
     forms.forEach(function (form) {
       form.addEventListener('submit', function (e) {
-        e.preventDefault();
         var input = form.querySelector('.nl-input');
         var btn   = form.querySelector('.nl-btn');
-        if (!input || !input.value.includes('@')) {
-          input && input.focus();
-          return;
-        }
-        btn.textContent = 'Thanks! ✓';
-        btn.disabled = true;
-        input.value = '';
+        // Let the browser's own validation handle a malformed address.
+        if (!input || !input.checkValidity()) return;
+        // The form opens the provider in a new tab, so this one stays put. Give
+        // feedback that reflects that, and re-enable it so a second address can
+        // be entered.
+        btn.textContent = 'Opening…';
+        setTimeout(function () {
+          btn.textContent = 'Subscribe';
+          input.value = '';
+        }, 3000);
       });
     });
   }
