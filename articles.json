@@ -76,7 +76,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "japanese-gift-omiyage",
-      "tipping-in-japan",
+      "japanese-business-card-etiquette",
       "temple-shrine-etiquette"
     ],
     "author": "TABI Editorial",
@@ -187,8 +187,8 @@
       "practical"
     ],
     "publishedAt": "2026-06-17",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-business-card-etiquette.webp",
     "heroImageAlt": "A Japanese business card (meishi) held with two hands against a wooden meeting table",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -204,31 +204,72 @@
       {
         "heading": "What a business card represents",
         "paragraphs": [
-          "In Japan, the meishi (business card) exchange is a ritual that establishes who you are, your position, and your company — in one gesture, at the start of every professional interaction. Cards are not handed out casually. They are exchanged at the beginning of a meeting with a formality that can feel significant to those not used to it. Understanding why makes the ritual easier: the card is standing in for a formal introduction that would otherwise take several minutes of verbal exchange."
+          "In Japan, the meishi (business card) exchange is a ritual that establishes who you are, your position, and your company — in one gesture, at the start of every professional interaction. Cards are not handed out casually. They are exchanged at the beginning of a meeting with a formality that can feel significant to those not used to it. Understanding why makes the ritual easier: the card is standing in for a formal introduction that would otherwise take several minutes of verbal exchange.",
+          "The card also settles the question that Japanese professional interaction cannot proceed without: relative seniority. Japanese has different registers of politeness depending on who outranks whom, and you cannot construct a normal sentence until you know. The card tells everyone in the room how to speak to everyone else, which is why it is exchanged before the conversation rather than after it.",
+          "Note the order of information printed on it. Company first, then division, then title, then name. That sequence is not a design choice — it is the order of importance, and it is the opposite of the Western convention. You are being introduced as a representative of an organisation who happens to be a particular person."
+        ]
+      },
+      {
+        "heading": "Before the meeting: what to have ready",
+        "paragraphs": [
+          "Bring more cards than you think you need. A single meeting with a mid-sized company can involve six people, and running out halfway around the table is the failure mode you are trying to avoid. Twenty in the case for a day of meetings is not excessive.",
+          "Carry them in a meishi holder — a slim leather or metal card case — not loose in a wallet or a jacket pocket. The case matters for a practical reason as well as an aesthetic one: cards produced from it are flat, clean and unbent, which is the entire point. Cases are sold in any department store and in most stationery shops.",
+          "Have the card printed with Japanese on one side and English on the other. Any print shop in Japan will do this in a day or two, and several online services will do it before you travel. If you cannot manage a translated side, an English-only card is acceptable; a card with a Japanese side you had machine-translated and never checked is worse than no Japanese side at all."
         ]
       },
       {
         "heading": "How to present your card",
         "paragraphs": [
-          "Hold the card with both hands, text facing the recipient so they can read it immediately, and offer a slight bow as you present it. Say your name and company as you do. If you are handing out cards in a group, the most senior person goes first. Do not hand out cards across a table — walk around or hand directly."
+          "Hold the card with both hands, text facing the recipient so they can read it immediately, and offer a slight bow as you present it. Say your name and company as you do. If you are handing out cards in a group, the most senior person goes first. Do not hand out cards across a table — walk around or hand directly.",
+          "Hold it by the corners or the lower edge. Covering the company name or your own name with your thumbs is the small error people make most often — you are presenting the information, so leave it visible.",
+          "Height carries meaning. The more junior party offers their card slightly lower than the more senior one. You are not expected to calibrate this precisely as a visitor, but if you are clearly the one asking for the meeting, presenting a little low reads as courteous and costs you nothing.",
+          "Very often both people present at the same time. The convention is to offer with the right hand while receiving with the left, then immediately bring the second hand to the received card. It feels awkward the first time and stops feeling awkward around the fourth."
         ]
       },
       {
         "heading": "How to receive a card",
         "paragraphs": [
-          "Receive the card with both hands. Take a moment to read it — not a cursory glance, but actually look at it. Acknowledge the person's name and company. If you are sitting down at a meeting, place the card on the table in front of you in order of seniority (most senior person's card nearest you, others in the order they were received). Do not put the card in your pocket or wallet until the meeting is over. The card on the table means the person is still present in the meeting, literally and symbolically."
+          "Receive the card with both hands. Take a moment to read it — not a cursory glance, but actually look at it. Acknowledge the person's name and company.",
+          "Say something. Reading the name aloud to confirm the pronunciation is welcome, because Japanese surnames are written in characters with multiple possible readings and even Japanese colleagues ask. A remark about the office location or the division is enough. What you are demonstrating is that you read the card rather than pocketed it."
+        ]
+      },
+      {
+        "heading": "The cards stay on the table",
+        "paragraphs": [
+          "If you are sitting down at a meeting, place the cards on the table in front of you, arranged to mirror where people are sitting, with the most senior person's card at the top of your arrangement. Keep them there for the duration.",
+          "This is not ceremony for its own sake. It is a seating chart. Six unfamiliar names in a language you do not read are impossible to hold in your head, and everyone in the room is using the same trick. Referring down to the cards during the meeting to get someone's name right is expected, not a lapse.",
+          "Put them away only once the meeting has finished and people are standing up, and put them into the case rather than a pocket. The card on the table means the person is still present in the meeting, literally and symbolically."
         ]
       },
       {
         "heading": "What not to do",
         "paragraphs": [
-          "Do not write on a business card in front of the person who gave it to you. Do not fold it. Do not put it in your back pocket and sit on it. Do not place anything on top of it (not a cup, not another card). These actions read as treating the card — and by extension the person — carelessly. After the meeting, file cards appropriately. Japanese professionals use meishi holders specifically for this purpose."
+          "Do not write on a business card in front of the person who gave it to you. Do not fold it. Do not put it in your back pocket and sit on it. Do not place anything on top of it (not a cup, not another card). These actions read as treating the card — and by extension the person — carelessly.",
+          "Do not slide a card across a table, do not deal them out like playing cards to several people at once, and do not hand one over with a drink in your other hand. If you need to make a note about someone, make it afterwards and out of sight.",
+          "After the meeting, file cards appropriately. Japanese professionals use meishi holders and binders specifically for this purpose, and many will genuinely still have your card two years later."
+        ]
+      },
+      {
+        "heading": "Reading the titles",
+        "paragraphs": [
+          "A card is only useful if you can decode it, and Japanese corporate titles map onto a fairly consistent ladder. From the top: shacho (president), senmu and jomu (executive directors), bucho (department head), kacho (section head), kakaricho (subsection head), and shain (staff, usually with no title printed at all).",
+          "The one worth recognising on sight is bucho. A department head is typically the most senior person who will attend a working meeting, and is usually the person whose agreement actually decides the outcome. Kacho is the level that does most of the real coordination.",
+          "Also look for a name in katakana or romaji alongside the kanji. If it is there, the person has put it there so foreigners can read it, and using that reading is what it is for."
         ]
       },
       {
         "heading": "If you don't have cards",
         "paragraphs": [
-          "Arriving at a Japanese business meeting without cards is not a catastrophe, but it is noticed. A brief explanation — 'I apologize, I have run out of cards' — is appropriate. Most Japanese businesspeople will accept this gracefully. If you are planning any professional interactions in Japan, have cards printed. The Japanese side will often have English on the reverse, and printing the same for your own card is appreciated."
+          "Arriving at a Japanese business meeting without cards is not a catastrophe, but it is noticed. A brief explanation — 'I apologize, I have run out of cards' — is appropriate. Most Japanese businesspeople will accept this gracefully.",
+          "Receiving a card when you have none to give creates a small debt, and the graceful way to settle it is to follow up by email the same day with your full details. If you are in Japan for a week and expect more meetings, get cards printed while you are there; same-day services exist in every business district."
+        ]
+      },
+      {
+        "heading": "Where the ritual is relaxing",
+        "paragraphs": [
+          "The formality is not uniform. Startups, creative agencies, foreign-owned firms and younger teams handle meishi far more loosely than a bank or a manufacturer will, and in some rooms the exchange is barely a pause. Digital card apps — Eight and Sansan are the common ones — are now normal, and being asked to scan rather than swap is not a snub.",
+          "The safe approach is to arrive prepared for the full version and follow the room. Nobody has ever been thought worse of for handling a card carefully. The reverse is not true.",
+          "It is also worth keeping the ritual in proportion. Getting it slightly wrong will not end a negotiation, and your Japanese counterparts know you are a visitor. What the effort communicates is that you looked into how things are done before you arrived — which is, in the end, the same thing the ritual itself communicates."
         ]
       }
     ]
@@ -366,7 +407,7 @@
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
-      "japan-winter-travel-guide",
+      "sumo-tournament-guide",
       "autumn-foliage-japan",
       "golden-week-avoid"
     ],
@@ -581,7 +622,7 @@
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
-      "hidden-shrines-kyoto",
+      "nara-day-trip",
       "temple-shrine-etiquette",
       "10-days-japan-no-tourist-traps"
     ],
@@ -713,7 +754,7 @@
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
-      "hidden-shrines-kyoto",
+      "photography-rules-japan",
       "public-behavior-japan",
       "tipping-in-japan"
     ],
@@ -909,7 +950,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "train-etiquette-japan",
-      "tipping-in-japan",
+      "japanese-business-card-etiquette",
       "shoes-off-guide"
     ],
     "author": "TABI Editorial",
@@ -971,7 +1012,7 @@
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
-      "ic-card-japan-guide",
+      "japanese-vending-machines",
       "japan-convenience-store-guide",
       "basic-japanese-phrases"
     ],
@@ -1215,8 +1256,8 @@
       "kyoto"
     ],
     "publishedAt": "2026-06-15",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/photography-rules-japan.webp",
     "heroImageAlt": "A photographer framing a traditional Japanese street scene at dawn with no other people visible",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -1232,37 +1273,70 @@
       {
         "heading": "The general principle",
         "paragraphs": [
-          "In most outdoor public spaces in Japan, photography is unrestricted. Streets, parks, temple grounds, shrine pathways, market areas, train stations — all are freely photographable. The restrictions apply inside specific buildings, in areas where signage prohibits it, and in situations where the photography causes problems for other people or for the place itself. Read the signs, watch what other people are doing, and when in doubt, ask."
+          "In most outdoor public spaces in Japan, photography is unrestricted. Streets, parks, temple grounds, shrine pathways, market areas, train stations — all are freely photographable. The restrictions apply inside specific buildings, in areas where signage prohibits it, and in situations where the photography causes problems for other people or for the place itself. Read the signs, watch what other people are doing, and when in doubt, ask.",
+          "The prohibition sign is consistent and easy to learn: a camera icon inside a red circle with a diagonal bar, usually beside the characters 撮影禁止 (satsuei kinshi, photography forbidden). A second common sign shows a camera with a lightning bolt crossed out, which restricts flash only and leaves ordinary photography fine.",
+          "The most reliable instrument is the room itself. If nobody else has a phone out, there is a reason, and it is generally a better guide than any sign you did or did not spot on the way in."
         ]
       },
       {
         "heading": "Inside temples and shrines",
         "paragraphs": [
-          "Interior photography inside the main hall of a temple or shrine is usually prohibited. The sign will typically show a camera with a red line through it. Some places allow photography inside with a fee; some famous main halls (Kinkaku-ji’s interior, Todai-ji’s Buddha) are not accessible at all. Gardens attached to temples are generally freely photographable. Detailed garden photography is expected — it’s one of the primary reasons people visit."
+          "Interior photography inside the main hall of a temple or shrine is usually prohibited. The sign will typically show a camera with a red line through it. Some places allow photography inside with a fee; some famous main halls are not accessible at all. Gardens attached to temples are generally freely photographable. Detailed garden photography is expected — it's one of the primary reasons people visit.",
+          "There are reasons behind the rule beyond crowd control. Many interiors hold designated cultural properties whose pigments and gold leaf are genuinely damaged by repeated flash. Others contain objects that are religious rather than exhibited — a statue in a working temple is an object of worship, not a display item, and photographing it is closer to photographing a person praying than photographing a museum piece.",
+          "Watch for funerals and memorial services, which happen in working temples constantly and are not always obvious to a visitor. Black formal clothing and a gathering near a side hall is your signal to put the camera away entirely."
         ]
       },
       {
         "heading": "At onsen and public baths",
         "paragraphs": [
-          "Photography is prohibited at onsen and sento (public baths), including in the changing rooms. This is absolute and enforced. Phones are not permitted in the bathing areas of most facilities, and taking your phone into a bathing area is both a rule violation and a privacy invasion of every other person present. Leave the phone in the locker."
+          "Photography is prohibited at onsen and sento (public baths), including in the changing rooms. This is absolute and enforced. Phones are not permitted in the bathing areas of most facilities, and taking your phone into a bathing area is both a rule violation and a privacy invasion of every other person present. Leave the phone in the locker.",
+          "This is one of the few photography rules in Japan with real legal weight behind it rather than social pressure. Prefectural nuisance ordinances cover surreptitious photography, and an onsen changing room is exactly the situation they exist for. Staff will remove you, and depending on circumstances they will call the police.",
+          "The exception people ask about is a private open-air bath attached to a room in a ryokan, where you are the only person present. That is your own space and there is nobody to photograph but yourself."
         ]
       },
       {
         "heading": "Photographing strangers",
         "paragraphs": [
-          "Japan doesn’t have a specific law against street photography, but the social norms around photographing strangers are similar to those in most countries: pointing a camera directly at someone’s face without consent, following someone for a photograph, or photographing children without parental consent all cross reasonable lines. Most Japanese people will not object verbally, but this reflects a cultural reluctance to confront rather than permission."
+          "Japan doesn't have a specific law against street photography, but the social norms around photographing strangers are similar to those in most countries: pointing a camera directly at someone's face without consent, following someone for a photograph, or photographing children without parental consent all cross reasonable lines. Most Japanese people will not object verbally, but this reflects a cultural reluctance to confront rather than permission.",
+          "There is a recognised legal concept — shozoken, the right to one's own likeness — developed through court decisions rather than a single statute. In practice it is rarely invoked against tourists, but it means that publishing a recognisable photograph of someone who did not consent is not automatically safe just because you took it in the street.",
+          "The usable rule: a person incidental to a scene is fine, a person who is the subject of the scene needs consent. If you would feel obliged to explain yourself were they to notice, ask first. 'Shashin, ii desu ka?' — is a photo all right? — is enough, and the answer is yes more often than you would expect."
         ]
       },
       {
         "heading": "In Gion, Kyoto",
         "paragraphs": [
-          "Gion and the surrounding geisha districts of Kyoto are a specific and documented problem. Years of tourists surrounding and following maiko and geiko for photographs has led to complaints from residents, businesses, and the performers themselves. Some streets now have photography restriction signs during evening hours. Obeying these is not optional — local authorities have the ability to issue fines. More simply: if you see a maiko walking to an appointment, she is not a photo opportunity. She is a person doing her job."
+          "Gion and the surrounding geisha districts of Kyoto are a specific and documented problem. Years of tourists surrounding and following maiko and geiko for photographs has led to complaints from residents, businesses, and the performers themselves. Some streets now carry photography restriction signs, and the private lanes off Hanamikoji have been closed to tourists altogether, with fines attached.",
+          "Note the distinction the signs are making: the public streets remain open, the private alleys are private property. The alleys are where people live, and the complaints that closed them were about tourists blocking doorways and pulling at sleeves, not about photography in the abstract.",
+          "More simply: if you see a maiko walking quickly with her head down, she is late for an appointment in a costume that costs more than a car and takes hours to put on. She is not a photo opportunity. She is a person doing her job. If you want the photograph, book a formal appointment — several teahouses and studios arrange them, and everyone involved has agreed to be there."
         ]
       },
       {
         "heading": "On trains",
         "paragraphs": [
-          "Photography on trains is not explicitly prohibited but is not commonly practiced for good reason: photographing other passengers without consent in an enclosed space they cannot leave is uncomfortable regardless of country. Photographing the view from the window is universally fine. Photographing your own group is fine. Pointing a camera at strangers in a carriage is not."
+          "Photography on trains is not explicitly prohibited but is not commonly practiced for good reason: photographing other passengers without consent in an enclosed space they cannot leave is uncomfortable regardless of country. Photographing the view from the window is universally fine. Photographing your own group is fine. Pointing a camera at strangers in a carriage is not.",
+          "Platforms are a different matter and photographing trains is a substantial hobby in Japan, with its own etiquette. Stay behind the yellow tactile line, never use flash toward a cab, and do not set up where you block the flow of people. Station staff will move you promptly if you do."
+        ]
+      },
+      {
+        "heading": "Shops, restaurants and museums",
+        "paragraphs": [
+          "Retail is the restriction visitors trip over most, because it is the least expected. A great many shops prohibit photography of their goods and displays, particularly department stores, confectioners, bookshops and anywhere selling designs that can be copied. There is often a small sign, and often there is not.",
+          "Restaurants vary. Photographing your own food is normal and nobody minds. Photographing the interior, the staff, or an open kitchen requires asking. Sushi counters and small chef-run places are the sensitive case: the chef is working a metre away, and a phone raised toward them without a word is intrusive in a way it is not at a chain restaurant.",
+          "Museums usually permit photography in permanent collections without flash and forbid it in special exhibitions, where the works are on loan under conditions the museum does not control. The signage for this is normally at the entrance to each room rather than the building."
+        ]
+      },
+      {
+        "heading": "The shutter sound you cannot switch off",
+        "paragraphs": [
+          "Phones sold in Japan make an audible shutter noise that cannot be silenced, even on mute. This is not a legal requirement but an industry convention adopted decades ago in response to surreptitious photography, and every domestic manufacturer follows it.",
+          "A foreign phone on roaming will normally stay silent, which produces an odd asymmetry: you can take a quieter photograph than any local can. Treat that as a reason for more care rather than less. The noise exists so people know when they are being photographed, and its absence does not change what they are entitled to expect."
+        ]
+      },
+      {
+        "heading": "Drones and tripods",
+        "paragraphs": [
+          "Drones are heavily restricted. Flying is prohibited over densely populated areas — which covers essentially all of Tokyo and Osaka — near airports, and in most national parks, and requires registration and permission that is not realistically obtainable for a short visit. Assume you cannot fly, and confirm the exception rather than the rule. Penalties are substantial.",
+          "Tripods are banned far more widely than people expect: most temple gardens, most museums, many station concourses, and effectively every crowded viewpoint during cherry blossom and autumn foliage season. The reasoning is congestion rather than image rights. A compact travel tripod used somewhere empty is rarely an issue; the same tripod at Kiyomizu-dera in November will get you moved on."
         ]
       }
     ]
@@ -1362,7 +1436,8 @@
     "affiliateLinks": [],
     "relatedIds": [
       "ryokan-first-time-guide",
-      "kanazawa-japan-guide"
+      "kanazawa-japan-guide",
+      "hokkaido-summer-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1435,7 +1510,7 @@
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
-      "izakaya-guide-first-timers",
+      "japanese-vending-machines",
       "tsukiji-outer-market-guide",
       "japanese-menu-guide"
     ],
@@ -1505,7 +1580,8 @@
     "affiliateLinks": [],
     "relatedIds": [
       "izakaya-guide-first-timers",
-      "wabi-sabi-explained"
+      "wabi-sabi-explained",
+      "koenji-shimokitazawa"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1730,7 +1806,7 @@
     "relatedIds": [
       "tsukiji-outer-market-guide",
       "japan-convenience-store-guide",
-      "japanese-menu-guide"
+      "ramen-regional-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2032,7 +2108,7 @@
     "relatedIds": [
       "ic-card-japan-guide",
       "10-days-japan-no-tourist-traps",
-      "japan-winter-travel-guide"
+      "hiroshima-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2134,9 +2210,9 @@
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
-      "ic-card-japan-guide",
+      "sumo-tournament-guide",
       "kissaten-tokyo-coffee-culture",
-      "tokyo-day-trips"
+      "koenji-shimokitazawa"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2195,8 +2271,8 @@
       "budget"
     ],
     "publishedAt": "2026-05-31",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/ramen-regional-guide.webp",
     "heroImageAlt": "A bowl of Hakata tonkotsu ramen with chashu pork and soft-boiled egg",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2212,31 +2288,74 @@
       {
         "heading": "Four styles, not one",
         "paragraphs": [
-          "The four canonical regional ramen styles in Japan are Sapporo (miso), Hakata (tonkotsu), Tokyo (shoyu), and Kitakata (shoyu with flat noodles). This is a simplification. Within each region there are dozens of substyles, proprietary broths, and variations by shop. But the four regional types give you a framework that is more useful than 'ramen is ramen.'"
+          "The four canonical regional ramen styles in Japan are Sapporo (miso), Hakata (tonkotsu), Tokyo (shoyu), and Kitakata (shoyu with flat noodles). This is a simplification. Within each region there are dozens of substyles, proprietary broths, and variations by shop. But the four regional types give you a framework that is more useful than 'ramen is ramen.'",
+          "The framework works because a bowl of ramen is really four separate decisions: the broth (what was simmered), the tare (the seasoning base — soy, salt or miso — that actually determines the flavour), the noodle (thin and straight, or thick and wavy), and the toppings. Regional styles are conventional combinations of those four. Once you can hear the four parts separately, a menu in a language you do not read becomes navigable.",
+          "One thing worth setting straight early: ramen is not ancient. It arrived from China around the turn of the twentieth century, spread through post-war street stalls, and became regionally distinct within living memory. It is a modern food that Japan made thoroughly its own, which is why it evolves so fast."
         ]
       },
       {
         "heading": "Hakata tonkotsu",
         "paragraphs": [
-          "Hakata ramen from Fukuoka is the style most likely to become your obsession. The broth is made from pork bones (tonkotsu) simmered for 12 to 18 hours until it turns milky white and rich enough to coat a spoon. The noodles are thin and straight, cooked harder than you'd expect. The correct serving size is small — a half-portion (kogata) is standard, and you're expected to order kaedama (a noodle refill) into the remaining broth. Shops around Hakata Station and the yatai stalls along the Naka River are where to eat it. Budget ¥700–1,000."
+          "Hakata ramen from Fukuoka is the style most likely to become your obsession. The broth is made from pork bones (tonkotsu) simmered for 12 to 18 hours until it turns milky white and rich enough to coat a spoon. The noodles are thin and straight, cooked harder than you'd expect. Shops around Hakata Station and the yatai stalls along the Naka River are where to eat it. Budget ¥700–1,000.",
+          "The small portion and the kaedama are the mechanism that makes the style work. Thin noodles go soft fast in a broth that heavy, so the bowl is built small deliberately: you eat the first portion at its correct texture, then call 'kaedama' and a second nest of noodles arrives in about ninety seconds to go into the remaining broth. Ordering one large bowl instead gets you a worse version of the same food.",
+          "Firmness is specified at the counter and the vocabulary is worth having: futsu (normal), katame (firm), barikata (very firm), harigane (wire — barely cooked). Start at katame. Barikata is not a test of character and locals order across the whole range.",
+          "The yatai — the open-air stalls that set up along the river at dusk — are the atmospheric version and cost a little more than a shop. Ten seats, a plastic sheet against the wind, strangers beside you. It is one of the few genuinely convivial ways to eat ramen, a food otherwise eaten fast and alone."
         ]
       },
       {
         "heading": "Tokyo shoyu",
         "paragraphs": [
-          "Tokyo shoyu ramen is the gentler style. Chicken or pork-based broth seasoned with soy sauce, usually clearer than Hakata broth, with medium wavy noodles. The toppings are what distinguish one Tokyo shop from another: chashu pork, a soft-boiled egg marinated in soy and mirin, bamboo shoots, nori. The shop Fuunji in Shinjuku makes a tsukemen (dipping ramen) version that requires arriving at 11am or accepting a 45-minute wait."
+          "Tokyo shoyu ramen is the gentler style. Chicken or pork-based broth seasoned with soy sauce, usually clearer than Hakata broth, with medium wavy noodles. The toppings are what distinguish one Tokyo shop from another: chashu pork, a soft-boiled egg marinated in soy and mirin, bamboo shoots, nori.",
+          "This is the oldest of the four and the closest to the original Chinese-influenced bowl. It is also the one that rewards attention least dramatically and most durably — there is nothing overwhelming in it, so the quality of the stock and the tare has nowhere to hide. A great shoyu bowl tastes clean and deep at the same time, and a mediocre one just tastes like salty soup.",
+          "Tsukemen, where thick cold noodles are served beside a small bowl of concentrated dipping broth, is a Tokyo development worth trying once you have had the standard version. It is a different eating experience: the noodles stay firm throughout, and the broth is intense because it is never meant to be drunk on its own. Popular tsukemen shops have queues that form before opening."
         ]
       },
       {
         "heading": "Sapporo miso",
         "paragraphs": [
-          "Sapporo miso ramen is the winter version — a heavier broth with miso paste stirred in, often with butter, sweet corn, and bean sprouts on top. It makes sense in Hokkaido in November in a way it doesn't in Tokyo in August. The Susukino neighborhood in Sapporo has the highest concentration of shops worth trying. Expect to spend ¥900–1,200."
+          "Sapporo miso ramen is the winter version — a heavier broth with miso paste stirred in, often with butter, sweet corn, and bean sprouts on top. It makes sense in Hokkaido in November in a way it doesn't in Tokyo in August. The Susukino neighborhood in Sapporo has the highest concentration of shops worth trying. Expect to spend ¥900–1,200.",
+          "The technical detail that defines it: the vegetables and the miso are stir-fried in a wok before the broth goes in, so the bowl carries a slight caramelised edge that no amount of miso stirred into finished soup will reproduce. The noodles are thick, yellow and curly, which is a deliberate match — they hold a heavy broth without collapsing.",
+          "Hokkaido has two other bowls worth knowing if you are there. Hakodate is the home of shio (salt) ramen, the lightest of all the styles and almost transparent. Asahikawa uses a soy broth with a layer of lard on the surface that keeps it scalding in genuinely cold weather. Neither travels well to a Tokyo summer, which is rather the point of both."
+        ]
+      },
+      {
+        "heading": "Kitakata, the fourth one nobody orders",
+        "paragraphs": [
+          "Kitakata is a small city in Fukushima with a population under fifty thousand and something in the region of a hundred ramen shops, which is the highest concentration per head in Japan. It is the fourth canonical style and the one visitors almost never eat, purely because it is not on the Tokyo–Kyoto–Osaka line.",
+          "The bowl is a light soy broth, usually pork and dried sardine, and the distinguishing feature is the noodle: flat, broad, and visibly wavy, with a high water content that gives it a soft, slippery chew unlike anything in the other three styles. The topping is generally plain — chashu, spring onion, menma — because the noodle is the event.",
+          "The local habit is asa-ra: ramen for breakfast. Shops open at seven and are busy by half past. If you are travelling north to Aizu-Wakamatsu or through Fukushima at all, it is worth the detour, and it is a useful corrective to the idea that heavier always means better."
+        ]
+      },
+      {
+        "heading": "The styles that broke the map",
+        "paragraphs": [
+          "The four-region framework describes ramen as it was around 1980. Several of the bowls you will actually be offered in Tokyo today belong to schools that postdate it.",
+          "Iekei, out of Yokohama, splits the difference between tonkotsu and shoyu — pork and chicken broth with a soy tare, thick straight noodles, spinach and a sheet of nori, and a bowl of rice on the side that you are expected to use to mop up. Jiro-style is the maximalist one: an enormous mound of boiled bean sprouts and cabbage over thick noodles and fatty pork, ordered with a shouted list of free toppings that intimidates newcomers on purpose. Abura soba has no broth at all — noodles, tare and oil in the bottom of the bowl, mixed vigorously before eating.",
+          "None of these is a tourist trap or a novelty. They are what a lot of people in Tokyo mean when they say they are going for ramen."
         ]
       },
       {
         "heading": "How to order",
         "paragraphs": [
-          "How to order at a ramen shop: most have ticket vending machines at the entrance. Put in your money, select your bowl, take the ticket, and hand it to staff when you sit. If you want a soft-boiled egg (onsen tamago or ajitama), it's usually a separate button. Noodle firmness (kata for firm, yawarakai for soft) and richness (koi for heavy, asa for light) can be specified at some shops. Do not over-specify at your first visit. Order the standard and learn what you're tasting before you start adjusting."
+          "How to order at a ramen shop: most have ticket vending machines at the entrance. Put in your money, select your bowl, take the ticket, and hand it to staff when you sit. If you want a soft-boiled egg (ajitama), it's usually a separate button.",
+          "The machines are often Japanese-only, and the reliable move is to buy the top-left button. Japanese vending layouts put the shop's signature bowl there by convention, and it is what you want on a first visit anyway. Many machines now have an English toggle; a photo menu taped beside the machine is also common.",
+          "Do not over-specify at your first visit. Order the standard and learn what you're tasting before you start adjusting. Noodle firmness and broth richness can be specified at some shops, and doing so before you know the house version tells you nothing."
+        ]
+      },
+      {
+        "heading": "How to eat it",
+        "paragraphs": [
+          "Fast. A bowl of ramen is engineered to be at its best for about eight minutes, after which the noodles have absorbed broth and gone soft. This is why ramen shops are quiet, why the seats are a counter facing a wall, and why nobody lingers. Eating it slowly while talking is not a relaxed approach to ramen, it is a worse bowl of ramen.",
+          "Slurping is real and it is functional — it cools the noodles on the way in and pulls broth along with them. Nobody is counting, but you will notice that the room is louder than any other restaurant in Japan and quieter in conversation.",
+          "Lift the bowl to drink the broth at the end if you want to; it is normal. Finishing all of it is a compliment and leaving some is not an insult. Put your chopsticks down across the bowl or on the rest, stack nothing, and leave. The seat behind you is usually spoken for."
+        ]
+      },
+      {
+        "heading": "What it costs and what to expect",
+        "paragraphs": [
+          "A bowl runs roughly ¥800–1,200 nearly everywhere, including at shops with queues down the street. Ramen is not a food where price tracks quality closely, and a ¥2,000 bowl is unusual enough to be a warning rather than a promise.",
+          "Water is self-service from a jug at the counter, there is no table service to speak of, and there is no tipping. Many shops are cash-only and several of the famous ones seat fewer than twelve people. Solo dining is the default rather than the exception, and some shops have partitioned single booths precisely so that nobody has to interact with anyone.",
+          "Queues move faster than they look. A line of fifteen people outside a ten-seat shop is about a twenty-minute wait, because the turnover inside is ten minutes a head."
         ]
       }
     ]
@@ -2251,8 +2370,8 @@
       "first-time"
     ],
     "publishedAt": "2026-05-30",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/sumo-tournament-guide.webp",
     "heroImageAlt": "Two sumo wrestlers facing off in the dohyo ring at Ryogoku Kokugikan",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2267,37 +2386,80 @@
       {
         "heading": "Tournament schedule and cities",
         "paragraphs": [
-          "Sumo holds six official tournaments (basho) per year, each lasting 15 days. The January, May, and September basho are in Tokyo at Ryogoku Kokugikan. The March basho is in Osaka, July in Nagoya, and November in Fukuoka. If you're planning a trip around attending a tournament, knowing this schedule is step one. January and September in Tokyo are typically the most accessible for international visitors because they don't overlap with Golden Week or summer school holidays."
+          "Sumo holds six official tournaments (basho) per year, each lasting 15 days. The January, May, and September basho are in Tokyo at Ryogoku Kokugikan. The March basho is in Osaka, July in Nagoya, and November in Fukuoka. If you're planning a trip around attending a tournament, knowing this schedule is step one. January and September in Tokyo are typically the most accessible for international visitors because they don't overlap with Golden Week or summer school holidays.",
+          "Tournaments always start on a Sunday and end on a Sunday. The two weekends and the final few days are the hardest tickets; a Tuesday or Wednesday in the first week is the easiest, and the sumo is no worse. If your dates are flexible at all, aim mid-week and early.",
+          "Outside the six tournaments there is nothing to watch competitively, which catches people out — there is no weekly fixture list. If your trip falls between basho, the regional exhibition tours (jungyo) travel the country in the gaps, and morning practice at a stable is the other option."
         ]
       },
       {
         "heading": "Getting tickets",
         "paragraphs": [
-          "Getting tickets: the Japan Sumo Association sells official tickets at Ticket Pia starting roughly two months before the tournament. The best seats (masu-seki, the box seats on the ground floor) sell out in days. What's available to visitors with short notice: elevated arena seats (isu-seki), which start around ¥3,800 for the upper tiers, and same-day door tickets (¥2,200 for the cheap seats) that go on sale at the venue from 8am. The door ticket strategy works — arrive at Ryogoku at 7:30am and you will get in."
+          "The Japan Sumo Association sells official tickets at Ticket Pia starting roughly two months before the tournament. The best seats (masu-seki, the box seats on the ground floor) sell out in days. What's available to visitors with short notice: elevated arena seats (isu-seki), which start around ¥3,800 for the upper tiers, and same-day door tickets (¥2,200 for the cheap seats) that go on sale at the venue from 8am. The door ticket strategy works — arrive at Ryogoku at 7:30am and you will get in.",
+          "The same-day tickets are the answer for most visitors and they are worth understanding properly. A limited number go on sale each morning, one per person, cash, at the box office on the east side of the building. On a quiet weekday you can turn up at 8am and walk in. On a final weekend, or if a popular wrestler is having a good tournament, the queue starts before dawn.",
+          "Resale sites carry tickets at multiple times face value. This is legal for some and not for others, and the Association actively discourages it. Given that a same-day seat costs ¥2,200 and the sumo is identical from every seat in the building, paying ¥15,000 to a reseller is a poor trade."
+        ]
+      },
+      {
+        "heading": "Which seat to actually buy",
+        "paragraphs": [
+          "Masu-seki are the square boxes on the floor, sold as a unit for four people, and they are the iconic sumo seat: you sit on flat cushions in a railed-off square, with food and drink brought to you. They are also the least comfortable seat in the building for anyone not used to sitting on the floor for several hours, and the four-person pricing means a couple pays for two seats they will not use.",
+          "Isu-seki are ordinary chairs on the raised tiers above. They have backs, they have legroom, and the view of the ring is unobstructed and often better than the floor because you are looking down into it rather than across it. For a first tournament this is the correct purchase.",
+          "The front-row floor seats — tamari-seki, the ones directly against the ring where the audience sits in formal dress — are not generally sold to the public and come with a real hazard: wrestlers land in them regularly. This happens several times per tournament and is one reason the seats are what they are."
         ]
       },
       {
         "heading": "What you are watching",
         "paragraphs": [
-          "What you're watching: sumo matches are short. The actual bout can last anywhere from two seconds to two minutes. The bulk of the time in a sumo tournament is ritual — the ring-entering ceremony (dohyo-iri) for the highest-ranked wrestlers, salt throwing, the slow psychological confrontation before the wrestlers crouch and charge. Understanding that the ceremony is the event, not the prelude to it, changes everything about how to watch."
+          "Sumo matches are short. The actual bout can last anywhere from two seconds to two minutes. The bulk of the time in a sumo tournament is ritual — the ring-entering ceremony (dohyo-iri) for the highest-ranked wrestlers, salt throwing, the slow psychological confrontation before the wrestlers crouch and charge. Understanding that the ceremony is the event, not the prelude to it, changes everything about how to watch.",
+          "Sumo is a Shinto practice as much as a sport, and the ring is treated as sacred ground. The salt is purification, thrown by the handful by the upper divisions and in visible quantity. The stamping is to drive out evil from the ring. The suspended roof above the dohyo is a shrine roof, and the four coloured tassels hanging from it represent the seasons and the compass directions.",
+          "The staring is not theatre either. The two wrestlers crouch, touch the ground, rise, retreat to their corners, and repeat this several times. They are timing each other. The charge (tachiai) is only legitimate when both men commit simultaneously and unprompted — there is no starting signal, and matching that instant is a genuine skill. A bout is frequently decided in the first half second of contact."
+        ]
+      },
+      {
+        "heading": "How a bout is won",
+        "paragraphs": [
+          "The rules are simple enough to learn in a sentence: you lose if any part of your body other than the soles of your feet touches the ground, or if you step or are pushed out of the straw ring. That is the whole of it.",
+          "What is not simple is the vocabulary. There are eighty-odd recognised winning techniques (kimarite), and the announcer names the one used after each bout. Four cover most of what you will see: yorikiri (a forward drive out while gripping the belt), oshidashi (a push out with no grip), hatakikomi (a slap-down as the opponent lunges), and uwatenage (an over-arm throw). Recognising those four is enough to follow the day.",
+          "The belt — the mawashi — is the strategic centre of the sport. A wrestler who gets both hands on his opponent's belt in a favoured grip has usually already won, and much of the apparent stalemate in a longer bout is two men fighting over grip rather than position."
+        ]
+      },
+      {
+        "heading": "The ranks, and why the last day matters",
+        "paragraphs": [
+          "The top division is makuuchi. Within it, from the top: yokozuna (grand champion), ozeki, sekiwake, komusubi, and then the numbered maegashira ranks. Below makuuchi sits juryo, and below that the unsalaried divisions whose wrestlers also serve as attendants to the ranked men.",
+          "Each wrestler in the top divisions fights fifteen bouts, one per day. Eight wins is kachikoshi — a winning record, which means promotion or at least safety. Seven or fewer is makekoshi and means demotion. This is why the final days carry so much weight: a large share of the field arrives at day 13 or 14 sitting on seven wins, with a career-relevant result riding on a bout lasting four seconds.",
+          "The rank list itself, the banzuke, is a calligraphed document published before each tournament, with name size scaling to rank. It is sold at the venue for a few hundred yen and is the best souvenir in the building."
         ]
       },
       {
         "heading": "When to arrive",
         "paragraphs": [
-          "Timing: the day begins at 8am with the lowest-ranked wrestlers, and the audience trickles in as the day progresses. The top-division matches (makuuchi) begin around 3pm and end around 6pm. Most visitors arrive around 2pm, which is correct. The atmosphere builds through the afternoon. The final few bouts of the day — particularly if a yokozuna or ozeki is involved in a high-stakes match — generate a noise level that is genuinely startling."
+          "The day begins at 8am with the lowest-ranked wrestlers, and the audience trickles in as the day progresses. The top-division matches (makuuchi) begin around 3pm and end around 6pm. Most visitors arrive around 2pm, which is correct. The atmosphere builds through the afternoon. The final few bouts of the day — particularly if a yokozuna or ozeki is involved in a high-stakes match — generate a noise level that is genuinely startling.",
+          "There is an argument for arriving much earlier at least once. In the morning the hall is nearly empty, you can sit close, the young wrestlers in the lower divisions fight with obvious desperation because their careers depend on it, and nothing is ceremonial because nobody is watching. It is a completely different event from the same building at five in the afternoon.",
+          "The two moments not to miss in the afternoon: the makuuchi dohyo-iri around 3:40pm, when the whole top division enters in embroidered ceremonial aprons, and the yokozuna's own entrance immediately after, performed alone with two attendants."
         ]
       },
       {
-        "heading": "Food and drink at Kokugikan",
+        "heading": "Food, drink, and the building",
         "paragraphs": [
-          "What to eat and drink at the venue: the basement of Kokugikan has chankonabe, the stew traditionally eaten by sumo wrestlers. It is not a gimmick. It's good stew, with chicken and vegetables in a clear dashi broth, and it costs around ¥1,000. There are also yakitori stalls and beer vendors. Food at the masu boxes is served in bento-style sets and can be ordered in advance with tickets."
+          "The basement of Kokugikan has chankonabe, the stew traditionally eaten by sumo wrestlers. It is not a gimmick. It's good stew, with chicken and vegetables in a clear dashi broth, and it costs around ¥1,000. There are also yakitori stalls and beer vendors. Food at the masu boxes is served in bento-style sets and can be ordered in advance with tickets.",
+          "The yakitori is worth a note of its own: it is made in a kitchen in the basement of the stadium itself, and it is genuinely good. Eating and drinking through the afternoon is entirely normal — this is not an event where the audience sits in silence.",
+          "There is also a small sumo museum on the ground floor, free with a ticket, and the souvenir shops sell everything from banzuke to hand towels printed with individual wrestlers' names. Arrive an hour before you plan to sit down and there is plenty to occupy it."
+        ]
+      },
+      {
+        "heading": "If you can't get a ticket: morning practice",
+        "paragraphs": [
+          "Some sumo stables (heya) in the Ryogoku area allow visitors to watch morning training, and it is arguably a better experience than a tournament day. Practice starts around 6am, you sit on the floor a few metres from wrestlers colliding at full speed in a small room, and there is no crowd and no ceremony.",
+          "The conditions are strict and non-negotiable: absolute silence, no photography unless expressly permitted, no leaving mid-session, formal-ish clothing, and no talking to the wrestlers. You are in someone's home and workplace. Most stables require arrangement in advance, often through a hotel concierge or a specialist tour, and several no longer accept visitors at all.",
+          "Between tournaments this is the only sumo available, and even during a basho the stables train in the mornings. If your dates miss the basho entirely, this is the thing to arrange instead of writing sumo off."
         ]
       },
       {
         "heading": "What surprises you in person",
         "paragraphs": [
-          "The wrestlers are larger than you expect. The ring is smaller than you expect. The speed of the bouts is faster than you expect. These three surprises reliably improve the live experience over whatever you were imagining from television coverage."
+          "The wrestlers are larger than you expect. The ring is smaller than you expect. The speed of the bouts is faster than you expect. These three surprises reliably improve the live experience over whatever you were imagining from television coverage.",
+          "The fourth is the noise. Between bouts the hall is unusually quiet for a sports venue, and the sound of two very large men colliding carries to the back row without amplification. Television compresses it into nothing. In the building it is the thing you remember."
         ]
       }
     ]
@@ -2439,8 +2601,8 @@
       "off-the-beaten-path"
     ],
     "publishedAt": "2026-05-27",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/hiroshima-guide.webp",
     "heroImageAlt": "The Genbaku Dome atomic bomb memorial in Hiroshima beside the river",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2456,31 +2618,58 @@
       {
         "heading": "The Peace Memorial Museum",
         "paragraphs": [
-          "The Peace Memorial Park and Museum is why most people come to Hiroshima, and it should be. The museum documents what happened on August 6, 1945 with a directness and specificity that other memorial museums often avoid — personal objects, shadows burned into stone, recorded testimony. The Children's Peace Monument, the Genbaku Dome, the Flame of Peace that has burned continuously since 1964 and is meant to burn until all nuclear weapons are gone. Budget two to three hours, not one."
+          "The Peace Memorial Park and Museum is why most people come to Hiroshima, and it should be. The museum documents what happened on August 6, 1945 with a directness and specificity that other memorial museums often avoid — personal objects, shadows burned into stone, recorded testimony. Budget two to three hours, not one.",
+          "The main building was rebuilt and rehung in 2019, and the sequence now leads with the human consequences before the historical and political context rather than after it. The effect is deliberate and it works. The objects carry it: a tricycle, a lunchbox with its contents carbonised, a school uniform, each with the name and age of the child it belonged to and a short account of where they were found.",
+          "It is a difficult two hours and you should plan the day around that rather than scheduling something cheerful immediately afterwards. Go in the morning while you have the energy for it. There are benches outside along the river, and taking half an hour there before doing anything else is the normal response, not an overreaction."
+        ]
+      },
+      {
+        "heading": "The rest of the park",
+        "paragraphs": [
+          "The park is not only the museum, and the individual monuments repay knowing about in advance. The Genbaku Dome — the former Industrial Promotion Hall, left in exactly the state the blast left it — is the one image everyone knows. It stands almost directly under the detonation point, which is why any of it survived: the force came near-vertically down onto it rather than sideways.",
+          "The Children's Peace Monument commemorates Sadako Sasaki, who developed leukaemia at eleven and folded paper cranes toward a thousand in the belief that it would make her well. The glass cases around the monument hold cranes sent by schools from all over the world, and they are replaced constantly because the volume never stops.",
+          "The Cenotaph is worth standing in front of properly. It is a saddle-shaped arch holding the register of every named victim, and it is aligned so that looking through it frames the Flame of Peace and the Genbaku Dome behind it in a single line. The flame has burned since 1964 and is intended to be extinguished when the last nuclear weapon on earth is gone.",
+          "The hypocentre itself is not in the park. It is a small marker on an ordinary side street about 300 metres east, outside a clinic, with traffic going past. Finding it is a stranger experience than the park is."
         ]
       },
       {
         "heading": "Hiroshima beyond the park",
         "paragraphs": [
-          "What you'll find beyond the memorial. Hiroshima has one of Japan's most interesting covered shotengai (shopping arcade) districts, centered around Hondori and its side streets. It's genuinely local — not a tourist market, but the arcade where people in Hiroshima buy clothes and eat lunch. The okonomiyaki restaurants here are a reason to visit Hiroshima independent of the memorial."
+          "Hiroshima has one of Japan's most interesting covered shotengai (shopping arcade) districts, centered around Hondori and its side streets. It's genuinely local — not a tourist market, but the arcade where people in Hiroshima buy clothes and eat lunch. The okonomiyaki restaurants here are a reason to visit Hiroshima independent of the memorial.",
+          "The thing that takes visitors a moment to absorb is that Hiroshima is a completely normal, busy, cheerful Japanese city of over a million people. It is not a memorial with a town attached. Spending the afternoon shopping and eating after spending the morning in the museum is not disrespectful; it is more or less the point the city has spent eighty years making."
         ]
       },
       {
         "heading": "Hiroshima okonomiyaki",
         "paragraphs": [
-          "Hiroshima okonomiyaki is different from Osaka okonomiyaki. The Osaka version mixes everything together; the Hiroshima version layers ingredients — batter, bean sprouts, cabbage, noodles (yes, noodles), pork, egg — in sequence on a flat griddle. The result is denser and more substantial than the Osaka style. The specific place for it is Okonomimura, a three-floor building near the Hondori arcade with around 25 individual shops each making their version. Pick one that looks busy. Budget ¥1,000–1,400."
+          "Hiroshima okonomiyaki is different from Osaka okonomiyaki. The Osaka version mixes everything together; the Hiroshima version layers ingredients — batter, bean sprouts, cabbage, noodles (yes, noodles), pork, egg — in sequence on a flat griddle. The result is denser and more substantial than the Osaka style. Budget ¥1,000–1,400.",
+          "The specific place for it is Okonomimura, a three-floor building near the Hondori arcade with around 25 individual shops each making their version. Pick one that looks busy. The shops are nearly identical in menu and differ in the cook, so the crowd is the only signal you have and it is a good one.",
+          "Sit at the counter, not a table. The dish is built on the griddle in front of you over about ten minutes, served onto the hot metal directly rather than a plate, and eaten from there with a small metal spatula. Choose soba or udon for the noodle layer; soba is the default. Adding oysters is worth it between November and February, when Hiroshima Bay is producing most of Japan's supply."
         ]
       },
       {
         "heading": "Miyajima Island",
         "paragraphs": [
-          "Miyajima Island: a 10-minute ferry from Hiroshima port (covered by the JR Pass). The vermilion torii gate of Itsukushima Shrine, standing in the sea at high tide, is one of those images that is on every Japan poster and still manages to be more striking in person than in photographs. Walk past the shrine to the hills — Daishoin Temple and the path up to Mt. Misen take you away from the day-trippers within 20 minutes. The island also has deer, which are smaller and less aggressive than Nara's but will absolutely eat your map."
+          "Miyajima Island: a 10-minute ferry from Miyajimaguchi (covered by the JR Pass, as it is a JR service). The vermilion torii gate of Itsukushima Shrine, standing in the sea at high tide, is one of those images that is on every Japan poster and still manages to be more striking in person than in photographs.",
+          "Check the tide table before you go, because the island is effectively two different destinations. At high tide the gate and the shrine stand in water and the shrine's boardwalks appear to float. At low tide the water withdraws entirely and you can walk out across the sand to stand underneath the gate. Both are worth seeing and neither is a substitute for the other — the tide tables are published online and by the ferry operators.",
+          "Walk past the shrine to the hills. Daishoin Temple, on the slope above, is a working Shingon temple with a covered stairway lined with metal prayer wheels and a cave hall lit by hundreds of lanterns, and it is largely empty because most day-trippers stop at the shrine. Beyond it, Mt. Misen can be climbed in about two hours or reached by ropeway to a point twenty minutes' walk below the summit. The view from the top takes in the whole Seto Inland Sea.",
+          "The island also has deer, which are smaller and less aggressive than Nara's but will absolutely eat your map. There are no crackers sold here and feeding them is discouraged."
+        ]
+      },
+      {
+        "heading": "The castle, the garden, and the trams",
+        "paragraphs": [
+          "Hiroshima Castle was flattened in 1945 and rebuilt in 1958. The keep is a concrete reconstruction housing a decent museum on the city's history as a castle town, and the grounds are pleasant. What is genuinely affecting is a eucalyptus and a willow inside the grounds that survived the blast and are still growing, marked as such.",
+          "Shukkeien is a formal garden dating from 1620, laid out around a central pond with a compressed miniature landscape of bridges, islands and tea houses. It was destroyed and became a refuge for the wounded in 1945; many died in it, and there is a memorial. It has been fully restored and is now simply a beautiful garden, half an hour's slow walk from end to end.",
+          "Get around by streetcar. Hiroshima kept its tram network when most Japanese cities scrapped theirs, and it is the easiest way to cross the city at a flat fare. Several cars still in service are pre-war, and a few of those were running on the morning of August 6 and were repaired and put back to work within days. They are marked, and riding one is a curious way to spend fifteen minutes."
         ]
       },
       {
         "heading": "How long to stay",
         "paragraphs": [
-          "Timing: Hiroshima is a half-day to full-day stop on the standard Tokyo–Kyoto–Osaka route (Shinkansen from Shin-Osaka takes about 85 minutes). A full day allows the museum, Hondori, lunch, and a Miyajima trip. Staying overnight allows a more complete Miyajima experience and access to the city at night, when the riverfront around the Motoyasu-gawa is worth walking."
+          "Hiroshima is a half-day to full-day stop on the standard Tokyo–Kyoto–Osaka route (Shinkansen from Shin-Osaka takes about 85 minutes). A full day allows the museum, Hondori, lunch, and a Miyajima trip, though it will be a compressed day and Miyajima will get the short end of it.",
+          "Staying overnight is the better call if you can. It gives Miyajima a proper half day rather than a rushed afternoon, and it gives you the city in the evening, when the riverbanks around the Motoyasu-gawa fill up and the Dome is lit. A night here also breaks up what is otherwise a long stretch of Kansai for most itineraries.",
+          "If you have two nights, stay one of them on Miyajima itself. The last ferry takes the day-trippers off around dusk, the island empties, and the shrine at night with nobody on the boardwalk is the version of the place that people who have been twice will tell you about."
         ]
       }
     ]
@@ -2504,7 +2693,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "hidden-shrines-kyoto",
-      "kanazawa-japan-guide",
+      "hokkaido-summer-guide",
       "tokyo-day-trips"
     ],
     "author": "TABI Editorial",
@@ -2686,7 +2875,7 @@
     "relatedIds": [
       "tsukiji-outer-market-guide",
       "japanese-menu-guide",
-      "izakaya-guide-first-timers"
+      "wagyu-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2733,8 +2922,8 @@
       "first-time"
     ],
     "publishedAt": "2026-05-22",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/nara-day-trip.webp",
     "heroImageAlt": "Sika deer roaming free in Nara Park with Todai-ji temple visible through the trees",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2750,31 +2939,66 @@
       {
         "heading": "The deer",
         "paragraphs": [
-          "Nara Park has approximately 1,200 sika deer that have been designated national treasures and have, over generations of contact with tourists, learned that a particular bowing gesture triggers cracker-giving. You can buy shika-senbei (deer crackers) from vendors at ¥200 a pack. The deer will absolutely approach you. Some will grab your bag. One will probably bite you lightly on the jacket. This is fine and expected and takes under an hour before it becomes routine. The question is what you do with the rest of the day."
+          "Nara Park has approximately 1,200 sika deer that have been designated national treasures and have, over generations of contact with tourists, learned that a particular bowing gesture triggers cracker-giving. You can buy shika-senbei (deer crackers) from vendors at ¥200 a pack. The deer will absolutely approach you. Some will grab your bag. One will probably bite you lightly on the jacket. This is fine and expected and takes under an hour before it becomes routine. The question is what you do with the rest of the day.",
+          "Two practical warnings. Do not tease them with the crackers — holding food above your head to draw out the bowing produces butting and nipping from animals that weigh fifty kilos, and the injury statistics are not zero. Buy a pack, hand it out promptly, show your empty hands, and they lose interest immediately.",
+          "And keep paper out of reach. They eat maps, tickets, and the corners of guidebooks with real enthusiasm. Anything in an outside pocket is fair game. The crackers themselves are made without any packaging for exactly this reason.",
+          "The deer are wild animals with legal protection rather than a managed attraction, which is why there are no fences and why they wander into the road, the shops and occasionally the train station. Autumn is rutting season and the males are genuinely unpredictable; the park cuts their antlers each October in a public ceremony that dates back to the 1600s."
         ]
       },
       {
         "heading": "Todai-ji",
         "paragraphs": [
-          "Todai-ji Temple: the largest wooden building in the world and home to a 15-meter bronze Buddha (the Nara Daibutsu) that has been sitting in approximately the same position since 752 AD. Entrance is ¥600. The scale is genuinely difficult to convey — the Buddha's nostril is the size of a small door, and there is a pillar inside the building with a hole at the base that's the same diameter as the nostril, which children (and optimistic adults) attempt to crawl through as a matter of ritual. Budget 45 minutes."
+          "Todai-ji Temple: one of the largest wooden buildings in the world and home to a 15-meter bronze Buddha (the Nara Daibutsu) that has been sitting in approximately the same position since 752 AD. Entrance is ¥600. The scale is genuinely difficult to convey — the Buddha's nostril is the size of a small door, and there is a pillar inside the building with a hole at the base that's the same diameter as the nostril, which children (and optimistic adults) attempt to crawl through as a matter of ritual.",
+          "The building you are standing in is the third one. The first two burned in wars, in 1180 and 1567, and the current hall dates from 1709 — at which point the country could not afford the original width, so it was rebuilt at about two thirds of the earlier scale. That is worth pausing on, because it means the original was half again as wide as the enormous building in front of you.",
+          "Do not walk straight through the Nandaimon, the great gate on the approach. Set into its two sides are a pair of eight-metre guardian figures carved in 1203 by Unkei and Kaikei and their workshop, in a couple of months, out of thousands of pieces of joined wood. They are among the greatest sculptures in Japan and most visitors photograph the gate from outside and never look up into the alcoves."
+        ]
+      },
+      {
+        "heading": "Nigatsudo, the part people miss",
+        "paragraphs": [
+          "Up the hill behind the Daibutsu hall, five minutes on a stone staircase, is Nigatsudo. It is free, it is open at all hours, and its wooden veranda looks out west over the whole of Nara with the temple roofs in the foreground. It is the best view in the city and it is nearly always quiet.",
+          "It is also the site of Omizutori, a fire and water ritual performed every year for over 1,250 years without interruption — through wars, fires and the pandemic. For two weeks in March, monks run along that veranda at night carrying six-metre burning cedar torches and shower sparks over the crowd below. If you are in Kansai in early March, reorganise your evening for it.",
+          "The lane between Todai-ji and Nigatsudo, walled and stone-paved, is the prettiest short walk in Nara and takes about eight minutes."
         ]
       },
       {
         "heading": "Kasuga Taisha",
         "paragraphs": [
-          "Kasuga Taisha: a Shinto shrine established in 768 AD, famous for its 3,000 stone and bronze lanterns that are lit twice a year (Setsubun in February and Obon in August). The path through the cedar forest to reach it is as good as the shrine itself — moss-covered stone lanterns lining the approach, deer wandering between the cedars. Entry to the outer grounds is free; the inner precinct is ¥500."
+          "Kasuga Taisha: a Shinto shrine established in 768 AD, famous for its 3,000 stone and bronze lanterns that are lit twice a year (Setsubun in February and Obon in August). The path through the cedar forest to reach it is as good as the shrine itself — moss-covered stone lanterns lining the approach, deer wandering between the cedars. Entry to the outer grounds is free; the inner precinct is ¥500.",
+          "Pay the ¥500. The inner corridors are where the bronze lanterns hang in ranks under the eaves, and there is a dark room where a small number of them are kept lit permanently between mirrored walls, which gives you the lantern festival on any ordinary Tuesday.",
+          "The shrine was rebuilt to an identical design every twenty years for most of its history, in the same tradition as Ise, which is why a building founded in 768 looks new. The forest behind it has been protected from logging since the ninth century and is now primary woodland in the middle of a city — a genuinely rare thing."
+        ]
+      },
+      {
+        "heading": "Kofuku-ji and the National Museum",
+        "paragraphs": [
+          "Kofuku-ji sits at the western edge of the park, closest to the stations, and its five-storey pagoda is the second tallest in Japan and the building most people photograph without knowing what it is. The grounds are open and free to walk through.",
+          "The reason to pay to go inside is the Ashura statue in the treasure hall: a 1,300-year-old dry-lacquer figure of a three-faced, six-armed guardian with the face of a teenager and an expression that is not the fierce one the form calls for but something closer to sorrow. It is one of the most famous objects in Japanese art and it is startlingly modern in feeling.",
+          "The Nara National Museum next door holds the country's best collection of Buddhist sculpture. For two weeks each autumn it also opens the Shosoin exhibition — objects from the eighth-century imperial treasure house, including Persian glass and Central Asian instruments that arrived along the Silk Road and have never been buried or excavated, only stored. If your visit coincides, prioritise it over everything else on this page."
         ]
       },
       {
         "heading": "Naramachi",
         "paragraphs": [
-          "Naramachi: the preserved merchant town directly south of Nara Park. Narrow alleys, machiya townhouses, textile shops, sake breweries, and craft cafés — the kind of neighborhood that was here 200 years ago and has been left largely intact. It's quieter than the park area and full of places to eat. Nakatanidou mochi shop has a famous kinako mochi (pounded rice cake) that queues extend to the street; the Kasugayama area has older restaurants with proper set lunch menus."
+          "Naramachi: the preserved merchant town directly south of Nara Park. Narrow alleys, machiya townhouses, textile shops, sake breweries, and craft cafés — the kind of neighborhood that was here 200 years ago and has been left largely intact. It's quieter than the park area and full of places to eat.",
+          "Nakatanidou, on the approach to the park, pounds mochi in public several times an hour — two men, one enormous wooden mallet, and a rhythm fast enough that it looks unsafe. A warm yomogi mochi rolled in kinako, eaten standing up, costs a couple of hundred yen and is one of the better small pleasures in Kansai.",
+          "Look for the small red cloth balls hanging outside the old houses. They are migawari-zaru, substitute monkeys, one for each member of the household, hung to take on misfortune in their place. Once you have noticed one you will see them on every street in the district."
         ]
       },
       {
         "heading": "Getting there and timing",
         "paragraphs": [
-          "Nara is 45 minutes from Kyoto by JR (¥730 or JR Pass) or about the same on the Kintetsu Line. It works as a half-day or full-day trip from either Kyoto or Osaka. The main park and Todai-ji can be crowded in the morning; the deer and crowds thin significantly after 3pm. If you're coming on a weekday and can arrive at 8:30am, the park before the day-trippers show up is a genuinely different experience."
+          "Nara is 45 minutes from Kyoto by JR (¥730 or JR Pass) or about the same on the Kintetsu Line. It works as a half-day or full-day trip from either Kyoto or Osaka.",
+          "The choice of line matters more than it looks. Kintetsu Nara Station is a five-minute walk from the park. JR Nara Station is about twenty minutes away, or a short bus ride. If you are not using a JR Pass, Kintetsu is the better option; if you are, factor the walk in.",
+          "The main park and Todai-ji can be crowded in the morning; the deer and crowds thin significantly after 3pm. If you're coming on a weekday and can arrive at 8:30am, the park before the day-trippers show up is a genuinely different experience. Todai-ji opens at 7:30am for much of the year, which is early enough to have the Daibutsu almost to yourself."
+        ]
+      },
+      {
+        "heading": "A workable order for one day",
+        "paragraphs": [
+          "Arrive early and go straight to Todai-ji before the coaches, then up to Nigatsudo for the view while it is still quiet. Walk the wooded path south to Kasuga Taisha, which puts you in the forest during the best light of the morning. That is the heavy half of the day and it is done by about noon.",
+          "Come down through the park to Kofuku-ji, eat in Naramachi, and spend the afternoon in the district at whatever pace you like. If the museum is showing something you want, put it after lunch. Head back to the station via Nakatanidou.",
+          "This leaves out Mt. Wakakusa, the grass hill on the eastern edge, which is worth an hour if you have it — a short steep climb, a ¥150 entry, and a view back over the temple roofs. It is burned to the ground every January in a festival nobody has a confirmed explanation for."
         ]
       }
     ]
@@ -2907,8 +3131,8 @@
       "off-the-beaten-path"
     ],
     "publishedAt": "2026-05-19",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/hokkaido-summer-guide.webp",
     "heroImageAlt": "Lavender fields in full bloom at Farm Tomita in Furano, Hokkaido",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2924,37 +3148,53 @@
       {
         "heading": "The climate case",
         "paragraphs": [
-          "Hokkaido is Japan's northernmost island and its least densely populated. The summer climate is a direct consequence of this geography: while central Honshu is enduring a summer that most temperate-climate visitors find difficult, Hokkaido is experiencing something close to a Northern European July. Average temperatures in Sapporo in July run 22–25°C, with lower humidity. It's possible to walk outside without immediately sweating through your clothes. For visitors arriving from humid climates, this discovery is approximately life-changing."
+          "Hokkaido is Japan's northernmost island and its least densely populated. The summer climate is a direct consequence of this geography: while central Honshu is enduring a summer that most temperate-climate visitors find difficult, Hokkaido is experiencing something close to a Northern European July. Average temperatures in Sapporo in July run 22–25°C, with lower humidity. It's possible to walk outside without immediately sweating through your clothes. For visitors arriving from humid climates, this discovery is approximately life-changing.",
+          "The other half of the case is the rainy season. Honshu, Kyushu and Shikoku spend roughly six weeks from early June under tsuyu, a near-continuous wet grey that ruins a lot of first trips to Japan. Hokkaido is the one region the front does not reach. June, which is a poor month almost everywhere else in the country, is one of the best months here.",
+          "Pack for it properly. Mornings and evenings drop into the low teens, and the high country is colder again — a summer day at Asahidake can sit around 10°C with wind. A light insulating layer and a waterproof shell are not optional, and visitors who packed for a Japanese summer are visibly cold by seven in the evening."
         ]
       },
       {
         "heading": "Lavender fields in Furano",
         "paragraphs": [
-          "The lavender fields of Furano are the most photographed image of Hokkaido summer: long rows of purple lavender against a backdrop of hills and clouds, peaking in early to mid-July. Farm Tomita in Furano is the most famous, and is legitimately beautiful despite being a tourist operation. Come early morning. The crowds arrive by 10am. The lavender at 7am with mist still on the hills is the real version of the photograph you've seen."
+          "The lavender fields of Furano are the most photographed image of Hokkaido summer: long rows of purple lavender against a backdrop of hills and clouds, peaking in early to mid-July. Farm Tomita in Furano is the most famous, and is legitimately beautiful despite being a tourist operation. Come early morning. The crowds arrive by 10am. The lavender at 7am with mist still on the hills is the real version of the photograph you've seen.",
+          "The bloom window is narrow — broadly the first three weeks of July, with the peak usually in the middle. Arrive in late June and you get green rows; arrive in August and the harvest has been cut. The farms publish bloom status, and building a trip around lavender without checking it is the most common way to be disappointed by Hokkaido.",
+          "Farm Tomita is free to enter and makes its money on lavender ice cream, soft drinks and cosmetics, which is a reasonable trade. If the crowds are too much, the smaller Choei Lavender Farm on the hillside above Nakafurano charges nothing, has a chairlift up through the rows, and is materially quieter for a nearly identical view."
         ]
       },
       {
         "heading": "Biei and the Panorama Road",
         "paragraphs": [
-          "Biei: a small town 20 kilometers north of Furano with rolling farmland — patchwork fields of potato, wheat, sunflower, and canola — that attracts photographers specifically for the quality of the light in summer. Renting a bicycle and spending the morning on the Panorama Road is the correct approach. No specific sight to reach; the road and the fields are the destination."
+          "Biei: a small town 20 kilometers north of Furano with rolling farmland — patchwork fields of potato, wheat, sunflower, and canola — that attracts photographers specifically for the quality of the light in summer. Renting a bicycle and spending the morning on the Panorama Road is the correct approach. No specific sight to reach; the road and the fields are the destination.",
+          "Take an electric bicycle rather than a standard one. The landscape photographs as gentle and rides as a continuous series of long climbs; rental shops by the station stock e-bikes for a modest premium and it is the difference between a pleasant morning and an ordeal.",
+          "There are named trees out here — the Ken and Mary Tree, the Seven Stars Tree, the Philosophy Tree — which became landmarks after appearing in cigarette and car advertisements decades ago. They are single trees in fields. Some visitors find the pilgrimage charming and others find it baffling; both reactions are correct. The Blue Pond a few kilometres away is the genuinely unusual sight: an artificial reservoir whose mineral content turns it an opaque cobalt with dead birch trunks standing in it.",
+          "One rule that matters here: the fields are working farms and not scenery. People walk into them for photographs every season, compact the soil, and destroy crops. Stay on the roads and the marked verges."
         ]
       },
       {
         "heading": "Sapporo",
         "paragraphs": [
-          "Sapporo: the capital and the city that functions as the base. The Odori Park beer garden runs all summer (July–August) — rows of tables under the elm trees with brewery stalls from Sapporo, Asahi, Kirin, and Suntory running simultaneously. This is worth a single evening on its own terms. Soup curry, a Sapporo invention, is served in most restaurants here and is one of those regional dishes that makes no sense until you've eaten it."
+          "Sapporo: the capital and the city that functions as the base. The Odori Park beer garden runs all summer (July–August) — rows of tables under the elm trees with brewery stalls from Sapporo, Asahi, Kirin, and Suntory running simultaneously. This is worth a single evening on its own terms.",
+          "Soup curry, a Sapporo invention, is served in most restaurants here and is one of those regional dishes that makes no sense until you've eaten it: a thin spiced broth rather than a thick sauce, served with rice on the side and large pieces of vegetable and a chicken leg sitting in it. You choose a spice level and a rice size. It is the city's best cheap meal.",
+          "The other two things to eat are the seafood and the ramen. Nijo Market in the centre and the larger Curb Market near Nijujo Station do rice bowls piled with crab, sea urchin and salmon roe from around ¥2,000 — Hokkaido is where most of Japan's supply comes from, and the difference in a bowl eaten here is not subtle. For ramen, the miso version is the local style, and Susukino has the highest concentration of shops worth trying.",
+          "Sapporo is also unusually easy to navigate for a Japanese city. It was laid out on a grid in the 1870s with numbered blocks running north–south and east–west from a central point, so an address tells you exactly where a place is — which is not true anywhere else in the country."
         ]
       },
       {
         "heading": "Daisetsuzan National Park",
         "paragraphs": [
-          "The Daisetsuzan National Park: the largest national park in Japan, an alpine region accessible from multiple trailheads. The ropeway at Asahidake gives access to volcanic terrain above 1,500 meters where the hiking is excellent and the views extend across the island. A serious day-hike into the high terrain will not intersect with many other people and looks nothing like the rest of Japan."
+          "The Daisetsuzan National Park: the largest national park in Japan, an alpine region accessible from multiple trailheads. The ropeway at Asahidake gives access to volcanic terrain above 1,500 meters where the hiking is excellent and the views extend across the island. A serious day-hike into the high terrain will not intersect with many other people and looks nothing like the rest of Japan.",
+          "The short version from the top of the ropeway is a marked loop of about an hour across a plateau of steaming vents, sulphur, and small alpine ponds. It requires no equipment beyond decent shoes and it is worth the trip on its own. The climb to the summit of Asahidake, Hokkaido's highest peak, is roughly two and a half hours up from the ropeway station and is a real mountain walk on loose volcanic scree.",
+          "Treat it as a mountain, not an attraction. Weather here changes fast and visibility can close in within twenty minutes; the ropeway suspends service in high wind, which can leave you walking down. Check the forecast, carry layers and water, and note that this is brown bear country — the population in Daisetsuzan is substantial. Carry a bell, make noise, and read the trailhead notices, which post recent sightings.",
+          "Snow lingers at altitude into July, and the alpine flowers come out immediately behind it. Mid-July to mid-August is the window where the high routes are reliably clear."
         ]
       },
       {
-        "heading": "Getting there",
+        "heading": "Getting there and getting around",
         "paragraphs": [
-          "Getting there: Sapporo (New Chitose Airport) is 1h40m from Tokyo by air. Domestic flights are cheap — book at least three weeks in advance for ¥8,000–15,000 return. Once you're there, a rental car is the right choice for Furano and Biei; trains exist but the timing is inconvenient for covering multiple areas in a day."
+          "Sapporo (New Chitose Airport) is 1h40m from Tokyo by air. Domestic flights are cheap — book at least three weeks in advance for ¥8,000–15,000 return. The route is one of the busiest air corridors in the world, which is why the fares stay low.",
+          "The Shinkansen does not reach Sapporo. It currently terminates at Shin-Hakodate-Hokuto in the south of the island, and the remaining leg is a further three and a half hours by limited express. Total journey time from Tokyo is eight hours or more. Unless you specifically want the ride, fly.",
+          "Once you're there, a rental car is the right choice for Furano and Biei; trains exist but the timing is inconvenient for covering multiple areas in a day. Distances are the thing visitors misjudge — Hokkaido is roughly the size of Austria with a fraction of the rail density, and two hours between places is normal. An international driving permit obtained before you leave home is required, and roads here are wide, well-surfaced and empty by Japanese standards.",
+          "If you would rather not drive, the Furano–Biei Norokko sightseeing train runs in summer between Asahikawa and Furano and stops at a temporary station beside the lavender farm, which covers the two headline sights without a car."
         ]
       }
     ]
@@ -2969,8 +3209,8 @@
       "tradition"
     ],
     "publishedAt": "2026-05-18",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/koenji-shimokitazawa.webp",
     "heroImageAlt": "Narrow street in Shimokitazawa lined with vintage clothing shops and cafes",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2986,31 +3226,51 @@
       {
         "heading": "What these neighborhoods are",
         "paragraphs": [
-          "Harajuku is famous. Shimokitazawa is known. Koenji is where people who've lived in Tokyo for five years go when they want to be reminded what the city felt like before everything got expensive and curated. Both Koenji and Shimokitazawa deserve an afternoon each, and the fastest way to understand why is to walk from the station in either direction without a destination."
+          "Harajuku is famous. Shimokitazawa is known. Koenji is where people who've lived in Tokyo for five years go when they want to be reminded what the city felt like before everything got expensive and curated. Both Koenji and Shimokitazawa deserve an afternoon each, and the fastest way to understand why is to walk from the station in either direction without a destination.",
+          "What they share is a history of being too awkward to redevelop. Both are dense grids of narrow streets around a small station, built up in the post-war decades with low rents that attracted students, musicians and people running one-room shops. Neither was flattened and rebuilt in the eighties, so the buildings are small, the rents stayed survivable longer than elsewhere, and the businesses in them are owner-operated rather than chains.",
+          "They are not preserved and they are not quaint. Both are ordinary places where people live, which is precisely the quality that makes them worth the trip after a week of Shibuya and Shinjuku."
         ]
       },
       {
         "heading": "Koenji: the vintage ecosystem",
         "paragraphs": [
-          "Koenji, on the Chuo Line, is Tokyo's vintage district — not vintage-as-aesthetic but vintage-as-ecosystem. The streets around the north and south exits of the station contain somewhere between 50 and 80 second-hand clothing shops, each specializing in something different: one does only 70s Western denim, another specializes in military surplus, a third has nothing but vintage sportswear priced by the kilo. The Awa Odori festival in August draws around 300,000 people to this neighborhood specifically, making it briefly the loudest and most populated neighborhood in all of Tokyo."
+          "Koenji, on the Chuo Line, is Tokyo's vintage district — not vintage-as-aesthetic but vintage-as-ecosystem. The streets around the north and south exits of the station contain somewhere between 50 and 80 second-hand clothing shops, each specializing in something different: one does only 70s Western denim, another specializes in military surplus, a third has nothing but vintage sportswear priced by the kilo.",
+          "The density is the point. No single shop here is a destination; the experience is walking between thirty of them in an afternoon, which is not possible anywhere else in the city. Start on the covered Pal shopping street running south from the station, follow it into the Look street beyond, then double back and work the north side.",
+          "Japanese second-hand clothing is in unusually good condition, which is the reason buyers fly in from abroad to source here. Garments are worn carefully, stored properly and sold on rather than worn out. Prices have risen as the world has noticed, but a good jacket at ¥4,000–8,000 is still normal. Sizing runs small by Western standards and most shops will not let you return anything, so try things on.",
+          "The Awa Odori festival in late August draws around 300,000 people to this neighborhood specifically, making it briefly the loudest and most populated neighborhood in all of Tokyo — a dance procession imported from Tokushima in the 1950s that has become the second largest of its kind in the country."
         ]
       },
       {
-        "heading": "Koenji: bars and izakaya",
+        "heading": "Koenji: bars, coffee and live rooms",
         "paragraphs": [
-          "The coffee shops and bars in Koenji are a separate argument for visiting. Pure, a jazz bar in continuous operation since the 1980s, plays vinyl records on equipment that hasn't changed since opening. There are izakaya here that predate the bubble economy and have no interest in attracting anyone who found them on an app. The food is good and cheap: a tonkatsu set lunch is ¥950, a yakitori skewer is ¥120."
+          "The coffee shops and bars in Koenji are a separate argument for visiting. There are jazz bars in continuous operation since the 1980s playing vinyl on equipment that has not changed since opening, and izakaya that predate the bubble economy and have no interest in attracting anyone who found them on an app. The food is good and cheap: a tonkatsu set lunch is around ¥950, a yakitori skewer ¥120.",
+          "Koenji is also where Tokyo punk lives. A handful of small venues around the station have been putting on hardcore and garage shows since the late seventies, and the scene never moved on or got expensive. Shows are cheap, start early, and end in time for the last train.",
+          "The drinking geography worth knowing is the alley network south-east of the station, under and beside the elevated tracks. Counters seat six or eight people, most have a cover charge of a few hundred yen, and menus are frequently handwritten and Japanese-only. Point at what the person next to you is having; this is an accepted ordering method and nobody minds."
         ]
       },
       {
         "heading": "Shimokitazawa: live music",
         "paragraphs": [
-          "Shimokitazawa, accessible via the Odakyu Line from Shinjuku or Keio Inokashira from Shibuya, has a different character. It's the live music neighborhood: more than 30 small music venues (livehouse) are within a 10-minute walk of the station, ranging from 50-person basement rooms to 500-capacity halls. Any night of the week, most of them have shows. Tickets are typically ¥2,000–3,000 at the door."
+          "Shimokitazawa, accessible via the Odakyu Line from Shinjuku or Keio Inokashira from Shibuya, has a different character. It's the live music neighborhood: more than 30 small music venues (livehouse) are within a 10-minute walk of the station, ranging from 50-person basement rooms to 500-capacity halls. Any night of the week, most of them have shows. Tickets are typically ¥2,000–3,000 at the door.",
+          "One convention to expect: nearly every venue charges a separate one-drink fee of around ¥600 on entry, exchanged for a token at the bar. This is not an upsell, it is how the venues are structured, and it applies whether you drink or not.",
+          "Shows start early — doors at six or seven, finished by ten — because everything in Tokyo is organised around the last train. A typical bill has four or five bands playing forty minutes each, which means you can walk in knowing nothing and hear an entire cross-section of what is happening in Tokyo rock for the price of a cinema ticket.",
+          "The neighbourhood is also the centre of Tokyo's small-theatre scene, with several fringe venues staging work by companies you will not have heard of. Language is a barrier there in a way it is not at a gig."
         ]
       },
       {
-        "heading": "The Sunday market",
+        "heading": "Shimokitazawa: the streets and the market",
         "paragraphs": [
-          "The Sunday market at Shimokitazawa draws vintage sellers, plant vendors, record collectors, and food stalls to the streets outside the station. It's a neighborhood event rather than a tourist attraction, and has the energy of something that's been happening every week for years and has no interest in being photographed for social media. Show up around 11am with no plan and spend two hours. That's the correct approach to Shimokitazawa."
+          "The Sunday market draws vintage sellers, plant vendors, record collectors, and food stalls to the streets outside the station. It's a neighborhood event rather than a tourist attraction, and has the energy of something that's been happening every week for years and has no interest in being photographed. Show up around 11am with no plan and spend two hours.",
+          "Shimokita is second only to Koenji for second-hand clothing, and the character differs: less workwear and denim, more designer resale and carefully curated small rooms. It is also the better of the two for records, with several shops covering Japanese city pop, jazz and soundtracks — a category that has become internationally sought after and is still cheaper here than abroad.",
+          "The station itself was rebuilt underground over the last decade and the surface land above the old tracks has become a long strip of new low-rise development. It is well done and it is also exactly the sort of thing the neighbourhood spent thirty years resisting; residents fought the plan through the courts for years. Whether it is an improvement is a live argument locally, and worth knowing about as you walk through it."
+        ]
+      },
+      {
+        "heading": "How to do both",
+        "paragraphs": [
+          "They are not adjacent. Koenji is on the Chuo Line west of Shinjuku; Shimokitazawa is south-west of it on a different company's line, about twenty-five minutes between the two with a change. Doing both in one day is possible but rushed.",
+          "The better plan is to give each an afternoon and evening, because both improve after dark. If you only have one, choose by what you want: Koenji for clothes and drinking, Shimokitazawa for music and browsing.",
+          "Go on a weekday afternoon if the shops are the priority — several of the smaller vintage rooms open at noon or later and close on Wednesdays. Go at the weekend if the atmosphere is. And carry cash: a meaningful number of these places still do not take cards."
         ]
       }
     ]
@@ -3025,8 +3285,8 @@
       "luxury"
     ],
     "publishedAt": "2026-05-17",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/wagyu-guide.webp",
     "heroImageAlt": "Thinly sliced wagyu beef with visible marbling on a wooden board",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -3042,31 +3302,57 @@
       {
         "heading": "What wagyu actually is",
         "paragraphs": [
-          "Wagyu refers to four specific Japanese beef cattle breeds — Black, Brown, Shorthorn, and Polled — of which Japanese Black (Kuroge Wagashu) is the one you'll encounter at restaurants. The defining characteristic is intramuscular fat (shimofuri), distributed through the muscle in a marbling pattern that creates the butter-soft texture wagyu is known for. The marbling is graded A1 to A5 by the Japan Meat Grading Association; A5 is the maximum."
+          "Wagyu refers to four specific Japanese beef cattle breeds — Black, Brown, Shorthorn, and Polled — of which Japanese Black (Kuroge Washu) is the one you'll encounter at restaurants. The defining characteristic is intramuscular fat (shimofuri), distributed through the muscle in a marbling pattern that creates the butter-soft texture wagyu is known for.",
+          "The word itself just means Japanese cattle, which is why it is legally meaningless in most countries and precise inside Japan. Domestic beef is tracked individually: every animal has a ten-digit identification number, and in a good restaurant or a department store counter you can look up the animal your meat came from, including where it was raised.",
+          "The fat is the whole proposition, and it behaves differently from beef fat elsewhere. It has a lower melting point — low enough that a slice softens against a warm hand — which is why very thin cuts and very short cooking are the norm here, and why a thick wagyu steak cooked like a ribeye is a waste of both the meat and the money."
+        ]
+      },
+      {
+        "heading": "What the grade actually tells you",
+        "paragraphs": [
+          "The grading has two parts and visitors usually only hear about half of it. The letter — A, B or C — is the yield grade: how much usable meat came off the carcass. It is a number for farmers and it says nothing about how the beef tastes. The digit, 1 to 5, is the quality grade, and it is the one that matters.",
+          "That digit is itself an aggregate of four assessments — marbling, colour and brightness, firmness and texture, and the quality of the fat — with the final score being the lowest of the four. Marbling is scored separately on a twelve-point scale, so two pieces of A5 can differ considerably.",
+          "The useful thing to know is that A5 is not simply the best. It is the most marbled, and past a certain point marbling stops being a pleasure and becomes a limit on how much you can eat. A4 has noticeably more beef flavour and less fat, and a great many Japanese diners prefer it. Ordering A4 is not settling for less; it is frequently the more enjoyable meal."
         ]
       },
       {
         "heading": "Kobe, Matsusaka, and Omi",
         "paragraphs": [
-          "The three regions you'll encounter most often. Kobe beef (from Tajima-strain cattle in Hyogo Prefecture): the most famous internationally, and genuinely excellent, though supply is far smaller than the global market for 'Kobe beef' implies — most 'Kobe beef' outside Japan is not from Kobe. Matsusaka beef from Mie Prefecture is considered by many Japanese food professionals to be superior in fat quality; it's less famous internationally because nobody started a marketing campaign for it in the 1990s. Omi beef from Shiga, one of the oldest beef brands in Japan, is the option for people who've read enough about wagyu to want the historical footnote."
+          "The three regions you'll encounter most often. Kobe beef (from Tajima-strain cattle in Hyogo Prefecture): the most famous internationally, and genuinely excellent, though supply is far smaller than the global market for 'Kobe beef' implies — only a few thousand animals a year qualify, and most 'Kobe beef' outside Japan is not from Kobe.",
+          "Matsusaka beef from Mie Prefecture is considered by many Japanese food professionals to be superior in fat quality; it's less famous internationally because nobody started a marketing campaign for it in the 1990s. Top-grade Matsusaka comes only from virgin female cattle and is raised for considerably longer than usual. Omi beef from Shiga is one of the oldest beef brands in Japan, with a documented history back to the Edo period, when it was sent to the shogun as a medicinal preparation while meat-eating was still officially prohibited.",
+          "There are more than two hundred regional brands in total, and outside the famous three they are frequently better value: Yonezawa, Hida, Miyazaki and Kagoshima all produce beef that wins the national judging and costs less because the name is not on posters abroad. If a restaurant offers a local brand you have not heard of, that is usually the intelligent order."
         ]
       },
       {
         "heading": "Formats and prices",
         "paragraphs": [
-          "Formats and pricing. A5 wagyu as yakiniku (grilled at the table over charcoal) is the most common restaurant format — ¥3,000–8,000 for a plate of premium cuts, best shared. A5 wagyu sukiyaki (simmered in a sweet soy broth with tofu and vegetables) is the winter version and is slightly more forgiving for first-timers because the broth moderates the richness. Wagyu as a steak, Western-style, is available in department store restaurants and high-end steakhouses — expect ¥15,000–40,000 per person for the premium experience."
+          "Yakiniku — grilling your own at a table-top charcoal or gas grill — is the most common restaurant format and the most flexible, at ¥3,000–8,000 for a plate of premium cuts, best shared. You order cut by cut, which lets you compare a fatty cut against a lean one directly. Cook each slice for well under a minute a side; the staff will tell you if you are overdoing it, and they are right.",
+          "Sukiyaki simmers thin slices briefly in a sweet soy broth with tofu and vegetables, then dips them in raw beaten egg before eating. It is the winter version and slightly more forgiving for first-timers because the broth and the egg both moderate the richness. Shabu-shabu is the lighter relative, with the slice swished through hot dashi for a few seconds.",
+          "Wagyu as a Western-style steak is available in department store restaurants and high-end steakhouses — expect ¥15,000–40,000 per person. Teppanyaki, where a chef cooks it on a flat plate in front of you and portions it into cubes, sits at the same level. Both are genuine experiences and neither is the most efficient way to find out what wagyu tastes like."
         ]
       },
       {
         "heading": "The accessible option",
         "paragraphs": [
-          "The practical option: department store basement food halls (depachika) in Tokyo, Osaka, and Kyoto sell wagyu by the slice for home cooking and often have prepared wagyu bentos and small yakiniku sets. A high-quality wagyu beef bowl (gyudon) at a specialist restaurant like Yoshida Gyu in Tokyo can be had for ¥1,500–3,000 and gives a genuine sense of what A4–A5 wagyu tastes like without the full restaurant-dinner commitment."
+          "Lunch is the single best piece of advice on this page. Restaurants that charge ¥20,000 at dinner routinely serve a wagyu lunch set at a quarter of that, using the same beef and the same kitchen, because the midday trade is a different market. Booking a famous steakhouse for lunch instead of dinner is not a compromise.",
+          "Department store food halls (depachika) in Tokyo, Osaka and Kyoto sell wagyu by the slice for home cooking and often have prepared wagyu bento and small yakiniku sets. A wagyu beef bowl (gyudon) at a specialist counter can be had for ¥1,500–3,000 and gives a genuine sense of what A4–A5 tastes like without the restaurant commitment.",
+          "Two more cheap entries: wagyu croquettes and menchi-katsu, sold hot for a few hundred yen at butchers and basement counters, and the wagyu skewers and grilled nigiri sold at markets such as Nishiki in Kyoto and Kuromon in Osaka. None of these is the full experience, and all of them are more informative than a photograph."
+        ]
+      },
+      {
+        "heading": "Ordering without reading the menu",
+        "paragraphs": [
+          "A handful of words covers most yakiniku menus. Karubi is short rib, fatty and the default. Harami is skirt, leaner and beefier, and the cut regulars order most. Rosu is loin. Tan is tongue, usually served thin with lemon and salt, and it is the conventional first order because it is cooked hot and fast before the grill gets greasy.",
+          "The convention is to work from lean to fatty and light to strong — tongue, then lean cuts, then the marbled ones — because the order does not reverse well. Order in small rounds rather than all at once, so nothing sits waiting while the grill is full.",
+          "Two tools, two jobs: use the tongs for raw meat and your chopsticks only for cooked. The tongs are provided for exactly this reason and mixing them is the one thing that will get you a polite correction."
         ]
       },
       {
         "heading": "The one thing worth knowing",
         "paragraphs": [
-          "The one thing worth knowing: wagyu at A5 is rich. A small amount satisfies in a way that lean beef doesn't. At a proper yakiniku restaurant, a 100g portion is enough for one person. The instinct to order more than you can eat is strong and almost always incorrect. Order one plate, taste it properly, and then decide if you want another."
+          "Wagyu at A5 is rich. A small amount satisfies in a way that lean beef doesn't. At a proper yakiniku restaurant, a 100g portion is enough for one person. The instinct to order more than you can eat is strong and almost always incorrect. Order one plate, taste it properly, and then decide if you want another.",
+          "The corollary is that the expensive all-you-can-eat wagyu deal is a poor bet. Nobody eats 400 grams of A5 with any pleasure, and the format is built on the fact that you will stop long before you have got your money's worth.",
+          "Eat it with plain rice and something sharp — pickles, a salad with vinegar dressing, or the raw egg in sukiyaki. Every traditional wagyu format includes a counterweight to the fat, and skipping it is how people end up saying that wagyu was too much for them."
         ]
       }
     ]
@@ -3081,8 +3367,8 @@
       "first-time"
     ],
     "publishedAt": "2026-05-16",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-vending-machines.webp",
     "heroImageAlt": "A row of colourful Japanese vending machines on a city street at night",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -3098,37 +3384,66 @@
       {
         "heading": "The density",
         "paragraphs": [
-          "Japan has more vending machines per capita than any country except possibly Singapore. They appear outside train stations, on mountain trails, inside office buildings, at the end of rural roads where nothing else exists for kilometers. The density is a logistics achievement: the machines are serviced on fixed schedules, calibrated to local demand, and stocked with whatever the neighborhood apparently wants at the hour it apparently wants it."
+          "Japan has more vending machines per capita than almost anywhere on earth. They appear outside train stations, on mountain trails, inside office buildings, at the end of rural roads where nothing else exists for kilometers. The density is a logistics achievement: the machines are serviced on fixed schedules, calibrated to local demand, and stocked with whatever the neighborhood apparently wants at the hour it apparently wants it.",
+          "The figure usually quoted is around four million machines, or roughly one for every thirty-odd people. What makes that number strange is not the count but the placement. A machine standing alone at a trailhead, unlit and unwatched, restocked by someone who drives up once a week, would not survive a month in most countries. Here it is simply part of the furniture of the country."
+        ]
+      },
+      {
+        "heading": "Why there are so many",
+        "paragraphs": [
+          "Four conditions have to hold at once for unattended retail to work at this scale, and Japan is unusual in having all four.",
+          "The first is crime. Vandalism and theft of machines are rare enough that operators treat losses as negligible, so a machine can be sited anywhere there is power rather than only where it can be watched. The second is cash: Japan's ¥100 and ¥500 coins carry enough value that a drink can be bought with one or two of them, which is not true of coinage in most economies.",
+          "The third is land. A machine occupies well under a square metre, and in a country where urban land is expensive and awkward gaps between buildings are everywhere, that leftover strip becomes revenue. Property owners take a commission on sales for doing nothing but providing the space and the electricity.",
+          "The fourth is labour. A machine is a retail outlet that needs no staff, and in a country with a shrinking working-age population that arithmetic has only got more favourable. The drinks companies figured this out early and built their own machine networks as a distribution channel they control entirely — no supermarket buyer deciding which brands get shelf space, no competitor's product beside theirs."
         ]
       },
       {
         "heading": "What is for sale",
         "paragraphs": [
-          "What's for sale: the most common machines stock canned and bottled drinks — hot canned coffee, cold green tea, sports drinks, canned beer, occasionally alcohol. The hot/cold switching happens seasonally and sometimes twice daily — a button will show HOT or COLD depending on which side of the internal temperature shelf the product is resting on. Buying a hot Boss Coffee from a vending machine in February is one of those simple pleasures that people consistently describe as an unexpectedly significant memory from Japan."
+          "The most common machines stock canned and bottled drinks — hot canned coffee, cold green tea, sports drinks, canned beer, occasionally alcohol. The hot/cold switching happens seasonally: a red label reading あたたか〜い means the product is heated, a blue つめた〜い means chilled, and the same machine will run both at once in the shoulder months.",
+          "Buying a hot Boss Coffee from a vending machine in February is one of those simple pleasures that people consistently describe as an unexpectedly significant memory from Japan. The can comes out at a temperature you can hold through gloves, and on a cold platform it functions as much as a hand warmer as a drink.",
+          "The tea deserves a note. Unsweetened green tea, barley tea and oolong are standard stock in every machine, sold cold in summer and hot in winter, and they are the reason nobody in Japan seems to carry a water bottle. If you are used to vending machines that sell only sugar, this is the single biggest practical difference."
+        ]
+      },
+      {
+        "heading": "How to use one",
+        "paragraphs": [
+          "Insert coins or notes first, or tap your IC card, and the buttons light up for the products you can afford. Press once. The drink drops into the flap at the bottom, and change comes out of the lever or button marked 返却.",
+          "A red 売切 lamp under a product means sold out, not out of order. An 準備中 message means the machine is warming or cooling stock and that row will come back shortly.",
+          "Notes are accepted by most machines, but the reader is fussy about creased bills and many machines take only ¥1,000 notes — feeding a ¥5,000 or ¥10,000 note usually gets it pushed straight back out. Keep coins for machines in rural areas, where the older units are common.",
+          "There is almost always a recycling bin bolted to the side of the machine. It is intended for that machine's containers, and it exists because street bins in Japan largely do not. Drink the thing near the machine and put the can in the bin; walking off with an empty can in a country with no public bins is a mistake you make exactly once."
         ]
       },
       {
         "heading": "Specialty machines",
         "paragraphs": [
-          "The specialty machines: some train stations have instant ramen machines with a surprisingly wide variety. Umbrella machines appear outside train stations when rain is forecast and charge ¥500–800 for a basic transparent umbrella. There are machines selling fresh bananas, hot pizza by the slice, live stag beetles in summer (this is real), and surgical masks in quantities ranging from one to fifty."
+          "Some train stations have instant ramen machines with a surprisingly wide variety. Umbrella machines appear outside train stations when rain is forecast and charge ¥500–800 for a basic transparent umbrella. There are machines selling fresh bananas, hot pizza by the slice, live stag beetles in summer (this is real), and surgical masks in quantities ranging from one to fifty.",
+          "A few are worth going out of your way for. The Ponshukan at Echigo-Yuzawa station is a wall of sake vending machines holding around a hundred local breweries — you buy a token, and each token pours a small measure into an ochoko cup, which makes it a tasting room disguised as a vending machine. Dashi machines dispense hot soup stock into a cup for a couple of hundred yen. Canned oden — a whole hot stew of daikon, egg and fishcake in a tin — is a genuine product and not only a novelty, though it is largely sold in Akihabara to people who want to say they have had it.",
+          "Frozen-food machines have spread quickly in the last few years, selling gyoza, ramen kits and single portions of curry from restaurants that put them outside their own front doors. It is the most recent example of the pattern: when a Japanese business wants to sell something outside opening hours, the default answer is a machine."
         ]
       },
       {
-        "heading": "Pricing",
+        "heading": "Pricing and payment",
         "paragraphs": [
-          "Pricing: drinks at vending machines are ¥130–200 for most items, approximately the same as a convenience store. The premium is zero or marginal. Alcohol (beer, chuhai) is available late-night where the machine is located outside a convenience store or near a station — age verification is on the honor system at the machine level, though some have a button for adult confirmation."
+          "Drinks at vending machines are ¥130–200 for most items, approximately the same as a convenience store. The premium is zero or marginal, which is worth stating plainly because in most countries vending is the expensive option. Discount machines exist too, often near residential blocks, selling at ¥100 or below.",
+          "Most modern machines accept Suica, ICOCA and the other IC cards. Tap the reader, press the button, the drink drops, the fare is deducted. It is faster than coins and it is the main reason to keep a small balance on the card even if you are not using trains that day.",
+          "Alcohol machines are a shrinking category. Where they survive, age verification is nominal — a button confirming you are of age, occasionally a licence reader — and most now shut down overnight under a voluntary industry agreement."
         ]
       },
       {
-        "heading": "IC card payment",
+        "heading": "The numbers are falling",
         "paragraphs": [
-          "IC card payment: most modern vending machines accept Suica or ICOCA. Tap the card reader, the drink drops, and the amount is deducted. It's faster than coins, which in Japan are otherwise still the default payment method for vending. The transition to contactless is quicker here than at cash registers, perhaps because the machine doesn't need to be retrained."
+          "The machine count peaked around the turn of the millennium and has been declining since. The convenience stores took the volume: there are now more than fifty thousand of them, open around the clock, selling the same drinks with a lavatory and a cash machine attached.",
+          "The other pressure is who owns them. A great many machines belong to small operators or to the elderly owners of the land they stand on, and as those owners retire the machines are not replaced. The decline is steepest in exactly the rural places where a machine is most useful.",
+          "It is still an enormous network and it is not going away, but the version of Japan where there is always a machine within sight is slowly becoming the version where there usually is."
         ]
       },
       {
         "heading": "The cultural point",
         "paragraphs": [
-          "The cultural point: vending machines in Japan are clean, they work (machine failure is rare enough to be noteworthy), and they stock things people actually want. This seems basic until you've been somewhere where vending machines are a coin trap of expired merchandise and broken change returns. Japan's machines are infrastructure, and like most Japanese infrastructure, they are taken seriously."
+          "Vending machines in Japan are clean, they work — machine failure is rare enough to be noteworthy — and they stock things people actually want. This seems basic until you've been somewhere where vending machines are a coin trap of expired merchandise and broken change returns.",
+          "There is a detail that makes the argument better than any of the statistics. A number of machines are designated disaster machines: in an earthquake or a major emergency, the operator can remotely unlock them and they dispense their stock free to whoever is standing there. Some carry digital displays that switch to emergency information.",
+          "That is the actual point. Japan's machines are infrastructure rather than retail furniture, and like most Japanese infrastructure they are maintained, taken seriously, and quietly designed for the day something goes wrong."
         ]
       }
     ]
@@ -3242,7 +3557,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "buying-matcha-guide",
-      "japanese-stationery-guide",
+      "kintsugi-art-of-gold",
       "donki-shopping-guide"
     ],
     "author": "TABI Editorial",
@@ -3299,7 +3614,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "matsumoto-castle-guide",
-      "kanazawa-japan-guide",
+      "photography-rules-japan",
       "naoshima-art-island-guide"
     ],
     "author": "TABI Editorial",
@@ -3362,7 +3677,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "best-time-visit-japan",
-      "cash-vs-card-japan",
+      "hiroshima-guide",
       "japan-sim-card-guide"
     ],
     "author": "TABI Editorial",
@@ -3505,7 +3820,7 @@
     "relatedIds": [
       "japan-taxi-guide",
       "kyoto-3-days-itinerary",
-      "tokyo-subway-guide"
+      "nara-day-trip"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -3641,7 +3956,7 @@
     "relatedIds": [
       "sake-etiquette-japan",
       "japanese-breakfast-guide",
-      "japan-convenience-store-guide"
+      "wagyu-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -3707,7 +4022,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "chopstick-etiquette",
-      "gift-giving-etiquette",
+      "kintsugi-art-of-gold",
       "tattoo-onsen-guide"
     ],
     "author": "TABI Editorial",
@@ -3766,8 +4081,8 @@
       "kyoto"
     ],
     "publishedAt": "2026-05-02",
-    "updatedAt": "2026-08-06",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/kintsugi-art-of-gold.webp",
     "heroImageAlt": "A repaired ceramic kintsugi bowl with gold seams on an artisan worktable",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -3783,37 +4098,72 @@
       {
         "heading": "What it actually is",
         "paragraphs": [
-          "Kintsugi — golden joinery — repairs broken ceramics with urushi lacquer, then dusts the seams with powdered gold, silver or platinum. The result is a bowl whose fracture lines are the most conspicuous thing about it. The technique is usually dated to the fifteenth or sixteenth century, and the frequently repeated origin story involves a shogun sending a damaged tea bowl to China for repair and being dissatisfied with the metal staples that came back. Whether or not that particular account is reliable, the practice grew up alongside the tea ceremony and its taste for objects with history."
+          "Kintsugi — golden joinery — repairs broken ceramics with urushi lacquer, then dusts the seams with powdered gold, silver or platinum. The result is a bowl whose fracture lines are the most conspicuous thing about it. The technique is usually dated to the fifteenth or sixteenth century, and the frequently repeated origin story involves a shogun sending a damaged tea bowl to China for repair and being dissatisfied with the metal staples that came back. Whether or not that particular account is reliable, the practice grew up alongside the tea ceremony and its taste for objects with history.",
+          "The essential move is that the repair is not disguised. Every other mending tradition tries to return an object to the state it was in before the accident, and judges itself by how invisible the work is. Kintsugi does the opposite: it draws the break in a precious metal so that the eye goes to it first. What you own afterwards is not a repaired bowl but a different bowl, and its value is generally higher than it was before it broke."
         ]
       },
       {
         "heading": "Lacquer is the real material",
         "paragraphs": [
-          "The gold gets the attention; the lacquer does the work. Urushi is sap from the lacquer tree, and it is both the adhesive and the structure of the repair. It cures through humidity rather than drying, so pieces spend days or weeks in a damp cabinet between stages, and each layer must harden before the next goes on. Raw urushi is also a skin irritant closely related to poison ivy, which is one reason the craft has always been specialist work. A genuine repair takes weeks to months, not an afternoon."
+          "The gold gets the attention; the lacquer does the work. Urushi is sap from the lacquer tree, and it is both the adhesive and the structure of the repair. It cures through humidity rather than drying, so pieces spend days or weeks in a damp cabinet between stages, and each layer must harden before the next goes on.",
+          "Raw urushi is also a skin irritant closely related to poison ivy — the active compound, urushiol, is the same family — and reactions among apprentices are a normal part of learning the craft. This is one reason it has always been specialist work, and one reason most visitor workshops substitute something else.",
+          "Once cured, it is remarkable stuff: waterproof, acid-resistant, food-safe, and durable enough that lacquered objects survive from archaeological sites thousands of years old. The gold on a kintsugi seam is a few microns of decoration sitting on a structural repair that will outlast the person who made it."
+        ]
+      },
+      {
+        "heading": "The process, stage by stage",
+        "paragraphs": [
+          "The pieces are first cleaned and dry-fitted, which is where the real skill sits: a bowl in eight fragments has an assembly order, and getting it wrong means the last piece will not go in. Then the edges are joined with mugi-urushi, a putty of raw lacquer and wheat flour, and the bowl is bound and left in the damp cabinet for one to two weeks.",
+          "Gaps, chips and missing areas are filled with sabi-urushi, lacquer mixed with a fine clay powder, built up in thin layers because a thick one will not cure through. Each layer is cured and then scraped and sanded flush. This filling and levelling stage is most of the labour and none of the glamour.",
+          "Only then does the decorative lacquer go on — a thin line of red or black urushi drawn along the seam with a fine brush. The gold powder is dusted onto that line while it is still tacky, using a cotton pad or a soft brush, and left to cure again before being burnished. A single bowl runs to a dozen or more separate operations spread over several weeks, and a complicated one takes months."
         ]
       },
       {
         "heading": "Three recognised styles",
         "paragraphs": [
-          "Practitioners distinguish between roughly three approaches. Crack kintsugi joins clean breaks with a thin gold seam. Piece-method kintsugi replaces a missing fragment with a solid area of lacquer and gold. Joint-call kintsugi — the most striking — fills a gap with a shard from a completely different vessel, so the finished bowl visibly contains two histories. The last of these makes the philosophy hardest to ignore: the repair is not attempting to return the object to a previous state at all."
+          "Practitioners distinguish between roughly three approaches. Crack kintsugi joins clean breaks with a thin gold seam. Piece-method kintsugi replaces a missing fragment with a solid area of lacquer and gold, so part of the wall of the bowl is metal-coloured rather than ceramic.",
+          "Joint-call kintsugi — yobitsugi — is the most striking: the gap is filled with a shard from a completely different vessel, so the finished bowl visibly contains two histories, often in clashing patterns and glazes. It makes the philosophy hardest to ignore, because the repair is not attempting to return the object to a previous state at all. It is making a third object out of the remains of two.",
+          "Which style a piece gets is a judgement about the break rather than a matter of taste. Clean breaks take a seam; missing material takes a fill; a hole too large to fill convincingly takes a shard."
+        ]
+      },
+      {
+        "heading": "Why the tea people wanted this",
+        "paragraphs": [
+          "Kintsugi does not make sense outside the aesthetic that produced it. Sixteenth-century tea practice, under Sen no Rikyu and his successors, had turned decisively against the flawless imported Chinese wares that earlier collectors prized, in favour of rough domestic pots, uneven glazes and objects that showed the hand that made them and the time that had passed since.",
+          "In that setting a break is not a catastrophe to be hidden but the most interesting thing that has ever happened to the bowl — evidence of its life, and something no craftsman could have designed. A repaired tea bowl with a documented history of ownership and accident was, and is, worth more than the same bowl intact.",
+          "This is the same sensibility that produces wabi-sabi more generally: the preference for the weathered over the new, the incomplete over the finished, the particular over the perfect. Kintsugi is that idea applied with a brush and a few grams of gold."
         ]
       },
       {
         "heading": "Where to see it and where to try it",
         "paragraphs": [
-          "Kyoto is the centre for both. Museum collections hold repaired tea ware, and a number of workshops in the city and in Tokyo run short courses for visitors — typically half a day, usually using a synthetic substitute for urushi to avoid the curing time and the skin reaction. That substitution is worth understanding before you book: a two-hour class produces something real and satisfying, but it is a demonstration of the aesthetic rather than the traditional technique. Ask which material a workshop uses if it matters to you."
+          "Kyoto is the centre for both. Museum collections hold repaired tea ware, and a number of workshops in the city and in Tokyo run short courses for visitors — typically half a day, usually using a synthetic substitute for urushi to avoid the curing time and the skin reaction.",
+          "That substitution is worth understanding before you book. A two-hour class produces something real and satisfying, but it is a demonstration of the aesthetic rather than the traditional technique, and the result is generally not food-safe. Ask which material a workshop uses if it matters to you; a genuine urushi course exists but requires returning across several sessions, which only works if you are staying a while.",
+          "If you want to see the real thing rather than make it, the Tokyo National Museum and the Kyoto National Museum both hold repaired tea ware, and temple treasure halls turn up examples regularly. Look for the seams before you look for the gold — on a good repair the line is thin, slightly irregular, and follows the break rather than correcting it."
+        ]
+      },
+      {
+        "heading": "Doing it at home",
+        "paragraphs": [
+          "Kits are widely sold, both in Japan and online, and they fall into two categories that are frequently not distinguished on the box. Traditional kits contain real urushi and real gold or brass powder, take weeks, and require a humid box and a tolerance for possible skin reactions. Modern kits contain a two-part epoxy and a metallic powder, take an afternoon, and produce a convincing-looking result.",
+          "The epoxy version is a perfectly good craft project and there is no reason to be snobbish about it, with one hard limitation: it is not food-safe and it will not survive a dishwasher or boiling water. A bowl repaired this way is for display, dry goods, or the shelf. Repairing your favourite mug with an epoxy kit and then drinking tea out of it is the mistake to avoid.",
+          "If you want to bring a kit home as a souvenir, buy it in Japan rather than online — the traditional ones are cheaper here, and the instructions in the box are more likely to say honestly which material you have bought."
         ]
       },
       {
         "heading": "Buying repaired pieces",
         "paragraphs": [
-          "Antique shops and flea markets — Toji temple market in Kyoto, Oedo in Tokyo — turn up kintsugi pieces regularly, at prices ranging from modest to serious. Two things to check. Real gold seams are matte and slightly uneven under the light rather than uniformly bright, and genuine urushi repairs have a slight softness at the edge of the seam. Also ask whether a piece is food-safe; older repairs and some modern synthetic ones are not, and a bowl for display is a different purchase from a bowl for tea."
+          "Antique shops and flea markets — the Toji temple market in Kyoto on the 21st of each month, Oedo in Tokyo — turn up kintsugi pieces regularly, at prices ranging from modest to serious.",
+          "Two things to check. Real gold seams are matte and slightly uneven under the light rather than uniformly bright, and genuine urushi repairs have a slight softness at the edge of the seam where the lacquer meets the glaze. A hard, glassy, perfectly even gold line usually means epoxy and brass.",
+          "Also ask whether a piece is food-safe; older repairs and some modern synthetic ones are not, and a bowl for display is a different purchase from a bowl for tea. And accept that price here tracks the pot rather than the repair — a fine repair on an ordinary bowl stays inexpensive, which is exactly where the good value is."
         ]
       },
       {
         "heading": "The metaphor, and its limits",
         "paragraphs": [
-          "Kintsugi has become globally popular as a metaphor for resilience: the break is part of the object, the repair is not concealed, the thing is more valuable for having been damaged. That reading is not a Western invention — it is close to what the tea masters were getting at. It is worth adding the part that usually falls off in translation: kintsugi is slow, expensive, requires a specialist, and cannot be done to every break. The metaphor is more honest when it keeps the labour in."
+          "Kintsugi has become globally popular as a metaphor for resilience: the break is part of the object, the repair is not concealed, the thing is more valuable for having been damaged. That reading is not a Western invention — it is close to what the tea masters were getting at.",
+          "It is worth adding the part that usually falls off in translation. Kintsugi is slow, expensive, requires a specialist, and cannot be done to every break. A bowl shattered into thirty fragments is not repaired, it is thrown away. The craftsman decides what is worth the weeks it will take, and a great deal is not.",
+          "The metaphor is more honest when it keeps the labour in. The bowl does not heal, and nothing about the process is automatic or free: somebody has to want the object enough to spend two months and a quantity of gold on it. That is a more demanding idea than the poster version, and a considerably more useful one."
         ]
       }
     ]
