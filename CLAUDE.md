@@ -197,13 +197,28 @@ $lines.Add('&#26053;')
 ### Known gaps
 - [ ] `googleAnalyticsId` is empty, so no analytics runs and no cookie banner is shown.
       Setting it in `site.config.json` enables both; the tag only loads after consent.
-- [ ] Hero images are served at full size (~250 KB each). `srcset` would cut this.
-- [ ] Google Fonts is render-blocking with three families.
+- [ ] Hero images average 256 KB at full size (largest 610 KB). `srcset` already
+      serves an 800px variant (~68 KB) to cards, but a wide viewport still pulls
+      the full file for the article hero. A ~1200px variant would close that.
+- [ ] Google Fonts is render-blocking with three families. Italics have been
+      dropped; the remaining weights are all used by `styles.css`.
 - [ ] No monetization is live yet: `monetization.adsense.clientId` and every
       `partners[].url` are empty, so no ads and no affiliate blocks render.
       Sign up for the programmes, paste the tracking links in, re-run the generator.
-- [ ] 63 articles. AdSense approval generally wants more depth per category —
-      `getting-around` has only 7.
+- [ ] **Articles are short.** 63 articles averaging ~600 words, 5-9 single-paragraph
+      sections each. That is a 2-3 minute read. Both AdSense review and search
+      ranking treat this as thin; depth per article matters as much as article
+      count. `getting-around` also has only 7 articles.
+- [ ] 12 articles are not referenced by any other article's `relatedIds`, so
+      nothing links to them but the listings.
+
+### Accessibility
+
+The palette carries WCAG AA contrast pairings — see the comment at the top of
+`styles.css`. `--accent` and `--gold-ink` are for text on paper, `--accent-on-ink`
+and `--gold` for text on `--ink` / `--ink-soft`. Using the wrong one of each pair
+silently drops that text back under 4.5:1, which is where most of the site sat
+before.
 
 ---
 

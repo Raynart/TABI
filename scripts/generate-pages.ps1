@@ -17,6 +17,10 @@ $defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { $_
 
 $script:ImageSizeCache = @{}
 
+# Tag pages holding fewer than this many articles are generated and linked but
+# kept out of the index and the sitemap. generate-feeds.ps1 reads the same value.
+$thinTagThreshold = if ($config.thinTagThreshold) { [int]$config.thinTagThreshold } else { 3 }
+
 # Ad slots and contextual affiliate blocks. Both stay dormant until
 # site.config.json -> monetization is filled in; see that file for the details.
 . "$PSScriptRoot\monetization.ps1"
@@ -61,6 +65,25 @@ if ($dataErrors.Count -gt 0) {
 }
 
 # ===== HELPERS =====
+
+function Get-ReadingTime {
+    # Derived from the text, not read from articles.json. The stored readingTime
+    # values were fabricated: 50 of 63 articles were off by 3 minutes or more, and
+    # the worst claimed 12 minutes for 602 words -- about three. A reader who
+    # budgets twelve minutes and finishes in three has been told something untrue
+    # by the site, which is a bad first impression to hand out 63 times.
+    # 220 wpm is the middle of the usual adult range for non-technical prose.
+    param($a)
+    $words = 0
+    if ($a.sections) {
+        foreach ($s in $a.sections) {
+            foreach ($p in @($s.paragraphs)) { $words += @($p -split '\s+' | Where-Object { $_ }).Count }
+        }
+    } elseif ($a.body) {
+        foreach ($p in @($a.body)) { $words += @($p -split '\s+' | Where-Object { $_ }).Count }
+    }
+    return [Math]::Max(1, [Math]::Round($words / 220.0))
+}
 
 function Escape-Json {
     param($str)
@@ -146,7 +169,8 @@ function Write-ListingPages {
         $description,
         $kanji = '',
         $activeCat = '',
-        $perPage = 12
+        $perPage = 12,
+        $noindex = $false
     )
     $total     = @($items).Count
     $pageCount = [Math]::Max(1, [Math]::Ceiling($total / [double]$perPage))
@@ -180,7 +204,7 @@ function Write-ListingPages {
         $schema = "{""@context"":""https://schema.org"",""@type"":""CollectionPage"",""name"":""$(Escape-Json $heading)"",""url"":""$canonical"",""mainEntity"":{""@type"":""ItemList"",""itemListElement"":[$itemList]}}"
         $crumb  = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $heading)"",""item"":""$canonical""}]}"
 
-        $headHtml = Get-Head "$heading$suffix &mdash; $siteName" $pageDesc $ogImage $canonical 'website' "$schema`n$crumb" $extra
+        $headHtml = Get-Head "$heading$suffix &mdash; $siteName" $pageDesc $ogImage $canonical 'website' "$schema`n$crumb" $extra $noindex
 
         # One in-feed unit per listing page, dropped in after the sixth card so it
         # sits below the fold and the grid still opens on editorial content.
@@ -245,7 +269,11 @@ function Write-ListingPages {
 function Get-FontLink {
     # Noto Sans 700 is requested because styles.css uses font-weight:700 on var(--sans);
     # without it the browser synthesises a bold, which renders noticeably worse.
-    $href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap'
+    # Noto Serif was requested with its italics (1,300 and 1,400). Nothing on the
+    # site renders italic: there is no <em> in any generated page, and the only two
+    # italic rules target .hero-title em and .interlude-quote strong, neither of
+    # which is ever emitted. That was two font files fetched for nothing.
+    $href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:wght@300;400;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap'
     # Loaded with media="print" and switched to "all" on load, so the font CSS does
     # not block the first render. display=swap already means text paints in the
     # fallback face first, so this costs nothing visually and removes a round trip.
@@ -255,9 +283,18 @@ function Get-FontLink {
 }
 
 function Get-Head {
-    param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '', $extraHead = '')
+    param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '', $extraHead = '', $noindex = $false)
     $font = Get-FontLink
     $ogImage = if ($og) { $og } else { $defaultOgImage }
+
+    # A noindex page gets no canonical either. 404.html used to carry a canonical
+    # pointing at itself, which invites the crawler to index the error page as a
+    # normal document -- the classic soft-404.
+    $indexTags = if ($noindex) {
+        '  <meta name="robots" content="noindex,follow">'
+    } else {
+        "  <link rel=""canonical"" href=""$canonical"">"
+    }
 
     # GA4 is only configured here; script.js loads it after the visitor consents.
     # Loading the tag directly in <head> would run analytics before the cookie
@@ -293,7 +330,7 @@ function Get-Head {
   <meta name="twitter:title" content="$title">
   <meta name="twitter:description" content="$desc">
   <meta name="twitter:image" content="$ogImage">
-  <link rel="canonical" href="$canonical">
+$indexTags
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
@@ -497,7 +534,7 @@ function Get-ArticleCard {
     <div class="ed-meta">
       <span>$date</span>
       <span class="ed-meta-dot"></span>
-      <span>$($article.readingTime) min read</span>
+      <span>$(Get-ReadingTime $article) min read</span>
     </div>
   </div>
 </a>
@@ -562,7 +599,7 @@ foreach ($a in $buyArticles) {
   <p class="buy-tag">$tagLabel</p>
   <h3 class="buy-title">$title</h3>
   $priceHtml
-  <span class="buy-arrow">&#8599;</span>
+  <span class="buy-arrow" aria-hidden="true">&#8599;</span>
 </a>
 "@
 }
@@ -849,7 +886,7 @@ foreach ($a in $articles) {
     $lines.Add('    <span class="article-dot"></span>')
     $lines.Add("    <span class=""article-date"">$date</span>")
     $lines.Add('    <span class="article-dot"></span>')
-    $lines.Add("    <span class=""article-reading"">$($a.readingTime) min read</span>")
+    $lines.Add("    <span class=""article-reading"">$(Get-ReadingTime $a) min read</span>")
     $lines.Add("  </div>")
     $lines.Add("  <h1 class=""article-title"">$title</h1>")
     $lines.Add("  <p class=""article-excerpt"">$excerpt</p>")
@@ -929,14 +966,22 @@ Get-ChildItem "$root\tags" -Filter *.html | Where-Object { $validTagFiles -notco
     Remove-Item -LiteralPath $_.FullName
 }
 
+$thinTags = @()
 foreach ($tag in $allTags) {
-    $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { $_.publishedAt } -Descending
-    Write-ListingPages $tagArticles "tags/$tag" "#$tag" "Articles tagged $tag on $siteName." | Out-Null
+    $tagArticles = @($articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { $_.publishedAt } -Descending)
+    # A tag page holding one or two articles is a near-duplicate of the cards it
+    # lists and adds nothing a crawler cannot get from the category page. Five of
+    # the seventeen tags are in that state (affiliate, festival and osaka have a
+    # single article each). They stay linked and usable, but are kept out of the
+    # index -- thin listing pages are exactly what an ad-network review flags.
+    $isThin = $tagArticles.Count -lt $thinTagThreshold
+    if ($isThin) { $thinTags += $tag }
+    Write-ListingPages $tagArticles "tags/$tag" "#$tag" "Articles tagged $tag on $siteName." '' '' 12 $isThin | Out-Null
 }
-Write-Host "Generated $($allTags.Count) tag pages"
+Write-Host "Generated $($allTags.Count) tag pages ($($thinTags.Count) noindex: $($thinTags -join ', '))"
 
 # ===== 404.html =====
-$headHtml = Get-Head "Page Not Found &mdash; $siteName" "The page you are looking for could not be found." '' "$siteUrl/404.html"
+$headHtml = Get-Head "Page Not Found &mdash; $siteName" "The page you are looking for could not be found." '' "$siteUrl/404.html" 'website' '' '' $true
 $headerHtml = Get-Header
 $lines = [System.Collections.Generic.List[string]]::new()
 $lines.Add($headHtml)
@@ -975,6 +1020,7 @@ if ($config.beehiivUrl) {
 $staticPages = @(
     @{
         file    = 'about.html'
+        desc    = 'Who writes TABI, how the guides are researched, and why the site exists.'
         title   = "About TABI &mdash; $siteName"
         heading = 'About TABI'
         body    = @(
@@ -985,12 +1031,14 @@ $staticPages = @(
     },
     @{
         file    = 'newsletter.html'
+        desc    = 'One destination, one cultural insight, one thing worth buying &mdash; every Friday.'
         title   = "Newsletter &mdash; $siteName"
         heading = 'The TABI Newsletter'
         body    = $newsletterBody
     },
     @{
         file    = 'contact.html'
+        desc    = 'Editorial enquiries, article pitches and partnership proposals for TABI.'
         title   = "Contact &mdash; $siteName"
         heading = 'Contact'
         body    = @(
@@ -1001,6 +1049,7 @@ $staticPages = @(
     },
     @{
         file    = 'privacy.html'
+        desc    = 'What TABI collects, the cookies it sets, and how to opt out of them.'
         title   = "Privacy Policy &mdash; $siteName"
         heading = 'Privacy Policy'
         body    = @(
@@ -1020,6 +1069,7 @@ $staticPages = @(
     },
     @{
         file    = 'terms.html'
+        desc    = 'The terms covering use of TABI, its content and its external links.'
         title   = "Terms of Use &mdash; $siteName"
         heading = 'Terms of Use'
         body    = @(
@@ -1033,6 +1083,7 @@ $staticPages = @(
     },
     @{
         file    = 'affiliate.html'
+        desc    = 'How TABI makes money, which programmes it uses, and how paid links are marked.'
         title   = "Affiliate Disclosure &mdash; $siteName"
         heading = 'Affiliate Disclosure'
         body    = @(
@@ -1056,7 +1107,10 @@ $staticPages = @(
 
 foreach ($page in $staticPages) {
     $canonical = "$siteUrl/$($page.file)"
-    $headHtml  = Get-Head $page.title $config.description '' $canonical
+    # Every static page used to inherit $config.description, so all seven shipped
+    # the same meta description -- the one thing a search engine reads to tell them
+    # apart.
+    $headHtml  = Get-Head $page.title $page.desc '' $canonical
     $headerHtml = Get-Header
 
     $lines = [System.Collections.Generic.List[string]]::new()
