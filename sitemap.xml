@@ -2,8 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://raynart.github.io/TABI/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://raynart.github.io/TABI/articles.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles-2.html</loc><changefreq>daily</changefreq><priority>0.4</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles-3.html</loc><changefreq>daily</changefreq><priority>0.4</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles-4.html</loc><changefreq>daily</changefreq><priority>0.4</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles-5.html</loc><changefreq>daily</changefreq><priority>0.4</priority></url>
+  <url><loc>https://raynart.github.io/TABI/articles-6.html</loc><changefreq>daily</changefreq><priority>0.4</priority></url>
   <url><loc>https://raynart.github.io/TABI/categories/before-you-go.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/categories/before-you-go-2.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
   <url><loc>https://raynart.github.io/TABI/categories/rules-etiquette.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raynart.github.io/TABI/categories/rules-etiquette-2.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
   <url><loc>https://raynart.github.io/TABI/categories/getting-around.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://raynart.github.io/TABI/categories/eat-drink.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://raynart.github.io/TABI/categories/things-to-buy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -72,21 +79,24 @@
   <url><loc>https://raynart.github.io/TABI/articles/japanese-drugstore-finds.html</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://raynart.github.io/TABI/articles/authentic-yukata-tokyo.html</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/accommodation.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://raynart.github.io/TABI/tags/affiliate.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/budget.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://raynart.github.io/TABI/tags/festival.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/first-time.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://raynart.github.io/TABI/tags/first-time-2.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://raynart.github.io/TABI/tags/first-time-3.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://raynart.github.io/TABI/tags/first-time-4.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/food.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://raynart.github.io/TABI/tags/food-2.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/kyoto.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://raynart.github.io/TABI/tags/language.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/luxury.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/nature.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/off-the-beaten-path.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://raynart.github.io/TABI/tags/osaka.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/practical.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/shopping.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/tokyo.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://raynart.github.io/TABI/tags/tokyo-2.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/tradition.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://raynart.github.io/TABI/tags/tradition-2.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://raynart.github.io/TABI/tags/tradition-3.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/transport.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://raynart.github.io/TABI/about.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/contact.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

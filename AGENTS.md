@@ -73,10 +73,10 @@ rule at the bottom of this file, which has been violated twice with real data lo
 | `sections[].heading` | Becomes an `<h2>` and a table-of-contents entry, so it must stand alone as a label |
 | `sections[].paragraphs` | Array of strings, one `<p>` each. Every current section holds exactly one |
 | `category` | One of the 6 slugs below. **Enforced** — an unknown value aborts the build |
-| `tags` | From the taxonomy below. **Enforced**. 2-3 is typical; do not exceed 5 |
+| `tags` | From the taxonomy below. **Enforced**. 2-3 is typical; do not exceed 5. A tag used by fewer than `thinTagThreshold` articles gets a `noindex` tag page |
 | `publishedAt` | `YYYY-MM-DD`. Drives sort order, the sitemap and the RSS feed |
 | `updatedAt` | `YYYY-MM-DD` or empty string `""` |
-| `readingTime` | Integer minutes. Current range is 4-12 |
+| `readingTime` | **Derived.** `generate-pages.ps1` computes it from the actual word count at 220 wpm and ignores this field. Keep it in sync, but the page is what the page says |
 | `heroImage` | **Absolute** production URL under `assets/images/`. A relative path silently disables the `width`/`height` and `srcset` output |
 | `heroImageAlt` | Required whenever `heroImage` is set |
 | `heroImageCredit` | `AI-generated image by OpenAI` for GPT images. Disclosure of AI imagery is the point — do not drop it |

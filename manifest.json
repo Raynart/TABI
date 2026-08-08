@@ -1,14 +1,19 @@
 {
-  "name": "TABI — Discover Japan",
-  "short_name": "TABI",
-  "description": "Your guide to the real Japan — travel, culture, and the things worth bringing home.",
-  "start_url": "/",
-  "scope": "/",
-  "display": "standalone",
-  "background_color": "#f7f4ef",
-  "theme_color": "#111111",
-  "lang": "en",
-  "icons": [
-    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
-  ]
+    "name":  "TABI — Discover Japan",
+    "short_name":  "TABI",
+    "description":  "Your guide to the real Japan — travel, culture, and the things worth bringing home.",
+    "start_url":  "/TABI/",
+    "scope":  "/TABI/",
+    "display":  "standalone",
+    "background_color":  "#f7f4ef",
+    "theme_color":  "#111111",
+    "lang":  "en",
+    "icons":  [
+                  {
+                      "src":  "favicon.svg",
+                      "sizes":  "any",
+                      "type":  "image/svg+xml",
+                      "purpose":  "any maskable"
+                  }
+              ]
 }

@@ -14,9 +14,23 @@
   --indigo:       #2c3e6b;
   --gold:         #c9a84c;
   --zen:          #3d6b4a;
-  --mist:         #888888;
+  --mist:         #666666;
   --border:       #ddd9d0;
   --white:        #ffffff;
+
+  /* Text colours, paired with the background they are legible on. The palette
+     above is for fills and hover states, where the contrast requirement applies
+     to whatever sits on top instead. Text failures used to be systemic rather
+     than incidental:
+       --mist was #888888   -> 3.23:1 on paper, and most secondary text uses it
+       --accent on --ink    -> 2.94:1, used by every label on a dark band
+       #d4443b on --ink-soft -> 3.12:1, the category tag on every card
+       --gold on paper      -> 2.08:1
+     All four now clear WCAG AA (4.5:1) at body size. Use the -on-ink pair only
+     on --ink / --ink-soft, and --gold-ink only on paper; swapping them puts the
+     contrast back where it was. */
+  --accent-on-ink: #ef7268;
+  --gold-ink:      #7a6320;
 
   --serif:  'Noto Serif', 'Noto Serif JP', Georgia, serif;
   --sans:   'Noto Sans', system-ui, -apple-system, sans-serif;
@@ -519,7 +533,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-light);
+  color: var(--accent-on-ink);
   margin-bottom: 8px;
 }
 .ed-title {
@@ -661,7 +675,7 @@ ul, ol {
 .isymbol {
   font-family: 'Noto Serif JP', serif;
   font-size: 1.2rem;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   line-height: 1;
 }
 .interlude-label {
@@ -669,7 +683,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   margin-bottom: 16px;
 }
 .interlude-quote {
@@ -819,7 +833,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   margin-bottom: 16px;
 }
 .nl-title {
@@ -1079,7 +1093,7 @@ ul, ol {
   font-size: 0.62rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .partner-name {
   font-family: var(--serif);
@@ -1422,7 +1436,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   font-family: var(--sans);
   text-transform: capitalize;
 }
