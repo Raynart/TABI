@@ -661,9 +661,9 @@ if ($buyHtml) {
 }
 
 # Newsletter
-$nlAction = if ($config.beehiivUrl) { $config.beehiivUrl } else { '#' }
-$nlMethod  = if ($config.beehiivUrl) { 'get' } else { 'post' }
-$nlTarget  = if ($config.beehiivUrl) { ' target="_blank" rel="noopener"' } else { '' }
+# Only render the signup form when there is somewhere for it to submit to. It used
+# to fall back to action="#", which combined with the old script.js handler meant
+# the visitor was shown "Thanks!" and the address was thrown away.
 $indexLines.Add('<div class="newsletter-wrap" id="newsletter">')
 $indexLines.Add('  <div class="newsletter">')
 $indexLines.Add('    <div class="nl-visual" aria-hidden="true">')
@@ -674,11 +674,15 @@ $indexLines.Add('    <div class="nl-content">')
 $indexLines.Add('      <p class="nl-label">Free Newsletter</p>')
 $indexLines.Add('      <h2 class="nl-title">Japan, delivered<br>to your inbox.</h2>')
 $indexLines.Add('      <p class="nl-desc">Every Friday: one destination, one cultural insight, one thing worth buying. No noise. Just the Japan worth knowing.</p>')
-$indexLines.Add("      <form class=""nl-form"" action=""$nlAction"" method=""$nlMethod""$nlTarget>")
-$indexLines.Add('        <input class="nl-input" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">')
-$indexLines.Add('        <button class="nl-btn" type="submit">Subscribe</button>')
-$indexLines.Add('      </form>')
-$indexLines.Add('      <p class="nl-note">No spam. Unsubscribe anytime.</p>')
+if ($config.beehiivUrl) {
+    $indexLines.Add("      <form class=""nl-form"" action=""$([System.Net.WebUtility]::HtmlEncode($config.beehiivUrl))"" method=""get"" target=""_blank"" rel=""noopener"">")
+    $indexLines.Add('        <input class="nl-input" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">')
+    $indexLines.Add('        <button class="nl-btn" type="submit">Subscribe</button>')
+    $indexLines.Add('      </form>')
+    $indexLines.Add('      <p class="nl-note">No spam. Unsubscribe anytime.</p>')
+} else {
+    $indexLines.Add('      <p class="nl-note">Signup opens soon. Nothing to enter yet.</p>')
+}
 $indexLines.Add('    </div>')
 $indexLines.Add('  </div>')
 $indexLines.Add('</div>')
@@ -956,6 +960,18 @@ Write-Host "`nAll pages generated successfully."
 # ===== STATIC STUB PAGES =====
 Write-Host "Generating static pages..."
 
+# Newsletter page body, built here so the form lines stay separate array elements.
+$newsletterBody = @('<p>Every Friday: one destination, one cultural insight, one thing worth buying. No noise. Just the Japan worth knowing.</p>')
+if ($config.beehiivUrl) {
+    $newsletterBody += "<form class=""nl-form"" action=""$([System.Net.WebUtility]::HtmlEncode($config.beehiivUrl))"" method=""get"" target=""_blank"" rel=""noopener"" style=""margin-top:24px;"">"
+    $newsletterBody += '  <input class="nl-input" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">'
+    $newsletterBody += '  <button class="nl-btn" type="submit">Subscribe</button>'
+    $newsletterBody += '</form>'
+    $newsletterBody += '<p class="nl-note" style="margin-top:12px;">No spam. Unsubscribe anytime.</p>'
+} else {
+    $newsletterBody += '<p class="nl-note" style="margin-top:24px;">Signup opens soon. Nothing to enter yet.</p>'
+}
+
 $staticPages = @(
     @{
         file    = 'about.html'
@@ -971,18 +987,7 @@ $staticPages = @(
         file    = 'newsletter.html'
         title   = "Newsletter &mdash; $siteName"
         heading = 'The TABI Newsletter'
-        body    = @(
-            '<p>Every Friday: one destination, one cultural insight, one thing worth buying. No noise. Just the Japan worth knowing.</p>',
-            $(if ($config.beehiivUrl) {
-                "<form class=""nl-form"" action=""$($config.beehiivUrl)"" method=""get"" target=""_blank"" rel=""noopener"" style=""margin-top:24px;"">"
-            } else {
-                '<form class="nl-form" action="#" method="post" style="margin-top:24px;">'
-            }),
-            '  <input class="nl-input" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">',
-            '  <button class="nl-btn" type="submit">Subscribe</button>',
-            '</form>',
-            '<p class="nl-note" style="margin-top:12px;">No spam. Unsubscribe anytime.</p>'
-        )
+        body    = $newsletterBody
     },
     @{
         file    = 'contact.html'
