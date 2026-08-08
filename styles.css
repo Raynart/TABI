@@ -1026,6 +1026,124 @@ ul, ol {
   flex-shrink: 0;
 }
 
+/* Affiliate disclosure -- sits under the excerpt, above the first paid link.
+   Deliberately quiet but not hidden: a disclosure the reader cannot find is not
+   a disclosure. */
+.affiliate-disclosure {
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: var(--mist);
+  border-left: 2px solid var(--border);
+  padding: 8px 0 8px 14px;
+  margin: 20px 0 4px;
+}
+.affiliate-disclosure a {
+  color: var(--mist);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.affiliate-disclosure a:hover { color: var(--accent); }
+
+/* Contextual partner block ("Plan This Trip") */
+.partner-box {
+  margin: 48px 0 8px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.partner-box-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 18px;
+}
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  background: var(--paper);
+  color: var(--ink);
+  transition: background var(--transition);
+}
+.partner-card:hover { background: var(--paper-dark); }
+.partner-kicker {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.partner-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+.partner-desc {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--zen);
+  flex: 1;
+}
+.partner-cta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 6px;
+}
+.partner-card:hover .partner-cta { text-decoration: underline; text-underline-offset: 3px; }
+.partner-box-note {
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--mist);
+  margin-top: 14px;
+}
+
+/* ===== AD SLOTS =====
+   The <ins> carries its own inline min-height so the space is reserved before any
+   script runs; these rules only handle the surrounding label and spacing. The
+   label is required -- AdSense policy is that ads must be distinguishable from
+   editorial content, and on a site this quiet they otherwise would not be. */
+.ad-slot {
+  display: block;
+  margin: 48px 0;
+  text-align: center;
+}
+.ad-slot-label {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mist);
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+.ad-slot .adsbygoogle {
+  width: 100%;
+  background: var(--paper-dark);
+}
+/* An in-feed unit is a grid child, so it has to span the full row rather than
+   sit in one card's column. */
+.ad-slot--in-feed {
+  grid-column: 1 / -1;
+  margin: 24px 0;
+}
+.ad-slot--end {
+  margin: 40px 0 8px;
+}
+
+@media (max-width: 480px) {
+  .ad-slot { margin: 36px 0; }
+  .partner-card { padding: 18px; }
+}
+
 /* ===== FOOTER ===== */
 .site-footer {
   border-top: 1px solid var(--border);

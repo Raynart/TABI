@@ -259,10 +259,34 @@
     gtag('config', window.TABI_GA_ID);
   }
 
+  /* ===== ADS (consent-gated) =====
+     Same contract as analytics: the page only declares window.TABI_ADS_CLIENT and
+     leaves inert <ins class="adsbygoogle"> placeholders. The library is fetched
+     here, after consent, and each slot is filled once. Without consent no ad
+     request is made and no ad cookie is set -- the placeholders just stay empty. */
+  function loadAds() {
+    if (!window.TABI_ADS_CLIENT || window.__tabiAdsLoaded) return;
+    var slots = document.querySelectorAll('ins.adsbygoogle');
+    if (!slots.length) return;
+    window.__tabiAdsLoaded = true;
+
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' +
+            encodeURIComponent(window.TABI_ADS_CLIENT);
+    document.head.appendChild(s);
+
+    window.adsbygoogle = window.adsbygoogle || [];
+    for (var i = 0; i < slots.length; i++) {
+      window.adsbygoogle.push({});
+    }
+  }
+
   /* ===== GDPR BANNER ===== */
   function initGdprBanner() {
     var choice = localStorage.getItem('tabi-cookie-consent');
-    if (choice === 'accepted') loadAnalytics();
+    if (choice === 'accepted') { loadAnalytics(); loadAds(); }
 
     var banner = document.getElementById('gdpr-banner');
     if (!banner || choice) return;
@@ -271,6 +295,7 @@
       localStorage.setItem('tabi-cookie-consent', 'accepted');
       banner.classList.remove('visible');
       loadAnalytics();
+      loadAds();
     });
     document.getElementById('gdpr-decline').addEventListener('click', function () {
       localStorage.setItem('tabi-cookie-consent', 'declined');

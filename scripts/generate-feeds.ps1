@@ -93,6 +93,28 @@ Sitemap: $siteUrl/sitemap.xml
 [System.IO.File]::WriteAllText("$root\robots.txt", $robots, (New-Object System.Text.UTF8Encoding($false)))
 Write-Host "Generated robots.txt"
 
+# ===== ads.txt =====
+# AdSense will not serve on a domain without this file once the account has any
+# ads.txt at all, and flags "earnings at risk" in the dashboard until it resolves.
+# Written only when a client ID is configured; removed again if it is cleared, so
+# a stale file cannot outlive the account it authorises.
+$adsClientId = ''
+if ($config.PSObject.Properties.Name -contains 'monetization' -and
+    $config.monetization.adsense -and $config.monetization.adsense.clientId) {
+    $adsClientId = $config.monetization.adsense.clientId
+}
+$adsTxtPath = "$root\ads.txt"
+if ($adsClientId) {
+    # ca-pub-0000000000000000 -> pub-0000000000000000, the publisher ID ads.txt wants.
+    $pubId = $adsClientId -replace '^ca-', ''
+    $adsTxt = "google.com, $pubId, DIRECT, f08c47fec0942fa0`n"
+    [System.IO.File]::WriteAllText($adsTxtPath, $adsTxt, (New-Object System.Text.UTF8Encoding($false)))
+    Write-Host "Generated ads.txt ($pubId)"
+} elseif (Test-Path $adsTxtPath) {
+    Remove-Item -LiteralPath $adsTxtPath
+    Write-Host "Removed ads.txt (no AdSense client configured)"
+}
+
 # ===== articles-slim.json (for client-side search) =====
 $slim = $articles | ForEach-Object {
     [PSCustomObject]@{

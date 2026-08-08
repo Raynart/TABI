@@ -17,6 +17,10 @@ $defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { $_
 
 $script:ImageSizeCache = @{}
 
+# Ad slots and contextual affiliate blocks. Both stay dormant until
+# site.config.json -> monetization is filled in; see that file for the details.
+. "$PSScriptRoot\monetization.ps1"
+
 # Appended to image URLs so a change forces browsers past a stale cached copy.
 # Bump this when image files are replaced in place.
 $imageVersion = '20260806-list-images'
@@ -178,11 +182,17 @@ function Write-ListingPages {
 
         $headHtml = Get-Head "$heading$suffix &mdash; $siteName" $pageDesc $ogImage $canonical 'website' "$schema`n$crumb" $extra
 
+        # One in-feed unit per listing page, dropped in after the sixth card so it
+        # sits below the fold and the grid still opens on editorial content.
+        $feedAd = Get-InFeedAd
         $cardsHtml = ''
         $isFirst = ($pageNo -eq 1)
+        $cardNo  = 0
         foreach ($a in $pageItems) {
             $size = if ($isFirst) { 'main'; $isFirst = $false } else { 'sub' }
             $cardsHtml += Get-ArticleCard $a $size
+            $cardNo++
+            if ($feedAd -and $cardNo -eq 6) { $cardsHtml += $feedAd }
         }
         if (-not $cardsHtml) {
             $cardsHtml = '<p style="padding:48px 32px;color:var(--mist);">No articles yet. Check back soon.</p>'
@@ -252,9 +262,16 @@ function Get-Head {
     # GA4 is only configured here; script.js loads it after the visitor consents.
     # Loading the tag directly in <head> would run analytics before the cookie
     # banner was answered, which is exactly what the banner is supposed to prevent.
+    # The AdSense library is handled the same way -- the client ID is declared here,
+    # script.js fetches adsbygoogle.js only after consent. Personalised ads set
+    # cookies, so loading the library up front would beat the banner to it.
     $gaScript = ''
-    if ($config.googleAnalyticsId) {
-        $gaScript = "  <script>window.TABI_GA_ID='$($config.googleAnalyticsId)';</script>"
+    $globals = @()
+    if ($config.googleAnalyticsId) { $globals += "window.TABI_GA_ID='$($config.googleAnalyticsId)';" }
+    $adsClient = Get-AdsenseClient
+    if ($adsClient) { $globals += "window.TABI_ADS_CLIENT='$adsClient';" }
+    if ($globals.Count -gt 0) {
+        $gaScript = "  <script>$($globals -join '')</script>"
     }
 
     return @"
@@ -350,17 +367,24 @@ function Get-Footer {
     # Only ask for cookie consent when there is actually something to consent to.
     # With no analytics ID configured the site sets no cookies at all, so the
     # banner was asking permission for something that never happened.
+    # Ads are the same deal: AdSense sets cookies, so enabling it also turns the
+    # banner on even with analytics off.
     $gdprBanner = ''
-    if ($config.googleAnalyticsId) {
-        $gdprBanner = @'
+    if ($config.googleAnalyticsId -or (Test-AdsEnabled)) {
+        $gdprText = if (Test-AdsEnabled) {
+            'We use cookies to analyze site traffic and to serve ads. <a href="privacy.html">Privacy Policy</a>.'
+        } else {
+            'We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.'
+        }
+        $gdprBanner = @"
 <div class="gdpr-banner" id="gdpr-banner">
-  <p class="gdpr-text">We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.</p>
+  <p class="gdpr-text">$gdprText</p>
   <div class="gdpr-actions">
     <button class="gdpr-btn gdpr-decline" id="gdpr-decline">Decline</button>
     <button class="gdpr-btn gdpr-accept" id="gdpr-accept">Accept</button>
   </div>
 </div>
-'@
+"@
     }
     return @"
 <footer class="site-footer">
@@ -701,6 +725,11 @@ foreach ($a in $articles) {
             $tocItems += "<li><a href=""#s$si"">$hText</a></li>"
         }
         $tocHtml = "<nav class=""toc"" aria-label=""Article contents""><p class=""toc-title"">In this article</p><ol class=""toc-list"">$tocItems</ol></nav>"
+        # The mid-article unit goes after a whole section rather than between
+        # paragraphs, so it never splits an argument in half. Suppressed on short
+        # articles, where it would land on top of the conclusion.
+        $adAfter = Get-AdAfterSection
+        if ($a.sections.Count -lt ($adAfter + 2)) { $adAfter = 0 }
         for ($si = 0; $si -lt $a.sections.Count; $si++) {
             $sec   = $a.sections[$si]
             $hText = [System.Net.WebUtility]::HtmlEncode($sec.heading)
@@ -711,6 +740,9 @@ foreach ($a in $articles) {
                 }
             }
             $bodyHtml += "</section>`n"
+            if ($adAfter -gt 0 -and $si -eq ($adAfter - 1)) {
+                $bodyHtml += (Get-InArticleAd)
+            }
         }
     } elseif ($a.body -and $a.body.Count -gt 0) {
         foreach ($p in $a.body) {
@@ -741,17 +773,23 @@ foreach ($a in $articles) {
         }
     }
 
-    # Affiliate links
+    # Affiliate links -- per-article, hand-written in articles.json.
+    # rel carries "sponsored" as well as nofollow; Google reads a paid link without
+    # it as an undisclosed link scheme.
     $affiliateHtml = ''
     if ($a.affiliate -and $a.affiliateLinks -and $a.affiliateLinks.Count -gt 0) {
         $affiliateHtml = '<div class="affiliate-block"><p class="affiliate-block-label">Where to Buy</p>'
         foreach ($link in $a.affiliateLinks) {
             $label = [System.Net.WebUtility]::HtmlEncode($link.label)
             $price = if ($link.price) { "<span class=""affiliate-price"">$([System.Net.WebUtility]::HtmlEncode($link.price))</span>" } else { '' }
-            $affiliateHtml += "<a href=""$($link.url)"" class=""affiliate-link"" target=""_blank"" rel=""noopener noreferrer nofollow"">$label $price</a>"
+            $affiliateHtml += "<a href=""$($link.url)"" class=""affiliate-link"" target=""_blank"" rel=""nofollow sponsored noopener noreferrer"">$label $price</a>"
         }
         $affiliateHtml += '</div>'
     }
+
+    # Contextual partner block, chosen from site.config.json by category and tags.
+    $partnerHtml    = Get-PartnerBox $a
+    $disclosureHtml = Get-AffiliateDisclosure $a
 
     # Breadcrumb
     $breadcrumbHtml = "<nav class=""breadcrumb"" aria-label=""Breadcrumb""><a href=""index.html"">Home</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><a href=""categories/$($a.category).html"">$cat</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><span class=""breadcrumb-current"">$title</span></nav>"
@@ -811,15 +849,21 @@ foreach ($a in $articles) {
     $lines.Add("  </div>")
     $lines.Add("  <h1 class=""article-title"">$title</h1>")
     $lines.Add("  <p class=""article-excerpt"">$excerpt</p>")
+    # Above the fold and above the first paid link, which is where the FTC expects
+    # the disclosure -- not in the footer.
+    if ($disclosureHtml) { $lines.Add($disclosureHtml) }
     $lines.Add($tocHtml)
     $lines.Add('  <div class="article-body">')
     $lines.Add($bodyHtml)
     $lines.Add($affiliateHtml)
+    if ($partnerHtml) { $lines.Add($partnerHtml) }
     $lines.Add('  </div>')
     if ($tagsHtml) {
         $lines.Add("  <div class=""article-tags"">$tagsHtml</div>")
     }
     $lines.Add($shareHtml)
+    $endAd = Get-EndOfArticleAd
+    if ($endAd) { $lines.Add($endAd) }
     $lines.Add($prevNextHtml)
     $lines.Add('</div>')
     if ($relatedHtml) { $lines.Add($relatedHtml) }
@@ -958,7 +1002,11 @@ $staticPages = @(
             '<p style="color:var(--mist);font-size:0.82rem;">Last updated: June 2026</p>',
             '<p>TABI collects minimal data to operate the site. We may use analytics tools (such as Google Analytics) to understand how visitors use our content. No personal data is sold to third parties.</p>',
             '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Cookies</h2>',
-            '<p>We may set cookies for analytics and functionality. You can disable cookies in your browser settings at any time.</p>',
+            '<p>We may set cookies for analytics and functionality. Nothing that sets a cookie loads until you accept the banner, and you can disable cookies in your browser settings at any time.</p>',
+            $(if (Test-AdsEnabled) {
+                '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Advertising</h2>' +
+                '<p>TABI displays ads served by Google AdSense. Google and its partners may use cookies to serve ads based on your prior visits to this or other websites, and may process your data as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">how Google uses information from sites that use its services</a>. Ad scripts are only loaded after you accept cookies; if you decline, no ad request is made. You can also opt out of personalised advertising at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</p>'
+            } else { '' }),
             '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Affiliate Links</h2>',
             '<p>Some links on this site are affiliate links. Clicking them and making a purchase may earn TABI a small commission at no extra cost to you. See our <a href="affiliate.html">Affiliate Disclosure</a> for details.</p>',
             "<h2 style=""font-size:1.05rem;margin:28px 0 10px;"">Contact</h2>",
@@ -984,8 +1032,18 @@ $staticPages = @(
         heading = 'Affiliate Disclosure'
         body    = @(
             '<p>TABI participates in affiliate programmes. This means that some links to products or services may be affiliate links &mdash; if you click through and make a purchase, we may earn a small commission at no additional cost to you.</p>',
-            '<p>We only recommend products and services we genuinely believe in. Affiliate relationships do not influence our editorial content or opinions.</p>',
-            '<p>Affiliate links are marked with <strong>rel="nofollow sponsored"</strong> in our HTML and may be indicated in the article text.</p>',
+            '<p>We only recommend products and services we genuinely believe in. Affiliate relationships do not influence our editorial content or opinions. Nothing is ranked, added or removed because of what it pays.</p>',
+            '<p>Affiliate links are marked with <strong>rel="nofollow sponsored"</strong> in our HTML, sit inside a labelled block rather than the article text, and every article carrying one shows a disclosure above the fold.</p>',
+            # Listing the programmes is the part readers can actually check, so it is
+            # generated from the live config rather than written by hand and left stale.
+            $(
+                $mon    = Get-Mon
+                $active = if ($mon -and $mon.partners) { @($mon.partners | Where-Object { $_.url }) } else { @() }
+                if ($active.Count -gt 0) {
+                    '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Programmes We Use</h2><ul style="margin:0 0 8px 18px;line-height:2;">' +
+                    (($active | ForEach-Object { "<li>$([System.Net.WebUtility]::HtmlEncode($_.name))</li>" }) -join '') + '</ul>'
+                } else { '' }
+            ),
             "<p style=""margin-top:24px;"">Questions? <a href=""contact.html"">Contact us.</a></p>"
         )
     }
@@ -1005,7 +1063,9 @@ foreach ($page in $staticPages) {
     $lines.Add('<main id="main" style="max-width:720px;margin:80px auto 120px;padding:0 32px;">')
     $lines.Add("  <h1 style=""font-family:var(--serif);font-size:2rem;font-weight:300;margin-bottom:28px;letter-spacing:-0.01em;"">$($page.heading)</h1>")
     foreach ($line in $page.body) {
-        $lines.Add("  $line")
+        # Sections that depend on config (ads, affiliate programmes) render as an
+        # empty string when unconfigured; skip them rather than leaving a blank line.
+        if ($line) { $lines.Add("  $line") }
     }
     $lines.Add('</main>')
     $lines.Add((Get-Footer))
