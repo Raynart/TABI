@@ -421,8 +421,8 @@
       "practical"
     ],
     "publishedAt": "2026-06-17",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japan-taxi-guide.webp",
     "heroImageAlt": "A black Toyota Crown Japanese taxi cab waiting at a Tokyo intersection at night",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -431,38 +431,70 @@
     "relatedIds": [
       "ic-card-japan-guide",
       "tokyo-subway-guide",
-      "tipping-in-japan"
+      "tokyo-day-trips"
     ],
     "author": "TABI Editorial",
     "sections": [
       {
         "heading": "The door opens automatically",
         "paragraphs": [
-          "Japanese taxi doors open and close automatically, controlled by the driver. Do not touch the door. Attempting to open or close it manually will work but is unnecessary and slightly startles the driver. This catches almost every first-time visitor. Stand near the door, wait for it to open, get in. When you arrive, the driver will open it for you. Get out, step away, the door closes."
+          "Japanese taxi doors open and close automatically, controlled by the driver. Do not touch the door. Attempting to open or close it manually will work but is unnecessary and slightly startles the driver. This catches almost every first-time visitor. Stand near the door, wait for it to open, get in. When you arrive, the driver will open it for you. Get out, step away, the door closes.",
+          "Only the rear left door is automatic — the one on the kerb side. If you get in on the road side, which you generally should not, you are opening that one yourself."
         ]
       },
       {
         "heading": "Show the destination in writing",
         "paragraphs": [
-          "Most taxi drivers in Japan speak limited English. The reliable approach: have your destination written in Japanese characters, either on your phone (from Google Maps, copy the Japanese name) or on a piece of paper from your hotel. Pronunciation of Western place names in Japanese is often different enough from English pronunciation to cause confusion. A screen showing the map with the destination pinned is universally understood. Your hotel's front desk should always be able to provide you with a card showing the hotel address in Japanese — ask for one at check-in."
+          "Most taxi drivers in Japan speak limited English. The reliable approach: have your destination written in Japanese characters, either on your phone (from Google Maps, copy the Japanese name) or on a piece of paper from your hotel. Pronunciation of Western place names in Japanese is often different enough from English pronunciation to cause confusion. A screen showing the map with the destination pinned is universally understood. Your hotel's front desk should always be able to provide you with a card showing the hotel address in Japanese — ask for one at check-in.",
+          "The method that works even better: give the driver a phone number. Japanese taxi navigation systems search by telephone number, and every restaurant, hotel and shop has one listed. Reading out ten digits gets you to the door with no ambiguity about which of the four branches with the same name you meant. This is what locals do, and drivers visibly relax when you do it.",
+          "Addresses themselves are the weak option. Japanese addresses describe nested blocks rather than positions along a street, and a written address alone can leave a driver hunting the last hundred metres. Name plus phone number, or a dropped map pin, beats an address every time."
         ]
       },
       {
         "heading": "Fares and metering",
         "paragraphs": [
-          "Fares are metered. In Tokyo, the base fare is around ¥500–550 for the first 1.2 kilometers, then ¥100 per approximately 300–400 meters. A 5-kilometer city ride typically runs ¥1,500–2,500. Late-night surcharges (after 10pm or 11pm depending on company) add 20–30%. There is no tip. Pay exactly what the meter says. Credit cards are accepted in most Tokyo taxis now; IC cards (Suica) are accepted in many. Check the payment stickers on the rear side window before you get in if you're unsure."
+          "Fares are metered. In Tokyo, the base fare is around ¥500–550 for the first 1.2 kilometers, then ¥100 per approximately 300–400 meters. A 5-kilometer city ride typically runs ¥1,500–2,500. Late-night surcharges (after 10pm) add around 20%. There is no tip. Pay exactly what the meter says.",
+          "Two things get added to the meter legitimately. Expressway tolls are passed through at cost, which matters on airport runs and is worth agreeing to before the driver takes the ramp. And the meter also ticks over slowly while stationary, so heavy traffic costs you even when you are not moving.",
+          "Fares vary by region. Tokyo is the expensive end; a ride in a smaller city can be noticeably cheaper for the same distance. What does not vary is the honesty of the meter. Deliberate long-hauling of tourists is close to unheard of, and if a driver takes a route that looks odd it is almost always a one-way system or a traffic avoidance, not a scam."
+        ]
+      },
+      {
+        "heading": "Paying, and the small tray",
+        "paragraphs": [
+          "Credit cards are accepted in most Tokyo taxis now; IC cards (Suica) are accepted in many. Check the payment stickers on the rear side window before you get in if you're unsure. Outside the big cities, assume cash and carry it — a rural taxi that cannot take your card at midnight is a genuinely bad situation.",
+          "Money is exchanged on a small tray, not hand to hand. Put your notes in the tray; change and receipt come back the same way. This is standard everywhere in Japan, not a taxi quirk, and it is not rudeness — it is simply how the transaction is done.",
+          "There is no tipping. Not a small one, not rounding up, not leaving the coins. Attempting it produces a driver chasing you down the pavement to return your money, which is a worse outcome for everyone than simply taking the change. If you want a receipt, ask for a ryoshusho."
         ]
       },
       {
         "heading": "When to use a taxi",
         "paragraphs": [
-          "Taxis are worth the cost in specific situations: after the last train, with heavy luggage between hotel and station, when traveling with elderly or young children, in cities with infrequent bus service, or when the destination is not near a train line. In Tokyo during normal hours, taxis are significantly more expensive than the train and not faster — traffic density means trains win on time and price for most inner-city routes. Outside Tokyo, in smaller cities, taxis become more valuable as transit alternatives are thinner."
+          "Taxis are worth the cost in specific situations: after the last train, with heavy luggage between hotel and station, when traveling with elderly or young children, in cities with infrequent bus service, or when the destination is not near a train line. In Tokyo during normal hours, taxis are significantly more expensive than the train and not faster — traffic density means trains win on time and price for most inner-city routes. Outside Tokyo, in smaller cities, taxis become more valuable as transit alternatives are thinner.",
+          "The case that justifies the fare most often is the last train. Tokyo's network stops around midnight and does not resume until roughly 5am, and there is no night service to fall back on. A taxi home at 1am is expensive; the alternative is a capsule hotel, an all-night cafe, or four hours in a bar you have stopped enjoying. Budget for one or two of these rides on a trip rather than treating each as a failure of planning.",
+          "The other strong case is rural. In the countryside, buses can run four times a day and stop in the early evening, and a taxi from the station to a remote ryokan is not a luxury but the only way to arrive. Ask the ryokan to book it — many will send one, and some will collect you free."
         ]
       },
       {
         "heading": "Hailing and apps",
         "paragraphs": [
-          "Taxis in Japan are hailed from the street — stand at the curb, extend your arm, and a cab with a lit red indicator (available for hire) will stop. Do not try to hail a cab at a zebra crossing or intersection. Taxi apps: GO (Japan-specific, major cities, English available), Uber (operates in some Japanese cities but uses licensed taxis rather than private drivers), and DiDi. GO is the most widely used and works in Tokyo, Osaka, Kyoto, and most other large cities. Having it installed before you need it at midnight is a better plan than finding it at midnight."
+          "Taxis in Japan are hailed from the street — stand at the curb, extend your arm, and a cab with a lit red indicator will stop. The red character in the windscreen, 空車, means vacant; a green or orange display generally means occupied or on call, which is the opposite of what visitors from most countries expect. Do not try to hail a cab at a zebra crossing or intersection.",
+          "At any significant station there is a taxi rank, and the rank is the better option. Queue at the head of it and take the front car; do not walk down the line picking one. In the rain, at a busy station, the rank will still be moving when the street has nothing free on it at all.",
+          "Taxi apps: GO (Japan-specific, major cities, English available), Uber (operates in some Japanese cities but uses licensed taxis rather than private drivers), DiDi, and S.RIDE in Tokyo. GO is the most widely used and works in Tokyo, Osaka, Kyoto, and most other large cities. Having it installed before you need it at midnight is a better plan than finding it at midnight — and note that most of these want a Japanese phone number or a working data connection at sign-up, which is an argument for sorting your eSIM at the airport rather than later."
+        ]
+      },
+      {
+        "heading": "The etiquette that is not obvious",
+        "paragraphs": [
+          "Sit in the back. The front passenger seat is not off limits but is unusual for a lone visitor, and the rear left seat is the conventional one. Seatbelts are required in the back as well as the front.",
+          "Do not eat in the taxi, and keep drinks closed. The interiors are immaculate — white lace seat covers, spotless floor mats, a driver in a suit and often white gloves — and that standard is maintained deliberately. Treat the car the way it is being presented to you.",
+          "Large luggage goes in the boot; the driver will handle it and does not expect help or payment for doing so. If you need space, look for a JPN Taxi, the tall boxy hybrid now common in cities. It has a sliding door, a wheelchair ramp, and considerably more room for suitcases than the older sedans."
+        ]
+      },
+      {
+        "heading": "Where taxis let you down",
+        "paragraphs": [
+          "Airports are the main one. A metered taxi from Narita into central Tokyo runs well over ¥20,000 and can take ninety minutes in traffic; the Narita Express or the Keisei Skyliner does it for a tenth of that. Some companies sell fixed-price airport transfers, which at least remove the uncertainty, but the train is nearly always the right call unless you are arriving at 2am with three suitcases and a toddler.",
+          "The second is Kyoto in peak season. The city's traffic during autumn foliage and cherry blossom is genuinely bad, taxis sit in it with the meter running, and a bicycle or a bus lane beats a car by a wide margin. The third is anywhere a Shinkansen goes: at intercity distances the fare becomes absurd long before the journey becomes convenient."
         ]
       }
     ]
@@ -1130,7 +1162,7 @@
     "relatedIds": [
       "ic-card-japan-guide",
       "train-etiquette-japan",
-      "tokyo-neighborhoods-guide"
+      "tokyo-day-trips"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1772,7 +1804,8 @@
     "affiliateLinks": [],
     "relatedIds": [
       "10-days-japan-no-tourist-traps",
-      "japan-winter-travel-guide"
+      "japan-winter-travel-guide",
+      "shinkansen-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1981,7 +2014,7 @@
   {
     "id": "shinkansen-guide",
     "title": "The JR Pass: Who It's For, Who It Isn't, and How to Not Overpay",
-    "excerpt": "The JR Pass is one of Japan's most famous travel products. It's also, for a lot of itineraries, a waste of money.",
+    "excerpt": "The JR Pass is one of Japan's most famous travel products. Since the 2023 price rise it is also, for most itineraries, a waste of money.",
     "category": "getting-around",
     "tags": [
       "transport",
@@ -1989,8 +2022,8 @@
       "budget"
     ],
     "publishedAt": "2026-06-02",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 8,
     "heroImage": "https://raynart.github.io/TABI/assets/images/shinkansen-guide.webp",
     "heroImageAlt": "Shinkansen bullet train at a Japanese station platform",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2004,39 +2037,80 @@
     "author": "TABI Editorial",
     "sections": [
       {
-        "heading": "The cost",
+        "heading": "The cost, and why old advice is wrong",
         "paragraphs": [
-          "The 7-day JR Pass costs ¥50,000 (around $330 USD at current rates). For that price you get unlimited travel on most JR-operated trains, including the Shinkansen, for one week. The 14-day version is ¥80,000. If your itinerary involves Tokyo, Kyoto, Osaka, and Hiroshima in that sequence, the math works. If your itinerary is mostly in one city with a few day trips, it almost certainly doesn't."
+          "The 7-day JR Pass costs ¥50,000 (around $330 USD at current rates). For that price you get unlimited travel on most JR-operated trains, including the Shinkansen, for one week. The 14-day version is ¥80,000 and the 21-day is ¥100,000. If your itinerary involves Tokyo, Kyoto, Osaka, and Hiroshima in that sequence, the math works. If your itinerary is mostly in one city with a few day trips, it almost certainly doesn't.",
+          "That qualifier matters more than it used to. In October 2023 the 7-day pass went from ¥29,650 to ¥50,000 — a 69% increase overnight. At the old price the pass was close to an automatic purchase for any first-time visitor; at the new one it is a calculation. Almost every blog post, forum answer and guidebook paragraph written before that date is describing a product that no longer exists, and a lot of it is still the first thing you find when you search. Check the date on any JR Pass advice before you trust it, including this page.",
+          "There is also a Green Car version, roughly 30–40% more, which buys you the first-class carriage: wider seats in a 2+2 layout instead of 2+3, more legroom, and a quieter car. On a two-hour ride in a full train it is pleasant. It is not a different train and it does not arrive earlier. Buy it if the comfort is worth the money to you, not because it sounds like the serious option."
         ]
       },
       {
         "heading": "Break-even: when the pass wins",
         "paragraphs": [
-          "The break-even calculation for the 7-day pass: a single Tokyo–Kyoto Shinkansen (Hikari) ticket is ¥13,870 each way. Two of those is ¥27,740. Add Kyoto–Osaka (¥1,420), Osaka–Hiroshima (¥5,720 each way), a couple of JR local trips, and you're somewhere near ¥60,000. The pass wins. If you're only doing Tokyo–Kyoto round-trip with no other long-distance travel, a single round-trip costs ¥27,740 against the pass price of ¥50,000. You lose ¥22,260."
+          "The break-even calculation for the 7-day pass: a single Tokyo–Kyoto Shinkansen (Hikari) ticket is ¥13,870 each way. Two of those is ¥27,740. Add Kyoto–Osaka (¥1,420), Osaka–Hiroshima (¥5,720 each way), a couple of JR local trips, and you're somewhere near ¥60,000. The pass wins.",
+          "Now the itinerary most people actually have. Tokyo for four days, Kyoto for three, back to Tokyo to fly home. That is one round trip: ¥27,740 against a pass price of ¥50,000. You lose ¥22,260 — more than the round trip itself cost. Adding a day trip to Nara or Osaka moves the needle by a couple of thousand yen and changes nothing about the conclusion.",
+          "The version that flips it is the long west-bound run. Tokyo → Kyoto → Hiroshima → Osaka → Tokyo inside seven days clears ¥50,000 comfortably, and every JR local ride, airport express and side trip after that point is free. The general rule: the pass wins when you are covering long distances in one direction and coming back, and loses when you are basing yourself in one or two cities. Work out your actual route on a fare calculator before you buy. It takes ten minutes and the answer is frequently the opposite of what you assumed."
         ]
       },
       {
-        "heading": "Nozomi vs Hikari",
+        "heading": "The Nozomi supplement changed the calculation",
         "paragraphs": [
-          "The JR Pass does not cover the Nozomi or Mizuho (the fastest Shinkansen), only the Hikari and Kodama. Tokyo to Kyoto on a Hikari takes about 2h45m versus 2h15m on a Nozomi. This is not a big difference and most people don't notice it."
+          "The JR Pass does not cover the Nozomi or Mizuho, the fastest services on the Tokaido–Sanyo line — only the Hikari and Kodama. Tokyo to Kyoto on a Hikari takes about 2h45m versus 2h15m on a Nozomi. This is not a big difference and most people don't notice it.",
+          "What did change in 2023: you can now pay a supplement to ride the Nozomi with a JR Pass, rather than being barred from it outright. This is less about the half hour and more about frequency. Nozomi services are the backbone of the timetable; Hikari runs perhaps two an hour, Kodama stops everywhere and takes close to four hours to Kyoto. If you arrive at the platform at an awkward time, the supplement buys you the next departure instead of a forty-minute wait for a train that is itself slower.",
+          "The trap is the Kodama. It appears on the same board, it is fully covered, and it is a genuinely slow train that stops at every station on the line. Read the service name, not just the destination."
         ]
       },
       {
         "heading": "What the pass covers that people miss",
         "paragraphs": [
-          "What the pass does cover that people underestimate: the Narita Express (N'EX) from the airport, the local JR lines within Tokyo (which serve some neighborhoods that subway doesn't), the JR Haruka from Kansai Airport into Kyoto, and most Shinkansen within Kyushu (on the Kyushu JR Pass). If you're starting from Narita, the N'EX alone is ¥3,070 to Shinjuku. Over seven days that's two trips or ¥6,140 saved before you board a Shinkansen."
+          "What the pass does cover that people underestimate: the Narita Express (N'EX) from the airport, the local JR lines within Tokyo (which serve some neighborhoods that subway doesn't), the JR Haruka from Kansai Airport into Kyoto, and most Shinkansen within Kyushu (on the Kyushu JR Pass). If you're starting from Narita, the N'EX alone is ¥3,070 to Shinjuku. Over seven days that's two trips or ¥6,140 saved before you board a Shinkansen.",
+          "Two more that regularly go unused. The JR ferry to Miyajima — the one that puts you in front of the floating torii — is a JR service and is included. And the Yamanote line, the loop that connects most of the places you will go in Tokyo, is JR. If you are holding an active pass, you do not need to touch your IC card inside Tokyo at all. People carry an activated pass around for a week and pay cash for the Yamanote out of habit."
+        ]
+      },
+      {
+        "heading": "Regional passes are usually the better buy",
+        "paragraphs": [
+          "This is the part the national pass's fame obscures. JR is six separate regional companies, and each sells its own passes covering its own territory at a fraction of the national price. If your trip stays in one region — which most trips do — one of these is almost always the right answer.",
+          "The Kansai Area Pass covers Osaka, Kyoto, Nara, Kobe and Himeji for one to four days and costs a small fraction of the national pass. JR East sells area passes for the Tohoku and Nagano/Niigata directions, useful if you are going north rather than west. The Hokuriku Arch Pass covers Tokyo to Osaka via Kanazawa, which is a genuinely good route and a poor fit for the national pass. JR Kyushu and JR Hokkaido each sell their own.",
+          "Two practical notes. These passes are sold to foreign passport holders on a tourist entry, same as the national pass, and several of them can only be bought before you arrive or at specific station offices. And you can stack them across a trip — a regional pass for the week you are moving around and plain IC card travel for the week you are not is usually cheaper than one long national pass covering both."
+        ]
+      },
+      {
+        "heading": "Reserve your seats — it is free and unlimited",
+        "paragraphs": [
+          "With a JR Pass, seat reservations cost nothing and you can make as many as you like. A surprising number of pass holders never do it, ride in the non-reserved cars, and stand from Tokyo to Nagoya during a busy period.",
+          "Reserve at any JR ticket office (Midori no Madoguchi) or a reserved-seat machine, in a few minutes, with the pass and your passport. Do it the evening before rather than on the platform. During Golden Week, Obon in mid-August and New Year, the reserved cars fill days ahead and the non-reserved cars become standing room from the moment the doors open — these are the three weeks of the year when the difference is not comfort but whether you sit down at all.",
+          "If you are travelling with luggage, ask for a seat in the last row of the carriage. The space behind it is the only place on a Shinkansen where a large suitcase fits without blocking an aisle."
+        ]
+      },
+      {
+        "heading": "The luggage rule that catches people",
+        "paragraphs": [
+          "On the Tokaido, Sanyo and Kyushu Shinkansen — the Tokyo–Kyoto–Osaka–Hiroshima line, which is to say the line most visitors use — a bag whose combined length, width and height exceeds 160cm requires an oversized baggage seat reservation. That reservation is free if you make it in advance. If you turn up with the bag and no reservation, you pay a ¥1,000 penalty and the staff will find you a place for it.",
+          "A large checked-size suitcase is often exactly at this threshold. Measure yours before you travel rather than discovering the rule at the gate, and make the reservation at the same time as your seat — it is the same counter and the same conversation.",
+          "The alternative most residents use is to not carry the bag at all. Takkyubin, the overnight luggage courier, moves a suitcase between hotels for roughly ¥2,000–3,000 and it is the single best-value service in Japanese travel. Hand it to your hotel's front desk before noon, collect it at the next hotel the following afternoon, and cross the country with a day bag."
         ]
       },
       {
         "heading": "Alternatives to the JR Pass",
         "paragraphs": [
-          "Alternatives to consider: IC cards (Suica) cover everything within cities. Individual Shinkansen tickets bought in advance can be slightly discounted through JR's Ekinet system. The Osaka Amazing Pass and the Kyoto Sightseeing Card cover local transit within those cities and don't require a JR Pass to function alongside them."
+          "Alternatives to consider: IC cards (Suica) cover everything within cities. Individual Shinkansen tickets bought in advance can be slightly discounted through JR's Ekinet system. The Osaka Amazing Pass and the Kyoto Sightseeing Card cover local transit within those cities and don't require a JR Pass to function alongside them.",
+          "Two more worth knowing. Platt Kodama sells discounted Tokyo–Osaka seats on the slow Kodama service — if you have the time, it is materially cheaper than the standard fare. And the overnight highway bus, at roughly a quarter of the Shinkansen fare, is a real option that Japanese students and budget travellers use constantly; the modern three-across coaches are more comfortable than the idea sounds, and you save a night of accommodation.",
+          "Domestic budget airlines (Peach, Jetstar Japan, Skymark) beat the Shinkansen on price for the long hops — Tokyo to Fukuoka or Sapporo — where the train stops being competitive on time as well."
         ]
       },
       {
         "heading": "If you have decided to buy one",
         "paragraphs": [
-          "If you've already decided to buy the pass: buy it before leaving your home country. It used to be only available abroad, and while you can now buy it in Japan, the domestic price is roughly 10–20% higher. Get it from JR's official website or an authorized travel agent in your country. Activate it at a JR office in any major station, not at the airport machines."
+          "If you've already decided to buy the pass: buy it before leaving your home country. It used to be only available abroad, and while you can now buy it in Japan, the domestic price is roughly 10–20% higher. Get it from JR's official website or an authorized travel agent in your country. Activate it at a JR office in any major station, not at the airport machines.",
+          "Bring your passport to the exchange counter — the pass is sold only to visitors on a temporary visitor entry, and the staff will check the stamp. When you activate it you choose the start date, and it does not have to be the day you collect it. If you are spending your first three days in Tokyo without leaving the city, start the pass on day four. People routinely burn two days of a seven-day pass riding the Yamanote line.",
+          "The pass is now issued digitally through the official site, which lets you make seat reservations online instead of queueing. The queues at the exchange counters in Tokyo Station and the airports are long, and they are longest at exactly the hour your flight lands."
+        ]
+      },
+      {
+        "heading": "The short version",
+        "paragraphs": [
+          "Add up the long-distance legs you will actually take, at the real fares, and compare that to ¥50,000. If you are doing one city with day trips, skip it and use an IC card. If you are staying in one region, buy that region's pass. If you are crossing the country and coming back inside a week, buy the national pass and then use it for everything, including the airport train and the Yamanote line, because you have already paid for it."
         ]
       }
     ]
@@ -2062,7 +2136,7 @@
     "relatedIds": [
       "ic-card-japan-guide",
       "kissaten-tokyo-coffee-culture",
-      "tsukiji-outer-market-guide"
+      "tokyo-day-trips"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2431,7 +2505,7 @@
     "relatedIds": [
       "hidden-shrines-kyoto",
       "kanazawa-japan-guide",
-      "japan-winter-travel-guide"
+      "tokyo-day-trips"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -3065,12 +3139,13 @@
     "excerpt": "Hakone is excellent. Nikko is impressive. Both are in every guidebook and overrun on weekends. There are better options if you're willing to look slightly further.",
     "category": "getting-around",
     "tags": [
+      "tokyo",
       "nature",
-      "budget"
+      "off-the-beaten-path"
     ],
     "publishedAt": "2026-05-15",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tokyo-day-trips.webp",
     "heroImageAlt": "Kurazukuri Street in Kawagoe with traditional clay-walled Edo-period storehouses",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -3086,31 +3161,64 @@
       {
         "heading": "The problem with the usual recommendations",
         "paragraphs": [
-          "The standard day-trip recommendations from Tokyo are Hakone (hot springs, Fuji views), Nikko (elaborate Edo-period shrines in the mountains), and Kamakura (giant Buddha, seaside). All three are worth visiting. All three are also predictable, and in peak season they're handling tourist numbers that test their infrastructure. If you've already been to any of them, or if you're planning a second Tokyo visit and want to branch out, there are options that deliver comparable experiences with significantly smaller crowds."
+          "The standard day-trip recommendations from Tokyo are Hakone (hot springs, Fuji views), Nikko (elaborate Edo-period shrines in the mountains), and Kamakura (giant Buddha, seaside). All three are worth visiting. All three are also predictable, and in peak season they're handling tourist numbers that test their infrastructure. If you've already been to any of them, or if you're planning a second Tokyo visit and want to branch out, there are options that deliver comparable experiences with significantly smaller crowds.",
+          "The useful way to choose between what follows is by what you want the day to feel like, not by distance. Kawagoe is a half day of old streets and eating. Chichibu is mountains and a shrine town. Izu is coast and hot water. Mashiko and Sawara are craft and canal towns for people who like a slower pace. Ashikaga is a single spectacular sight and not much else. None of them needs an early start except Mashiko."
         ]
       },
       {
-        "heading": "Kawagoe",
+        "heading": "Kawagoe — the easy one",
         "paragraphs": [
-          "Kawagoe, 30 minutes from Ikebukuro on the Tobu Tojo Line (around ¥470). Called Little Edo, it has a preserved merchant district (Kurazukuri Street) with Edo-period clay-walled warehouses that have become antique shops, sweet shops, and cafés. The bell tower that rings every six hours has been doing so since 1624. The Kashiya Yokocho (Candy Lane) alley sells old-fashioned Japanese sweets from small family shops. Significantly fewer international visitors than Kamakura; similar historical atmosphere."
+          "Kawagoe, 30 minutes from Ikebukuro on the Tobu Tojo Line (around ¥470). Called Little Edo, it has a preserved merchant district (Kurazukuri Street) with Edo-period clay-walled warehouses that have become antique shops, sweet shops, and cafés. The bell tower that rings every six hours has been doing so since 1624. The Kashiya Yokocho (Candy Lane) alley sells old-fashioned Japanese sweets from small family shops. Significantly fewer international visitors than Kamakura; similar historical atmosphere.",
+          "Do not skip Kita-in. The temple holds 540 stone rakan statues, each with a different face and posture — sleeping, laughing, arguing, holding a cat — carved over fifty years in the late 18th century. It also contains rooms moved here from Edo Castle, which makes them the only surviving interiors of a building otherwise lost entirely. The rakan garden is ten minutes' walk from the main street and most day-trippers never reach it.",
+          "Kawagoe is the right choice when you have half a day rather than a whole one, or when the weather is uncertain and you want to be back in Tokyo by mid-afternoon. It is also the most walkable of these — everything worth seeing sits within about twenty minutes on foot of everything else."
         ]
       },
       {
-        "heading": "Chichibu",
+        "heading": "Chichibu — mountains and a festival",
         "paragraphs": [
-          "Chichibu, 90 minutes from Ikebukuro on the Seibu Chichibu Line. A mountain town with a famous Shinto shrine (Chichibu Shrine), a series of 34 Buddhist pilgrimage temples that serious walkers circuit over multiple days, and the only natural karst formation in the Kanto region at Ootaki. In December, the Chichibu Night Festival (December 2–3) is one of Japan's largest float festivals and draws 200,000 people — still far more manageable than any equivalent Tokyo-area event."
+          "Chichibu, 90 minutes from Ikebukuro on the Seibu Chichibu Line. A mountain town with a famous Shinto shrine (Chichibu Shrine), a series of 34 Buddhist pilgrimage temples that serious walkers circuit over multiple days, and the only natural karst formation in the Kanto region at Ootaki. In December, the Chichibu Night Festival (December 2–3) is one of Japan's largest float festivals and draws 200,000 people — still far more manageable than any equivalent Tokyo-area event.",
+          "The other date worth planning around is mid-to-late April, when the shibazakura at Hitsujiyama Park flowers — an entire hillside of moss phlox in pink and white bands with the Chichibu mountains behind it. It is a genuinely photogenic hour and the park is otherwise unremarkable, so check the bloom before committing the trip to it.",
+          "Take the Limited Express Laview if the timing works. It is a striking piece of train design with enormous windows, it costs a modest supplement over the standard fare, and the last forty minutes into the mountains are the point of taking it."
         ]
       },
       {
-        "heading": "Izu Peninsula",
+        "heading": "Izu Peninsula — coast and hot water",
         "paragraphs": [
-          "Izu Peninsula, 90 minutes from Tokyo by Shinkansen to Atami or Mishima. A volcanic peninsula with hot springs, dramatic coastline, and fewer tourists per kilometer than anywhere in the Hakone area. Shuzenji in the central valley is a small onsen town with a classic feel — a bamboo grove along the river, wooden onsen hotels, a 9th-century Buddhist temple. Enough for a full day without a crowd problem."
+          "Izu Peninsula, 90 minutes from Tokyo by Shinkansen to Atami or Mishima. A volcanic peninsula with hot springs, dramatic coastline, and fewer tourists per kilometer than anywhere in the Hakone area. Shuzenji in the central valley is a small onsen town with a classic feel — a bamboo grove along the river, wooden onsen hotels, a 9th-century Buddhist temple. Enough for a full day without a crowd problem.",
+          "Izu is the one on this list that rewards staying over rather than returning the same evening. The peninsula is large, the coast road south is slow, and the good parts — the Jogasaki cliff walk on the east side, the Kawazu waterfalls inland — are far enough apart that a day trip means picking one. If you can spare a night, an onsen ryokan in Shuzenji is a better version of what people go to Hakone for.",
+          "For a day trip specifically, the Odoriko limited express runs direct from Tokyo Station and removes the change at Atami, which is worth the small extra cost for the time it saves at both ends."
         ]
       },
       {
-        "heading": "Mashiko",
+        "heading": "Mashiko — for the pottery",
         "paragraphs": [
-          "Mashiko, two hours from Ueno by train (JR Utsunomiya plus bus). A ceramics town that became famous when the potter Shoji Hamada established a studio there in the 1920s and invited other ceramicists. There are now around 300 kilns in and around the town. The spring and autumn pottery fairs are among the best craft markets in Japan. The Hamada Shoji Memorial Mashiko Sankokan museum is on the original estate and worth two hours. The journey requires planning but the experience is unique."
+          "Mashiko, two hours from Ueno by train (JR Utsunomiya plus bus). A ceramics town that became famous when the potter Shoji Hamada established a studio there in the 1920s and invited other ceramicists. There are now around 300 kilns in and around the town. The spring and autumn pottery fairs are among the best craft markets in Japan. The Hamada Shoji Memorial Mashiko Sankokan museum is on the original estate and worth two hours. The journey requires planning but the experience is unique.",
+          "What makes Mashiko different from buying ceramics in a Tokyo department store is that you buy from the person who made the object, in the building where it was made, usually for less than the city price. Mashiko-yaki is heavy, earthy, thickly glazed stoneware — the deliberate opposite of fine porcelain — and it is the style that the mingei folk-craft movement built its case around. If it does not appeal to you in photographs it will not appeal to you in person.",
+          "Go for one of the fairs if you can. They run for about a week around Golden Week in spring and in early November, several hundred potters set up tents along the main road, and the town becomes the best place in the country to buy pots. Outside those weeks it is a quiet town with good shops and a strong museum, which is a different and slower proposition."
+        ]
+      },
+      {
+        "heading": "Sawara — the canal town",
+        "paragraphs": [
+          "Sawara, in Chiba, roughly 90 minutes from Tokyo on the JR Narita Line. Another town that calls itself Little Edo, and the one that earns it most convincingly: a working canal runs through the old merchant district, willows lean over the water, and the buildings along it are still the original 18th- and 19th-century shops rather than reconstructions. Several are businesses that have been trading continuously for two hundred years.",
+          "Sawara was the home of Ino Tadataka, who surveyed the entire Japanese coastline on foot in the early 1800s and produced maps so accurate they were still in use a century later. His house and the museum opposite it are the anchor of a visit, and the story is remarkable even if maps do not usually interest you — he started the project at 55, after retiring from the family sake business.",
+          "It pairs naturally with Narita, which is on the same line: the temple complex at Naritasan is large, genuinely old, and almost entirely ignored by the millions of people who pass through the airport a few kilometres away. Two towns in one day is comfortable here."
+        ]
+      },
+      {
+        "heading": "Ashikaga — one sight, worth the trip",
+        "paragraphs": [
+          "Ashikaga Flower Park, about 90 minutes north of Tokyo, is a single-purpose destination and unapologetic about it. Its great wisteria is over 150 years old, trained flat across a trellis the size of a tennis court, and when it flowers in late April and early May you walk underneath a ceiling of hanging purple. It is the sort of thing that looks manipulated in photographs and is not.",
+          "The bloom window is short — roughly the last week of April into the first week of May — and the park publishes its status, which you should check before booking anything. Go on a weekday if the dates allow; this is the one place on this list that gets genuinely crowded, because Japanese visitors come too.",
+          "Outside wisteria season the park runs a large winter illumination from October to February, which is good but not a reason to travel ninety minutes. In the months between, skip it."
+        ]
+      },
+      {
+        "heading": "Practical notes",
+        "paragraphs": [
+          "Check the last train before you commit to a long dinner. These are all comfortable same-day returns, but the last useful service from a rural line can leave earlier than you expect, and the gap between the last convenient train and the actual last train is often three hours of waiting.",
+          "The private railways — Tobu to Kawagoe, Seibu to Chichibu — sell day passes bundling the return fare with local buses and small discounts, usually sold at the originating station and usually worth it if you plan to use a bus at the far end. Note that none of these are JR lines, so a JR Pass does not cover them; Izu, Mashiko and Sawara are the JR-served options on this list.",
+          "Finally, go on a weekday if you have the choice. Every crowd problem described above is a weekend and public-holiday problem. On a Tuesday in a shoulder month, most of these towns are close to empty."
         ]
       }
     ]
