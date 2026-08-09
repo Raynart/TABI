@@ -727,8 +727,8 @@
       "tradition"
     ],
     "publishedAt": "2026-06-17",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/matsumoto-castle-guide.webp",
     "heroImageAlt": "Matsumoto Castle reflected in the surrounding moat on a clear autumn morning with the Japanese Alps behind",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -772,6 +772,30 @@
         ]
       },
       {
+        "heading": "The other reasons to stop here",
+        "paragraphs": [
+          "Matsumoto is Yayoi Kusama's home town, and the city art museum holds a substantial permanent collection of her work along with the polka-dotted vending machines outside it. If the Naoshima pumpkins were on your list, this is the same artist at greater length and with no ferry.",
+          "The Suzuki method of teaching violin was developed here, and the city runs a serious classical music festival in late summer founded by the conductor Seiji Ozawa. Both facts explain a town that is noticeably more cultured than its size suggests.",
+          "Twenty minutes north by train, the Daio wasabi farm sits on spring water from the Alps and is the largest in Japan — rows of wasabi under black shade cloth in clear running streams, with wasabi ice cream at the end. It is a strange and pleasant hour."
+        ]
+      },
+      {
+        "heading": "Using it as a base for the Alps",
+        "paragraphs": [
+          "The stronger argument for Matsumoto is what it reaches. Kamikochi, the alpine valley under the Hotaka range, is about ninety minutes by bus and is among the most beautiful places in Japan — a flat river walk under three-thousand-metre peaks, no private cars allowed, and a season running roughly mid-April to mid-November.",
+          "Norikura and the Tateyama Kurobe route are both reachable from here, and Shirahone Onsen, a small milky-white sulphur spring village in a gorge, is an hour and a half by bus and barely changed in a century.",
+          "This is why two nights beats one. Day one is the castle and the old town; day two is a mountain. A single overnight gets you the castle and a train."
+        ]
+      },
+      {
+        "heading": "Doing the castle properly",
+        "paragraphs": [
+          "Go at opening. The interior is a single narrow route up six floors of original timber with staircases closer to ladders than stairs, and once it fills there is no overtaking — the whole building becomes one slow queue. At half past eight you can climb it at your own pace; by eleven on a weekend the wait to enter can be an hour.",
+          "Socks matter, because shoes come off at the entrance and you carry them with you in a bag. The floors are cold, worn and steep, and this is not a building to attempt in anything slippery.",
+          "Outside, walk the full circuit of the moat rather than photographing from the front. The reflection shot everyone takes is from the south-east; the quieter north side gives you the black tower against the Alps, which is the better picture and the reason the castle was built where it was."
+        ]
+      },
+      {
         "heading": "The Alps in winter",
         "paragraphs": [
           "Matsumoto in winter — December through February — is exceptional if you are prepared for cold. The Alps are fully snowcapped. The castle moat reflects a stark black tower against white mountains on clear mornings. Visitor numbers are low. The onsen around the city (Asama, Utsukushigahara, Shirahone) are at their best in cold weather. Shirahone Onsen specifically, 90 minutes by bus from Matsumoto, is a small valley onsen village that has barely changed since the Edo period and is close to empty outside of August."
@@ -790,8 +814,8 @@
       "tradition"
     ],
     "publishedAt": "2026-06-17",
-    "updatedAt": "",
-    "readingTime": 3,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/kyoto-3-days-itinerary.webp",
     "heroImageAlt": "The vermilion torii gates of Fushimi Inari at dawn with no crowds visible",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -832,6 +856,30 @@
         "heading": "Day three: what most itineraries miss",
         "paragraphs": [
           "Philosopher's Path (Tetsugaku no Michi): a two-kilometer canal-side walkway between Ginkaku-ji and Nanzen-ji in the northeastern hills. In cherry blossom season the canal is lined with sakura. At any time of year it is quieter than the central tourist circuit and lined with small cafés, tofu restaurants, and craft shops. Walk it slowly, south to north. At the northern end: Nanzen-ji, a Zen temple complex with an aqueduct running through the grounds — one of the odder visual combinations in Kyoto and one of the most memorable."
+        ]
+      },
+      {
+        "heading": "How to move around, which decides everything",
+        "paragraphs": [
+          "Kyoto's buses go everywhere and are slow, packed and stuck in traffic during any busy season. The two subway lines are fast and cover very little. The trains — JR, Keihan, Hankyu, Eizan, Randen — are excellent along their own corridors and useless between them.",
+          "The answer most residents will give you is a bicycle. The city is flat, compact and on a grid, and almost everything in this itinerary is within a twenty-minute ride. Rentals are inexpensive and widely available; park only in marked bays, because Kyoto impounds bikes left on pavements.",
+          "Where you stay matters more here than in Tokyo, because crossing the city eats an hour. Staying near Karasuma or Kawaramachi puts you within reach of both halves. Staying at the station is convenient for arrival and inconvenient for everything else."
+        ]
+      },
+      {
+        "heading": "The season changes the plan",
+        "paragraphs": [
+          "In cherry blossom season and in the second half of November, everything in this itinerary is two to three times busier, and the early-morning rule stops being an optimisation and becomes the only way it works. Aim to be at the first site at opening and finished with it by nine.",
+          "Both seasons add evening illuminations at several temples, which are ticketed, crowded and genuinely worth doing once — and which give you something to do in the hours when the daytime sites are unpleasant.",
+          "The rest of the year, and especially the fresh green of late May and the quiet of January, the same three days are a completely different and much gentler trip."
+        ]
+      },
+      {
+        "heading": "What three days cannot include",
+        "paragraphs": [
+          "Three days buys you one side of the city per day and a little slack. It does not buy the northern mountains — Ohara, Kurama and Kibune each want most of a day — and it does not buy Uji, which is where the tea and the Byodo-in phoenix hall are.",
+          "It also does not buy Nara, which is forty-five minutes away and deserves its own day rather than an afternoon. Attempting Nara on day three of a Kyoto trip produces a rushed version of both.",
+          "If you have a fourth day, spend it north rather than adding more temples in the centre. If you have a fifth, spend it in Nara. The marginal value of a seventh temple in Higashiyama is close to zero."
         ]
       },
       {
@@ -1598,8 +1646,8 @@
       "tokyo"
     ],
     "publishedAt": "2026-06-15",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tokyo-subway-guide.webp",
     "heroImageAlt": "The platform at Shinjuku Station during morning rush hour with commuters boarding a train",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -1613,39 +1661,59 @@
     "author": "TABI Editorial",
     "sections": [
       {
-        "heading": "Two networks, one system",
+        "heading": "It is not two networks, it is about a dozen",
         "paragraphs": [
-          "Tokyo’s rail network is operated by multiple companies, of which two matter most to visitors: Tokyo Metro (13 lines, run by Tokyo Metro Co.) and Toei Subway (4 lines, run by the Tokyo Metropolitan Government). They connect at major stations, but they are separate systems with separate fares — transferring between them costs extra unless you have an IC card, which handles the fare calculation automatically. On an IC card, the transfer cost is minimal and seamless. On a paper ticket, you’ll need to buy a new one each time. Get the IC card."
+          "The Tokyo Metro has thirteen lines and the Toei Subway has four, and between them they are what most people mean by the subway. But JR East runs the surface network on top of it, and half a dozen private railways — Tokyu, Odakyu, Keio, Seibu, Tobu, Keikyu, Keisei — run the lines out to the suburbs.",
+          "They are separate companies with separate fares, and transferring between them costs more than staying on one. An IC card handles all of this invisibly, which is the main practical reason to have one.",
+          "The complication that catches people is through-service: a Tokyo Metro train frequently continues past the end of its own line onto a private railway and keeps going under a different name. You have not made a mistake and you do not need to change; but you may have left the network your ticket covers, which is another reason for the card."
         ]
       },
       {
-        "heading": "The Yamanote Line",
+        "heading": "The Yamanote Line is your backbone",
         "paragraphs": [
-          "The Yamanote Line is not a subway — it’s a JR surface rail loop that runs around central Tokyo, connecting Shinjuku, Shibuya, Harajuku, Ebisu, Osaki, Shinagawa, Tokyo, Akihabara, Ueno, Nippori, Ikebukuro, and back. It takes about an hour to complete the full loop. Think of it as your outer ring: when you want to move between major neighborhoods, this is usually how you do it. Frequency during peak hours is every two to three minutes."
+          "The Yamanote is not a subway — it is a JR surface loop around central Tokyo connecting Shinjuku, Shibuya, Harajuku, Ebisu, Shinagawa, Tokyo, Akihabara, Ueno, Nippori and Ikebukuro, and back around. A full circuit takes about an hour and trains run every few minutes.",
+          "Think of it as the outer ring. To move between major neighbourhoods you generally go out to the loop, round it, and back in. Almost everything a visitor wants is inside it or on it.",
+          "Two lines cut across the middle and are worth knowing for that reason: the Chuo, which runs straight through from Tokyo to Shinjuku and out west, and the Ginza and Hanzomon metro lines, which cross the centre diagonally."
         ]
       },
       {
-        "heading": "IC card vs paper ticket",
+        "heading": "The numbering system means you never read kanji",
         "paragraphs": [
-          "Buy a Suica IC card at any JR ticket machine at the airport or a major station. Load it with ¥2,000–3,000 to start. Tap in, tap out, and the fare is deducted automatically. You never need to calculate fares or buy destination-specific tickets. A paper ticket requires you to select the exact destination and correct fare before you board, which requires reading a map that is entirely in Japanese at some smaller stations. There is no scenario where a paper ticket is preferable to an IC card."
+          "Every line has a letter and a colour, and every station on it has a number: Ginza on the Ginza Line is G09, Shibuya on the same line is G01. The codes are printed on every platform sign, every map and every carriage display.",
+          "This means you can navigate entirely on letters and numbers. If you need to get from G09 to G01, you are on the right line and going the right way if the numbers are counting down.",
+          "Inside the carriages, digital displays cycle through the next stations in Japanese, English, Chinese and Korean, and show which side the doors will open and where the transfers are. Free multilingual maps are at every station office."
         ]
       },
       {
-        "heading": "Reading the maps",
+        "heading": "Exits are the actual difficulty",
         "paragraphs": [
-          "Tokyo Metro maps are color-coded by line and numbered by station. Each line has a letter prefix and each station a number (e.g., G07 for Ginza on the Ginza line). This number system is displayed on platform signs and inside carriages, which means you can navigate without reading kanji at all. The printed maps at train stations are free and multi-language. Inside the carriages, digital displays above the doors show the next station in Japanese, English, Chinese, and Korean."
+          "The trains are the easy part. The stations are where visitors lose time. Shinjuku has upwards of two hundred exits and Shibuya, Tokyo and Ikebukuro are not far behind, and coming out of the wrong one can leave you fifteen minutes and one large building away from where you meant to be.",
+          "Exits are numbered and lettered, and Google Maps will tell you which one you want. Note it before you go underground, because there is often no signal down there.",
+          "Follow the yellow signs for exits and the coloured line symbols for transfers. Transfers within a station can be genuine ten-minute walks, and the journey planner accounts for that; if it says the change takes eight minutes, it means eight minutes of walking."
         ]
       },
       {
-        "heading": "Google Maps",
+        "heading": "IC card, and the passes that are not worth it",
         "paragraphs": [
-          "Google Maps with transit mode is accurate and reliable for Tokyo public transport. Enter your destination, select the transit option, and it will show you the correct line, platform, number of stops, and transfer instructions. The journey planner also shows fare estimates. Use it as your primary navigation tool. Japan-specific apps like HyperDia and Navitime are more detailed for complex Shinkansen bookings but offer nothing additional for basic subway navigation."
+          "Buy an IC card at any ticket machine and load ¥2,000–3,000. Tap in, tap out, the fare is deducted, and you never calculate anything. A paper ticket requires selecting the correct fare from a map that is sometimes only in Japanese, and there is no situation where it is preferable.",
+          "Day passes exist — Tokyo Metro sells 24, 48 and 72-hour tourist tickets, and there is a combined Metro and Toei version. They only pay off if you are making a lot of separate journeys, since a typical fare is ¥180–320. Four or five rides a day is roughly the break-even.",
+          "For most itineraries the card is simpler and cheaper. Passes are worth it on a day of deliberate criss-crossing, and not much else."
         ]
       },
       {
-        "heading": "The last train",
+        "heading": "Google Maps is the right tool",
         "paragraphs": [
-          "Tokyo’s trains stop running around midnight (times vary by line and station; check Google Maps for the exact last train). This is not like New York or London where the service continues through the night with reduced frequency. The trains stop, full stop. Taxis are available but expensive after midnight and in short supply on Friday and Saturday nights. If you’re out late, plan your route in advance and know your last train time. Getting stranded at midnight in Shibuya is solvable but inconvenient and expensive."
+          "Transit directions for Tokyo are accurate and reliable: the correct line, the platform, the number of stops, the transfer, the fare and often the specific carriage to board for the fastest exit.",
+          "The specialist Japanese apps are more detailed for Shinkansen and long-distance planning and add nothing for basic subway navigation.",
+          "One habit worth adopting: screenshot the route before you go underground. Coverage in stations is generally good and it fails at the worst moments."
+        ]
+      },
+      {
+        "heading": "Rush hour and the last train",
+        "paragraphs": [
+          "Peak crowding, roughly half seven to nine in the morning, is real. If you are carrying luggage, avoid it entirely; a suitcase in a rush-hour carriage is difficult for everyone including you. Coin lockers at major stations solve this, and they take IC cards.",
+          "Many lines run women-only carriages during the morning peak, marked in pink on the platform. Men wandering into one is a common visitor error.",
+          "Trains stop around midnight and do not run again until about five. This is not London or New York with a reduced overnight service — they simply stop. Taxis are expensive and scarce at that hour on a Friday. Check your last train before you settle in somewhere, and note that the last train on your line may be considerably earlier than the last train out of Shibuya."
         ]
       }
     ]
@@ -2120,8 +2188,8 @@
       "tradition"
     ],
     "publishedAt": "2026-06-10",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/kanazawa-japan-guide.webp",
     "heroImageAlt": "Higashi Chaya geisha district in Kanazawa, wooden ochaya buildings lining a quiet street",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2137,49 +2205,63 @@
       {
         "heading": "Why Kanazawa is overlooked",
         "paragraphs": [
-          "Kanazawa is on the wrong side of Japan. That seems to be the only explanation for why it receives a third of Kyoto's visitor numbers while having a castle, a geisha district, one of Japan's three great landscape gardens, and what most serious food people consider the best seafood market outside of Tokyo."
+          "Kanazawa is on the wrong side of Japan. That appears to be the only explanation for why it receives a fraction of Kyoto's visitors while having a castle, two preserved geisha districts, one of the country's three great landscape gardens, and what a lot of serious food people consider the best seafood market outside Tokyo.",
+          "It was never bombed in the war and never had a major earthquake, which is why the old districts are genuinely old rather than reconstructed. Under the Maeda clan it was the wealthiest domain in Japan after the shogunate itself, and the money went into crafts rather than fortification. The city is still living on that."
         ]
       },
       {
         "heading": "Getting there",
         "paragraphs": [
-          "The bullet train from Tokyo (the Hokuriku Shinkansen, extended in 2015) takes 2.5 hours. From Kyoto it's 2.5 to 3 hours with a transfer. Neither journey is difficult. The problem is psychological — most visitors arrive with a Tokyo-Kyoto-Osaka triangle already built into their itinerary, and Kanazawa sits outside of it, requiring a detour that most itineraries can't absorb."
+          "The Hokuriku Shinkansen from Tokyo takes about two and a half hours. From Kyoto it is two and a half to three with a change, and from Osaka similar.",
+          "The obstacle is psychological rather than practical: most visitors arrive with a Tokyo–Kyoto–Osaka triangle already built, and Kanazawa sits outside it. The natural way to absorb it is on the way between Tokyo and Kyoto rather than as a there-and-back detour, and the Hokuriku Arch Pass exists precisely for that routing.",
+          "The station itself is worth two minutes of attention: the enormous wooden Tsuzumi gate and glass dome out front regularly appear on lists of the world's most beautiful stations, which is a strange thing for a provincial city to have."
         ]
       },
       {
-        "heading": "Kenroku-en",
+        "heading": "Kenroku-en and the castle",
         "paragraphs": [
-          "Kenroku-en is the main draw, and correctly so. One of Japan's three great gardens — a designation given by Edo-period landscape critics — it was developed over two centuries by the ruling Maeda clan and covers 11.4 hectares. In cherry blossom season it's crowded. In late November, when the pine trees are wrapped in rope against the winter snow in a technique called yukizuri, it's extraordinary and very nearly empty."
+          "Kenroku-en is one of Japan's three great gardens, developed over two centuries by the Maeda and covering about eleven hectares. In cherry blossom season it is crowded. In late November, when the pines are wrapped in rope cones against the snow in a technique called yukizuri, it is extraordinary and very nearly empty.",
+          "It opens early — before the ticket office in some seasons, when entry is free for the first hour or so. That hour is the best time to be in it by a wide margin.",
+          "Across the road, Kanazawa Castle is a careful timber reconstruction using traditional joinery rather than the usual concrete, and the grounds are large and free to walk. Gyokusen'inmaru, the small restored garden inside them, is lit in the evenings and almost nobody goes."
         ]
       },
       {
-        "heading": "Higashi Chaya",
+        "heading": "The old districts",
         "paragraphs": [
-          "Higashi Chaya is Kanazawa's best-preserved geisha quarter and is smaller and less tourist-managed than Kyoto's Gion. Some of the ochaya (teahouses) are still operating. The street is wooden and narrow and hasn't changed structurally since the early 19th century. Come early morning or at dusk and it's yours."
+          "Higashi Chaya is the best-preserved geisha quarter, smaller and less managed than Gion, with wooden lattice fronts that have not changed structurally since the early nineteenth century. Some of the teahouses still operate. Two are open to visitors, including one with a gold-leaf tea room upstairs. Come early morning or at dusk and the street is effectively yours.",
+          "Kazue-machi, along the river below it, is the quieter second district and is arguably the better walk. Nishi Chaya on the other side of town is the third and sees almost nobody.",
+          "Nagamachi is the samurai quarter: earth walls, narrow lanes and water channels, with one restored residence open and a garden inside it. And Myoryu-ji — universally called the ninja temple, though it has nothing to do with ninja — is a defensive building full of hidden staircases, trapdoors and a concealed well. It can only be seen on a guided tour in Japanese, and it must be booked in advance."
         ]
       },
       {
         "heading": "The food",
         "paragraphs": [
-          "The food. Kanazawa sits on the Sea of Japan coast and receives fish from waters that don't reach the Pacific side in the same condition. The seafood at Omicho Market — a covered market the size of a small neighborhood — is some of the best in the country. In winter: crab, specifically the male snow crab called zuwaigani. In spring: firefly squid. Year-round: a sashimi set from any mid-range restaurant near the market will be better than most of what you'd eat in a Tokyo tourist district at twice the price."
+          "Kanazawa sits on the Sea of Japan and receives fish from waters that do not reach the Pacific side in the same condition. Omicho Market, a covered market the size of a small neighbourhood, has been running since the eighteenth century and is where the city actually shops.",
+          "In winter: crab, specifically the male snow crab, which arrives in November and is the reason a lot of Japanese people come here at all. In spring: firefly squid and sweet shrimp. Year round, a sashimi set from a mid-range place near the market will beat most of what you would eat in a Tokyo tourist district at half the price.",
+          "The local cuisine has its own name, Kaga ryori, and its signature dish is jibuni — duck dusted in flour and simmered with wheat gluten in a thickened broth. It is not what anyone expects from Japanese food and it is very good."
         ]
       },
       {
-        "heading": "Gold leaf and contemporary art",
+        "heading": "Crafts, and the modern half",
         "paragraphs": [
-          "Kanazawa also has a serious craft tradition. Gold leaf production has been centered here since the Edo period — 99% of Japan's kinpaku (gold leaf) still comes from Kanazawa workshops. The '21st Century Museum of Contemporary Art' (designed by SANAA, open since 2004) is one of the better contemporary art museums in Japan and draws a local crowd, not just tourists."
+          "Gold leaf has been made here since the Edo period and effectively all of Japan's supply still comes from Kanazawa workshops. You can beat your own sheet at several studios, and the city sells gold-leaf ice cream, which is ridiculous and photographs well and tastes exactly like ice cream.",
+          "Kutani porcelain, with its heavy overglaze colours, and Kaga yuzen silk dyeing are the other two traditions, and both have museums and working shops rather than only displays.",
+          "The 21st Century Museum of Contemporary Art, a circular glass building by SANAA, is one of the better contemporary museums in Japan and draws a local crowd rather than only tourists. Leandro Erlich's swimming pool — which you can appear to stand at the bottom of — is the piece everyone comes for and is worth booking ahead."
         ]
       },
       {
-        "heading": "Where to stay",
+        "heading": "Where to stay, and how long",
         "paragraphs": [
-          "Where to stay: the city center is small enough that almost anywhere is walkable. The area around Katamachi is convenient and has good restaurant density. Stay two nights minimum. The city rewards an unhurried second day in a way that a single overnight doesn't capture."
+          "The centre is small enough that almost anywhere is walkable, and the loop bus covers the rest. Katamachi is convenient and has the restaurant density; the area around the station is cheaper and duller.",
+          "Two nights minimum. The city rewards an unhurried second day in a way a single overnight cannot capture, and it is also the base for Shirakawa-go, the thatched village about ninety minutes away by bus.",
+          "Bring an umbrella regardless of the forecast. There is a local saying that you should not forget your lunch but you should never forget your umbrella, and the weather here justifies it."
         ]
       },
       {
         "heading": "What Kanazawa has that Kyoto lost",
         "paragraphs": [
-          "What Kanazawa has that Kyoto has largely lost is the feeling of visiting somewhere people actually live. The geisha quarter isn't a theme park. The old town is genuinely old and genuinely in use. If you're looking for that — and increasingly, it's what travelers say they want — Kanazawa is close to the correct answer."
+          "The feeling of visiting somewhere people actually live. The geisha quarter is not a theme park, the old town is genuinely old and genuinely in use, and the market is a market rather than a food court.",
+          "If that is what you are looking for — and increasingly it is what travellers say they want — Kanazawa is close to the correct answer."
         ]
       }
     ]
@@ -2370,8 +2452,8 @@
       "budget"
     ],
     "publishedAt": "2026-06-07",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/ic-card-japan-guide.webp",
     "heroImageAlt": "Commuter tapping a Suica IC card at a Tokyo train station gate",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2385,57 +2467,58 @@
     "author": "TABI Editorial",
     "sections": [
       {
-        "heading": "Get one at the airport",
+        "heading": "Get one before you leave the airport",
         "paragraphs": [
-          "Before you leave the airport, find a ticket machine and get a Suica. Don't deliberate. Don't check whether you really need one. You need one."
+          "Find a ticket machine and get an IC card. Do not deliberate, do not check whether you really need one. You need one.",
+          "It is a rechargeable transit card — the same basic idea as London's Oyster or Hong Kong's Octopus — except that in Japan it works on practically everything: trains, subways, buses, some ferries, taxis in major cities, convenience stores, vending machines, coin lockers, and the self-checkout at Don Quijote at two in the morning."
         ]
       },
       {
-        "heading": "What an IC card is",
+        "heading": "Which card, and does it matter",
         "paragraphs": [
-          "An IC card is a rechargeable transit card — the same basic technology as London's Oyster or Hong Kong's Octopus — except that in Japan it works on practically everything. Trains, subways, buses, ferries, taxis in major cities, convenience stores, vending machines, coin lockers, the self-checkout at Don Quijote at 2am. The list keeps growing."
+          "Suica is issued by JR East and covers Tokyo and eastern Japan; ICOCA is the JR West equivalent for Osaka, Kyoto and Kobe. There are ten major cards in total, including PASMO in Tokyo, TOICA, manaca, SUGOCA and others.",
+          "They are mutually interoperable for travel and shopping across almost the whole country, so the practical answer is to take whichever is sold where you land. A Suica works fine in Kyoto and an ICOCA works fine in Tokyo.",
+          "The exceptions are narrow but real: a handful of rural private railways and local buses take cash only, and refunds are only possible at the issuing company's offices — an ICOCA cannot be cashed in at a JR East window."
         ]
       },
       {
-        "heading": "Suica or ICOCA",
+        "heading": "Getting hold of one",
         "paragraphs": [
-          "Suica is issued by JR East and works in Tokyo and most of eastern Japan. ICOCA is the Kansai equivalent, issued by JR West, and works in Osaka, Kyoto, Kobe, and surrounding areas. The practical answer to which one you should get: they're fully interoperable. Get whichever one is available at the airport you land at. It genuinely doesn't matter."
+          "A physical card costs a ¥500 deposit on top of whatever you load. Availability of standard unregistered cards has been intermittent in recent years because of a semiconductor shortage, with sales suspended and then partially resumed, so check the current position rather than assuming.",
+          "The reliable fallback for visitors is the tourist version — Welcome Suica and its ICOCA equivalent — sold at airport counters and major stations, with no deposit and a validity of about 28 days. It works identically and any remaining balance is simply lost at the end, so do not over-load it.",
+          "The better answer if your phone supports it is a mobile card, which sidesteps the physical stock entirely."
         ]
       },
       {
-        "heading": "Loading money",
+        "heading": "Mobile Suica is the upgrade",
         "paragraphs": [
-          "Loading money: find any green JR ticket machine, insert your card, press 'Charge' (there's an English option), and add ¥1,000, ¥2,000, or ¥5,000. Keep ¥2,000 or more on the card at all times. You don't want to be the person topping up at the fare gate while a queue builds behind you."
+          "Recent iPhones and many Android phones can hold a Suica in the wallet app, and on iPhone it can be created and topped up with an overseas card from your own sofa before you fly. Setup takes about ten minutes and the process is in English.",
+          "The advantage is not novelty. You top up from the app instead of finding a machine, you can see the balance without tapping, and you cannot leave it in a jacket pocket. It also removes the deposit and the refund question entirely.",
+          "One caution: the phone must have enough battery to work at the gate. Japanese phones use a mode that functions on reserve power for a short period; not all handsets do. A completely dead phone is a card you cannot use."
         ]
       },
       {
-        "heading": "How tapping works",
+        "heading": "Loading and tapping",
         "paragraphs": [
-          "Tapping is the ritual that will define your first week. Tap the card on the reader as you enter the gate — a satisfying beep. Tap again as you leave — another beep, money deducted. A sad double-beep and a red light means insufficient balance. Step aside, top up at the nearest machine, which will be approximately five meters away."
+          "Load at any ticket machine: insert the card, press Charge — there is an English option on every machine — and add ¥1,000 to ¥10,000. Machines take cash, and most take only notes and coins rather than foreign cards. Keep at least ¥2,000 on it; the maximum balance is ¥20,000.",
+          "Tap flat on the reader going in, tap again going out. A double beep and a red light means insufficient balance: step aside and use the fare adjustment machine before the gates rather than holding up the queue.",
+          "Do not tap twice on entry, and do not put two IC cards in the same wallet — the reader sees both and rejects them. This is the single most common gate failure among visitors."
         ]
       },
       {
-        "heading": "Vending machines",
+        "heading": "Everything else it does",
         "paragraphs": [
-          "One thing nobody mentions: the card works in vending machines too. Just tap the reader on the front panel. It's faster than coins, works every time, and makes carrying change feel archaic. After a week in Japan you'll find physical coins faintly offensive."
+          "Convenience stores, supermarkets, chain restaurants, many vending machines and most coin lockers take it, and paying this way is noticeably faster than cash. In practice a visitor can run most small daily spending off the card and keep cash for the places that take nothing else.",
+          "It is also the tidiest solution to the coin problem. Japan's cash economy generates handfuls of change constantly, and a station machine will swallow all of it onto the card in one go.",
+          "What it does not cover: Shinkansen and limited express reserved seats, which need a separate ticket or a registered mobile setup, and long-distance JR travel beyond regional boundaries. It is a local card, and crossing between company regions on one journey can fail even where both ends accept it."
         ]
       },
       {
-        "heading": "Apple Pay and Google Pay",
+        "heading": "When you leave",
         "paragraphs": [
-          "Increasingly, you can also link Suica to Apple Pay or Google Pay. Setup takes about ten minutes and is worth doing if your phone supports it — you can top up from the app, which means you never need to find a machine. The setup process is in English on both platforms."
-        ]
-      },
-      {
-        "heading": "When you leave Japan",
-        "paragraphs": [
-          "When you leave Japan: keep the card. It doesn't expire, and having it ready for your next trip is genuinely convenient. If you want to return it, do so at a JR ticket office — you'll get back your remaining balance minus a ¥220 handling fee. If you have less than ¥300 left, just keep it."
-        ]
-      },
-      {
-        "heading": "Why it matters",
-        "paragraphs": [
-          "The larger point is this: the IC card makes it possible to navigate Tokyo's 130-plus stations within the Yamanote Line loop without ever buying a specific-destination ticket from a machine. That is not a trivial thing. It removes a class of friction that makes many transit systems — especially large Japanese ones — intimidating for first-time visitors. Get the card at the airport. Everything else is easier."
+          "Keep it. Physical cards do not expire for ten years from last use, and having one ready for the next trip is genuinely convenient. Balances survive.",
+          "If you want the money back, a JR office of the issuing company will refund the balance and the deposit, minus a handling fee of a couple of hundred yen. If the balance is small, the fee eats most of it and keeping the card is the better call. Welcome Suica cards are not refundable at all.",
+          "The larger point is that the card removes an entire class of friction. You never read a fare table, never choose a destination on a machine, never work out which company's ticket you need at a station served by three of them. Get it at the airport, and everything else in Japanese transport gets easier."
         ]
       }
     ]
@@ -2531,8 +2614,8 @@
       "nature"
     ],
     "publishedAt": "2026-06-03",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/naoshima-art-island-guide.webp",
     "heroImageAlt": "A contemporary outdoor sculpture near the coast of Naoshima with the Seto Inland Sea behind",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -2547,49 +2630,57 @@
       {
         "heading": "What Naoshima is",
         "paragraphs": [
-          "Naoshima sits in the Seto Inland Sea between Okayama and Takamatsu, about an hour by ferry from either city. It's small enough to cross on a rented bicycle in an afternoon. The population is around 3,000. The island has more Monets per square kilometer than most museums in Europe, which is a fact that sounds invented but isn't."
-        ]
-      },
-      {
-        "heading": "How it became what it is",
-        "paragraphs": [
-          "The backstory: in the 1980s and 90s, the Benesse Corporation commissioned architect Tadao Ando to build a museum on a largely depopulated island. What followed over the next three decades was a collaboration between art, architecture, and landscape that turned Naoshima into something that shouldn't quite work but absolutely does. It's been widely imitated. Nothing else is quite like it."
+          "Naoshima sits in the Seto Inland Sea between Okayama and Takamatsu, about an hour by ferry from either. It is small enough to cross on a bicycle in an afternoon and has a population of around three thousand.",
+          "In the 1980s and 90s the Benesse Corporation commissioned the architect Tadao Ando to build a museum on a largely depopulated island, and what followed over three decades was a collaboration between art, architecture and landscape that should not quite work and absolutely does. It has been widely imitated and nothing else is quite like it.",
+          "It is also a real island with real residents, most of whom are elderly and none of whom signed up to live in an attraction. That tension is worth carrying with you: the village streets are somebody's neighbourhood, not part of the exhibit."
         ]
       },
       {
         "heading": "The Chichu Art Museum",
         "paragraphs": [
-          "The main venues. The Chichu Art Museum is underground — no exterior visible from above, all natural light coming through skylights — and contains exactly three artists: Monet (five late Water Lilies), James Turrell (light installations), and Walter De Maria. That's all. The ticket is ¥2,100 and it is worth the trip from Tokyo to stand in the Monet room, which is a thing I don't say lightly."
+          "Chichu is underground, with no exterior visible from above and all its light arriving through openings cut in the ceilings. It contains exactly three artists: Monet, with five late Water Lilies in a room of white marble mosaic you enter barefoot; James Turrell, with light installations that take several minutes for your eyes to resolve; and Walter De Maria, with a granite sphere on a staircase.",
+          "That is the entire collection. The building is the fourth work and is arguably the best of them.",
+          "Tickets are timed and must be booked online in advance — this is the single most common way visitors get caught out, because turning up at the door does not work in the busy months. Book Chichu first and build the day around the slot you get."
         ]
       },
       {
         "heading": "The Art House Project",
         "paragraphs": [
-          "The Art House Project is what separates Naoshima from every other art destination in Japan. Artists were given abandoned houses in Honmura village and told to do what they wanted. James Turrell built a light installation into a farmhouse that you enter barefoot and lie on the floor of. Hiroshi Sugimoto turned a shrine into something else. These aren't galleries with labels and benches. They're encounters."
+          "This is what separates Naoshima from every other art destination in Japan. Artists were given abandoned houses in Honmura village and told to do what they wanted.",
+          "James Turrell built a light piece into a farmhouse that you enter in complete darkness, sit in, and slowly begin to see. Hiroshi Sugimoto rebuilt a shrine with a staircase of optical glass running down into an underground chamber. Another is a room of water with LED counters flickering under the surface. These are not galleries with labels and benches; they are encounters, and several take a few minutes before anything happens.",
+          "A single ticket covers most of the houses and they are within a ten-minute walk of each other in the village. Allow half a day and do not rush between them."
         ]
       },
       {
-        "heading": "Getting there",
+        "heading": "Everything else on the island",
         "paragraphs": [
-          "Getting there from Tokyo is a half-day commitment minimum. Bullet train to Okayama, 20 minutes by local train to Uno port, 20-minute ferry to Naoshima. From Takamatsu it's about an hour by ferry. The journey filters out casual visitors, which is exactly why the island still has the quality it has."
+          "Benesse House Museum, up the hill, is a hotel and a museum in the same Ando building, with works installed along corridors and outside on the shore. Guests can walk the galleries after closing, which is the strongest argument for staying there.",
+          "The Lee Ufan Museum and the small Ando Museum in the village are both worth an hour. Outside, Yayoi Kusama's yellow pumpkin on the pier at the Benesse end and the red one at Miyanoura port are the island's two most photographed objects, and both are free to stand next to.",
+          "If art on islands turns out to be your thing, Teshima and Inujima are the neighbours, each with a small number of extraordinary works and even fewer visitors. Teshima's art museum — a concrete shell with two openings and water rising through the floor — is the one people talk about afterwards."
         ]
       },
       {
-        "heading": "Stay overnight",
+        "heading": "Getting there and getting around",
         "paragraphs": [
-          "Stay overnight if you can. After the day-trip visitors leave on the last ferry, the island changes. The Art House Project buildings glow from inside. The grounds around Benesse House are open and quiet. You'll be one of a small number of people who aren't locals. This is an unusual experience in Japan and should be used properly — walk around, eat at the small restaurant near the port, sit somewhere without your phone."
+          "From Tokyo it is a half-day commitment: Shinkansen to Okayama, a local train to Uno port, then a twenty-minute ferry. From Takamatsu on Shikoku it is about an hour by ferry. That journey is the filter, and it is why the island still has the quality it has.",
+          "On the island, a bus loops between the port, the village and the museum area. Bicycles are the better option, but the island is hilly and summer here is severe — take an electric bike from one of the rental places by the port. It is not cheating.",
+          "The two things that catch people out: most museums close on Mondays, and the ferries stop in the early evening. Check the last sailing before you settle into anything, because there is no other way off."
         ]
       },
       {
-        "heading": "On bicycles",
+        "heading": "Stay overnight if you can",
         "paragraphs": [
-          "On bicycles: the island is hilly and summer heat is serious. Electric bikes are available at the ferry terminal and are not cheating. The climb between Honmura and the Benesse area in August on a regular bicycle is not a good time."
+          "After the day visitors leave on the last ferry, the island changes. The Art House buildings glow from inside, the grounds around Benesse House are quiet, and you are one of a small number of people who do not live there.",
+          "Accommodation is limited and books out well ahead, particularly during the Setouchi Triennale, the art festival that takes over these islands every three years and multiplies visitor numbers.",
+          "Eating is the other thing to plan. There are few restaurants, several close early or on irregular days, and the island effectively shuts by nine. Buy something at the port shop if you are arriving late."
         ]
       },
       {
         "heading": "The right mindset",
         "paragraphs": [
-          "Naoshima rewards a particular mindset: willingness to be disoriented, to find things with no label, to sit with something that doesn't explain itself. If that's what you came to Japan for — and increasingly, it is — the island earns its reputation. If you're looking for informational plaques and a gift shop at every turn, the Benesse Foundation apologizes in advance."
+          "Naoshima rewards a willingness to be disoriented — to find things with no label, to sit with something that does not explain itself, to wait in a dark room for several minutes on the assumption that something is happening.",
+          "Photography is prohibited inside most of the works, which is deliberate and which visitors find harder than they expect. The pieces are about duration and adjustment, and neither survives a camera.",
+          "If that is what you came to Japan for, the island earns its reputation. If you want an informational plaque and a gift shop at every turn, this is not the place."
         ]
       }
     ]
@@ -3366,8 +3457,8 @@
       "off-the-beaten-path"
     ],
     "publishedAt": "2026-05-25",
-    "updatedAt": "",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/beppu-onsen-guide.webp",
     "heroImageAlt": "Blue-green geothermal pool steaming at Umi Jigoku in Beppu",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -3383,31 +3474,58 @@
       {
         "heading": "What Beppu is",
         "paragraphs": [
-          "Beppu is on the northeast coast of Kyushu, about an hour and a half from Fukuoka by limited express train. The city has eight distinct onsen zones (onsen hatto), each with different mineral compositions and water colors — clear, milky white, reddish brown, and the vivid cobalt blue of the Kannawa area. The steam rising off the streets in certain neighborhoods on cool mornings makes it look like the city is slowly cooking from below, which is more or less accurate."
+          "Beppu is on the north-east coast of Kyushu, about an hour and three quarters from Fukuoka by limited express. The city has eight distinct onsen districts, each with different mineral compositions and water colours — clear, milky white, reddish brown, and the vivid cobalt of the Kannawa area.",
+          "The steam rising off the streets on a cool morning makes it look as though the city is slowly cooking from below, which is more or less accurate. There are thousands of individual sources here, and the town produces more geothermal water per day than anywhere else in Japan.",
+          "The eight districts are collectively the Beppu Hatto, and they are genuinely different from each other. Beppu proper is the flat, slightly worn town centre by the station. Kannawa, up the hill, is the atmospheric one, full of steam vents and old bathhouses. Myoban is higher again and smells strongly of sulphur. Choosing which one to base yourself in matters more than choosing a hotel."
         ]
       },
       {
         "heading": "The Hell Tour",
         "paragraphs": [
-          "The Jigoku Meguri — the Hell Tour — is the tourist attraction: seven pools of geothermally active water that can't be bathed in because they're too hot (98°C in some cases) or too acidic. The pools are genuinely remarkable. Umi Jigoku (Sea Hell) is deep blue and appears to be 200 meters wide. Chinoike Jigoku (Blood Pond Hell) is exactly as red as it sounds. Oniyama Jigoku contains a crocodile enclosure because the groundwater is warm enough to maintain tropical reptiles year-round. A circuit ticket covers all seven for ¥2,200. It's worth it."
+          "The Jigoku Meguri — the Hell Tour — is the headline attraction: seven pools of geothermally active water that cannot be bathed in because they are too hot, at close to boiling, or too acidic.",
+          "They are genuinely remarkable. Umi Jigoku, the Sea Hell, is a deep cobalt blue from dissolved iron sulphate. Chinoike Jigoku, the Blood Pond Hell, is exactly as red as it sounds, from iron oxide in the clay. Oniyama Jigoku keeps crocodiles, because the groundwater is warm enough to maintain tropical reptiles year-round, which is either delightful or dubious depending on your view.",
+          "A circuit ticket covers the set for around ¥2,200 and they are spread across two clusters, so allow half a day with a bus between them. It is unashamedly a tourist attraction and it is worth doing once — but it is not why you stay."
         ]
       },
       {
-        "heading": "Bathing options",
+        "heading": "The baths are the actual reason",
         "paragraphs": [
-          "The actual bathing options are the reason to stay overnight. Kannawa and the older neighborhood onsens offer public baths (kotoyu) for as little as ¥100–200 — coin-operated, simple tiled rooms, water that does things to your skin that hotel onsen doesn't quite replicate. Hyotan Onsen near Kannawa has eight distinct pools and won a prestigious onsen award; ¥1,300 for full access, open until 1am."
+          "The bathing is why you stay overnight. Kannawa and the older neighbourhoods have small municipal baths — kyodo yokujo — for as little as ¥100–300. Coin-operated, simple tiled rooms, no facilities beyond a basket and a tap, and water that does things to your skin that a hotel bath does not replicate. Bring your own towel and soap; these places supply nothing.",
+          "Hyotan Onsen near Kannawa is the well-known larger option, with several pools including waterfall baths where hot water falls on your shoulders, and it stays open late. It holds a Michelin star for an onsen, which is a category most people do not know exists.",
+          "The water genuinely differs between districts. Myoban is sulphurous and milky and will tarnish silver; Kannawa is mineral-heavy; some of the coastal sources are salty. Bathing in three different districts in a day is the local sport and it is the correct way to spend one here."
         ]
       },
       {
-        "heading": "Sand bathing",
+        "heading": "Sand, steam and mud",
         "paragraphs": [
-          "Sand bathing: Takegawara Onsen in central Beppu offers sunayu — you lie in a shallow pit and staff bury you in geothermally heated sand. The sand temperature is around 50°C, which sounds alarming and is instead comfortable in a way that's difficult to explain until you've experienced it. Fifteen minutes in the sand is roughly equivalent to an hour in a conventional bath in terms of post-session relaxation. ¥1,500, no appointment needed."
+          "Takegawara Onsen in the town centre is the famous sand bath: you lie in a shallow pit in a yukata and staff bury you in geothermally heated sand up to the neck. It sounds alarming and is instead comfortable in a way that is hard to convey. Ten to fifteen minutes is the standard session, and the weight of the sand is as much of the effect as the heat. The building itself dates from 1938 and is worth seeing regardless.",
+          "In Kannawa, the steam is used for cooking. Jigoku-mushi — hell steaming — means putting vegetables, eggs, seafood or meat into a stone box over a natural vent and letting the steam do it in ten minutes. Several places let you cook your own, and it is a genuinely good lunch as well as a novelty.",
+          "Myoban is where the yunohana huts are: thatched sheds where mineral crystals are harvested from the ground over months, a technique that has been going since the eighteenth century. You can buy the crystals to make onsen water at home, which is the best souvenir in the city."
         ]
       },
       {
-        "heading": "Getting there and where to stay",
+        "heading": "Beppu or Yufuin",
         "paragraphs": [
-          "Getting there and where to stay: the Sonic or Sonata limited express from Hakata (Fukuoka) takes 1h45m–2h and costs around ¥4,500 (or covered by JR Pass). The city is small enough that the main onsen areas are walkable from the station or a ¥700 taxi ride. Ryokan here are genuinely affordable compared to Hakone — ¥10,000–15,000 per person including dinner and breakfast is achievable. Beppu makes a strong case for being the most accessible serious onsen town in Japan."
+          "The two are half an hour apart and are constantly compared. Yufuin is the pretty one — a small town under a mountain, boutique inns, craft shops, art museums, and a main street that is essentially a promenade of gift shops. It is genuinely lovely and it is heavily curated.",
+          "Beppu is bigger, messier and considerably less polished, with a slightly faded seaside-resort quality and far more actual bathing. It is also much cheaper.",
+          "If you want a single elegant night, Yufuin. If you want to spend two days getting into as many different waters as possible, Beppu. Doing both is easy and is what most Japanese visitors do."
+        ]
+      },
+      {
+        "heading": "Tattoos, and the small baths",
+        "paragraphs": [
+          "Beppu is unusually relaxed by Japanese standards, largely because so much of its bathing happens in tiny municipal baths run for local residents rather than in resort facilities. Many of the ¥100 baths have no staff at all.",
+          "That is not a guarantee. Larger facilities and hotel baths apply the standard policy, and the Hell circuit's associated baths are among the stricter. Ask, or book a room with a private bath, which is cheap here.",
+          "The private-bath option is genuinely inexpensive in Beppu — many ryokan have several family baths free to guests, which removes the question entirely."
+        ]
+      },
+      {
+        "heading": "Getting there and staying",
+        "paragraphs": [
+          "The Sonic limited express from Hakata in Fukuoka takes around two hours and is covered by the JR Pass and by the Kyushu regional passes. From Osaka there is an overnight ferry, which is a slow and rather wonderful way to arrive.",
+          "The city is small enough that the main districts are reachable by local bus or a short taxi ride, and the bus day pass is worth buying on arrival. Kannawa is the best base for atmosphere, the station area for convenience and cheapness.",
+          "Ryokan here are genuinely affordable compared with Hakone — ¥10,000–15,000 per person including dinner and breakfast is achievable, and the food is Kyushu seafood. Beppu makes a strong case for being the most accessible serious onsen town in Japan.",
+          "One addition if you have a spare hour: Takasakiyama, just outside town, is a mountain with a resident population of well over a thousand wild macaques that come down to be fed twice a day. It is not an enclosure and the monkeys are entirely uninterested in you."
         ]
       }
     ]
@@ -4328,8 +4446,8 @@
       "off-the-beaten-path"
     ],
     "publishedAt": "2026-05-28",
-    "updatedAt": "2026-08-06",
-    "readingTime": 2,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/hidden-shrines-kyoto.webp",
     "heroImageAlt": "A quiet moss-covered shrine path in Kyoto lined with stone lanterns",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -4370,6 +4488,30 @@
         "heading": "How to behave when you are the only one there",
         "paragraphs": [
           "An empty shrine asks more of you than a busy one, because there is no crowd to copy. The sequence is short: bow once at the torii, keep to the side of the path rather than the centre, rinse your left hand then your right at the basin, and if you approach the hall, the standard form is two bows, two claps, a pause, one bow. A coin in the box is customary and any amount is fine. Nobody is grading you, and getting the order slightly wrong is not an offence."
+        ]
+      },
+      {
+        "heading": "Three more that absorb visitors well",
+        "paragraphs": [
+          "Honen-in, a few minutes off the Philosopher's Path, has a thatched gate, two raked sand mounds either side of the entrance that are re-drawn seasonally, and a moss garden. It is free, it is two minutes from one of the busiest walks in Kyoto, and it is usually near-empty.",
+          "Otagi Nenbutsu-ji, at the far end of Arashiyama beyond where the crowds turn back, has around twelve hundred stone rakan figures carved by amateurs in the 1980s — each one different, several holding tennis rackets or cameras, all now under moss. It is genuinely strange and completely uncrowded.",
+          "Shisen-do, in the northern hills, is a poet's retreat rather than a temple, with a small garden designed around a shishi-odoshi — the bamboo tube that fills with water and knocks against a stone. You sit on the veranda and listen to it. That is the entire experience and it is worth an hour."
+        ]
+      },
+      {
+        "heading": "Getting to the quiet parts",
+        "paragraphs": [
+          "Kyoto's buses are the default and they are slow, crowded and stuck in the same traffic as everyone else. The subway is fast and covers very little. The genuinely correct answer for a visitor with three days is a bicycle: the city is flat, compact and laid out on a grid, and the shrines above are twenty minutes apart on two wheels and an hour apart on a bus.",
+          "Rentals are cheap and available near most stations. Park only in marked bicycle parking — Kyoto removes and impounds bikes left on pavements, and retrieving one is a genuinely irritating afternoon.",
+          "For the northern hills, the Eizan line from Demachiyanagi does the work, and the two-carriage trains with panoramic windows are pleasant in themselves."
+        ]
+      },
+      {
+        "heading": "When to go, and what the seasons do",
+        "paragraphs": [
+          "The quiet places stay quiet all year, which is the point of them, but they change completely. Moss is at its best in the rainy weeks of June, when everything on a temple floor glows and almost nobody is out. Autumn brings colour to gardens that have no crowd to obstruct it. Winter strips them back to structure and is the season in which a small shrine looks most like itself.",
+          "The hours are the real constraint. Most sites close between four and five, and the last admission can be half an hour before that. Anything on this page is a morning activity or an early-afternoon one, and a plan that starts at eleven will lose half of it.",
+          "New Year is the exception in both directions: neighbourhood shrines that see nobody all year are full for three days, and it is worth seeing at least one of them like that."
         ]
       },
       {
@@ -4485,8 +4627,8 @@
       "nature"
     ],
     "publishedAt": "2026-05-15",
-    "updatedAt": "2026-08-06",
-    "readingTime": 3,
+    "updatedAt": "2026-08-08",
+    "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/mt-fuji-route-guide.webp",
     "heroImageAlt": "A rocky Mt. Fuji climbing trail before sunrise with hikers silhouetted in the distance",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -4503,6 +4645,14 @@
         "heading": "The season is shorter than you think",
         "paragraphs": [
           "Fuji has an official climbing season, roughly early July to early September, and it exists for good reasons. Outside it the mountain huts are shut, the first-aid stations are unstaffed, the trails ice over above the treeline, and buses to the trailheads stop running. Climbing outside the season is not a scenic variation; it is genuine alpinism on a volcano with notoriously bad weather. Within the season, the mountain is busy, well-marked, and manageable for anyone reasonably fit. Plan for the season."
+        ]
+      },
+      {
+        "heading": "The rules have changed",
+        "paragraphs": [
+          "Fuji is now a managed mountain rather than an open one. Following years of overcrowding, accidents and rubbish, entry fees and daily caps on climber numbers have been introduced on the trails, along with gates that close overnight to prevent the straight-through bullet climbs.",
+          "The figures and the exact arrangements have been revised more than once since they came in, and they differ between the prefectures that share the mountain. Advance reservation is required for at least some routes.",
+          "This is the one part of planning a Fuji climb that cannot be done from an article. Check the official prefectural climbing site for the current season before you book anything else, because the hut booking and the bus timing both depend on it."
         ]
       },
       {
@@ -4542,6 +4692,14 @@
         ]
       },
       {
+        "heading": "Booking, and the logistics at the bottom",
+        "paragraphs": [
+          "Mountain huts open reservations months ahead and the popular ones on the Yoshida trail fill for summer weekends almost immediately. Book the hut first and build the trip around the date you get.",
+          "Buses run from Shinjuku directly to the Yoshida fifth station in about two and a half hours, and there are services from Kawaguchiko and Gotemba for the other trails. The last bus down is earlier than most people expect and is the constraint on the descent.",
+          "Leave everything you do not need at the bottom. There are lockers at the fifth station and at Kawaguchiko, and carrying a full suitcase up a volcano is a mistake people genuinely make. If you have no boots, rental sets — boots, jacket, poles, headlamp — can be hired in Tokyo and collected before you travel."
+        ]
+      },
+      {
         "heading": "The old saying about climbing twice",
         "paragraphs": [
           "There is a Japanese proverb to the effect that a wise person climbs Fuji once and a fool climbs it twice. It is affectionate rather than dismissive. Fuji is not a beautiful mountain to be on — it is a bare grey cone with a vending machine every few hundred metres — but it is a remarkable mountain to be on top of, and the view of it from the ground afterwards is permanently different. Go once, do it properly, and enjoy looking at it from a train window for the rest of your life."
@@ -4560,8 +4718,8 @@
       "first-time"
     ],
     "publishedAt": "2026-05-12",
-    "updatedAt": "2026-08-06",
-    "readingTime": 3,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/osaka-3-days-itinerary.webp",
     "heroImageAlt": "A lively Osaka evening food street with warm lanterns and small restaurants",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -4611,6 +4769,30 @@
         ]
       },
       {
+        "heading": "What to actually eat, in order",
+        "paragraphs": [
+          "Takoyaki, octopus in batter spheres, eaten scalding from a paper tray with a toothpick — the first bite will burn your mouth and everyone accepts this. Okonomiyaki, the savoury cabbage pancake, which in Osaka is mixed rather than layered as it is in Hiroshima. Kushikatsu in Shinsekai, where the rule about not double-dipping the communal sauce is genuinely enforced by everyone at the counter.",
+          "Beyond the famous three: kitsune udon, which was invented here, negiyaki, horumon — grilled offal, cheap and much better than it sounds — and the doteyaki, beef tendon simmered in miso, that turns up in every standing bar.",
+          "The city's own summary of itself is kuidaore, roughly eating yourself into ruin. The way to do it is to order less at each stop and make more stops."
+        ]
+      },
+      {
+        "heading": "Day trips, and whether to base here",
+        "paragraphs": [
+          "Osaka is the better base for Kansai than Kyoto for one reason: it is cheaper, and everything is close. Kyoto is under half an hour away, Nara about forty minutes, Kobe twenty-five, and Himeji — which has the finest surviving castle in Japan — under an hour.",
+          "The counter-argument is that Kyoto in the early morning is the whole point of Kyoto, and you cannot get that from Osaka. The compromise most people should make is two nights in Kyoto and two in Osaka rather than choosing.",
+          "If you are doing a lot of local travel, the Osaka Amazing Pass covers unlimited city transport plus entry to a long list of attractions for a day or two, and it pays for itself quickly. Beyond the city, an ICOCA covers everything without thinking about it."
+        ]
+      },
+      {
+        "heading": "Where to stay, and getting in from the airport",
+        "paragraphs": [
+          "Namba and Shinsaibashi put you in the middle of the eating and are loud at night. Umeda is the transport hub, better connected for day trips and duller after dark. Tennoji is the cheap option and is a genuine neighbourhood. All three are fine and the choice is about what you want outside the door at eleven at night.",
+          "From Kansai airport, the Nankai Rapi:t runs to Namba in about forty minutes and the JR Haruka goes to Tennoji and Shin-Osaka. From Itami, the monorail and a bus both work. None of it needs booking ahead.",
+          "Osaka is also the correct place to have a base if your flights are through Kansai and your trip includes Kyoto, since it is cheaper and the trains run late."
+        ]
+      },
+      {
         "heading": "How to eat here without a plan",
         "paragraphs": [
           "The Osaka approach is kuidaore — roughly, eating yourself into ruin — and it is best served by ordering less at each stop and making more stops. Three small things at three places beats one large meal. Look for queues of locals rather than English menus, sit at counters rather than tables, and if a place has one item on the sign, order that item. Cash is still useful in the older arcades. Almost nothing here needs a reservation, which is precisely why the city is easy to travel in."
@@ -4627,8 +4809,8 @@
       "nature"
     ],
     "publishedAt": "2026-05-10",
-    "updatedAt": "2026-08-06",
-    "readingTime": 3,
+    "updatedAt": "2026-08-08",
+    "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/yakushima-ancient-forest.webp",
     "heroImageAlt": "A misty ancient cedar forest path in Yakushima covered with moss",
     "heroImageCredit": "AI-generated image by OpenAI",
@@ -4675,6 +4857,22 @@
         "heading": "What to bring, given the rain",
         "paragraphs": [
           "Proper waterproofs rather than a folding umbrella, because the trails are steep and you will need both hands. Boots with grip — wet granite and wet cedar roots are the main hazard on the island and account for most injuries. A dry bag for a camera and phone. More socks than seems reasonable. Cash, because the island's shops and guesthouses are not uniformly card-friendly. Almost none of this is exotic; it is just that people arrive with city clothing and regret it within an hour."
+        ]
+      },
+      {
+        "heading": "The practical rules",
+        "paragraphs": [
+          "Yakushima is a national park and a World Heritage site, and access to the main routes is managed. The Jomon Sugi trailhead is served by a shuttle bus during the busy months, with private vehicles restricted, and there is a conservation charge for the main trails. Overnight walkers are asked to submit a plan, and portable toilet kits are sold and expected on the longer routes because there are no facilities.",
+          "The specifics change between seasons and are posted at the ferry terminal and the visitor centre. Check on arrival rather than relying on anything written in advance, including this.",
+          "Guides are not compulsory and are genuinely useful on the longer routes, both for the navigation in the dark at the start and because the forest makes much more sense with someone explaining what you are looking at."
+        ]
+      },
+      {
+        "heading": "What a yakusugi actually is",
+        "paragraphs": [
+          "The word means a cedar on this island over a thousand years old, and the reason they exist is poor soil. The granite bedrock holds few nutrients, so the trees grow extremely slowly, produce dense resinous wood that resists rot, and consequently live for millennia rather than centuries.",
+          "It is also why the stumps are everywhere. The island was logged heavily from the Edo period, when the wood was cut for shingles, and many of the most striking shapes on the trails are ancient stumps with new trees growing out of them — a second generation rooted on top of the first.",
+          "If a full day to Jomon Sugi is too much, Yakusugi Land is the compromise: a set of looped trails from thirty minutes to two and a half hours through the same forest, reached by road, with several named ancient cedars along the way."
         ]
       },
       {
