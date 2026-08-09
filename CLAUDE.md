@@ -145,8 +145,15 @@ Rules that follow from this:
   a byline, an author box and `Person` structured data. Left empty, the site
   falls back to the organisation and claims nothing. Do not fill it with a name
   that is not a real person willing to be contacted.
-- **Never present AI images as photography.** `heroImageCredit` is required and
-  `about.html` states it plainly.
+- **Never present AI images as photography.** `heroImageCredit` is required, and
+  `publisher.imageStatement` puts the same disclosure on `about.html`. The site
+  deliberately says nothing about how the *text* is produced — silence is honest,
+  a claim of human authorship would not be — but the images are illustrations and
+  that has to be visible.
+- **Optional in-body images.** A section may carry
+  `"image": { "src": "<file>.webp", "alt": "...", "credit": "..." }`, where `src`
+  is a bare filename under `assets/images/`. Alt text is enforced by the build.
+  A missing file is skipped with a warning rather than shipping a broken image.
 - Prices, hours and seasonal dates are the weakest part of AI-drafted travel
   content. Where a figure changes often, point at the operator instead of
   quoting a number.

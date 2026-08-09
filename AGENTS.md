@@ -71,7 +71,8 @@ rule at the bottom of this file, which has been violated twice with real data lo
 | `excerpt` | **Required** — the build fails without it. 1-2 sentences, no "click here" |
 | `sections` | **Required** — the build fails without it. Array of `{heading, paragraphs}`. Current articles run 5-9 sections |
 | `sections[].heading` | Becomes an `<h2>` and a table-of-contents entry, so it must stand alone as a label |
-| `sections[].paragraphs` | Array of strings, one `<p>` each. Every current section holds exactly one |
+| `sections[].paragraphs` | Array of strings, one `<p>` each |
+| `sections[].image` | Optional `{src, alt, credit}`. `src` is a bare filename under `assets/images/`. **`alt` is enforced** — the build fails without it. A missing file is skipped with a warning |
 | `category` | One of the 6 slugs below. **Enforced** — an unknown value aborts the build |
 | `tags` | From the taxonomy below. **Enforced**. 2-3 is typical; do not exceed 5. A tag used by fewer than `thinTagThreshold` articles gets a `noindex` tag page |
 | `publishedAt` | `YYYY-MM-DD`. Drives sort order, the sitemap and the RSS feed |

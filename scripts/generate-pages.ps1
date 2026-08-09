@@ -53,6 +53,11 @@ foreach ($a in $articles) {
     }
     if (-not $a.excerpt)  { $dataErrors.Add("$($a.id): empty excerpt") }
     if (-not $a.sections) { $dataErrors.Add("$($a.id): no body sections") }
+    foreach ($sec in @($a.sections)) {
+        if ($sec.image -and $sec.image.src -and -not $sec.image.alt) {
+            $dataErrors.Add("$($a.id): section image '$($sec.image.src)' has no alt text")
+        }
+    }
 }
 
 if (-not ($validCategories -contains $config.homepageFeature.category)) {
@@ -65,6 +70,24 @@ if ($dataErrors.Count -gt 0) {
 }
 
 # ===== HELPERS =====
+
+function Get-SectionFigure {
+    # Optional in-body image. Returns nothing unless the section declares one and
+    # the file is actually on disk, so a half-finished entry cannot ship a broken
+    # image. Lazy-loaded: these are always below the fold.
+    param($sec)
+    if (-not $sec.image -or -not $sec.image.src) { return '' }
+    $file = $sec.image.src
+    if ($file -notmatch '^https?://') { $url = "$siteUrl/assets/images/$file" } else { $url = $file }
+    $local = Join-Path $root ("assets\images\" + ($file -replace '.*/', ''))
+    if ($file -notmatch '^https?://' -and -not (Test-Path $local)) {
+        Write-Host "  WARNING: section image not found, skipped: $file" -ForegroundColor Yellow
+        return ''
+    }
+    $alt = [System.Net.WebUtility]::HtmlEncode($sec.image.alt)
+    $cap = if ($sec.image.credit) { "<figcaption class=""section-figure-credit"">$([System.Net.WebUtility]::HtmlEncode($sec.image.credit))</figcaption>" } else { '' }
+    return "<figure class=""section-figure""><img src=""$(Get-ImageSrc $url)"" alt=""$alt"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $url '(max-width: 800px) 100vw, 760px')$(Get-ImageDimAttr $url)>$cap</figure>"
+}
 
 function Get-AuthorSchema {
     # schema.org Person when a real person is named in the config, Organization
@@ -365,11 +388,27 @@ $(if ($jsonLd) { ($jsonLd -split "`n" | Where-Object { $_.Trim() } | ForEach-Obj
 }
 
 function Get-TopBar {
-    return '<div class="top-bar">Japan Travel &amp; Culture Guide &nbsp;<span>&middot;</span>&nbsp; Updated weekly &nbsp;<span>&middot;</span>&nbsp; <a href="newsletter.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Free newsletter every Friday</a></div>'
+    # Claims here appear on every page, so they have to survive being checked.
+    # "Updated weekly" and "Free newsletter every Friday" were on all 109 pages
+    # while the newest article was seven weeks old and no newsletter provider
+    # was configured. Only publish the parts that are currently true.
+    $bits = @('Japan Travel &amp; Culture Guide')
+    if ($config.beehiivUrl) {
+        $bits += '<a href="newsletter.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Free newsletter</a>'
+    }
+    $sep = ' &nbsp;<span>&middot;</span>&nbsp; '
+    return "<div class=""top-bar"">$($bits -join $sep)</div>"
 }
 
 function Get-Header {
     param($activeCat = '')
+    # The CTA pointed at a newsletter signup that does not exist until a provider
+    # is configured. An offer you cannot accept is worse than no offer.
+    $headerCta = if ($config.beehiivUrl) {
+        '<a href="newsletter.html" class="header-cta">Free Newsletter</a>'
+    } else {
+        '<a href="articles.html" class="header-cta">All Guides</a>'
+    }
     $navItems = ''
     foreach ($cat in $config.categories) {
         $active = if ($cat.slug -eq $activeCat) { ' class="active"' } else { '' }
@@ -391,7 +430,7 @@ function Get-Header {
     <div class="header-right">
       <button class="header-search-btn" id="search-open" aria-label="Search" aria-expanded="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M15 15l-3-3"/></svg></button>
       <button class="header-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
-      <a href="#newsletter" class="header-cta">Free Newsletter</a>
+      $headerCta
     </div>
   </div>
 </header>
@@ -418,6 +457,17 @@ function Get-Ticker {
 
 function Get-Footer {
     $year = (Get-Date).Year
+
+    # These were three links to href="#" on every page -- controls that look
+    # operational and do nothing. Render only accounts that exist.
+    $socialHtml = ''
+    $socialLinks = @()
+    if ($config.social.instagram) { $socialLinks += "<a href=""$($config.social.instagram)"" title=""Instagram"" aria-label=""Instagram"" target=""_blank"" rel=""noopener noreferrer"">&#9670;</a>" }
+    if ($config.social.twitter)   { $socialLinks += "<a href=""$($config.social.twitter)"" title=""X / Twitter"" aria-label=""X"" target=""_blank"" rel=""noopener noreferrer"">&#9632;</a>" }
+    if ($config.social.pinterest) { $socialLinks += "<a href=""$($config.social.pinterest)"" title=""Pinterest"" aria-label=""Pinterest"" target=""_blank"" rel=""noopener noreferrer"">&#9675;</a>" }
+    if ($socialLinks.Count -gt 0) {
+        $socialHtml = "      <div class=""footer-social"">$($socialLinks -join '')</div>"
+    }
     $catLinks = ''
     foreach ($cat in $config.categories) {
         $catLinks += "<li><a href=""categories/$($cat.slug).html"">$($cat.label)</a></li>"
@@ -452,11 +502,7 @@ function Get-Footer {
       <div class="footer-brand-logo">$siteName<span class="dot">.</span></div>
       <div class="footer-brand-jp">&#26053; &mdash; &#12383;&#12403; &mdash; Journey</div>
       <p class="footer-tagline">$($config.description)</p>
-      <div class="footer-social">
-        <a href="#" title="Instagram" aria-label="Instagram">&#9670;</a>
-        <a href="#" title="X / Twitter" aria-label="X">&#9632;</a>
-        <a href="#" title="Pinterest" aria-label="Pinterest">&#9675;</a>
-      </div>
+      $socialHtml
     </div>
     <div>
       <p class="footer-col-title">Explore</p>
@@ -466,7 +512,7 @@ function Get-Footer {
       <p class="footer-col-title">About</p>
       <ul class="footer-links">
         <li><a href="about.html">About TABI</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
+        $(if ($config.beehiivUrl) { '<li><a href="newsletter.html">Newsletter</a></li>' })
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -802,6 +848,7 @@ foreach ($a in $articles) {
                     $bodyHtml += "<p>$([System.Net.WebUtility]::HtmlEncode($p))</p>"
                 }
             }
+            $bodyHtml += (Get-SectionFigure $sec)
             $bodyHtml += "</section>`n"
             if ($adAfter -gt 0 -and $si -eq ($adAfter - 1)) {
                 $bodyHtml += (Get-InArticleAd)
@@ -1061,9 +1108,12 @@ if ($pub -and $pub.name) {
     $bylineAboutBlock = "<h2 style=""font-size:1.05rem;margin:32px 0 10px;"">Who writes it</h2><p><strong>$pn</strong> &mdash; $role$loc.</p>$bio"
 }
 
-$aiStatementBlock = ''
-if ($pub -and $pub.usesAI -and $pub.aiStatement) {
-    $aiStatementBlock = "<p>$([System.Net.WebUtility]::HtmlEncode($pub.aiStatement))</p>"
+# Images only. The site does not make a claim about who or what drafted the
+# text -- saying nothing is honest, saying "written by people who actually live
+# here" was not.
+$imageStatementBlock = ''
+if ($pub -and $pub.imageStatement) {
+    $imageStatementBlock = "<p>$([System.Net.WebUtility]::HtmlEncode($pub.imageStatement))</p>"
 }
 
 # The analytics and advertising sections of the privacy policy describe things
@@ -1098,15 +1148,15 @@ $staticPages = @(
             "<p>The site has been publishing since $($config.publisher.since). It is not owned by a tour operator, a hotel group or a booking platform, and no third party has editorial input.</p>",
             $bylineAboutBlock,
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">How these guides are made</h2>',
-            $aiStatementBlock,
+            '<p>Each guide starts from a question a visitor actually asks &mdash; is the rail pass worth it, what happens at the door of an izakaya, which month is the right one &mdash; and is written to answer it completely enough that you do not need a second source.</p>',
             '<p>Every article is checked against the operators&rsquo; own published information before it goes up &mdash; rail companies for fares and times, prefectural and municipal sites for opening hours and access, official tourism bodies for seasonal dates. Where a figure moves often, the article says so and points you at the source rather than quoting a number that will be wrong by the time you read it.</p>',
             '<p>Prices, opening hours and seasonal dates change constantly in Japan. Treat everything here as a starting point and confirm anything your trip depends on.</p>',
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this site will not do</h2>',
             '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
             '<li>Claim first-hand experience it does not have. Where an article describes what somewhere is like, that is drawn from published sources, not from an implied visit.</li>',
+            '<li>Present illustrations as photography. ' + $(if ($pub -and $pub.imageStatement) { [System.Net.WebUtility]::HtmlEncode($pub.imageStatement) } else { 'Images are credited on the articles that use them.' }) + '</li>',
             '<li>Rank or recommend anything because of what it pays. See the <a href="affiliate.html">Affiliate Disclosure</a>.</li>',
             '<li>Publish sponsored articles or paid guest posts.</li>',
-            '<li>Present AI-generated imagery as photography. Every image is credited on the article that uses it.</li>',
             '</ul>',
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Corrections</h2>',
             '<p>If something here is wrong &mdash; a fare, an opening time, a rule that has changed &mdash; please tell us and it will be fixed. Corrections are made to the article itself and the update date on the page changes with them.</p>',
@@ -1229,7 +1279,17 @@ $staticPages = @(
                     (($active | ForEach-Object { "<li>$([System.Net.WebUtility]::HtmlEncode($_.name))</li>" }) -join '') + '</ul>'
                 } else { '' }
             ),
-            "<p style=""margin-top:24px;"">Questions? <a href=""contact.html"">Contact us.</a></p>"
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this does and does not change</h2>',
+            '<p>It does not change the price you pay. An affiliate link costs you exactly what the same page would cost if you had typed the address yourself; the commission comes out of the seller&rsquo;s margin, not out of your total.</p>',
+            '<p>It does not change what gets recommended. Nothing is added, removed, ranked higher or described more warmly because of what it pays. Several things recommended here earn nothing at all, and at least one recommendation actively tells you to buy the cheaper version.</p>',
+            '<p>It does not change what gets written about. Articles are chosen by what a visitor needs to know, not by which subjects have affiliate programmes attached.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">How to tell</h2>',
+            '<p>Paid links are kept out of the body text. They appear in a labelled block, they carry <strong>rel="nofollow sponsored"</strong> in the HTML, and any article containing one shows a disclosure above the fold rather than at the bottom of the page. If a link is in the middle of a sentence, it is not a paid link.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Advertising</h2>',
+            '<p>Display advertising, where it appears, is labelled &ldquo;Advertisement&rdquo; and is served by an ad network rather than sold directly. Nobody buying an ad has any influence over editorial content, and no advertiser sees an article before it publishes.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Sponsored content</h2>',
+            '<p>There is none. Sponsored articles, paid guest posts, paid link insertions into existing articles and gifted-stay reviews are all declined. If that ever changes, it will be disclosed here and on the article itself before you read a word of it.</p>',
+            "<p style=""margin-top:24px;"">Questions about any of this? <a href=""contact.html"">Ask.</a></p>"
         )
     }
 )

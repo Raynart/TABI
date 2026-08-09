@@ -1040,6 +1040,21 @@ ul, ol {
   flex-shrink: 0;
 }
 
+/* In-body article figure. Optional per section -- see Get-SectionFigure. */
+.section-figure {
+  margin: 32px 0 8px;
+}
+.section-figure img {
+  width: 100%;
+  height: auto;
+}
+.section-figure-credit {
+  font-size: 0.72rem;
+  color: var(--mist);
+  margin-top: 8px;
+  text-align: right;
+}
+
 /* Byline. Rendered only when there is a real name to render -- see
    Get-BylineHtml in generate-pages.ps1. */
 .article-byline {
