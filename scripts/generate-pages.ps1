@@ -66,6 +66,28 @@ if ($dataErrors.Count -gt 0) {
 
 # ===== HELPERS =====
 
+function Get-AuthorSchema {
+    # schema.org Person when a real person is named in the config, Organization
+    # otherwise. Search and ad-network reviewers look for a named author on
+    # advice content; a fabricated one is worse than none.
+    $pub = $config.publisher
+    if ($pub -and $pub.name) {
+        $u = "$siteUrl/about.html"
+        return "{""@type"":""Person"",""name"":""$(Escape-Json $pub.name)"",""url"":""$u""}"
+    }
+    return "{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)"",""url"":""$siteUrl/about.html""}"
+}
+
+function Get-BylineHtml {
+    # Empty unless there is something true to say.
+    param($a)
+    $pub = $config.publisher
+    $name = if ($pub -and $pub.name) { $pub.name } elseif ($a.author) { $a.author } else { '' }
+    if (-not $name) { return '' }
+    $enc = [System.Net.WebUtility]::HtmlEncode($name)
+    return "<span class=""article-byline"">By <a href=""about.html"">$enc</a></span>"
+}
+
 function Get-ReadingTime {
     # Derived from the text, not read from articles.json. The stored readingTime
     # values were fabricated: 50 of 63 articles were off by 3 minutes or more, and
@@ -749,7 +771,7 @@ foreach ($a in $articles) {
     $catLabel  = Get-CategoryLabel $a.category
     $imgForSchema = if ($a.heroImage) { """$(Escape-Json $a.heroImage)""" } else { 'null' }
     $updatedAt = if ($a.updatedAt) { $a.updatedAt } else { $a.publishedAt }
-    $articleSchema = "{""@context"":""https://schema.org"",""@type"":""Article"",""headline"":""$(Escape-Json $a.title)"",""description"":""$(Escape-Json ($a.excerpt))"",""image"":$imgForSchema,""datePublished"":""$($a.publishedAt)"",""dateModified"":""$updatedAt"",""author"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)""},""publisher"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)"",""logo"":{""@type"":""ImageObject"",""url"":""$siteUrl/favicon.svg""}},""mainEntityOfPage"":{""@type"":""WebPage"",""@id"":""$canonical""}}"
+    $articleSchema = "{""@context"":""https://schema.org"",""@type"":""Article"",""headline"":""$(Escape-Json $a.title)"",""description"":""$(Escape-Json ($a.excerpt))"",""image"":$imgForSchema,""datePublished"":""$($a.publishedAt)"",""dateModified"":""$updatedAt"",""author"":$(Get-AuthorSchema),""publisher"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)"",""logo"":{""@type"":""ImageObject"",""url"":""$siteUrl/favicon.svg""}},""mainEntityOfPage"":{""@type"":""WebPage"",""@id"":""$canonical""}}"
     $breadcrumbSchema = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $catLabel)"",""item"":""$siteUrl/categories/$($a.category).html""},{""@type"":""ListItem"",""position"":3,""name"":""$(Escape-Json $a.title)"",""item"":""$canonical""}]}"
     $jsonLd = "$articleSchema`n$breadcrumbSchema"
 
@@ -887,6 +909,11 @@ foreach ($a in $articles) {
     $lines.Add("    <span class=""article-date"">$date</span>")
     $lines.Add('    <span class="article-dot"></span>')
     $lines.Add("    <span class=""article-reading"">$(Get-ReadingTime $a) min read</span>")
+    $bylineHtml = Get-BylineHtml $a
+    if ($bylineHtml) {
+        $lines.Add('    <span class="article-dot"></span>')
+        $lines.Add("    $bylineHtml")
+    }
     $lines.Add("  </div>")
     $lines.Add("  <h1 class=""article-title"">$title</h1>")
     $lines.Add("  <p class=""article-excerpt"">$excerpt</p>")
@@ -1017,16 +1044,73 @@ if ($config.beehiivUrl) {
     $newsletterBody += '<p class="nl-note" style="margin-top:24px;">Signup opens soon. Nothing to enter yet.</p>'
 }
 
+# ----- Values the static pages reference -------------------------------------
+# The publisher block is deliberately allowed to be empty. If nobody has put a
+# real name in site.config.json, the About page says nothing about who writes
+# this rather than inventing someone -- which is the whole reason the fabricated
+# "written by people who actually live here" line was removed.
+$lastUpdatedLong = (Get-Date).ToString('MMMM yyyy', [System.Globalization.CultureInfo]::InvariantCulture)
+
+$pub = $config.publisher
+$bylineAboutBlock = ''
+if ($pub -and $pub.name) {
+    $pn   = [System.Net.WebUtility]::HtmlEncode($pub.name)
+    $role = if ($pub.role) { [System.Net.WebUtility]::HtmlEncode($pub.role) } else { 'Editor' }
+    $loc  = if ($pub.location) { ", $([System.Net.WebUtility]::HtmlEncode($pub.location))" } else { '' }
+    $bio  = if ($pub.bio) { "<p>$([System.Net.WebUtility]::HtmlEncode($pub.bio))</p>" } else { '' }
+    $bylineAboutBlock = "<h2 style=""font-size:1.05rem;margin:32px 0 10px;"">Who writes it</h2><p><strong>$pn</strong> &mdash; $role$loc.</p>$bio"
+}
+
+$aiStatementBlock = ''
+if ($pub -and $pub.usesAI -and $pub.aiStatement) {
+    $aiStatementBlock = "<p>$([System.Net.WebUtility]::HtmlEncode($pub.aiStatement))</p>"
+}
+
+# The analytics and advertising sections of the privacy policy describe things
+# that only exist once they are configured. Claiming a site runs AdSense when it
+# does not is as wrong as the reverse.
+$analyticsPrivacyBlock = ''
+if ($config.googleAnalyticsId) {
+    $analyticsPrivacyBlock = '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Analytics</h2>' +
+        '<p>This site uses Google Analytics to count visits and see which pages are read. It is loaded only after you accept the cookie banner. It sets cookies that record a randomly generated identifier, the pages you view and roughly where in the world you are, and this data is processed by Google under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>. It is used in aggregate to decide what to write about next. If you decline the banner, Google Analytics is never loaded and no analytics cookie is set. You can also install <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google''s opt-out browser add-on</a>.</p>'
+} else {
+    $analyticsPrivacyBlock = '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Analytics</h2>' +
+        '<p>This site currently runs no analytics at all. Nothing counts your visit and no analytics cookie is set. If that changes, this section and the cookie banner will change with it.</p>'
+}
+
+$adsPrivacyBlock = ''
+if (Test-AdsEnabled) {
+    $adsPrivacyBlock = '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Advertising</h2>' +
+        '<p>This site displays advertising served by Google AdSense.</p>' +
+        '<p>Google, as a third-party vendor, uses cookies to serve ads on this site. Google''s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and other sites on the internet. Google uses the DoubleClick cookie for this purpose, along with similar technologies operated by other vendors and ad networks that may appear through Google.</p>' +
+        '<p>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>, or opt out of a third-party vendor''s use of cookies for personalised advertising at <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">aboutads.info</a> and <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener noreferrer">Your Online Choices</a>. Opting out does not remove advertising; it makes it less relevant.</p>' +
+        '<p>How Google handles data from sites that use its services is described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">this Google policy</a>. Ad scripts on this site are loaded only after you accept the cookie banner. If you decline, no ad request is made and no advertising cookie is set.</p>'
+}
+
 $staticPages = @(
     @{
         file    = 'about.html'
-        desc    = 'Who writes TABI, how the guides are researched, and why the site exists.'
+        desc    = 'Who publishes TABI, how the guides are put together, and what the site will and will not claim.'
         title   = "About TABI &mdash; $siteName"
         heading = 'About TABI'
         body    = @(
-            '<p>TABI is an independent guide to Japan for international travellers.</p>',
-            '<p>We cover travel, culture, food, and the things worth bringing home &mdash; written by people who actually live here.</p>',
-            '<p>Questions or pitches? <a href="contact.html">Get in touch.</a></p>'
+            '<p>TABI is an independent guide to Japan for international visitors. It covers getting around, the rules that are not written down anywhere, what to eat, what is worth bringing home, and the parts of the country that most itineraries skip.</p>',
+            "<p>The site has been publishing since $($config.publisher.since). It is not owned by a tour operator, a hotel group or a booking platform, and no third party has editorial input.</p>",
+            $bylineAboutBlock,
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">How these guides are made</h2>',
+            $aiStatementBlock,
+            '<p>Every article is checked against the operators&rsquo; own published information before it goes up &mdash; rail companies for fares and times, prefectural and municipal sites for opening hours and access, official tourism bodies for seasonal dates. Where a figure moves often, the article says so and points you at the source rather than quoting a number that will be wrong by the time you read it.</p>',
+            '<p>Prices, opening hours and seasonal dates change constantly in Japan. Treat everything here as a starting point and confirm anything your trip depends on.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this site will not do</h2>',
+            '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
+            '<li>Claim first-hand experience it does not have. Where an article describes what somewhere is like, that is drawn from published sources, not from an implied visit.</li>',
+            '<li>Rank or recommend anything because of what it pays. See the <a href="affiliate.html">Affiliate Disclosure</a>.</li>',
+            '<li>Publish sponsored articles or paid guest posts.</li>',
+            '<li>Present AI-generated imagery as photography. Every image is credited on the article that uses it.</li>',
+            '</ul>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Corrections</h2>',
+            '<p>If something here is wrong &mdash; a fare, an opening time, a rule that has changed &mdash; please tell us and it will be fixed. Corrections are made to the article itself and the update date on the page changes with them.</p>',
+            "<p style=""margin-top:24px;"">Questions, corrections or pitches: <a href=""contact.html"">get in touch</a>.</p>"
         )
     },
     @{
@@ -1042,43 +1126,88 @@ $staticPages = @(
         title   = "Contact &mdash; $siteName"
         heading = 'Contact'
         body    = @(
-            '<p>For editorial enquiries, article pitches, or partnership proposals:</p>',
-            "<p><a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a></p>",
-            '<p style="margin-top:24px;color:var(--mist);font-size:0.85rem;">We read every email and aim to reply within 3 business days.</p>'
+            '<p>Email is the only channel. It is read by a person, not a queue.</p>',
+            "<p style=""font-size:1.15rem;margin:20px 0;""><a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a></p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What to write about</h2>',
+            '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
+            '<li><strong>Corrections.</strong> The most useful email you can send. A fare, an opening time, a closed shop, a rule that changed. Please include the article and, if you have one, a link to the current information.</li>',
+            '<li><strong>Editorial questions</strong> about anything published here.</li>',
+            '<li><strong>Pitches.</strong> Say what the piece is and why it is not already covered.</li>',
+            '<li><strong>Partnership and advertising enquiries.</strong> Note that sponsored articles and paid links inside article text are declined as a matter of policy.</li>',
+            '<li><strong>Privacy requests</strong> &mdash; access, deletion, or anything else covered by the <a href="privacy.html">Privacy Policy</a>.</li>',
+            '</ul>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Response times</h2>',
+            '<p>Most email is answered within three business days. Corrections are usually acted on faster than they are replied to, so if the page changes and you have not heard back, it was received.</p>',
+            '<p style="margin-top:24px;color:var(--mist);font-size:0.85rem;">Unsolicited link-building, guest-post and SEO offers are deleted unread.</p>'
         )
     },
     @{
         file    = 'privacy.html'
-        desc    = 'What TABI collects, the cookies it sets, and how to opt out of them.'
+        desc    = 'What TABI collects, which third parties are involved, the cookies they set, and how to opt out.'
         title   = "Privacy Policy &mdash; $siteName"
         heading = 'Privacy Policy'
         body    = @(
-            '<p style="color:var(--mist);font-size:0.82rem;">Last updated: June 2026</p>',
-            '<p>TABI collects minimal data to operate the site. We may use analytics tools (such as Google Analytics) to understand how visitors use our content. No personal data is sold to third parties.</p>',
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Cookies</h2>',
-            '<p>We may set cookies for analytics and functionality. Nothing that sets a cookie loads until you accept the banner, and you can disable cookies in your browser settings at any time.</p>',
-            $(if (Test-AdsEnabled) {
-                '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Advertising</h2>' +
-                '<p>TABI displays ads served by Google AdSense. Google and its partners may use cookies to serve ads based on your prior visits to this or other websites, and may process your data as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">how Google uses information from sites that use its services</a>. Ad scripts are only loaded after you accept cookies; if you decline, no ad request is made. You can also opt out of personalised advertising at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</p>'
-            } else { '' }),
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Affiliate Links</h2>',
-            '<p>Some links on this site are affiliate links. Clicking them and making a purchase may earn TABI a small commission at no extra cost to you. See our <a href="affiliate.html">Affiliate Disclosure</a> for details.</p>',
-            "<h2 style=""font-size:1.05rem;margin:28px 0 10px;"">Contact</h2>",
-            "<p>Questions about privacy? Email us at <a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a>.</p>"
+            "<p style=""color:var(--mist);font-size:0.82rem;"">Last updated: $lastUpdatedLong</p>",
+            "<p>This policy explains what information $siteName collects when you visit, who else is involved, and what you can do about it. It applies to <strong>$siteUrl</strong> and every page on it.</p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">The short version</h2>',
+            '<p>This site has no accounts, no logins and no shopping basket. It does not ask you for your name, address or payment details, and there is nothing here to sign up for except an optional newsletter. Nothing that identifies you is sold, and nothing that sets a cookie runs until you agree to it.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What is collected</h2>',
+            '<p><strong>Information you give us.</strong> Only what you put in an email to us, or an address you enter into the newsletter form. Newsletter addresses are held by the newsletter provider, not by this site, and are used to send the newsletter and nothing else. You can unsubscribe from any issue.</p>',
+            '<p><strong>Information collected automatically.</strong> Like any website, requests to this site are logged by the hosting provider, which receives your IP address, browser type and the page you asked for. This site is hosted on GitHub Pages and those logs are held by GitHub under its own privacy policy. We do not have access to them.</p>',
+            '<p><strong>Local storage.</strong> Your answer to the cookie banner is stored in your browser so you are not asked again. It never leaves your device and it can be cleared with your browsing data.</p>',
+            $analyticsPrivacyBlock,
+            $adsPrivacyBlock,
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Affiliate links</h2>',
+            '<p>Some outbound links are affiliate links. If you follow one, the destination site may set its own cookie to record that the visit came from here, so that any purchase can be attributed. That cookie is set by them, on their domain, under their privacy policy, and it happens only if you click. See the <a href="affiliate.html">Affiliate Disclosure</a> for who those partners are.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Other third parties</h2>',
+            '<p>Two services load with the page regardless of consent, because they are needed to render it: <strong>Google Fonts</strong>, which serves the typefaces, and <strong>GitHub Pages</strong>, which serves the site itself. Both receive your IP address as a technical necessity of delivering files to your browser. Neither is used to build a profile of you by us.</p>',
+            '<p>Embedded content from other sites &mdash; if any article ever includes it &mdash; behaves as if you had visited that site directly.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Your choices</h2>',
+            '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
+            '<li><strong>Decline the banner.</strong> Nothing optional loads. The site works normally.</li>',
+            '<li><strong>Change your mind.</strong> Clear this site''s data in your browser and the banner will ask again.</li>',
+            '<li><strong>Block cookies entirely</strong> in your browser settings.</li>',
+            '<li><strong>Opt out of personalised advertising</strong> across the web at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> and <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">optout.aboutads.info</a>.</li>',
+            '</ul>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">If you are in the EEA, UK or Switzerland</h2>',
+            '<p>Where consent is the lawful basis, it is asked for before anything runs and can be withdrawn at any time. Where the basis is legitimate interest &mdash; serving the page you requested &mdash; it is limited to what delivering the site requires. You have the right to ask what is held about you, to have it corrected or deleted, to object to processing, and to complain to your national data protection authority. Requests go to the address at the end of this page.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">If you are in California</h2>',
+            '<p>This site does not sell or share personal information as those terms are defined by the CCPA and CPRA, and it does not knowingly collect information from anyone under 16. You may request disclosure or deletion of anything held about you using the contact address below.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Children</h2>',
+            '<p>This site is written for adults planning travel and is not directed at children. No information is knowingly collected from anyone under 13. If you believe a child has provided information, contact us and it will be deleted.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Retention and security</h2>',
+            '<p>Nothing identifying is stored on this site &mdash; it is a set of static files with no database. Email correspondence is kept only as long as it is useful for answering you. Newsletter addresses are held by the provider until you unsubscribe. The site is served over HTTPS.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Changes</h2>',
+            '<p>If this policy changes, the date at the top changes with it. Material changes will be noted on the page rather than made quietly.</p>',
+            "<h2 style=""font-size:1.05rem;margin:32px 0 10px;"">Contact</h2>",
+            "<p>Questions or requests about privacy: <a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a>.</p>"
         )
     },
     @{
         file    = 'terms.html'
-        desc    = 'The terms covering use of TABI, its content and its external links.'
+        desc    = 'The terms covering use of TABI, the limits of its travel information, and its external links.'
         title   = "Terms of Use &mdash; $siteName"
         heading = 'Terms of Use'
         body    = @(
-            '<p style="color:var(--mist);font-size:0.82rem;">Last updated: June 2026</p>',
-            '<p>By using TABI you agree to these terms. All content on this site is for informational purposes only. We make no guarantees about the accuracy or completeness of travel information, which can change without notice.</p>',
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Intellectual Property</h2>',
-            '<p>All text, images, and design on TABI are &copy; TABI unless otherwise noted. Do not reproduce content without written permission.</p>',
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">External Links</h2>',
-            '<p>TABI links to third-party sites for convenience. We are not responsible for their content or practices.</p>'
+            "<p style=""color:var(--mist);font-size:0.82rem;"">Last updated: $lastUpdatedLong</p>",
+            "<p>By using $siteName you agree to these terms. If you do not, please stop using the site.</p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this site is, and is not</h2>',
+            '<p>Everything here is general information for people planning travel. It is not professional advice of any kind &mdash; not legal, medical, financial or immigration advice &mdash; and it is not a substitute for the operators&rsquo; own current information.</p>',
+            '<p>Travel information dates quickly. Fares change, opening hours change, services are suspended, entry rules are revised, and seasonal dates move with the weather. No guarantee is made that anything here is accurate or complete at the moment you read it. Confirm anything your trip depends on with the operator, the venue or the relevant authority before you rely on it.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Activities described here carry risk</h2>',
+            '<p>Some articles describe hiking, mountain climbing, bathing in very hot water, and eating unfamiliar food. These carry real risks including injury and death, and conditions vary. You are responsible for assessing your own fitness, experience and circumstances, for obtaining any permits required, and for your own safety and insurance. Nothing here is a recommendation that a particular activity is safe for you.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Limitation of liability</h2>',
+            "<p>To the fullest extent permitted by law, $siteName and its publisher are not liable for any loss, cost, injury or damage arising from use of this site or reliance on anything published here. Where liability cannot lawfully be excluded, it is limited to the minimum permitted.</p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Intellectual property</h2>',
+            "<p>The text, design and code of this site are &copy; $siteName unless stated otherwise. Images are AI-generated illustrations produced for this site and credited on the articles that use them.</p>",
+            '<p>You may quote short extracts with a clear credit and a link. You may not republish articles in whole or in substantial part, and you may not use this site&rsquo;s content to train machine learning models without written permission. Requests are welcome &mdash; ask.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">External links</h2>',
+            '<p>This site links to third parties for convenience, some of them affiliate links marked as described in the <a href="affiliate.html">Affiliate Disclosure</a>. We do not control those sites and are not responsible for their content, their accuracy or their practices. Their terms and privacy policies apply once you leave here.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Acceptable use</h2>',
+            '<p>Do not attempt to disrupt the site, scrape it at a volume that degrades it for others, or use it for anything unlawful.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Changes</h2>',
+            '<p>These terms may be revised. The date at the top changes when they are, and continued use after that constitutes acceptance.</p>',
+            "<p style=""margin-top:24px;"">Questions about these terms: <a href=""contact.html"">contact us</a>.</p>"
         )
     },
     @{

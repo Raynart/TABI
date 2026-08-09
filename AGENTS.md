@@ -183,6 +183,11 @@ into mojibake.
   `tags/*.html`, the static pages, `sitemap.xml`, `rss.xml`, `robots.txt`, `ads.txt`).
   Edit the generator and re-run it.
 - Do not commit a build made with `TABI_SITE_URL` set — every URL would point at localhost.
+- Do not write first-person reporting into an article or an excerpt: no "we visited",
+  "we asked", "we tested", "in my experience". The content is AI-drafted and the site
+  discloses that; claiming experience it does not have is a publisher-policy violation,
+  and excerpts become the meta description that search engines display.
+- Do not put a name in `publisher.name` that is not a real, contactable person.
 - Do not add Japanese text to any content field (English-only site).
 - Do not invent categories or tags outside the taxonomy.
 - Do not set `affiliate: true` outside `things-to-buy`.

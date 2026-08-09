@@ -1040,6 +1040,18 @@ ul, ol {
   flex-shrink: 0;
 }
 
+/* Byline. Rendered only when there is a real name to render -- see
+   Get-BylineHtml in generate-pages.ps1. */
+.article-byline {
+  font-size: 0.78rem;
+  color: var(--mist);
+}
+.article-byline a {
+  color: var(--mist);
+  border-bottom: 1px solid var(--border);
+}
+.article-byline a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
 /* Affiliate disclosure -- sits under the excerpt, above the first paid link.
    Deliberately quiet but not hidden: a disclosure the reader cannot find is not
    a disclosure. */

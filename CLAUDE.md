@@ -125,6 +125,34 @@ See `AGENTS.md` for the full article JSON schema used in `articles.json`.
 
 ---
 
+## Editorial integrity — non-negotiable
+
+The content here is AI-drafted and the images are AI-generated. That is disclosed
+on `about.html` and in every `heroImageCredit`. Given that, the site must never
+claim experience it does not have. Five excerpts previously did — "We visited a
+master craftsman in Kyoto", "what we learned from five ascents", "We asked local
+monks" — and excerpts are emitted as `<meta name="description">` and
+`og:description`, so those claims were what appeared in search results. Google's
+publisher policies treat misrepresentation of content or its origin as a policy
+violation, not a quality issue.
+
+Rules that follow from this:
+
+- **Never write first-person reporting into an article or excerpt.** No "we
+  visited", "we asked", "we tested", "in my experience", "our trip". Write what
+  is true of the place, not what the author supposedly did there.
+- **Never invent an author.** `publisher.name` in `site.config.json` switches on
+  a byline, an author box and `Person` structured data. Left empty, the site
+  falls back to the organisation and claims nothing. Do not fill it with a name
+  that is not a real person willing to be contacted.
+- **Never present AI images as photography.** `heroImageCredit` is required and
+  `about.html` states it plainly.
+- Prices, hours and seasonal dates are the weakest part of AI-drafted travel
+  content. Where a figure changes often, point at the operator instead of
+  quoting a number.
+
+---
+
 ## Monetization
 
 Everything lives under `monetization` in `site.config.json` and is **off until filled in**.

@@ -69,6 +69,16 @@
   },
   "beehiivUrl": "",
   "thinTagThreshold": 3,
+  "publisher": {
+    "_comment": "Who actually stands behind this site. Leave a field empty and nothing is claimed -- the pages will not invent a person. Filling name/role/bio switches on a real byline, an author box and Person structured data, which is what an ad-network or search reviewer looks for on a travel site. Do not put a name here that is not a real person willing to be contacted.",
+    "name": "",
+    "role": "",
+    "location": "",
+    "bio": "",
+    "since": "2026",
+    "usesAI": true,
+    "aiStatement": "Articles on TABI are drafted with AI assistance and edited before publication. Photographs on this site are AI-generated illustrations, credited as such on every article, and are not photographs of the specific places described."
+  },
   "monetization": {
     "_comment": "Nothing here renders until it is filled in. An empty adsense.clientId means no ad markup is generated at all; a partner with an empty url is skipped. Sign up for each programme, paste your own tracking link into url, then re-run generate-site.ps1.",
     "adsense": {
