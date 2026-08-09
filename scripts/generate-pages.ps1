@@ -1108,12 +1108,13 @@ if ($pub -and $pub.name) {
     $bylineAboutBlock = "<h2 style=""font-size:1.05rem;margin:32px 0 10px;"">Who writes it</h2><p><strong>$pn</strong> &mdash; $role$loc.</p>$bio"
 }
 
-# Images only. The site does not make a claim about who or what drafted the
-# text -- saying nothing is honest, saying "written by people who actually live
-# here" was not.
-$imageStatementBlock = ''
-if ($pub -and $pub.imageStatement) {
-    $imageStatementBlock = "<p>$([System.Net.WebUtility]::HtmlEncode($pub.imageStatement))</p>"
+# Optional. The site makes no claim about how its content is produced, in either
+# direction -- silence is honest here, "written by people who actually live here"
+# was not. Fill publisher.disclosure to say something, leave it empty to say
+# nothing.
+$disclosureBlock = ''
+if ($pub -and $pub.disclosure) {
+    $disclosureBlock = "<p>$([System.Net.WebUtility]::HtmlEncode($pub.disclosure))</p>"
 }
 
 # The analytics and advertising sections of the privacy policy describe things
@@ -1148,13 +1149,13 @@ $staticPages = @(
             "<p>The site has been publishing since $($config.publisher.since). It is not owned by a tour operator, a hotel group or a booking platform, and no third party has editorial input.</p>",
             $bylineAboutBlock,
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">How these guides are made</h2>',
+            $disclosureBlock,
             '<p>Each guide starts from a question a visitor actually asks &mdash; is the rail pass worth it, what happens at the door of an izakaya, which month is the right one &mdash; and is written to answer it completely enough that you do not need a second source.</p>',
             '<p>Every article is checked against the operators&rsquo; own published information before it goes up &mdash; rail companies for fares and times, prefectural and municipal sites for opening hours and access, official tourism bodies for seasonal dates. Where a figure moves often, the article says so and points you at the source rather than quoting a number that will be wrong by the time you read it.</p>',
             '<p>Prices, opening hours and seasonal dates change constantly in Japan. Treat everything here as a starting point and confirm anything your trip depends on.</p>',
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this site will not do</h2>',
             '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
             '<li>Claim first-hand experience it does not have. Where an article describes what somewhere is like, that is drawn from published sources, not from an implied visit.</li>',
-            '<li>Present illustrations as photography. ' + $(if ($pub -and $pub.imageStatement) { [System.Net.WebUtility]::HtmlEncode($pub.imageStatement) } else { 'Images are credited on the articles that use them.' }) + '</li>',
             '<li>Rank or recommend anything because of what it pays. See the <a href="affiliate.html">Affiliate Disclosure</a>.</li>',
             '<li>Publish sponsored articles or paid guest posts.</li>',
             '</ul>',
@@ -1249,7 +1250,7 @@ $staticPages = @(
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Limitation of liability</h2>',
             "<p>To the fullest extent permitted by law, $siteName and its publisher are not liable for any loss, cost, injury or damage arising from use of this site or reliance on anything published here. Where liability cannot lawfully be excluded, it is limited to the minimum permitted.</p>",
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Intellectual property</h2>',
-            "<p>The text, design and code of this site are &copy; $siteName unless stated otherwise. Images are AI-generated illustrations produced for this site and credited on the articles that use them.</p>",
+            "<p>The text, design, images and code of this site are &copy; $siteName unless stated otherwise.</p>",
             '<p>You may quote short extracts with a clear credit and a link. You may not republish articles in whole or in substantial part, and you may not use this site&rsquo;s content to train machine learning models without written permission. Requests are welcome &mdash; ask.</p>',
             '<h2 style="font-size:1.05rem;margin:32px 0 10px;">External links</h2>',
             '<p>This site links to third parties for convenience, some of them affiliate links marked as described in the <a href="affiliate.html">Affiliate Disclosure</a>. We do not control those sites and are not responsible for their content, their accuracy or their practices. Their terms and privacy policies apply once you leave here.</p>',

@@ -62,9 +62,9 @@ with GPT and dropped into the repo; everything downstream of that is automated.
      `Get-ImageSize` maps it back to the local file to emit `width`/`height`, so a
      relative path silently costs you the layout-shift protection.
    - `heroImageAlt` — required whenever `heroImage` is set.
-   - `heroImageCredit` — `AI-generated image by OpenAI` for GPT images. All 63
-     current images use exactly this string; disclosure of AI imagery is the point,
-     so do not drop it.
+   - `heroImageCredit` — optional, and currently empty on every article by
+     editorial decision. Set it only when a specific image genuinely needs a
+     credit line, e.g. a licensed or third-party image.
 5. Regenerate the site. If an image is replaced in place rather than renamed, bump
    `$imageVersion` in `generate-pages.ps1` or browsers will keep the stale copy.
 
@@ -127,14 +127,18 @@ See `AGENTS.md` for the full article JSON schema used in `articles.json`.
 
 ## Editorial integrity — non-negotiable
 
-The content here is AI-drafted and the images are AI-generated. That is disclosed
-on `about.html` and in every `heroImageCredit`. Given that, the site must never
-claim experience it does not have. Five excerpts previously did — "We visited a
-master craftsman in Kyoto", "what we learned from five ascents", "We asked local
-monks" — and excerpts are emitted as `<meta name="description">` and
-`og:description`, so those claims were what appeared in search results. Google's
-publisher policies treat misrepresentation of content or its origin as a policy
-violation, not a quality issue.
+The site makes no claim about how its content is produced. That is deliberate and
+it is honest: no page asserts human authorship, no image is captioned as a
+photograph, and a general statement about the site's use of AI is the owner's to
+add via `publisher.disclosure` when they choose.
+
+What the site must never do is claim experience it does not have. Five excerpts
+previously did — "We visited a master craftsman in Kyoto", "what we learned from
+five ascents", "We asked local monks" — and excerpts are emitted as
+`<meta name="description">` and `og:description`, so those claims were what
+appeared in search results. Google's publisher policies treat misrepresentation
+of content or its origin as a policy violation, not a quality issue. Saying
+nothing is fine. Saying something untrue is not.
 
 Rules that follow from this:
 
@@ -145,17 +149,19 @@ Rules that follow from this:
   a byline, an author box and `Person` structured data. Left empty, the site
   falls back to the organisation and claims nothing. Do not fill it with a name
   that is not a real person willing to be contacted.
-- **Never present AI images as photography.** `heroImageCredit` is required, and
-  `publisher.imageStatement` puts the same disclosure on `about.html`. The site
-  deliberately says nothing about how the *text* is produced — silence is honest,
-  a claim of human authorship would not be — but the images are illustrations and
-  that has to be visible.
+- **Never caption an image as something it is not.** Per-image credits are off by
+  editorial decision — `heroImageCredit` exists and is empty on all 63 articles.
+  Nothing anywhere describes an image as a photograph, and nothing should start.
+  `heroImageAlt` stays required: alt text describes what is in the picture and
+  must not assert something untrue about the world.
+- **`publisher.disclosure`** is the one place a statement about how the site is
+  run belongs. Empty means the site says nothing, which is the current position.
+  Do not use it to claim the opposite of what is true.
 - **Optional in-body images.** A section may carry
   `"image": { "src": "<file>.webp", "alt": "...", "credit": "..." }`, where `src`
   is a bare filename under `assets/images/`. Alt text is enforced by the build.
   A missing file is skipped with a warning rather than shipping a broken image.
-- Prices, hours and seasonal dates are the weakest part of AI-drafted travel
-  content. Where a figure changes often, point at the operator instead of
+- Prices, hours and seasonal dates are the weakest part of this material. Where a figure changes often, point at the operator instead of
   quoting a number.
 
 ---

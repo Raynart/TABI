@@ -14,7 +14,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/chopstick-etiquette.webp",
     "heroImageAlt": "A pair of wooden chopsticks resting on a ceramic chopstick rest beside a bowl of rice",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -113,7 +113,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/gift-giving-etiquette.webp",
     "heroImageAlt": "An elegantly wrapped Japanese gift box with a noshi ribbon on a wooden surface",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -204,7 +204,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tattoo-onsen-guide.webp",
     "heroImageAlt": "Steam rising from an outdoor onsen rotenburo surrounded by autumn trees",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -280,7 +280,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-business-card-etiquette.webp",
     "heroImageAlt": "A Japanese business card (meishi) held with two hands against a wooden meeting table",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -378,7 +378,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/sake-etiquette-japan.webp",
     "heroImageAlt": "A small ceramic tokkuri flask and ochoko cups of sake on a wooden table at an izakaya",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -461,7 +461,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-breakfast-guide.webp",
     "heroImageAlt": "A traditional Japanese breakfast set with rice, miso soup, grilled fish, pickles, and tofu",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -545,7 +545,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/best-time-visit-japan.webp",
     "heroImageAlt": "Mount Fuji reflected in a lake surrounded by summer wildflowers",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -642,7 +642,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japan-taxi-guide.webp",
     "heroImageAlt": "A black Toyota Crown Japanese taxi cab waiting at a Tokyo intersection at night",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -731,7 +731,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/matsumoto-castle-guide.webp",
     "heroImageAlt": "Matsumoto Castle reflected in the surrounding moat on a clear autumn morning with the Japanese Alps behind",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -818,7 +818,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/kyoto-3-days-itinerary.webp",
     "heroImageAlt": "The vermilion torii gates of Fushimi Inari at dawn with no crowds visible",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -905,7 +905,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/train-etiquette-japan.webp",
     "heroImageAlt": "The interior of a Tokyo commuter train with passengers sitting quietly",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1005,7 +1005,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/temple-shrine-etiquette.webp",
     "heroImageAlt": "A stone torii gate leading to a Shinto shrine path lined with lanterns",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1097,7 +1097,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tipping-in-japan.webp",
     "heroImageAlt": "A server at a traditional Japanese restaurant carefully placing dishes on a low table",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1181,7 +1181,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/shoes-off-guide.webp",
     "heroImageAlt": "A row of shoes neatly arranged in a traditional Japanese entryway genkan",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1264,7 +1264,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/public-behavior-japan.webp",
     "heroImageAlt": "A busy pedestrian crossing in Tokyo with people moving in orderly streams",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1363,7 +1363,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/cash-vs-card-japan.webp",
     "heroImageAlt": "A hand holding Japanese yen banknotes in front of a temple market",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1454,7 +1454,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japan-sim-card-guide.webp",
     "heroImageAlt": "A person holding a phone with a Japan map open in a busy train station",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1542,7 +1542,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/basic-japanese-phrases.webp",
     "heroImageAlt": "A Japanese menu board with handwritten chalk specials at a small restaurant",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1650,7 +1650,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tokyo-subway-guide.webp",
     "heroImageAlt": "The platform at Shinjuku Station during morning rush hour with commuters boarding a train",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1733,7 +1733,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/photography-rules-japan.webp",
     "heroImageAlt": "A photographer framing a traditional Japanese street scene at dawn with no other people visible",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1829,7 +1829,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/ryokan-first-time-guide.webp",
     "heroImageAlt": "A traditional ryokan room with tatami floor, low table, and garden view",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -1927,7 +1927,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japan-winter-travel-guide.webp",
     "heroImageAlt": "Snow-dusted temple grounds in Kyoto in winter",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2017,7 +2017,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japan-convenience-store-guide.webp",
     "heroImageAlt": "Onigiri and sandwiches at a Japanese convenience store counter",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2101,7 +2101,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/kissaten-tokyo-coffee-culture.webp",
     "heroImageAlt": "A dimly lit kissaten coffee shop interior with wooden counters and vintage cups",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2192,7 +2192,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/kanazawa-japan-guide.webp",
     "heroImageAlt": "Higashi Chaya geisha district in Kanazawa, wooden ochaya buildings lining a quiet street",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2281,7 +2281,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tsukiji-outer-market-guide.webp",
     "heroImageAlt": "Fresh seafood stalls at Tsukiji outer market at early morning",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2365,7 +2365,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/izakaya-guide-first-timers.webp",
     "heroImageAlt": "Inside a Tokyo izakaya with warm lighting, wooden tables and yakitori on the grill",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2456,7 +2456,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/ic-card-japan-guide.webp",
     "heroImageAlt": "Commuter tapping a Suica IC card at a Tokyo train station gate",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2537,7 +2537,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-whisky-what-to-buy.webp",
     "heroImageAlt": "Japanese whisky bottles displayed at a specialist liquor shop in Tokyo",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2618,7 +2618,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/naoshima-art-island-guide.webp",
     "heroImageAlt": "A contemporary outdoor sculpture near the coast of Naoshima with the Seto Inland Sea behind",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2700,7 +2700,7 @@
     "readingTime": 8,
     "heroImage": "https://raynart.github.io/TABI/assets/images/shinkansen-guide.webp",
     "heroImageAlt": "Shinkansen bullet train at a Japanese station platform",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2804,7 +2804,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tokyo-neighborhoods-guide.webp",
     "heroImageAlt": "Aerial view of Tokyo at dusk showing the city lights",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -2902,7 +2902,7 @@
     "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/ramen-regional-guide.webp",
     "heroImageAlt": "A bowl of Hakata tonkotsu ramen with chashu pork and soft-boiled egg",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3001,7 +3001,7 @@
     "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/sumo-tournament-guide.webp",
     "heroImageAlt": "Two sumo wrestlers facing off in the dohyo ring at Ryogoku Kokugikan",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3106,7 +3106,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-onsen-etiquette.webp",
     "heroImageAlt": "Outdoor rotenburo onsen with steam rising over a stone tub surrounded by bamboo",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3205,7 +3205,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/donki-shopping-guide.webp",
     "heroImageAlt": "A colorful Japanese discount store exterior at night with bright signs in Tokyo",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3280,7 +3280,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/hiroshima-guide.webp",
     "heroImageAlt": "The Genbaku Dome atomic bomb memorial in Hiroshima beside the river",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3363,7 +3363,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/autumn-foliage-japan.webp",
     "heroImageAlt": "Maple trees in full autumn colour reflected in a garden pond in Kyoto",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3461,7 +3461,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/beppu-onsen-guide.webp",
     "heroImageAlt": "Blue-green geothermal pool steaming at Umi Jigoku in Beppu",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3544,7 +3544,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-stationery-guide.webp",
     "heroImageAlt": "Rows of colorful washi tape rolls and stationery at a Japanese stationery shop",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3617,7 +3617,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/sushi-counter-guide.webp",
     "heroImageAlt": "A sushi chef preparing nigiri behind a counter with fresh fish displayed in a glass case",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3701,7 +3701,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/nara-day-trip.webp",
     "heroImageAlt": "Sika deer roaming free in Nara Park with Todai-ji temple visible through the trees",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3792,7 +3792,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/golden-week-avoid.webp",
     "heroImageAlt": "Crowded hanami cherry blossom viewing in Ueno Park during Golden Week",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3867,7 +3867,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-sake-guide.webp",
     "heroImageAlt": "Rows of sake bottles at a specialist sake shop in Japan",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -3957,7 +3957,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/hokkaido-summer-guide.webp",
     "heroImageAlt": "Lavender fields in full bloom at Farm Tomita in Furano, Hokkaido",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4035,7 +4035,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/koenji-shimokitazawa.webp",
     "heroImageAlt": "Narrow street in Shimokitazawa lined with vintage clothing shops and cafes",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4111,7 +4111,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/wagyu-guide.webp",
     "heroImageAlt": "Thinly sliced wagyu beef with visible marbling on a wooden board",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4193,7 +4193,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-vending-machines.webp",
     "heroImageAlt": "A row of colourful Japanese vending machines on a city street at night",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4285,7 +4285,7 @@
     "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/tokyo-day-trips.webp",
     "heroImageAlt": "Kurazukuri Street in Kawagoe with traditional clay-walled Edo-period storehouses",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4374,7 +4374,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-gift-omiyage.webp",
     "heroImageAlt": "Beautifully packaged Japanese confectionery boxes displayed at a station gift shop",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4450,7 +4450,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/hidden-shrines-kyoto.webp",
     "heroImageAlt": "A quiet moss-covered shrine path in Kyoto lined with stone lanterns",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4537,7 +4537,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/10-days-japan-no-tourist-traps.webp",
     "heroImageAlt": "A quiet local train platform in Japan at sunrise during a slow travel itinerary",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4631,7 +4631,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/mt-fuji-route-guide.webp",
     "heroImageAlt": "A rocky Mt. Fuji climbing trail before sunrise with hikers silhouetted in the distance",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4722,7 +4722,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/osaka-3-days-itinerary.webp",
     "heroImageAlt": "A lively Osaka evening food street with warm lanterns and small restaurants",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4813,7 +4813,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/yakushima-ancient-forest.webp",
     "heroImageAlt": "A misty ancient cedar forest path in Yakushima covered with moss",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4898,7 +4898,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-menu-guide.webp",
     "heroImageAlt": "A Japanese restaurant menu on a table with chopsticks and a bowl of noodles nearby",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -4986,7 +4986,7 @@
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/wabi-sabi-explained.webp",
     "heroImageAlt": "A weathered ceramic vase in a quiet Japanese room with soft garden light",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -5068,7 +5068,7 @@
     "readingTime": 7,
     "heroImage": "https://raynart.github.io/TABI/assets/images/kintsugi-art-of-gold.webp",
     "heroImageAlt": "A repaired ceramic kintsugi bowl with gold seams on an artisan worktable",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -5166,7 +5166,7 @@
     "readingTime": 5,
     "heroImage": "https://raynart.github.io/TABI/assets/images/hanami-2026-guide.webp",
     "heroImageAlt": "A peaceful riverside hanami picnic scene under cherry blossoms in Japan",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
@@ -5255,7 +5255,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-kitchen-knives.webp",
     "heroImageAlt": "Japanese kitchen knives displayed on a dark wooden shop counter",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": true,
     "affiliateLinks": [],
     "relatedIds": [
@@ -5352,7 +5352,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/buying-matcha-guide.webp",
     "heroImageAlt": "Matcha powder in ceramic bowls with a bamboo whisk and tea scoop",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": true,
     "affiliateLinks": [],
     "relatedIds": [
@@ -5449,7 +5449,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-drugstore-finds.webp",
     "heroImageAlt": "Japanese drugstore skincare and travel products arranged neatly on bright shelves",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": true,
     "affiliateLinks": [],
     "relatedIds": [
@@ -5568,7 +5568,7 @@
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/authentic-yukata-tokyo.webp",
     "heroImageAlt": "Folded cotton yukata fabrics and obi sashes displayed in a Tokyo shop",
-    "heroImageCredit": "AI-generated image by OpenAI",
+    "heroImageCredit": "",
     "affiliate": true,
     "affiliateLinks": [],
     "relatedIds": [
