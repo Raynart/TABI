@@ -54,7 +54,7 @@ rule at the bottom of this file, which has been violated twice with real data lo
   "readingTime": 6,
   "heroImage": "https://raynart.github.io/TABI/assets/images/unique-slug-in-kebab-case.webp",
   "heroImageAlt": "Descriptive alt text for the hero image",
-  "heroImageCredit": "AI-generated image by OpenAI",
+  "heroImageCredit": "",
   "affiliate": false,
   "affiliateLinks": [],
   "relatedIds": [],
@@ -71,7 +71,8 @@ rule at the bottom of this file, which has been violated twice with real data lo
 | `excerpt` | **Required** — the build fails without it. 1-2 sentences, no "click here" |
 | `sections` | **Required** — the build fails without it. Array of `{heading, paragraphs}`. Current articles run 5-9 sections |
 | `sections[].heading` | Becomes an `<h2>` and a table-of-contents entry, so it must stand alone as a label |
-| `sections[].paragraphs` | Array of strings, one `<p>` each. Every current section holds exactly one |
+| `sections[].paragraphs` | Array of strings, one `<p>` each |
+| `sections[].image` | Optional `{src, alt, credit}`. `src` is a bare filename under `assets/images/`. **`alt` is enforced** — the build fails without it. A missing file is skipped with a warning |
 | `category` | One of the 6 slugs below. **Enforced** — an unknown value aborts the build |
 | `tags` | From the taxonomy below. **Enforced**. 2-3 is typical; do not exceed 5. A tag used by fewer than `thinTagThreshold` articles gets a `noindex` tag page |
 | `publishedAt` | `YYYY-MM-DD`. Drives sort order, the sitemap and the RSS feed |
@@ -79,7 +80,7 @@ rule at the bottom of this file, which has been violated twice with real data lo
 | `readingTime` | **Derived.** `generate-pages.ps1` computes it from the actual word count at 220 wpm and ignores this field. Keep it in sync, but the page is what the page says |
 | `heroImage` | **Absolute** production URL under `assets/images/`. A relative path silently disables the `width`/`height` and `srcset` output |
 | `heroImageAlt` | Required whenever `heroImage` is set |
-| `heroImageCredit` | `AI-generated image by OpenAI` for GPT images. Disclosure of AI imagery is the point — do not drop it |
+| `heroImageCredit` | Optional; empty on every article by editorial decision. Set it only for an image that genuinely needs a credit, e.g. a licensed or third-party one |
 | `affiliate` | `true` only for `things-to-buy`. Gates the per-article `affiliateLinks` block |
 | `affiliateLinks` | Array of `{"label", "url", "price"}`. Optional — see Monetization below |
 | `relatedIds` | Existing article `id` values, 2-3. An id that does not exist is silently dropped |
@@ -183,6 +184,12 @@ into mojibake.
   `tags/*.html`, the static pages, `sitemap.xml`, `rss.xml`, `robots.txt`, `ads.txt`).
   Edit the generator and re-run it.
 - Do not commit a build made with `TABI_SITE_URL` set — every URL would point at localhost.
+- Do not write first-person reporting into an article or an excerpt: no "we visited",
+  "we asked", "we tested", "in my experience". Claiming experience the site does not
+  have is a publisher-policy violation, and excerpts become the meta description that
+  search engines display. The site says nothing about how it is produced, which is
+  fine; saying something untrue is not.
+- Do not put a name in `publisher.name` that is not a real, contactable person.
 - Do not add Japanese text to any content field (English-only site).
 - Do not invent categories or tags outside the taxonomy.
 - Do not set `affiliate: true` outside `things-to-buy`.
