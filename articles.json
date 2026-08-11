@@ -646,7 +646,7 @@
       "practical"
     ],
     "publishedAt": "2026-06-17",
-    "updatedAt": "2026-06-21",
+    "updatedAt": "2026-08-11",
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japan-taxi-guide.webp",
     "heroImageAlt": "A black Toyota Crown Japanese taxi cab waiting at a Tokyo intersection at night",
@@ -678,7 +678,7 @@
       {
         "heading": "Fares and metering",
         "paragraphs": [
-          "Fares are metered. In Tokyo, the base fare is around ¥500–550 for the first 1.2 kilometers, then ¥100 per approximately 300–400 meters. A 5-kilometer city ride typically runs ¥1,500–2,500. Late-night surcharges (after 10pm) add around 20%. There is no tip. Pay exactly what the meter says.",
+          "Fares are metered. In Tokyo the base fare is ¥500, which since the April 2026 revision covers the first kilometre rather than the 1.096 km it used to, and every further ¥100 buys about 232 metres. A short hop across a couple of neighbourhoods lands around ¥1,000; a five-kilometre ride across the city is more like ¥2,500. Between 10pm and 5am everything is 20% higher, so that ¥500 flagfall starts at ¥600. Fares are set regionally, so other cities differ. There is no tip. Pay exactly what the meter says.",
           "Two things get added to the meter legitimately. Expressway tolls are passed through at cost, which matters on airport runs and is worth agreeing to before the driver takes the ramp. And the meter also ticks over slowly while stationary, so heavy traffic costs you even when you are not moving.",
           "Fares vary by region. Tokyo is the expensive end; a ride in a smaller city can be noticeably cheaper for the same distance. What does not vary is the honesty of the meter. Deliberate long-hauling of tourists is close to unheard of, and if a driver takes a route that looks odd it is almost always a one-way system or a traffic avoidance, not a scam."
         ]
@@ -2727,7 +2727,7 @@
       "budget"
     ],
     "publishedAt": "2026-06-02",
-    "updatedAt": "2026-06-24",
+    "updatedAt": "2026-08-11",
     "readingTime": 8,
     "heroImage": "https://raynart.github.io/TABI/assets/images/shinkansen-guide.webp",
     "heroImageAlt": "Shinkansen bullet train at a Japanese station platform",
@@ -2744,7 +2744,7 @@
       {
         "heading": "The cost, and why old advice is wrong",
         "paragraphs": [
-          "The 7-day JR Pass costs ¥50,000 (around $330 USD at current rates). For that price you get unlimited travel on most JR-operated trains, including the Shinkansen, for one week. The 14-day version is ¥80,000 and the 21-day is ¥100,000. If your itinerary involves Tokyo, Kyoto, Osaka, and Hiroshima in that sequence, the math works. If your itinerary is mostly in one city with a few day trips, it almost certainly doesn't.",
+          "The 7-day JR Pass costs ¥50,000, and rises to ¥53,000 on 1 October 2026. The 14-day goes from ¥80,000 to ¥84,000 and the 21-day from ¥100,000 to ¥105,000 on the same date. For that price you get unlimited travel on most JR-operated trains, including the Shinkansen. If you are booking ahead and your dates allow, buying before the increase locks in the lower price. If your itinerary involves Tokyo, Kyoto, Osaka, and Hiroshima in that sequence, the maths works. If your itinerary is mostly in one city with a few day trips, it almost certainly doesn't.",
           "That qualifier matters more than it used to. In October 2023 the 7-day pass went from ¥29,650 to ¥50,000 — a 69% increase overnight. At the old price the pass was close to an automatic purchase for any first-time visitor; at the new one it is a calculation. Almost every blog post, forum answer and guidebook paragraph written before that date is describing a product that no longer exists, and a lot of it is still the first thing you find when you search. Check the date on any JR Pass advice before you trust it, including this page.",
           "There is also a Green Car version, roughly 30–40% more, which buys you the first-class carriage: wider seats in a 2+2 layout instead of 2+3, more legroom, and a quieter car. On a two-hour ride in a full train it is pleasant. It is not a different train and it does not arrive earlier. Buy it if the comfort is worth the money to you, not because it sounds like the serious option."
         ]
@@ -3237,7 +3237,7 @@
       "budget"
     ],
     "publishedAt": "2026-05-28",
-    "updatedAt": "2026-06-25",
+    "updatedAt": "2026-08-11",
     "readingTime": 4,
     "heroImage": "https://raynart.github.io/TABI/assets/images/donki-shopping-guide.webp",
     "heroImageAlt": "A colorful Japanese discount store exterior at night with bright signs in Tokyo",
@@ -3271,7 +3271,7 @@
         "heading": "Snacks, and the tax-free rule that catches people",
         "paragraphs": [
           "The food section has Kit Kat flavours, Pocky, regional crisps and gift-packaged snack sets. If you're buying snacks to take home, this is more convenient than tracking down a specialty shop and often cheaper.",
-          "The tax-free counter is worth using — bring your passport, and the threshold is a purchase of ¥5,000 or more in a day. What surprises people is the rule on consumables: food, drink, cosmetics and medicines bought tax-free are sealed into a transparent bag that you are not supposed to open until you have left the country. If you were planning to eat the snacks on the trip, buy those separately and pay the tax.",
+          "The tax-free counter is worth using — bring your physical passport, and the threshold is ¥5,000 or more in a day at the same store. How it works depends on when you travel. Until 31 October 2026 the tax is deducted at the register, and food, drink, cosmetics and medicines are sealed into a transparent bag you are not supposed to open before leaving the country — so if you were planning to eat the snacks on the trip, buy those separately and pay the tax. From 1 November 2026 the system changes: you pay the tax-inclusive price in the shop and claim the refund at the airport after Customs confirms you are taking the goods out. The sealed bag and the split between consumables and everything else both disappear, which makes the whole thing simpler at the till and slower at departure.",
           "Consumables and general goods are also counted separately toward the threshold, which occasionally means a basket that looks like it qualifies does not. The staff at the counter will sort it out; it just takes longer than you expect at 2am."
         ]
       },
@@ -5507,7 +5507,7 @@
       "shopping"
     ],
     "publishedAt": "2026-04-10",
-    "updatedAt": "2026-07-13",
+    "updatedAt": "2026-08-11",
     "readingTime": 6,
     "heroImage": "https://raynart.github.io/TABI/assets/images/japanese-drugstore-finds.webp",
     "heroImageAlt": "Japanese drugstore skincare and travel products arranged neatly on bright shelves",
@@ -5601,7 +5601,7 @@
       {
         "heading": "Tax-free, and how to actually get it",
         "paragraphs": [
-          "Most large drugstores offer tax-free purchasing above a minimum spend for visitors, and consumables and general goods are counted in separate categories — which occasionally means a basket that looks like it qualifies does not. Bring your physical passport; a photograph is not accepted.",
+          "Most large drugstores offer tax-free purchasing to visitors above ¥5,000 in a day at the same store. Bring your physical passport; a photograph is not accepted. Until 31 October 2026 consumables and general goods are counted as separate categories, which occasionally means a basket that looks like it qualifies does not, and consumables leave the shop in a sealed bag. From 1 November 2026 both of those rules end: you pay the full price in store and claim the consumption tax back at the airport, where Customs has to see the goods, so keep them where you can reach them.",
           "Consumable items are sealed in a transparent bag that you are not supposed to open before leaving the country. If you want to use the sunscreen during the trip, buy that bottle separately and pay the tax on it.",
           "The saving is meaningful on a large basket, and the queue at the tax-free counter is usually shortest in the early afternoon."
         ]
