@@ -2004,7 +2004,8 @@
     "relatedIds": [
       "ryokan-first-time-guide",
       "kanazawa-japan-guide",
-      "hokkaido-summer-guide"
+      "hokkaido-summer-guide",
+      "ginzan-onsen-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -3413,7 +3414,8 @@
     "relatedIds": [
       "osaka-3-days-itinerary",
       "shinkansen-guide",
-      "10-days-japan-no-tourist-traps"
+      "10-days-japan-no-tourist-traps",
+      "nagasaki-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -3600,7 +3602,8 @@
     "relatedIds": [
       "japanese-onsen-etiquette",
       "ryokan-first-time-guide",
-      "japan-winter-travel-guide"
+      "japan-winter-travel-guide",
+      "fukuoka-city-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -6503,6 +6506,734 @@
         "paragraphs": [
           "Japan is not a difficult country to eat in with restrictions, but it is a country where the restriction has to be communicated precisely rather than approximately. The food culture is not built around accommodation and substitution the way some others are, and a kitchen that cannot make your dish will usually say so plainly rather than improvise.",
           "Prepare the written card, learn the four or five words that matter, use the temple cuisine and the dedicated restaurants when you want to stop thinking about it, and treat the convenience store as the safety net it is. On those terms it works, and the food is worth the effort."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fukuoka-city-guide",
+    "title": "Fukuoka: The Japanese City That Gets Everything Right",
+    "excerpt": "An international airport eleven minutes from the city centre, the best ramen in the country, and street food stalls along the river. Fukuoka is consistently rated the most liveable city in Japan and consistently skipped by visitors.",
+    "category": "hidden-japan",
+    "region": "kyushu",
+    "tags": [
+      "food",
+      "off-the-beaten-path",
+      "first-time"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [
+      {
+        "on": "2027-03-31",
+        "what": "Dazaifu Tenmangu renovation and its temporary hall; check whether the main hall has reopened"
+      }
+    ],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "ramen-regional-guide",
+      "beppu-onsen-guide",
+      "izakaya-guide-first-timers"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The airport is the first thing you notice",
+        "paragraphs": [
+          "Fukuoka Airport is roughly eleven minutes by subway from Hakata Station and about fifteen from Tenjin, the main shopping district. There is no other major Japanese city where the airport is effectively a subway stop, and it changes the shape of a trip completely: you land, you take a train that is already going where you want to go, and you are in the centre before you would have finished the queue for the Narita Express.",
+          "This is the strongest practical argument for treating Fukuoka as an entry point to Japan rather than an add-on. Flights from elsewhere in Asia are frequent and cheap, and starting here and working east is a more interesting route than the standard Tokyo-first itinerary.",
+          "The city itself has two centres. Hakata is the station side, older and more workmanlike. Tenjin is the shopping and nightlife side. They are about ten minutes apart by subway and the walk between them, along the Naka river, is one of the pleasant things to do here."
+        ]
+      },
+      {
+        "heading": "Yatai, which exist nowhere else like this",
+        "paragraphs": [
+          "Yatai are the open-air food stalls that set up on the pavements in the evening — a counter, a handful of stools, a tarpaulin, and a cook working in a space smaller than most kitchens. Fukuoka has by far the largest concentration left in Japan; other cities have effectively regulated them out of existence.",
+          "The main cluster is along Nakasu, the island in the river, with more scattered around Tenjin and Nagahama. They open in the early evening and run late. You sit down beside strangers, order a few things, drink a beer, and move on or stay.",
+          "The etiquette is simple and worth knowing. Space is limited, so a long occupation of a stool while nursing one drink is poor form. Order food as well as drink. Cash is often the only option. And the ones with a queue of local office workers are a better bet than the ones with an English menu on a board.",
+          "What to order varies by stall: ramen, oden, yakitori, motsunabe, gyoza. The gyoza here are small, thin-skinned and served by the dozen, which is a distinct local style."
+        ]
+      },
+      {
+        "heading": "Hakata ramen is the local religion",
+        "paragraphs": [
+          "Tonkotsu — the milky, collagen-heavy pork bone broth — was invented in this region, and Fukuoka is where it is taken most seriously. The noodles are thin, straight and served firm, and the standard portion is deliberately small so it can be eaten before the noodles soften.",
+          "That is what kaedama is for: you finish the noodles, call for a refill, and a second portion arrives to go into the broth you still have. Ordering it is expected rather than greedy, and shops have a system for it — often a button on the counter or a slip of paper.",
+          "Shops around Hakata Station and Nagahama are the traditional heartland. A bowl is inexpensive, most shops seat you at a counter and some have the individual booths that let you eat without interacting with anyone at all, which is a considered piece of design rather than an oddity."
+        ]
+      },
+      {
+        "heading": "Beyond food",
+        "paragraphs": [
+          "Ohori Park is a large pond with a walking path around it, built from the moat of the old castle, and it is where the city goes in the evening. The adjacent Maizuru Park has the castle ruins — stone walls rather than a keep — and is one of the better cherry blossom sites in Kyushu.",
+          "Kushida Shrine is the spiritual home of the Hakata Gion Yamakasa festival and has one of the enormous festival floats on display year-round, which is worth seeing even outside July.",
+          "Canal City is a large shopping complex built around an artificial canal, which sounds unpromising and is actually a landmark of 1990s architecture worth walking through.",
+          "And the Kyushu National Museum, in Dazaifu, is one of only a handful of national museums in the country and takes a regional rather than a national view of Japanese history."
+        ]
+      },
+      {
+        "heading": "Dazaifu, half an hour away",
+        "paragraphs": [
+          "Dazaifu Tenmangu is dedicated to Sugawara no Michizane, the scholar deified as the god of learning, which makes it the shrine students visit before examinations. The approach is lined with shops selling umegae mochi, a grilled rice cake with a plum blossom stamp, eaten hot.",
+          "The shrine has been undergoing major renovation of its main hall, during which a striking temporary structure with a garden growing on its roof has stood in front of it. It is worth checking the current state before going, since the thing you see depends on where the work has reached.",
+          "The train from Tenjin takes about half an hour on the Nishitetsu line, and the museum, the shrine and lunch make a comfortable half day."
+        ]
+      },
+      {
+        "heading": "Using Fukuoka as a base",
+        "paragraphs": [
+          "The city sits at the top of Kyushu and everything else on the island is reachable from it. Beppu and its steaming hot springs are a couple of hours east. Nagasaki is a couple of hours south-west. Kumamoto and the enormous caldera at Aso are directly south. Yufuin, Takachiho and the Kunisaki peninsula are all day trips or overnight trips.",
+          "The Kyushu Shinkansen runs south towards Kagoshima, and JR Kyushu sells its own regional passes which are far better value than the national pass for a trip that stays on the island.",
+          "For a first visit to Japan that wants to avoid the crowded Golden Route entirely, a week based here with two or three overnight trips is a genuinely strong itinerary."
+        ]
+      },
+      {
+        "heading": "Why so few visitors come",
+        "paragraphs": [
+          "There is no mystery to it. Fukuoka has no single overwhelming sight — no Fushimi Inari, no Itsukushima torii, no castle on every postcard — and international itineraries are built around those. What it has instead is a city that works: compact, well fed, friendly in a way that people who live in Tokyo comment on, and cheap by Japanese standards.",
+          "That is a harder thing to put in a photograph and a better thing to spend three days in."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nagasaki-guide",
+    "title": "Nagasaki: The Port That Was Japan's Only Window on the World",
+    "excerpt": "For two centuries, when the country was closed, one artificial island in Nagasaki harbour was the entire point of contact with Europe. The city that grew from that is unlike anywhere else in Japan — and it carries the second atomic bombing.",
+    "category": "hidden-japan",
+    "region": "kyushu",
+    "tags": [
+      "tradition",
+      "off-the-beaten-path",
+      "food"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "hiroshima-guide",
+      "fukuoka-city-guide",
+      "japanese-gift-omiyage"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Two hundred years of being the only door",
+        "paragraphs": [
+          "From the 1630s Japan was effectively closed to foreigners for more than two centuries. The exception was Dejima, a small fan-shaped artificial island in Nagasaki harbour, where a Dutch trading post was permitted to operate under tight supervision. Everything Japan learned about European science, medicine and technology during that period came through this one address.",
+          "Dejima has been progressively reconstructed and is now a walk-through site of restored warehouses and residences, no longer an island since the harbour was filled in around it. It is a small place with an outsized significance, and the exhibits do a good job of conveying how strange and constrained the arrangement was for everyone involved.",
+          "The consequence is a city with a genuinely mixed inheritance: Chinese, Portuguese and Dutch influence layered into the food, the architecture and the festivals in a way that is not true of anywhere else in the country."
+        ]
+      },
+      {
+        "heading": "The Peace Park and the museum",
+        "paragraphs": [
+          "On 9 August 1945 Nagasaki became the second city to be attacked with a nuclear weapon. The hypocentre is marked by a black monolith in a quiet park, with the Peace Park and its statue on the hill above and the Atomic Bomb Museum nearby.",
+          "The museum is smaller than Hiroshima's and structured differently, moving from the destruction of the city into the wider history of nuclear weapons. It is direct, unsparing and not a comfortable visit, which is the intention.",
+          "The one-legged torii — a shrine gate left standing with only half its structure — and the remains of Urakami Cathedral are within walking distance. Urakami matters particularly here: this was the centre of Japanese Catholicism, and the bomb detonated almost directly above the largest Christian community in the country."
+        ]
+      },
+      {
+        "heading": "The hidden Christians",
+        "paragraphs": [
+          "Christianity arrived in Japan in the sixteenth century, took root most deeply around Nagasaki, and was then banned and violently suppressed for over two hundred years. Communities survived in secret on the surrounding islands, disguising their practice — statues of the Virgin carved to resemble Kannon, prayers preserved orally through generations without priests.",
+          "When the ban lifted in the nineteenth century, some of these communities revealed themselves at Oura Church in Nagasaki, an event that astonished the European missionaries who had assumed the faith extinguished. Oura is the oldest church in Japan and part of a UNESCO listing covering the hidden Christian sites of the region.",
+          "It is one of the more remarkable survival stories anywhere, and the sites on the Goto islands and the Shimabara peninsula are what the listing is really about, if you have the days for it."
+        ]
+      },
+      {
+        "heading": "Glover Garden and the hillside",
+        "paragraphs": [
+          "Nagasaki is built on steep slopes around a harbour, which makes it a city of staircases and views. Glover Garden, on the hill above the harbour, preserves a group of Western-style residences from the nineteenth-century merchant community, including the oldest surviving Western building in Japan.",
+          "The connection to Madama Butterfly is heavily advertised and largely invented, but the houses themselves and the view over the harbour are genuinely worth the climb — and there are escalators up the hill, which the city is sensible about.",
+          "The night view from Mount Inasa, reached by ropeway, is the other set piece. It is frequently included on lists of the best night views in the world, which is the sort of claim that invites scepticism until you see the harbour and the hills lit up from above."
+        ]
+      },
+      {
+        "heading": "Gunkanjima, if the sea allows",
+        "paragraphs": [
+          "Hashima — universally called Gunkanjima, battleship island, for its silhouette — is an abandoned coal-mining island a short boat ride offshore. It housed thousands of people in concrete apartment blocks until the mine closed in 1974, and it has been decaying since.",
+          "Tours land on a small permitted section and follow a fixed walkway. The rest is unsafe and off limits. Landings depend entirely on sea conditions and are cancelled often, so book early in your stay to leave room for a second attempt.",
+          "The island's history includes the use of forced Korean and Chinese labour during the war, which is a live matter of dispute around its UNESCO listing, and which the better tours address rather than skirt."
+        ]
+      },
+      {
+        "heading": "The food is its own cuisine",
+        "paragraphs": [
+          "Champon is the dish to eat: a thick tangle of noodles in a rich pork-and-seafood broth with cabbage, squid, pork and whatever else, developed by a Chinese restaurateur in the city for students who needed feeding cheaply. Sara udon is its crisp-noodle sibling.",
+          "Castella, the sponge cake, arrived with the Portuguese in the sixteenth century and became a Nagasaki speciality. The good versions are dense, moist and sold in wooden boxes by shops that have been making it for generations.",
+          "Shippoku is the formal expression of the city's mixture — a shared multi-course meal combining Japanese, Chinese and European dishes on one table, served at a handful of traditional restaurants and worth booking for one dinner."
+        ]
+      },
+      {
+        "heading": "Getting there and how long to stay",
+        "paragraphs": [
+          "The Nishi Kyushu Shinkansen runs to Nagasaki, though the route currently requires a transfer partway from Hakata, which is a quirk of an unfinished line rather than a hardship. Buses from Fukuoka are direct and inexpensive.",
+          "The city's trams are the best way to get around: cheap, frequent, easy to understand, and they reach almost everything a visitor wants.",
+          "Two nights is the right length. One day for the peace sites, which deserve a whole day and are emotionally heavy, and one for Dejima, the hillside and the harbour."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sendai-matsushima-guide",
+    "title": "Sendai and Matsushima: The Easiest Way Into Tohoku",
+    "excerpt": "Ninety minutes north of Tokyo by Shinkansen and almost nobody goes. A green city built around a warlord's legacy, and a bay of pine-covered islands that has been considered one of Japan's three great views for four hundred years.",
+    "category": "hidden-japan",
+    "region": "tohoku",
+    "tags": [
+      "off-the-beaten-path",
+      "nature",
+      "food"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "hirosaki-aomori-guide",
+      "shinkansen-guide",
+      "hanami-2026-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Ninety minutes, and a different country",
+        "paragraphs": [
+          "Sendai is about ninety minutes from Tokyo on the Tohoku Shinkansen — less time than many people spend commuting — and it is the gateway to a part of Japan that international itineraries almost entirely ignore. Tohoku is the northern third of Honshu: colder, emptier, more agricultural, with a stronger dialect and a slower pace.",
+          "Sendai itself is a city of about a million people, comfortably laid out, with wide tree-lined avenues that have earned it the name City of Trees. It was flattened by bombing in 1945 and rebuilt on a generous plan, which is why it feels more spacious than most Japanese cities of its size.",
+          "It is not a city of monuments. It is a good base, a good place to eat, and the point from which the rest of the region opens up."
+        ]
+      },
+      {
+        "heading": "Date Masamune, who is everywhere",
+        "paragraphs": [
+          "The city's identity is bound up with Date Masamune, the one-eyed warlord who founded it in 1600 and whose crescent-moon helmet crest appears on everything from manhole covers to beer cans.",
+          "Aoba Castle, on the hill above the centre, is mostly foundations — the buildings are long gone — but the site has his equestrian statue and a view over the city that explains why he built there. Zuihoden, his mausoleum, is the more rewarding visit: a small, intensely decorated building in the Momoyama style, brightly painted and carved, set among cedars on a hillside. It is a reconstruction, the original having burned in the war, and it is beautifully done.",
+          "The Osaki Hachimangu shrine, lacquered black and gold, is a genuine survivor from his period and a national treasure."
+        ]
+      },
+      {
+        "heading": "Matsushima Bay",
+        "paragraphs": [
+          "Matsushima is a bay scattered with a couple of hundred small pine-covered islands, traditionally counted as one of the three great views of Japan alongside Miyajima and Amanohashidate. It is about forty minutes from Sendai by local train.",
+          "The classic approach is a sightseeing boat around the islands, which takes under an hour and is the only way to see the arrangement properly. From land, the four designated viewpoints on the surrounding hills each give a different composition, and Saigyo Modoshi no Matsu park is the one worth the climb.",
+          "Zuiganji, the temple at the centre of the town, is a Zen monastery rebuilt by Date Masamune with rooms of painted screens and a cedar approach. Godaido, a tiny hall on a rocky islet reached by a short red bridge, is the image on the postcards.",
+          "The bay's islands are credited with absorbing much of the force of the 2011 tsunami; the town was damaged but far less catastrophically than the coast either side of it."
+        ]
+      },
+      {
+        "heading": "Eating in Sendai",
+        "paragraphs": [
+          "Gyutan — grilled beef tongue — is the city's dish, and it is not a novelty. It was created here after the war by a chef using an ingredient the occupying forces discarded, and it is now a proper regional cuisine with dedicated restaurants. Thick-cut, salted, grilled over charcoal and served with barley rice and oxtail soup, it is far better than a description of it suggests.",
+          "Zunda is the other speciality: young soybeans mashed into a sweet green paste, used on mochi and in shakes. It tastes like nothing else and is the standard souvenir.",
+          "Sasa kamaboko, fish cake pressed into a bamboo-leaf shape and grilled, is the third. And the oysters from Matsushima Bay in winter are among the best in the country."
+        ]
+      },
+      {
+        "heading": "The coast, and what happened in 2011",
+        "paragraphs": [
+          "The Sanriku coast north and east of Sendai was devastated by the tsunami of March 2011. Fifteen years on, the rebuilding is largely complete and the landscape is visibly different: enormous seawalls, raised ground, new towns built on higher land.",
+          "There are memorial sites along the coast, including preserved ruined buildings and museums documenting the disaster. They are not tourist attractions in the ordinary sense and the towns are living places rather than exhibits, which is worth remembering in how you go.",
+          "The Sanriku Railway, rebuilt after being largely destroyed, runs along the coast and is a straightforward way to see the region. Visiting and spending money in these towns is welcomed; treating them as a spectacle is not."
+        ]
+      },
+      {
+        "heading": "What Sendai opens up",
+        "paragraphs": [
+          "Yamadera, a temple complex of a thousand stone steps climbing a wooded cliff face, is about an hour west and is one of the most striking places in northern Japan. The poet Basho stopped here and wrote about the cicadas and the silence.",
+          "Naruko Onsen, a hot spring town famous for its lacquered wooden kokeshi dolls, is a little over an hour away. Zao, on the border with Yamagata, has the snow monsters — trees frozen into grotesque shapes by wind-driven ice — in deep winter.",
+          "And the Tohoku Shinkansen continues north to Morioka and Aomori, so Sendai works as the first stop of a longer run up the spine of the region rather than an end point."
+        ]
+      },
+      {
+        "heading": "When to go",
+        "paragraphs": [
+          "Summer for the Tanabata festival in early August, which is the largest in Japan and fills the shopping arcades with enormous paper streamers. Winter for the oysters, the snow and the illuminations. Autumn for the colour, which arrives earlier here than further south.",
+          "Tohoku's cherry blossom comes weeks after Tokyo's, which is the most useful fact about the region for anyone whose dates missed the season further south."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hirosaki-aomori-guide",
+    "title": "Aomori and Hirosaki: Late Blossom, Big Festivals, Deep Snow",
+    "excerpt": "At the top of Honshu, the cherry trees flower when Kyoto has finished, the summer festival is the loudest in Japan, and the winter snow is measured in metres. This is the region that rewards going at the wrong time of year.",
+    "category": "hidden-japan",
+    "region": "tohoku",
+    "tags": [
+      "festival",
+      "nature",
+      "off-the-beaten-path"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "sendai-matsushima-guide",
+      "hanami-2026-guide",
+      "japan-winter-travel-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The far north of the main island",
+        "paragraphs": [
+          "Aomori prefecture is the northern tip of Honshu, facing Hokkaido across a strait. It is one of the least visited parts of Japan by international travellers and one of the most distinctive: heavy snow, a strong dialect that other Japanese people struggle with, apple orchards, and a cluster of festivals that are genuinely among the country's best.",
+          "The Tohoku Shinkansen reaches Shin-Aomori in about three hours from Tokyo. Hirosaki, the more attractive of the two main towns, is about half an hour further by local train."
+        ]
+      },
+      {
+        "heading": "Hirosaki Castle and the late blossom",
+        "paragraphs": [
+          "Hirosaki has one of the twelve original castle keeps left in Japan — a small three-storey building rather than a grand one, but genuine seventeenth-century construction rather than a concrete reconstruction.",
+          "What it is really famous for is the cherry blossom. The castle park has more than two thousand trees, and by broad agreement it is one of the finest hanami sites in the country. The trees are pruned using techniques borrowed from apple cultivation, which produces unusually dense flowering.",
+          "The timing is the point. Hirosaki blooms at the end of April and into early May, weeks after Tokyo and Kyoto have finished. For anyone whose travel dates missed the blossom in the south, this is the answer, and it coincides with Golden Week, which means booking early.",
+          "The image people come for is the moat covered so thickly in fallen petals that the water is not visible — hanaikada, the flower raft. It happens at the end of the bloom, which is a good argument for arriving slightly late rather than early."
+        ]
+      },
+      {
+        "heading": "Nebuta, and the festivals of early August",
+        "paragraphs": [
+          "Nebuta Matsuri in Aomori city, in the first week of August, is one of the great festivals of Japan. Enormous illuminated paper floats depicting warriors and mythological figures are paraded through the streets at night, accompanied by drums, flutes and thousands of costumed dancers called haneto.",
+          "The dancers are the part that surprises people: anyone can join, provided you wear the correct costume, which can be rented in the city. This is not a spectator arrangement grudgingly extended to visitors — participation is the point.",
+          "The Nebuta Museum Wa Rasse by the station displays several of the full-size floats year-round with the construction techniques explained, which is the next best thing outside festival week.",
+          "Hirosaki holds its own Neputa festival at the same time, with fan-shaped floats rather than three-dimensional ones, and Goshogawara has the Tachineputa, which are enormous vertical floats over twenty metres tall. All three happen in the same week, which is the single best week of the year to be in this prefecture and the hardest one to find a room in."
+        ]
+      },
+      {
+        "heading": "Snow, in quantities that are hard to picture",
+        "paragraphs": [
+          "This region gets some of the heaviest snowfall of any inhabited place on earth. Cold air crossing the Sea of Japan picks up moisture and dumps it on the mountains of the western coast, and towns in the interior routinely deal with several metres.",
+          "Hakkoda, south of Aomori city, has a ropeway and some of the best backcountry snow in Japan, along with the frost-covered trees the region calls snow monsters. Sukayu Onsen nearby has a famous enormous mixed-bathing cedar bath and is buried for months.",
+          "Winter here is a real proposition rather than a scenic one: trains stop, roads close, and the useful skill is flexibility. It is also spectacular, and largely empty of visitors."
+        ]
+      },
+      {
+        "heading": "Jomon, and something much older",
+        "paragraphs": [
+          "The Sannai-Maruyama site outside Aomori city is the remains of a large settlement occupied for well over a thousand years during the Jomon period, from roughly five and a half thousand years ago. Reconstructed pit dwellings and an enormous six-pillared timber structure stand on the site, with a museum of what was excavated.",
+          "It is part of a UNESCO listing covering the Jomon sites of northern Japan, and it reframes the region entirely: this was a densely populated, settled, sophisticated place while much of the rest of the archipelago was not.",
+          "The Aomori Museum of Art next door holds Nara Yoshitomo's enormous Aomori-ken dog and the Shiko Munakata woodblock prints, and the two together make a full day."
+        ]
+      },
+      {
+        "heading": "Apples, scallops and the food",
+        "paragraphs": [
+          "Aomori grows the majority of Japan's apples, and the apple products — juice, pie, cider, dried fruit — are everywhere and genuinely good. The orchards around Hirosaki in blossom in May are a quieter pleasure than the castle.",
+          "Mutsu Bay scallops are the seafood speciality, along with the tuna landed at Oma at the northern tip, which fetches the highest prices at the Tokyo auctions.",
+          "Kenoshiru is the traditional dish: a vegetable soup of chopped roots and mountain vegetables, eaten in winter. Ichigoni, a sea urchin and abalone soup from the eastern coast, is the luxurious one."
+        ]
+      },
+      {
+        "heading": "How to fit it into a trip",
+        "paragraphs": [
+          "Three hours from Tokyo means this is not a day trip. Two or three nights, either as a destination in itself or as the northern end of a run up through Sendai and Morioka, is the sensible shape.",
+          "The obvious pairing is with Hokkaido: the Shinkansen continues under the strait to Hakodate, so Aomori sits naturally between Tohoku and the north island rather than at a dead end.",
+          "Go for the first week of August or the end of April if the festivals or the blossom are the draw, and accept that both require booking months out. Go in February if empty and extraordinary matters more than convenient."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ginzan-onsen-guide",
+    "title": "Ginzan Onsen: The Snow Town That Had to Start Turning People Away",
+    "excerpt": "A single street of wooden inns along a river, lit by gas lamps, buried in snow. It became too photogenic for its own good, and the town now controls who can walk down it in winter.",
+    "category": "hidden-japan",
+    "region": "tohoku",
+    "tags": [
+      "accommodation",
+      "tradition",
+      "nature"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [
+      {
+        "on": "2026-12-01",
+        "what": "Ginzan winter access scheme is revised annually; confirm dates, cap, price and booking channel before the season"
+      }
+    ],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "ryokan-first-time-guide",
+      "japanese-onsen-etiquette",
+      "japan-winter-travel-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "What it actually is",
+        "paragraphs": [
+          "Ginzan Onsen is a hot spring town in the mountains of Yamagata prefecture, built along both banks of a narrow river in a steep valley. The inns are three and four storey wooden buildings from the Taisho era, the 1910s and 1920s, with decorated plaster facades, and they face each other across the water.",
+          "The name means silver mountain: this was a silver mining settlement, and when the mine failed the hot springs kept it alive. The architecture survives because the town was too remote to be worth redeveloping.",
+          "In winter, with snow piled on the roofs and the gas lamps lit along the street at dusk, it is one of the most photographed places in Japan. That is both the appeal and the problem."
+        ]
+      },
+      {
+        "heading": "The winter restrictions, which you must plan around",
+        "paragraphs": [
+          "The town is a single narrow street with nowhere to absorb a crowd, and the volume of winter day-trippers reached a point where it was unsafe and unpleasant for everyone. The local association now controls access during the winter season.",
+          "The arrangement introduced for recent winters has run from around 20 December to the beginning of March, and works roughly like this. During the day, until late afternoon, entry is unrestricted. In the evening, when the lamps are lit and everyone wants to be there, numbers are capped and entry requires a ticket bought in advance, with a limited number of slots per hour. Later in the evening and overnight, only residents, staff and guests with a room booked are admitted.",
+          "Cars cannot drive into the town in winter. There is a park-and-ride arrangement at a car park outside, with a shuttle bus in, and the evening ticket typically includes the shuttle.",
+          "The details — the dates, the price, the number of slots, the booking channel — have been revised each year since the scheme began. Check the town's own current announcement before booking anything else, because the trip only works if this part is arranged first.",
+          "The exemption is the important part: if you are staying the night, none of this applies to you."
+        ]
+      },
+      {
+        "heading": "Which is why you should stay the night",
+        "paragraphs": [
+          "Staying overnight converts the whole experience. The day visitors leave, the street empties, the lamps come on, and the town becomes the quiet place the photographs imply rather than the crowded one they conceal.",
+          "The ryokan are small, old and mostly expensive, and they book out months ahead for winter weekends. Several have been operating for generations and one is a registered cultural property. Rooms are traditional, meals are included and served at set times, and the buildings are wooden and creak.",
+          "If the town itself is full, there are more modern places a short distance down the valley with shuttle arrangements, which is a reasonable compromise.",
+          "Book as early as you can. This is not a place to improvise."
+        ]
+      },
+      {
+        "heading": "The bathing",
+        "paragraphs": [
+          "The water is sulphurous and hot. Each inn has its own baths for guests, and there are a couple of public bathhouses on the street for day visitors, along with a free foot bath by the river that is the most sociable spot in the town.",
+          "There are also two small communal baths that can be booked privately by the hour, which is the practical solution for anyone with tattoos or travelling as a family.",
+          "The etiquette is standard onsen etiquette: wash thoroughly at the taps before entering, no swimwear, no towel in the water, tie long hair up."
+        ]
+      },
+      {
+        "heading": "Getting there",
+        "paragraphs": [
+          "The route is Yamagata Shinkansen to Oishida station, then a bus up the valley, which takes around forty minutes. The buses are timed to the trains but are not frequent, and the last one back is early — a fact that has stranded people who planned a leisurely dinner.",
+          "From Tokyo the whole journey is around four hours. From Sendai it is a couple of hours across the mountains.",
+          "In deep winter, allow for trains and buses being delayed by snow, and do not plan a tight connection onwards on the day you leave."
+        ]
+      },
+      {
+        "heading": "The rest of the year",
+        "paragraphs": [
+          "Winter is the famous season and the difficult one. The rest of the year the town is quiet, unrestricted and considerably cheaper.",
+          "The valley is green and cool in summer, and there is a walk up past the old mine workings to a waterfall behind the town that most winter visitors never see because it is under snow. Autumn colour in the valley is excellent and the crowds are a fraction of the winter numbers.",
+          "If the photograph is what you want, go in winter and stay the night. If the town is what you want, go in October."
+        ]
+      },
+      {
+        "heading": "The wider point",
+        "paragraphs": [
+          "Ginzan is a small example of something happening across Japan: places that were quiet for a century becoming globally famous through a single image, and having to invent crowd management from nothing. Several towns have introduced entry fees, caps or bans on photography in particular streets.",
+          "None of it is aimed at foreign visitors specifically, and all of it is worth checking before you travel. The pattern is now common enough that assuming a small famous place can simply be turned up at is the mistake."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "okinawa-main-island-guide",
+    "title": "Okinawa: A Different Country That Happens to Be in Japan",
+    "excerpt": "Subtropical, formerly an independent kingdom, and shaped by the worst battle of the Pacific war and eighty years of American bases since. Okinawa is the part of Japan that is least like the rest of it.",
+    "category": "hidden-japan",
+    "region": "okinawa",
+    "tags": [
+      "nature",
+      "tradition",
+      "off-the-beaten-path"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [
+      {
+        "on": "2026-11-01",
+        "what": "Shuri Castle main hall is due to reopen; rewrite the 'watching it being rebuilt' framing once it has"
+      }
+    ],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "yaeyama-islands-guide",
+      "okinawan-food-guide",
+      "japan-airport-transfers"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "It was not Japan, and it still does not feel like it",
+        "paragraphs": [
+          "For roughly four and a half centuries the Ryukyu Islands were an independent kingdom, trading between Japan, China and south-east Asia and taking influence from all of them. It was annexed by Japan in 1879, the language suppressed and the culture discouraged.",
+          "What survives is genuinely distinct: a different musical tradition built around the sanshin, a three-stringed instrument covered in snakeskin; different architecture with red tiles and stone lion figures on the roofs; different food; different textiles; and a set of Ryukyuan languages, related to Japanese but not mutually intelligible, now endangered.",
+          "The climate is subtropical rather than temperate. Winter is mild enough for a jacket rather than a coat, summer is hot and humid with a serious typhoon season, and the sea is a colour that people who have only seen Honshu do not associate with Japan."
+        ]
+      },
+      {
+        "heading": "Shuri Castle, and watching it being rebuilt",
+        "paragraphs": [
+          "Shuri Castle above Naha was the seat of the Ryukyuan kings. It was destroyed in the 1945 battle, reconstructed over decades, and then burned down again in October 2019 — a fire that was watched live on television across Japan and felt as a genuine loss.",
+          "It is being rebuilt again, and the reconstruction has been deliberately made visible: rather than hiding the work behind hoardings, the site has been arranged so that visitors can watch the carpenters and lacquer workers from walkways and through glass panels. The exterior of the main hall was completed during 2025, and the hall is scheduled to reopen to the public in late 2026, with the full project running into 2027.",
+          "This means the thing you see depends on exactly when you go, and it is worth checking the current state before visiting. It also means that right now you can watch traditional timber and lacquer techniques being practised at full scale, which will not be possible again.",
+          "The surrounding gates, walls and grounds are open, and the Shureimon gate is intact."
+        ]
+      },
+      {
+        "heading": "The battle, and the bases",
+        "paragraphs": [
+          "The Battle of Okinawa in 1945 lasted almost three months and killed something in the region of a quarter of the island's civilian population. Almost nothing standing survived it. This is the fact underneath everything else on the island.",
+          "The Peace Memorial Park at the southern tip, where the fighting ended, has a museum and the Cornerstone of Peace: a set of stone walls carved with the names of everyone who died in the battle, regardless of nationality or which side they were on. It is a quiet, exposed, coastal place and it is the most affecting site on the island.",
+          "The Former Japanese Navy Underground Headquarters, a tunnel complex cut into a hill near Naha, is preserved and open, and is a hard visit.",
+          "Okinawa hosts a large proportion of the American military presence in Japan on a small fraction of its land, which remains a source of local political friction that visitors will see referenced. Understanding that this is a live issue rather than history is part of understanding the place."
+        ]
+      },
+      {
+        "heading": "Naha, and getting around",
+        "paragraphs": [
+          "Naha is the capital and the arrival point. Kokusai-dori, the main street, is a kilometre of souvenir shops and restaurants and is worth one walk; the covered market streets running off it, particularly Makishi Public Market, are more interesting.",
+          "Tsuboya is the pottery district, where Ryukyuan ceramics — heavy, bold-glazed, often with fish or floral motifs — have been made for three centuries. The kilns and shops are walkable and the pieces are among the best souvenirs in Japan.",
+          "The monorail runs from the airport through the city to Shuri and is easy. Beyond that, the island has no railway at all. Buses exist and are slow. To see the island properly you need a rental car, and that is the single most important logistical fact about Okinawa.",
+          "An international driving permit is required, and it must be obtained before leaving home."
+        ]
+      },
+      {
+        "heading": "North of the city",
+        "paragraphs": [
+          "The Churaumi Aquarium on the Motobu peninsula is one of the largest in the world and the main draw for domestic tourists. Its central tank holds whale sharks and manta rays and is genuinely impressive. It is around two hours from Naha by car.",
+          "The northern third of the island, Yambaru, is subtropical forest and a national park, with an endemic flightless bird and a great deal of biodiversity found nowhere else. It is UNESCO listed and it is quiet.",
+          "Cape Manzamo, Kouri island with its bridge, and the beaches along the west coast are the standard route. The east coast is emptier.",
+          "Nakagusuku and Zakimi castle ruins — gusuku, the Ryukyuan fortress form built in dry-stone curves rather than Japanese straight lines — are part of the same UNESCO listing as Shuri and are more atmospheric for being ruins."
+        ]
+      },
+      {
+        "heading": "The food and the drink",
+        "paragraphs": [
+          "Okinawan food is its own cuisine. Goya champuru, the stir-fry of bitter melon with tofu, egg and pork, is the signature. Rafute is pork belly slow-cooked in awamori and brown sugar. Okinawa soba is neither soba nor ramen but its own wheat noodle in a light pork broth, usually with a piece of stewed rib on top.",
+          "Pork is used comprehensively, including the ears and the face, which is a Chinese inheritance. Sea grapes — umibudo, a seaweed with small bubbles that pop — are the local delicacy and unlike anything else.",
+          "Awamori is the distilled spirit, made from long-grain Thai rice with black koji, and aged versions are called kusu. It is stronger than shochu and traditionally drunk with water and ice.",
+          "The American presence left a distinct layer too: taco rice, canned pork in everything, and A&W root beer."
+        ]
+      },
+      {
+        "heading": "When to go",
+        "paragraphs": [
+          "Spring and late autumn are the best conditions. Summer is very hot and is typhoon season, which can genuinely strip days out of a trip, and August is peak domestic holiday.",
+          "Winter is mild and quiet, and while it is too cool for comfortable swimming for most people, everything else is open and cheap. Whale watching runs in the winter months.",
+          "The rainy season arrives earlier here than on the main islands, generally through May and into June."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yaeyama-islands-guide",
+    "title": "The Yaeyama Islands: Closer to Taiwan Than to Tokyo",
+    "excerpt": "Four hundred kilometres beyond Okinawa's main island lies a group where the jungle reaches the water, the villages have coral walls and sand streets, and the night sky is the darkest in Japan.",
+    "category": "hidden-japan",
+    "region": "okinawa",
+    "tags": [
+      "nature",
+      "off-the-beaten-path",
+      "luxury"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "okinawa-main-island-guide",
+      "okinawan-food-guide",
+      "japan-airport-transfers"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Where this actually is",
+        "paragraphs": [
+          "The Yaeyama Islands sit at the far south-western end of the Japanese archipelago, several hundred kilometres past Okinawa's main island and considerably closer to Taiwan than to any Japanese city. Yonaguni, the westernmost, is about a hundred kilometres from the Taiwanese coast.",
+          "Getting there means flying to Ishigaki, either direct from Tokyo and Osaka or connecting through Naha. From Ishigaki, a network of fast ferries reaches the other islands, most in under an hour.",
+          "This is a genuine journey rather than a side trip, and the reward for it is a part of Japan that looks and feels nothing like the rest of the country."
+        ]
+      },
+      {
+        "heading": "Ishigaki, the base",
+        "paragraphs": [
+          "Ishigaki is the largest island and the transport hub, with the airport, the ferry terminal, the hotels and the restaurants. It has good beaches, a mountain in the north, and Kabira Bay — a bay of white sand and improbably coloured water where swimming is prohibited because of the currents and the pearl cultivation, so it is admired from the shore and by glass-bottomed boat.",
+          "The town has a proper night scene of izakaya serving Ishigaki beef, which is a wagyu of serious quality, and the local seafood. The public market is small and good.",
+          "Most visitors base here and day-trip outward by ferry, which is the sensible arrangement unless you want to stay on the quieter islands."
+        ]
+      },
+      {
+        "heading": "Taketomi, and the village that has not changed",
+        "paragraphs": [
+          "Taketomi is a small flat island ten minutes by ferry from Ishigaki, and its single village is the reason to go: single-storey houses with red tiled roofs, low coral stone walls, and streets of white sand that residents rake every morning. Shisa lion figures sit on every roof.",
+          "It is a preserved district and the preservation is real rather than staged — people live there under a community agreement about how buildings are maintained. Water buffalo carts carry visitors through the lanes while a driver plays the sanshin, which sounds like a tourist confection and is oddly affecting.",
+          "The island can be walked or cycled in a couple of hours. The great majority of visitors come on a day trip and leave in the afternoon, so staying the night in one of the small guesthouses gives you an empty village, and a sky with no light pollution at all."
+        ]
+      },
+      {
+        "heading": "Iriomote, which is mostly jungle",
+        "paragraphs": [
+          "Iriomote is the second largest island in Okinawa prefecture and roughly ninety per cent of it is subtropical rainforest and mangrove. There is one road, running partway round the coast, and no way across the interior except on foot or by river.",
+          "The activities are kayaking up the mangrove rivers, walking to the waterfalls at Pinaisara and Mariyudu, and boat trips up the Urauchi river. Guides are compulsory for some routes and strongly advisable for the rest; the interior is genuinely wild and people do get lost in it.",
+          "The island has its own wildcat, the Iriomote yamaneko, of which perhaps a hundred remain. You will not see one. Road signs everywhere ask drivers to slow down for them, and the whole island is a UNESCO natural World Heritage site.",
+          "Hoshizuna beach — star sand, made of the shells of tiny foraminifera shaped like stars — is on the northern coast."
+        ]
+      },
+      {
+        "heading": "The smaller ones",
+        "paragraphs": [
+          "Kohama is small, hilly and has a famous view along a track through sugar cane fields. Kuroshima is flat, shaped like a heart, and has roughly ten times as many cattle as people. Hateruma is the southernmost inhabited point in Japan and has a monument saying so, along with some of the clearest night skies anywhere in the country.",
+          "Yonaguni, the westernmost, is known for hammerhead shark diving in winter and for an underwater rock formation that some believe is a man-made monument and geologists generally do not. It has its own small horses and a view of Taiwan on exceptionally clear days.",
+          "Ferries to the outer islands are weather-dependent and can be cancelled for days at a time, which is the risk of building a tight itinerary out here."
+        ]
+      },
+      {
+        "heading": "Diving, and the sea",
+        "paragraphs": [
+          "The Yaeyamas have the best diving and snorkelling in Japan by a wide margin. Manta rays gather at Kabira Ishizaki off Ishigaki, most reliably in the warmer months. The coral around Iriomote and the Sekisei lagoon between the islands is the largest reef in the country.",
+          "The reef has suffered significant bleaching in recent years, which is worth knowing before you arrive with expectations set by older photographs.",
+          "Habu jellyfish are present in summer and beaches with nets mark the safe areas. Take the warnings seriously."
+        ]
+      },
+      {
+        "heading": "Practicalities",
+        "paragraphs": [
+          "Book flights and accommodation well ahead for summer and for Japanese holiday periods; supply on the small islands is genuinely limited.",
+          "Rent a car on Ishigaki. Public transport exists but is thin, and on Iriomote it barely functions.",
+          "Typhoon season runs through late summer and early autumn and can close the airport and cancel every ferry, so leave slack at the end of a trip that has a connecting flight to catch.",
+          "And take cash. Card acceptance on the smaller islands is patchy and there are few ATMs."
+        ]
+      },
+      {
+        "heading": "How long it takes",
+        "paragraphs": [
+          "Four nights is the realistic minimum for Ishigaki plus two other islands, and a week is better. Anyone treating this as a two-night add-on to a Tokyo trip will spend most of it travelling.",
+          "It is the furthest corner of the country, it takes effort to reach, and it is the part of Japan that least resembles the idea most visitors arrive with."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "okinawan-food-guide",
+    "title": "Okinawan Food: Pork, Bitter Melon and the Longevity Myth",
+    "excerpt": "Not Japanese food as you know it. Chinese technique, south-east Asian ingredients, American canned pork, and a set of dishes built around a bitter gourd most first-timers approach with suspicion.",
+    "category": "eat-drink",
+    "region": "okinawa",
+    "tags": [
+      "food",
+      "tradition",
+      "off-the-beaten-path"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "okinawa-main-island-guide",
+      "yaeyama-islands-guide",
+      "japanese-menu-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Why it is so different",
+        "paragraphs": [
+          "Okinawan cooking descends from the Ryukyu Kingdom's position as a trading state between China, Japan and south-east Asia, not from mainland Japanese cuisine. The techniques lean Chinese — stir-frying, long braises, the comprehensive use of pork. The ingredients are subtropical. The seasoning is lighter on soy and dashi than mainland cooking and heavier on pork stock, salt and awamori.",
+          "Then the twentieth century added another layer. The American administration that ran Okinawa until 1972 left canned pork, root beer, taco seasoning and a durable fondness for all of them.",
+          "The result genuinely surprises people who arrive expecting a regional variation on the food they had in Tokyo."
+        ]
+      },
+      {
+        "heading": "Goya champuru, and the bitter melon problem",
+        "paragraphs": [
+          "Champuru means mixed, and it describes a family of stir-fries combining tofu, egg, some vegetable and usually pork. Goya champuru, made with bitter melon, is the emblematic dish of the islands.",
+          "Goya is genuinely bitter — not subtly, not as a background note. Salting the sliced gourd and rinsing it reduces it, and the egg and tofu soften it, but it remains the point of the dish rather than an obstacle to it. Most visitors dislike it initially and a good proportion come round within a few days.",
+          "Other champuru use papaya, bean sprouts or the local tofu, which is firmer and denser than mainland tofu and is sold warm from the maker in the morning."
+        ]
+      },
+      {
+        "heading": "Pork, used completely",
+        "paragraphs": [
+          "There is a saying that Okinawans eat every part of the pig except its squeal, and it is close to accurate. Ears are sliced thin into salads. Face and trotters are braised. Offal goes into soup.",
+          "Rafute is the dish to try first: belly pork simmered slowly in awamori, soy and brown sugar until it collapses. It is close to kakuni but sweeter and more aromatic from the spirit.",
+          "Soki is stewed rib, most often seen on top of noodles. And then there is spam, which arrived with the American military and became genuinely embedded — spam onigiri wrapped with a folded omelette is sold in every convenience store on the islands and is unironically good."
+        ]
+      },
+      {
+        "heading": "Okinawa soba, which is neither",
+        "paragraphs": [
+          "Okinawa soba contains no buckwheat and is not soba in the mainland sense. The noodles are wheat, thick, slightly chewy and closer to udon; the broth is light, pork and bonito based; the toppings are stewed rib or belly, pickled ginger, spring onion and a little fish cake.",
+          "Regional versions differ. Soki soba has the rib. Yaeyama soba on the southern islands uses rounder, finer noodles. Miyako soba hides the meat under the noodles, for reasons that are explained differently depending on who you ask.",
+          "It is the everyday meal here, sold in small shops that often close when the day's stock runs out. Koregusu — chilli peppers steeped in awamori — sits on every table as the standard condiment and should be added a drop at a time."
+        ]
+      },
+      {
+        "heading": "The sea, and the vegetables",
+        "paragraphs": [
+          "Umibudo, sea grapes, are a seaweed of tiny translucent spheres on a stem that burst with a mild salinity. They are served raw with a dipping sauce and are the single most distinctive thing on an Okinawan table.",
+          "Mozuku, another seaweed, comes in vinegar as a small starter. Irabu-jiru, sea snake soup, exists and is a traditional delicacy that most visitors will hear about rather than eat.",
+          "Beni-imo, the purple sweet potato, is everywhere in both savoury and sweet form and is the basis of the standard souvenir tart. Shikuwasa, a small sour citrus, goes into juice, ponzu and cocktails."
+        ]
+      },
+      {
+        "heading": "Awamori",
+        "paragraphs": [
+          "Awamori is Okinawa's distilled spirit and it predates shochu. It is made from long-grain Thai rice using black koji, distilled once, and traditionally aged in clay pots. Aged for three years or more it is called kusu, and the good ones are remarkable — rounder and more complex than the young spirit.",
+          "It is stronger than shochu, commonly around thirty per cent and sometimes far more. It is normally drunk with water and ice, in roughly equal parts, which is not dilution but the standard serve.",
+          "Habushu, awamori with a pit viper in the bottle, is real and is sold as a curiosity. It is not what anyone drinks."
+        ]
+      },
+      {
+        "heading": "The longevity story, honestly",
+        "paragraphs": [
+          "Okinawa became famous as a place with an exceptional number of centenarians, and the traditional diet — heavy in sweet potato and vegetables, light in rice, with pork eaten on occasions rather than daily — is a plausible part of that.",
+          "The complication is that this advantage has been eroding for decades. The post-war shift towards imported and processed food hit Okinawa harder and earlier than the rest of Japan, and younger generations no longer show the same outcomes.",
+          "So the food is worth eating because it is good and unlike anything else in Japan. The health claims attached to it in the wider world describe a diet that the islands themselves have largely stopped eating."
+        ]
+      },
+      {
+        "heading": "Where to eat it",
+        "paragraphs": [
+          "Public markets are the best entry point — Makishi in Naha has stalls downstairs and restaurants above that will cook what you buy. Small neighbourhood shokudo serve champuru and soba at low prices and close early.",
+          "Izakaya in Naha and Ishigaki serve the full range with awamori and often live sanshin music. And for the American layer, the diners around the base towns serve taco rice and steak in a setting that is a preserved piece of the 1960s."
         ]
       }
     ]
