@@ -71,6 +71,16 @@ foreach ($tag in $tagList) {
     }
 }
 
+# Region pages and the region hub
+$minRegionFeed = if ($config.minRegionArticles) { [int]$config.minRegionArticles } else { 1 }
+$sm.Add("  <url><loc>$siteUrl/regions.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
+foreach ($r in $config.regions) {
+    $n = @($articles | Where-Object { $_.region -eq $r.slug }).Count
+    if ($n -ge $minRegionFeed) {
+        $sm.Add("  <url><loc>$siteUrl/regions/$($r.slug).html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>")
+    }
+}
+
 # Static pages
 foreach ($p in @('about.html','contact.html','newsletter.html','affiliate.html','privacy.html','terms.html')) {
     $sm.Add("  <url><loc>$siteUrl/$p</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>")

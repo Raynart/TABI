@@ -74,6 +74,14 @@ foreach ($c in $config.categories) {
     if (-not $c.kanji) { $dataErrors.Add("site.config.json: category '$($c.slug)' has no kanji for its homepage section") }
 }
 
+$validRegions = @($config.regions | ForEach-Object { $_.slug })
+foreach ($a in $articles) {
+    # An empty region means the article is nationwide, which is the common case.
+    if ($a.region -and ($validRegions -notcontains $a.region)) {
+        $dataErrors.Add("$($a.id): unknown region '$($a.region)'")
+    }
+}
+
 if ($dataErrors.Count -gt 0) {
     $dataErrors | ForEach-Object { Write-Host "  DATA ERROR: $_" -ForegroundColor Red }
     throw "articles.json failed validation ($($dataErrors.Count) problem(s)). Fix articles.json or site.config.json and re-run."
@@ -424,6 +432,10 @@ function Get-Header {
         $active = if ($cat.slug -eq $activeCat) { ' class="active"' } else { '' }
         $navItems += "<li><a href=""categories/$($cat.slug).html""$active>$($cat.nav)</a></li>"
     }
+    # The second axis. Nine regions will not fit in the header, so the nav holds a
+    # single entry and regions.html is the hub behind it.
+    $regionActive = if ($activeCat -eq 'regions') { ' class="active"' } else { '' }
+    $navItems += "<li><a href=""regions.html""$regionActive>Regions</a></li>"
     return @"
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -483,6 +495,17 @@ function Get-Footer {
         $catLinks += "<li><a href=""categories/$($cat.slug).html"">$($cat.label)</a></li>"
     }
 
+    # Only regions that actually have a page; the rest live on the hub.
+    $minRegionFooter = if ($config.minRegionArticles) { [int]$config.minRegionArticles } else { 1 }
+    $regionLinks = ''
+    foreach ($r in $config.regions) {
+        $n = @($articles | Where-Object { $_.region -eq $r.slug }).Count
+        if ($n -ge $minRegionFooter) {
+            $regionLinks += "<li><a href=""regions/$($r.slug).html"">$($r.label)</a></li>"
+        }
+    }
+    $regionLinks += '<li><a href="regions.html">All regions</a></li>'
+
     # Only ask for cookie consent when there is actually something to consent to.
     # With no analytics ID configured the site sets no cookies at all, so the
     # banner was asking permission for something that never happened.
@@ -517,6 +540,10 @@ function Get-Footer {
     <div>
       <p class="footer-col-title">Explore</p>
       <ul class="footer-links">$catLinks</ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Regions</p>
+      <ul class="footer-links">$regionLinks</ul>
     </div>
     <div>
       <p class="footer-col-title">About</p>
@@ -1087,6 +1114,107 @@ foreach ($tag in $allTags) {
     Write-ListingPages $tagArticles "tags/$tag" "#$tag" "Articles tagged $tag on $siteName." '' '' 12 $isThin | Out-Null
 }
 Write-Host "Generated $($allTags.Count) tag pages ($($thinTags.Count) noindex: $($thinTags -join ', '))"
+
+# ===== REGION PAGES =====
+# The second navigation axis. Topic answers "what do I need to know"; region
+# answers "where am I going". Only articles whose title or excerpt is actually
+# about a place carry a region -- roughly two thirds of the site is nationwide
+# advice that belongs to neither.
+Write-Host "Generating region pages..."
+$regionDir = Join-Path $root 'regions'
+if (-not (Test-Path $regionDir)) { New-Item -ItemType Directory $regionDir | Out-Null }
+
+$minRegion = if ($config.minRegionArticles) { [int]$config.minRegionArticles } else { 1 }
+$regionCounts = @{}
+$validRegionFiles = @()
+foreach ($r in $config.regions) {
+    $n = @($articles | Where-Object { $_.region -eq $r.slug }).Count
+    $regionCounts[$r.slug] = $n
+    if ($n -ge $minRegion) {
+        $pages = [Math]::Max(1, [Math]::Ceiling($n / 12.0))
+        for ($i = 1; $i -le $pages; $i++) {
+            $validRegionFiles += if ($i -eq 1) { "$($r.slug).html" } else { "$($r.slug)-$i.html" }
+        }
+    }
+}
+Get-ChildItem $regionDir -Filter *.html | Where-Object { $validRegionFiles -notcontains $_.Name } | ForEach-Object {
+    Remove-Item -LiteralPath $_.FullName
+}
+
+$builtRegions = @()
+$thinRegions  = @()
+foreach ($r in $config.regions) {
+    $n = $regionCounts[$r.slug]
+    # A region with nothing in it is not a page, it is a promise. Those are shown
+    # on the hub as "no guides yet" and appear here as soon as one is written.
+    if ($n -lt $minRegion) { continue }
+    $regionArticles = @($articles | Where-Object { $_.region -eq $r.slug } | Sort-Object { Get-EffectiveDate $_ } -Descending)
+    # Same reasoning as thin tags: usable and linked, but kept out of the index
+    # until there is enough there to be worth landing on.
+    $isThin = $n -lt $thinTagThreshold
+    if ($isThin) { $thinRegions += $r.slug }
+    $prefText = if ($r.prefectures) { " Covering $($r.prefectures -join ', ')." } else { '' }
+    Write-ListingPages $regionArticles "regions/$($r.slug)" $r.label `
+        "Guides to $($r.label), Japan, on $siteName.$prefText" $r.kanji '' 12 $isThin | Out-Null
+    $builtRegions += $r.slug
+}
+Write-Host "Generated $($builtRegions.Count) region pages ($($thinRegions.Count) noindex: $($thinRegions -join ', '))"
+
+# ===== REGIONS HUB =====
+# Lists every region, including the ones with nothing in them yet, so the gaps in
+# coverage are visible rather than quietly hidden.
+$hubCanonical = "$siteUrl/regions.html"
+$hubItems = ''
+$hubPos = 1
+foreach ($r in $config.regions) {
+    if ($regionCounts[$r.slug] -lt $minRegion) { continue }
+    if ($hubItems) { $hubItems += ',' }
+    $hubItems += "{""@type"":""ListItem"",""position"":$hubPos,""url"":""$siteUrl/regions/$($r.slug).html"",""name"":""$(Escape-Json $r.label)""}"
+    $hubPos++
+}
+$hubSchema = "{""@context"":""https://schema.org"",""@type"":""CollectionPage"",""name"":""Japan by Region"",""url"":""$hubCanonical"",""mainEntity"":{""@type"":""ItemList"",""itemListElement"":[$hubItems]}}"
+$hubCrumb  = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""Regions"",""item"":""$hubCanonical""}]}"
+$hubHead = Get-Head "Japan by Region &mdash; $siteName" "Browse $siteName by region, from Hokkaido to Okinawa &mdash; and see which parts of Japan we have covered so far." '' $hubCanonical 'website' "$hubSchema`n$hubCrumb"
+
+$lines = [System.Collections.Generic.List[string]]::new()
+$lines.Add($hubHead)
+$lines.Add('<body>')
+$lines.Add('<div class="progress-bar" aria-hidden="true"></div>')
+$lines.Add((Get-TopBar))
+$lines.Add((Get-Header))
+$lines.Add('<main id="main">')
+$lines.Add('<nav class="breadcrumb" aria-label="Breadcrumb" style="padding:0 var(--pad-x);max-width:var(--max-w);margin:1.5rem auto 0;"><a href="index.html">Home</a><span class="breadcrumb-sep" aria-hidden="true">&#8250;</span><span class="breadcrumb-current">Regions</span></nav>')
+$lines.Add('<div class="section-label">')
+$lines.Add('  <span class="section-label-jp" aria-hidden="true">&#22320;&#22495;</span>')
+$lines.Add('  <h1 class="section-label-en">Japan by Region</h1>')
+$lines.Add('  <div class="section-label-line"></div>')
+$lines.Add('</div>')
+$lines.Add('<ul class="region-grid">')
+foreach ($r in $config.regions) {
+    $n = $regionCounts[$r.slug]
+    $prefs = [System.Net.WebUtility]::HtmlEncode(($r.prefectures -join ' &middot; ')) -replace '&amp;middot;', '&middot;'
+    if ($n -ge $minRegion) {
+        $count = if ($n -eq 1) { '1 guide' } else { "$n guides" }
+        $lines.Add("  <li class=""region-card""><a href=""regions/$($r.slug).html"">")
+        $lines.Add("    <span class=""region-kanji"" aria-hidden=""true"">$($r.kanji)</span>")
+        $lines.Add("    <span class=""region-name"">$([System.Net.WebUtility]::HtmlEncode($r.label))</span>")
+        $lines.Add("    <span class=""region-count"">$count</span>")
+        $lines.Add("    <span class=""region-prefs"">$prefs</span>")
+        $lines.Add('  </a></li>')
+    } else {
+        $lines.Add("  <li class=""region-card region-card--empty"">")
+        $lines.Add("    <span class=""region-kanji"" aria-hidden=""true"">$($r.kanji)</span>")
+        $lines.Add("    <span class=""region-name"">$([System.Net.WebUtility]::HtmlEncode($r.label))</span>")
+        $lines.Add('    <span class="region-count">No guides yet</span>')
+        $lines.Add("    <span class=""region-prefs"">$prefs</span>")
+        $lines.Add('  </li>')
+    }
+}
+$lines.Add('</ul>')
+$lines.Add('</main>')
+$lines.Add((Get-Footer))
+[System.IO.File]::WriteAllText((Join-Path $root 'regions.html'), ($lines -join "`n"), (New-Object System.Text.UTF8Encoding($false)))
+Write-Host "  Generated regions.html"
 
 # ===== 404.html =====
 $headHtml = Get-Head "Page Not Found &mdash; $siteName" "The page you are looking for could not be found." '' "$siteUrl/404.html" 'website' '' '' $true

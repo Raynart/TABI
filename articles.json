@@ -4,6 +4,7 @@
     "title": "How to Use Chopsticks in Japan — and What Never to Do",
     "excerpt": "Using chopsticks correctly in Japan is less about technique and more about knowing the four things that are genuinely offensive. The technique is optional. The four things are not.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "food",
@@ -103,6 +104,7 @@
     "title": "The Rules of Gift Giving in Japan: What to Give, How to Give It, When Not To",
     "excerpt": "Gift giving in Japan is governed by a set of conventions that are invisible until you get them wrong. Here is what they are.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "tradition",
@@ -194,6 +196,7 @@
     "title": "Tattoos and Onsen in Japan: What the Policy Actually Is",
     "excerpt": "Most onsen ban tattoos. Fewer than you'd think actually enforce it. Here is how to navigate it honestly.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "tradition",
@@ -270,6 +273,7 @@
     "title": "Meishi: The Japanese Business Card Ritual and Why It Matters",
     "excerpt": "In Japan, the business card is not a piece of paper. It is a physical representation of the person. Treating it as stationary is the fastest way to start a professional relationship poorly.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "tradition",
@@ -368,6 +372,7 @@
     "title": "How to Order and Drink Sake in Japan Without Getting It Wrong",
     "excerpt": "Sake is Japan's most misunderstood drink. Most people drink it too warm, in the wrong glass, with the wrong food. This is how to do it correctly.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "food",
       "tradition",
@@ -451,6 +456,7 @@
     "title": "The Japanese Breakfast: What It Is and Why It Will Change Your Morning",
     "excerpt": "A traditional Japanese breakfast is not a quick meal. It is a composed sequence of small things done well, and eating it once will make every hotel breakfast you eat for the rest of your life feel like a concession.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "food",
       "first-time",
@@ -535,6 +541,7 @@
     "title": "The Best Time to Visit Japan: An Honest Month-by-Month Guide",
     "excerpt": "Spring cherry blossoms and autumn foliage are spectacular. They are also the two most crowded periods of the year. Here is what every month actually offers.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "first-time",
       "nature",
@@ -632,6 +639,7 @@
     "title": "Taking a Taxi in Japan: What to Know Before You Get In",
     "excerpt": "Japanese taxis are expensive, exceptionally clean, and almost entirely driven by people who know exactly where they are going. The main things to know are not about navigation.",
     "category": "getting-around",
+    "region": "",
     "tags": [
       "first-time",
       "transport",
@@ -721,6 +729,7 @@
     "title": "Matsumoto: The Castle Town That Gets Everything Right",
     "excerpt": "Two and a half hours from Tokyo, a city with one of Japan's three great original castles, a mountain backdrop, an excellent food scene, and a fraction of Kyoto's visitor numbers. There is no explanation for why more people don't come here.",
     "category": "hidden-japan",
+    "region": "chubu",
     "tags": [
       "off-the-beaten-path",
       "nature",
@@ -808,6 +817,7 @@
     "title": "Kyoto in Three Days: What to Actually See and What to Skip",
     "excerpt": "Kyoto has over 1,600 temples and shrines. You will not see them all. Here is how to choose the ones that matter — and what makes them worth choosing over the others.",
     "category": "getting-around",
+    "region": "kinki",
     "tags": [
       "kyoto",
       "first-time",
@@ -895,6 +905,7 @@
     "title": "The Unwritten Rules of Japanese Trains — Read This Before You Board",
     "excerpt": "Japan’s trains run on time to the minute and operate on a set of social rules that nobody posts on a sign. Here’s what they are.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "transport",
@@ -995,6 +1006,7 @@
     "title": "How to Visit a Japanese Temple or Shrine Without Being Accidentally Rude",
     "excerpt": "Temples and shrines have different rules, different purposes, and different gods. Getting them confused is the starting mistake. Everything else follows from there.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "tradition",
@@ -1087,6 +1099,7 @@
     "title": "Why You Should Never Tip in Japan — and What to Do Instead",
     "excerpt": "In Japan, the service is built into the price. Adding a tip doesn’t reward the server — it creates an awkward situation for both of you.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "tradition",
@@ -1171,6 +1184,7 @@
     "title": "When to Take Your Shoes Off in Japan: The Complete Guide",
     "excerpt": "The shoe rule in Japan is not arbitrary. It reflects a clear line between outside space and inside space that structures daily life. Here is where that line is drawn.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "accommodation",
@@ -1254,6 +1268,7 @@
     "title": "How to Behave in Public in Japan: The Unwritten Rules",
     "excerpt": "Japanese public spaces operate on a set of unspoken rules that make them exceptionally pleasant. Most visitors don’t know them. All of them are learnable in ten minutes.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "tradition",
@@ -1353,6 +1368,7 @@
     "title": "Japan Still Runs on Cash — Here’s How Much to Bring and Where to Get It",
     "excerpt": "Cards are increasingly accepted in Japan, but ‘increasingly’ is not the same as ‘reliably.’ Plan for cash and treat the card acceptance as a bonus.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "first-time",
       "budget",
@@ -1444,6 +1460,7 @@
     "title": "SIM Card vs Pocket Wi-Fi in Japan: What Nobody Tells You Before You Choose",
     "excerpt": "Both work. One is significantly more convenient. The answer has changed in the last three years and most travel articles haven’t caught up.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "first-time",
       "practical",
@@ -1532,6 +1549,7 @@
     "title": "The Only Japanese Phrases You Actually Need",
     "excerpt": "Japanese is difficult. A handful of phrases isn’t. The ten expressions below will handle the majority of situations a visitor encounters, and they take about 20 minutes to learn.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "first-time",
       "language",
@@ -1640,6 +1658,7 @@
     "title": "The Tokyo Subway: How to Navigate It Without Getting Lost",
     "excerpt": "Tokyo’s train network is the most complex urban rail system in the world. It is also, once you understand the basics, extremely easy to use.",
     "category": "getting-around",
+    "region": "kanto",
     "tags": [
       "first-time",
       "transport",
@@ -1723,6 +1742,7 @@
     "title": "What You Can and Cannot Photograph in Japan",
     "excerpt": "Japan is exceptionally photogenic. It also has specific places and situations where photography is restricted, disrespectful, or now actively prohibited. Knowing the difference matters.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "first-time",
       "tradition",
@@ -1819,6 +1839,7 @@
     "title": "Your First Ryokan: What to Expect, What to Do, and What Not to Wear",
     "excerpt": "A traditional Japanese inn is not a hotel. The sooner you accept that, the better the stay.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "accommodation",
       "luxury",
@@ -1917,6 +1938,7 @@
     "title": "Why January Is the Best Month to Visit Japan (Yes, Really)",
     "excerpt": "No cherry blossoms. No 38-degree humidity. No crowds. January is when Japan stops performing for tourists and just exists.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "first-time",
       "budget",
@@ -2007,6 +2029,7 @@
     "title": "The Convenience Store Is Japan's Greatest Culinary Achievement",
     "excerpt": "Seven-Eleven in Japan is not Seven-Eleven anywhere else. This distinction matters and deserves your full attention.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "food",
       "budget",
@@ -2091,6 +2114,7 @@
     "title": "Tokyo's Kissaten: The Coffee Shops That Refuse to Change",
     "excerpt": "Somewhere between the third-wave cafés and the chain stores, Tokyo's old coffee shops have been quietly waiting.",
     "category": "eat-drink",
+    "region": "kanto",
     "tags": [
       "tokyo",
       "tradition",
@@ -2182,6 +2206,7 @@
     "title": "Kanazawa: The City Most Japan Itineraries Skip — and Shouldn't",
     "excerpt": "Three hours from Tokyo by bullet train. A fraction of Kyoto's crowds. Arguably better seafood. There is no good reason it's on so few itineraries.",
     "category": "hidden-japan",
+    "region": "chubu",
     "tags": [
       "off-the-beaten-path",
       "food",
@@ -2271,6 +2296,7 @@
     "title": "Tsukiji Outer Market: Where to Actually Eat (and What to Skip)",
     "excerpt": "The inner market moved to Toyosu in 2018. The outer market never moved and never needed to.",
     "category": "eat-drink",
+    "region": "kanto",
     "tags": [
       "food",
       "tokyo",
@@ -2355,6 +2381,7 @@
     "title": "How to Eat at an Izakaya Without Looking Completely Lost",
     "excerpt": "The curtain over the door. The laminated menu with pictures on maybe two pages. The small charge you didn't order. You'll be fine.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "food",
       "first-time",
@@ -2446,6 +2473,7 @@
     "title": "The IC Card Is the Best Thing in Japan. Here's How to Actually Use It.",
     "excerpt": "You can survive Tokyo's train network without one. You just won't want to.",
     "category": "getting-around",
+    "region": "kanto",
     "tags": [
       "transport",
       "first-time",
@@ -2528,6 +2556,7 @@
     "title": "Japanese Whisky: What's Worth Buying and What's Just Marketing",
     "excerpt": "The golden age is over but the whisky is still exceptional. You just need to know what you're actually looking at.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "shopping",
       "affiliate"
@@ -2609,6 +2638,7 @@
     "title": "Naoshima Is Japan's Art Island — and Nobody Tells You How to Do It Right",
     "excerpt": "It's a real island with real people living on it. The art just happens to be everywhere.",
     "category": "hidden-japan",
+    "region": "shikoku",
     "tags": [
       "off-the-beaten-path",
       "nature"
@@ -2690,6 +2720,7 @@
     "title": "The JR Pass: Who It's For, Who It Isn't, and How to Not Overpay",
     "excerpt": "The JR Pass is one of Japan's most famous travel products. Since the 2023 price rise it is also, for most itineraries, a waste of money.",
     "category": "getting-around",
+    "region": "",
     "tags": [
       "transport",
       "first-time",
@@ -2794,6 +2825,7 @@
     "title": "Where to Stay in Tokyo: Honest Assessments of Each Neighborhood",
     "excerpt": "Every first-time visitor books Shinjuku because someone told them to. Some of those people are right.",
     "category": "before-you-go",
+    "region": "kanto",
     "tags": [
       "tokyo",
       "first-time",
@@ -2892,6 +2924,7 @@
     "title": "Japan's Four Major Ramen Styles: What They Are and Where to Actually Eat Them",
     "excerpt": "Ramen in Japan is not one food. Depending on where you are, the word covers a range of things that share almost nothing except noodles.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "food",
       "first-time",
@@ -2992,6 +3025,7 @@
     "title": "How to Watch a Sumo Tournament Without Watching It on TV",
     "excerpt": "Six tournaments a year, three of them in Tokyo. Tickets go on sale months in advance and sell out. Here's how to actually get in.",
     "category": "before-you-go",
+    "region": "kanto",
     "tags": [
       "tradition",
       "first-time"
@@ -3096,6 +3130,7 @@
     "title": "The Onsen Rules Nobody Bothers to Tell You",
     "excerpt": "The water is shared. The silence is expected. The tattoo policy is more complicated than you've been told.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "tradition",
       "first-time",
@@ -3195,6 +3230,7 @@
     "title": "Don Quijote: What to Buy, What to Skip, and How to Survive the Store",
     "excerpt": "Don Quijote is five floors of everything at prices that make no sense. The key is knowing what you came for before you walk in.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "shopping",
       "tokyo",
@@ -3270,6 +3306,7 @@
     "title": "Hiroshima Is More Than the Peace Park — And the Peace Park Is More Than You Think",
     "excerpt": "People visit Hiroshima for one reason. Most leave having found three or four others.",
     "category": "hidden-japan",
+    "region": "chugoku",
     "tags": [
       "tradition",
       "first-time",
@@ -3354,6 +3391,7 @@
     "title": "Autumn Leaves in Japan: Where to Go and When the Timing Actually Works",
     "excerpt": "Koyo — autumn foliage — is not a fixed event. It starts in Hokkaido in September and ends in Kyushu in December. The timing requires a decision.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "nature",
       "off-the-beaten-path"
@@ -3452,6 +3490,7 @@
     "title": "Beppu: The Onsen City That's Stranger and Better Than You Expect",
     "excerpt": "Beppu produces more geothermal steam per day than anywhere in Japan and possibly anywhere outside Iceland. The city treats this as completely normal.",
     "category": "hidden-japan",
+    "region": "kyushu",
     "tags": [
       "nature",
       "off-the-beaten-path"
@@ -3535,6 +3574,7 @@
     "title": "Japanese Stationery Is Worth the Suitcase Space",
     "excerpt": "Pens, notebooks, tape, paper clips. Japan has turned the mundane into an argument for why other countries aren't trying hard enough.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "shopping",
       "tokyo"
@@ -3607,6 +3647,7 @@
     "title": "Eating at a Sushi Counter: What to Expect and How to Not Ruin It",
     "excerpt": "The sushi counter is not intimidating once you understand that there are three rules, they're easy, and the chef wants you to enjoy it.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "food",
       "luxury",
@@ -3691,6 +3732,7 @@
     "title": "Nara Beyond the Deer: What to Do After the First Hour",
     "excerpt": "Yes, the deer are free-roaming and yes, they will bow to get crackers from you. This takes about 40 minutes. Nara has a full day's worth of things after that.",
     "category": "hidden-japan",
+    "region": "kinki",
     "tags": [
       "off-the-beaten-path",
       "tradition",
@@ -3783,6 +3825,7 @@
     "title": "Golden Week: What It Is, Why It Will Destroy Your Trip, and When to Go Instead",
     "excerpt": "Golden Week runs from late April to early May. If your trip overlaps it — or Obon, or New Year — you have two options: embrace the chaos or reschedule.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "first-time",
       "budget"
@@ -3858,6 +3901,7 @@
     "title": "What to Buy When You Buy Japanese Sake",
     "excerpt": "Sake is rice wine in the same way that champagne is grape juice. The category is more complex than most people expect, and the range of quality is enormous.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "shopping",
       "food"
@@ -3948,6 +3992,7 @@
     "title": "Hokkaido in July: Japan's Best-Kept Summer Secret",
     "excerpt": "Tokyo in July is 35 degrees and 90% humidity. Hokkaido in July is 22 degrees and clear. These two facts explain a lot.",
     "category": "hidden-japan",
+    "region": "hokkaido",
     "tags": [
       "nature",
       "off-the-beaten-path"
@@ -4026,6 +4071,7 @@
     "title": "Koenji and Shimokitazawa: Tokyo for People Who've Already Done Harajuku",
     "excerpt": "Two stops on different lines. Two neighborhoods that run on thrift stores, live music, and a specific refusal to be improved.",
     "category": "hidden-japan",
+    "region": "kanto",
     "tags": [
       "tokyo",
       "tradition"
@@ -4102,6 +4148,7 @@
     "title": "How to Actually Eat Wagyu Beef in Japan",
     "excerpt": "Wagyu is expensive. This is not a misunderstanding. The question is what you're getting for the expense, and whether a ¥5,000 lunch version is the same as a ¥30,000 dinner.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "food",
       "luxury"
@@ -4184,6 +4231,7 @@
     "title": "Japan's Vending Machines Are a Serious Subject",
     "excerpt": "There are 4 million vending machines in Japan. One for every 31 people. This is not an accident.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "tokyo",
       "first-time"
@@ -4275,6 +4323,7 @@
     "title": "Day Trips From Tokyo That Aren't Hakone or Nikko",
     "excerpt": "Hakone is excellent. Nikko is impressive. Both are in every guidebook and overrun on weekends. There are better options if you're willing to look slightly further.",
     "category": "getting-around",
+    "region": "kanto",
     "tags": [
       "tokyo",
       "nature",
@@ -4365,6 +4414,7 @@
     "title": "Omiyage: The Art of Bringing Back the Right Thing",
     "excerpt": "Returning from anywhere in Japan without gifts for the people you left behind is not a neutral act. Omiyage culture runs deep, and buying well requires knowing the rules.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "shopping",
       "tradition"
@@ -4440,6 +4490,7 @@
     "title": "The Hidden Shrines of Kyoto Locals Still Keep Secret",
     "excerpt": "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto — quiet, moss-covered and usually empty. The city has well over a thousand shrines and temples, and most of them see almost nobody on a weekday morning.",
     "category": "hidden-japan",
+    "region": "kinki",
     "tags": [
       "kyoto",
       "tradition",
@@ -4527,6 +4578,7 @@
     "title": "How to Spend 10 Days in Japan Without a Single Tourist Trap",
     "excerpt": "Most first-time visitors follow the same Golden Route — Tokyo, Kyoto, Osaka — and come home feeling like they saw a theme park. This itinerary takes a different approach: slower, deeper, and built around the neighborhoods that locals actually use.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "first-time",
       "tokyo",
@@ -4623,6 +4675,7 @@
     "title": "The Perfect Route up Mt. Fuji: What Nobody Tells You",
     "excerpt": "Climbing Fuji sounds straightforward until you are doing it at 3am in a queue of headlamps. The mountain rewards preparation, punishes assumptions, and is now a permit-and-quota mountain rather than an open one.",
     "category": "hidden-japan",
+    "region": "chubu",
     "tags": [
       "nature"
     ],
@@ -4712,6 +4765,7 @@
     "title": "Osaka in 3 Days: The Eating and Wandering Itinerary",
     "excerpt": "Osaka has a reputation as Japan's kitchen and that barely scratches it. A city best travelled by eating your way across it, arranged into three days that still leave room to wander.",
     "category": "getting-around",
+    "region": "kinki",
     "tags": [
       "osaka",
       "food",
@@ -4805,6 +4859,7 @@
     "title": "Yakushima: Japan's Ancient Forest That Few Tourists Find",
     "excerpt": "A UNESCO-listed island covered in cedar trees that are older than many civilizations, Yakushima sits off the southern tip of Kyushu and sees a fraction of the visitors it deserves. The hike through Shiratani Unsuikyo inspired Princess Mononoke — and it still feels that way.",
     "category": "hidden-japan",
+    "region": "kyushu",
     "tags": [
       "nature"
     ],
@@ -4888,6 +4943,7 @@
     "title": "How to Read a Japanese Menu Without Speaking Japanese",
     "excerpt": "Most Japanese restaurants don't have English menus, and that's not a problem once you know what to look for. A handful of kanji, some pattern recognition, and the willingness to point gets you through almost any restaurant in the country.",
     "category": "eat-drink",
+    "region": "",
     "tags": [
       "language",
       "food",
@@ -4978,6 +5034,7 @@
     "title": "What Wabi-Sabi Really Means — And Why the World Needs It Now",
     "excerpt": "The Japanese aesthetic of imperfection and transience offers something Western design philosophy rarely does: permission to be incomplete. Wabi-sabi isn't a style — it's a way of perceiving, and learning to see it changes how you look at almost everything.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "tradition"
     ],
@@ -5059,6 +5116,7 @@
     "title": "Kintsugi: The Art of Repairing Broken Things with Gold",
     "excerpt": "A 500-year-old technique for mending ceramics with lacquer and powdered gold has become a global metaphor for resilience. The craft itself is slower, stranger and far more demanding than the metaphor suggests.",
     "category": "rules-etiquette",
+    "region": "",
     "tags": [
       "tradition",
       "kyoto"
@@ -5156,6 +5214,7 @@
     "title": "Hanami 2026: Where to See Cherry Blossoms Like a Local",
     "excerpt": "Skip the crush at Maruyama Park and Ueno. The good hanami spots follow a pattern — canals, school grounds, old railway embankments — and once you know the pattern you can find them on any map before you leave the hotel.",
     "category": "before-you-go",
+    "region": "",
     "tags": [
       "festival",
       "tokyo",
@@ -5246,6 +5305,7 @@
     "title": "The Best Japanese Kitchen Knives to Bring Home",
     "excerpt": "Japanese knives are the single best souvenir you can carry out of Japan — functional, beautiful, and something you'll use every day for decades. This guide covers every price point from a ¥4,000 entry knife to the hand-forged blade worth saving up for.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "shopping",
       "tokyo"
@@ -5343,6 +5403,7 @@
     "title": "Buying Matcha: Ceremonial vs. Culinary Grade Explained",
     "excerpt": "The matcha market is flooded with products that taste nothing like what you drink in a tea ceremony — and the price tag is not a reliable guide. Here's how to read labels, what to taste for, and where to buy the real thing.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "food",
       "shopping"
@@ -5441,6 +5502,7 @@
     "title": "10 Japanese Drugstore Products Worth Every Yen",
     "excerpt": "Japanese pharmacies are overwhelming in the best way — walls of skincare, hair treatments, and stomach remedies at prices that make no sense until you try them. These are the ten products that actually earn their place in your luggage.",
     "category": "things-to-buy",
+    "region": "",
     "tags": [
       "shopping"
     ],
@@ -5558,6 +5620,7 @@
     "title": "Where to Buy Authentic Yukata in Tokyo Without the Markup",
     "excerpt": "The tourist-district yukata sold near Asakusa are fine, but the ones sold at department store basements and specialist shops are extraordinary — and often cheaper. This guide takes you past the obvious options to the places worth visiting.",
     "category": "things-to-buy",
+    "region": "kanto",
     "tags": [
       "shopping",
       "tokyo",

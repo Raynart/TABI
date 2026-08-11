@@ -1878,3 +1878,54 @@ html { scroll-behavior: smooth; }
   .nl-input { border-right: 1px solid rgba(255,255,255,0.15); }
   .nl-btn { padding: 14px 20px; }
 }
+
+/* ===== REGION HUB ===== */
+.region-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 8px var(--pad-x) 72px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2px;
+  list-style: none;
+}
+.region-card > a,
+.region-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  transition: background var(--transition), border-color var(--transition);
+}
+.region-card > a { border: none; padding: 0; background: none; }
+.region-card:not(.region-card--empty):hover { border-color: var(--accent); }
+.region-kanji {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+}
+.region-name {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.region-count {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+.region-prefs {
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: var(--mist);
+}
+/* A region with nothing in it is shown, but plainly, and is not a link. */
+.region-card--empty { background: var(--paper-dark); }
+.region-card--empty .region-kanji { color: var(--mist); }
+.region-card--empty .region-name { color: var(--mist); font-weight: 400; }

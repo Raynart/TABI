@@ -98,6 +98,14 @@
   <url><loc>https://raynart.github.io/TABI/tags/tradition-2.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/tradition-3.html</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/tags/transport.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions/hokkaido.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions/kanto.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions/chubu.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions/kinki.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions/chugoku.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions/shikoku.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://raynart.github.io/TABI/regions/kyushu.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://raynart.github.io/TABI/about.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/contact.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://raynart.github.io/TABI/newsletter.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
