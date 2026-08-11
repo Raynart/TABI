@@ -677,7 +677,7 @@
     "relatedIds": [
       "ic-card-japan-guide",
       "tokyo-subway-guide",
-      "tokyo-day-trips"
+      "japan-airport-transfers"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1422,7 +1422,7 @@
     "relatedIds": [
       "japanese-vending-machines",
       "japan-convenience-store-guide",
-      "basic-japanese-phrases"
+      "japan-trip-budget"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1903,7 +1903,7 @@
     "relatedIds": [
       "kanazawa-japan-guide",
       "japan-winter-travel-guide",
-      "hidden-shrines-kyoto"
+      "japan-accommodation-types"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2097,7 +2097,8 @@
     "relatedIds": [
       "japanese-vending-machines",
       "tsukiji-outer-market-guide",
-      "japanese-menu-guide"
+      "japanese-menu-guide",
+      "ramen-regional-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2457,7 +2458,7 @@
     "relatedIds": [
       "tsukiji-outer-market-guide",
       "japan-convenience-store-guide",
-      "ramen-regional-guide"
+      "dietary-requirements-japan"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2550,7 +2551,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "10-days-japan-no-tourist-traps",
-      "japan-winter-travel-guide",
+      "japan-airport-transfers",
       "shinkansen-guide"
     ],
     "author": "TABI Editorial",
@@ -2809,7 +2810,7 @@
     "relatedIds": [
       "ic-card-japan-guide",
       "10-days-japan-no-tourist-traps",
-      "hiroshima-guide"
+      "jr-pass-worth-it"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2914,7 +2915,7 @@
     "affiliate": false,
     "affiliateLinks": [],
     "relatedIds": [
-      "sumo-tournament-guide",
+      "japan-accommodation-types",
       "kissaten-tokyo-coffee-culture",
       "koenji-shimokitazawa"
     ],
@@ -3848,7 +3849,8 @@
     "relatedIds": [
       "hidden-shrines-kyoto",
       "osaka-3-days-itinerary",
-      "shinkansen-guide"
+      "shinkansen-guide",
+      "hiroshima-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -4713,7 +4715,7 @@
     "affiliateLinks": [],
     "relatedIds": [
       "best-time-visit-japan",
-      "hiroshima-guide",
+      "jr-pass-worth-it",
       "japan-sim-card-guide"
     ],
     "author": "TABI Editorial",
@@ -5087,7 +5089,7 @@
     "relatedIds": [
       "sake-etiquette-japan",
       "japanese-breakfast-guide",
-      "wagyu-guide"
+      "dietary-requirements-japan"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -5861,6 +5863,646 @@
           "Cotton yukata can be hand washed in cool water and should be dried flat or on a wide hanger, never wrung. Polyester goes in the machine on a gentle cycle in a mesh bag. Neither should go anywhere near a tumble dryer.",
           "Store it folded rather than hung — there is a standard fold along the existing seams that keeps the lines crisp, and any shop will demonstrate it in thirty seconds if you ask. Hanging a yukata for a year distorts the shoulders.",
           "Keep the obi rolled rather than folded, and if you have bought geta, expect the thongs to loosen with use; they can be re-tightened, and the shop that sold them will usually do it."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jr-pass-worth-it",
+    "title": "The JR Pass in 2026: When It Saves Money and When It Doesn't",
+    "excerpt": "Since the 2023 price rise the pass stopped being an automatic purchase, and it gets more expensive again in October 2026. The arithmetic is simple, and for most itineraries it now says no.",
+    "category": "getting-around",
+    "region": "",
+    "tags": [
+      "transport",
+      "budget",
+      "first-time",
+      "practical"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [
+      {
+        "on": "2026-10-01",
+        "what": "JR Pass rises to 53,000 / 84,000 / 105,000; drop the pre-increase prices and the 'buy before' advice"
+      }
+    ],
+    "readingTime": 5,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "shinkansen-guide",
+      "ic-card-japan-guide",
+      "luggage-forwarding-japan"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "What it is, and what it is not",
+        "paragraphs": [
+          "The Japan Rail Pass is a flat-rate ticket that covers unlimited travel on almost everything the JR group runs: Shinkansen, limited express services, local JR lines, the JR ferry to Miyajima, and some JR buses. It is sold to foreign visitors on a temporary visitor stay, and it comes in 7, 14 and 21 day versions.",
+          "What it does not cover matters more than people expect. City subways are not JR — the Tokyo Metro, the Osaka Metro and the Kyoto subway are all separate companies, and the pass is no help on any of them. Nor are the private railways that run many of the most useful tourist routes: Odakyu to Hakone, Kintetsu to Nara and Ise, Keisei to Narita, Hankyu and Keihan between Osaka and Kyoto. In several cities the private line is the more convenient one, and the pass gives you a reason to take the slower JR alternative instead."
+        ]
+      },
+      {
+        "heading": "The price, and the increase in October 2026",
+        "paragraphs": [
+          "The 7-day pass costs ¥50,000 and rises to ¥53,000 on 1 October 2026. The 14-day goes from ¥80,000 to ¥84,000 and the 21-day from ¥100,000 to ¥105,000 on the same date. There is a Green Car version at roughly thirty to forty per cent more, which buys a quieter carriage with wider seats.",
+          "If you are booking ahead and your travel dates allow it, buying before the increase locks in the lower price. The pass has a long activation window — you buy it, then choose the start date when you exchange or activate it — so a purchase now can be used later.",
+          "It is worth being clear about how much the ground has moved. In October 2023 the 7-day pass went from ¥29,650 to ¥50,000 overnight, a rise of roughly seventy per cent. A great deal of the advice still circulating online was written before that, when the pass was close to a default purchase for any visitor. It is not that any more, and an article that tells you to buy one without doing the sums is probably older than it looks."
+        ]
+      },
+      {
+        "heading": "The arithmetic, done properly",
+        "paragraphs": [
+          "The only calculation that matters is: add up the fares for the long-distance journeys you will actually take, and compare the total to the price of the pass. Fares are published and easy to look up, so this takes about ten minutes and settles the question completely.",
+          "A single Tokyo to Kyoto Shinkansen fare is somewhere around ¥14,000 depending on the service and seat. That means a Tokyo–Kyoto return is roughly ¥28,000 — against a pass at ¥50,000, a return trip on its own loses you a substantial amount. The common mistake is to look at one large fare, think 'that is nearly a third of the pass already', and stop counting.",
+          "The threshold, in practice, is whether you are covering the length of the country rather than moving between two cities. Tokyo to Kyoto to Hiroshima and back inside a week clears the price. Tokyo to Kyoto and back does not, and neither does a week based in one city with day trips, because day trips are short and cheap."
+        ]
+      },
+      {
+        "heading": "Where the pass does win",
+        "paragraphs": [
+          "Long, linear itineraries with several big hops. Tokyo, Kyoto, Hiroshima, and back to Tokyo for a flight, is the classic case that works. Adding Kanazawa or Hakata to that shape strengthens it further.",
+          "Itineraries where the plan may change. The real argument for a pass is not always money — it is that every JR train becomes free at the point of use, so a spare afternoon can turn into a day trip without a decision about cost. Some people value that enough to accept a small loss on paper.",
+          "Trips where airport transfers are on JR. The Narita Express and the Kansai-Airport Haruka are both JR, so on a pass they cost nothing. That is a few thousand yen at each end that people routinely forget to count.",
+          "And travel with a fixed budget booked far ahead, where knowing the transport line item exactly is worth something in itself."
+        ]
+      },
+      {
+        "heading": "Where it loses",
+        "paragraphs": [
+          "A single city with day trips. Tokyo and its surroundings, or Kyoto and Osaka, will not come close — those journeys are short and the fares are small.",
+          "Kansai only. Kyoto, Osaka, Nara and Kobe are close together, well served by private railways the pass does not cover, and cheap to move between.",
+          "Any trip where you fly a domestic leg. Low-cost carriers between Tokyo and Fukuoka or Sapporo are frequently cheaper than the equivalent Shinkansen fare and take a fraction of the time, which removes the very journeys that would have justified the pass.",
+          "Slow travel. Two weeks in three places is a lovely trip and a poor case for a rail pass."
+        ]
+      },
+      {
+        "heading": "Regional passes are usually the better answer",
+        "paragraphs": [
+          "This is the part most first-time visitors miss. Alongside the national pass, each JR company sells regional passes covering its own area, and they are far cheaper. There are passes for the Kansai area, for wide swathes of eastern and northern Japan, for Kyushu, Hokkaido, Shikoku and the west.",
+          "If your trip stays in one part of the country — and most first trips do — a regional pass usually costs a fraction of the national one and covers everything you were going to use. A Kansai-area pass for a few days around Kyoto and Osaka, or a Kyushu pass for a loop through Fukuoka and Beppu, will often pay for itself where the national pass would not.",
+          "The catch is that the regional passes vary in what they include, how long they run and where they can be bought, and they change more often than the national pass does. Check the issuing JR company's own site rather than a reseller."
+        ]
+      },
+      {
+        "heading": "Nozomi, and the supplement",
+        "paragraphs": [
+          "The fastest Tokaido Shinkansen services, Nozomi and Mizuho, were excluded from the pass for years — pass holders had to take the slower Hikari or Sakura, which on Tokyo to Kyoto costs you roughly twenty minutes.",
+          "Since October 2023 you can pay a supplement to ride them. It is worth knowing that the option exists, but for most journeys the free Hikari is frequent enough that the supplement is money spent to arrive slightly sooner."
+        ]
+      },
+      {
+        "heading": "Buying and activating it",
+        "paragraphs": [
+          "The pass is now sold digitally through the official site, which lets you reserve seats online rather than queueing at a counter. It can also still be bought as a paper exchange order from agents abroad and swapped for the pass in Japan.",
+          "Two practical points. The exchange counters at the airports and at Tokyo Station have long queues at exactly the hour flights land, so if you are exchanging a paper order, do not do it while jet-lagged with a schedule to keep. And the pass runs on consecutive calendar days, not days of use: a 7-day pass activated on a Wednesday expires the following Tuesday whether or not you travelled on all of them. Start it on the morning of your first long journey, not on the day you arrive."
+        ]
+      },
+      {
+        "heading": "The short version",
+        "paragraphs": [
+          "Look up the fares for the long journeys on your actual itinerary, add them up, and compare. If the total is comfortably above the pass price, buy it. If it is close, buy it only if you value the flexibility. If it is below, buy individual tickets and a regional pass, and spend the difference on something you will remember."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japan-airport-transfers",
+    "title": "Getting From the Airport Into the City: Narita, Haneda and Kansai",
+    "excerpt": "Three airports, three completely different problems. The wrong choice at Narita costs two hours and the price of a nice dinner, and the decision is easier to make before you land than after.",
+    "category": "getting-around",
+    "region": "",
+    "tags": [
+      "transport",
+      "first-time",
+      "practical",
+      "budget"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "ic-card-japan-guide",
+      "japan-taxi-guide",
+      "shinkansen-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Narita is a long way out",
+        "paragraphs": [
+          "Narita sits about sixty kilometres east of central Tokyo, which is the single fact that governs everything about arriving there. Nothing gets you into the city quickly and cheaply at the same time; you are choosing which of the two to give up.",
+          "The Narita Express is the JR option: reserved seats, luggage space, direct to Tokyo Station and then on to Shibuya, Shinjuku and Ikebukuro. It takes roughly an hour to Tokyo Station and is free with a JR Pass, which is the single best argument for activating a pass on arrival day.",
+          "The Keisei Skyliner is the fastest to the north-east of the city, reaching Nippori and Ueno in around forty minutes. If you are staying in Ueno, Asakusa or anywhere on the Yamanote's northern arc it is the better choice, and it is cheaper than the Narita Express.",
+          "Limousine buses run to most major hotels and take you door to door with your luggage in the hold, which is worth a great deal after a long flight. They are also at the mercy of traffic, so the journey can take anywhere from ninety minutes to considerably more.",
+          "The cheapest option is the Keisei Access Express or the ordinary commuter trains, which cost a fraction of the express fares and take somewhat longer. They are entirely usable, and they are standing-room-only trains with no luggage racks, which is a different proposition with two large suitcases."
+        ]
+      },
+      {
+        "heading": "Haneda is close, and that changes the calculation",
+        "paragraphs": [
+          "Haneda is inside Tokyo, about fifteen kilometres from the centre. Everything from there is quick and inexpensive, and the decision hardly matters.",
+          "The Tokyo Monorail runs to Hamamatsucho and connects to the Yamanote line. The Keikyu line runs to Shinagawa and continues through to Asakusa and beyond without a change, which makes it the better option for a lot of destinations. Both take around twenty minutes to reach the edge of the centre.",
+          "If you have a choice of airports when booking, Haneda is worth paying a modest premium for. The difference in the arrival experience is substantial, and it is the difference between being in your hotel an hour after clearing customs and being in your hotel three hours after."
+        ]
+      },
+      {
+        "heading": "Kansai, for Kyoto and Osaka",
+        "paragraphs": [
+          "Kansai International sits on an artificial island south of Osaka. For Osaka itself, the Nankai Rapi:t and the airport express trains reach Namba in around forty minutes.",
+          "For Kyoto, the Haruka limited express runs direct in roughly seventy-five minutes and is covered by the JR Pass. This is a genuinely useful connection, because it means a visitor can land at Kansai and be in Kyoto without crossing Osaka at all.",
+          "There are also buses to both cities, which are cheaper and slower, and the usual airport limousine services to the larger hotels."
+        ]
+      },
+      {
+        "heading": "The taxi question",
+        "paragraphs": [
+          "A metered taxi from Narita into central Tokyo is extremely expensive — a five-figure fare — and it is not faster than the train except in the narrow case of arriving after the trains have stopped. Fixed-fare airport taxis exist and are cheaper than the meter, but still cost several times the train.",
+          "From Haneda a taxi is merely expensive rather than absurd, and can make sense late at night or with a family and a lot of luggage. From Kansai the same logic applies as at Narita: the distance makes it a poor choice.",
+          "The exception in every case is the last-train problem. Narita and Kansai both effectively close in the late evening, and an arrival delayed past that leaves a choice between an expensive taxi and an airport hotel. If your flight lands after about ten at night, work out in advance which one you are doing."
+        ]
+      },
+      {
+        "heading": "What to sort out before you leave the terminal",
+        "paragraphs": [
+          "Buy an IC card, or set one up on your phone before you fly. It removes every subsequent ticket-buying decision for the rest of the trip.",
+          "Get cash. Airport ATMs accept foreign cards reliably, which is not true of every ATM in the country, and there are still places that take nothing else.",
+          "Sort out data. An eSIM activated before you fly is the least effort; the airport counters work but involve a queue at the exact moment you least want one.",
+          "And consider sending your luggage. The courier counters in the arrivals hall will forward a suitcase to your hotel, usually for next-day delivery, for a modest fee. Crossing Tokyo on a rush-hour train with two large cases is genuinely unpleasant, and this is the standard local solution to it."
+        ]
+      },
+      {
+        "heading": "A note on the return journey",
+        "paragraphs": [
+          "Leaving is the direction where people misjudge the time. Narita in particular asks for a lot of buffer: the journey out, the check-in queues, and the security and immigration lines all take longer than the equivalent at a European or American airport of similar size.",
+          "The conventional advice is to be at Narita three hours before an international departure, and it is not padding. Work backwards from that to choose your train, and pick the service before the one that would just about do it."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luggage-forwarding-japan",
+    "title": "Send Your Suitcase Ahead: How Takkyubin Changes a Japan Trip",
+    "excerpt": "Japan has a next-day courier network that will move your suitcase between hotels for the price of a decent lunch. Almost no visitor uses it, and almost every visitor should.",
+    "category": "getting-around",
+    "region": "",
+    "tags": [
+      "transport",
+      "practical",
+      "first-time",
+      "budget"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 5,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "shinkansen-guide",
+      "ryokan-first-time-guide",
+      "ic-card-japan-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The thing nobody tells you about",
+        "paragraphs": [
+          "Takkyubin — the word is Yamato Transport's brand name and has become the generic term — is a door-to-door courier service that moves parcels and suitcases anywhere in the country, usually overnight. It is used constantly by Japanese travellers and almost never by foreign ones, which is odd, because it solves the single most tiresome part of moving around Japan.",
+          "The proposition is simple. Instead of dragging a suitcase onto a Shinkansen, through two station changes and up the stairs at the other end, you hand it over at your hotel's front desk in the morning and collect it at the next hotel the following afternoon. You travel with a day bag."
+        ]
+      },
+      {
+        "heading": "What it costs and how long it takes",
+        "paragraphs": [
+          "Moving a normal suitcase between two cities costs on the order of a few thousand yen — comparable to a couple of coffees and a sandwich at station prices, and considerably less than most people assume. Size and weight bands determine the exact figure, and the courier's own site has the current table.",
+          "Next-day delivery is standard for most of the country. Longer hauls — to or from Hokkaido, Okinawa or remote areas — take an extra day, and this is the detail that catches people out. Confirm the delivery date when you hand the bag over rather than assuming.",
+          "You can usually choose a delivery time window, which is worth doing so the bag does not arrive before you can check in."
+        ]
+      },
+      {
+        "heading": "How to actually do it",
+        "paragraphs": [
+          "The easiest route is your accommodation. Almost every hotel, and most ryokan and guesthouses, will handle this at the front desk: they have the forms, they speak enough of the process to guide you, and the courier collects daily. Ask the evening before if you can, because collection times are often mid-morning.",
+          "Convenience stores also accept parcels — the chains have counters for it — as do the courier companies' own depots and the service counters at major airports.",
+          "You will fill in a form with the destination address and a phone number. The hotel you are sending to is the address; write the guest name and the check-in date on it, and tell that hotel to expect it. Hotels do this constantly and think nothing of it."
+        ]
+      },
+      {
+        "heading": "The itineraries it transforms",
+        "paragraphs": [
+          "Hotel to hotel across cities is the obvious one. Tokyo to Kyoto with the bags going separately turns a logistical exercise into a train ride.",
+          "Airport to hotel, and hotel to airport, is the one first-time visitors benefit from most. Send the suitcase from the arrivals hall and travel into the city unencumbered; send it back to the departure airport the day before you fly and spend your last day without checking out into a station locker.",
+          "A ryokan stay in the middle of a trip. Ryokan rooms are not designed around large suitcases, and an overnight stay needs a change of clothes rather than everything you own. Send the main bag ahead to the next city hotel.",
+          "And any leg with a mountain, an island or a lot of stairs in it. Yakushima, the Kiso valley, a night on Koyasan — all much better with a rucksack."
+        ]
+      },
+      {
+        "heading": "The rules and the limits",
+        "paragraphs": [
+          "Size and weight are capped, and oversized items cost more or need a different service. A standard large suitcase is well within the ordinary bands.",
+          "Do not send anything you cannot replace or cannot be without. Passports, medication, valuables and electronics stay with you — not because the service is unreliable, which it emphatically is not, but because the bag is somewhere else for a day.",
+          "Perishables need the cold service, which exists and is widely used for food. It is not for a suitcase.",
+          "And build in the timing. If the bag has to be somewhere on a specific morning, send it two days ahead rather than one."
+        ]
+      },
+      {
+        "heading": "Same-day, and the airport counters",
+        "paragraphs": [
+          "There is a same-day service on some city routes — a bag handed over early in the morning can reach a hotel in the same city that evening — but it is limited, more expensive, and not something to build a plan around. Treat next-day as the rule and same-day as a bonus if a counter offers it.",
+          "The airport counters are worth knowing about specifically. Both major Tokyo airports and Kansai have courier desks in arrivals that will send a bag to a city hotel, and desks in departures that receive bags sent to the airport. Sending a suitcase to the airport the day before a flight is the move that most improves a last day: you check out with a day bag, spend the day properly, and collect the case after check-in rather than dragging it around.",
+          "The reverse — sending from the airport on arrival — is the one that most improves a first day, for the same reason in the opposite direction."
+        ]
+      },
+      {
+        "heading": "What it does to how you pack",
+        "paragraphs": [
+          "Most Japan packing advice is built around the assumption that you will be carrying everything you own up and down station stairs. Once the courier network is part of the plan, that assumption weakens considerably, and the calculus changes.",
+          "What matters instead is the split: a main case that moves independently of you, and a day bag with the things you cannot be without for twenty-four hours. Passport, medication, valuables, chargers, and a change of clothes go in the day bag as a matter of routine, because the case will occasionally be somewhere else overnight by design rather than by accident.",
+          "Pack the case so it can be handed over without repacking — that is the only real constraint the system imposes, and it is a mild one."
+        ]
+      },
+      {
+        "heading": "Coin lockers, for the same problem at a smaller scale",
+        "paragraphs": [
+          "Within a single day the equivalent tool is the coin locker. Every major station has banks of them in several sizes, and the larger ones take a full suitcase. Most now take IC cards as well as coins, which removes the hunt for hundred-yen pieces.",
+          "They fill up. At major stations on a weekend the large lockers can all be occupied by mid-morning, and the fallback is the staffed left-luggage counter, which most big stations have and which costs a little more.",
+          "The combination — lockers for a day, the courier for a night — covers essentially every luggage problem a trip presents, and between them they remove the argument for travelling light that dominates most Japan packing advice."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japan-accommodation-types",
+    "title": "Where to Sleep in Japan: Every Accommodation Type, Honestly Compared",
+    "excerpt": "Business hotel, capsule, ryokan, hostel, minshuku, apartment. They are not points on a price ladder — they are different products, and the cheap one is often the right one.",
+    "category": "before-you-go",
+    "region": "",
+    "tags": [
+      "accommodation",
+      "first-time",
+      "budget",
+      "practical"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "ryokan-first-time-guide",
+      "tokyo-neighborhoods-guide",
+      "accessible-travel-japan"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The business hotel is the default, and it should be",
+        "paragraphs": [
+          "The single most useful thing to know about accommodation in Japan is that the business hotel — the chains found beside every major station — is very good at what it does, and what it does is most of what a traveller needs.",
+          "The rooms are small. Genuinely small: a double bed with enough space to walk down one side of it, a compact unit bathroom moulded in one piece, a desk, a kettle. What you get in exchange is a spotless, quiet, reliably functioning room a few minutes from a station, with a bed that is properly made and hot water that works, at a price well below the equivalent in most Western cities.",
+          "The chains are consistent enough that booking one you have never seen carries no risk. Several include a simple breakfast, and some have a large communal bath on the top floor, which is a considerable upgrade over the unit bathroom.",
+          "For a trip that is mostly about being out of the room, this is the correct choice, and choosing something more expensive frequently buys you a bigger room you will not be in."
+        ]
+      },
+      {
+        "heading": "Capsule hotels are not a stunt",
+        "paragraphs": [
+          "A capsule is a moulded sleeping berth in a rack, with a curtain or a blind rather than a door, in a room of several dozen. Your luggage goes in a locker. There are shared washrooms and usually a communal bath.",
+          "They are clean, safe, cheap and quiet — the noise rules are taken seriously — and they are a completely reasonable way to spend a night, particularly a night you did not plan on. Missing the last train is a normal event in Japan and the capsule hotel is the normal answer to it.",
+          "The caveats are real though. Many are single-sex or have only a small women's floor, so book rather than turn up. They are not designed for large suitcases. And they are for sleeping: there is nowhere to sit and no privacy beyond the curtain, so a rest day in one would be miserable."
+        ]
+      },
+      {
+        "heading": "Ryokan is a different product entirely",
+        "paragraphs": [
+          "A ryokan is not a hotel with tatami. It is a package: a room with a floor you sit on, a communal bath, a kaiseki dinner served at a set time, breakfast the next morning, and a rhythm you fit into rather than direct.",
+          "That means the price is not comparable to a hotel room, because it includes two substantial meals and an experience that is the point of the stay. It also means a ryokan is a poor choice if you intend to be out all evening — you will be paying for and missing the best part.",
+          "One or two nights in the middle of a trip, in an onsen town rather than a city, is the shape that works. Book earlier than you think; the good ones fill months ahead for weekends and holidays."
+        ]
+      },
+      {
+        "heading": "Hostels and guesthouses have changed",
+        "paragraphs": [
+          "The Japanese hostel is not the European backpacker hostel. Design-led guesthouses with good coffee, quiet common rooms and dormitories with proper individual berths are common, and a lot of them are in older buildings in neighbourhoods worth staying in.",
+          "They are the best option for solo travellers who want to talk to someone, and many have private rooms as well as dorms — often at a price close to a business hotel but in a more interesting building and a less convenient location.",
+          "The trade is usually noise, shared bathrooms, and staff who are there for part of the day rather than all of it."
+        ]
+      },
+      {
+        "heading": "Minshuku, shukubo and the rural options",
+        "paragraphs": [
+          "A minshuku is a family-run guesthouse, usually with tatami rooms and shared facilities, typically with dinner and breakfast included. It is the rural equivalent of a bed and breakfast and it is often the only accommodation in a small place. Expect home cooking, an early dinner and a household rhythm.",
+          "Shukubo is temple lodging, most famously on Koyasan. You sleep in a temple, eat the vegetarian Buddhist cuisine, and can usually attend the morning service. It is a genuine experience rather than a themed one, and it books up.",
+          "Both are worth planning a night around rather than treating as a fallback."
+        ]
+      },
+      {
+        "heading": "Apartments and the rental rules",
+        "paragraphs": [
+          "Short-term rentals are legal and regulated, and the regulation is stricter than in many countries — licensed properties display a registration number, and the number of nights they may operate is capped. Book through platforms that show the licence, and be wary of anything advertised well below the going rate.",
+          "For a family, or a stay of a week or more in one city, an apartment with a washing machine and a kitchen changes the trip materially. For two or three nights the check-in logistics rarely justify it."
+        ]
+      },
+      {
+        "heading": "How to choose, in one paragraph",
+        "paragraphs": [
+          "Match the accommodation to what the day looks like. Out from breakfast until late, in a city: business hotel, near a station. A night in the mountains built around dinner and a bath: ryokan. Travelling alone and wanting company: guesthouse. Somewhere rural with no hotels: minshuku. A week in one place with children: apartment. A night you did not plan: capsule.",
+          "And book the station before you book the room. In Japanese cities, five minutes from the right station beats a nicer room twenty minutes from the wrong one, every time."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japan-trip-budget",
+    "title": "What a Japan Trip Actually Costs, Line by Line",
+    "excerpt": "Japan has a reputation for being expensive that is thirty years out of date in some categories and entirely accurate in others. Here is where the money really goes.",
+    "category": "before-you-go",
+    "region": "",
+    "tags": [
+      "budget",
+      "first-time",
+      "practical",
+      "accommodation"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "cash-vs-card-japan",
+      "japan-accommodation-types",
+      "jr-pass-worth-it"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The reputation is out of date, unevenly",
+        "paragraphs": [
+          "Japan acquired its expensive reputation during the bubble years and has not fully shed it, but the country has had decades of very low inflation and a weak currency for much of the recent period. For a visitor earning in dollars, euros or pounds, several categories are now cheaper than at home.",
+          "Food is the clearest case: eating well is inexpensive in Japan in a way that surprises almost everyone. Transport is the opposite — intercity rail is genuinely expensive. Accommodation sits in the middle and is good value for what you get. Attractions are cheap.",
+          "So the honest answer to 'is Japan expensive' is that the flight and the long-distance trains are, and most of the rest is not."
+        ]
+      },
+      {
+        "heading": "Accommodation, the largest line",
+        "paragraphs": [
+          "This is the biggest variable and the one most worth thinking about. A business hotel room in a major city is the baseline, and it buys a small, immaculate, well-located room. A capsule or a hostel dormitory is a fraction of that. A ryokan with dinner and breakfast is a multiple of it, and should be budgeted as accommodation plus two meals rather than compared directly.",
+          "Prices move sharply with the calendar. Cherry blossom season, the autumn foliage weeks, Golden Week and New Year all push rates up substantially and reduce availability, and the same room can differ by a factor of two or three between a Tuesday in February and a Saturday in early April.",
+          "Booking earlier helps more in Japan than in many countries, because supply in the good locations is genuinely limited rather than dynamically priced downward at the last minute."
+        ]
+      },
+      {
+        "heading": "Food, where Japan is cheap",
+        "paragraphs": [
+          "A bowl of ramen, a gyudon, a set lunch at a neighbourhood restaurant, a convenience store breakfast — these are all inexpensive, and none of them are compromises. The set lunch in particular is the great value of Japanese eating: many restaurants serve at lunch, at a substantial discount, food close to what they serve at dinner.",
+          "Department store food halls in the last hour before closing discount prepared food heavily, which is a genuine strategy rather than a hardship one.",
+          "The expensive end exists and is very expensive — a counter sushi omakase or a high-end kaiseki will cost what it would cost anywhere. The point is that this is a choice you make a few times, not a floor you cannot get under. It is entirely possible to eat extremely well in Japan for very little, and this is where the country most confounds expectations."
+        ]
+      },
+      {
+        "heading": "Transport, where it is not",
+        "paragraphs": [
+          "Intercity rail is the line that hurts. A single Shinkansen journey between major cities runs to a meaningful fraction of a day's total budget, and this is where a trip's costs concentrate.",
+          "The mitigations are: fewer, longer hops rather than many short ones; regional rail passes where your trip stays in one area; domestic low-cost flights for the longest legs, which are frequently cheaper than the train; and overnight buses, which are cheap, surprisingly comfortable and save a night's accommodation.",
+          "Within cities, transport is cheap. Subway and bus fares are modest, an IC card removes the friction, and most sightseeing days involve a few hundred yen of travel rather than a few thousand.",
+          "Taxis are expensive and should be treated as an occasional convenience rather than a mode of transport."
+        ]
+      },
+      {
+        "heading": "Attractions cost very little",
+        "paragraphs": [
+          "Temple and shrine entry, castle admission, garden tickets and most museums are inexpensive by international standards — typically the price of a coffee, occasionally the price of a lunch. A day of dedicated sightseeing rarely accumulates a large total.",
+          "The expensive attractions are the branded ones: the theme parks, the observation decks, the ticketed digital art venues. These are priced like their equivalents anywhere, and they are optional.",
+          "Onsen day-use fees are trivial. A public bath costs less than a train ride."
+        ]
+      },
+      {
+        "heading": "The costs people forget",
+        "paragraphs": [
+          "Luggage. Coin lockers daily, and courier fees if you send bags between cities, which is worth every yen but is a line item.",
+          "Connectivity. An eSIM or pocket wifi for the trip.",
+          "Cash withdrawal fees, which mount if you take out small amounts often. Take larger sums less frequently.",
+          "Coins. Not a cost, but a phenomenon: cash payment generates a startling volume of coins, and they are useful for lockers and vending machines rather than something to convert back.",
+          "And souvenirs, which in Japan are a genuine budget line rather than an afterthought — the shopping is good and the culture of bringing things back is strong."
+        ]
+      },
+      {
+        "heading": "How to build the number",
+        "paragraphs": [
+          "Work it as: flights, plus accommodation per night times nights, plus a daily allowance for food and local transport and entry fees, plus a separate line for intercity travel, plus a contingency for the two or three things you will decide to do once you are there.",
+          "The daily allowance is the part that varies least and surprises people most — it is usually lower than they budgeted. The intercity line is the part that varies most and is usually higher.",
+          "Then decide where you want to spend deliberately. One extraordinary meal, or one night in a ryokan, will occupy a noticeable share of the total and will be what you remember. That is a good use of money; a larger hotel room in a city you are barely in is not."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accessible-travel-japan",
+    "title": "Accessible Travel in Japan: What Works Well and What Still Doesn't",
+    "excerpt": "Japan's rail network is one of the most accessible in the world, and its older streets and buildings are among the least. Both things are true at once, and planning around the gap is the whole task.",
+    "category": "before-you-go",
+    "region": "",
+    "tags": [
+      "accommodation",
+      "practical",
+      "first-time",
+      "transport"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "ic-card-japan-guide",
+      "japan-taxi-guide",
+      "japan-accommodation-types"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The two Japans",
+        "paragraphs": [
+          "Japan presents an unusually sharp contrast. The rail system, the newer buildings and the public infrastructure built or renovated in recent decades are exceptionally accessible — lifts everywhere, tactile paving on nearly every pavement and platform, audible signals, staff trained and willing.",
+          "The older layer is the opposite. Historic temples with gravel approaches and high thresholds, narrow streets without pavements, small restaurants up a flight of stairs, traditional buildings where the whole point is a raised tatami floor. Very little of this can be retrofitted and much of it will not change.",
+          "Planning around that contrast — using the excellent infrastructure to reach places, then researching the last hundred metres individually — is what a trip here requires."
+        ]
+      },
+      {
+        "heading": "Trains are the strong point",
+        "paragraphs": [
+          "Station staff will arrange assistance, and the system for it is well established. Tell the staff at the gate where you are going; they will deploy a ramp to bridge the platform gap, radio ahead, and someone will be waiting with a ramp at the other end. This works across operators and it works reliably.",
+          "Give notice where you can. Turning up unannounced is usually fine at large stations, but for Shinkansen travel, for smaller stations and at busy times, contacting the operator in advance makes everything smoother.",
+          "Shinkansen trains have designated wheelchair spaces, and the number of them was increased on newer sets. These need to be booked, and the booking is not always possible through the ordinary online channels — the station ticket office is the reliable route.",
+          "Lifts exist at the great majority of stations, though at the larger interchanges the accessible route can be considerably longer than the direct one, and the signage for it is not always as prominent as the stairs."
+        ]
+      },
+      {
+        "heading": "Buses, taxis and the road",
+        "paragraphs": [
+          "City buses are largely low-floor with ramps. The driver deploys the ramp; this is routine.",
+          "Taxis are the quiet success story. The newer standard taxi, which has steadily replaced the old sedans, has a high roof, a sliding door and a wheelchair ramp, and it is now the common vehicle rather than a specialist one. Fully accessible vehicles can also be booked in advance through the dispatch apps and by phone.",
+          "Pavements are generally good in cities and frequently absent in older residential streets, where pedestrians, cyclists and cars share the road surface. This is manageable but requires attention."
+        ]
+      },
+      {
+        "heading": "Accommodation needs verifying, not assuming",
+        "paragraphs": [
+          "This is where the most planning is required. Newer hotels and the international chains have accessible rooms built to a recognisable standard. Business hotel chains vary: some have accessible rooms, many have unit bathrooms moulded in one piece with a step into them.",
+          "The word 'accessible' is used loosely in listings. Ask specific questions rather than accepting the label: door widths, whether the bathroom has a step, whether there is a roll-in shower or only a bath, bed height, and whether the accessible room is on a floor served by the lift.",
+          "Traditional accommodation is a particular case. Ryokan involve floor-level living, futons on tatami and often a step into the bathing area, and the bath itself may have no accessible entry. Some ryokan have adapted rooms and a private bath that can be booked; many cannot adapt at all. This needs asking about directly rather than hoping."
+        ]
+      },
+      {
+        "heading": "Temples, castles and the historic sites",
+        "paragraphs": [
+          "Major sites have often done what they can: ramps at the main approach, an accessible route around the gravel, a lift in a reconstructed castle keep. Reconstructed castles — those rebuilt in concrete after the war — frequently have lifts. Original wooden keeps almost never do, because the interior is a national treasure with staircases closer to ladders.",
+          "Temple grounds are variable and the individual buildings more so. The larger and more visited a site is, the more likely it has been adapted.",
+          "The practical approach is to check each site's own access page, which many now publish in detail, rather than relying on a general assumption either way."
+        ]
+      },
+      {
+        "heading": "Other access needs",
+        "paragraphs": [
+          "For visual impairment, tactile paving is close to universal, station announcements are thorough, and lifts and crossings have audio. Braille appears on handrails, ticket machines and canned drinks.",
+          "For hearing impairment, visual information is excellent — train displays, station signage and route information are comprehensive and increasingly multilingual.",
+          "For anyone who finds crowds and noise difficult, the rush hour on the major Tokyo and Osaka lines is genuinely overwhelming and entirely avoidable by travelling outside roughly eight to nine-thirty in the morning and six to seven-thirty in the evening.",
+          "Assistance dogs are legally permitted in public facilities, though awareness among individual businesses varies and documentation is worth carrying."
+        ]
+      },
+      {
+        "heading": "Practical preparation",
+        "paragraphs": [
+          "Bring documentation of your equipment and any medication, and check the import rules for medication well ahead — Japan restricts some compounds that are unremarkable elsewhere, and the permission process is not quick.",
+          "Rental of mobility equipment is available in the major cities and can be delivered to a hotel, which avoids flying with a heavy chair.",
+          "Research the last hundred metres of each destination rather than the journey, because the journey is the part Japan does well.",
+          "And ask. The gap between what is formally provided and what staff will do to help is wide in Japan, and it is wide in the helpful direction."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dietary-requirements-japan",
+    "title": "Vegetarian, Vegan, Halal and Allergies: Eating in Japan With Restrictions",
+    "excerpt": "The hard part is not finding restaurants. It is that dashi is in almost everything savoury, and 'no meat' does not communicate that to anyone.",
+    "category": "eat-drink",
+    "region": "",
+    "tags": [
+      "food",
+      "practical",
+      "language",
+      "first-time"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 5,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "japanese-menu-guide",
+      "japan-convenience-store-guide",
+      "basic-japanese-phrases"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Start with dashi, because everything else follows from it",
+        "paragraphs": [
+          "The single most important fact for anyone avoiding animal products in Japan is dashi. It is the stock underneath an enormous proportion of savoury Japanese cooking, and the standard version is made with katsuobushi — dried, smoked, fermented bonito — usually alongside kombu seaweed.",
+          "That means miso soup is generally not vegetarian. Nor is the broth in most udon and soba, the simmering liquid for vegetables, the dipping sauce for tempura, most curry roux, tamagoyaki, or a great deal of what looks like a plain vegetable dish. Fish is not thought of as 'meat' in this context, and a dish can be entirely free of visible animal products and still be built on fish stock.",
+          "There is a purely plant-based version, kombu dashi, made from kelp alone, and shiitake dashi from dried mushrooms. Restaurants that cater to vegetarians use them. Restaurants that do not are not deceiving you — they simply do not consider stock to be an ingredient in the sense you mean."
+        ]
+      },
+      {
+        "heading": "Say what you cannot eat, not what you are",
+        "paragraphs": [
+          "Announcing that you are vegetarian is much less effective than listing what must not be in the food. The category does not map cleanly onto Japanese culinary thinking, and a well-meaning kitchen may remove the pork and leave the broth.",
+          "The useful formulation names the specific things: no meat, no fish, no fish stock, no bonito flakes. In Japanese, the phrase for fish stock is katsuo dashi, and being able to point at those words is worth more than any general statement.",
+          "Carry it written down. A card in Japanese listing your restrictions, ideally with the specific ingredients named, is the single highest-value preparation for this trip. Staff can read it, take it to the kitchen, and give you an honest answer — which is frequently 'we cannot do that here', and that honest no is far more useful than an accommodating yes that was not understood."
+        ]
+      },
+      {
+        "heading": "Where it is easy",
+        "paragraphs": [
+          "Shojin ryori, the Buddhist temple cuisine, is entirely plant-based by doctrine and is the oldest vegan cooking tradition in the country. It is served at temple lodgings, notably on Koyasan, and at specialist restaurants in Kyoto. It is also genuinely excellent rather than a substitute for something else.",
+          "Dedicated vegetarian and vegan restaurants exist in reasonable numbers in Tokyo, Kyoto and Osaka, and the listings apps that cover them are reliable. This is the low-effort route in the big cities.",
+          "Indian restaurants are widespread, staffed by people who understand the requirement immediately, and are a dependable fallback anywhere.",
+          "Convenience stores are better than they sound. Onigiri with pickled plum or kombu, plain rice, salted edamame, fruit, nuts, plain bread. Read the ingredient list, which is comprehensive by law, though it is in Japanese.",
+          "And soba shops sometimes have a plain zaru soba where the noodles come cold with a dipping sauce — but the sauce is dashi-based, so the noodles alone with soy is the workable order."
+        ]
+      },
+      {
+        "heading": "Halal",
+        "paragraphs": [
+          "Pork is common in Japanese cooking and is often present where it is not announced — in ramen broth, in gyoza filling, in the stock for many dishes. Alcohol is also a routine ingredient: sake and mirin are in a great many sauces and simmered dishes, which matters for a strict interpretation.",
+          "Certified halal restaurants exist in the major cities and near the large mosques, and their numbers have grown considerably with visitor numbers. Tokyo, Osaka and Kyoto all have a workable selection, and some universities and larger shopping centres have halal options.",
+          "Seafood is the practical everyday answer: sushi, sashimi and grilled fish avoid both problems, and are available everywhere. Vegetarian dishes carry the dashi caveat but not the pork or alcohol one.",
+          "Prayer rooms have become more common at airports, major stations and large shopping centres."
+        ]
+      },
+      {
+        "heading": "Allergies, which are a different problem",
+        "paragraphs": [
+          "This is the one area where improvisation is genuinely unsafe, and it should be treated with more care than dietary preference.",
+          "Japanese labelling law requires the declaration of a specific set of allergens on packaged food, which makes supermarket and convenience store shopping tractable if you can read the terms. Learn the characters for your allergen, or photograph them to compare.",
+          "Restaurants are harder. Small kitchens often cannot guarantee against cross-contamination and, to their credit, will say so rather than take the risk. Chains are frequently better than independent restaurants here, because many publish full allergen charts.",
+          "Soy, wheat and buckwheat deserve particular attention. Soy is pervasive — soy sauce is in nearly everything. Buckwheat allergy is taken very seriously in Japan precisely because soba is so common, and a soba restaurant will have flour in the air.",
+          "Carry a written card, carry your own medication, and know how to say that this is an allergy rather than a preference — the distinction exists in Japanese and changes how the request is treated."
+        ]
+      },
+      {
+        "heading": "Ordering, practically",
+        "paragraphs": [
+          "Restaurants with plastic food displays or photographic menus let you point, which removes a layer of difficulty, though it tells you nothing about the stock.",
+          "Ask before you sit down rather than after. Walking out of a small restaurant after being seated is awkward for everyone; asking at the door is completely normal and the answer is quick.",
+          "Department store food halls let you inspect and ask about individual items and are a good option for assembling a meal.",
+          "Self-catering solves the hardest days. An apartment with a kitchen, or even a hotel room and a supermarket, removes the problem entirely for a day when you are tired of negotiating it."
+        ]
+      },
+      {
+        "heading": "A realistic expectation",
+        "paragraphs": [
+          "Japan is not a difficult country to eat in with restrictions, but it is a country where the restriction has to be communicated precisely rather than approximately. The food culture is not built around accommodation and substitution the way some others are, and a kitchen that cannot make your dish will usually say so plainly rather than improvise.",
+          "Prepare the written card, learn the four or five words that matter, use the temple cuisine and the dedicated restaurants when you want to stop thinking about it, and treat the convenience store as the safety net it is. On those terms it works, and the food is worth the effort."
         ]
       }
     ]
