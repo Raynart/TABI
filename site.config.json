@@ -11,38 +11,40 @@
     {
       "slug": "before-you-go",
       "label": "Before You Go",
-      "nav": "Before You Go"
+      "nav": "Before You Go",
+      "kanji": "&#28310;&#20633;"
     },
     {
       "slug": "rules-etiquette",
       "label": "Rules & Etiquette",
-      "nav": "Rules"
+      "nav": "Rules",
+      "kanji": "&#20316;&#27861;"
     },
     {
       "slug": "getting-around",
       "label": "Getting Around",
-      "nav": "Getting Around"
+      "nav": "Getting Around",
+      "kanji": "&#31227;&#21205;"
     },
     {
       "slug": "eat-drink",
       "label": "Eat & Drink",
-      "nav": "Eat & Drink"
+      "nav": "Eat & Drink",
+      "kanji": "&#39135;&#20107;"
     },
     {
       "slug": "things-to-buy",
       "label": "Things to Buy",
-      "nav": "Things to Buy"
+      "nav": "Things to Buy",
+      "kanji": "&#36023;&#29289;"
     },
     {
       "slug": "hidden-japan",
       "label": "Hidden Japan",
-      "nav": "Hidden Japan"
+      "nav": "Hidden Japan",
+      "kanji": "&#31192;&#22659;"
     }
   ],
-  "homepageFeature": {
-    "category": "rules-etiquette",
-    "kanji": "&#20316;&#27861;"
-  },
   "tags": [
     "accommodation",
     "affiliate",

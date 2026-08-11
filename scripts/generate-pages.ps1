@@ -11,9 +11,19 @@ $articles = Get-Content "$root\articles.json" -Raw -Encoding UTF8 | ConvertFrom-
 # and every link from the live site. Set TABI_SITE_URL (e.g. http://localhost:8080)
 # to produce a build that runs against a local server. Unset for real builds.
 $siteUrl  = if ($env:TABI_SITE_URL) { $env:TABI_SITE_URL.TrimEnd('/') } else { $config.siteUrl }
+function Get-EffectiveDate {
+    # Ordering date for discovery surfaces: the later of publishedAt and updatedAt.
+    # Sorting purely by publishedAt buried articles that were substantially
+    # rewritten later - they could never reach the homepage again. publishedAt
+    # itself is left alone, so the stated publication date stays honest.
+    param($a)
+    if ($a.updatedAt -and $a.updatedAt -gt $a.publishedAt) { return $a.updatedAt }
+    return $a.publishedAt
+}
+
 $siteName = $config.siteName
 $tagline  = $config.tagline
-$defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 1).heroImage)
+$defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { Get-EffectiveDate $_ } -Descending | Select-Object -First 1).heroImage)
 
 $script:ImageSizeCache = @{}
 
@@ -47,8 +57,8 @@ foreach ($a in $articles) {
     if (-not $a.sections) { $dataErrors.Add("$($a.id): no body sections") }
 }
 
-if (-not ($validCategories -contains $config.homepageFeature.category)) {
-    $dataErrors.Add("site.config.json: homepageFeature.category '$($config.homepageFeature.category)' is not a configured category")
+foreach ($c in $config.categories) {
+    if (-not $c.kanji) { $dataErrors.Add("site.config.json: category '$($c.slug)' has no kanji for its homepage section") }
 }
 
 if ($dataErrors.Count -gt 0) {
@@ -325,7 +335,7 @@ function Get-Header {
 function Get-Ticker {
     param($articles)
     $items = ''
-    $recent = $articles | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 8
+    $recent = $articles | Sort-Object { Get-EffectiveDate $_ } -Descending | Select-Object -First 8
     foreach ($a in $recent) {
         $label = ($config.categories | Where-Object { $_.slug -eq $a.category } | Select-Object -First 1).nav
         if (-not $label) { $label = $a.category }
@@ -483,14 +493,19 @@ function Get-ArticleCard {
 # ===== INDEX.HTML =====
 Write-Host "Generating index.html..."
 
-$heroArticle = $articles | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 1
-$gridArticles = $articles | Sort-Object { $_.publishedAt } -Descending | Select-Object -Skip 1 -First 4
-# Homepage feature section. This used to filter on a hardcoded category 'culture'
-# that no articles have had since the taxonomy was reworked, so the section never
-# rendered at all. Driven from site.config.json now, and validated at startup.
-$featureCat = $config.categories | Where-Object { $_.slug -eq $config.homepageFeature.category } | Select-Object -First 1
-$cultureArticles = $articles | Where-Object { $_.category -eq $featureCat.slug } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 3
-$buyArticles = $articles | Where-Object { $_.category -eq 'things-to-buy' } | Sort-Object { $_.publishedAt } -Descending | Select-Object -First 4
+$heroArticle = $articles | Sort-Object { Get-EffectiveDate $_ } -Descending | Select-Object -First 1
+$gridArticles = $articles | Sort-Object { Get-EffectiveDate $_ } -Descending | Select-Object -Skip 1 -First 4
+# Every category gets its own homepage section. Previously only two did, and the
+# rest were only reachable if they happened to land in the global "latest four" -
+# so a category that had not been posted to recently vanished from the homepage
+# entirely, and the site looked stale in exactly those genres.
+$homeSections = @()
+foreach ($c in $config.categories) {
+    $items = $articles | Where-Object { $_.category -eq $c.slug } |
+             Sort-Object { Get-EffectiveDate $_ } -Descending |
+             Select-Object -First $(if ($c.slug -eq 'things-to-buy') { 4 } else { 3 })
+    if ($items) { $homeSections += ,@{ cat = $c; items = @($items) } }
+}
 
 $heroImg = if ($heroArticle -and $heroArticle.heroImage) { $heroArticle.heroImage } else { '' }
 $heroTitle = if ($heroArticle) { [System.Net.WebUtility]::HtmlEncode($heroArticle.title) } else { 'Welcome to TABI' }
@@ -506,16 +521,20 @@ if ($gridArticles.Count -gt 0) {
     }
 }
 
-$cultureHtml = ''
-$ci = 1
-foreach ($a in $cultureArticles) {
-    $cat  = Get-CategoryLabel $a.category
-    $title = [System.Net.WebUtility]::HtmlEncode($a.title)
-    $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
-    $fb2   = Get-CardFallback $a.category
-    $img   = if ($a.heroImage) { "<img src=""$(Get-ImageSrc $a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $a.heroImage '(max-width: 768px) 100vw, 400px')$(Get-ImageDimAttr $a.heroImage) style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
-    $numStr = $ci.ToString().PadLeft(2, '0')
-    $cultureHtml += @"
+function Get-CultureCards {
+    # The numbered editorial cards used by every homepage category section
+    # except Things to Buy, which has its own treatment.
+    param($items)
+    $html = ''
+    $i = 1
+    foreach ($a in $items) {
+        $cat   = Get-CategoryLabel $a.category
+        $title = [System.Net.WebUtility]::HtmlEncode($a.title)
+        $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } else { '' }
+        $fb2   = Get-CardFallback $a.category
+        $img   = if ($a.heroImage) { "<img src=""$(Get-ImageSrc $a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $a.heroImage '(max-width: 768px) 100vw, 400px')$(Get-ImageDimAttr $a.heroImage) style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
+        $numStr = $i.ToString().PadLeft(2, '0')
+        $html += @"
 <a href="articles/$($a.id).html" class="culture-card">
   <p class="culture-num">$numStr</p>
   <div class="culture-card-img">$img</div>
@@ -524,16 +543,20 @@ foreach ($a in $cultureArticles) {
   <p class="culture-card-desc">$desc</p>
 </a>
 "@
-    $ci++
+        $i++
+    }
+    return $html
 }
 
-$buyHtml = ''
-foreach ($a in $buyArticles) {
-    $title = [System.Net.WebUtility]::HtmlEncode($a.title)
-    $price = if ($a.affiliateLinks -and $a.affiliateLinks.Count -gt 0) { [System.Net.WebUtility]::HtmlEncode($a.affiliateLinks[0].price) } else { '' }
-    $priceHtml = if ($price) { "<p class=""buy-price"">From $price</p>" } else { '' }
-    $tagLabel = if ($a.tags -and $a.tags.Count -gt 0) { $a.tags[0] } else { 'Shopping' }
-    $buyHtml += @"
+function Get-BuyCards {
+    param($items)
+    $html = ''
+    foreach ($a in $items) {
+        $title = [System.Net.WebUtility]::HtmlEncode($a.title)
+        $price = if ($a.affiliateLinks -and $a.affiliateLinks.Count -gt 0) { [System.Net.WebUtility]::HtmlEncode($a.affiliateLinks[0].price) } else { '' }
+        $priceHtml = if ($price) { "<p class=""buy-price"">From $price</p>" } else { '' }
+        $tagLabel = if ($a.tags -and $a.tags.Count -gt 0) { $a.tags[0] } else { 'Shopping' }
+        $html += @"
 <a href="articles/$($a.id).html" class="buy-card">
   <p class="buy-tag">$tagLabel</p>
   <h3 class="buy-title">$title</h3>
@@ -541,6 +564,8 @@ foreach ($a in $buyArticles) {
   <span class="buy-arrow">&#8599;</span>
 </a>
 "@
+    }
+    return $html
 }
 
 $tickerHtml = Get-Ticker $articles
@@ -599,41 +624,40 @@ if ($gridHtml) {
     $indexLines.Add('</div>')
 }
 
-# Culture section
-if ($cultureHtml) {
-    $indexLines.Add('<div class="section-label">')
-    $indexLines.Add("  <span class=""section-label-jp"" aria-hidden=""true"">$($config.homepageFeature.kanji)</span>")
-    $indexLines.Add("  <h2 class=""section-label-en"">$([System.Net.WebUtility]::HtmlEncode($featureCat.label))</h2>")
-    $indexLines.Add('  <div class="section-label-line"></div>')
-    $indexLines.Add("  <a href=""categories/$($featureCat.slug).html"" class=""section-label-link"">All articles <span class=""arrow"">&rarr;</span></a>")
-    $indexLines.Add('</div>')
-    $indexLines.Add('<div class="culture-grid">')
-    $indexLines.Add($cultureHtml)
-    $indexLines.Add('</div>')
-}
+# One section per category, in the order they appear in site.config.json. The
+# interlude is dropped in partway so the page still has a break in it.
+$interlude = @(
+    '<div class="interlude" aria-hidden="true">',
+    '  <div class="interlude-kanji">&#26053;&#25991;&#21270;</div>',
+    '  <div class="interlude-inner">',
+    '    <div class="interlude-lines"><div class="iline"></div><span class="isymbol">&#9961;</span><div class="iline"></div></div>',
+    '    <p class="interlude-label">The TABI Philosophy</p>',
+    '    <p class="interlude-quote">Japan is not a destination.<br><strong>It is a way of seeing.</strong></p>',
+    '    <p class="interlude-sub">From ancient forest temples to 4am ramen counters &mdash; we find the Japan worth knowing.</p>',
+    '  </div>',
+    '</div>'
+)
 
-# Interlude
-$indexLines.Add('<div class="interlude" aria-hidden="true">')
-$indexLines.Add('  <div class="interlude-kanji">&#26053;&#25991;&#21270;</div>')
-$indexLines.Add('  <div class="interlude-inner">')
-$indexLines.Add('    <div class="interlude-lines"><div class="iline"></div><span class="isymbol">&#9961;</span><div class="iline"></div></div>')
-$indexLines.Add('    <p class="interlude-label">The TABI Philosophy</p>')
-$indexLines.Add('    <p class="interlude-quote">Japan is not a destination.<br><strong>It is a way of seeing.</strong></p>')
-$indexLines.Add('    <p class="interlude-sub">From ancient forest temples to 4am ramen counters &mdash; we find the Japan worth knowing.</p>')
-$indexLines.Add('  </div>')
-$indexLines.Add('</div>')
+$sectionNo = 0
+foreach ($s in $homeSections) {
+    $c = $s.cat
+    $isBuy = ($c.slug -eq 'things-to-buy')
+    $cards = if ($isBuy) { Get-BuyCards $s.items } else { Get-CultureCards $s.items }
+    if (-not $cards) { continue }
 
-# Things to Buy section
-if ($buyHtml) {
     $indexLines.Add('<div class="section-label">')
-    $indexLines.Add('  <span class="section-label-jp" aria-hidden="true">&#36023;&#29289;</span>')
-    $indexLines.Add('  <h2 class="section-label-en">Things to Buy</h2>')
+    $indexLines.Add("  <span class=""section-label-jp"" aria-hidden=""true"">$($c.kanji)</span>")
+    $indexLines.Add("  <h2 class=""section-label-en"">$([System.Net.WebUtility]::HtmlEncode($c.label))</h2>")
     $indexLines.Add('  <div class="section-label-line"></div>')
-    $indexLines.Add('  <a href="categories/things-to-buy.html" class="section-label-link">All guides <span class="arrow">&rarr;</span></a>')
+    $linkText = if ($isBuy) { 'All guides' } else { 'All articles' }
+    $indexLines.Add("  <a href=""categories/$($c.slug).html"" class=""section-label-link"">$linkText <span class=""arrow"">&rarr;</span></a>")
     $indexLines.Add('</div>')
-    $indexLines.Add('<div class="buy-grid">')
-    $indexLines.Add($buyHtml)
+    $indexLines.Add($(if ($isBuy) { '<div class="buy-grid">' } else { '<div class="culture-grid">' }))
+    $indexLines.Add($cards)
     $indexLines.Add('</div>')
+
+    $sectionNo++
+    if ($sectionNo -eq 3) { $interlude | ForEach-Object { $indexLines.Add($_) } }
 }
 
 # Newsletter
@@ -674,7 +698,7 @@ Write-Host "Generating $($articles.Count) article pages..."
 # Pre-build per-category sorted lists for prev/next navigation
 $catPeersMap = @{}
 foreach ($c in $config.categories) {
-    $catPeersMap[$c.slug] = @($articles | Where-Object { $_.category -eq $c.slug } | Sort-Object { $_.publishedAt } -Descending)
+    $catPeersMap[$c.slug] = @($articles | Where-Object { $_.category -eq $c.slug } | Sort-Object { Get-EffectiveDate $_ } -Descending)
 }
 
 foreach ($a in $articles) {
@@ -810,6 +834,13 @@ foreach ($a in $articles) {
     $lines.Add("    <span class=""article-cat cat--$($a.category)"">$cat</span>")
     $lines.Add('    <span class="article-dot"></span>')
     $lines.Add("    <span class=""article-date"">$date</span>")
+    # Articles are ordered by their updated date, so say so when it differs from
+    # the publication date rather than leaving a reader wondering why an old post
+    # is at the top of the homepage.
+    if ($a.updatedAt -and $a.updatedAt -gt $a.publishedAt) {
+        $lines.Add('    <span class="article-dot"></span>')
+        $lines.Add("    <span class=""article-date"">Updated $(Format-Date $a.updatedAt)</span>")
+    }
     $lines.Add('    <span class="article-dot"></span>')
     $lines.Add("    <span class=""article-reading"">$($a.readingTime) min read</span>")
     $lines.Add("  </div>")
@@ -850,7 +881,7 @@ Get-ChildItem "$root\categories" -Filter *.html | Where-Object { $validCategoryF
 }
 
 foreach ($cat in $config.categories) {
-    $catArticles = $articles | Where-Object { $_.category -eq $cat.slug } | Sort-Object { $_.publishedAt } -Descending
+    $catArticles = $articles | Where-Object { $_.category -eq $cat.slug } | Sort-Object { Get-EffectiveDate $_ } -Descending
     $n = Write-ListingPages $catArticles "categories/$($cat.slug)" $cat.label `
         "Browse all $($cat.label) articles on $siteName." '' $cat.slug
     Write-Host "  Generated categories/$($cat.slug).html ($(@($catArticles).Count) articles, $n page(s))"
@@ -861,7 +892,7 @@ foreach ($cat in $config.categories) {
 # "All articles" link needs a real archive to point at. That link and the hero button
 # both used to point at a category page that does not exist.
 Write-Host "Generating articles.html..."
-$archiveArticles = $articles | Sort-Object { $_.publishedAt } -Descending
+$archiveArticles = $articles | Sort-Object { Get-EffectiveDate $_ } -Descending
 Get-ChildItem $root -Filter 'articles-*.html' | ForEach-Object { Remove-Item -LiteralPath $_.FullName }
 $n = Write-ListingPages $archiveArticles 'articles' 'All Articles' `
     "Every guide on $siteName - travelling, eating and living well in Japan." '&#26053;'
@@ -886,7 +917,7 @@ Get-ChildItem "$root\tags" -Filter *.html | Where-Object { $validTagFiles -notco
 }
 
 foreach ($tag in $allTags) {
-    $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { $_.publishedAt } -Descending
+    $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { Get-EffectiveDate $_ } -Descending
     Write-ListingPages $tagArticles "tags/$tag" "#$tag" "Articles tagged $tag on $siteName." | Out-Null
 }
 Write-Host "Generated $($allTags.Count) tag pages"
