@@ -104,6 +104,7 @@ aborts the build if an article uses a category or tag that is not configured.
 | `scripts/monetization.ps1` | Ad slots + contextual affiliate blocks (dot-sourced by generate-pages.ps1) |
 | `scripts/generate-feeds.ps1` | sitemap.xml / rss.xml / robots.txt / ads.txt / articles-slim.json |
 | `scripts/generate-site.ps1` | Entry point, runs all scripts |
+| `scripts/check-freshness.ps1` | Reports which articles need their facts re-checked. Runs on every build; never fails it |
 | `docs/tabi-mockup.html` | Design mockup (reference only) |
 | `scripts/*-articles*.ps1`, `migrate-*.ps1` | One-off migrations, already applied. Safe to delete. |
 

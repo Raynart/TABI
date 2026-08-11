@@ -51,6 +51,11 @@ rule at the bottom of this file, which has been violated twice with real data lo
   "tags": ["kyoto", "first-time"],
   "publishedAt": "2026-05-20",
   "updatedAt": "",
+  "region": "",
+  "factsCheckedAt": "2026-08-11",
+  "factsExpire": [
+    { "on": "2026-11-01", "what": "What changes on that date and what to rewrite" }
+  ],
   "readingTime": 6,
   "heroImage": "https://raynart.github.io/TABI/assets/images/unique-slug-in-kebab-case.webp",
   "heroImageAlt": "Descriptive alt text for the hero image",
@@ -76,7 +81,10 @@ rule at the bottom of this file, which has been violated twice with real data lo
 | `category` | One of the 6 slugs below. **Enforced** — an unknown value aborts the build |
 | `tags` | From the taxonomy below. **Enforced**. 2-3 is typical; do not exceed 5. A tag used by fewer than `thinTagThreshold` articles gets a `noindex` tag page |
 | `publishedAt` | `YYYY-MM-DD`. Drives sort order, the sitemap and the RSS feed |
-| `updatedAt` | `YYYY-MM-DD` or empty string `""` |
+| `updatedAt` | `YYYY-MM-DD` or empty string `""`. Listings sort on the later of this and `publishedAt`, so a rewritten article resurfaces without faking its publication date |
+| `region` | One of the 9 region slugs, or `""` for nationwide. **Enforced.** Set it only when the title or excerpt is genuinely *about* a place — naming Tokyo as a reference point ("three hours from Tokyo") does not make an article a Kanto article. Two thirds of the site is nationwide |
+| `factsCheckedAt` | `YYYY-MM-DD` the article's prices, dates and rules were last verified, or `""` if it makes no checkable claim. **Enforced** to be a real date |
+| `factsExpire` | Array of `{"on": "YYYY-MM-DD", "what": "..."}` — facts with a known change date. **Enforced.** `check-freshness.ps1` warns 60 days ahead and flags it once the date passes. Every factual error found in the August 2026 audit was a fact with a scheduled change date written as though permanent, so add an entry whenever you write one |
 | `readingTime` | **Derived.** `generate-pages.ps1` computes it from the actual word count at 220 wpm and ignores this field. Keep it in sync, but the page is what the page says |
 | `heroImage` | **Absolute** production URL under `assets/images/`. A relative path silently disables the `width`/`height` and `srcset` output |
 | `heroImageAlt` | Required whenever `heroImage` is set |
@@ -86,9 +94,11 @@ rule at the bottom of this file, which has been violated twice with real data lo
 | `relatedIds` | Existing article `id` values, 2-3. An id that does not exist is silently dropped |
 | `author` | `"TABI Editorial"` |
 
-Only four things are actually enforced by `generate-pages.ps1`: category, tags,
-a non-empty `excerpt`, and non-empty `sections`. Everything else in this table is
-convention, and breaking it fails quietly rather than loudly.
+`generate-pages.ps1` aborts the build on: an unknown `category`, an unknown
+`tag`, an unknown `region`, an empty `excerpt`, empty `sections`, a section image
+without `alt`, and a malformed `factsCheckedAt` or `factsExpire` date. Everything
+else in this table is convention, and breaking it fails quietly rather than
+loudly.
 
 ### Category Values (use exactly as written)
 

@@ -74,6 +74,33 @@ foreach ($c in $config.categories) {
     if (-not $c.kanji) { $dataErrors.Add("site.config.json: category '$($c.slug)' has no kanji for its homepage section") }
 }
 
+# Freshness metadata has to parse, or check-freshness.ps1 silently skips it and
+# the article quietly stops being tracked -- the exact failure it exists to stop.
+function Test-IsoDate {
+    # Must be a real date, not merely the right shape: check-freshness.ps1 parses
+    # these, and 2026-13-99 matches the pattern but blows up there.
+    param($value)
+    $parsed = [datetime]::MinValue
+    return [datetime]::TryParseExact(
+        $value, 'yyyy-MM-dd',
+        [System.Globalization.CultureInfo]::InvariantCulture,
+        [System.Globalization.DateTimeStyles]::None, [ref]$parsed)
+}
+
+foreach ($a in $articles) {
+    if ($a.factsCheckedAt -and -not (Test-IsoDate $a.factsCheckedAt)) {
+        $dataErrors.Add("$($a.id): factsCheckedAt '$($a.factsCheckedAt)' is not a valid yyyy-MM-dd date")
+    }
+    foreach ($e in @($a.factsExpire)) {
+        if (-not (Test-IsoDate $e.on)) {
+            $dataErrors.Add("$($a.id): factsExpire 'on' value '$($e.on)' is not a valid yyyy-MM-dd date")
+        }
+        if (-not $e.what) {
+            $dataErrors.Add("$($a.id): factsExpire $($e.on) needs a 'what' describing the change")
+        }
+    }
+}
+
 $validRegions = @($config.regions | ForEach-Object { $_.slug })
 foreach ($a in $articles) {
     # An empty region means the article is nationwide, which is the common case.
