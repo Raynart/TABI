@@ -1235,7 +1235,8 @@
     "relatedIds": [
       "ryokan-first-time-guide",
       "temple-shrine-etiquette",
-      "public-behavior-japan"
+      "public-behavior-japan",
+      "japanese-toilets-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1321,7 +1322,8 @@
     "relatedIds": [
       "train-etiquette-japan",
       "japanese-business-card-etiquette",
-      "shoes-off-guide"
+      "shoes-off-guide",
+      "bowing-in-japan"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -1423,7 +1425,8 @@
     "relatedIds": [
       "japanese-vending-machines",
       "japan-convenience-store-guide",
-      "japan-trip-budget"
+      "japan-trip-budget",
+      "paying-for-things-etiquette"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -3339,7 +3342,8 @@
     "relatedIds": [
       "japanese-drugstore-finds",
       "japanese-stationery-guide",
-      "japanese-gift-omiyage"
+      "japanese-gift-omiyage",
+      "where-to-shop-japan"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -4554,7 +4558,8 @@
     "relatedIds": [
       "buying-matcha-guide",
       "kintsugi-art-of-gold",
-      "donki-shopping-guide"
+      "donki-shopping-guide",
+      "japanese-textiles-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -5272,7 +5277,8 @@
     "relatedIds": [
       "chopstick-etiquette",
       "gift-giving-etiquette",
-      "tattoo-onsen-guide"
+      "tattoo-onsen-guide",
+      "japanese-ceramics-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -7774,6 +7780,606 @@
           "Staying in the Dogo district rather than by the station is the better choice: the ryokan there have their own hot spring baths, and the district is at its best in the evening when the day visitors have gone and people walk between the baths in yukata and wooden sandals.",
           "Two nights covers the baths, the castle and Ishite-ji comfortably. Add nights if the Shimanami Kaido or the pilgrimage is part of the plan.",
           "It also works well as one end of a Shikoku loop, paired with Takamatsu and the art islands on the other coast."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japanese-ceramics-guide",
+    "title": "Buying Japanese Ceramics: Regions, Shapes and Getting Them Home",
+    "excerpt": "Every region makes pottery and every region's pottery looks different. Knowing four or five of the styles turns a shelf of similar bowls into a choice worth making.",
+    "category": "things-to-buy",
+    "region": "",
+    "tags": [
+      "shopping",
+      "tradition",
+      "practical"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "tokyo-day-trips",
+      "kintsugi-art-of-gold",
+      "japanese-gift-omiyage"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Why there are so many kinds",
+        "paragraphs": [
+          "Japanese ceramics are organised by place. A style is named for the town or province that produces it, the local clay and the local kiln tradition determine how it looks, and the differences are large enough that an experienced eye identifies the origin instantly.",
+          "This is not a marketing construct. It comes from centuries of separate development in domains that controlled their own kilns, in a country where the material available in one valley is not the material available in the next.",
+          "For a buyer it means the useful question is not 'is this good pottery' but 'which tradition is this, and do I like that tradition'. Once a few of them are recognisable, shopping stops being guesswork."
+        ]
+      },
+      {
+        "heading": "The ones worth recognising",
+        "paragraphs": [
+          "Hagi, from Yamaguchi, is pale, soft-looking and covered in a crackled glaze that absorbs tea over years and changes colour as it does. Collectors talk about a Hagi cup being finished by use rather than by the potter.",
+          "Bizen, from Okayama, is unglazed. The surface comes entirely from wood ash and flame in the kiln, producing russet and dark brown markings that cannot be planned precisely. It is heavy, earthy and unmistakable.",
+          "Arita and Imari, from Kyushu, are the opposite: fine white porcelain with detailed painting in cobalt blue, or in enamel colours. This is the ware that was exported to Europe in enormous quantities from the seventeenth century and shaped what Europeans thought Asian porcelain looked like.",
+          "Mashiko, north of Tokyo, is thick, sturdy folk pottery with generous glazes, closely associated with the mingei folk-craft movement. Karatsu is restrained and understated and much loved for tea. Kutani is boldly coloured with green, yellow and red overglaze.",
+          "Those six cover most of what a visitor will meet."
+        ]
+      },
+      {
+        "heading": "Shapes that are worth owning",
+        "paragraphs": [
+          "The rice bowl and the small side dish are the everyday pieces and the easiest to use outside Japan. Buy more of the small dishes than you think; Japanese meals use several per person and they are the most versatile things you will bring home.",
+          "The yunomi, a tall handleless tea cup, and the guinomi, a small sake cup, are the pieces where individual potters do their most interesting work and where the price range is widest.",
+          "A donburi bowl, larger and deeper, is genuinely useful. A tokkuri flask for sake pairs with the cups. A kyusu teapot with a side handle is the traditional shape for green tea, and the ones with a built-in mesh strainer are the practical choice.",
+          "Chopstick rests are the cheapest thing in any pottery shop and make excellent small gifts."
+        ]
+      },
+      {
+        "heading": "Where to buy",
+        "paragraphs": [
+          "Department store craft floors carry a curated selection from across the country with knowledgeable staff, and they will wrap for travel properly. Prices are higher and the quality is dependable.",
+          "Pottery towns are the enjoyable option: buying from the person who made the object, in the town where it was made, usually below city prices. Mashiko is the accessible one from Tokyo; Arita, Bizen, Hagi and Karatsu all reward a detour if the trip is heading that way.",
+          "Pottery fairs are the best of all. Most kiln towns hold one or two a year, typically in spring and autumn, when hundreds of potters set up along the streets. Prices drop and the selection is enormous.",
+          "In cities, look for craft shops in the older districts rather than souvenir shops near stations. Kyoto and Kanazawa both have several streets of them."
+        ]
+      },
+      {
+        "heading": "Judging a piece without expertise",
+        "paragraphs": [
+          "Pick it up. Weight and balance in the hand are most of what separates a good piece from a mediocre one, and they cannot be judged from a photograph.",
+          "Look at the foot ring, the unglazed circle on the base. That is where the potter's skill and the character of the clay show most plainly, and it is what a Japanese buyer turns the bowl over to inspect.",
+          "Irregularity is not a fault. Asymmetry, a run in the glaze, a mark where the piece rested in the kiln — these are usually deliberate or accepted, and in several traditions they are the point.",
+          "Ask whether a piece is handmade or slip-cast, and whether it is dishwasher and microwave safe. Unglazed Bizen and porous Hagi need hand washing and, in some cases, soaking before first use."
+        ]
+      },
+      {
+        "heading": "Getting it home intact",
+        "paragraphs": [
+          "Have the shop pack it. Japanese shops wrap ceramics extremely well as a matter of course, often in a wooden box for anything expensive, and the box is part of the object's value.",
+          "Carry the pieces you care about in hand luggage. Checked baggage handling is not gentle and a wrapped bowl in a suitcase is a risk taken for no reason.",
+          "For a larger purchase, shipping is straightforward and shops arrange it routinely. Ask about insurance.",
+          "And buy the tax-free exemption in mind if the total is large: ceramics are general goods rather than consumables, so the rules are simpler for them than for food or cosmetics."
+        ]
+      },
+      {
+        "heading": "A note on price",
+        "paragraphs": [
+          "There is no reliable relationship between price and how much you will enjoy using something. A thousand-yen rice bowl from a pottery town used every day will give more pleasure than an expensive display piece.",
+          "The genuinely expensive end — work by named artists, tea ceremony pieces with provenance — is a collectors' market with its own logic, and it is not where a visitor should start.",
+          "Buy what you will put food in."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japanese-textiles-guide",
+    "title": "Tenugui, Furoshiki and Noren: Japanese Cloth Worth Buying",
+    "excerpt": "Flat, light, cheap and useful. Japanese textiles are the best souvenirs nobody thinks to buy, and they weigh nothing in a suitcase already full of ceramics.",
+    "category": "things-to-buy",
+    "region": "",
+    "tags": [
+      "shopping",
+      "tradition",
+      "budget"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "authentic-yukata-tokyo",
+      "japanese-gift-omiyage",
+      "japanese-ceramics-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The case for cloth",
+        "paragraphs": [
+          "Most souvenir problems are problems of weight, fragility and use. Textiles solve all three: they are flat, unbreakable, weigh almost nothing, and the traditional forms are things people actually use daily in Japan rather than ornaments.",
+          "They are also among the cheapest genuinely well-made things you can buy in the country. A hand-printed cotton cloth from a shop that has been printing since the Edo period costs less than lunch."
+        ]
+      },
+      {
+        "heading": "Tenugui",
+        "paragraphs": [
+          "A tenugui is a thin cotton cloth, roughly ninety by thirty-five centimetres, unhemmed on the long edges so it dries quickly. It has been the standard Japanese hand towel for centuries and it is still in daily use.",
+          "The uses are the point: hand towel, dish cloth, head covering in summer, wrapping for a lunch box, cover for a bottle, and — because the designs are frequently beautiful — framed or hung on a wall.",
+          "Designs run from traditional patterns with specific meanings, through seasonal motifs that change through the year, to the collaborations and novelty prints that shops now produce constantly. The seasonal ones are worth knowing about: a shop's stock rotates, and a summer pattern bought in summer is a small piece of the calendar.",
+          "The cut edges fray for the first few washes and then stop. This is normal and not a defect."
+        ]
+      },
+      {
+        "heading": "Furoshiki",
+        "paragraphs": [
+          "A furoshiki is a square wrapping cloth, used to carry things by tying rather than by handle. The name comes from bath houses, where they were used to bundle clothes.",
+          "There is a whole grammar of folds: different ties for a bottle, a box, a book, a watermelon, and a fold that produces a carrying handle. The techniques take minutes to learn and shops sell instruction cards with the cloth.",
+          "Sizes matter. Around fifty centimetres is a lunch box or a gift; seventy to ninety is a bag; over a metre is luggage. Buy at least one large one if you intend to use it as a bag.",
+          "They have had a revival as a reusable alternative to gift wrap and shopping bags, and this is a genuinely good thing to bring home: it is useful, it is unlike anything sold elsewhere, and giving a gift wrapped in one is a small pleasure."
+        ]
+      },
+      {
+        "heading": "Noren",
+        "paragraphs": [
+          "The split curtain hanging in a doorway is a noren. In Japan it is a signal as much as a screen: hung out, the shop is open; taken in, it is closed.",
+          "They are sold for domestic use in every size, and a noren in a doorway at home is one of the more transformative small changes an interior can take. Indigo-dyed cotton is traditional; the shop-style ones with a name or a crest are the striking ones.",
+          "Check the rod pocket at the top and buy or improvise a tension rod to hang it from."
+        ]
+      },
+      {
+        "heading": "Indigo, and the dyeing traditions",
+        "paragraphs": [
+          "Aizome, indigo dyeing, is the deepest of the Japanese textile traditions, and Tokushima on Shikoku was the historic centre of it. Real indigo has a depth that synthetic dye does not, it smells faintly of the fermentation vat, and it fades over years into something better than it started.",
+          "Shibori is the resist-dyeing technique in which cloth is bound, stitched or folded before dyeing so the bound parts stay pale. Arimatsu near Nagoya is the traditional centre and has a museum and workshops.",
+          "Katazome uses stencils cut from paper to apply resist paste; the crispness of a tenugui pattern usually comes from this. Workshops in Kyoto and Tokyo run short courses where you dye your own piece, which produces a better souvenir than anything you can buy."
+        ]
+      },
+      {
+        "heading": "Other cloth worth a look",
+        "paragraphs": [
+          "Sashiko is the running-stitch technique originally used to reinforce and repair working clothes, now a decorative craft in its own right. Kits with pre-printed patterns are widely sold and make good presents for anyone who sews.",
+          "Boro — patched, layered, heavily repaired old textiles — has become collectable and is sold in antique markets. It is the physical embodiment of the mending aesthetic that kintsugi expresses in ceramics.",
+          "Kaya, the loosely woven cloth originally used for mosquito nets, is now made into exceptionally absorbent dish towels that are a staple gift.",
+          "And a yukata is a textile purchase as much as a garment one, if the fabric is what appeals."
+        ]
+      },
+      {
+        "heading": "Reading the patterns",
+        "paragraphs": [
+          "Traditional motifs carry meaning, and a surprising amount of it survives in what is sold today. Asanoha, the hemp-leaf lattice, was used on children's clothing because hemp grows fast and straight. Seigaiha, the layered wave, stands for waves of good fortune. Shippo, interlocking circles, means harmony and connection.",
+          "Cranes and turtles are longevity, pine bamboo and plum together are the auspicious trio for New Year, and the seasonal flowers each belong to a specific few weeks of the year.",
+          "None of this is required knowledge for buying, but it turns a nice pattern into a deliberate choice — and it makes the difference between a generic gift and one selected for the person receiving it."
+        ]
+      },
+      {
+        "heading": "Where to buy",
+        "paragraphs": [
+          "Specialist tenugui shops exist in Tokyo and Kyoto and are the enjoyable option: walls of folded cloth arranged by season and pattern, with staff who will explain the motifs.",
+          "Department store craft floors carry the established makers. Temple and shrine shops sell their own designs, which make specific and personal souvenirs.",
+          "Antique and flea markets — the temple markets in Kyoto, Oedo in Tokyo — are where old indigo, boro and vintage kimono fabric turn up, often cheaply.",
+          "Avoid the airport. The selection is thin and the designs are the generic ones."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "where-to-shop-japan",
+    "title": "Where to Actually Shop: Department Stores, 100-Yen Shops and the Rest",
+    "excerpt": "Japanese retail is organised by type of shop rather than by price, and knowing which kind of building to walk into saves more money and time than any list of individual stores.",
+    "category": "things-to-buy",
+    "region": "",
+    "tags": [
+      "shopping",
+      "practical",
+      "budget"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [
+      {
+        "on": "2026-11-01",
+        "what": "Tax-free becomes refund-at-departure; simplify the tax-free paragraph once the old system is gone"
+      }
+    ],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "donki-shopping-guide",
+      "japanese-stationery-guide",
+      "japanese-gift-omiyage"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The types, and what each is for",
+        "paragraphs": [
+          "Japanese retail sorts itself into recognisable categories, and each has a predictable range, price level and standard of service. Learning the six or seven types is more useful than any list of specific shops, because every city has all of them.",
+          "The depatchika, the electronics chain, the hundred-yen shop, the lifestyle store, the drugstore, the discount store and the shotengai each solve a different problem, and the mistake most visitors make is buying something in the wrong one."
+        ]
+      },
+      {
+        "heading": "Department stores, and their basements",
+        "paragraphs": [
+          "The depato is the top of the retail hierarchy: multiple floors, immaculate service, staff who bow as the doors open, and a craft floor that is frequently the best curated selection of Japanese-made goods in the city.",
+          "The basement, the depachika, is the reason to go. It is a food hall of extraordinary density — prepared dishes, sweets, bento, tea, sake, fruit sold as gifts — and it is where to buy anything intended as a present. The wrapping alone is worth the visit.",
+          "Two practical notes. Prices are highest here, and the quality justifies it for gifts rather than for daily shopping. And in the last hour before closing, the prepared food counters discount heavily, which is a genuine and widely used strategy rather than a hardship."
+        ]
+      },
+      {
+        "heading": "100-yen shops",
+        "paragraphs": [
+          "Daiso, Seria and Can Do sell almost everything at a flat low price, and the quality is startling relative to what an equivalent shop sells elsewhere. This is where Japanese households buy storage, stationery, kitchen tools and cleaning supplies.",
+          "For a visitor they are the best value souvenir source in the country: chopsticks, small ceramics, tenugui, stationery, kitchen gadgets, packaging materials. A bag of small gifts from a hundred-yen shop is not an insult here in the way it might be elsewhere.",
+          "The larger branches are the ones worth finding, and Seria skews towards better-designed goods than the others."
+        ]
+      },
+      {
+        "heading": "Lifestyle and variety stores",
+        "paragraphs": [
+          "Loft and Tokyu Hands occupy a category that barely exists outside Japan: several floors of well-designed practical objects, from stationery and travel goods to kitchenware and gadgets nobody knew they wanted.",
+          "They are the best place to browse without a specific purpose and the best source of the small clever objects that Japan is known for. Stationery in particular is a floor of its own.",
+          "Muji is the minimalist end of the same idea, and it is meaningfully cheaper in Japan than abroad."
+        ]
+      },
+      {
+        "heading": "Discount stores and electronics",
+        "paragraphs": [
+          "Don Quijote is the chaotic discount chain, open late or around the clock, stocking everything from snacks to cosmetics to luggage in narrow aisles under fluorescent light. It is an experience as much as a shop.",
+          "The electronics chains — Yodobashi, Bic Camera — are far more than electronics: they carry watches, toys, cosmetics, alcohol and household goods over many floors. Their point cards give meaningful discounts, and the duty-free counters are efficient.",
+          "For anything with a plug, check the voltage and the plug type before buying. Japan runs at a hundred volts, which is lower than most of the world, and appliances bought here may work poorly or not at all elsewhere."
+        ]
+      },
+      {
+        "heading": "Shotengai, and the shops that are not chains",
+        "paragraphs": [
+          "A shotengai is a covered shopping street, usually near a station, lined with small independent shops: a tofu maker, a fishmonger, a sweet shop, a stationer, a knife sharpener. Many are decades old and some are struggling.",
+          "These are the most interesting places to shop and the least convenient. There is little English, opening hours are short, and payment is often cash. What you get is goods made by the person selling them.",
+          "Every city has several. Ask where the local one is rather than looking for a famous one."
+        ]
+      },
+      {
+        "heading": "Markets, second-hand and antiques",
+        "paragraphs": [
+          "Temple and shrine markets — Toji and Kitano Tenmangu in Kyoto, Oedo in Tokyo — run monthly and sell antiques, old textiles, ceramics and general junk. They are the best source of genuinely old objects at reasonable prices.",
+          "The second-hand chains are a distinct Japanese phenomenon. Book Off and its siblings sell used books, clothes, instruments and electronics in a condition that would be sold as new elsewhere, because the domestic tolerance for wear is low. Prices are correspondingly good.",
+          "Recycle shops and vintage clothing districts, particularly in Koenji and Shimokitazawa in Tokyo, are where the interesting clothing is."
+        ]
+      },
+      {
+        "heading": "Opening hours, which are not what you expect",
+        "paragraphs": [
+          "Department stores open late by international standards — commonly around ten — and close early, often by eight. Planning a morning of shopping before eleven does not work.",
+          "Small independent shops keep shorter and less predictable hours, and many close one fixed day a week. Craft shops and galleries in particular often shut on Mondays or Wednesdays.",
+          "Convenience stores, discount chains and some electronics stores run late or around the clock, which inverts the usual pattern: the cheap shops are open when the expensive ones are shut.",
+          "New Year is the one period when a great deal simply closes, for several days. Golden Week and Obon are busy rather than closed."
+        ]
+      },
+      {
+        "heading": "Practical matters",
+        "paragraphs": [
+          "Tax-free purchasing requires your physical passport and a minimum spend at the same store on the same day. The system changes substantially at the start of November 2026, moving from a deduction at the till to a refund claimed at the airport, so check which applies to your dates.",
+          "Many shops still prefer cash, particularly the small independent ones and the markets.",
+          "Ask for a bag if you want one; they are charged for and no longer given automatically. A furoshiki solves this permanently.",
+          "And most shops will gift wrap on request, to a standard that makes the wrapping part of the present."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bowing-in-japan",
+    "title": "Bowing: What It Actually Means and What Visitors Should Do",
+    "excerpt": "You will be bowed to several hundred times a day and you are not expected to return most of them. The rules are simpler than they look, and getting them slightly wrong is entirely fine.",
+    "category": "rules-etiquette",
+    "region": "",
+    "tags": [
+      "first-time",
+      "tradition",
+      "practical"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "japanese-business-card-etiquette",
+      "temple-shrine-etiquette",
+      "public-behavior-japan"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "It is punctuation, not ceremony",
+        "paragraphs": [
+          "Bowing in Japan is closer to a spoken particle than to a ritual. It marks greeting, thanks, apology, request, acknowledgement and departure, and it happens constantly and mostly without thought.",
+          "Shop staff bow to customers. Drivers bow from inside the cab. People bow while on the telephone to someone who cannot see them. Train conductors bow to the carriage on entering and leaving it.",
+          "Because it is that routine, the anxiety visitors bring to it is misplaced. Nobody is assessing your form."
+        ]
+      },
+      {
+        "heading": "The three depths, roughly",
+        "paragraphs": [
+          "A slight nod of about fifteen degrees is the everyday one: acknowledgement, thanks for something small, greeting a colleague. This covers the overwhelming majority of situations a visitor is in.",
+          "Around thirty degrees is a proper greeting or a sincere thank you — meeting someone, thanking a host, entering a formal situation.",
+          "Around forty-five degrees, held slightly longer, is deep respect or serious apology. A visitor will almost never need this, and using it casually looks odd rather than polite.",
+          "The form: back straight rather than curved, bend from the waist, hands at the sides for men and folded in front for women, eyes down rather than making eye contact. Do not bow and shake hands simultaneously, which is a common and slightly comic hybrid."
+        ]
+      },
+      {
+        "heading": "When you do not need to respond",
+        "paragraphs": [
+          "This is the useful part. Service bows are not invitations to reciprocate. Staff greeting you as you enter a shop, the person handing you a tray, the conductor at the door — these are professional courtesies directed at customers in general, and no response is required beyond perhaps a nod.",
+          "Returning every one of them is exhausting and marks you out more than not returning them.",
+          "The situations that do call for a bow from you: being introduced to someone, thanking a person who has genuinely helped you, apologising, leaving a restaurant or ryokan where you were looked after, and receiving something with both hands."
+        ]
+      },
+      {
+        "heading": "Bowing at shrines and temples, which is different",
+        "paragraphs": [
+          "Religious bowing follows a set form rather than a social one. At a shrine the sequence at the main hall is two bows, two claps, a pause, then one more bow. At Izumo Taisha the convention is four claps rather than two.",
+          "At Buddhist temples there is no clapping. A single bow with palms together is the form.",
+          "A shallow bow at the torii on entering and leaving a shrine is customary and is a nice habit to pick up, as is stepping to the side of the path rather than walking down its centre."
+        ]
+      },
+      {
+        "heading": "Business, briefly",
+        "paragraphs": [
+          "In a business setting the bow is calibrated to relative seniority: the junior person bows slightly lower and rises slightly later. Visitors are not expected to navigate this and will be given latitude.",
+          "The exchange of business cards has its own choreography — both hands, card facing the recipient, read it before putting it away, never write on it or put it in a back pocket — and it matters considerably more than the bow accompanying it.",
+          "A moderate bow, a card offered properly, and attention to the person in front of you covers everything a visitor needs."
+        ]
+      },
+      {
+        "heading": "The apology bow, and why it is everywhere",
+        "paragraphs": [
+          "A great deal of Japanese bowing is apology, and the threshold for it is far lower than in most cultures. Squeezing past someone, arriving slightly late, asking a question that takes up time — all of these are routinely marked with sumimasen and a small bow.",
+          "Sumimasen does the work of excuse me, sorry and thank you depending on context, and pairing it with a slight bow is the single most useful piece of physical vocabulary a visitor can acquire.",
+          "Using it too often is not a mistake. Using it too rarely reads as brusque."
+        ]
+      },
+      {
+        "heading": "Things that are not bowing but do the same job",
+        "paragraphs": [
+          "A slight nod while saying sumimasen covers most of what a visitor needs in a day. It is the compressed everyday form and it is what people actually use in shops and on trains.",
+          "Holding a hand vertically in front of the face, like a small karate chop, while moving through a crowd or past someone is a real and widely used gesture meaning excuse me. It looks odd the first time and is entirely normal.",
+          "Waving a hand in front of the face means no, and is the polite refusal — of an offer, a compliment or a mistaken assumption.",
+          "None of these are formal etiquette. They are the physical shorthand of ordinary interaction, and picking them up happens by imitation within a few days."
+        ]
+      },
+      {
+        "heading": "What actually matters",
+        "paragraphs": [
+          "Attentiveness. A bow that is slightly too shallow but clearly directed at the person is read as polite; a technically correct bow performed while looking at a phone is not.",
+          "Receiving things with two hands, particularly money, cards and gifts.",
+          "And not overthinking it. Japanese people do not expect foreign visitors to bow correctly, are pleased when the attempt is made, and are entirely untroubled when it is not. A nod and a sumimasen will carry you through a month here."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "paying-for-things-etiquette",
+    "title": "The Little Tray: How Paying for Things Works in Japan",
+    "excerpt": "There is a small dish beside every till and it is not decorative. Money is placed, not handed, and the change comes back with a precision that visitors mistake for suspicion.",
+    "category": "rules-etiquette",
+    "region": "",
+    "tags": [
+      "first-time",
+      "practical",
+      "budget"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "cash-vs-card-japan",
+      "tipping-in-japan",
+      "japanese-menu-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The tray",
+        "paragraphs": [
+          "Beside the register in almost every shop in Japan there is a small tray, often lined with rubber or felt. Money goes in it. The cashier takes it from the tray, and the change and receipt come back in the tray rather than into your hand.",
+          "This is not a hygiene measure or a distancing device. It exists because it makes counting unambiguous and hand-to-hand fumbling unnecessary, and because placing rather than passing is the more courteous form.",
+          "Handing cash directly is not an offence and will be accepted, but the tray is right there and using it marks you as someone paying attention. Cards go in it too."
+        ]
+      },
+      {
+        "heading": "The change is counted, always",
+        "paragraphs": [
+          "Change is counted out visibly, frequently twice, and often with the notes fanned so the count can be seen. Coins are placed separately. Receipts are given without being asked for.",
+          "This is not distrust of you. Cash handling accuracy is treated as a professional standard, and the visible count is part of doing the job properly.",
+          "Wait for it rather than sweeping the money up mid-count. It takes four seconds and walking away early interrupts something the cashier is required to complete."
+        ]
+      },
+      {
+        "heading": "Both hands, and why",
+        "paragraphs": [
+          "Anything given or received formally — a business card, a gift, a document, money in a non-retail context — goes with both hands. It is the physical equivalent of giving something your full attention.",
+          "In everyday shop transactions one hand is fine because the tray is doing the work. In any situation with a person rather than a counter, two hands.",
+          "The same logic applies to receiving: take a bag, a card or a purchase with both hands where practical, and with a nod."
+        ]
+      },
+      {
+        "heading": "Cash, and how much of it to carry",
+        "paragraphs": [
+          "Card acceptance has expanded a great deal, but Japan is still a country where cash resolves every situation and cards resolve most. Small restaurants, temples, markets, some buses and many independent shops remain cash only.",
+          "You will accumulate coins at a startling rate. The one-yen and five-yen coins are close to useless; the hundreds and five hundreds are valuable for lockers, vending machines and buses. Keep a coin purse rather than fighting a wallet.",
+          "Notes come out of ATMs in ten-thousand-yen denominations and nobody minds you breaking one for a small purchase. This surprises visitors from countries where paying for a coffee with a large note is provocative."
+        ]
+      },
+      {
+        "heading": "Splitting a bill, and paying for other people",
+        "paragraphs": [
+          "Splitting evenly is the norm among friends and is called warikan. Itemised splitting is uncommon and asking a restaurant to divide a bill across several cards is often not possible, particularly in smaller places.",
+          "The practical method is that one person pays and the others transfer or hand over cash afterwards, which is why everyone carries some.",
+          "In a group with a clear senior person — a host, an older relative, a boss — that person may pay for everyone, and the polite response is a token protest followed by acceptance and clear thanks. Insisting on splitting can be the less courteous option.",
+          "Paying at the table is unusual. In most restaurants you take the slip left on your table to the register by the door and pay there on the way out."
+        ]
+      },
+      {
+        "heading": "Tipping, in one line",
+        "paragraphs": [
+          "There is none. Not in restaurants, not in taxis, not for hotel staff. Leaving money will produce confusion and frequently someone chasing you down the street to return it.",
+          "The exception, and it is a narrow one, is the envelope of cash sometimes given to a ryokan attendant at a traditional inn, which is a different social act entirely and is not expected of visitors."
+        ]
+      },
+      {
+        "heading": "The ordering machines",
+        "paragraphs": [
+          "Many ramen, curry and gyudon shops take payment before the food through a vending machine by the door: buttons for each dish, insert cash or tap a card, take the printed ticket to the counter.",
+          "The convention is that the top-left button is the shop's signature dish. Machines increasingly have English and photographs.",
+          "The system exists to remove the transaction from the meal entirely, which is why nobody brings you a bill and why leaving is simply a matter of standing up."
+        ]
+      },
+      {
+        "heading": "Queueing at the till, and bagging",
+        "paragraphs": [
+          "Queues at a register form in a single line and are respected absolutely. If there are several registers, look for whether the queue is one line feeding all of them or a separate line per till; both arrangements exist and the floor markings will say which.",
+          "You bag your own purchases in supermarkets and convenience stores, at a separate counter beside the till rather than at the register itself. The cashier will put your items back into a basket and slide it along; take the basket to the packing bench.",
+          "Bags are charged for and are not given automatically, so say whether you want one when you reach the till.",
+          "In department stores the opposite applies: staff will wrap, bag and frequently walk the bag around the counter to hand it to you, and in some cases accompany you to the door."
+        ]
+      },
+      {
+        "heading": "Small things that make it smoother",
+        "paragraphs": [
+          "Say the number of items rather than pointing repeatedly; the counting words are worth ten minutes of learning.",
+          "Have your IC card or your cash ready before you reach the front. Queues move quickly because everyone does this.",
+          "Take your receipt. You will need it for tax-free processing and for anything you might return.",
+          "And say gochisosama on the way out of a restaurant. It is not a payment ritual, but it is the sentence that ends the transaction properly."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japanese-toilets-guide",
+    "title": "Japanese Toilets: The Control Panel, and Where to Find One",
+    "excerpt": "Heated seats, a panel of unlabelled buttons, and public facilities that are free, everywhere and clean. The toilets are one of the things visitors talk about most and prepare for least.",
+    "category": "before-you-go",
+    "region": "",
+    "tags": [
+      "first-time",
+      "practical"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "shoes-off-guide",
+      "public-behavior-japan",
+      "accessible-travel-japan"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "They are free, and they are everywhere",
+        "paragraphs": [
+          "Public toilets in Japan are free, numerous and generally clean, which is not the case in most countries and is worth planning around in the opposite direction to usual: you do not need to find a café and buy something.",
+          "Train stations all have them. Convenience stores almost all have them and will let you use them without buying anything, though buying something is a decent gesture. Department stores have excellent ones, often on every floor. Parks, temples and shopping centres all have them.",
+          "This changes how a day of walking works. The constraint most travellers plan around simply is not a constraint here."
+        ]
+      },
+      {
+        "heading": "The control panel",
+        "paragraphs": [
+          "The washlet — the electronic bidet seat — is standard in homes, hotels and most public buildings. The panel is either on the wall or on the arm of the seat, and on older units it is entirely in Japanese.",
+          "The two large buttons in the middle are the important ones: one is a rear wash, one is a front wash intended for women. The button that stops everything is usually the largest, often square, often red or orange, and marked with a symbol resembling a stop sign.",
+          "The rest adjust water pressure, water position, temperature and seat heating, and some have a dryer and a deodoriser.",
+          "The one button that catches people out is flush, which is frequently not on the panel at all. It may be a lever on the cistern, a separate wall panel, a sensor you wave a hand at, or a button marked with a large character. If nothing on the electronic panel flushes, look on the wall."
+        ]
+      },
+      {
+        "heading": "Squat toilets still exist",
+        "paragraphs": [
+          "Older stations, parks, temples and rural facilities often have squat toilets, sometimes alongside Western ones. Cubicles are usually marked with a diagram so you can choose.",
+          "The orientation is the part visitors get wrong: you face the raised hood end, not away from it.",
+          "They are becoming less common but they have not disappeared, and a station with only squat toilets is entirely possible in the countryside."
+        ]
+      },
+      {
+        "heading": "The things that are missing",
+        "paragraphs": [
+          "Paper towels and hand dryers are frequently absent. Japanese people carry a small handkerchief or hand towel for exactly this, and it is one of the more useful habits to adopt on arrival — they are sold everywhere and cost very little.",
+          "Bins are also often absent, in line with the general scarcity of public bins.",
+          "Toilet paper is provided in the cubicle and is designed to dissolve, so it goes in the bowl rather than a bin — the opposite of the convention in several other countries.",
+          "In some older or rural facilities there may be no soap. A small bottle of hand sanitiser covers it."
+        ]
+      },
+      {
+        "heading": "The sounds",
+        "paragraphs": [
+          "Many toilets in women's facilities have a button or sensor that plays a flushing sound on a loop. This is the otohime, the sound princess, and it exists to mask the sounds of use — a practice that previously involved flushing repeatedly and wasting a great deal of water.",
+          "It is a button worth recognising so that pressing it is a choice rather than a surprise."
+        ]
+      },
+      {
+        "heading": "Finding one when you need one",
+        "paragraphs": [
+          "Maps applications list public toilets and it is worth searching rather than guessing. Convenience stores are the reliable default in a city and are never far away.",
+          "On trains, the Shinkansen and most limited express services have toilets; ordinary commuter trains and subways do not, though the stations do. Plan around the station rather than the train.",
+          "In older stations the toilets are frequently inside the ticket gates rather than outside, which matters if you have not yet bought a ticket.",
+          "Department stores are the best facilities in any Japanese city — clean, spacious, well equipped and never busy on the upper floors."
+        ]
+      },
+      {
+        "heading": "Slippers, which is the one real trap",
+        "paragraphs": [
+          "In any building where you have removed your shoes — a ryokan, a temple, a traditional restaurant, a private home — there will be a separate pair of slippers inside the toilet room.",
+          "Change into them on the way in and, crucially, change out of them on the way out. Walking back into a tatami room wearing the toilet slippers is the single most reliable mistake visitors make, and it is immediately visible to everyone.",
+          "It happens to almost everybody once. Nobody will say anything, and you will notice about four steps later."
+        ]
+      },
+      {
+        "heading": "Onsen, pools and the toilets attached to them",
+        "paragraphs": [
+          "Bathing facilities have their own arrangement: the toilet is outside the changing room rather than inside the bathing area, and there are slippers for the trip.",
+          "Public baths and onsen frequently have older facilities than the rest of the building, and squat toilets are more common in them than elsewhere.",
+          "Take a small towel with you everywhere in a bathing complex; it does duty for washing, drying and covering, and there will be nothing provided at the basin."
+        ]
+      },
+      {
+        "heading": "Accessible and family facilities",
+        "paragraphs": [
+          "Multipurpose cubicles are widespread and well equipped, with space for a wheelchair, a fold-down changing table, and often a small seat for a child.",
+          "Baby changing facilities are common in both men's and women's toilets in newer buildings, though not universally in older ones.",
+          "Department stores and larger stations are the reliable places to find a fully equipped facility."
         ]
       }
     ]
