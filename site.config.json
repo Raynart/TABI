@@ -69,5 +69,78 @@
     "instagram": "",
     "pinterest": ""
   },
-  "beehiivUrl": ""
+  "beehiivUrl": "",
+  "thinTagThreshold": 3,
+  "publisher": {
+    "_comment": "Who actually stands behind this site. Leave a field empty and nothing is claimed -- the pages will not invent a person. Filling name/role/bio switches on a real byline, an author box and Person structured data, which is what an ad-network or search reviewer looks for on a travel site. Do not put a name here that is not a real person willing to be contacted.",
+    "name": "",
+    "role": "",
+    "location": "",
+    "bio": "",
+    "since": "2026",
+    "_disclosureNote": "Optional. Put a sentence in disclosure and it appears on about.html under How these guides are made. Left empty, the site says nothing about its production process -- which is honest, because no page claims otherwise. Do not use this field to assert something that is not true in the other direction.",
+    "disclosure": ""
+  },
+  "monetization": {
+    "_comment": "Nothing here renders until it is filled in. An empty adsense.clientId means no ad markup is generated at all; a partner with an empty url is skipped. Sign up for each programme, paste your own tracking link into url, then re-run generate-site.ps1.",
+    "adsense": {
+      "clientId": "",
+      "inArticleSlot": "",
+      "endOfArticleSlot": "",
+      "inFeedSlot": "",
+      "afterSection": 2
+    },
+    "disclosure": "Some links below are affiliate links. If you book or buy through them TABI earns a small commission, at no extra cost to you.",
+    "partnerBoxTitle": "Plan This Trip",
+    "partnerBoxTitleShopping": "Where to Buy",
+    "maxPartnersPerArticle": 3,
+    "partners": [
+      {
+        "id": "klook",
+        "name": "Klook",
+        "kicker": "Tickets &amp; passes",
+        "description": "JR Pass, Shinkansen seats, teamLab and day tours &mdash; booked in English before you land.",
+        "cta": "Browse Japan passes",
+        "url": "",
+        "match": { "categories": ["getting-around", "before-you-go"], "tags": ["transport", "first-time", "practical"] }
+      },
+      {
+        "id": "booking",
+        "name": "Booking.com",
+        "kicker": "Ryokan &amp; hotels",
+        "description": "The widest English-language inventory for Japan, including ryokan that take no other foreign bookings.",
+        "cta": "Check availability",
+        "url": "",
+        "match": { "categories": ["before-you-go", "hidden-japan"], "tags": ["accommodation", "luxury", "tradition"] }
+      },
+      {
+        "id": "getyourguide",
+        "name": "GetYourGuide",
+        "kicker": "Guided experiences",
+        "description": "Small-group walks, tea ceremonies and market tours run in English, with free cancellation.",
+        "cta": "Find a guide",
+        "url": "",
+        "match": { "categories": ["hidden-japan", "eat-drink", "rules-etiquette"], "tags": ["kyoto", "tokyo", "osaka", "tradition", "food", "off-the-beaten-path"] }
+      },
+      {
+        "id": "esim",
+        "name": "Airalo eSIM",
+        "kicker": "Data on arrival",
+        "description": "A Japan data plan that activates the moment you land &mdash; no pocket WiFi to queue for or return.",
+        "cta": "Get a Japan eSIM",
+        "url": "",
+        "default": true,
+        "match": { "categories": ["before-you-go"], "tags": ["practical", "first-time", "budget", "language"] }
+      },
+      {
+        "id": "amazon",
+        "name": "Amazon Japan",
+        "kicker": "Ships worldwide",
+        "description": "The reliable way to buy the Japanese-made version of a thing without a proxy service.",
+        "cta": "See it on Amazon",
+        "url": "",
+        "match": { "categories": ["things-to-buy", "eat-drink"], "tags": ["shopping", "food", "budget"] }
+      }
+    ]
+  }
 }

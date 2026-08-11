@@ -14,9 +14,23 @@
   --indigo:       #2c3e6b;
   --gold:         #c9a84c;
   --zen:          #3d6b4a;
-  --mist:         #888888;
+  --mist:         #666666;
   --border:       #ddd9d0;
   --white:        #ffffff;
+
+  /* Text colours, paired with the background they are legible on. The palette
+     above is for fills and hover states, where the contrast requirement applies
+     to whatever sits on top instead. Text failures used to be systemic rather
+     than incidental:
+       --mist was #888888   -> 3.23:1 on paper, and most secondary text uses it
+       --accent on --ink    -> 2.94:1, used by every label on a dark band
+       #d4443b on --ink-soft -> 3.12:1, the category tag on every card
+       --gold on paper      -> 2.08:1
+     All four now clear WCAG AA (4.5:1) at body size. Use the -on-ink pair only
+     on --ink / --ink-soft, and --gold-ink only on paper; swapping them puts the
+     contrast back where it was. */
+  --accent-on-ink: #ef7268;
+  --gold-ink:      #7a6320;
 
   --serif:  'Noto Serif', 'Noto Serif JP', Georgia, serif;
   --sans:   'Noto Sans', system-ui, -apple-system, sans-serif;
@@ -519,7 +533,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-light);
+  color: var(--accent-on-ink);
   margin-bottom: 8px;
 }
 .ed-title {
@@ -661,7 +675,7 @@ ul, ol {
 .isymbol {
   font-family: 'Noto Serif JP', serif;
   font-size: 1.2rem;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   line-height: 1;
 }
 .interlude-label {
@@ -669,7 +683,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   margin-bottom: 16px;
 }
 .interlude-quote {
@@ -819,7 +833,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   margin-bottom: 16px;
 }
 .nl-title {
@@ -1024,6 +1038,151 @@ ul, ol {
   font-weight: 600;
   margin-left: 16px;
   flex-shrink: 0;
+}
+
+/* In-body article figure. Optional per section -- see Get-SectionFigure. */
+.section-figure {
+  margin: 32px 0 8px;
+}
+.section-figure img {
+  width: 100%;
+  height: auto;
+}
+.section-figure-credit {
+  font-size: 0.72rem;
+  color: var(--mist);
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* Byline. Rendered only when there is a real name to render -- see
+   Get-BylineHtml in generate-pages.ps1. */
+.article-byline {
+  font-size: 0.78rem;
+  color: var(--mist);
+}
+.article-byline a {
+  color: var(--mist);
+  border-bottom: 1px solid var(--border);
+}
+.article-byline a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Affiliate disclosure -- sits under the excerpt, above the first paid link.
+   Deliberately quiet but not hidden: a disclosure the reader cannot find is not
+   a disclosure. */
+.affiliate-disclosure {
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: var(--mist);
+  border-left: 2px solid var(--border);
+  padding: 8px 0 8px 14px;
+  margin: 20px 0 4px;
+}
+.affiliate-disclosure a {
+  color: var(--mist);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.affiliate-disclosure a:hover { color: var(--accent); }
+
+/* Contextual partner block ("Plan This Trip") */
+.partner-box {
+  margin: 48px 0 8px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.partner-box-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 18px;
+}
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  background: var(--paper);
+  color: var(--ink);
+  transition: background var(--transition);
+}
+.partner-card:hover { background: var(--paper-dark); }
+.partner-kicker {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+}
+.partner-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+.partner-desc {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--zen);
+  flex: 1;
+}
+.partner-cta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 6px;
+}
+.partner-card:hover .partner-cta { text-decoration: underline; text-underline-offset: 3px; }
+.partner-box-note {
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--mist);
+  margin-top: 14px;
+}
+
+/* ===== AD SLOTS =====
+   The <ins> carries its own inline min-height so the space is reserved before any
+   script runs; these rules only handle the surrounding label and spacing. The
+   label is required -- AdSense policy is that ads must be distinguishable from
+   editorial content, and on a site this quiet they otherwise would not be. */
+.ad-slot {
+  display: block;
+  margin: 48px 0;
+  text-align: center;
+}
+.ad-slot-label {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mist);
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+.ad-slot .adsbygoogle {
+  width: 100%;
+  background: var(--paper-dark);
+}
+/* An in-feed unit is a grid child, so it has to span the full row rather than
+   sit in one card's column. */
+.ad-slot--in-feed {
+  grid-column: 1 / -1;
+  margin: 24px 0;
+}
+.ad-slot--end {
+  margin: 40px 0 8px;
+}
+
+@media (max-width: 480px) {
+  .ad-slot { margin: 36px 0; }
+  .partner-card { padding: 18px; }
 }
 
 /* ===== FOOTER ===== */
@@ -1304,7 +1463,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent);
+  color: var(--accent-on-ink);
   font-family: var(--sans);
   text-transform: capitalize;
 }

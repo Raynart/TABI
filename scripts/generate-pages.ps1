@@ -27,6 +27,14 @@ $defaultOgImage = (($articles | Where-Object { $_.heroImage } | Sort-Object { Ge
 
 $script:ImageSizeCache = @{}
 
+# Tag pages holding fewer than this many articles are generated and linked but
+# kept out of the index and the sitemap. generate-feeds.ps1 reads the same value.
+$thinTagThreshold = if ($config.thinTagThreshold) { [int]$config.thinTagThreshold } else { 3 }
+
+# Ad slots and contextual affiliate blocks. Both stay dormant until
+# site.config.json -> monetization is filled in; see that file for the details.
+. "$PSScriptRoot\monetization.ps1"
+
 # Appended to image URLs so a change forces browsers past a stale cached copy.
 # Bump this when image files are replaced in place.
 $imageVersion = '20260806-list-images'
@@ -55,6 +63,11 @@ foreach ($a in $articles) {
     }
     if (-not $a.excerpt)  { $dataErrors.Add("$($a.id): empty excerpt") }
     if (-not $a.sections) { $dataErrors.Add("$($a.id): no body sections") }
+    foreach ($sec in @($a.sections)) {
+        if ($sec.image -and $sec.image.src -and -not $sec.image.alt) {
+            $dataErrors.Add("$($a.id): section image '$($sec.image.src)' has no alt text")
+        }
+    }
 }
 
 foreach ($c in $config.categories) {
@@ -67,6 +80,65 @@ if ($dataErrors.Count -gt 0) {
 }
 
 # ===== HELPERS =====
+
+function Get-SectionFigure {
+    # Optional in-body image. Returns nothing unless the section declares one and
+    # the file is actually on disk, so a half-finished entry cannot ship a broken
+    # image. Lazy-loaded: these are always below the fold.
+    param($sec)
+    if (-not $sec.image -or -not $sec.image.src) { return '' }
+    $file = $sec.image.src
+    if ($file -notmatch '^https?://') { $url = "$siteUrl/assets/images/$file" } else { $url = $file }
+    $local = Join-Path $root ("assets\images\" + ($file -replace '.*/', ''))
+    if ($file -notmatch '^https?://' -and -not (Test-Path $local)) {
+        Write-Host "  WARNING: section image not found, skipped: $file" -ForegroundColor Yellow
+        return ''
+    }
+    $alt = [System.Net.WebUtility]::HtmlEncode($sec.image.alt)
+    $cap = if ($sec.image.credit) { "<figcaption class=""section-figure-credit"">$([System.Net.WebUtility]::HtmlEncode($sec.image.credit))</figcaption>" } else { '' }
+    return "<figure class=""section-figure""><img src=""$(Get-ImageSrc $url)"" alt=""$alt"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $url '(max-width: 800px) 100vw, 760px')$(Get-ImageDimAttr $url)>$cap</figure>"
+}
+
+function Get-AuthorSchema {
+    # schema.org Person when a real person is named in the config, Organization
+    # otherwise. Search and ad-network reviewers look for a named author on
+    # advice content; a fabricated one is worse than none.
+    $pub = $config.publisher
+    if ($pub -and $pub.name) {
+        $u = "$siteUrl/about.html"
+        return "{""@type"":""Person"",""name"":""$(Escape-Json $pub.name)"",""url"":""$u""}"
+    }
+    return "{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)"",""url"":""$siteUrl/about.html""}"
+}
+
+function Get-BylineHtml {
+    # Empty unless there is something true to say.
+    param($a)
+    $pub = $config.publisher
+    $name = if ($pub -and $pub.name) { $pub.name } elseif ($a.author) { $a.author } else { '' }
+    if (-not $name) { return '' }
+    $enc = [System.Net.WebUtility]::HtmlEncode($name)
+    return "<span class=""article-byline"">By <a href=""about.html"">$enc</a></span>"
+}
+
+function Get-ReadingTime {
+    # Derived from the text, not read from articles.json. The stored readingTime
+    # values were fabricated: 50 of 63 articles were off by 3 minutes or more, and
+    # the worst claimed 12 minutes for 602 words -- about three. A reader who
+    # budgets twelve minutes and finishes in three has been told something untrue
+    # by the site, which is a bad first impression to hand out 63 times.
+    # 220 wpm is the middle of the usual adult range for non-technical prose.
+    param($a)
+    $words = 0
+    if ($a.sections) {
+        foreach ($s in $a.sections) {
+            foreach ($p in @($s.paragraphs)) { $words += @($p -split '\s+' | Where-Object { $_ }).Count }
+        }
+    } elseif ($a.body) {
+        foreach ($p in @($a.body)) { $words += @($p -split '\s+' | Where-Object { $_ }).Count }
+    }
+    return [Math]::Max(1, [Math]::Round($words / 220.0))
+}
 
 function Escape-Json {
     param($str)
@@ -152,7 +224,8 @@ function Write-ListingPages {
         $description,
         $kanji = '',
         $activeCat = '',
-        $perPage = 12
+        $perPage = 12,
+        $noindex = $false
     )
     $total     = @($items).Count
     $pageCount = [Math]::Max(1, [Math]::Ceiling($total / [double]$perPage))
@@ -186,13 +259,19 @@ function Write-ListingPages {
         $schema = "{""@context"":""https://schema.org"",""@type"":""CollectionPage"",""name"":""$(Escape-Json $heading)"",""url"":""$canonical"",""mainEntity"":{""@type"":""ItemList"",""itemListElement"":[$itemList]}}"
         $crumb  = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $heading)"",""item"":""$canonical""}]}"
 
-        $headHtml = Get-Head "$heading$suffix &mdash; $siteName" $pageDesc $ogImage $canonical 'website' "$schema`n$crumb" $extra
+        $headHtml = Get-Head "$heading$suffix &mdash; $siteName" $pageDesc $ogImage $canonical 'website' "$schema`n$crumb" $extra $noindex
 
+        # One in-feed unit per listing page, dropped in after the sixth card so it
+        # sits below the fold and the grid still opens on editorial content.
+        $feedAd = Get-InFeedAd
         $cardsHtml = ''
         $isFirst = ($pageNo -eq 1)
+        $cardNo  = 0
         foreach ($a in $pageItems) {
             $size = if ($isFirst) { 'main'; $isFirst = $false } else { 'sub' }
             $cardsHtml += Get-ArticleCard $a $size
+            $cardNo++
+            if ($feedAd -and $cardNo -eq 6) { $cardsHtml += $feedAd }
         }
         if (-not $cardsHtml) {
             $cardsHtml = '<p style="padding:48px 32px;color:var(--mist);">No articles yet. Check back soon.</p>'
@@ -245,7 +324,11 @@ function Write-ListingPages {
 function Get-FontLink {
     # Noto Sans 700 is requested because styles.css uses font-weight:700 on var(--sans);
     # without it the browser synthesises a bold, which renders noticeably worse.
-    $href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap'
+    # Noto Serif was requested with its italics (1,300 and 1,400). Nothing on the
+    # site renders italic: there is no <em> in any generated page, and the only two
+    # italic rules target .hero-title em and .interlude-quote strong, neither of
+    # which is ever emitted. That was two font files fetched for nothing.
+    $href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&amp;family=Noto+Serif:wght@300;400;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap'
     # Loaded with media="print" and switched to "all" on load, so the font CSS does
     # not block the first render. display=swap already means text paints in the
     # fallback face first, so this costs nothing visually and removes a round trip.
@@ -255,16 +338,32 @@ function Get-FontLink {
 }
 
 function Get-Head {
-    param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '', $extraHead = '')
+    param($title, $desc, $og, $canonical, $ogType = 'website', $jsonLd = '', $extraHead = '', $noindex = $false)
     $font = Get-FontLink
     $ogImage = if ($og) { $og } else { $defaultOgImage }
+
+    # A noindex page gets no canonical either. 404.html used to carry a canonical
+    # pointing at itself, which invites the crawler to index the error page as a
+    # normal document -- the classic soft-404.
+    $indexTags = if ($noindex) {
+        '  <meta name="robots" content="noindex,follow">'
+    } else {
+        "  <link rel=""canonical"" href=""$canonical"">"
+    }
 
     # GA4 is only configured here; script.js loads it after the visitor consents.
     # Loading the tag directly in <head> would run analytics before the cookie
     # banner was answered, which is exactly what the banner is supposed to prevent.
+    # The AdSense library is handled the same way -- the client ID is declared here,
+    # script.js fetches adsbygoogle.js only after consent. Personalised ads set
+    # cookies, so loading the library up front would beat the banner to it.
     $gaScript = ''
-    if ($config.googleAnalyticsId) {
-        $gaScript = "  <script>window.TABI_GA_ID='$($config.googleAnalyticsId)';</script>"
+    $globals = @()
+    if ($config.googleAnalyticsId) { $globals += "window.TABI_GA_ID='$($config.googleAnalyticsId)';" }
+    $adsClient = Get-AdsenseClient
+    if ($adsClient) { $globals += "window.TABI_ADS_CLIENT='$adsClient';" }
+    if ($globals.Count -gt 0) {
+        $gaScript = "  <script>$($globals -join '')</script>"
     }
 
     return @"
@@ -286,7 +385,7 @@ function Get-Head {
   <meta name="twitter:title" content="$title">
   <meta name="twitter:description" content="$desc">
   <meta name="twitter:image" content="$ogImage">
-  <link rel="canonical" href="$canonical">
+$indexTags
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
@@ -299,11 +398,27 @@ $(if ($jsonLd) { ($jsonLd -split "`n" | Where-Object { $_.Trim() } | ForEach-Obj
 }
 
 function Get-TopBar {
-    return '<div class="top-bar">Japan Travel &amp; Culture Guide &nbsp;<span>&middot;</span>&nbsp; Updated weekly &nbsp;<span>&middot;</span>&nbsp; <a href="newsletter.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Free newsletter every Friday</a></div>'
+    # Claims here appear on every page, so they have to survive being checked.
+    # "Updated weekly" and "Free newsletter every Friday" were on all 109 pages
+    # while the newest article was seven weeks old and no newsletter provider
+    # was configured. Only publish the parts that are currently true.
+    $bits = @('Japan Travel &amp; Culture Guide')
+    if ($config.beehiivUrl) {
+        $bits += '<a href="newsletter.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Free newsletter</a>'
+    }
+    $sep = ' &nbsp;<span>&middot;</span>&nbsp; '
+    return "<div class=""top-bar"">$($bits -join $sep)</div>"
 }
 
 function Get-Header {
     param($activeCat = '')
+    # The CTA pointed at a newsletter signup that does not exist until a provider
+    # is configured. An offer you cannot accept is worse than no offer.
+    $headerCta = if ($config.beehiivUrl) {
+        '<a href="newsletter.html" class="header-cta">Free Newsletter</a>'
+    } else {
+        '<a href="articles.html" class="header-cta">All Guides</a>'
+    }
     $navItems = ''
     foreach ($cat in $config.categories) {
         $active = if ($cat.slug -eq $activeCat) { ' class="active"' } else { '' }
@@ -325,7 +440,7 @@ function Get-Header {
     <div class="header-right">
       <button class="header-search-btn" id="search-open" aria-label="Search" aria-expanded="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M15 15l-3-3"/></svg></button>
       <button class="header-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
-      <a href="#newsletter" class="header-cta">Free Newsletter</a>
+      $headerCta
     </div>
   </div>
 </header>
@@ -352,6 +467,17 @@ function Get-Ticker {
 
 function Get-Footer {
     $year = (Get-Date).Year
+
+    # These were three links to href="#" on every page -- controls that look
+    # operational and do nothing. Render only accounts that exist.
+    $socialHtml = ''
+    $socialLinks = @()
+    if ($config.social.instagram) { $socialLinks += "<a href=""$($config.social.instagram)"" title=""Instagram"" aria-label=""Instagram"" target=""_blank"" rel=""noopener noreferrer"">&#9670;</a>" }
+    if ($config.social.twitter)   { $socialLinks += "<a href=""$($config.social.twitter)"" title=""X / Twitter"" aria-label=""X"" target=""_blank"" rel=""noopener noreferrer"">&#9632;</a>" }
+    if ($config.social.pinterest) { $socialLinks += "<a href=""$($config.social.pinterest)"" title=""Pinterest"" aria-label=""Pinterest"" target=""_blank"" rel=""noopener noreferrer"">&#9675;</a>" }
+    if ($socialLinks.Count -gt 0) {
+        $socialHtml = "      <div class=""footer-social"">$($socialLinks -join '')</div>"
+    }
     $catLinks = ''
     foreach ($cat in $config.categories) {
         $catLinks += "<li><a href=""categories/$($cat.slug).html"">$($cat.label)</a></li>"
@@ -360,17 +486,24 @@ function Get-Footer {
     # Only ask for cookie consent when there is actually something to consent to.
     # With no analytics ID configured the site sets no cookies at all, so the
     # banner was asking permission for something that never happened.
+    # Ads are the same deal: AdSense sets cookies, so enabling it also turns the
+    # banner on even with analytics off.
     $gdprBanner = ''
-    if ($config.googleAnalyticsId) {
-        $gdprBanner = @'
+    if ($config.googleAnalyticsId -or (Test-AdsEnabled)) {
+        $gdprText = if (Test-AdsEnabled) {
+            'We use cookies to analyze site traffic and to serve ads. <a href="privacy.html">Privacy Policy</a>.'
+        } else {
+            'We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.'
+        }
+        $gdprBanner = @"
 <div class="gdpr-banner" id="gdpr-banner">
-  <p class="gdpr-text">We use cookies to analyze site traffic. <a href="privacy.html">Privacy Policy</a>.</p>
+  <p class="gdpr-text">$gdprText</p>
   <div class="gdpr-actions">
     <button class="gdpr-btn gdpr-decline" id="gdpr-decline">Decline</button>
     <button class="gdpr-btn gdpr-accept" id="gdpr-accept">Accept</button>
   </div>
 </div>
-'@
+"@
     }
     return @"
 <footer class="site-footer">
@@ -379,11 +512,7 @@ function Get-Footer {
       <div class="footer-brand-logo">$siteName<span class="dot">.</span></div>
       <div class="footer-brand-jp">&#26053; &mdash; &#12383;&#12403; &mdash; Journey</div>
       <p class="footer-tagline">$($config.description)</p>
-      <div class="footer-social">
-        <a href="#" title="Instagram" aria-label="Instagram">&#9670;</a>
-        <a href="#" title="X / Twitter" aria-label="X">&#9632;</a>
-        <a href="#" title="Pinterest" aria-label="Pinterest">&#9675;</a>
-      </div>
+      $socialHtml
     </div>
     <div>
       <p class="footer-col-title">Explore</p>
@@ -393,7 +522,7 @@ function Get-Footer {
       <p class="footer-col-title">About</p>
       <ul class="footer-links">
         <li><a href="about.html">About TABI</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
+        $(if ($config.beehiivUrl) { '<li><a href="newsletter.html">Newsletter</a></li>' })
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -483,7 +612,7 @@ function Get-ArticleCard {
     <div class="ed-meta">
       <span>$date</span>
       <span class="ed-meta-dot"></span>
-      <span>$($article.readingTime) min read</span>
+      <span>$(Get-ReadingTime $article) min read</span>
     </div>
   </div>
 </a>
@@ -495,6 +624,9 @@ Write-Host "Generating index.html..."
 
 $heroArticle = $articles | Sort-Object { Get-EffectiveDate $_ } -Descending | Select-Object -First 1
 $gridArticles = $articles | Sort-Object { Get-EffectiveDate $_ } -Descending | Select-Object -Skip 1 -First 4
+# Homepage feature section. This used to filter on a hardcoded category 'culture'
+# that no articles have had since the taxonomy was reworked, so the section never
+# rendered at all. Driven from site.config.json now, and validated at startup.
 # Every category gets its own homepage section. Previously only two did, and the
 # rest were only reachable if they happened to land in the global "latest four" -
 # so a category that had not been posted to recently vanished from the homepage
@@ -526,14 +658,14 @@ function Get-CultureCards {
     # except Things to Buy, which has its own treatment.
     param($items)
     $html = ''
-    $i = 1
+    $ci = 1
     foreach ($a in $items) {
-        $cat   = Get-CategoryLabel $a.category
+        $cat  = Get-CategoryLabel $a.category
         $title = [System.Net.WebUtility]::HtmlEncode($a.title)
-        $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } else { '' }
+        $desc  = if ($a.excerpt) { [System.Net.WebUtility]::HtmlEncode($a.excerpt) } elseif ($a.summary) { [System.Net.WebUtility]::HtmlEncode($a.summary) } else { '' }
         $fb2   = Get-CardFallback $a.category
         $img   = if ($a.heroImage) { "<img src=""$(Get-ImageSrc $a.heroImage)"" alt=""$([System.Net.WebUtility]::HtmlEncode($a.heroImageAlt))"" loading=""lazy"" decoding=""async""$(Get-ImageSrcset $a.heroImage '(max-width: 768px) 100vw, 400px')$(Get-ImageDimAttr $a.heroImage) style=""width:100%;height:100%;object-fit:cover;"">" } else { "<div style=""width:100%;height:100%;$($fb2.grad);display:flex;align-items:center;justify-content:center;""><span style=""font-size:2rem;opacity:.25;"">$($fb2.icon)</span></div>" }
-        $numStr = $i.ToString().PadLeft(2, '0')
+        $numStr = $ci.ToString().PadLeft(2, '0')
         $html += @"
 <a href="articles/$($a.id).html" class="culture-card">
   <p class="culture-num">$numStr</p>
@@ -543,7 +675,7 @@ function Get-CultureCards {
   <p class="culture-card-desc">$desc</p>
 </a>
 "@
-        $i++
+        $ci++
     }
     return $html
 }
@@ -561,7 +693,7 @@ function Get-BuyCards {
   <p class="buy-tag">$tagLabel</p>
   <h3 class="buy-title">$title</h3>
   $priceHtml
-  <span class="buy-arrow">&#8599;</span>
+  <span class="buy-arrow" aria-hidden="true">&#8599;</span>
 </a>
 "@
     }
@@ -712,7 +844,7 @@ foreach ($a in $articles) {
     $catLabel  = Get-CategoryLabel $a.category
     $imgForSchema = if ($a.heroImage) { """$(Escape-Json $a.heroImage)""" } else { 'null' }
     $updatedAt = if ($a.updatedAt) { $a.updatedAt } else { $a.publishedAt }
-    $articleSchema = "{""@context"":""https://schema.org"",""@type"":""Article"",""headline"":""$(Escape-Json $a.title)"",""description"":""$(Escape-Json ($a.excerpt))"",""image"":$imgForSchema,""datePublished"":""$($a.publishedAt)"",""dateModified"":""$updatedAt"",""author"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)""},""publisher"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)"",""logo"":{""@type"":""ImageObject"",""url"":""$siteUrl/favicon.svg""}},""mainEntityOfPage"":{""@type"":""WebPage"",""@id"":""$canonical""}}"
+    $articleSchema = "{""@context"":""https://schema.org"",""@type"":""Article"",""headline"":""$(Escape-Json $a.title)"",""description"":""$(Escape-Json ($a.excerpt))"",""image"":$imgForSchema,""datePublished"":""$($a.publishedAt)"",""dateModified"":""$updatedAt"",""author"":$(Get-AuthorSchema),""publisher"":{""@type"":""Organization"",""name"":""$(Escape-Json $siteName)"",""logo"":{""@type"":""ImageObject"",""url"":""$siteUrl/favicon.svg""}},""mainEntityOfPage"":{""@type"":""WebPage"",""@id"":""$canonical""}}"
     $breadcrumbSchema = "{""@context"":""https://schema.org"",""@type"":""BreadcrumbList"",""itemListElement"":[{""@type"":""ListItem"",""position"":1,""name"":""Home"",""item"":""$siteUrl/""},{""@type"":""ListItem"",""position"":2,""name"":""$(Escape-Json $catLabel)"",""item"":""$siteUrl/categories/$($a.category).html""},{""@type"":""ListItem"",""position"":3,""name"":""$(Escape-Json $a.title)"",""item"":""$canonical""}]}"
     $jsonLd = "$articleSchema`n$breadcrumbSchema"
 
@@ -729,6 +861,11 @@ foreach ($a in $articles) {
             $tocItems += "<li><a href=""#s$si"">$hText</a></li>"
         }
         $tocHtml = "<nav class=""toc"" aria-label=""Article contents""><p class=""toc-title"">In this article</p><ol class=""toc-list"">$tocItems</ol></nav>"
+        # The mid-article unit goes after a whole section rather than between
+        # paragraphs, so it never splits an argument in half. Suppressed on short
+        # articles, where it would land on top of the conclusion.
+        $adAfter = Get-AdAfterSection
+        if ($a.sections.Count -lt ($adAfter + 2)) { $adAfter = 0 }
         for ($si = 0; $si -lt $a.sections.Count; $si++) {
             $sec   = $a.sections[$si]
             $hText = [System.Net.WebUtility]::HtmlEncode($sec.heading)
@@ -738,7 +875,11 @@ foreach ($a in $articles) {
                     $bodyHtml += "<p>$([System.Net.WebUtility]::HtmlEncode($p))</p>"
                 }
             }
+            $bodyHtml += (Get-SectionFigure $sec)
             $bodyHtml += "</section>`n"
+            if ($adAfter -gt 0 -and $si -eq ($adAfter - 1)) {
+                $bodyHtml += (Get-InArticleAd)
+            }
         }
     } elseif ($a.body -and $a.body.Count -gt 0) {
         foreach ($p in $a.body) {
@@ -769,17 +910,23 @@ foreach ($a in $articles) {
         }
     }
 
-    # Affiliate links
+    # Affiliate links -- per-article, hand-written in articles.json.
+    # rel carries "sponsored" as well as nofollow; Google reads a paid link without
+    # it as an undisclosed link scheme.
     $affiliateHtml = ''
     if ($a.affiliate -and $a.affiliateLinks -and $a.affiliateLinks.Count -gt 0) {
         $affiliateHtml = '<div class="affiliate-block"><p class="affiliate-block-label">Where to Buy</p>'
         foreach ($link in $a.affiliateLinks) {
             $label = [System.Net.WebUtility]::HtmlEncode($link.label)
             $price = if ($link.price) { "<span class=""affiliate-price"">$([System.Net.WebUtility]::HtmlEncode($link.price))</span>" } else { '' }
-            $affiliateHtml += "<a href=""$($link.url)"" class=""affiliate-link"" target=""_blank"" rel=""noopener noreferrer nofollow"">$label $price</a>"
+            $affiliateHtml += "<a href=""$($link.url)"" class=""affiliate-link"" target=""_blank"" rel=""nofollow sponsored noopener noreferrer"">$label $price</a>"
         }
         $affiliateHtml += '</div>'
     }
+
+    # Contextual partner block, chosen from site.config.json by category and tags.
+    $partnerHtml    = Get-PartnerBox $a
+    $disclosureHtml = Get-AffiliateDisclosure $a
 
     # Breadcrumb
     $breadcrumbHtml = "<nav class=""breadcrumb"" aria-label=""Breadcrumb""><a href=""index.html"">Home</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><a href=""categories/$($a.category).html"">$cat</a><span class=""breadcrumb-sep"" aria-hidden=""true"">&#8250;</span><span class=""breadcrumb-current"">$title</span></nav>"
@@ -842,19 +989,30 @@ foreach ($a in $articles) {
         $lines.Add("    <span class=""article-date"">Updated $(Format-Date $a.updatedAt)</span>")
     }
     $lines.Add('    <span class="article-dot"></span>')
-    $lines.Add("    <span class=""article-reading"">$($a.readingTime) min read</span>")
+    $lines.Add("    <span class=""article-reading"">$(Get-ReadingTime $a) min read</span>")
+    $bylineHtml = Get-BylineHtml $a
+    if ($bylineHtml) {
+        $lines.Add('    <span class="article-dot"></span>')
+        $lines.Add("    $bylineHtml")
+    }
     $lines.Add("  </div>")
     $lines.Add("  <h1 class=""article-title"">$title</h1>")
     $lines.Add("  <p class=""article-excerpt"">$excerpt</p>")
+    # Above the fold and above the first paid link, which is where the FTC expects
+    # the disclosure -- not in the footer.
+    if ($disclosureHtml) { $lines.Add($disclosureHtml) }
     $lines.Add($tocHtml)
     $lines.Add('  <div class="article-body">')
     $lines.Add($bodyHtml)
     $lines.Add($affiliateHtml)
+    if ($partnerHtml) { $lines.Add($partnerHtml) }
     $lines.Add('  </div>')
     if ($tagsHtml) {
         $lines.Add("  <div class=""article-tags"">$tagsHtml</div>")
     }
     $lines.Add($shareHtml)
+    $endAd = Get-EndOfArticleAd
+    if ($endAd) { $lines.Add($endAd) }
     $lines.Add($prevNextHtml)
     $lines.Add('</div>')
     if ($relatedHtml) { $lines.Add($relatedHtml) }
@@ -916,14 +1074,22 @@ Get-ChildItem "$root\tags" -Filter *.html | Where-Object { $validTagFiles -notco
     Remove-Item -LiteralPath $_.FullName
 }
 
+$thinTags = @()
 foreach ($tag in $allTags) {
-    $tagArticles = $articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { Get-EffectiveDate $_ } -Descending
-    Write-ListingPages $tagArticles "tags/$tag" "#$tag" "Articles tagged $tag on $siteName." | Out-Null
+    $tagArticles = @($articles | Where-Object { $_.tags -and $_.tags -contains $tag } | Sort-Object { Get-EffectiveDate $_ } -Descending)
+    # A tag page holding one or two articles is a near-duplicate of the cards it
+    # lists and adds nothing a crawler cannot get from the category page. Five of
+    # the seventeen tags are in that state (affiliate, festival and osaka have a
+    # single article each). They stay linked and usable, but are kept out of the
+    # index -- thin listing pages are exactly what an ad-network review flags.
+    $isThin = $tagArticles.Count -lt $thinTagThreshold
+    if ($isThin) { $thinTags += $tag }
+    Write-ListingPages $tagArticles "tags/$tag" "#$tag" "Articles tagged $tag on $siteName." '' '' 12 $isThin | Out-Null
 }
-Write-Host "Generated $($allTags.Count) tag pages"
+Write-Host "Generated $($allTags.Count) tag pages ($($thinTags.Count) noindex: $($thinTags -join ', '))"
 
 # ===== 404.html =====
-$headHtml = Get-Head "Page Not Found &mdash; $siteName" "The page you are looking for could not be found." '' "$siteUrl/404.html"
+$headHtml = Get-Head "Page Not Found &mdash; $siteName" "The page you are looking for could not be found." '' "$siteUrl/404.html" 'website' '' '' $true
 $headerHtml = Get-Header
 $lines = [System.Collections.Generic.List[string]]::new()
 $lines.Add($headHtml)
@@ -959,77 +1125,216 @@ if ($config.beehiivUrl) {
     $newsletterBody += '<p class="nl-note" style="margin-top:24px;">Signup opens soon. Nothing to enter yet.</p>'
 }
 
+# ----- Values the static pages reference -------------------------------------
+# The publisher block is deliberately allowed to be empty. If nobody has put a
+# real name in site.config.json, the About page says nothing about who writes
+# this rather than inventing someone -- which is the whole reason the fabricated
+# "written by people who actually live here" line was removed.
+$lastUpdatedLong = (Get-Date).ToString('MMMM yyyy', [System.Globalization.CultureInfo]::InvariantCulture)
+
+$pub = $config.publisher
+$bylineAboutBlock = ''
+if ($pub -and $pub.name) {
+    $pn   = [System.Net.WebUtility]::HtmlEncode($pub.name)
+    $role = if ($pub.role) { [System.Net.WebUtility]::HtmlEncode($pub.role) } else { 'Editor' }
+    $loc  = if ($pub.location) { ", $([System.Net.WebUtility]::HtmlEncode($pub.location))" } else { '' }
+    $bio  = if ($pub.bio) { "<p>$([System.Net.WebUtility]::HtmlEncode($pub.bio))</p>" } else { '' }
+    $bylineAboutBlock = "<h2 style=""font-size:1.05rem;margin:32px 0 10px;"">Who writes it</h2><p><strong>$pn</strong> &mdash; $role$loc.</p>$bio"
+}
+
+# Optional. The site makes no claim about how its content is produced, in either
+# direction -- silence is honest here, "written by people who actually live here"
+# was not. Fill publisher.disclosure to say something, leave it empty to say
+# nothing.
+$disclosureBlock = ''
+if ($pub -and $pub.disclosure) {
+    $disclosureBlock = "<p>$([System.Net.WebUtility]::HtmlEncode($pub.disclosure))</p>"
+}
+
+# The analytics and advertising sections of the privacy policy describe things
+# that only exist once they are configured. Claiming a site runs AdSense when it
+# does not is as wrong as the reverse.
+$analyticsPrivacyBlock = ''
+if ($config.googleAnalyticsId) {
+    $analyticsPrivacyBlock = '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Analytics</h2>' +
+        '<p>This site uses Google Analytics to count visits and see which pages are read. It is loaded only after you accept the cookie banner. It sets cookies that record a randomly generated identifier, the pages you view and roughly where in the world you are, and this data is processed by Google under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>. It is used in aggregate to decide what to write about next. If you decline the banner, Google Analytics is never loaded and no analytics cookie is set. You can also install <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google''s opt-out browser add-on</a>.</p>'
+} else {
+    $analyticsPrivacyBlock = '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Analytics</h2>' +
+        '<p>This site currently runs no analytics at all. Nothing counts your visit and no analytics cookie is set. If that changes, this section and the cookie banner will change with it.</p>'
+}
+
+$adsPrivacyBlock = ''
+if (Test-AdsEnabled) {
+    $adsPrivacyBlock = '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Advertising</h2>' +
+        '<p>This site displays advertising served by Google AdSense.</p>' +
+        '<p>Google, as a third-party vendor, uses cookies to serve ads on this site. Google''s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and other sites on the internet. Google uses the DoubleClick cookie for this purpose, along with similar technologies operated by other vendors and ad networks that may appear through Google.</p>' +
+        '<p>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>, or opt out of a third-party vendor''s use of cookies for personalised advertising at <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">aboutads.info</a> and <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener noreferrer">Your Online Choices</a>. Opting out does not remove advertising; it makes it less relevant.</p>' +
+        '<p>How Google handles data from sites that use its services is described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">this Google policy</a>. Ad scripts on this site are loaded only after you accept the cookie banner. If you decline, no ad request is made and no advertising cookie is set.</p>'
+}
+
 $staticPages = @(
     @{
         file    = 'about.html'
+        desc    = 'Who publishes TABI, how the guides are put together, and what the site will and will not claim.'
         title   = "About TABI &mdash; $siteName"
         heading = 'About TABI'
         body    = @(
-            '<p>TABI is an independent guide to Japan for international travellers.</p>',
-            '<p>We cover travel, culture, food, and the things worth bringing home &mdash; written by people who actually live here.</p>',
-            '<p>Questions or pitches? <a href="contact.html">Get in touch.</a></p>'
+            '<p>TABI is an independent guide to Japan for international visitors. It covers getting around, the rules that are not written down anywhere, what to eat, what is worth bringing home, and the parts of the country that most itineraries skip.</p>',
+            "<p>The site has been publishing since $($config.publisher.since). It is not owned by a tour operator, a hotel group or a booking platform, and no third party has editorial input.</p>",
+            $bylineAboutBlock,
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">How these guides are made</h2>',
+            $disclosureBlock,
+            '<p>Each guide starts from a question a visitor actually asks &mdash; is the rail pass worth it, what happens at the door of an izakaya, which month is the right one &mdash; and is written to answer it completely enough that you do not need a second source.</p>',
+            '<p>Every article is checked against the operators&rsquo; own published information before it goes up &mdash; rail companies for fares and times, prefectural and municipal sites for opening hours and access, official tourism bodies for seasonal dates. Where a figure moves often, the article says so and points you at the source rather than quoting a number that will be wrong by the time you read it.</p>',
+            '<p>Prices, opening hours and seasonal dates change constantly in Japan. Treat everything here as a starting point and confirm anything your trip depends on.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this site will not do</h2>',
+            '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
+            '<li>Claim first-hand experience it does not have. Where an article describes what somewhere is like, that is drawn from published sources, not from an implied visit.</li>',
+            '<li>Rank or recommend anything because of what it pays. See the <a href="affiliate.html">Affiliate Disclosure</a>.</li>',
+            '<li>Publish sponsored articles or paid guest posts.</li>',
+            '</ul>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Corrections</h2>',
+            '<p>If something here is wrong &mdash; a fare, an opening time, a rule that has changed &mdash; please tell us and it will be fixed. Corrections are made to the article itself and the update date on the page changes with them.</p>',
+            "<p style=""margin-top:24px;"">Questions, corrections or pitches: <a href=""contact.html"">get in touch</a>.</p>"
         )
     },
     @{
         file    = 'newsletter.html'
+        desc    = 'One destination, one cultural insight, one thing worth buying &mdash; every Friday.'
         title   = "Newsletter &mdash; $siteName"
         heading = 'The TABI Newsletter'
         body    = $newsletterBody
     },
     @{
         file    = 'contact.html'
+        desc    = 'Editorial enquiries, article pitches and partnership proposals for TABI.'
         title   = "Contact &mdash; $siteName"
         heading = 'Contact'
         body    = @(
-            '<p>For editorial enquiries, article pitches, or partnership proposals:</p>',
-            "<p><a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a></p>",
-            '<p style="margin-top:24px;color:var(--mist);font-size:0.85rem;">We read every email and aim to reply within 3 business days.</p>'
+            '<p>Email is the only channel. It is read by a person, not a queue.</p>',
+            "<p style=""font-size:1.15rem;margin:20px 0;""><a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a></p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What to write about</h2>',
+            '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
+            '<li><strong>Corrections.</strong> The most useful email you can send. A fare, an opening time, a closed shop, a rule that changed. Please include the article and, if you have one, a link to the current information.</li>',
+            '<li><strong>Editorial questions</strong> about anything published here.</li>',
+            '<li><strong>Pitches.</strong> Say what the piece is and why it is not already covered.</li>',
+            '<li><strong>Partnership and advertising enquiries.</strong> Note that sponsored articles and paid links inside article text are declined as a matter of policy.</li>',
+            '<li><strong>Privacy requests</strong> &mdash; access, deletion, or anything else covered by the <a href="privacy.html">Privacy Policy</a>.</li>',
+            '</ul>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Response times</h2>',
+            '<p>Most email is answered within three business days. Corrections are usually acted on faster than they are replied to, so if the page changes and you have not heard back, it was received.</p>',
+            '<p style="margin-top:24px;color:var(--mist);font-size:0.85rem;">Unsolicited link-building, guest-post and SEO offers are deleted unread.</p>'
         )
     },
     @{
         file    = 'privacy.html'
+        desc    = 'What TABI collects, which third parties are involved, the cookies they set, and how to opt out.'
         title   = "Privacy Policy &mdash; $siteName"
         heading = 'Privacy Policy'
         body    = @(
-            '<p style="color:var(--mist);font-size:0.82rem;">Last updated: June 2026</p>',
-            '<p>TABI collects minimal data to operate the site. We may use analytics tools (such as Google Analytics) to understand how visitors use our content. No personal data is sold to third parties.</p>',
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Cookies</h2>',
-            '<p>We may set cookies for analytics and functionality. You can disable cookies in your browser settings at any time.</p>',
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Affiliate Links</h2>',
-            '<p>Some links on this site are affiliate links. Clicking them and making a purchase may earn TABI a small commission at no extra cost to you. See our <a href="affiliate.html">Affiliate Disclosure</a> for details.</p>',
-            "<h2 style=""font-size:1.05rem;margin:28px 0 10px;"">Contact</h2>",
-            "<p>Questions about privacy? Email us at <a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a>.</p>"
+            "<p style=""color:var(--mist);font-size:0.82rem;"">Last updated: $lastUpdatedLong</p>",
+            "<p>This policy explains what information $siteName collects when you visit, who else is involved, and what you can do about it. It applies to <strong>$siteUrl</strong> and every page on it.</p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">The short version</h2>',
+            '<p>This site has no accounts, no logins and no shopping basket. It does not ask you for your name, address or payment details, and there is nothing here to sign up for except an optional newsletter. Nothing that identifies you is sold, and nothing that sets a cookie runs until you agree to it.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What is collected</h2>',
+            '<p><strong>Information you give us.</strong> Only what you put in an email to us, or an address you enter into the newsletter form. Newsletter addresses are held by the newsletter provider, not by this site, and are used to send the newsletter and nothing else. You can unsubscribe from any issue.</p>',
+            '<p><strong>Information collected automatically.</strong> Like any website, requests to this site are logged by the hosting provider, which receives your IP address, browser type and the page you asked for. This site is hosted on GitHub Pages and those logs are held by GitHub under its own privacy policy. We do not have access to them.</p>',
+            '<p><strong>Local storage.</strong> Your answer to the cookie banner is stored in your browser so you are not asked again. It never leaves your device and it can be cleared with your browsing data.</p>',
+            $analyticsPrivacyBlock,
+            $adsPrivacyBlock,
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Affiliate links</h2>',
+            '<p>Some outbound links are affiliate links. If you follow one, the destination site may set its own cookie to record that the visit came from here, so that any purchase can be attributed. That cookie is set by them, on their domain, under their privacy policy, and it happens only if you click. See the <a href="affiliate.html">Affiliate Disclosure</a> for who those partners are.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Other third parties</h2>',
+            '<p>Two services load with the page regardless of consent, because they are needed to render it: <strong>Google Fonts</strong>, which serves the typefaces, and <strong>GitHub Pages</strong>, which serves the site itself. Both receive your IP address as a technical necessity of delivering files to your browser. Neither is used to build a profile of you by us.</p>',
+            '<p>Embedded content from other sites &mdash; if any article ever includes it &mdash; behaves as if you had visited that site directly.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Your choices</h2>',
+            '<ul style="margin:0 0 8px 18px;line-height:1.9;">',
+            '<li><strong>Decline the banner.</strong> Nothing optional loads. The site works normally.</li>',
+            '<li><strong>Change your mind.</strong> Clear this site''s data in your browser and the banner will ask again.</li>',
+            '<li><strong>Block cookies entirely</strong> in your browser settings.</li>',
+            '<li><strong>Opt out of personalised advertising</strong> across the web at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> and <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">optout.aboutads.info</a>.</li>',
+            '</ul>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">If you are in the EEA, UK or Switzerland</h2>',
+            '<p>Where consent is the lawful basis, it is asked for before anything runs and can be withdrawn at any time. Where the basis is legitimate interest &mdash; serving the page you requested &mdash; it is limited to what delivering the site requires. You have the right to ask what is held about you, to have it corrected or deleted, to object to processing, and to complain to your national data protection authority. Requests go to the address at the end of this page.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">If you are in California</h2>',
+            '<p>This site does not sell or share personal information as those terms are defined by the CCPA and CPRA, and it does not knowingly collect information from anyone under 16. You may request disclosure or deletion of anything held about you using the contact address below.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Children</h2>',
+            '<p>This site is written for adults planning travel and is not directed at children. No information is knowingly collected from anyone under 13. If you believe a child has provided information, contact us and it will be deleted.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Retention and security</h2>',
+            '<p>Nothing identifying is stored on this site &mdash; it is a set of static files with no database. Email correspondence is kept only as long as it is useful for answering you. Newsletter addresses are held by the provider until you unsubscribe. The site is served over HTTPS.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Changes</h2>',
+            '<p>If this policy changes, the date at the top changes with it. Material changes will be noted on the page rather than made quietly.</p>',
+            "<h2 style=""font-size:1.05rem;margin:32px 0 10px;"">Contact</h2>",
+            "<p>Questions or requests about privacy: <a href=""mailto:$($config.contactEmail)"">$($config.contactEmail)</a>.</p>"
         )
     },
     @{
         file    = 'terms.html'
+        desc    = 'The terms covering use of TABI, the limits of its travel information, and its external links.'
         title   = "Terms of Use &mdash; $siteName"
         heading = 'Terms of Use'
         body    = @(
-            '<p style="color:var(--mist);font-size:0.82rem;">Last updated: June 2026</p>',
-            '<p>By using TABI you agree to these terms. All content on this site is for informational purposes only. We make no guarantees about the accuracy or completeness of travel information, which can change without notice.</p>',
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Intellectual Property</h2>',
-            '<p>All text, images, and design on TABI are &copy; TABI unless otherwise noted. Do not reproduce content without written permission.</p>',
-            '<h2 style="font-size:1.05rem;margin:28px 0 10px;">External Links</h2>',
-            '<p>TABI links to third-party sites for convenience. We are not responsible for their content or practices.</p>'
+            "<p style=""color:var(--mist);font-size:0.82rem;"">Last updated: $lastUpdatedLong</p>",
+            "<p>By using $siteName you agree to these terms. If you do not, please stop using the site.</p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this site is, and is not</h2>',
+            '<p>Everything here is general information for people planning travel. It is not professional advice of any kind &mdash; not legal, medical, financial or immigration advice &mdash; and it is not a substitute for the operators&rsquo; own current information.</p>',
+            '<p>Travel information dates quickly. Fares change, opening hours change, services are suspended, entry rules are revised, and seasonal dates move with the weather. No guarantee is made that anything here is accurate or complete at the moment you read it. Confirm anything your trip depends on with the operator, the venue or the relevant authority before you rely on it.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Activities described here carry risk</h2>',
+            '<p>Some articles describe hiking, mountain climbing, bathing in very hot water, and eating unfamiliar food. These carry real risks including injury and death, and conditions vary. You are responsible for assessing your own fitness, experience and circumstances, for obtaining any permits required, and for your own safety and insurance. Nothing here is a recommendation that a particular activity is safe for you.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Limitation of liability</h2>',
+            "<p>To the fullest extent permitted by law, $siteName and its publisher are not liable for any loss, cost, injury or damage arising from use of this site or reliance on anything published here. Where liability cannot lawfully be excluded, it is limited to the minimum permitted.</p>",
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Intellectual property</h2>',
+            "<p>The text, design, images and code of this site are &copy; $siteName unless stated otherwise.</p>",
+            '<p>You may quote short extracts with a clear credit and a link. You may not republish articles in whole or in substantial part, and you may not use this site&rsquo;s content to train machine learning models without written permission. Requests are welcome &mdash; ask.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">External links</h2>',
+            '<p>This site links to third parties for convenience, some of them affiliate links marked as described in the <a href="affiliate.html">Affiliate Disclosure</a>. We do not control those sites and are not responsible for their content, their accuracy or their practices. Their terms and privacy policies apply once you leave here.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Acceptable use</h2>',
+            '<p>Do not attempt to disrupt the site, scrape it at a volume that degrades it for others, or use it for anything unlawful.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Changes</h2>',
+            '<p>These terms may be revised. The date at the top changes when they are, and continued use after that constitutes acceptance.</p>',
+            "<p style=""margin-top:24px;"">Questions about these terms: <a href=""contact.html"">contact us</a>.</p>"
         )
     },
     @{
         file    = 'affiliate.html'
+        desc    = 'How TABI makes money, which programmes it uses, and how paid links are marked.'
         title   = "Affiliate Disclosure &mdash; $siteName"
         heading = 'Affiliate Disclosure'
         body    = @(
             '<p>TABI participates in affiliate programmes. This means that some links to products or services may be affiliate links &mdash; if you click through and make a purchase, we may earn a small commission at no additional cost to you.</p>',
-            '<p>We only recommend products and services we genuinely believe in. Affiliate relationships do not influence our editorial content or opinions.</p>',
-            '<p>Affiliate links are marked with <strong>rel="nofollow sponsored"</strong> in our HTML and may be indicated in the article text.</p>',
-            "<p style=""margin-top:24px;"">Questions? <a href=""contact.html"">Contact us.</a></p>"
+            '<p>We only recommend products and services we genuinely believe in. Affiliate relationships do not influence our editorial content or opinions. Nothing is ranked, added or removed because of what it pays.</p>',
+            '<p>Affiliate links are marked with <strong>rel="nofollow sponsored"</strong> in our HTML, sit inside a labelled block rather than the article text, and every article carrying one shows a disclosure above the fold.</p>',
+            # Listing the programmes is the part readers can actually check, so it is
+            # generated from the live config rather than written by hand and left stale.
+            $(
+                $mon    = Get-Mon
+                $active = if ($mon -and $mon.partners) { @($mon.partners | Where-Object { $_.url }) } else { @() }
+                if ($active.Count -gt 0) {
+                    '<h2 style="font-size:1.05rem;margin:28px 0 10px;">Programmes We Use</h2><ul style="margin:0 0 8px 18px;line-height:2;">' +
+                    (($active | ForEach-Object { "<li>$([System.Net.WebUtility]::HtmlEncode($_.name))</li>" }) -join '') + '</ul>'
+                } else { '' }
+            ),
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">What this does and does not change</h2>',
+            '<p>It does not change the price you pay. An affiliate link costs you exactly what the same page would cost if you had typed the address yourself; the commission comes out of the seller&rsquo;s margin, not out of your total.</p>',
+            '<p>It does not change what gets recommended. Nothing is added, removed, ranked higher or described more warmly because of what it pays. Several things recommended here earn nothing at all, and at least one recommendation actively tells you to buy the cheaper version.</p>',
+            '<p>It does not change what gets written about. Articles are chosen by what a visitor needs to know, not by which subjects have affiliate programmes attached.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">How to tell</h2>',
+            '<p>Paid links are kept out of the body text. They appear in a labelled block, they carry <strong>rel="nofollow sponsored"</strong> in the HTML, and any article containing one shows a disclosure above the fold rather than at the bottom of the page. If a link is in the middle of a sentence, it is not a paid link.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Advertising</h2>',
+            '<p>Display advertising, where it appears, is labelled &ldquo;Advertisement&rdquo; and is served by an ad network rather than sold directly. Nobody buying an ad has any influence over editorial content, and no advertiser sees an article before it publishes.</p>',
+            '<h2 style="font-size:1.05rem;margin:32px 0 10px;">Sponsored content</h2>',
+            '<p>There is none. Sponsored articles, paid guest posts, paid link insertions into existing articles and gifted-stay reviews are all declined. If that ever changes, it will be disclosed here and on the article itself before you read a word of it.</p>',
+            "<p style=""margin-top:24px;"">Questions about any of this? <a href=""contact.html"">Ask.</a></p>"
         )
     }
 )
 
 foreach ($page in $staticPages) {
     $canonical = "$siteUrl/$($page.file)"
-    $headHtml  = Get-Head $page.title $config.description '' $canonical
+    # Every static page used to inherit $config.description, so all seven shipped
+    # the same meta description -- the one thing a search engine reads to tell them
+    # apart.
+    $headHtml  = Get-Head $page.title $page.desc '' $canonical
     $headerHtml = Get-Header
 
     $lines = [System.Collections.Generic.List[string]]::new()
@@ -1041,7 +1346,9 @@ foreach ($page in $staticPages) {
     $lines.Add('<main id="main" style="max-width:720px;margin:80px auto 120px;padding:0 32px;">')
     $lines.Add("  <h1 style=""font-family:var(--serif);font-size:2rem;font-weight:300;margin-bottom:28px;letter-spacing:-0.01em;"">$($page.heading)</h1>")
     foreach ($line in $page.body) {
-        $lines.Add("  $line")
+        # Sections that depend on config (ads, affiliate programmes) render as an
+        # empty string when unconfigured; skip them rather than leaving a blank line.
+        if ($line) { $lines.Add("  $line") }
     }
     $lines.Add('</main>')
     $lines.Add((Get-Footer))
