@@ -1052,7 +1052,8 @@
     "relatedIds": [
       "photography-rules-japan",
       "public-behavior-japan",
-      "tipping-in-japan"
+      "tipping-in-japan",
+      "izumo-matsue-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -2720,7 +2721,8 @@
     "affiliateLinks": [],
     "relatedIds": [
       "yakushima-ancient-forest",
-      "kanazawa-japan-guide"
+      "kanazawa-japan-guide",
+      "okayama-kurashiki-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -3229,7 +3231,8 @@
     "relatedIds": [
       "ryokan-first-time-guide",
       "japan-winter-travel-guide",
-      "beppu-onsen-guide"
+      "beppu-onsen-guide",
+      "matsuyama-dogo-onsen-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -4118,7 +4121,8 @@
     "relatedIds": [
       "yakushima-ancient-forest",
       "japan-winter-travel-guide",
-      "naoshima-art-island-guide"
+      "naoshima-art-island-guide",
+      "hakodate-guide"
     ],
     "author": "TABI Editorial",
     "sections": [
@@ -7234,6 +7238,542 @@
         "paragraphs": [
           "Public markets are the best entry point — Makishi in Naha has stalls downstairs and restaurants above that will cook what you buy. Small neighbourhood shokudo serve champuru and soba at low prices and close early.",
           "Izakaya in Naha and Ishigaki serve the full range with awamori and often live sanshin music. And for the American layer, the diners around the base towns serve taco rice and steak in a setting that is a preserved piece of the 1960s."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hakodate-guide",
+    "title": "Hakodate: The Port Town at the Bottom of Hokkaido",
+    "excerpt": "A morning market selling squid you catch yourself, a hillside of nineteenth-century foreign consulates, and a night view that Japan has been ranking against Hong Kong and Naples for a century.",
+    "category": "hidden-japan",
+    "region": "hokkaido",
+    "tags": [
+      "food",
+      "off-the-beaten-path",
+      "tradition"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "hokkaido-summer-guide",
+      "hokkaido-skiing-guide",
+      "ramen-regional-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The first port to open",
+        "paragraphs": [
+          "Hakodate was one of the first Japanese ports opened to foreign trade in the 1850s, after more than two centuries of national seclusion. Consulates, churches and merchant houses went up on the slope above the harbour, and the result is a townscape unlike anywhere else in Hokkaido: Russian Orthodox onion domes, a British consulate, a Chinese hall and Japanese wooden houses within a few streets of each other.",
+          "The Motomachi district on that slope is the part to walk. It is steep, the streets run straight down to the water, and the buildings are preserved rather than reconstructed. The old public hall, painted pale blue and yellow, is the landmark.",
+          "Hakodate is also the first stop in Hokkaido for anyone arriving by land. The Shinkansen runs under the strait from Aomori, which makes this the natural bridge between Tohoku and the north island rather than a place you fly to separately."
+        ]
+      },
+      {
+        "heading": "The morning market",
+        "paragraphs": [
+          "The Hakodate morning market runs beside the station from early morning and is the most enjoyable market of its kind in Japan, partly because it is unashamedly a spectacle. Crab, sea urchin, salmon roe and scallops are stacked in tanks and on ice, and stallholders will happily explain what you are looking at.",
+          "The signature is the squid fishing: tanks where you catch a live squid with a small rod, which is then prepared for you on the spot and served within a minute or two. It is theatrical and the freshness is not in question.",
+          "The other thing to eat here is a kaisendon — a bowl of rice covered with whatever you choose from the counter. Ordering three toppings from the case is the standard move, and the sea urchin in season is the reason people come.",
+          "Go early. Most of it winds down well before lunch."
+        ]
+      },
+      {
+        "heading": "The night view",
+        "paragraphs": [
+          "Mount Hakodate rises at the end of the peninsula, and the town below it is pinched to a narrow waist between two bays. Seen from above at night, the lit streets form a distinctive hourglass shape with black water on both sides.",
+          "The ropeway runs to the summit and the view is genuinely spectacular. It is also extremely popular: the queue for the last ropeway down is long, and the observation deck at sunset is crowded. Going up slightly before dark and staying past the initial rush is the way to do it.",
+          "In winter the road is closed and the ropeway is the only way up. In summer a bus runs. Clear nights are not guaranteed — sea fog is common — so treat it as an opportunity rather than a fixed item."
+        ]
+      },
+      {
+        "heading": "Goryokaku",
+        "paragraphs": [
+          "Goryokaku is a star-shaped fort built in the 1850s on a European model, and it was the site of the last battle of the Boshin War, when the short-lived Republic of Ezo made its final stand here in 1869.",
+          "The walls and moats survive as a park. The shape is the point, and it is only legible from above — the adjacent tower exists for exactly that reason, and it is one of the few observation towers in Japan that genuinely earns its ticket.",
+          "In late April and early May the moat is lined with more than a thousand cherry trees, which flower weeks after the main islands. In winter the outline is picked out in lights."
+        ]
+      },
+      {
+        "heading": "The food beyond the market",
+        "paragraphs": [
+          "Hakodate shio ramen is the local style: a clear, pale, salt-based broth rather than the miso of Sapporo or the soy of Tokyo. It is delicate in a way that ramen usually is not, and it is the third of Hokkaido's three famous ramen styles.",
+          "The town also has a genuine burger claim. A local chain born here serves a Chinese chicken burger that has a following far beyond Hokkaido, which is the sort of thing that sounds like a joke until you join the queue.",
+          "And the dairy. Hokkaido milk, soft serve and cheese are as good as advertised, and the soft serve is eaten year-round including in February, which visitors find harder to understand than residents do."
+        ]
+      },
+      {
+        "heading": "Onuma, and further out",
+        "paragraphs": [
+          "Onuma Quasi-National Park is about half an hour north by train: a lake scattered with small islands, linked by footbridges, under a volcano. It is an easy half day of flat walking or cycling and it is beautiful in autumn.",
+          "The Yunokawa hot spring district is within the city, on the coast, and has the unusual feature of a monkey park where macaques bathe in an outdoor hot spring through the winter.",
+          "Further afield, the Shimokita and Tsugaru peninsulas are across the water, and the ferry remains a pleasant alternative to the tunnel."
+        ]
+      },
+      {
+        "heading": "When to go",
+        "paragraphs": [
+          "Summer is mild and the whole of Hokkaido is at its best. Autumn colour arrives early — late September into October — well before the main islands.",
+          "Winter is cold, snowy and atmospheric, with the illuminated Goryokaku and steam rising off the harbour. Spring is late: the cherry blossom here is a May event.",
+          "Two nights is enough for the town itself. Three if you want Onuma and a slow morning at the market."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hokkaido-skiing-guide",
+    "title": "Skiing in Hokkaido: Why the Snow Is Actually Different",
+    "excerpt": "Siberian air crossing a warm sea produces snow so dry it does not pack. That single meteorological accident is why skiers fly past the Alps to get to an island north of Japan.",
+    "category": "hidden-japan",
+    "region": "hokkaido",
+    "tags": [
+      "nature",
+      "luxury",
+      "accommodation"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "japan-winter-travel-guide",
+      "hakodate-guide",
+      "japanese-onsen-etiquette"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The meteorology, briefly",
+        "paragraphs": [
+          "Cold, dry air sweeps off the Siberian landmass in winter and crosses the Sea of Japan, which is comparatively warm. It picks up moisture on the way, hits the mountains of Hokkaido, and drops it as snow that is exceptionally light and dry — low in water content, and consequently unable to pack down.",
+          "This happens with great regularity from December through February. Hokkaido resorts routinely record snowfall totals that put them among the snowiest inhabited places on earth, and the quality of it is what the reputation is built on rather than the quantity alone.",
+          "The practical effect is that fresh snow stays skiable for longer, the runs stay soft, and the powder days that are rare elsewhere are close to routine here. It is also why the terrain does not need to be dramatic to be worth travelling for: the snow is doing the work."
+        ]
+      },
+      {
+        "heading": "Niseko, and what it has become",
+        "paragraphs": [
+          "Niseko is the internationally famous one and is effectively four connected resort areas on one mountain, Niseko Annupuri, with Mount Yotei — a near-perfect volcanic cone — filling the view opposite.",
+          "It has been transformed by two decades of foreign investment, initially Australian and later broader. English is spoken everywhere, the restaurants are international, the accommodation runs to genuinely luxurious, and prices are far above the Japanese norm. Some skiers find this a relief and others find it defeats the purpose.",
+          "What is not in dispute is the terrain and the snow, along with a well-organised night skiing operation and controlled gate access to the backcountry that is more permissive than most Japanese resorts."
+        ]
+      },
+      {
+        "heading": "The alternatives, which are cheaper and quieter",
+        "paragraphs": [
+          "Rusutsu is close to Niseko, has three mountains, excellent tree skiing and a fraction of the crowds. It is the most common recommendation from people who have skied both.",
+          "Furano, in the centre of the island, is a proper Japanese ski town with a long season, reliable snow and a working town attached rather than a resort village. Kiroro, near Sapporo, gets some of the heaviest snowfall on the island.",
+          "Sapporo Teine and Bankei are within reach of the city itself, which makes a trip that mixes skiing with city food and nightlife entirely practical — an option Niseko does not offer.",
+          "Tomamu, Kamui and a long tail of smaller local hills round it out. Several of the smaller places have the odd combination of superb snow and almost no one on it."
+        ]
+      },
+      {
+        "heading": "Tree skiing, and the rules about it",
+        "paragraphs": [
+          "The birch and silver fir forests, spaced widely enough to ski between, are the other half of the appeal. Powder that does not pack, in gladed trees, is the specific thing people come for.",
+          "Japanese resorts have historically been restrictive about off-piste, and the rules vary considerably between them. Some have designated tree runs and marked gates; others prohibit it outright and will confiscate a pass. Niseko's gate system is well established and clearly signed.",
+          "Take the local rules seriously rather than assuming a Western resort's norms. The avalanche risk is real, tree wells are a genuine hazard in snow this deep, and the resorts that allow access do so on the basis that people respect the closures."
+        ]
+      },
+      {
+        "heading": "What a Japanese ski day actually looks like",
+        "paragraphs": [
+          "The lifts are older and slower than at a comparable European or North American resort, and nobody minds, because the queues are short and the snow keeps falling while you ride.",
+          "Lunch is in a cafeteria on the mountain and is proper food at low prices: curry rice, ramen, katsu. There is no equivalent of the Alpine mountain restaurant with a wine list, and the money saved is substantial.",
+          "The mountains close earlier than visitors expect, often around four, though several resorts run floodlit night skiing which is a genuine feature rather than a novelty and is at its best when it is snowing.",
+          "Rental equipment is widely available, well maintained and cheap, and increasingly includes powder-specific skis, which matters here more than it would elsewhere."
+        ]
+      },
+      {
+        "heading": "Getting there and getting around",
+        "paragraphs": [
+          "New Chitose Airport serves Sapporo and has direct international flights as well as frequent connections from Tokyo. Transfers from the airport to Niseko take around three hours by bus.",
+          "The Shinkansen reaches Hakodate and is being extended towards Sapporo, but for now flying is the sensible approach for a ski trip.",
+          "A car gives flexibility to chase conditions between resorts, but winter driving here is a serious proposition and requires proper tyres and experience of snow. Resort buses cover the main routes and most visitors do not need to drive."
+        ]
+      },
+      {
+        "heading": "Season, cost and the onsen at the end",
+        "paragraphs": [
+          "The season runs roughly December to early April, with January and February the reliable heart of it. Late December and the New Year period are expensive and busy with domestic visitors; February half-term brings the international crowd.",
+          "Costs vary enormously by resort. Niseko is priced internationally; Furano and the smaller hills are priced for Japan, and lift passes at the latter can be a fraction of a European equivalent.",
+          "And the thing that makes a Japanese ski trip different from any other: the onsen. Almost every resort has hot spring bathing, frequently outdoors, and finishing a day in deep snow by sitting in volcanic water while it snows on your head is the argument that converts people permanently."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "okayama-kurashiki-guide",
+    "title": "Okayama and Kurashiki: A Great Garden and a Canal District",
+    "excerpt": "One of Japan's three great landscape gardens, and half an hour away a merchant quarter of white-walled warehouses along a willow-lined canal that survived the war entirely intact.",
+    "category": "hidden-japan",
+    "region": "chugoku",
+    "tags": [
+      "tradition",
+      "off-the-beaten-path",
+      "nature"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "naoshima-art-island-guide",
+      "hiroshima-guide",
+      "izumo-matsue-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "Where this is and why you pass through it",
+        "paragraphs": [
+          "Okayama sits on the Sanyo Shinkansen between Osaka and Hiroshima, which means a very large number of visitors travel through it without stopping. It is also the junction for the line across the bridge to Shikoku and the ferries to the art islands, so it is a place many people change trains in.",
+          "Stopping for a day is worth it, and stopping for two lets you add Kurashiki, which is the better of the two.",
+          "The region is called Setouchi, the Inland Sea, and it has the mildest and driest weather in Japan. Okayama markets itself as the land of sunshine, which by Japanese standards it is."
+        ]
+      },
+      {
+        "heading": "Korakuen",
+        "paragraphs": [
+          "Korakuen is counted as one of the three great landscape gardens of Japan, with Kenrokuen in Kanazawa and Kairakuen in Mito. It was completed in 1700 for the local lord and it is unusual among Japanese gardens for its openness: broad lawns, wide views, and a scale that lets you see across it rather than around a corner at a time.",
+          "There are tea houses, a small rice field and tea plantation kept in working order, streams threaded through the whole thing, and a hill to climb for the overview. The black keep of Okayama Castle sits immediately beyond the river as borrowed scenery.",
+          "It rewards a slow visit of an hour or two, and it is at its best early in the morning before the tour groups arrive. Seasonal night illuminations run several times a year."
+        ]
+      },
+      {
+        "heading": "Okayama Castle, and being honest about it",
+        "paragraphs": [
+          "The castle is called the crow castle for its black boards, and it is a striking object across the water from the garden. The current keep is a post-war reconstruction — the original burned in 1945 — and was renovated in recent years with a modernised interior of displays.",
+          "It is worth crossing the bridge for the exterior and the view back at the garden. Whether the inside justifies the ticket depends on how much reconstructed castle interior you have already seen on the trip."
+        ]
+      },
+      {
+        "heading": "Kurashiki, which is the real reason to come",
+        "paragraphs": [
+          "Kurashiki is fifteen minutes from Okayama by local train, and the Bikan historical quarter is the best-preserved merchant district of its kind in Japan. Warehouses with white plaster walls and black tiled trim line a willow-shaded canal, with arched stone bridges and low wooden shopfronts.",
+          "The town was a rice-collection centre in the Edo period, which is what the warehouses were for, and it escaped bombing in the war. What survives is therefore genuine fabric rather than reconstruction, and it has been protected as a preservation district since the 1960s.",
+          "It is small enough to walk in an afternoon and pleasant enough to spend a whole day in. Punts run on the canal. Most of the warehouses now hold cafés, craft shops and small museums, which is the usual fate of preserved districts but has been done here with more restraint than most."
+        ]
+      },
+      {
+        "heading": "The Ohara Museum",
+        "paragraphs": [
+          "The Ohara Museum of Art, in a neoclassical building at the head of the canal, was Japan's first museum of Western art, founded in 1930 by a local textile magnate on the advice of a painter he sponsored.",
+          "The collection is remarkable for a provincial city: El Greco, Monet, Gauguin, Matisse, Picasso, alongside a strong holding of Japanese folk craft and modern Japanese painting. The El Greco Annunciation is the piece the museum is known for.",
+          "It is the kind of collection that exists because one wealthy person in the 1920s had specific taste and a great deal of money, and it is worth an hour and a half."
+        ]
+      },
+      {
+        "heading": "Denim, and the other local industry",
+        "paragraphs": [
+          "The Kojima district of Kurashiki is the centre of Japanese denim production, and Japanese selvedge denim has a global following among people who care about such things. Kojima Jeans Street is a row of workshops and brand stores where the jeans are made a short distance from where they are sold.",
+          "This grew directly out of the region's cotton and textile history, which is the same industry that funded the Ohara collection.",
+          "It is a bus or short train ride from central Kurashiki and is a genuine speciality rather than a manufactured attraction."
+        ]
+      },
+      {
+        "heading": "Eating around here",
+        "paragraphs": [
+          "Okayama is fruit country, and it is serious about it. The white peaches and the Muscat of Alexandria grapes grown in the prefecture sell at prices that make sense only once you have eaten one, and the fruit parlours in the city build desserts around them.",
+          "Barazushi is the local dish: a lacquered box of vinegared rice scattered with an extravagant quantity of seafood and vegetables. It reputedly began as a way of circumventing a feudal edict restricting meals to one soup and one dish, by hiding everything in the rice.",
+          "Kurashiki's canal district has a strong cafe culture, and the Inland Sea supplies conger eel, octopus and small oily fish that appear across both towns.",
+          "Kibi dango, a small soft rice cake, is the standard souvenir and is tied to the Momotaro legend, which Okayama claims as local."
+        ]
+      },
+      {
+        "heading": "Fitting it in",
+        "paragraphs": [
+          "Okayama is an easy Shinkansen stop between Osaka and Hiroshima, so the natural itinerary is to break the journey here for a night rather than treat it as a destination in itself.",
+          "It is also the mainland end of the Seto-Ohashi bridge to Shikoku and the usual jumping-off point for Naoshima and the other art islands, which makes it a genuinely useful hub for the whole Inland Sea.",
+          "One night, with the garden in the morning and Kurashiki in the afternoon, works well. Two if the art islands are next."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "izumo-matsue-guide",
+    "title": "Izumo and Matsue: The Oldest Shrine and the Quietest Coast",
+    "excerpt": "On the far side of the mountains from everything else, a shrine that predates written Japanese history, a castle that was never rebuilt because it never burned, and a garden ranked first in the country for two decades.",
+    "category": "hidden-japan",
+    "region": "chugoku",
+    "tags": [
+      "tradition",
+      "off-the-beaten-path",
+      "nature"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "okayama-kurashiki-guide",
+      "temple-shrine-etiquette",
+      "hiroshima-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The San'in coast",
+        "paragraphs": [
+          "Japan's main island has a busy side and a quiet side. The Sanyo coast on the Pacific carries the Shinkansen, the industry and the population; the San'in coast on the Sea of Japan has none of those things, and Shimane prefecture is among the least visited in the country.",
+          "That is the appeal. This is a region of small cities, dark tiled roofs, grey winter seas and an unusually deep well of mythology.",
+          "Getting here takes effort — a limited express across the mountains from Okayama, a flight, or a long drive — which is precisely why it stays quiet."
+        ]
+      },
+      {
+        "heading": "Izumo Taisha",
+        "paragraphs": [
+          "Izumo Taisha is one of the oldest and most important shrines in Japan, appearing in the earliest chronicles and predating reliable dating entirely. It is dedicated to Okuninushi, a deity associated with nation-building and, more usefully for modern visitors, with the forming of relationships.",
+          "That last association makes it the enmusubi shrine — the place people come to pray for a good match, romantic or otherwise. It is busy with couples and with people hoping to become couples.",
+          "The prayer form is different here: four claps instead of the usual two, on the basis that you are praying for yourself and for the other person. The enormous shimenawa rope hanging at the Kagura hall is one of the largest in Japan and is startling in person.",
+          "In the tenth lunar month, when the rest of Japan calls it the month without gods, Izumo calls it the month with gods, because the entire pantheon is held to gather here. The corresponding festival is the major event of the shrine's year."
+        ]
+      },
+      {
+        "heading": "Matsue and its castle",
+        "paragraphs": [
+          "Matsue is a small city built between a lake and a lagoon, threaded with canals. Its castle is one of only twelve in Japan with an original keep — built in 1611, never destroyed, never reconstructed — and it is a national treasure.",
+          "The difference between an original keep and a concrete reconstruction is immediately obvious inside: steep wooden stairs, dark timber, arrow slits, and the smell of old wood. It is a military building rather than a decorative one.",
+          "A small boat tour runs the moat and canals around the castle, passing under bridges low enough that the roof of the boat is lowered and everyone ducks. It is the best way to understand how the town is put together.",
+          "The Shiomi Nawate street below the castle preserves samurai residences, one of which is open."
+        ]
+      },
+      {
+        "heading": "Lafcadio Hearn",
+        "paragraphs": [
+          "Matsue was home to Lafcadio Hearn, the Greek-Irish writer who arrived as a schoolteacher in 1890, married into a samurai family, took Japanese citizenship as Koizumi Yakumo, and wrote the books that shaped Western understanding of Japan for a generation — particularly his collections of ghost stories.",
+          "His residence and an adjacent memorial museum are preserved near the castle. The house is small and the garden is the thing he wrote about most affectionately.",
+          "For anyone who has read Kwaidan, this is a genuine pilgrimage; for anyone who has not, it is a well-presented window on how a foreigner saw Meiji Japan."
+        ]
+      },
+      {
+        "heading": "The Adachi Museum garden",
+        "paragraphs": [
+          "The Adachi Museum of Art, in Yasugi about half an hour from Matsue, has been ranked the finest garden in Japan by a specialist American journal every year for two decades.",
+          "The unusual thing about it is that you cannot walk in it. The garden is composed to be viewed through the windows of the building, framed deliberately as living paintings, with the borrowed scenery of the hills behind incorporated into the composition. Staff maintain it obsessively.",
+          "The museum also holds a substantial collection of modern Japanese painting, particularly Yokoyama Taikan, which is what it was built for. The garden has rather overtaken it.",
+          "It is a strange and very beautiful place, and it is the single strongest reason to come to this corner of the country."
+        ]
+      },
+      {
+        "heading": "The rest of it",
+        "paragraphs": [
+          "Matsue's lagoon, Lake Shinji, is famous for its sunsets, which are a local institution with designated viewing spots along the shore.",
+          "Iwami Ginzan, further west, is a UNESCO-listed silver mine that at its peak produced a significant share of the world's silver, with a preserved mining town and walkable tunnels.",
+          "Tottori, along the coast to the east, has Japan's largest sand dunes — a genuinely surprising landscape of wind-sculpted sand running down to the sea, with camel rides and sandboarding attached, and a sand sculpture museum next to it.",
+          "The Oki Islands, offshore, are a UNESCO geopark with sea cliffs and almost no visitors."
+        ]
+      },
+      {
+        "heading": "Practicalities",
+        "paragraphs": [
+          "The usual approach is the limited express from Okayama, which takes around two and a half hours and is a scenic run across the mountains. There are also flights to Izumo and Yonago from Tokyo.",
+          "A local train links Matsue and Izumo, and the Ichibata private line runs closer to the shrine.",
+          "Two nights covers Izumo Taisha, Matsue and the Adachi garden without hurrying, which is the right pace for a region whose main quality is that nothing is hurried."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shikoku-pilgrimage-guide",
+    "title": "The 88 Temples: Walking the Shikoku Pilgrimage",
+    "excerpt": "Twelve hundred kilometres, eighty-eight temples and roughly six weeks on foot around an entire island. Most people do a fraction of it, and the fraction still works.",
+    "category": "hidden-japan",
+    "region": "shikoku",
+    "tags": [
+      "tradition",
+      "nature",
+      "off-the-beaten-path"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "matsuyama-dogo-onsen-guide",
+      "temple-shrine-etiquette",
+      "naoshima-art-island-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "What it is",
+        "paragraphs": [
+          "The Shikoku henro is a circular pilgrimage visiting eighty-eight temples associated with Kukai — known posthumously as Kobo Daishi — the monk who founded the Shingon school of Buddhism in the ninth century and who was born on this island.",
+          "The full circuit runs roughly twelve hundred kilometres around the coast and through the mountains of Shikoku, and walking it takes something in the region of six weeks. It is one of very few long circular pilgrimage routes anywhere in the world, and unlike a linear route it ends where it began.",
+          "It is also a living practice rather than a heritage attraction. People walk it after a bereavement, after retirement, at a turning point, or as devotion. Others drive it, cycle it, or take organised bus tours, all of which are considered entirely legitimate."
+        ]
+      },
+      {
+        "heading": "You do not have to do all of it",
+        "paragraphs": [
+          "The most useful thing to know is that partial pilgrimage is normal and accepted. Walking a single prefecture's worth of temples, or a week of the route, or even a handful of temples in a day, is a recognised way of doing it. There is no requirement to complete the circuit, and no shame attached to not doing so.",
+          "The island's four prefectures are traditionally associated with stages of the journey — awakening, discipline, enlightenment and nirvana — which gives a natural way to divide it. Tokushima, where the route begins, has the first twenty-three temples and the densest, easiest walking.",
+          "For a visitor with a week, the opening stretch through Tokushima is the obvious choice: temples close together, flat terrain, good infrastructure, and the sense of a beginning."
+        ]
+      },
+      {
+        "heading": "The clothing and the equipment",
+        "paragraphs": [
+          "Pilgrims are recognisable by a white cotton vest, a conical sedge hat, and a wooden staff. The white is the colour of death — historically the pilgrimage was dangerous enough that walkers dressed to be buried in — and the staff represents Kobo Daishi himself, who is understood to be walking with you.",
+          "That belief has practical consequences. The staff is treated with respect: washed before you at the end of a day, never used to lean on when crossing a bridge, and given the better place in a room.",
+          "The other item is the nokyocho, a book stamped and calligraphed at each temple for a small fee. Filled, it becomes the record of the journey and is a genuinely beautiful object.",
+          "Full kit is not required and plenty of people walk in ordinary hiking clothes. The vest and hat do identify you as a pilgrim to everyone you pass, which changes how you are treated."
+        ]
+      },
+      {
+        "heading": "Osettai",
+        "paragraphs": [
+          "Osettai is the custom of giving to pilgrims — food, drink, money, a lift, a bed. It is offered constantly and by all kinds of people, and it is not charity in the usual sense: the giver is understood to be acquiring merit by supporting the pilgrimage, so the gift is made to Kobo Daishi through you.",
+          "The correct response is to accept graciously and offer a name slip in return. Refusing is discouraged, because it denies the giver the merit.",
+          "For visitors this is often the most affecting part of the whole thing. Being handed a mandarin by an elderly farmer who has walked out to the road specifically to wait for a pilgrim is a form of encounter that ordinary travel does not produce."
+        ]
+      },
+      {
+        "heading": "Practicalities of walking it",
+        "paragraphs": [
+          "The route is waymarked, though not uniformly — red arrows and small stickers, easy to follow in most places and thin in others. English-language guidebooks and maps exist and are worth carrying, along with an offline map.",
+          "Accommodation is a mixture of temple lodgings, small family-run inns used to pilgrims, business hotels in the towns, and free huts along the route. Booking a day ahead is the usual rhythm; some sections have very little and need planning.",
+          "The terrain varies from coastal road walking to steep mountain temples that involve serious climbing. Kochi prefecture in particular has long empty stretches.",
+          "Spring and autumn are the sensible seasons. Summer is dangerously hot for long road walking and winter brings snow to the mountain temples."
+        ]
+      },
+      {
+        "heading": "Doing it without walking",
+        "paragraphs": [
+          "Bus tours run the full circuit in around ten days and are used heavily by older Japanese pilgrims. Driving takes about a week and is entirely accepted.",
+          "Cycling is increasingly popular and covers the ground in roughly two to three weeks.",
+          "None of these are regarded as inferior. The distinction the tradition draws is between doing it and not doing it, not between methods."
+        ]
+      },
+      {
+        "heading": "What it is actually like",
+        "paragraphs": [
+          "It is not a scenic highlight route. Long sections are along ordinary roads through ordinary towns, past car parks and convenience stores and factories. The temples vary from spectacular mountain complexes to modest suburban compounds.",
+          "That is precisely what people who have walked it describe as the point. The pilgrimage is a discipline of continuing rather than a sequence of views, and the ordinariness is the substance of it.",
+          "Shikoku is the least visited of Japan's four main islands, and walking any part of this route is a way of seeing a version of the country that itineraries built around Kyoto and Tokyo do not contain at all."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "matsuyama-dogo-onsen-guide",
+    "title": "Matsuyama and Dogo Onsen: Japan's Oldest Hot Spring",
+    "excerpt": "A bathhouse mentioned in eighth-century chronicles, a wooden building from 1894 that reopened in 2024 after five and a half years of restoration, and a castle on a hill above both.",
+    "category": "hidden-japan",
+    "region": "shikoku",
+    "tags": [
+      "tradition",
+      "accommodation",
+      "off-the-beaten-path"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "",
+    "factsCheckedAt": "2026-08-11",
+    "factsExpire": [],
+    "readingTime": 4,
+    "heroImage": "",
+    "heroImageAlt": "",
+    "heroImageCredit": "",
+    "affiliate": false,
+    "affiliateLinks": [],
+    "relatedIds": [
+      "shikoku-pilgrimage-guide",
+      "japanese-onsen-etiquette",
+      "ryokan-first-time-guide"
+    ],
+    "author": "TABI Editorial",
+    "sections": [
+      {
+        "heading": "The oldest one",
+        "paragraphs": [
+          "Dogo Onsen has a serious claim to being the oldest hot spring in continuous use in Japan. It appears in the Nihon Shoki, the eighth-century chronicle, and in poetry older than that, with legends of injured animals and ancient emperors bathing here.",
+          "Whatever the precise history, the important thing is that it is not a resort built around a spring. It is a bathing district in a working city, with a public bathhouse at its centre that local people use, and a tram running to it from town.",
+          "Matsuyama is the largest city in Shikoku and is easy to reach — a ferry across the Inland Sea from Hiroshima, a limited express across the island, or a direct flight."
+        ]
+      },
+      {
+        "heading": "The Honkan, and its restoration",
+        "paragraphs": [
+          "The Dogo Onsen Honkan is a three-storey wooden bathhouse built in 1894, topped with a small watchtower and drum, and designated an Important Cultural Property. It is a genuinely extraordinary building: a warren of staircases, tatami resting rooms, and bathing halls in stone.",
+          "It underwent major seismic and preservation work from 2019, staying partially open throughout with sections closed in rotation, and fully reopened in July 2024. The whole building, including the upper resting rooms, is now in use again.",
+          "The bathing options are tiered: a simple bath in the Kami-no-Yu, or a package including a tatami room, a yukata and tea afterwards, which is the version worth paying for. The upstairs rooms are the point of the building — bathing, then sitting in a robe drinking tea by an open window above the street, is the experience it was designed around.",
+          "It is often said to have inspired the bathhouse in Spirited Away. Studio Ghibli has never confirmed this and it is best treated as an appealing rumour rather than a fact."
+        ]
+      },
+      {
+        "heading": "The other baths",
+        "paragraphs": [
+          "The Honkan is not the only option and is frequently the busiest. Tsubaki-no-Yu nearby is a larger, plainer, modern public bath used mostly by residents and is considerably cheaper and quieter.",
+          "Asuka-no-Yu, opened more recently, is built in the style of the Asuka period with craftwork from Ehime prefecture throughout, and offers private rooms. It is the most comfortable of the three and the least atmospheric.",
+          "There is also a free foot bath by the tram terminus and a hot spring drinking fountain, and most of the ryokan in the district have their own baths fed from the same source.",
+          "Standard onsen etiquette applies throughout: wash thoroughly before entering, no swimwear, no towel in the water."
+        ]
+      },
+      {
+        "heading": "Matsuyama Castle",
+        "paragraphs": [
+          "Matsuyama Castle is one of the twelve surviving original keeps, on a steep hill in the middle of the city with views over the whole plain and out to the Inland Sea.",
+          "A ropeway and chairlift run up, or there are paths for anyone who wants the climb. The complex at the top is unusually complete — not just the keep but gates, turrets and walls — which makes it one of the better castles in Japan for understanding how the defences were meant to work.",
+          "The keep interior is original wood with steep stairs, and the exhibits are modest, which is a relief. The building is the exhibit.",
+          "Ninomaru, the garden below on the site of the lord's residence, is laid out to show the footprint of the vanished buildings, which is an elegant solution to the problem of a site with nothing left on it."
+        ]
+      },
+      {
+        "heading": "Botchan, and the literary town",
+        "paragraphs": [
+          "Matsuyama has a strong literary identity. Natsume Soseki taught here briefly and turned the experience into Botchan, one of the most widely read novels in Japan, which is affectionately rude about the town and which the town has cheerfully embraced. A steam locomotive replica called the Botchan Train runs on the tram network.",
+          "Masaoka Shiki, the poet who reshaped haiku at the end of the nineteenth century, was born here, and there is a museum devoted to him. Post boxes around the city are shaped for submitting haiku, and the competitions attached are taken seriously.",
+          "The combination of a bathhouse, a castle and two major writers is a lot of identity for a city of this size, and it carries it lightly."
+        ]
+      },
+      {
+        "heading": "Around the city",
+        "paragraphs": [
+          "Ishite-ji, temple fifty-one on the eighty-eight temple pilgrimage, is a short walk from Dogo and is one of the most atmospheric on the circuit — a national treasure gate, a cave passage lined with statues, and a slightly eccentric collection of later additions.",
+          "The Shimanami Kaido, the cycling route across a chain of islands and suspension bridges between Shikoku and Honshu, starts at Imabari about an hour away and is among the best cycle routes in Asia. Bikes can be hired and dropped at either end.",
+          "The Inland Sea ferries from Matsuyama to Hiroshima are a pleasant alternative to the train and take a couple of hours."
+        ]
+      },
+      {
+        "heading": "Where to stay and how long",
+        "paragraphs": [
+          "Staying in the Dogo district rather than by the station is the better choice: the ryokan there have their own hot spring baths, and the district is at its best in the evening when the day visitors have gone and people walk between the baths in yukata and wooden sandals.",
+          "Two nights covers the baths, the castle and Ishite-ji comfortably. Add nights if the Shimanami Kaido or the pilgrimage is part of the plan.",
+          "It also works well as one end of a Shikoku loop, paired with Takamatsu and the art islands on the other coast."
         ]
       }
     ]
