@@ -1772,11 +1772,15 @@ html { scroll-behavior: smooth; }
 }
 
 /* ===== CATEGORY COLORS ===== */
-.cat--travel-guide  { color: #3d8a5c; }
-.cat--food          { color: #c05a20; }
-.cat--culture       { color: #6b4faa; }
-.cat--things-to-buy { color: #9a7820; }
-.cat--hidden-gems   { color: #2878a0; }
+/* Category label colours. These were keyed to the pre-2026 slugs (travel-guide,
+   culture, hidden-gems), none of which exist any more, so every card label had
+   been falling back to the inherited colour. Contrast checked on --paper. */
+.cat--before-you-go   { color: #2f6b48; }
+.cat--rules-etiquette { color: #5a3f96; }
+.cat--getting-around  { color: #1f5a7a; }
+.cat--eat-drink       { color: #a8481a; }
+.cat--things-to-buy   { color: #7a6320; }
+.cat--destinations    { color: #1d6478; }
 
 /* ===== DROP CAP ===== */
 .article-section:first-of-type > p:first-of-type::first-letter,

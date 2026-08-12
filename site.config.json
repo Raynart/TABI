@@ -12,37 +12,43 @@
       "slug": "before-you-go",
       "label": "Before You Go",
       "nav": "Before You Go",
-      "kanji": "&#28310;&#20633;"
+      "kanji": "&#28310;&#20633;",
+      "inNav": true
     },
     {
       "slug": "rules-etiquette",
       "label": "Rules & Etiquette",
       "nav": "Rules",
-      "kanji": "&#20316;&#27861;"
+      "kanji": "&#20316;&#27861;",
+      "inNav": true
     },
     {
       "slug": "getting-around",
       "label": "Getting Around",
       "nav": "Getting Around",
-      "kanji": "&#31227;&#21205;"
+      "kanji": "&#31227;&#21205;",
+      "inNav": true
     },
     {
       "slug": "eat-drink",
       "label": "Eat & Drink",
       "nav": "Eat & Drink",
-      "kanji": "&#39135;&#20107;"
+      "kanji": "&#39135;&#20107;",
+      "inNav": true
     },
     {
       "slug": "things-to-buy",
       "label": "Things to Buy",
       "nav": "Things to Buy",
-      "kanji": "&#36023;&#29289;"
+      "kanji": "&#36023;&#29289;",
+      "inNav": true
     },
     {
-      "slug": "hidden-japan",
-      "label": "Hidden Japan",
-      "nav": "Hidden Japan",
-      "kanji": "&#31192;&#22659;"
+      "slug": "destinations",
+      "label": "Destinations",
+      "nav": "Destinations",
+      "kanji": "&#31192;&#22659;",
+      "inNav": false
     }
   ],
   "regions": [
@@ -310,5 +316,15 @@
         }
       }
     ]
-  }
+  },
+  "redirects": [
+    {
+      "from": "categories/hidden-japan.html",
+      "to": "categories/destinations.html"
+    },
+    {
+      "from": "categories/hidden-japan-2.html",
+      "to": "categories/destinations.html"
+    }
+  ]
 }

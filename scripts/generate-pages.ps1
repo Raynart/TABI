@@ -456,6 +456,9 @@ function Get-Header {
     }
     $navItems = ''
     foreach ($cat in $config.categories) {
+        # Destinations is browsed by region rather than as one long list, so it
+        # is reachable from the footer and the region hub but not the header.
+        if ($cat.PSObject.Properties.Name -contains 'inNav' -and -not $cat.inNav) { continue }
         $active = if ($cat.slug -eq $activeCat) { ' class="active"' } else { '' }
         $navItems += "<li><a href=""categories/$($cat.slug).html""$active>$($cat.nav)</a></li>"
     }
@@ -632,11 +635,12 @@ function Get-CategoryLabel {
 function Get-CardFallback {
     param($category)
     switch ($category) {
-        'travel-guide'  { return @{ grad = 'linear-gradient(160deg,#081f0d 0%,#1a4a2e 55%,#0d3320 100%)'; icon = '&#9992;' } }
-        'food'          { return @{ grad = 'linear-gradient(160deg,#200a02 0%,#5c2008 55%,#3a1205 100%)'; icon = '&#127837;' } }
-        'culture'       { return @{ grad = 'linear-gradient(160deg,#12082a 0%,#371a66 55%,#200d45 100%)'; icon = '&#26319;' } }
-        'things-to-buy' { return @{ grad = 'linear-gradient(160deg,#1a1400 0%,#4a3800 55%,#2e2400 100%)'; icon = '&#127850;' } }
-        'hidden-gems'   { return @{ grad = 'linear-gradient(160deg,#04141f 0%,#0d3a55 55%,#072840 100%)'; icon = '&#128142;' } }
+        'before-you-go'   { return @{ grad = 'linear-gradient(160deg,#081f0d 0%,#1a4a2e 55%,#0d3320 100%)'; icon = '&#9992;' } }
+        'eat-drink'       { return @{ grad = 'linear-gradient(160deg,#200a02 0%,#5c2008 55%,#3a1205 100%)'; icon = '&#127837;' } }
+        'rules-etiquette' { return @{ grad = 'linear-gradient(160deg,#12082a 0%,#371a66 55%,#200d45 100%)'; icon = '&#26319;' } }
+        'things-to-buy'   { return @{ grad = 'linear-gradient(160deg,#1a1400 0%,#4a3800 55%,#2e2400 100%)'; icon = '&#127850;' } }
+        'destinations'    { return @{ grad = 'linear-gradient(160deg,#04141f 0%,#0d3a55 55%,#072840 100%)'; icon = '&#128142;' } }
+        'getting-around'  { return @{ grad = 'linear-gradient(160deg,#0a1420 0%,#1c3550 55%,#101f30 100%)'; icon = '&#128646;' } }
         default         { return @{ grad = 'linear-gradient(160deg,#100808 0%,#2e1010 55%,#5a1a1a 100%)'; icon = '&#127758;' } }
     }
 }
@@ -1216,6 +1220,7 @@ $lines.Add('  <span class="section-label-jp" aria-hidden="true">&#22320;&#22495;
 $lines.Add('  <h1 class="section-label-en">Japan by Region</h1>')
 $lines.Add('  <div class="section-label-line"></div>')
 $lines.Add('</div>')
+$lines.Add('<p style="max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x) 8px;color:var(--mist);font-size:0.9rem;">Nine regions, from Hokkaido to Okinawa. Or see <a href="categories/destinations.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">every destination guide</a> in one list.</p>')
 $lines.Add('<ul class="region-grid">')
 foreach ($r in $config.regions) {
     $n = $regionCounts[$r.slug]
@@ -1242,6 +1247,42 @@ $lines.Add('</main>')
 $lines.Add((Get-Footer))
 [System.IO.File]::WriteAllText((Join-Path $root 'regions.html'), ($lines -join "`n"), (New-Object System.Text.UTF8Encoding($false)))
 Write-Host "  Generated regions.html"
+
+# ===== REDIRECT STUBS =====
+# GitHub Pages serves static files and cannot issue a 301, so a renamed page
+# would simply 404 for anyone arriving from a bookmark or a search result.
+# These stubs keep the old URL alive: canonical points at the new page for
+# crawlers, and a meta refresh plus a visible link handles people.
+if ($config.redirects) {
+    Write-Host "Generating redirect stubs..."
+    foreach ($r in $config.redirects) {
+        $target = "$siteUrl/$($r.to)"
+        $stub = @"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moved &mdash; $siteName</title>
+  <link rel="canonical" href="$target">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=$target">
+  <link rel="stylesheet" href="$siteUrl/styles.css">
+</head>
+<body>
+<main id="main" style="max-width:640px;margin:120px auto;padding:0 32px;text-align:center;">
+  <h1 style="font-family:var(--serif);font-weight:300;font-size:1.6rem;margin-bottom:16px;">This page has moved</h1>
+  <p style="color:var(--mist);">If you are not redirected, <a href="$target" style="color:var(--accent);text-decoration:underline;">continue here</a>.</p>
+</main>
+</body></html>
+"@
+        $outPath = Join-Path $root ($r.from -replace '/', '\')
+        $outDir = Split-Path $outPath -Parent
+        if (-not (Test-Path $outDir)) { New-Item -ItemType Directory $outDir | Out-Null }
+        [System.IO.File]::WriteAllText($outPath, $stub, (New-Object System.Text.UTF8Encoding($false)))
+        Write-Host "  $($r.from) -> $($r.to)"
+    }
+}
 
 # ===== 404.html =====
 $headHtml = Get-Head "Page Not Found &mdash; $siteName" "The page you are looking for could not be found." '' "$siteUrl/404.html" 'website' '' '' $true

@@ -749,7 +749,7 @@
     "id": "matsumoto-castle-guide",
     "title": "Matsumoto: The Castle Town That Gets Everything Right",
     "excerpt": "Two and a half hours from Tokyo, a city with one of Japan's three great original castles, a mountain backdrop, an excellent food scene, and a fraction of Kyoto's visitor numbers. There is no explanation for why more people don't come here.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "chubu",
     "tags": [
       "off-the-beaten-path",
@@ -2264,7 +2264,7 @@
     "id": "kanazawa-japan-guide",
     "title": "Kanazawa: The City Most Japan Itineraries Skip — and Shouldn't",
     "excerpt": "Three hours from Tokyo by bullet train. A fraction of Kyoto's crowds. Arguably better seafood. There is no good reason it's on so few itineraries.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "chubu",
     "tags": [
       "off-the-beaten-path",
@@ -2706,7 +2706,7 @@
     "id": "naoshima-art-island-guide",
     "title": "Naoshima Is Japan's Art Island — and Nobody Tells You How to Do It Right",
     "excerpt": "It's a real island with real people living on it. The art just happens to be everywhere.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "shikoku",
     "tags": [
       "off-the-beaten-path",
@@ -3401,7 +3401,7 @@
     "id": "hiroshima-guide",
     "title": "Hiroshima Is More Than the Peace Park — And the Peace Park Is More Than You Think",
     "excerpt": "People visit Hiroshima for one reason. Most leave having found three or four others.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "chugoku",
     "tags": [
       "tradition",
@@ -3590,7 +3590,7 @@
     "id": "beppu-onsen-guide",
     "title": "Beppu: The Onsen City That's Stranger and Better Than You Expect",
     "excerpt": "Beppu produces more geothermal steam per day than anywhere in Japan and possibly anywhere outside Iceland. The city treats this as completely normal.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "kyushu",
     "tags": [
       "nature",
@@ -3839,7 +3839,7 @@
     "id": "nara-day-trip",
     "title": "Nara Beyond the Deer: What to Do After the First Hour",
     "excerpt": "Yes, the deer are free-roaming and yes, they will bow to get crackers from you. This takes about 40 minutes. Nara has a full day's worth of things after that.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "kinki",
     "tags": [
       "off-the-beaten-path",
@@ -4106,7 +4106,7 @@
     "id": "hokkaido-summer-guide",
     "title": "Hokkaido in July: Japan's Best-Kept Summer Secret",
     "excerpt": "Tokyo in July is 35 degrees and 90% humidity. Hokkaido in July is 22 degrees and clear. These two facts explain a lot.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "hokkaido",
     "tags": [
       "nature",
@@ -4188,7 +4188,7 @@
     "id": "koenji-shimokitazawa",
     "title": "Koenji and Shimokitazawa: Tokyo for People Who've Already Done Harajuku",
     "excerpt": "Two stops on different lines. Two neighborhoods that run on thrift stores, live music, and a specific refusal to be improved.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "kanto",
     "tags": [
       "tokyo",
@@ -4618,7 +4618,7 @@
     "id": "hidden-shrines-kyoto",
     "title": "The Hidden Shrines of Kyoto Locals Still Keep Secret",
     "excerpt": "Beyond Fushimi Inari and Kinkaku-ji lies another Kyoto — quiet, moss-covered and usually empty. The city has well over a thousand shrines and temples, and most of them see almost nobody on a weekday morning.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "kinki",
     "tags": [
       "kyoto",
@@ -4807,7 +4807,7 @@
     "id": "mt-fuji-route-guide",
     "title": "The Perfect Route up Mt. Fuji: What Nobody Tells You",
     "excerpt": "Climbing Fuji sounds straightforward until you are doing it at 3am in a queue of headlamps. The mountain rewards preparation, punishes assumptions, and is now a permit-and-quota mountain rather than an open one.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "chubu",
     "tags": [
       "nature"
@@ -4995,7 +4995,7 @@
     "id": "yakushima-ancient-forest",
     "title": "Yakushima: Japan's Ancient Forest That Few Tourists Find",
     "excerpt": "A UNESCO-listed island covered in cedar trees that are older than many civilizations, Yakushima sits off the southern tip of Kyushu and sees a fraction of the visitors it deserves. The hike through Shiratani Unsuikyo inspired Princess Mononoke — and it still feels that way.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "kyushu",
     "tags": [
       "nature"
@@ -6524,7 +6524,7 @@
     "id": "fukuoka-city-guide",
     "title": "Fukuoka: The Japanese City That Gets Everything Right",
     "excerpt": "An international airport eleven minutes from the city centre, the best ramen in the country, and street food stalls along the river. Fukuoka is consistently rated the most liveable city in Japan and consistently skipped by visitors.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "kyushu",
     "tags": [
       "food",
@@ -6616,7 +6616,7 @@
     "id": "nagasaki-guide",
     "title": "Nagasaki: The Port That Was Japan's Only Window on the World",
     "excerpt": "For two centuries, when the country was closed, one artificial island in Nagasaki harbour was the entire point of contact with Europe. The city that grew from that is unlike anywhere else in Japan — and it carries the second atomic bombing.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "kyushu",
     "tags": [
       "tradition",
@@ -6702,7 +6702,7 @@
     "id": "sendai-matsushima-guide",
     "title": "Sendai and Matsushima: The Easiest Way Into Tohoku",
     "excerpt": "Ninety minutes north of Tokyo by Shinkansen and almost nobody goes. A green city built around a warlord's legacy, and a bay of pine-covered islands that has been considered one of Japan's three great views for four hundred years.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "tohoku",
     "tags": [
       "off-the-beaten-path",
@@ -6788,7 +6788,7 @@
     "id": "hirosaki-aomori-guide",
     "title": "Aomori and Hirosaki: Late Blossom, Big Festivals, Deep Snow",
     "excerpt": "At the top of Honshu, the cherry trees flower when Kyoto has finished, the summer festival is the loudest in Japan, and the winter snow is measured in metres. This is the region that rewards going at the wrong time of year.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "tohoku",
     "tags": [
       "festival",
@@ -6875,7 +6875,7 @@
     "id": "ginzan-onsen-guide",
     "title": "Ginzan Onsen: The Snow Town That Had to Start Turning People Away",
     "excerpt": "A single street of wooden inns along a river, lit by gas lamps, buried in snow. It became too photogenic for its own good, and the town now controls who can walk down it in winter.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "tohoku",
     "tags": [
       "accommodation",
@@ -6968,7 +6968,7 @@
     "id": "okinawa-main-island-guide",
     "title": "Okinawa: A Different Country That Happens to Be in Japan",
     "excerpt": "Subtropical, formerly an independent kingdom, and shaped by the worst battle of the Pacific war and eighty years of American bases since. Okinawa is the part of Japan that is least like the rest of it.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "okinawa",
     "tags": [
       "nature",
@@ -7064,7 +7064,7 @@
     "id": "yaeyama-islands-guide",
     "title": "The Yaeyama Islands: Closer to Taiwan Than to Tokyo",
     "excerpt": "Four hundred kilometres beyond Okinawa's main island lies a group where the jungle reaches the water, the villages have coral walls and sand streets, and the night sky is the darkest in Japan.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "okinawa",
     "tags": [
       "nature",
@@ -7252,7 +7252,7 @@
     "id": "hakodate-guide",
     "title": "Hakodate: The Port Town at the Bottom of Hokkaido",
     "excerpt": "A morning market selling squid you catch yourself, a hillside of nineteenth-century foreign consulates, and a night view that Japan has been ranking against Hong Kong and Naples for a century.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "hokkaido",
     "tags": [
       "food",
@@ -7339,7 +7339,7 @@
     "id": "hokkaido-skiing-guide",
     "title": "Skiing in Hokkaido: Why the Snow Is Actually Different",
     "excerpt": "Siberian air crossing a warm sea produces snow so dry it does not pack. That single meteorological accident is why skiers fly past the Alps to get to an island north of Japan.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "hokkaido",
     "tags": [
       "nature",
@@ -7427,7 +7427,7 @@
     "id": "okayama-kurashiki-guide",
     "title": "Okayama and Kurashiki: A Great Garden and a Canal District",
     "excerpt": "One of Japan's three great landscape gardens, and half an hour away a merchant quarter of white-walled warehouses along a willow-lined canal that survived the war entirely intact.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "chugoku",
     "tags": [
       "tradition",
@@ -7521,7 +7521,7 @@
     "id": "izumo-matsue-guide",
     "title": "Izumo and Matsue: The Oldest Shrine and the Quietest Coast",
     "excerpt": "On the far side of the mountains from everything else, a shrine that predates written Japanese history, a castle that was never rebuilt because it never burned, and a garden ranked first in the country for two decades.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "chugoku",
     "tags": [
       "tradition",
@@ -7611,7 +7611,7 @@
     "id": "shikoku-pilgrimage-guide",
     "title": "The 88 Temples: Walking the Shikoku Pilgrimage",
     "excerpt": "Twelve hundred kilometres, eighty-eight temples and roughly six weeks on foot around an entire island. Most people do a fraction of it, and the fraction still works.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "shikoku",
     "tags": [
       "tradition",
@@ -7699,7 +7699,7 @@
     "id": "matsuyama-dogo-onsen-guide",
     "title": "Matsuyama and Dogo Onsen: Japan's Oldest Hot Spring",
     "excerpt": "A bathhouse mentioned in eighth-century chronicles, a wooden building from 1894 that reopened in 2024 after five and a half years of restoration, and a castle on a hill above both.",
-    "category": "hidden-japan",
+    "category": "destinations",
     "region": "shikoku",
     "tags": [
       "tradition",
