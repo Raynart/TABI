@@ -83,7 +83,43 @@ aborts the build if an article uses a category or tag that is not configured.
 | `getting-around` | Getting Around |
 | `eat-drink` | Eat & Drink |
 | `things-to-buy` | Things to Buy |
-| `hidden-japan` | Hidden Japan |
+| `destinations` | Destinations *(not in the header nav)* |
+
+### Regions (the second axis)
+
+Topic answers *what do I need to know*; region answers *where am I going*. Set
+`region` only when the article's **title or excerpt is about a place** — naming
+Tokyo as a reference point ("three hours from Tokyo") does not make it a Kanto
+article. Roughly half the site is nationwide and correctly has `region: ""`.
+
+| Slug | Label | Prefectures |
+|------|-------|-------------|
+| `hokkaido` | Hokkaido | Hokkaido |
+| `tohoku` | Tohoku | Aomori, Iwate, Miyagi, Akita, Yamagata, Fukushima |
+| `kanto` | Kanto | Tokyo, Kanagawa, Chiba, Saitama, Ibaraki, Tochigi, Gunma |
+| `chubu` | Chubu | Aichi, Shizuoka, Gifu, Nagano, Yamanashi, Niigata, Toyama, Ishikawa, Fukui |
+| `kinki` | Kansai | Osaka, Kyoto, Hyogo, Nara, Shiga, Wakayama, Mie |
+| `chugoku` | Chugoku | Hiroshima, Okayama, Shimane, Tottori, Yamaguchi |
+| `shikoku` | Shikoku | Kagawa, Tokushima, Ehime, Kochi |
+| `kyushu` | Kyushu | Fukuoka, Saga, Nagasaki, Kumamoto, Oita, Miyazaki, Kagoshima |
+| `okinawa` | Okinawa | Okinawa |
+
+`regions.html` is the hub and lists all nine, including any with no articles yet.
+A region below `minRegionArticles` gets no page at all; one below
+`thinTagThreshold` gets a page carrying `noindex`. **Enforced** — an unknown
+region aborts the build.
+
+The header nav is the five topic categories plus **Regions**. `destinations` is
+deliberately excluded from the nav (`inNav: false` in `site.config.json`) because
+place-based browsing goes through the region axis; it survives as the one-list
+view of every place guide, linked from the footer and the region hub.
+
+### Renaming anything with a URL
+
+GitHub Pages cannot issue a 301. Add the old path to `redirects` in
+`site.config.json` and `generate-pages.ps1` writes a stub with a canonical,
+`noindex,follow` and a meta refresh. `categories/hidden-japan.html` is the
+worked example.
 
 ### Tags (fixed taxonomy — use only these)
 `accommodation` / `affiliate` / `budget` / `festival` / `first-time` / `food` / `kyoto` / `language` / `luxury` / `nature` / `off-the-beaten-path` / `osaka` / `practical` / `shopping` / `tokyo` / `tradition` / `transport`
@@ -94,7 +130,7 @@ aborts the build if an article uses a category or tag that is not configured.
 
 | File | Role |
 |------|------|
-| `site.config.json` | Site-wide config (URL, GA4, categories, tags) |
+| `site.config.json` | Site-wide config: URL, GA4, categories, **regions**, tags, monetization, `redirects`, `factsReviewMonths` |
 | `articles.json` | All article data |
 | `assets/images/` | Hero images (GPT-generated) + their `-800` srcset variants |
 | `scripts/make-image-variants.py` | Writes the 800px srcset variant for each hero image |
@@ -105,6 +141,7 @@ aborts the build if an article uses a category or tag that is not configured.
 | `scripts/generate-feeds.ps1` | sitemap.xml / rss.xml / robots.txt / ads.txt / articles-slim.json |
 | `scripts/generate-site.ps1` | Entry point, runs all scripts |
 | `scripts/check-freshness.ps1` | Reports which articles need their facts re-checked. Runs on every build; never fails it |
+| `regions.html`, `regions/` | Region hub and the nine region listings — the second browse axis |
 | `docs/tabi-mockup.html` | Design mockup (reference only) |
 | `scripts/*-articles*.ps1`, `migrate-*.ps1` | One-off migrations, already applied. Safe to delete. |
 
@@ -225,34 +262,36 @@ $lines.Add('&#26053;')
 
 ---
 
-## Current Status (2026-08-06)
+## Current Status (2026-08-11)
 
-### Done
-- [x] `site.config.json` — categories, tags, domain configured
-- [x] `articles.json` — 63 articles, all with full bodies
-- [x] `styles.css` — design system
-- [x] `script.js` — search, mobile nav, share, ToC scroll-spy
-- [x] `scripts/generate-site.ps1` — full page + feed generation
-- [x] `index.html`, `articles.html` archive, category / tag / article pages
-- [x] GitHub Pages deploy workflow
+### Where the site is
+
+- **90 articles**, 94,450 words. Shortest 807, median 990 — every article clears 800.
+- Two browse axes. Topic: Before You Go 17 / Rules & Etiquette 15 / Getting Around 10 / Eat & Drink 12 / Things to Buy 12 / Destinations 24. Region: 9 of the 9 regions have articles, Hokkaido 3 / Tohoku 3 / Kanto 9 / Chubu 3 / Kansai 4 / Chugoku 3 / Shikoku 3 / Kyushu 4 / Okinawa 3.
+- 158 pages, ~7,000 internal links, none broken. No orphan articles.
+- Every article has a hero image, an 800w variant and alt text.
+- Fact freshness is tracked per article (`factsCheckedAt` / `factsExpire`) and
+  `check-freshness.ps1` reports on every build.
 
 ### Known gaps
-- [ ] `googleAnalyticsId` is empty, so no analytics runs and no cookie banner is shown.
-      Setting it in `site.config.json` enables both; the tag only loads after consent.
-- [ ] Hero images average 256 KB at full size (largest 610 KB). `srcset` already
-      serves an 800px variant (~68 KB) to cards, but a wide viewport still pulls
-      the full file for the article hero. A ~1200px variant would close that.
-- [ ] Google Fonts is render-blocking with three families. Italics have been
-      dropped; the remaining weights are all used by `styles.css`.
-- [ ] No monetization is live yet: `monetization.adsense.clientId` and every
-      `partners[].url` are empty, so no ads and no affiliate blocks render.
-      Sign up for the programmes, paste the tracking links in, re-run the generator.
-- [ ] **Articles are short.** 63 articles averaging ~600 words, 5-9 single-paragraph
-      sections each. That is a 2-3 minute read. Both AdSense review and search
-      ranking treat this as thin; depth per article matters as much as article
-      count. `getting-around` also has only 7 articles.
-- [ ] 12 articles are not referenced by any other article's `relatedIds`, so
-      nothing links to them but the listings.
+
+- [ ] `googleAnalyticsId` is empty, so nothing is measured and no cookie banner
+      is shown. Setting it enables both; the tag only loads after consent.
+- [ ] `beehiivUrl` is empty, so no newsletter form is rendered at all. The form
+      used to fake success — never restore that behaviour.
+- [ ] No monetization is live: `monetization.adsense.clientId` and every
+      `partners[].url` are empty, so no ads and no affiliate blocks render. The
+      consent gating has been tested with real IDs and works.
+- [ ] `contactEmail` is `hello@tabi.guide` and that domain is not registered, so
+      the contact page links a `mailto:` that bounces.
+- [ ] `social` is empty for all three networks.
+- [ ] Hero images are 23.1 MB at full size. Cards and article heroes both take an
+      800w variant via `srcset`; a ~1200w tier would help wide viewports.
+- [ ] Prefecture-level pages are not built. 47 pages over 90 articles would leave
+      most prefectures empty — revisit when regions are consistently deeper.
+- [ ] `scripts/*-articles*.ps1`, `migrate-*.ps1` and `new-articles*.json` are
+      spent one-off migrations, kept only because they were the clean source used
+      to repair the 2026 mojibake. Safe to delete once that no longer matters.
 
 ### Accessibility
 

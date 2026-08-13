@@ -88,7 +88,8 @@ claude/<task>     Feature branches → PR to master
 
 Articles live in `articles.json`. See `AGENTS.md` for the full schema.
 
-Categories: Before You Go · Rules & Etiquette · Getting Around · Eat & Drink · Things to Buy · Hidden Japan
+Browsed two ways. **Topic**: Before You Go · Rules & Etiquette · Getting Around · Eat & Drink · Things to Buy, plus Destinations.
+**Region**: Hokkaido · Tohoku · Kanto · Chubu · Kansai · Chugoku · Shikoku · Kyushu · Okinawa — see `regions.html`.
 
 Hero images are GPT-generated and credited as such; everything else is written and
 built by Claude Code. See `CLAUDE.md`.

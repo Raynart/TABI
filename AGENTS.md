@@ -109,7 +109,7 @@ loudly.
 | `getting-around` | Getting Around |
 | `eat-drink` | Eat & Drink |
 | `things-to-buy` | Things to Buy |
-| `hidden-japan` | Hidden Japan |
+| `destinations` | Destinations *(not in the header nav)* |
 
 ### Tag Taxonomy (use only these tags)
 
